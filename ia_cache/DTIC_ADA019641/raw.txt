@@ -1,0 +1,2345 @@
+AD-A019  641 
+
+PRODUCTION  RULES  AS  A REPRESENTATION  FOR  A KNOWLEDGE- 
+BASED  CONSULTATION  PROGRAM 
+
+Randall  Davis,  et  al 
+
+Stanford  University 
+
+
+Prepared  for: 
+
+Advanced  Research  Projects  Agency 
+October  1975 
+
+
+DISTRIBUTED  BY: 
+
+
+National  Technical  Information  Service 
+U.  S.  DEPARTMENT  OF  COMMERCE 
+
+
+w 
+
+
+ADA019641 
+
+
+Stanford  Artificial  Intelligence  Laboratory 
+Memo  AIM-266 
+
+
+October  1975 
+
+
+Computer  Science  Department 
+Report  No.  STAN-CS-75-519 
+
+
+Production  Rules  as  a Representation  for  a 
+Knowledge-Based  Consultation  Program 
+
+by 
+
+Randall  Davis 
+Bruce  Buchanan 
+Edward  Shortliffe 
+
+
+Research  sponsored  by 
+
+National  Institutes  of  Health 
+Grant  HS01544 
+
+
+Biotechnology  Resources 
+Grant  RR-00785 
+
+Advanced  Research  Projects  Agency 
+ARPA  Order  No.  2494 
+
+
+COMPUTER  SCIENCE  DEPARTMENT 
+Stanford  University 
+
+
+Reproduced  by 
+
+NATIONAL  TECHNICAL 
+INFORMATION  SERVICE 
+
+
+U$  Department  of  Commerce 
+Springfield,  VA.  22151 
+
+
+*>/ 
+
+
+[ "piSTR^y.'  • 
+
+• Apr-' 
+
+T, 
+
+
+i um tec 
+
+
+UNCLASSIFIED 
+
+
+REPORT  DOCUMENTATION  PAGE 
+
+READ  INSTRUCTIONS 
+•BEFORE  COMPLETING  FORM 
+
+1 REPORT  NUMBER  2.  GOVT  ACCESSION  NO. 
+
+stan-cs-75-519 
+
+S.  RECIPIENT'S  CAT ALOG  NUMBER 
+
+4.  TITLE  ond  Submit) 
+
+Production  Rules  as  a Representation  for  a 
+Knowledge-Based  Consultation  Program. 
+
+S.  TYPE  OF  REPORT  S PERIOD  COVERED 
+
+Technical  October  1975 
+
+s.  performing  org.  report  number 
+
+AIM266 
+
+7 author^; 
+
+R.  Davis,  B.  Buchanan  and  E.  Short liffe 
+
+• contract  or  grant  number^; 
+
+dahc15-73-c-o>+35 
+
+t.  performing  organization  name  ano  aooress 
+
+Artificial  Intelligence  Laboratory 
+Stanford  University 
+Stanford,  California  9*005 
+
+10.  PROGRAM  ELEMENT.  PROJECT,  TASK 
+AREA  • WORK  UNIT  NUMBERS 
+
+ARPA  Order  21*9** 
+
+II  CONTROLLING  OFFICE  NAME  ANO  AOORESS 
+
+Col.  Dave  Russell,  Dep.  Dir.,  ARPA,  IPT, 
+
+AREA  Headquarters,  lLOO  Wilson  Blvd.  Arlington, 
+Virginia  22209 
+
+12.  REPORT  DATE 
+
+October  1975 
+
+11.  NUMBER  OF  PAGES 
+
+3T  V-  A 
+
+14  MONITORING  AGENCY  name  A AODRESSflf  dllloront  fro*  Controlling  Olttco) 
+
+0NR  Representative,  Philip  Surra 
+Durand  Aeronautics  Building  Room  165 
+Stanford  University 
+Stanford,  California  9** 305 
+
+IS.  SECURITY  CLASS,  (ot  thlo  roport) 
+
+15 
+
+IS*.  DECLASSI  FI  cation/ down  grading 
+SCHEDULE 
+
+IS.  DISTRIBUTION  STATEMENT  (ot  thli  Roport) 
+
+Releasable  without  limitations  on  dissemination. 
+
+17.  DISTRIBUTION  STATEMENT  (o(  tho  obotrocl  onforoif  fn  Block  20,  it  dtlloronl  Iron  Roport) 
+
+is.  supplementary  notes 
+
+20.  ABSTRACT  (Continue  on  rovoroo  oldo  If  noeoooory  and  Identity  by  block  numbor) 
+
+The  MYCIN  system  has  begun  to  exhibit a high  level  of  performance  as  a 
+consultant  on  the  difficult  task  of  selecting  antibiotic  therapy  for 
+bacteremia.  This  report  discusses  issues  of  representation  and  design  for 
+the  system.  We  describe  the  basic  task  and  document  the  constraints 
+involved  in  the  use  of  a program  as  a consultant.  The  control  structure 
+and  knowledge  representation  of  the  system  are  examined  in  this  light,  and 
+special  attention  is  given  to  the  impact  of  production  rules  as  a repre- 
+sentation. The  extent  of  the  domain  independence  ot  the  methodology  ia.  alafl. 
+
+DO  1473  COITION  OF  I NOV  SS  IS  OBSOLETE 
+
+S/N  0 10  2*  0 14*  660  1 
+
+
+form  . .... ■ examined . 
+
+
+UN  CLASSIFIED 
+
+
+SECURITY  CLASSIFICATION  OF  THIS  RACE  Doto  Mntorod) 
+
+
+Stanford  Artificial  Intelligence  Laboratory 
+Memo  AIM-266 
+
+
+October  1975 
+
+
+Computer  Science  Department 
+Report  No.  STAN-CS-75-519 
+
+
+Production  Rules  as  a Representation  for  a 
+Knowledge-Based  Consultation  Program 
+
+by 
+
+Randall  Davis 
+Bruce  Buchanan 
+Edward  Shortliffe 
+
+
+ABSTRACT 
+
+
+The  MYCIN  system  has  begun  to  exhibit  a high  level  of  performance  as  a consultant  on  the 
+difficult  task  of  selecting  antibiotic  therapy  for  bacteremia.  This  report  discusses  issues  of 
+representation  and  design  for  the  system.  Wo  describe  the  basic  task  and  document  the 
+constraints  involved  in  the  use  of  a progran  as  a consultant.  The  control  structure  and 
+knowledge  representation  of  the  system  are  examined  in  this  light,  and  special  attention  is  given 
+to  the  impact  of  production  rules  as  a representation.  The  extent  of  the  domain  independence  of 
+the  methodology  is  also  examined.  This  is  a pre-print  of  a paper  submitted  to  Artificial 
+Intelligence.  
+
+
+Randall  Davis  and  Bruce  Buchanan  are  in  the  Computer  Science  Department,  Edward  Shortliffe  is  in 
+the  Department  of  Medicine.  The  work  reported  here  was  funded  in  part  by  grants  from  the  National 
+Institutes  of  Health:  NIH  Grant  HS01S44  and  NIH  Grant  CM  29662,  in  part  by  the  Advanced 
+Research  Projects  Agency,  under  ARPA  Contract  DAHC15-7S-C-04S5,  and  by  the  Medical  Scientist 
+Training  Program  under  NIH  Grant  CM  10922.  Computing  support  was  furnished  by  the 
+SUM  EX- AIM  computer  resource  at  Stanford  University,  funded  by  the  Biotechnology  Resouces  Branch 
+of  the  National  Institutes  of  Health  under  Grant  RR-00785. 
+
+The  views  and  conclusions  contained  in  this  document  are  those  of  the  author(s)  and  should  not  be 
+interpreted  as  necessarily  representing  the  official  policies,  either  expressed  or  implied,  of  Stanford 
+University  ARPA,  National  Institutes  of  Health,  or  the  U.  S.  Government. 
+
+Reproduced  in  the  U.S.A.  Available  from  the  National  Technical  Information  Service,  Springfield 
+Virginia  221  SI.  . ' 
+
+
+INTRODUCTION 
+
+
+1 
+
+
+[1]  INTRODUCTION 
+
+Two  recent  trends  in  artificial  intelligence  research  have  been  applications  of  A I to 
+‘real-world’  problems,  and  the  incorporation  in  programs  of  large  amounts  of  task-specific 
+knowledge.  The  former  is  motivated  in  part  by  the  belief  that  artificial  problems  may  prove  in  the 
+long  run  to  be  more  a diversion  than  a base  to  build  on,  and  in  part  by  the  belief  that  the  field  has 
+developed  sufficiently  to  provide  techniques  capable  of  tackling  real  problems. 
+
+The  move  toward  what  have  been  called  'knowledge-based'  systems  represents  a change  from 
+previous  attempts  at  generalized  problem  solvers  (as,  for  example,  CPS).  Earlier  work  on  such 
+systems  demonstrated  that  while  there  was  a large  body  of  useful  general  purpose  techniques  (e.g, 
+problem  decomposition  into  subgoals,  heuristic  search  in  its  many  forms),  these  did  not  by 
+themselves  offer  sufficient  power  for  high  performance.  Rather  than  non-specific  problem  solving 
+power,  knowledge-based  systems  have  emphasized  both  the  accumulation  of  large  amounts  of 
+knowledge  in  a single  domain,  and  the  development  of  domain-specific  techniques,  in  order  to 
+develop  a high  level  of  expertise. 
+
+There  are  numerous  examples  of  systems  embodying  both  trends,  including  efforts  at  symbolic 
+manipulation  of  algebraic  expressions  [MACSYMA 1974),  speech  understanding  [Lesserl974], 
+chemical  inference  [Buchanan  1971],  applications  of  advanced  automation  techniques  to  industrial 
+assembly  [Finkell974,  Rosen  1975,  Nilsson  1 975],  some  work  on  natural  language  [Woods  1972],  and 
+the  creation  of  computer  consultants  as  interactive  advisors  for  various  tasks  [Hart  1975, 
+Shortliffe  1975a]. 
+
+In  this  paper  we  discuss  issues  of  representation  and  design  for  one  such  knowledge-based 
+application  program  - the  MYCIN  system  developed  over  the  past  three  years  as  an 
+interdisciplinary  project  at  Stanford  University.1  We  examine  in  particular  how  the  implementation 
+of  various  system  capabilities  is  facilitated  or  inhibited  by  the  use  of  production  rules  as  a knowledge 
+representation.  In  addition,  the  limits  of  applicability  of  this  methodology  are  investigated. 
+
+We  begin  with  a review  of  features  which  were  seen  to  be  essential  to  any  knowledge-based 
+consultation  system,  and  suggest  how  these  imply  specific  program  design  criteria.  We  note  also  the 
+additional  challenges  offered  by  the  use  of  such  a system  in  a medical  domain.  This  is  followed  by 
+an  explanation  of  the  system  structure,  and  its  fundamental  assumptions.  The  bulk  of  the  paper  is 
+then  devoted  to  a report  of  our  experience  with  the  benefits  and  drawbacks  of  production  rules  as  a 
+knowledge  representation  for  a high  performance  A I program. 
+
+
+2 
+
+
+SYS TEH  COALS 
+
+
+' 
+
+
+j 
+
+
+[2] 
+
+
+SYSTEM  GOALS 
+
+
+The  MYCIN  system  was  developed  originally  to  provide  consultative  advice  on  diagnosis  of 
+and  therapy  for  infectious  diseases  - in  particular,  bacterial  infections  in  the  blood  2 From  the  start, 
+the  project  has  been  shaded  by  several  important  constraints.  The  decision  to  construct  a high 
+performance  A I program  in  the  consultant  model  brought  with  it  several  demands.  First,  the 
+program  had  to  be  useful  if  we  expected  to  attract  the  interest  and  assistance  of  experts  in  the  field 
+The  task  area  was  thus  chosen  partly  because  of  a demonstrated  need  for  example,  in  a recent  year 
+one  of  every  four  people  in  the  U.S.  was  given  penicillin,  and  almost  90S  of  those  prescriptions  were 
+unnecessary  [Kagan  1973],  Problems  such  as  these  indicate  the  need  for  more  (or  more  accessible) 
+consultants  to  physicians  selecting  antimicrobial  drugs.  Usefulness  also  implies  competence, 
+consistently  high  performance,  and  ease  of  use.  If  advice  is  not  reliable,  or  is  difficult  to  obtain,  the 
+utility  of  the  program  is  severely  impaired. 
+
+A second  constraint  was  the  need  to  design  the  program  to  accommodate  a large  and  changing 
+body  of  technical  knowledge.  It  has  become  clear  that  large  amounts  of  task-specific  knowledge  are 
+required  for  high  performance,  and  that  this  knowledge  base  is  subject  to  significant  changes  over 
+time  [Buchananl971,  Finkell974,  Greenl974],  Our  choice  of  a production  rule  representation  was 
+significantly  influenced  by  such  features  of  the  knowledge  base. 
+
+A third  demand  was  for  a system  capable  of  handling  an  interactive  dialog,  and  one  which 
+was  not  a "black  box."  This  meant  that  it  had  to  be  capable  of  supplying  coherent  explanations  of 
+its  results,  rather  than  simply  printing  a collection  of  orders  to  the  user.  This  was  perhaps  the  major 
+motivation  for  the  selection  of  a symbolic  reasoning  paradigm,  rather  than  one  which,  for  example, 
+relied  totally  on  statistics.  It  meant  also  that  the  "flow”  of  dialog  - the  order  of  qut  :.ons  - should 
+exhibit  the  sense  of  purposefulness  of  the  domain,  anu  not  be  determine^,  uy  programming- 
+considerations.  Interactive  dialog  reguired,  in  addition,  extensive  human  engineering  features 
+designed  to  make  interaction  simple  for  someone  unaccustomed  to  computers. 
+
+The  choice  of  a medical  domain  brought  with  it  additional  demands  [Shortliffel 97*tb].  Speed, 
+access,  and  ease  of  use  gained  additional  emph?  >is,  since  a physician’s  time  is  typically  limited.  The 
+program  also  had  to  fill  a need  well-recognized  by  the  clinicians  who  would  actually  use  th  system, 
+since  the  lure  of  pure  technology  is  usually  insufficient.  Finally,  the  program  had  to  be  designed 
+with  an  emphasis  on  its  supportive  role  as  a tool  for  the  physician,  rather  than  as  a replacement  for 
+his  own  reasoning  process. 
+
+Any  implementation  selected  had  to  meet  all  these  demands.  Predictably,  some  have  been  met 
+more  successfully  than  others,  but  all  have  been  important  factors  in  influencing  the  system’s  final 
+design 
+
+
+SYSTEfl  OVERVIEW 
+
+
+3 
+
+
+[3]  SYSTEM  OVERVIEW 
+
+The  system  is  written  in  interlisp,  runs  on  a DEC  KI-10  with  approximately  130K  of 
+nonshared  code,  and  is  fast  enough  to  permit  convenient  real-time  interaction.  The  consultation 
+system  (with  the  required  data  structures)  requires  approximately  50K,  the  explanation  system  I OK, 
+the  question  answering  system  15K.  the  rule  acquisition  system  20K,  and  the  rules  themselves 
+approximately  8K  (the  remainder  includes  a dictionary,  information  on  drug  properties,  and  various 
+
+system  utility  features). 
+
+[3.1]  THE  TASK 
+
+The  fundamental  task  is  the  selection  of  therapy  for  a patient  with  a bacterial  infection. 
+Consultative  advice  is  often  required  in  the  hospital  because  the  attending  physician  may  not  be  an 
+expert  in  infectious  diseases,  as  for  example,  when  a cardiology  patient  develops  an  infection  after 
+heart  surgery.  Time  considerations  compound  the  problem.  A specimen  (of  blood,  urine,  etc.)  drawn 
+from  a patient  may  show  some  evidence  of  bacterial  growth  within  12  hours,  but  24  to  48  hours  (or 
+more)  are  required  for  positive  identification.  The  physician  must  therefore  often  decide,  in  absence 
+of  complete  information,  whether  or  not  to  start  treatment  and  what  drugs  to  use  if  treatment  is 
+
+required.  Both  of  these  may  be  difficult  questions. 
+
+The  task  will  become  clearer  by  reviewing  initial  and  final  parts  of  a sample  dialog  with 
+the  MYCIN  system,  shown  in  Figures  1 and  2 (italicized  comments  at  the  right  are  for  explanatory 
+purposes,  and  are  not  part  of  the  actual  dialog).  A great  deal  of  attention  has  been  paid  to  making 
+the  interaction  easy  and  natural.  Questions  have  been  carefully  worded,  for  example,  so  as  to  set  up 
+expectations  of  responses  without  making  them  as  uninteresting  as  multiple  choice  questions. 
+Currently  the  dialog  is  airected  primarily  by  the  system  - patient  information  can  be  entered  only 
+by  answering  each  question  in  turn 
+
+There  are  several  options  available  to  make  the  interaction  more  informative  The  usei  can, 
+for  instance,  ask  for  a rephrasing  of  the  question  or  a display  of  some  (or  all)  of  the  acceptable 
+responses.  If  a requested  item  of  information  is  unavailable,  he  can  respond  with  UNKNOWN  (U.  or 
+UNK  for  short).  The  user  can  also  modify  any  answer  which  he  is  unsure  of  by  attaching  a number 
+
+1 indicating  his  degree  of  certainty  (as.  for  example,  in  questions  13  and  15). 
+
+The  main  purpose  of  the  system  is  to  provide  advice,  and  it  does  so  via  the  consultation 
+system  (Figure  3).  In  addition  to  this  performance  program,  there  are  three  adjunct  programs  that 
+increase  system  utility  and  flexibility:  (a)  a question  answering  system  which  handles  simple  natural 
+language  inquiries  about  either  the  specific  consultation,  or  about  the  general  knowledge  base  of  the 
+program;  (b)  an  explanation  program  for  giving  reasons  why  the  performance  program  has 
+requested  an  item  of  information  or  has  drawn  a particular  conclusion;  and  (c)  a knowledge 
+acquisition  system  for  extending  the  knowledge  base  through  a dialog  with  an  expert. 
+
+As  described  below,  each  of  these  four  interrelated  programs  meets  one  or  more  of  the  goals 
+
+outlined  above. 
+
+
+f 
+
+
+4 
+
+
+SYSTEIl  OVERVIEW 
+
+
+rv 
+
+
+PATIENT-1 
+
+1)  Patient’s  nans:  (first-last) 
+
+**FRED  SMITH  { background  data} 
+
+2)  Sex: 
+
+«*MALE 
+
+3)  Age: 
+
+**55 
+
+4)  Have  gou  been  able  to  obtain  positive  cultures  from  a site  at  uhich  Fred 
+Smith  has  an  infection? 
+
+**YES 
+
+-INFECTION-1 
+
+5)  Uhat  is  the  infection? 
+
+**PRIMARY-BACTEREMIA 
+
+6)  Please  give  the  date  and  approximate  time  uhen  signs  or  symptoms  of  the 
+primary-bacteremia  (INFECTION-1)  first  appeared,  (mo/da/yr) 
+
+**  MAY  5,  1 975 
+
+The  most  recent  positive  culture  associated  uith  the  primary-bacteremia 
+(INFECTION-1)  Mill  be  referred  to  as: 
+
+CULTURE-1 
+
+7)  From  uhat  site  uas  the  specimen  for  CULTURE-1  taken? 
+
+**BL00D 
+
+8)  Please  give  the  date  and  time  uhsn  this  blood  culture  (CULTURE-1) 
+uas  obtained,  (mo/da/yr) 
+
+**  MAY  9,  1975 
+
+The  first  significar*.  organism  from  this  blood  culture  (CULTURE-1) 
+ui I I be  referred  to  as: 
+
+ORGAN ISM-1 
+
+9)  Enter  the  identity  of  ORGANISM-1: 
+
+•♦UNKNOWN 
+
+{typically  the  identity  is  not  known  and  must  be  inferred } 
+
+10)  Is  ORGANISM-1  a rod  or  coccus  (etc.): 
+
+**R0D 
+
+11)  The  gram  stain  of  ORGANISM-1: 
+
+**GRAMNEG 
+
+12)  Have  there  been  POSITIVE  cultures  from  sites  uhich  are  NOT 
+associated  uith  infections  about  uhich  you  are  seeking  advice? 
+
+**N0 
+
+13)  Did  ORGANISM-1  grou  aerobically? 
+
+**YES  (8) 
+
+14)  Did  ORGANISM-1  grou  anaerobically? 
+
+**YES 
+
+
+IS)  Uhat  is  the  suspected  portal  of  entry  of  ORGANISM-1 
+into  this  sterile  site? 
+
+**GI  (6) 
+
+• • • 
+
+{ more  questions  follow,  to  gather  sufficient  information  to  infer  possible  identities  of 
+the  infecting  organisms} 
+
+
+FIGURE  I 
+
+
+SYSTEO  OVERVIEW 
+
+
+5 
+
+
+fly  therrpy  recommendation  will  be  based  on  the  following  probable  infection(e) 
+and  potential  causative  organism(s): 
+
+
+I NFCCT  i ON-1  is  PR  I MAR  Y-BACTEREfl  I A 
+
+
+{possiblt  identities} 
+
+
+< I tern  1 > The  identity  cf  ORGANISM-1  may  be  PSEUDOMONAS- AERUGINOSA 
+
+<Item  2>  The  identity  of  ORGANISM-1  may  be  KLEBS 1 ELLA-PNEUMONI AE 
+
+<Item  3>  The  identi4u  of  ORGANISM-1  may  be  E.COLI 
+
+<Item  4>  The  identity  of  ORGANISM-1  may  be  9ACTER0IDES-FRAGILIS 
+
+<item  S>  The  identity  of  ORGANISM-1  may  be  ENTEROBACTER 
+
+<Item  6>  The  identity  of  ORGANISM-1  may  be  PROTEUS-NON-MIRAHLIS 
+
+4G)  On  a scale  of  0 to  4,  where  higher  numbers  indicate  increasing  severity 
+how  would  you  rate  Fred  Smith’s  degree  of  sickness? 
+
+47)  Does  Fred  Smith  have  a clinically  significant  allergic  reaction  to  any 
+antimicrobial  agent? 
+
+48)  Fred  Smith’s  weight  in  kilograms  (or  <number>  POUNOS): 
+
+7 0 
+
+{note  that  2 drugs  cover  for  6 potential  organisms] 
+[Rec  II  My  preferred  therapy  recommendation  is  as  follows: 
+
+In  order  to  cover  for  I terns  <1  2 3 5 6>: 
+
+Give:  GENTAMICIN 
+
+Oose:  119  mg  (1.7  mg/kg)  q8h  IV  lor  IM)  for  10  days 
+Comments:  Modify  dose  in  renal  failure 
+In  order  to  cover  fcr  I tern  <4>: 
+
+Give:  CLINDAMYCIN 
+
+Dose:  595  mg  (8.5  mg/kg)  qGh  IV  [or  IM]  for  14  days 
+Comments:  If  diarrhea  or  other  GI  symptoms  develop,  patient 
+
+should  be  evaluated  for  possible  pseudomembranous  colitis. 
+
+Do  you  wish  to  see  the  next  choice  therapy?  {alternative  choices  ar' available] 
+
+**  Y . 
+
+Uhich,  if  any,  of  the  above  drugs  do  you  wish  eliminated  from  consideration? 
+
+**CIINDAMYCIN 
+
+[Rec  21  Next  best  therapy  recommendation: 
+
+In  order  to  cover  for  I terns  <2  3 4 5 6>: 
+
+Give:  CHLORAMPHENICOL 
+
+Oose:  1 gm  (15  mg/kg)  qGh  IV  for  14  days 
+Comments:  Monitor  patient’s  white  count 
+In  order  to  cover  for  Item  <1>: 
+
+Give:  GENTAMICIN 
+
+Dose:  119  mg  (1.7  mg/kg)  q8h  IV  [or  IM]  for  10  days 
+Comments:  Modify  dose  in  renal  failure 
+
+
+FIGURE  2 
+
+
+6 
+
+
+SYSTCfl  OVERVIEW 
+
+
+FIGURE  3 
+
+
+SVSTEO  OVERVIEW 
+
+
+7 
+
+
+[3.2]  THE  RULES 
+
+The  primary  source  of  domain  specific  knowledge  is  a set  of  some  200  production  rules, 
+each  with  a premise  and  an  action  (Figure  4) 
+
+
+PREMISE 
+
+
+ACTION 
+
+
+(SAND (SAME  CNTXT  INFECT  PR  I MARY -BACTEREMIA) 
+(MEMBF  CNTXT  SITE  STERILESI TES) 
+
+(SAME  CNTXT  PORTAL  Gl) 
+
+(CONCLUDE  CNTXT  IDENT  BACTEROIDES  TALLY  .7) 
+
+
+if  1)  the  infection  Is  primary-bacteremia,  and 
+
+2)  the  9ite  of  the  culture  is  one  of  the  ster i I es i tee,  and 
+
+3)  the  suspected  portal  of  entry  of  the  organism  is  the  gastro- 
+
+Then  there  ! V suggesl  i dence  (.7)  that  the  identity  of  the  organism 
+
+bacteroides. 
+
+
+i s 
+
+
+Figure  4 
+
+The  PREMISE  is  a 3oolean  combination  of  predicate  functions  on  associative  triples.  Thus  each 
+
+clause  of  a premise  has  the  following  four  components: 
+
+predicate  function>  <object>  <attribute>  <value> 
+
+There  is  a standardized  set  of  24  predicate  functions  (t  SAME.  KNOWN,  DEFINITE),  some  SO 
+attributes  (e  g IDENTITY.  SITE.  SENSITIVITY),  and  11  objects  (eg  ORGANISM.  CULTURE. 
+DRUG)  curently  available  for  us-  as  primitives  in  constructing  rules.  The  premise  is  a conjunction 
+at  the  top  level  (top  level  d.siunct.ons  are  put  into  separate  rules),  but  may  contain  arbitrarily 
+complex  conjunctions  or  disjunctions  at  lower  levels.  (We  have  not  found  it  necessary  in  practice  to 
+use  more  than  two  levels.)  The  ACTION  part  indicates  one  or  more  conclusions  which  can  be 
+drawn  if  the  premises  are  satisfied,  hence  the  rules  are  (currently)  purely  inferential  in  character. 
+
+It  is  intended  that  each  rule  embody  a single,  modular  chunk  of  knowledge,  and  state 
+explicitly  m the  premise  all  necessary  context.  Since  the  rule  uses  a vocabulary  of  concepts  common 
+to  the  domain,  it  forms,  by  itself,  a comprehensible  statement  of  some  piece  of  domain  knowledge.  As 
+
+will  become  clear,  this  characteristic  is  useful  in  many  ways. 
+
+Each  rule  ,s.  as  is  evident,  highly  stylized,  with  the  IF/THEN  format  and  the  specified  set  of 
+available  primitives  While  the  lisp  form  of  each  is  executable  code  (and.  in  fact,  the  premise  is 
+simply  EVALuated  by  lisp  to  test  its  truth,  and  the  action  EVALuated  to  make  its  conclusions),  this 
+tightly  structured  form  makes  possible  the  examination  of  the  rules  by  other  parts  of  the  system. 
+This  in  turn  leads  to  some  important  capabilities,  to  be  described  below.  For  example,  the  internal 
+form  can  be  automatically  translated  into  readable  English  as  shown  in  Figure  4. 
+
+Despite  this  strong  stylization,  w-  have  not  found  the  format  restrictive,  as  evidenced  by  the 
+fact  that  of  nearly  200  rules  on  a variety  of  topics,  only  8 employ  any  significant  variations  of 
+methodology  The  limitations  we  have  encountered  arise  primarily  out  of  the  fact  that  the  use  of  a 
+simple  predicate  in  the  premise  forces  a pure  problem  reduction  approach  (see  section  [6  1.2]).  We 
+
+
+L 
+
+
+8 
+
+
+SYSTEfl  OVERVIEW 
+
+
+have  thus  found  it  necessary,  for  instance,  to  use  a slightly  different  technique  to  implement  the  few 
+rules  which  say  things  like  "For  each  organism  such  that  ...  conclude  that  but  this  has  been  done 
+in  a way  which  is  closely  related  to  the  standard  formal. 
+
+[3.3]  JUDGMENTAL  KNOWLEDGE 
+
+Since  we  want  to  deal  with  re*i-world  domains  in  which  reasoning  is  often  judgmental  and 
+inexact,  we  require  some  mechanism  for  being  able  to  say  that  "A  suggests  B“,  or  "C  and  D tend  to 
+mle  out  E ” The  numbers  used  to  indicate  the  strength  of  a rule  (e  g the  7 in  Figure  4)  have  been 
+termed  Certainty  Factors  (CFs).  The  methods  for  combining  CFs  are  embodied  in  a model  of 
+approximate  implication.  Note  that  while  these  are  derived  from  and  are  related  to  probabilities, 
+they  are  distinctly  different  (for  a detailed  review  of  the  concept,  see  [Shot tliffe  1 975b]).  For  the  rule 
+in  Figure  4.  then,  the  evidence  is  strongly  indicative  (.7  out  of  '),  but  not  absolutely  certain. 
+Evidence  confirming  an  hypothesis  is  collected  separately  from  that  which  disconfirms  it,  and  the 
+truth  of  the  hypothesis  at  any  time  is  the  algebraic  sum  of  the  current  evidence  for  and  against  it. 
+This  is  an  important  aspect  of  the  truth  model,  since  it  makes  plausible  the  simultaneous  existence 
+of  evidence  in  favor  and  against  the  same  hypothesis  We  believe  this  is  an  important  characteristic 
+of  any  model  of  inexact  reasoning. 
+
+Facts  about  the  world  are  represented  as  4-tuples,  with  an  associative  triple  and  its  current  CF 
+(Figure  5)  Positive  CFs  ind-cate  a predominance  of  evidence  confirming  an  hypothesis,  negative 
+CFs  indicate  predominance  of  disaffirming  evidence 
+
+(SITE  CULTURE-1  BLOOu  i.0) 
+
+(IDENT  ORGANISH-2  KLEBSIELLA  .25) 
+
+(iOENT  0RGANISI1-2  E.COLI  .73) 
+
+(SENSITIVS  ORGAN I SH-1  PENICILLIN  -1.0) 
+
+Figure  5 
+
+Note  that  the  truth  model  permits  the  coexistence  of  several  plausible  values  for  a single 
+clinical  parameter,  if  they  are  suggested  by  the  evidence.  Thus,  for  example,  after  attempting  to 
+deduce  the  identity  of  an  organism,  the  system  may  have  concluded  (correctly)  that  there  is  evidence 
+that  the  identity  is  Ecoli  and  evidence  that  it  is  Klebsiella,  despite  the  fact  that  they  are  mutually 
+exclusive  possibilities. 
+
+As  a result  of  the  program’s  medical  origins,  we  also  refer  to  the  attribute  part  of  the  triple  as 
+a 'clinical  parameter’,  and  use  the  two  terms  interchangeably  here  The  object  part  (e.g., 
+CULTURE-1,  ORGANISM-2)  is  referred  to  as  a context.  This  term  was  chosen  to  emphasize  their 
+dual  role  as  both  part  of  the  associative  triple  and  as  a mechanism  for  establishing  scope  of  variable 
+bindings  As  explained  below,  the  contexts  are  organized  during  a consultation  into  a tree  structure 
+whose  function  is  similar  to  those  found  in  ‘alternate  world’  mechanisms  of  languages  like  or*. 
+
+
+SYSTEM  OVERVIEW 
+
+
+9 
+
+
+[3.4]  CONTROL  STRUCTURE 
+
+The  rules  are  invoked  in  a backward  unwinding  scheme  that  produces  a depth-first  search 
+of  an  AND/OR  goal  tree  (and  hence  is  similar  in  some  respects  to  planner's  consequent  theorems): 
+given  a goal  to  establish,  we  retrieve  the  (pre-computed)  list  of  all  rules  whose  conclusions  oear  on 
+the  goal.  The  premise  of  each  is  evaluated,  with  each  predicate  function  leturnmg  a number 
+between  -1  and  1 HAND  (the  multivalued  analogue  of  the  Boolean  AND)  performs  a minimization 
+operation  and  UOR  (similar)  dees  a maximization.4  For  rules  whose  premise  evaluates  successfully 
+(le  greater  than  2,  an  empirical  threshold),  the  action  part  is  evaluated,  and  the  conclusion  made 
+with  a certainty  which  is 
+
+<premi se-value>  * <certainty  factor> 
+
+Those  which  evaluate  unsuccessfully  are  bypassed,  while  a clause  whose  truth  cannot  be  determined 
+from  current  information  causes  a new  subgoal  to  be  set  up,  and  the  piocess  recurses.  Note  that 
+'evaluating'  here  means  simply  invoking  the  lisp  EVAL  function  - there  is  no  additional  rule 
+interpreter  necessary,  since  SAND,  SOR,  and  the  predicate  functions  are  all  implemented  as  us? 
+functions. 
+
+Unlike  planner,  however,  the  subgoal  which  is  set  up  is  a generalized  form  of  the  original  goal. 
+If,  for  example,  the  unknown  clause  is  'the  identity  of  the  organism  is  E coli',  the  subgoal  which  is 
+set  up  is  'determine  the  identity  of  the  organism  ’ The  new  subgoal  is  therefore  always  of  the  form 
+•determine  the  value  of  the  <attribute>’  rather  than  'determine  whether  the  <attribute>  is  equal  to 
+<value>’.  Gy  setting  up  the  generalized  goal  of  collecting  all  evidence  about  a clinical  parameter,  the 
+piog]  am  effectively  exhausts  each  subject  as  it  is  encountered,  and  thus  tends  to  group  together  all 
+questions  about  a given  topic  This  results  in  a system  which  displays  a much  more  focussed, 
+methodical  approach  to  the  task,  which  is  a distinct  advantage  where  human  engineering 
+considerations  aie  important.  The  cost  is  the  effort  of  deducing  or  collecting  information  which  is 
+not  strictly  necessaiy  However,  since  this  occurs  rarely  — only  when  the  <attiibute>  can  be  deduced 
+with  certainty  to  be  the  <v\lue>  named  in  the  original  goal  - we  have  not  found  this  to  be  a 
+problem  in  practice 
+
+A second  deviation  from  the  standard  rule  unwinding  approach  is  thaf  every  rule  relevant  to 
+a goal  is  used  The  premise  of  each  rule  is  evaluated,  and  if  successful,  its  conclusion  is  invoked. 
+This  continues  until  all  lelevant  rules  have  all  been  used,  or  one  of  them  has  given  the  result  with 
+certainty  Tms  use  of  all  rules  is  in  part  an  aspect  of  the  model  of  judgmental  reasoning  and  the 
+approximate  implication  character  of  rules  - unless  a result  is  obtained  with  certainty,  we  should  be 
+careful  to  collect  all  positive  and  negative  evidence  It  is  also  appropriate  to  the  system’s  current 
+domain  of  application,  clinical  medicine,  where  a conservative  strategy  of  considering  all  possibilities 
+and  weighing  all  the  evidence  is  preferred. 
+
+If,  after  trying  all  relevant  rules  (referred  to  as  ‘tracing’  the  subgoal),  the  total  weight  of  the 
+evidence  about  a hypothesis  falls  between  -.2  and  .2  (again,  empirically  determined),  the  answer  is 
+regarded  as  still  unknown  This  may  happen  if  no  rule  were  applicable,  the  applicable  rules  were  too 
+weax,  the  effects  of  several  rules  offset  each  other,  or  if  there  were  no  rules  for  this  subgoal  at  all  In 
+
+
+* 
+
+
+m 
+
+
+m 
+
+
+IPUU  UIFI'llim.l  PI  UWfWMJMIU  inii,u»*PV  yi  j|  III  UUUJ  IJWU  ? 1 ' '"'.".i'll  .,114.^1  ,(  !)■  >■■■•  HI  P.P*' J UH  I, 
+
+
+- 10  - SYSTEM  CVERVIEU 
+
+ins  ul  tin  se  cases,  when  the  system  is  unable  to  deduce  the  answer,  it  asks  the  user  for  the  value 
+(using  a phrase  which  is  stored  along  with  the  attribute  itself).  Since  the  legal  values  for  each 
+attnbute  are  also  stored  with  it,  the  validity  (or  spelling)  of  the  user’s  i espouse  is  easily  checked 
+(This  also  makes  possible  a display  of  aaeptabk  answers  in  response  to  a ?’  answer  f'lom  the  usei) 
+
+The  strategy  of  always  attempting  to  deduce  the  value  of  a subgoal,  and  asking  only  when 
+that  tails,  would  insuie  the  minimum  number  of  questions  It  would  also  mean,  however,  that  woih 
+mi  lit  he  expended  seal  thing  for  a subgoal,  arming  peihaps  at  a less  than  definite  answer,  when 
+the  usei  dieady  knew  the  answer  with  certainty  in  lespunse  to  this,  some  of  the  attributes  have 
+been  labelled  as  LABDATA,  indicating  that  they  lepresent  quantities  which  aie  often  available  as 
+quantitative  results  of  laboratory  tests  in  this  case  the  deduce-then-ask  procedine  is  reversed,  and 
+the  system  will  attempt  to  deduce  the  answer  only  if  the  user  cannot  supply  it.  Given  a desire  to 
+minimize  both  tiee  seaich  and  the  number  of  questions  asked,  there  is  no  guaranteed  optimal 
+solution  to  the  pioblem  of  deciding  when  to  ask  lor  information,  and  when  10  tiy  to  deduce  it.  But 
+the  LABDATA  - clinical  data  distinction  used  here  has  performed  quite  will,  and  seems  to  embody 
+a veiy  ippiopnate  ciitenon 
+
+Tluee  other  recent  additions  to  the  tree  search  procedure  have  helped  impiove  performance. 
+Fus’.  bet  cue  the  entue  list  of  mles  for  a subgoal  is  retrieved,  the  system  attempts  to  find  a sequence 
+ot  mles  which  would  establish  the  goal  with  certainty,  based  only  on  what  is  cmmitiy  known.  Since 
+this  is  a search  for  a sequence  o:  rules  with  CF  = I , we  have  teimed  the  n sult  a j.uity  path.  Besides 
+r: ; i lemy  considei ations,  this  process  otteis  the  advantage  of  allowing  the  system  to  make  common 
+sense*  deductions  with  ? minimum  of  effort  (rules  with  CF-I  are  laigely  definitional).  Since  it  also 
+helps  minimize  the  number  of  questions,  this  check  is  peifoimed  even  betoie  asking  about 
+
+I ANUATA  t>pe  attributes  as  well.  Because  theie  aie  few  such  rules  in  the  sysviii,  the  seairh  is 
+typirallv  wiy  brief 
+
+Second,  a straightforward  bookkeeping  mechanism  notes  the  ml.  s that  have  failed 
+pi.  viousiy,  anci  avoids  ever  trynit,  to  leevaiuate  any  of  them  (Recall  that  a tide  may  have  more 
+
+than  one  conclusion,  may  conclude  about  more  than  a single  attribute,  and  hence  may  get 
+
+i . ti  i>  v e , mole  than  once) 
+
+Finally,  we  have  implemented  a partial  evaluation  of  rule  premises  Since  ma.  y attributes 
+mind  in  several  rules,  the  value  of  one  clause  (perhaps  the  last)  in  a picnusc  may  already 
+h.tv>  been  established,  even  while  ‘he  rest  are  still  unknown  if  this  clause  alone  would  make  the 
+l>n  i ii-e  ; the,  theie  is  dearly  no  reason  to  do  all  the  search  necessary  to  tiy  to  establish  the  ot  he  i s . 
+i t h pitmise  is  thus  pieviewed’  by  evaluating  it  on  the  basis  of  currently  available  information. 
+I in'-  p: ndni.es  a Boolean  combination  of  TRUEs,  FALSEs,  and  UNKNOWNS,  and 
+
+. ii  .lidni  w.ucl  simplification  (e  g F a U h F)  indicates  whether  the  rule  is  guaranteed  to  fail. 
+
+Tnr-  last  technique  is  implemented  in  a way  which  suggests  the  utility  of  stylized  coding  in  the 
+ul'  •-  It  al  o foirns  .<n  example  of  vhat  was  alluded  to  earlier,  where  it  was  noted  that  the  mles  may 
+I . . x tMii"  d by  vanous  elements  of  the  system,  as  well  as  executed  We  requue  a way  to  tell  u any 
+, <11  i in  he  piemise  is  known  o be  false.  We  cannot  simply  EVAL  each  individually,  since  a 
+
+
+SYSTEfl  OVERVIEW 
+
+
+11 
+
+
+■iubgoal  which  had  never  been  traced  before  would  send  the  system  off  on  its  recursive  search 
+Inhibiting  search  by  means  of  some  global  switch  will  not  work,  since  a null  result  could  mean  either 
+that  the  subgoal  had  never  been  traced,  or  that  it  had  been  but  the  system  was  unable  to  deduce  an 
+answer  Even  maintaining  lists  of  previously  successful  or  unsuccessful  clauses  would  be  aa 
+incomplete  solution,  since  the  current  clause  might  differ  only  in  its  predicate  function 
+
+However,  if  we  can  establish  which  attribute  is  referenced  by  the  clause,  it  is  possible  to 
+determine  (by  reference  to  internal  flags)  whether  it  has  been  traced  previously.  If  so,  the  clause  can 
+be  EVALed  to  obtain  the  value.  This  is  made  possible  by  the  TEMPLATE  which  each  function 
+name  has  on  its  property  list  (Figure  6). 
+
+Function  Template  Samp  I e f unc t i on  ca I I 
+
+SAME  (SAME  CNTXT  PARM  VALUE)  (SAME  CNTXT  SITE  BLOOD) 
+
+Figure  6. 
+
+The  template  indicates  the  generic  type  and  order  of  arguments  to  the  predicate  function,  much  like 
+a simplified  procedure  declaration.  By  using  it  as  a guide,  the  previewing  mechanism  can  extract  the 
+attribute  from  the  clause,  and  determine  whether  or  not  it  has  been  traced. 
+
+There  are  two  points  of  interest  here  - first,  part  of  the  system  is  ‘reading’  the  code  (the  rules) 
+being  executed  by  another  part;  and  second,  this  reading  is  guided  by  the  information  carried  in 
+components  of  the  rules  themselves.  The  ability  to  'read'  the  code  could  have  been  accomplished  by 
+requiring  all  predicate  functions  to  use  the  same  format,  but  this  is  obviously  awkward.  By  allowing 
+each  function  to  describe  the  format  of  its  own  calls,  we  peimit  cede  which  is  stylized  without  being 
+constrained  to  a single  form,  and  hence  is  flexible  and  much  easier  to  use  We  require  only  that  each 
+form  be  expressable  in  a template  built  from  the  current  set  of  template  primitives  (e.g,  PARM, 
+VALUE,  etc).  This  approach  also  insures  that  the  capability  will  persist  in  the  face  of  future 
+additions  to  the  system  The  result  is  one  example  of  the  general  idea  of  giving  the  system  access  to, 
+and  an  "understanding"  of  its  own  representations.  This  idea  has  been  used  and  discussed 
+extensively  in  [Davis  1 975b] 
+
+We  have  also  implemented  antecedent-style  rules.  These  are  rules  which  are  invoked  if  a 
+conclusion  is  made  which  matches  their  premise  condition.  They  are  currently  limited  to 
+common-sense  deductions  (i.e.  CF-1),  and  exist  primarily  to  improve  system  efficiency.  Thus,  for 
+example,  if  the  user  responds  to  the  question  of  organism  identity  with  an  answer  he  is  certain  of, 
+there  is  an  antecedent  rule  which  will  deduce  the  organism  gramstain  and  morphology  This  saves 
+the  trouble  of  deducing  these  answers  later  via  the  subgoal  mechanism  described  above 
+
+
+12 
+
+
+3YSTEN  OVERVIEW 
+
+
+[3.5]  META-RULES 
+
+With  the  system's  current  collection  of  200  rules,  exhaustive  invocation  of  rules  would  be 
+quite  feasible  since  the  maximum  number  of  rules  for  a single  subgoal  is  about  30.  We  are  aware, 
+however,  of  the  problems  that  may  occur  if  and  when  the  collection  grows  substantially  larger  It 
+was  partly  in  response  to  this  that  we  developed  an  alternative  to  exhaustive  invocation  by 
+implementing  the  concept  of  meta-rules.  These  are  strategy  rules  which  suggest  the  best  approach  to 
+a given  subgoal.  They  have  the  same  format  as  the  clinical  rules  (Figure  7),  but  can  indicate  that 
+certain  clinical  rules  should  be  tried  first,  last,  before  others,  or  not  at  all. 
+
+
+PREMISE:  (SAND  (MEMBF  SITE  CNTXT  NONSTER I LEG I TES ) 
+
+(THEREARE  OURULES (MENTIONS  CNTXT  PREMISE  SAMEBUG) ) 
+
+ACTION:  (CONCLIST  CNTXT  UTILITY  YES  TALLY  -1.0) 
+
+If  1)  the  site  of  the  culture  is  one  of  the  nonster i I es i tes,  and 
+
+2)  there  are  rules  which  mention  in  their  premise  a previous 
+organism  which  may  be  the  same  as  the  current  organism 
+
+Then  it  is  definite  (1.0)  that  ea;.h  of  them  is  not  going  to  be  useful. 
+
+Figure  7 
+
+Thus  before  processing  the  entire  list  of  rules  applicable  to  any  subgoal,  the  meta-rules  for  that 
+subgoal  are  evaluated.  They  may  rearrange  or  shorten  the  list,  effectively  ordering  the  search  or 
+pruning  the  tree.  By  making  them  specific  to  a given  subgoal,  we  can  specify  precise  heuristics 
+without  imposing  any  extra  overhead  in  the  tracing  of  other  subgoals. 
+
+Note,  however,  that  there  is  no  reason  to  stop  at  one  level  of  rr, eta-rules.  We  can  generalize 
+this  process  so  that,  before  invoking  any  list  of  rules,  we  check  for  the  existence  of  rules  of  the  next 
+higher  order  to  use  in  pruning  or  rearranging  the  first  list.  Thus,  while  meta-rules  are  strategies  for 
+selecting  clinical  rules,  second  order  meta-rules  would  contain  information  about  which  strategy  to 
+try,  third  -der  rules  would  suggest  criteria  for  deciding  how  to  choose  a strategy,  etc.  These  higher 
+order  rules  represent  a search  by  the  system  through  "strategy  space",  and  appear  to  be  powerful 
+constraints  on  the  search  process  at  lower  levels.  (We  have  not  yet  encountered  higher  order 
+meta-rules  in  practice,  but  neither  have  we  actively  sought  them). 
+
+Note  also  that  since  the  system's  rule  unwinding  may  be  viewed  as  tree  search,  we  have  the 
+appearance  of  a search  through  a tree  with  the  interesting  property  that  each  brunch  point  contains 
+information  on  the  best  path  to  take  next.  Since  the  meta-rules  can  be  judgmental,  there  exists  the 
+capability  of  writing  numerous,  perhaps  conflicting  heuristics,  and  having  their  combined  judgment 
+suggest  the  best  path.  Finally,  since  meta-rules  refer  to  the  clinical  rules  by  their  content  rather  than 
+by  name,  the  method  automatically  adjusts  to  the  addition  or  deletion  of  clinical  rules,  as  well  as 
+modifications  ,o  any  of  them. 
+
+The  capability  of  meta-rules  to  order  or  prune  the  search  tree  has  proved  to  be  useful  in 
+
+
+SYSTEM  0VCRV1EU 
+
+
+- 13 
+
+
+w„„  another  .»„«»  u.  Urn**  » «>'  *"  “k»  n!  h'"™"  «»»*• 
+
+„ „v,k.s  rood  .rose  to  ask  the  user  first  about  the  pollin'  culture,  (those  show,,,;  bacternl  growth). 
+
+betore  ask, o,  about  ncgatne  cut  ures  Formerly,  thts  tie- .go  chotce  «!  emhrrtdni  the  ordmng  o, 
+a |,M  but  ted  to  the  sysleo.  code  Yet  can  be  stated  little  easily  and  eM,l,crl,  in  a metau  ule. 
+yielding  the  significant  advantage,  of  mating  ,t  both  readily  explainable  and  modifiable  Metanules 
+have  thus  proved  capable  of  expressing  a limited  subset  of  the  knowledge  formerly  embedded  ,n  the 
+
+conf  ol  structure  code  of  the  system 
+
+Metarules  may  also  be  used  Id  control  antecedent  rule  invocal, on  Thus  we  can  write 
+„ ,.nm  which  control  the  dep.h  and  breadth  of  condustons  drawn  b,  the  systetn  ,n  response  to  a 
+
+iv  w piece  of  information 
+
+A detailed  overview  of  all  o!  these  mechanisms  is  included  in  the  Appendix,  and  indicates  the 
+
+way  they  function  together  to  insure  an  efficient  search  for  each  subgoal 
+
+The  final  aspect  of  the  control  structure  is  the  tree  of  contexts  (recall  the  dual  meaning  o.  the 
+lerm  Wlull  :\U).  constructed  dynamically  from  a fixed  hierarchy  as  the  consultation  proceeds 
+(Picro  S)  Tin-  ser  es  several  purposes  First,  binding  of  free  variables  m a rule  are  established  by 
+
+in  which  -he  rule  is  invoked,  with  .he  standard  access  to  contexts  winch  are  its  ancestors. 
+
+Second  s,„ce  this  ree  is  intended  to  reflect  the  .elationsh.ps  of  objects  in  the  domain,  it  helps 
+sti  n( tui >■  the  consultation  m ways  familiar  to  the  user  In  the  current  domain,  a patient  has  one  or 
+m01„  infections,  each  o.  which  may  have  one  or  more  associated  cultures,  each  of  which  in  turn  may 
+havr  n|,e  o,  more  organisms  growing  in  it.  and  so  on.  Finally,  we  have  found  useful  to  select  one 
+o,  . rcu e of  the  attributes  of  eich  context  type  and  establish  these  as  its  MAINPROPS.  or  primary 
+Each  time  a new  cortex’  of  that  type  is  sprouted,  these  MAINPROPS  are  automatically 
+traced  5 Since  many  of  them  are  LA  C.DATA-type  attributes,  the  effect  is  to  begin  each  new  context 
+with  a set  of  standard  questions  appropriate  to  that  context,  which  serve  to  'set  the  stage  for 
+subsequent  questions.  This  has  proved  to  be  a very  useful  human  engineering  feature  in  a domain 
+which  has  evolved  a heavily  stylized  format  for  the  presentation  of  information 
+
+
+SYSTEfl  OVERVIEW 
+
+
+PATIENT-1 
+
+
+CULTURE-1 
+
+
+ORGANISM-1 
+
+
+CULTURE-2  CULTURE-3 
+
+/ (\ 
+
+ORGAN  ISM-2  ORGANISM-3  ORGANISM-4 
+
+
+FIGURE  8 
+
+
+relation  to  other  uorl 
+
+
+15 
+
+
+I 
+
+
+[* 
+
+\ 
+
+t 
+
+i 
+
+
+t 
+
+
+,*■ 
+
+
+1 
+
+' 
+
+I- 
+
+
+[4]  RELATION  T0  OTHER  WORK 
+
+We  outline  briefly  in  this  section  a few  programs  that  relate  to  vauous  aspects  of  our  work 
+Some  of  these  have  provided  the  intellectual  basis  from  which  the  present  system  evolved,  others 
+have  employed  techniques  which  are  similar,  while  still  others  have  attempted  to  solve  closely  related 
+problems.  Space  limitations  preclude  detailed  comparisons,  but  we  indicate  some  of  the  moie 
+irrpoitant  distinctions  and  similarities 
+
+There  have  been  a large  number  of  attempts  to  aid  medical  decision  making  (see 
+[Shortliffe  1 974a]  for  an  extensive  review).  The  basis  for  some  programs  has  been  simple  algorithmic 
+processes,  often  implemented  as  decision  trees  ((Meyer  1973],  [Warnerl972]).  or  more  complex  control 
+structures  in  systems  tailored  to  specific  d .orders  [Bleichl971]  Many  have  based  their  diagnostic 
+capabilities  on  variations  of  Bayes'  theorem  [Corry  195S.  Warnerl964].  or  on  techniques  derived 
+from  utility  theory  of  operations  research  [Gorry  1979a]  Models  of  the  patient  or  disease  process 
+hav.  been  used  successfully  in  [Silverman  1974],  [PaukeM975],  and  [Kulikowski  1974]  A few  recent 
+efforts  have  been  based  on  some  form  of  symbolic  reasoning.  In  particular,  the  glaucoma  diagnosis 
+system  described  in  [Kul.kowsk.1974]  and  the  diagnosis  system  . f [Poplel972]  car.  also  be  viewed  as 
+
+rule-based 
+
+Carbonell’s  work  [Carbonelll970]  represents  an  early  attempt  to  make  uncertain  inferences  in 
+a domain  of  concepts  that  are  strongly  linked,  much  a,  MYCIN’s  are  Although  the  purpose  of 
+Cai bonell’s  system  was  computer-aided  instruction  rather  than  consultation,  much  of  oui  initial 
+
+design  was  influenced  by  his  semantic  net  model. 
+
+The  basic  production  rule  methodology  has  been  applied  in  many  diffeient  contexts,  in 
+attempts  to  solve  a wide  range  of  problems  (see,  for  example.  [Dav.sl975a]  for  an  overview)  The 
+most  directly  relevant  of  these  is  the  DENDRAL  system  [Buchanan  1971],  which  has  achieved  a 
+high  level  of  performance  on  the  task  of  mass  spectrum  analysis.  Much  of  the  initial  design  of 
+MYCIN  was  influenced  by  the  experience  gained  in  building  and  using  the  DENDRAL  system. 
+Earlier  attempts  to  build  general  and  powerful  production  rule  based  systems  have  included 
+[Waterman  1970]  and  [Moorel979] 
+
+There  have  b*.*en  numerous  attempts  to  create  models  of  inexact  reaso Among  the  more 
+
+recent  is  [LeFavirel974],  which  reports  on  the  implementation  of  a language  to  facilitate  fuzzy 
+reason. ng  It  deals  with  mar  y of  the  same  issues  of  reasoning  under  uncertainty  that  are  detailed  in 
+
+[Shortliffe  1975b] 
+
+The  approach  to  natural  language  used  in  our  system  has  been  thus  far  quite  elementary, 
+pnmaiily  neyword-based  Some  of  the  work  reported  in  [Colby  1974]  suggested  to  us  initially  that 
+this  might  be  a sufficiently  powerful  approach  for  our  purposes  This  has  proven  generally  true 
+because  the  technical  language  of  this  domain  contains  relatively  few  ambiguous  words 
+
+The  chess  playing  program  of  [Zobrist  1 973]  employs  a knowledge  repiesentation  which  is 
+
+
+i 
+
+
+V 
+
+i 
+
+
+i 
+
+
+4 
+
+
+1 
+
+
+16 
+
+
+RELATION  TO  OTHER  UORU 
+
+
+functionally  quite  close  to  ours.  The  knowledge  base  of  that  system  consists  of  small  sequences  of 
+code  which  recognize  patterns  of  pieces,  and  then  conclude  (with  a variable  weighting  factor)  the 
+value  ot  obtaining  that  configuration  They  repot t quite  favorably  on  the  ease  of  augmenting  a 
+knowledge  base  organized  along  these  lines. 
+
+The  natural  language  understanding  system  of  [Winogradl972]  had  some  basic  explanation 
+capabilities  similar  to  those  described  here,  and  could  discuss  its  actions  and  plans. 
+
+As  we  have  noted  above,  and  will  explore  further  below,  part  of  our  work  has  been  involved 
+in  making  it  possible  for  the  system  to  understand  its  own  operation.  Ma;.y  of  the  explanation 
+capabilities  were  designed  and  implemented  with  this  in  mind,  and  it  has  significantly  influenced 
+design  ot  the  knowledge  acquisition  system  as  well.  These  efforts  are  related  in  a gereral  way  to  the 
+long  sequence  of  attempts  to  build  program-understanding  systems.  Such  efforts  have  been 
+motivated  by.  among  other  things,  the  desire  to  prove  correctness  of  programs  (as  in 
+[Walclmgei  1974]  or  [Mannal969]),  and  as  a basis  for  automatic  programming  (as  in  [Green  1974]). 
+Most  of  these  systems  attempt  to  assign  meaning  to  the  code  of  some  standard  programming 
+language  like  lisp,  or  Algol.  Our  attempts  have  been  oriented  toward  supplying  a semantics  for  what 
+amounts  to  a high  level  language  - the  production  rules  and  their  associated  components.  The  task 
+is  of  com  re  made  easier  by  approaching  it  at  this  higher  conceptual  level  - we  attempt  only  to 
+assign  semantics  to  conceptual  primitives  of  the  domain  like  the  function  SAME,  rather  than  the 
+lisp  code  in  which  they  are  implemented.  We  cannot  therefore  prove  that  the  implementation  is 
+cortect,  but  can  use  the  representation  of  mearing  in  other  powerful  ways.  It  forms,  for  example,  the 
+basis  for  much  of  the  knowledge  acquisition  system  (see  section  [6.3]),  and  permits  the  explanation 
+system  to  be  quite  precise  in  explaining  the  program’s  actions  (see  [Davisl975b]  for  details).  A 
+similar  sort  of  high  level  approach  has  been  explored  by  Hewitt  in  his  proposed  INTENDER 
+system  [Hewittl97|], 
+
+Finally,  similar  efforts  at  computer-based  consultants  have  recently  been  developed  in  diffeient 
+domains.  The  work  detailed  in  (Nilsson  1975]  and  [Hartl675]  has  explored  the  use  of  a consultation 
+system  similar  to  the  one  described  here,  as  part  of  an  integrated  vision,  manipulation,  and  problem 
+solving  system.  Recent  work  or.  an  intelligent  terminal  system  [RAND  1975]  has  been  based  in  part 
+on  a formalism  which  grew  out  of  early  experience  with  the  MYCIN  system. 
+
+
+FUNDAMENTAL  ASSUMPTIONS 
+
+
+17 
+
+
+[5]  FUNDAMENTAL  ASSUMPTIONS  OF  THE  METHODOLOGY 
+
+We  attempt  here  to  examine  some  of  the  explicit  and  implicit  assumptions  which  are  part  of 
+the  methodology  described  above  We  believe  this  will  help  to  suggest  the  range  of  application  for 
+these  techniques,  and  indicate  some  of  their  strengths  and  limitations.  Because  such  a listing  is 
+potentially  open-ended,  we  include  here  the  assumptions  essential  to  the  methodology  used  in 
+MYCIN,  but  not  necessarily  applicable  to  every  interactive  program. 
+
+There  are  several  assumptions  implicit  in  both  the  character  of  the  rules  and  the  ways  in 
+which  they  are  used.  First,  it  must  be  possible  to  write  such  judgmental  rules.  Not  every  domain  will 
+support  this.  It  appears  to  require  a field  which  has  attained  a certain  level  of  formalization,  which 
+includes  perhaps  a generally  recognized  set  of  primitives  and  a minimal  understanding  of  basic 
+processes.  It  does  not  seem  to  extend  to  one  which  has  achieved  a thorough,  highly  formalized  level, 
+however.  Assigning  certainty  factors  to  a rule  should  thus  be  a reasonable  task  whose  results  would 
+be  repeatable,  but  not  a trivial  one  in  which  all  answers  were  1. 
+
+Second,  we  require  a domain  in  which  there  is  a limited  sort  of  interaction  between  conceptual 
+primitives.  Our  experience  has  suggested  that  a rule  with  more  than  about  six  clauses  in  the  premise 
+becomes  conceptually  unwieldy.  The  number  of  factors  interacting  in  a premise  to  trigger  an  act. on 
+therefore  has  a practical  (but  no  theoretical)  upper  limit.  Also,  the  AND/OR  goal  tree  mechanism 
+lequiies  that  the  clauses  of  a rule  premise  can  be  set  up  as  non-conflicting  subgoals  for  the  purposes 
+of  establishing  each  of  them  (just  as  in  robot  problem  solving;  see  [Fahlman  1974]  and  the  comment 
+on  side  effects  in  [Siklossy  1973])  Failure  of  this  criterion  causes  results  which  depend  on  the  order  in 
+which  evidence  is  collected  We  are  thus  making  fundamental  assumptions  concerning  two  forms  of 
+interaction  - we  assume  (a)  that  only  a small  number  of  factors  (about  6)  must  be  considered 
+simultaneously  to  trigger  an  action;  and  (b)  that  the  presence  or  absence  of  each  of  those  factors  can 
+be  established  without  adverse  effect  on  the  others 
+
+Also,  certain  characteristics  of  the  domain  will  influence  the  continued  utility  of  this  approach 
+as  the  knowledge  base  of  rules  grows.  Where  there  are  a limited  number  ot  attributes  for  a given 
+object,  the  growth  in  the  number  of  rules  in  the  knowledge  base  will  not  produce  an  exponential 
+growth  in  search  time  for  the  consultation  system.  Thus  as  newly  acquired  rules  begin  to  reference 
+only  established  attributes,  use  of  these  rules  in  a consultation  will  not  produce  further  branching, 
+since  the  attributes  mentioned  in  their  premises  will  have  already  been  traced. 
+
+There  are  essential  assumptions  as  well  in  the  use  of  this  methodology  as  the  basis  for  an 
+interactive  system  First,  our  explanation  capabilities  (reviewed  below)  rest  on  the  assumption  that 
+display  of  either  a rule  or  some  segment  of  the  control  flow  is  a reasonable  explanation  of  system 
+behavior  Second,  much  of  the  approach  to  rule  acquisition  is  predicated  on  the  assumption  that 
+experts  can  be  "debriefed",  that  is,  they  can  recognize  and  then  formalize  chunks  of  their  own 
+knowledge  and  experience,  and  express  them  as  rules.  Third,  the  IF/THEN  format  of  rules  must  be 
+
+
+.■  .. 
+
+
+i 
+
+
+- 18  - 
+
+
+FUNDAMENTAL  BSSUMPTIONS 
+
+
+- ,-*■  zz~‘ 
+
+crsr;- ....  - - - - — »>  — 
+
+that  all  these  are  plausible  assumptioi  s. 
+
+There  ,s  an  important  assumption,  .00.  in  the  development  of  a system  fo,  use  by  two  class  s 
+of  user.  Since  the  domain  experts  who  educate  the  system  so  strong  influence  us  conceptua. 
+p„m, ti.es.  vocabulary,  and  knowledge  base,  we  must  be  sure  that  the  naive  users  w 
+
+idV'";r^K^r^e  does  not,  therefore,  seen,  wel,  suited  ,0  domains  re, a great 
+
+deal  of  complex  interaction  between  goats,  or  those  for  which  it  ,s  difficult  .0  compose  sound 
+. , iu,es  As  a general  mdicat.on  of  potentially  useful  apphcat.ons,  we  have  found  that 
+
+cognitive  tasks  are  good  candidates  In  one  such  domain,  antibiotic  therapy  fleet, on.  we  have  me, 
+with  encouraging  success. 
+
+
+PRODUCTION  RULES  OS  fl  KNOULEOGE  REPRESENTfiTION 
+
+
+19 
+
+
+[6]  PRODUCTION  RULES  AS  A KNOWLEDGE  REPRESENTATION 
+
+In  the  introduction  to  this  report  we  outlined  three  design  goals  for  the  system  we  are 
+developing  us  -fulness  (including  competence),  maintenance  of  an  evolutionary  knowledge  base,  and 
+support  of  an  interactive  consultation.  Our  experience  has  suggested  that  production  rules  offer  a 
+knowledge  representation  that  greatly  facilitates  the  accomplishment  of  these  goals.  Such  rules  are 
+straightforward  enough  to  make  feasible  many  interesting  features  beyond  performance,  yet  powerful 
+enough  to  supply  significant  problem  solving  capabilities  Among  the  features  discussed  below  are 
+the  ability  for  explanation  of  system  performance,  and  acquisition  of  new  rules,  as  well  as  the 
+general  ‘understanding’  by  the  system  of  its  own  knowledge  base. 
+
+[6.1]  COMPETENCE 
+[6.1.1  j Advantages  of  production  rules 
+
+Recent  p.oblem  solving  efforts  in  A I have  made  it  clear  that  high  performance  of  a system  is 
+often  strongly  correlated  with  the  depth  and  breadth  of  the  knowledge  base  Hence,  the  task  of 
+accumulation  and  management  of  a large  and  evolving  knowledge  base  soon  poses  problems  which 
+dominate  those  encountered  in  the  initial  phases  of  knowledge  base  construction.  Our  experience 
+suggests  that  giving  the  system  itself  the  ability  to  examine  and  manipulate  its  knowledge  base 
+provides  some  capabilities  for  confronting  these  problems.  These  are  discussed  in  subsequent 
+
+sections  belcw 
+
+The  selection  of  production  rules  as  a knowledge  representation  is  in  part  a response  to  this 
+fact  One  view  of  a production  rule  is  as  a modular  segment  of  code  [Winograd  1975],  which  is 
+heavily  stylized  [Waterman 1 970,  Buchanan  1971}  Each  of  MYCIN’s  rules  is.  as  noted,  a simple 
+conditional  statement:  the  premise  is  constrained  to  be  a Boolean  expression,  the  action  contains  one 
+or  more  conclusions,  and  each  is  completely  modular  and  independent  of  the  others.  Such  modu'ar, 
+stylized  coding  is  an  important  factor  in  building  a system  that  is  to  achieve  a high  level  of 
+
+competence. 
+
+For  example,  any  stylized  code  is  easier  to  examine.  This  is  used  in  several  ways  in  the  system. 
+Initial  integration  of  new  rules  into  the  knowledge  base  can  be  automated,  since  their  premise  and 
+action  parts  can  be  systematically  scanned,  and  the  rules  can  then  be  added  to  the  appropnate 
+internal  lists.  In  the  question  answering  sys’em,  inquiries  of  the  form  Do  you  recommend 
+clindamycin  for  bacte.oides?’  can  be  answered  by  retrieving  rules  whose  premise  and  action  contain 
+the  relevant  items.  Similarly,  the  detection  of  straightforward  cases  of  contradiction  and  subsumption 
+is  made  possible  by  the  ability  to  examine  rule  contents.  Stylized  code  also  makes  feasible  the  direct 
+manipulation  of  individual  rules,  facilitating  automatic  correction  of  such  undesirable  interactions 
+The  discussion  below  of  the  use  of  TEMPLATES  demonstrates  yet  another  use.  in  which  this 
+
+
+■ 
+
+
+20 
+
+
+PRODUCTION  RULES  AS  A iNOwlECGE  REPRESENTATION 
+
+
+capability  is  used  to  help  provide  explanations  of  system  behavior 
+
+The  benefits  of  modularized  code  are  well  understood.  Especially  significant  in  this  case  are 
+the  e.rso  of  adding  new  rules  and  the  relatively  uncomplicated  control  structuie  which  the  modular 
+rules  peinut  Since  rules  are  retrieved  because  they  are  relevant  to  a specific  goal  (i  e„  they  mention 
+that  goal  in  their  action  part),  the  addition  of  a new  rule  requires  only  that  it  be  added  to  the 
+appropriate  internal  list  according  to  the  clinical  parameters  found  in  its  action  A straightforward 
+depth  first  search  (the  result  of  the  backward  chaining  of  rules)  is  made  possible  by  the  lack  of 
+interactions  among  rules 
+
+These  benefits  are  common  to  stylized  code  of  any  form  Stylization  in  the  form  of 
+production  rules  in  particular  has  proved  to  be  a useful  formalism  for  seveial  reasons  In  the 
+domain  of  deductive  piobtems,  especially,  it  has  proven  to  be  a natuial  way  of  expressing 
+knowledge  It  also  supplies  a clear  and  convenient  way  of  expressing  modular  chunks  of 
+knowledge,  since  all  necessary  context  is  stated  explicitly  in  the  premise  This  m turn  makes  it 
+e..siei  to  insure  proper  r^rieval  and  use  of  each  rule.  Finally,  in  common  with  similar  formalisms, 
+one  rule  never  directly  calls  anothe,.  This  is  a significant  advantage  m integrating  a new  rule  into 
+the  system  - it  can  simply  be  ‘added  to  the  pot'  and  no  other  rule  need  he  changed  to  insure  that 
+it  is  called  (compate  this  with  the  addition  of  a new  procedure  to  a typical  mooL  type  program). 
+
+[6.1.2]  Shoitcomtngs  of  production  rules 
+
+Stylization  and  modularity  also  result  in  cert  am  shortcomings,  however  It  is,  of  course, 
+somewhat  harder  to  express  a given  piece  of  knowledge  if  it  must  be  put  into  a predetermined 
+foimat  The  intent  of  a few  of  the  rules  in  our  .ystem  are  thus  less  than  obvious  to  the  naive  user 
+even  when  translated  into  English  The  requirement  of  modularity  (along  with  the  uniformity  of  the 
+knowledge  base),  means  all  necessary  contextual  Information  must  be  stated  explicitly  in  the  premise, 
+and  this  at  times  leads  to  rules  which  have  awkwardly  long  and  complicated  premises. 
+
+bhoitcomings  in  the  formalism  arise  also  in  part  from  the  backwaid  chaining  control 
+structuie,  and  from  the  restriction  to  a pure  predicate  in  the  premise  it  is  not  always  easy  to  map  a 
+sequence  of  desired  actions  or  tests  into  a set  of  production  rules  whose  goal  dnected  invocation  will 
+provide  that  sequence  Thus,  while  the  system’s  performance  is  reassuringly  similar  to  some  human 
+reasoning  behavior,  the  creation  of  appropriate  rules  which  result  in  such  behavior  is  at  times 
+non-ti  ivial  This  may  in  fact  be  due  more  to  programming  experience  oriented  primarily  toward 
+ALCOL-like  languages,  rather  than  any  essential  characteristic  of  production  rules  After  some 
+experience  with  the  system  we  have  improved  our  skill  at  'thinking  backward’. 
+
+A final  shoitcommg  arises  from  constraining  rule  premises  to  be  simple  predicates  This  forces 
+a pure  problem  reduction  moce  in  the  use  of  rules,  each  clause  of  a premise  is  set  up  as  an 
+independent  goal,  and  execution  u the  action  should  be  dependent  solely  on  the  success  or  failure  of 
+premise  evaluation,  without  referencing  its  precise  value  It  is  at  times,  however,  extremely 
+convenient  to  write  what  amounts  to  a 'for  each’  rule,  as  in  ’for  each  organism  such  that  conclude 
+A few  rules  of  this  form  are  present  in  the  system  (including,  for  example,  the  meta-rule  in 
+
+
+PRODUCTION  RULES  AS  fl  LNOULEDCE  REPRESENTOTION 
+
+
+- 21  - 
+
+
+Figure  7),  and  they  are  made  to  appear  formally  like  the  rest  by  allowing  the  premise  to  compute  a 
+value  (the  set  of  items  that  satisfy  the  premise),  which  is  passed  to  the  action  clause  via  a global 
+variable  While  this  has  been  relatively  successful,  the  violation  of  the  basic  formalism  results  in 
+other  difficulties  - in  particular,  in  the  explanation  system,  which  produces  somewhat  murk' 
+explanations  of  such  rules.  We  are  working  toward  a cleaner  solution  of  this  problem. 
+
+
+I 
+
+
+I 
+
+
+mHm 
+
+
+22 
+
+
+PRODUCTION  RULES  RS  fl  KNOUIEOGE  REPRESENTATION 
+
+
+i 
+
+
+: 
+
+
+[6  2] 
+
+
+EXPLANATION 
+
+
+Augmentation  or  modification  of  any  knowledge  base  is  fac  litaied  by  the  ability  to 
+discover  what  knowledge  is  currently  in  the  system  and  how  it  is  u^ec  The  system’s  ac  ptance 
+(especially  to  a medical  audience)  will  be  strongly  dependent  upon  the  extent  to  which  its 
+peifoimance  is  natural  (ie.,  human-like)  and  transparent.  Lack  of  acceptance  of  some  applications 
+programs  can  be  traced  to  their  obscure  reasoning  mechanisms  which  leave  the  user  foiced  to 
+accept  or  leject  advice  without  a chance  to  discover  basis.  One  of  our  original  design  criteua, 
+then,  was  'o  give  the  system  the  abih'y  to  provide  explanations  of  its  behavior  and  knowledge  It 
+soon  became  evident  that  an  approach  relying  on  some  form  of  symbolic  reasoning  (rather  than, 
+for  example,  statistics)  would  make  this  feasible  This  was  one  of  the  primaiy  reasons  behind  the 
+choae  u!  the  production  rule  representation,  and  has  continued  to  influence  the  program’s 
+
+
+development 
+
+Our  initial  efforts  at  explanation  and  question  answering  were  based  on  tluee  capabilities: 
+(i)  display  on  demand  during  the  consultation  the  rule  currently  being  invoked,  (u)  record  rules 
+which  were  involved,  and  after  the  consultation,  be  able  to  associate  specific  rules  with  specific 
+events  (questions  and  conclusions)  to  explain  why  each  of  them  happened,  and  (m)  search  the 
+knowledge  base  for  a specific  type  of  lule  in  answer  to  inquiries  of  the  user  The  first  of  these 
+could  be  easily  implemented  via  the  single- word  command  format  described  below 
+
+The  latter  two  were  intended  ioi  use  after  the  consultation,  and  hence  weie  provided  with 
+a simple  natmal  language  front  end  Examples  aie  shown  in  Figure  9 (additional  examples  can  be 
+tound  in  [Slioi  tliffe  1975a])  Note  that  the  capability  tor  answering  questions  of  type  (u)  has  been 
+extended  to  include  inquiries  about  actions  the  progiam  failed  to  take  (example  [d],  Figuie  9)  This 
+is  based  on  the  ability  of  the  explanation  system  to  simulate  the  conti ol  structure  of  the  consultation 
+system,  and  can  be  extremely  useful  in  deciphering  the  program’s  behavior.  Foi  questions  of  type 
+mu,  r[e]  in  Figure  9)  the  seaich  through  the  knowledge  base  is  directed  by  a simple  parsing  of  the 
+question  into  a request  for  a set  of  rules,  wuf  constraints  on  premise  and/or  action  contents.  The 
+retrieval  of  relevant  rules  is  guided  primarily  by  pie  established  (but  automatically  generated)  lists 
+which  indicate  premise  and  action  contents. 
+
+< insert  figure  9 about  here> 
+
+Some  generalization  of  and  excisions  to  the  methodology  of  (i)  and  (i<)  have  been  motivated 
+by  two  shortcomings  Displaying  the  current  rule  is  not  pa  icularlv  in.ormauve  if  the  rule  is 
+essentially  definitional  and  hence  conceptually  trivial  The  problem  here  is  the  lack  of  a good  gauge 
+lor  the  amount  of  mfoimation  in  a tule 
+
+Recording  individual  rule  invocations,  questions,  and  conclusions  is  usetul,  but,  as  a record  of 
+individual  events,  it  fails  to  capture  the  context  and  ongoing  sequence  It  is  mfticult  therefcie  to 
+explain  any  event  with  reference  to  anything  but  ’he  specific  information  lecoidcd  with  that  event 
+
+Two  related  techniques  wer°  developed  to  solve  these  problems  First,  to  provide  a metric  for 
+the  amount  of  intormation  in  a rule,  we  use  (in  a very  rough  analogy  with  information  theory) 
+-(log  CF)  Rules  which  are  definitional  (CF  • I)  have  by  this  measure  no  information,  while  those 
+
+
+* •ITT' 
+
+r”^'w 
+
+
+PRODUCTION  RULES  PS  A fNOULEOCE  REPRESENTATION 
+
+(,:)  **  HOW  DID  YOU  DECIDE  THAT  ORGANISM- 1 MIGHT  BE  AN  E.COLI? 
+
+1 uccd  RULE021  to  conclude  that  the  identity  of  ORGANISM-1  is  e.coli. 
+
+T ^ he  n 7 1 se  d TuLE084  to  conclude  that  the  identity  of  ORGANISM-1  is 
+
+C‘F°nJiljrT1?‘.,d  ROE003  w,c'onCcF|°d.'tha.,‘th.  identity  of  0RGAN1SH-1 
+is  e.coli*.  This  gave  a cumulative  CF  of  (.74). 
+
+(b)  **  DID  YOU  USE  RULE  163  TO  FIND  OUT  ANYTHING  ABOUT  ORGANISM- 1? 
+
+RULE163  was  tried  in  the  context  of  ORGAN! SM-l.  but  it  failed  because 
+it  is  not  true  that  the  patient  has  had  ? geni  to-ur  in.iry  tract  manipulative 
+
+procedure  (clause  3). 
+
+(C)  **  DID  RULE  116  TELL  YOU  ANYTHING  ABOUT  INFECTION- 1? 
+
+No.  RULE11G  would  be  relevant  to  the  primary-bacteremia  when  applied 
+
+to  ORGA  1 ^ ("the  gram  stain  of  the  organism  is  not  known")  was 
+
+already  known  to  be  false  for  ORGAN ISfl-l.  so  the  rule  was  never  tried. 
+
+(i{)  **  WHY  DIDN'T  YOU  CONSIDER  STREPTOCOCCUS  AS  A POSSIBILITY  FOR  ORGANISM- 1? 
+
+The  following  rule  could  have  been  used  to  determine  that  the  identity 
+
+of  ORGANISH-1  was  streptococcus:  RULE033 
+
+But  clause  2 ("the  morphology  of  the  organism  is  coccus  ) was 
+already  known  to  be  false  for  ORGANISM-1,  so  the  rule  was  never  tried. 
+
+(()  **  DO  YOU  RECOMMEND  CLINDAMYCIN  FOR  BACTEROIDES7 
+
+Yes. 
+
+RULE0S0 
+
+If  the  identity  of  the  organism  is  bacteroides 
+
+Tk„_  i rernmmpnd  theraDU  be  chosen  from  among  the  following: 
+
+CHLORAMPHENICOL,  CLINDAMYCIN,  RIFAMPIN,  ERYTHROMYCIN,  CARBENICILLIN 
+TETRACYCLINE,  LINCOMYCIN 
+
+(f)  **  IS  BLOOD  A STERILE  SITE? 
+
+Yes,  blood  is  one  of  those  sites  that  are  normally  sterile. 
+
+(g)  **  WHAT  ARE  THE  ORGANISMS  ASSOCIATED  WITH  THE  GASTRO-INTESTINAL  TRACT7 
+
+Thp  likelu  Dathoaens  associated  w'th  the  gast ro- i n tes t i na  I tract  are: 
+ENTEROCOCCUS.  CLOSTRlDIun-GAJIGRENE.  BACTEROIDES.  KLEBISELLA,  PSEUOOTtONAS . 
+
+e.coli,  enterobacter,  proteus. 
+
+
+Figure  9 
+
+
+24 
+
+
+PRODUCTION  RULES  AS  fi  KNOULEDGE  REPRESENTRT ION 
+
+
+which  express  less  obvious  implications  have  progressively  more  information.  The  measure  is  clearly 
+imperfect,  since  first.  CFs  are  not  probabilities,  and  there  is  thus  nu  formal  justification  that  -(log 
+CD  is  a meaningful  measure.  Second,  any  sophisticated  information  content  measure  should  factor 
+in  the  state  of  the  observer's  knowledge,  since  the  best  explanations  are  those  which  are  based  on  an 
+understanding  of  what  the  observer  fails  to  comprehend.  Despite  these  shortcomings,  however,  this 
+heuristic  has  proven  to  be  quite  useful 
+
+To  solve  the  second  problem  (explaining  events  in  context)  the  piucess  of  recording  individual 
+rule  invocations  has  been  generalized'  all  the  basic  control  functions  of  the  system  have  been 
+augmented  to  leave  behind  a history  of  each  of  their  executions.  This  internal  trace  is  then  read  by 
+various  parts  of  the  explanation  system  to  provide  a complete,  m-context  explanation  of  any  part  of 
+the  system’s  behavior. 
+
+Because  the  consultation  process  is  essentially  one  of  search  through  an  AND/OR  goal  tree, 
+inquiries  during  the  course  of  a consultation  fall  quite  naturally  into  two  types:  WHY  a question 
+was  asked,  and  HOW  a conclusion  was  (or  will  be)  reached.  The  first  of  these  looks  "up"  the  tree,  in 
+examining  higher  goals,  while  the  second  looks  "down"  in  examining  rules  which  may  help  achieve 
+a goal  This  part  of  the  system’s  explanation  capability  can  thus  be  viewed  in  general  as  a process  of 
+tree  traversal.  By  combining  this  concept  with  the  information  content  metiic,  we  make  possible 
+explanations  in  varying  levels  of  detail:  the  tree  may  be  traversed  in  steps  whose  information  content 
+size  is  specified  by  the  user,  rather  than  simply  stepping  from  goal  to  goal  At  the  start  of  the 
+traversal  process,  "information  distance"  from  the  current  goal  to  the  top  of  the  tiee  is  normalized  to 
+9 The  argument  to  the  WHY  command  (an  integer  between  one  and  ten,  assumed  to  be  one  if 
+absent)  is  then  taken  to  indicate  some  part  of  that  distance  Thus,  WHY  3 indicates  an  explanation 
+which  encompasses  approximately  one-third  of  the  total  “conceptual”  distance  Repeated  WHY 
+questions  have  the  effect  of  stepping  up  the  goal  tree.  Examples  are  shown  below;  additional 
+examples  are  found  in  [S hortliffe  1 975a]). 
+
+In  this  series,  how  many  of  the  cultures  were  positive  for  the 
+
+e.coli  (ORGANISM-1) ? {typical  system  prompt} 
+
+**WHY 
+
+{request  from  user  to  determine  motivation  for  question} 
+
+ti.e.  UHY  is  is  important  to  determine  the  number  of  cultures  which  were 
+positive  for  the  organism?) 
+
+{system's  rephrasing  of  the  WHY  question,  and  answer} 
+
+(1.8)  This  will  help  to  determine  whether  there  is  significant  disease 
+associated  with  this  occurence  of  the  organism. 
+
+It  has  already  been  established  that 
+
+(1.11  the  culture  was  taken  from  a sterile  source 
+
+(1.2)  the  number  of  cultures  in  the  series  is  greater  than  2 
+
+There  fore,  i f 
+
+(1.3)  the  number  of  cultures  which  were  positive  for  ORGAN  I Sfl-1 
+i s greater  than  2 
+
+Then  there  is  suggestive  evidence  (.5)  that  there  is  sign i f i can t d i sease 
+associated  with  this  occurrence  of  the  e.coli  (ORGAN  1 SM-1 ) . 
+
+(RULE049) 
+
+
+PRODUCTION  PULES  PS  » • '■HuiEaCf  5£P»E3EN’ntI3M 
+
+
+25 
+
+
+WHY 
+
+• refected  I'  //)  to  deter*  !«'!<•'.  true  of  previous  exphzn'ition', 
+
+(i.o.  UHY  io  it  important  to  determine  if  there  ip  significant  disease 
+assoc  i aim)  with  this  occurrence  of  the  organism?] 
+
+(2.  ft]  This  will  help  to  determine  a diagnosis  for  which  the  infection  should 
+be  treated. 
+
+It  has  already  been  established  that 
+
+12.11  the  infection  is  not  one  of:  primary-bacteremia,  meningitis 
+[2.21  for  some  current  culturp  uf  the  patient  it  is  true  that  the 
+site  of  the  culture  is  blood 
+Ther  pforc,  if 
+
+[2.31  there  is  significant  disease  associated  uith  this  occurrence 
+of  the  organism 
+
+Then 
+
+it  is  definite  (l.fl)  that  the  diagnosis  for  which  the  infection  should 
+he  treated  is  secorriary-hac terem i a 
+
+[RULE  1031 
+
+
+F it  in  c Id 
+
+
+Ipimilmly,  HOW  commands  step  "down"  the  'tee  This  can  r»snli  cither  bandies 
+
+which  have  already  been  traversed  ‘as  m the  e sample  below)  or  those  winch  have  yet  to  be  tried  (in 
+which  case  the  question  becomes  'HOW  will  you  determine  ) 
+
+**HOW  1.1 
+
+{fee  1 1 rejers  to  the  mfomano  ■ in  the  line  hihell.d  / 1 1 ] in  Fig  in 
+
+[i.e.  HOU  was  it  determined  that  the  culture  uas  taken  from  a sterile  source?] 
+
+[3.11  RULE001  was  used  to  conclude  that  there  13  suggestive  evidence 
+(.7)  that  the  culture  uas  taken  from  a sterile  eurre. 
+
+[3.21  RULE022  uas  used  to  conclude  that  there  is  strongly  suggestive 
+evidence  (.7)  that  the  culture  was  takpr.  from  a sterile  source. 
+
+**HOW  3.1  { another  request  from  the  user) 
+
+[i.e.  HOU  uas  RULE031  used?! 
+
+It  ha9  already  been  established  that 
+
+(4.11  the  site  of  the  culture  is  one  of:  those  sites  from  uhirh  the 
+
+sterility  of  cultures  depends  upon  the  method  of  collect  ion 
+[4.21  the  method  of  collection  of  the  culture  is  one  of:  the 
+
+recognized  methods  01  collection  associated  with  the  site 
+of  the  culture,  and 
+
+(4.31  it  is  not  known  whether  care  uas  taken  in  roller  ting  the  culturi 
+Therefore 
+
+there  '19  strongly  suggestive  evidence  (.8)  that  the  culture  was  taken 
+
+from  a ster i le  source 
+
+(RULE0221 
+
+
+Figure  1 1 
+
+
+The  system's  fundamental  approach  to  explanation  is  thus  ro  display  some  recap  of  its  internal 
+
+
+26 
+
+
+PRODUCTION  RULES  AS  A LNOULEOOE  REPRESENTATION 
+
+
+actions,  a trace  of  us  reasoning.  The  success  of  thts  technique  is  predicated  on  the  claim  that  the 
+system’s  basic  approach  to  the  problem  is  sufficiently  intuitive  that  a summaiy  of  those  actions  is  at 
+least  a icasonable  basis  from  which  to  start.  While  it  would  be  difficult  to  prove  the  claim  in  any 
+foimal  sense,  there  are  several  factors  which  suggest  its  plausibility 
+
+Fust,  we  are  dealing  with  a domain  in  which  deduction,  and  deduction  in  the  face  of 
+uncertainty,  is  a primary  task  The  use  of  production  mles  in  an  IF/THEN  format  seems  therefore 
+to  be  a natural  way  ot  expressing  things  about  the  domain,  and  the  display  of  such  rules  should  be 
+comp.chensible  Second,  the  use  of  such  rules  in  a backward  chaining  mode  is,  we  claim,  a 
+reasonably  intuitive  scheme.  Modus  pon/ns  ts  a well-understood  and  widely  (if  not  explicitly)  used 
+mode  ot  inference  Thus,  the  general  form  of  the  representation  and  the  way  it  is  employed  should 
+not  be  unfamiliar  to  the  average  user  More  specifically,  however,  cons.dei  the  source  of  the  rules. 
+They  have  been  given  to  us  by  human  experts  who  were  attempting  to  foimalize  then  own 
+knowledge  of  the  domain  As  such,  they  embody  accepted  patterns  of  human  leasonmg,  implying 
+that  they  should  be  relatively  easy  to  understand,  especially  for  those  familial  with  the  domain.  As 
+such,  they  will  also  attack  the  problem  at  what  has  been  judged  an  appreciate  level  of  detarl  That 
+,s.  th.  y will  embody  the  light  size  ot  "chunks”  of  the  problem  to  be  comprehensible 
+
+We  are  not.  therefore,  recapping  the  binary  bit  level  operations  of  the  machine  instructions 
+fur  an  obscuie  piece  of  code  We  claim  instead  to  be  working  with  primitives  and  a methodology 
+whose  (a)  substance,  (b)  level  of  detail,  and  (c)  mechanism  are  all  well  suited  to  the  domain,  and  to 
+human  compi ehension,  precisely  because  they  were  provided  by  human  experts.  This  approach 
+seems  to  provide  what  may  plausibly  be  an  understandable  explanation  of  system  behavior. 
+
+This  use  o;  symbolic  reasoning  is  one  factor  which  makes  the  geneiation  of  explanations  an 
+easier  task  For  example,  it  makes  the  display  of  a backtrace  of  performance  comprehensible  (as,  for 
+example,  in  Figure  9).  The  basic  control  structure  of  the  consultation  system  is  a second  factor.  The 
+simple  depth-fi. st-search  of  the  AND/OR  goal  tree  makes  HOW,  WHY.  and  the  tree  traversal 
+approach  natural  (as  in  Figures  10  and  II).  We  believe  several  concepts  in  the  current  system  are. 
+howevei , fan ly  general  purpose,  and  would  be  useful  even  in  systems  which  did  not  share  these 
+advani ages.  Whatever  control  structure  is  employed,  the  maintenance  of  an  internal  trace  will  clearly 
+be  useful  in  subsequent  explanations  of  system  behavior  The  use  of  some  mtoimauon  metric  will 
+h<l|>  to  msuie  that  those  explanations  aie  at  an  appropriate  level  of  detail  Finally,  the  explanation 
+genei  atirig  routines  irqime  some  ability  to  decipher  the  actions  of  the  mam  system 
+
+I ||.rc  diffeient  means  of  generating  explanations  are  present  in  oui  cunent  system,  (c) 
+y t„st  tY1,e  is  used  ...  producing  answers  to  HOW  questions  which  expluie  branches  of  the  tree 
+not  yet  traversed  by  the  consultation  system  (eg.  "HOW  will  you  dete.mme  the  identity  of  the 
+organism  ")  These  are  produced  by  having  the  explanation  system  simulate  the  operation  of  the 
+consultation  system  via  special  purpose  software,  This  is  thus  a hand  crafted  solution,  {b)  Mote 
+genei  ,1  IS  the  use  of  the  goal-tree  concept  as  a basts  for  explanation  - since  the  notion  of  an 
+AND/OR  goal  tree  models  a large  part  of  the  control  structure,  we  have  a single,  uncomplicated 
+models  for  much  of  the  system's  behav.or  As  a result,  a relatively  simple  formalism  whch  equates 
+
+
+PRODUCTION  RULES  PS  A I NOULEDGE  REPRESENTATION 
+
+
+27 
+
+
+WHY  and  HOW  with  tree  traversal  offers  a reasonably  powerful  and  comprehensive  explanatory 
+capability  (c)  The  most  general  technique  has  been  mentioned  earlier  - one  pa:  t of  the  system 
+"reads"  the  code  (the  rule)  that  is  being  executed  by  another  part  (The  same  basic  approach  is  used 
+to  do  the  partial  evaluation  described  above  and  the  division  of  rule  piemises  into  known  and 
+unknown  clauses  shown  in  the  examples  above),  in  this  case  the  explanations  are  constructed  by 
+reference  to  the  contents  of  the  rules,  and  this  referral  is  guided  by  information  contained  in  the  rule 
+components  themselves 
+
+By  way  of  contrast,  we  might  try  to  imagine  how  a progiam  based  on  a statistical 
+approach  might  attempt  to  explain  itself.  Such  systems  can,  for  instance,  display  a disease  which 
+has  been  deduced  and  a list  of  relevant  symptoms,  with  prior  and  postenor  probabilities.  No  mote 
+informative  detail  is  available,  however.  When  the  symptom  list  is  long,  it  may  not  be  clear  how 
+each  of  them  (or  some  combination  of  them)  conttibuted  to  the  conclusion  It  is  more  difficult  to 
+imagine  what  sort  of  explanation  could  be  provided  if  the  program  were  intemipted  with  interim 
+queries  while  in  the  process  of  computing  probabilities.  The  problem,  of  ionise,  is  that  statistical 
+methods  are  not  good  models  of  the  actual  reasoning  piocess  (as  shown  in  psychological 
+experiments  of  [Edwardsl%8]  and  [Tvei  sky  1974]),  nor  were  they  designed  :o  be  While  they  arc 
+operationally  effective  when  extensive  data  concerning  disease  incidence  are  avail'ble,  they  are 
+also  for  the  most  part,  "shallow",  one  step  techniques  which  capture  little  of  the  ongoing  process 
+actually  used  by  expert  problem  soivers  in  the  domain  6 
+
+We  have  found  the  presence  of  even  the  current  basic  explanation  capabilities  to  be  extremely 
+useful,  as  they  have  begun  to  pass  the  most  fundamental  test:  it  has  become  easier  to  ask  the  system 
+what  it  did  than  to  trace  through  the  code  by  hand  The  continued  development  and  generalization 
+of  these  capabilities  is  one  focus  of  our  present  research 
+
+
+r , 
+
+
+. 28  - PRODUCTION  RULES  AS  fl  KNOWLEDGE  REPRESENTfiTION 
+
+[6  3]  ACQUISITION 
+
+Since  the  field  of  infectious  disease  therapy  is  both  large  and  constantly  changing,  it  was 
+,1T.,,e„t  from  the  outset  that  the  program  would  have  to  deal  with  an  evolving  knowledge  base 
+The  domain  size  made  writing  a complete  set  of  rules  an  impossible  task,  so  the  system  was 
+designed  to  facilitate  an  incremental  approach  to  competence.  New  research  in  the  domain 
+produces  new  results  and  modifications  of  old  principles,  so  that  a broad  scope  of  knowledge-base 
+management  capabilities  was  clearly  necessary. 
+
+As  suggested  above,  a fundamental  assumption  is  that  the  expert  teaching  the  system  can 
+be  "debriefed",  thus  transferring  his  knowledge  to  the  program.  That  is,  presented  with  any 
+conclusion  he  makes  during  a consultation,  the  expert  must  be  able  to  state  a rule  indicating  all 
+relevant  premises  for  that  conclusion.  The  rule  must,  in  and  of  itself,  repiesents  a valid  chunk  of 
+clinical  knowledge. 
+
+There  are  two  leasons  why  this  seems  a plausible  approach  to  knowledge  acquisition  First, 
+clinical  medicine  appears  to  be  at  the  correct  level  of  formalization  That  is,  while  relatively  little 
+of  the  knowledge  an  be  specified  in  precise  algorithms  (at  a level  comparable  to.  say,  elementary 
+physics)  the  judgmental  knowledge  that  exists  is  often  specifiable  in  reasonably  firm  heuristics. 
+Second,  on  the  model  of  a medical  student’s  clinical  training,  we  have  emphasized  the  acquisition 
+of  new  knowledge  in  the  context  of  debugging  (although  the  system  is  ptepaied  to  accept  a new 
+rule  Horn  the  user  at  any  time).  We  expect  that  some  error  on  the  system's  part  will  become 
+apparent  during  the  consultation,  perhaps  through  an  incorrect  organism  identification  or  therapy 
+selection.  Tracking  down  this  error  by  tracing  back  through  the  program’s  actions  is  a reasonably 
+straightforward  process  which  presents  the  expert  with  a methodical  and  complete  review  of  the 
+svstrin’s  reasoning  He  is  obligated  to  either  approve  of  each  step  or  to  correct  it  This  means  that 
+the  expert  is  faced  with  a sharply  focussed  task  of  adding  a chunk  of  knowledge  to  remedy  a 
+specific  bug  This  makes  it  far  easier  for  him  to  formalize  his  knowledge  than  would  be  the  case 
+if  tie  were  asked,  for  example,  "tell  me  about  bacteremia" 
+
+This  methodology  has  the  interesting  advantage  that  the  context  of  the  error  (i e„  which 
+conclusion  was  in  error,  what  rules  were  used,  what  the  facts  of  this  case  weie,  etc)  is  of  great 
+help  -o  the  acquisition  system  in  interpreting  the  expert’s  subsequent  msti uctions  for  fixing  the 
+Pug  The  error  type  and  context  supply  the  system  with  a set  of  expectations  about  the  form  and 
+content  of  the  anticipated  correction,  and  this  greatly  facilitates  the  acquisition  process  (details  of 
+this  and  much  of  the  operation  of  the  acquisition  system  are  found  in  [Davis  1975b]) 
+
+The  problem  of  educating  the  system  can  be  usefully  broken  down  into  three  phases 
+uncovering  the  bug,  transferring  to  the  system  the  knowledge  necessary  to  correct  the  bug,  and 
+integrating  the  new  (or  revised)  knowledge  into  the  knowledge  base  As  suggested  above,  the 
+explanation  system  is  designed  to  facilitate  the  first  task  by  making  it  easy  to  review  all  of  the 
+program’s  actions.  Corrections  are  then  specified  by  adding  new  rules  (and  peihaps  new  values, 
+attributes,  or  contexts),  or  by  modifying  old  ones.  This  process  is  earned  out  in  a mixed  initiative 
+dialogue  using  a subset  of  standard  English  (an  early  example  is  found  in  [Shortliffe  1975a]). 
+
+
+I 
+
+
+PRODUCTION  RULES  RS  fl  I NDULEDCE  REPRESENTATION 
+
+
+29 
+
+
+The  system’s  understanding  of  the  dialog  is  based  on  what  may  be  viewed  as  a primitive 
+form  of  ’model-directed'  automatic  programming  Civen  some  natural  language  text  describing  one 
+clause  of  a new  rule's  premise,  the  system  scans  the  text  to  find  keywords  suggesting  which 
+predicate  function(s)  are  the  most  appropriate  translations  of  the  predicate(s)  used  in  the  clause. 
+The  appropriate  TEMPLATE  for  each  such  function  is  retrieved,  and  the  ‘parsing’  of  the 
+remainder  of  the  text  is  guided  by  the  attempt  to  fill  this  in. 
+
+If  one  of  the  functions  were  SAME,  the  TEMPLATE  would  be  as  shown  in  Figure  c. 
+CNTXT  is  known  to  be  a literal  which  should  be  left  as  is,  PARM  signifies  a clinical  paramr  ;r 
+(attribute),  and  VALUE  denotes  a corresponding  value.  Thus  the  phrase  "the  stain  of  the 
+organism  is  negative"  would  be  analyzed  as  follows;  the  word  "stain”  in  the  system  dictionary  has 
+as  part  of  its  semantic  indicators  the  information  that  it  may  be  used  in  talking  about  the 
+attribute*  gramstain  of  an  organism.  The  word  “negative"  is  known  to  be  a valid  value  of  gramstain 
+(although  it  has  other  associations  as  well)  Thus  one  possible  (and  in  fact  the  correct)  parse  is 
+(SAME  CNTXT  CRAM  GRAMNEG),  or  "the  gramstain  of  the  organism  is  giamnegative.” 
+
+Note  that  this  is  another  example  of  the  use  of  higher  level  primitives  to  do  a form  of 
+program  understanding.  It  is  the  semantics  of  PARM  and  VALUE  which  guide  the  parse  after  the 
+TEMPLATE  is  retrieved,  and  the  semantics  of  the  gramstain  concept  which  allow  us  to  insure  thu 
+consistency  of  each  parse.  Thus  by  treating  such  concepts  as  conceptual  primitives,  and  providing 
+semantics  at  this  level,  we  make  possible  the  capabilities  shown,  using  relatively  modest  amounts  of 
+machinery 
+
+Other,  incorrect  par  are  of  course  posable,  and  are  generated  too  There  are  three 
+factors,  however,  which  keep  the  total  number  of  parses  within  reasonable  bounds.  First,  and 
+perhaps  most  important,  we  are  dealing  with  a very  small  amount  of  text  The  user  is  prompted 
+for  each  clause  of  the  premise  individually,  and  while  he  may  type  an  abritr ary  amount  at  each 
+prompt,  the  typical  response  is  less  than  a dozen  words  Second,  there  is  a relatively  small  degree 
+of  ambiguity  in  the  semi-formal  language  of  medicine.  Therefore  a keyword-based  approach 
+produces  only  a small  number  of  possible  interpretations  for  each  word  Finally,  insuring  the 
+consistency  of  any  given  parse  (eg  that  VALUE  is  indeed  a valid  value  for  PARM)  further 
+restricts  the  total  number  generated.  Typically,  between  I and  15  candidate  parses  result. 
+
+Ranking  of  possible  interpretations  of  a clause  depends  on  expectation  and  internal 
+consistency  As  noted  above,  the  context  of  the  original  error  supplies  expectations  about  the  form 
+of  the  new  rule,  and  this  is  used  to  help  sort  the  resulting  parses  to  choose  the  most  likely 
+
+As  the  last  step  in  educating  the  system,  we  have  to  integrate  the  new  knowledge  into  the 
+rest  of  the  knowledge  base  We  have  only  recently  begun  work  on  this  problem,  but  we  recognize 
+two  important,  general  problems  First,  the  rule  set  should  be  free  of  internal  conti adictions, 
+subsumptions,  or  redundancies  Ti  e issue  is  complicated  significantly  by  the  judgmental  nature  of 
+the  rules  While  some  inconsistencies  are  immediately  obvious  (two  rules  identical  except  for 
+differing  certainty  factors)  indirect  contradictions,  (resulting  from  chaining  rules,  for  example)  are 
+more  difficult  to  detect  Inexactness  in  the  rules  means  that  we  can  specify  only  an  interval  of 
+
+
+i 
+
+
+30 
+
+
+PRODUCTION  RULES  AS  A KNOWLEDGE  REPRESENTATION 
+
+
+consistent  values  for  a certainty  factor 
+
+The  second  problem  is  coping  with  the  secondary  effects  that  the  addition  of  new 
+knowledge  typically  introduces.  This  arises  primarily  from  the  acquisition  of  a new  value,  clinical 
+parameter  or  context  After  requesting  the  information  required  to  specify  the  new  structure,  it  is 
+often  necessary  to  update  several  other  information  structures  in  the  system,  and  these  in  turn  may 
+cause  yet  other  updating  to  occur.  For  example,  the  creation  of  a new  value  for  the  site  of  a 
+culture  involves  a long  sequence  of  actions:  the  new  site  must  be  added  to  the  internal  list 
+ALLSITES,  it  must  then  be  classified  as  either  sterile  or  non-sierile,  and  then  added  to  the 
+appropriate  list,  if  non-sterile  rhe  user  has  to  supply  the  names  of  the  organisms  that  are  typically 
+found  there,  and  so  forth.  While  some  of  this  updating  is  appaient  from  the  stiuctures  themselves, 
+much  of  it  is  not  We  are  currently  investigating  methods  for  specifying  such  interactions,  and  a 
+methodology  of  representation  design  that  minimizes  or  simplifies  the  interactions  to  begin  with. 
+
+The  choice  of  a production  rule  representation  does  impose  some  limitations  in  the 
+knowledge  transfer  task.  Since  rules  are  simple  conditional  statements,  they  can  at  times  provide 
+power  insufficient  to  express  some  more  complex  concepts  In  addition,  while  expressing  a single 
+fact  is  often  convenient,  expressing  a larger  corcept  via  several  rules  is  at  times  somewhat  more 
+difficult.  As  suggested  above,  mapping  from  a sequence  of  actions  to  a set  of  rules  is  not  always 
+easy  Goal-directed  chaining  is  apparently  not  currently  a common  human  approach  to  structuring 
+larger  chunks  of  knowledge 
+
+Despite  these  drawbacks,  we  have  found  the  production  rule  formalism  a powerful  one.  It 
+has  helped  to  organize  and  build,  in  a relatively  short  period,  a knowledge  base  which  performs 
+at  an  encouraging  level  of  competence.  The  rules  are.  as  noted,  a reasonably  intuitive  way  of 
+expressing  simple  chunks  of  inferential  knowledge,  and  one  which  requires  no  acquaintance  with 
+any  programming  language.  While  it  may  not  be  immediately  obvious  how  to  restate  domain 
+knowledge  in  production  rule  format,  we  have  found  that  infectious  disease  experts  soon  acquired 
+some  proficiency  in  doing  this  with  relatively  little  experience. 
+
+The  rules  also  appear  capable  of  embodying  appropriate-sized  chunks  of  knowledge,  and 
+of  expiessmg  concepts  that  are  significant  statements.  They  remain,  however,  straightforward 
+enough  to  be  built  of  relatively  simple  compositions  of  conceptual  primitives  (the  attributes,  values, 
+etc.)  While  any  heavily  stylized  form  of  coding  of  course  makes  it  easier  to  produce  code,  stylizing 
+in  the  form  of  production  rules  in  particular  also  provides  a framework  which  is  structurally 
+simple  enough  to  be  translatable  to  simple  English.  This  means  that  the  experts  can  easily 
+comprehend  the  program’s  explanation  of  what  it  knows,  ar.d  equally  easily  specify  knowledge  to 
+be  added 
+
+
+CONCLUSIONS 
+
+
+31 
+
+
+[7]  CONCLUSIONS 
+
+The  MYCIN  system  has  begun  to  approach  its  design  goals  of  competence  and  high 
+performance,  7 flexibility  in  accomodating  a targe  and  changing  knowledge  base,  and  ability  to 
+explain  its  own  reasoning.  Successful  applications  of  our  control  structure  with  rules  applicable  to 
+other  problem  areas  have  been  (a)  fault  diagnosis  and  repair  reccommendations  for  bugs  in  an 
+automobile  horn  system  [van  Mellel974],  (b)  a consultation  system  for  industrial  assembly  problems 
+[Hartl975],  and  (c)  part  of  the  basis  for  an  intelligent  terminal  system  [RAND1975]. 
+
+A large  factor  in  this  work  has  been  the  production  rule  methodology.  It  has  proved  to  be  a 
+powerful,  yet  flexible  representation  for  encoding  knowledge,  and  has  contributed  significantly  to  the 
+capabilities  of  the  system. 
+
+
+BD.UA 
+
+
+relevant  rwfavj 
+
+
+TWEUt  \ 
+
+
+P>S»\  USLR 
+
+
+P*-  <ve  *.t 
+
+
+/HCKt\ 
+
+
+t^ttOTE 
+
+Trte-w 
+
+
+Capticns 
+
+I:  [consultation,  initial  segment] 
+
+Initial  segment  of  a session  with  the  consultation  system.  User  responses  are  in  boldface 
+and  follow  the  double  asterisks.  Italicized  comments  at  the  right  are  not  part  of  the  actual 
+
+dialog. 
+
+2 [consultation,  final  segment] 
+
+Final  segment  of  a consultation.  Alternative  choices  for  therapies  are  generated  if  requested, 
+[five  boxes  - 4 systems  plus  rule  base] 
+
+The  five  components  of  the  system:  four  programs  and  a single  knowledge  base.  Arrows 
+indicate  the  diieuion  of  information  flow 
+
+4 llUleJA  rule  from  the  knowledge  base.  SAND  and  SOR  are  the  multivalued  analogues  of  the 
+standard  Boolean  AND  and  OR 
+
+5.  [quadruples  fiom  data  base] 
+
+Samples  of  information  in  the  data  base  during  a consulta'ion. 
+
+6;  [template] 
+
+PARM  is  shorthand  for  clinical  parameter  (attribute);  VALUE  is  tne  corresponding  value; 
+CNTXT  is  a free  variable  which  references  the  context  in  which  the  rule  is  invoked. 
+
+7:  [meta  rule] 
+
+meta-rule  A previous  inteci.on  which  has  been  cured  (temporarily)  may  reoccur.  Thus 
+one  of  the  ways  to  deduce  the  identity  of  the  current  organism  is  by  reference  to  previous 
+infections.  However,  this  method  is  not  valid  if  the  current  infection  was  cultured  from  one 
+of  the  non-sterile  culture  sites  Thus  this  metarule  says,  in  effect,  if  the  current  culture  is  from 
+(I  non-sterile  site,  don't  bother  trying  to  deduce  the  current  organism  identity  from  identities  of 
+previous  organisms. 
+
+8;  [context  tree] 
+
+A sample  of  the  contexts  which  may  be  sprouted  during  a consultation 
+9:  [QA  natural  language  examples] 
+
+Examples  of  natural  language  question  answering  capabilities.  Questions  la]-[d]  reference  a 
+specific  consultation,  while  [e]-[g]  are  general  inquiries  answered  from  the  system  knowledge 
+base 
+
+10;  [Explanation  examples,  WHY] 
+
+Examples  of  explanation  capabilities.  User  input  is  in  boldface  and  follows  the  double 
+asterisk  EApansion  of  each  WHY  or  HOW  question  (enclosed  in  brackets)  is  produced  by 
+the  system,  to  be  sure  the  user  is  aware  of  the  system’s  interpretation  of  them. 
+
+1 1 [Explanation  examples.  HOW] 
+
+{No  caption  necessary] 
+
+Appendix  caption 
+
+A detailed  overview  of  the  control  structure,  illustrating  the  combination  of  the  various 
+mechanisms  used  to  establish  a subgoal. 
+
+
+33 
+
+
+NOTES 
+
+The  MYCIN  system  has  been  developed  by  the  authors  in  collaboration  with. 
+
+Drs.  Stanley  Cohen,  Stanton  Axline,  Frank  Rhame,  Robert  Ilia,  and  Rudolpho 
+Chavez-Pardo,  all  of  whom  provided  medical  expertise; 
+
+William  van  Melle,  who  made  extensive  revisions  to  the  system  code  for  efficiency 
+and  to  introduce  new  features; 
+
+Carlisle  Scott,  who  (with  William  Clancey)  designed  and  implemented  the  expanded 
+natural  language  question  answering  capabilities. 
+
+We  have  recently  begun  investigating  extending  the  system  The  next  medical  domain  will 
+be  the  diagnosis  and  treatment  of  meningitis  infections.  This  area  is  sufficiently  different 
+to  be  challenging,  and  yet  similar  enough  to  suggest  that  some  of  the  automated 
+procedures  we  have  developed  may  be  quite  useful. 
+
+The  paper  by  [van  M ehe  1 974]  reports  on  an  interesting  effort  at  inserting  an 
+entirely  different  knowledge  base  into  the  body  of  the  current  system.  A small  part  of  an 
+automobile  repair  manual  was  translated  into  production  rules,  and  the  appropriate 
+attributes,  objects,  contexts,  and  vocabulary  were  provided  It  then  required  relatively  little 
+effort  to  plug  this  new  knowledge  base  into  the  standard  system  code,  and  a small  but 
+completely  functional  automobile  consultant  program  resulted 
+
+We  are  presently  working  on  an  interface  which  will  allow  the  physician  to  describe  the 
+important  facts  of  the  case  using  an  appropriate  subset  of  natural  language.  This  would 
+allow  him  to  begin  by  describing  the  case  in  standard  medical  format,  and  allow  the 
+system  to  prompt  with  more  general  questions  like  'Please  describe  the  second  blood 
+culture.* 
+
+Note  that,  unlike  standard  probability  theory,  SAND  does  not  involve  any  multiplication 
+over  its  arguments  Since  CFs  are  not  probabilities,  there  is  no  a priori  reason  why  a 
+product  should  be  a reasonable  number  There  is,  moreover,  a long-standing  convention  in 
+work  with  multi-valued  logics  which  interprets  AND  as  min  and  OR  as  max  [Lukasciewicz]. 
+It  is  based  primarily  on  intuitive  grounds:  if  a conclusion  requires  all  of  its  antecender.ts  to 
+be  true,  then  it  is  a relatively  conservative  strategy  to  use  the  smallest  of  the  antecedent 
+values  as  the  value  of  the  premise  Similarly,  if  any  one  of  the  antecendent  clauses  justifies 
+the  conclusion,  we  are  safe  in  taking  the  maximum  value 
+
+As  a result  of  this,  the  control  flow  is  actually  slightly  more  complicated  than  a pure 
+AND/OR  goal  tree,  and  the  flowchart  in  the  appendix  is  correspondingly  more  complex 
+
+However,  the  reasoning  process  of  human  experts  may  not  be  the  ideal  model  for  all 
+knowledge-based  problem  solving  systems  In  the  presence  of  reliable  statistical  data, 
+programs  using  a decision  theoretic  approach  are  capable  of  performance  surpassing  those  of 
+their  human  counterparts. 
+
+In  domains  like  infectious  disease  therapy  selection,  however,  which  are  characterized 
+by  'judgmental  knowledge’,  statistical  approaches  may  not  be  viable.  This  appears  to  be  the 
+case  for  many  medical  decision  making  areas.  See  [Corry  1 973b]  for  further  discussion  of  this 
+point 
+
+A preliminary  evaluation  of  the  system  [Shortliffe 1 974a]  demonstrates  agreement  with  a 
+panel  of  experts  on  737.  of  a randomly  chosen  set  of  patients.  A more  formal  evaluation 
+study  is  currently  being  performed. 
+
+
+34 
+
+
+References 
+
+
+[ Bleich  1971] 
+
+B letch  H L The  computer  as  a 
+January  1971)  pp  141-147. 
+
+
+consultant  The  New  England  Journal  of  Medicine,  284 
+
+
+(21 
+
+
+[Buchanan  1971] 
+
+Buchanan  B G,  Lederberg  J,  The  heuristic 
+data,  1F1P,  1971,  pp  179  - 188. 
+
+
+DENDRAL  program 
+
+
+for  explaining  empirical 
+
+
+[Colby  1971] 
+
+Colby  K M,  Parkinson  R C,  Faught 
+natural  language  dialog  expressions, 
+Department,  Stanford  University. 
+
+
+B L.  Pattern  matching  rules  for  the  recognition  of 
+A i Memo  »234,  June  1974,  Computer  Science 
+
+
+[Ca  bo,c^oneU  J R,  Mixed  initiative  man-computer  instructional  dialogues,  BBN  Report  1971, 
+(31  May  1970),  Bolt,  Beranek  and  Newman,  Cambridge,  Mass. 
+
+
+[Davisl975a] 
+
+Davis  R.  King  J.  An 
+Knowledge,  Proceedings 
+
+
+overview  of  production  systems,  in  Machine  Representations  of 
+of  the  NATO  Advanced  Study  Institute.  Santa  Cruz.  CA,  (in  press). 
+
+
+[Da  v is  1 075b] 
+
+Davis  R 
+
+
+Forthcoming  PhD  thesis,  Stanford  University 
+
+
+[Edwar<lsl968] 
+
+Edward;  ?,  Conservatism  in  human  information  processing, 
+Representation  of  Human  Judgment,  Wiley  (1968),  pp  17-52. 
+
+
+in 
+
+
+Kleinmuntz  (Ed.),  Formal 
+
+
+[Fahlmanl974] 
+
+FaHr>an  SEA  planning  system 
+1974)  pp  1-50. 
+
+
+for  robot  construction  tasks,  Arlifical  Intelligence  5 (Spring 
+
+
+[FinkCl  Fmkel  R Taylor  R,  Bolles  R,  Paul  R,  Feldman  J.  AL,  A programming  system  for 
+automation,  A1  Memo  243,  Nov  1974,  Stanford  University 
+
+
+Gorry  196S] 
+
+
+Gorry  G A,  Barnett  G O.  Experience  with  a model  of  sequential  diagnosis,  Computers  and 
+Biomedical  Research,  l (1968)  pp  490-507. 
+
+
+IGO"V'o«riv  G A.  Kassirer  j P.  Esa.g  A.  Sch.am  W B.  Daemon  analysis  as  the  basis  for 
+computer-aided  management  of  acute  renal  failure.  American  Journal  of  Medicine,  55  (1973) 
+
+pp  473-484 
+
+
+[Goriyl^^]  ^ ^ computer-assisted  clinical  decision  making,  Meth.  Inform  Med,  12  (1973),  pp 
+42-51 
+
+
+35 
+
+
+[Green  1974] 
+
+Gippii  C.  C.  Waldmger  R J,  Barstow  D R,  Elschlagei  \ Lenat  D B,  McCune  B P,  Shaw 
+D E.  Steinberg  L I Progress  repoit  on  program-undei  standing  systems.  A 1 Memo  *240. 
+August  1 974,  Computer  Science  Department,  Stanford  University. 
+
+[Hart  197*0 
+
+Hart  P E Progress  on  a computer-based  consultant.  A1  Croup  Technical  Note  99, 
+Januuary  1975,  Stanford  Research  Institute,  Menlo  Park,  CA 
+
+[Hewitt  1971] 
+
+Hewitt  C Procedure  semantics  - models  of  procedures  and  the  teaching  of  procedures, 
+Natural  Language  Processing,  Courant  Computer  Science  Symposium,  Rustin  R.(Ed),  S 
+(1971)  pp  331-350. 
+
+[Kagan  1977] 
+
+Kagan  B M,  Fannin  S L.  Bardie  F.  Spotlight  on  antimicrobial  agents  - 1973,  JAMA,  226. 
+.3  (October  1973)  pp  306-310. 
+
+[Kulikowski  1974] 
+
+Kulikowski  C A A system  for  computer-based  medical  consultation.  Proceedings  of  National 
+Computer  Conference,  1974. 
+
+[LeFarvrel975] 
+
+Le  Faivre  R A Fuzzy  problem  solving.  Tech  Rept  37  (September  1974),  University  of 
+Wisconsin  - Madisr., 
+
+[Lesser  1974] 
+
+Lesser  V R.  Fennell  R D,  Erman  L D,  Reddy  D R Organ. ration  of  the  HEARSAYII  speech 
+undei  standing  system,  IEEE  Transactions  on  Acoujtics,  Speech,  and  Signal  Processing, 
+ASSP-23,  February  1975,  pp  11-23 
+
+[Lukasiewiszl970] 
+
+Lukasiewicz  J A numerical  interpretation  of  ihe  'heory  of  propositions,  in  Jan  Lukasiewicz 
+Selected  Works  Borkowski  (ed  ),  1970. 
+
+[MACSYMA  1974] 
+
+The  MACSYMA  reference  manual,  September  1974,  The  MATHLAB  Croup,  Mass  Inst 
+Tech 
+
+[Manna  1969] 
+
+Manna  Z Correctness  of  programs,  Journal  of  Computer  Systems  Sciences,  May  1969 
+[Meyer  1973] 
+
+Meyer  A V,  Weissman  W K Comp  iter  analysis  of  the  clinical  neurological  exam,  Computers 
+anil  Biomedical  Research,  3(1973)  pp  111-117 
+
+[Moorel973] 
+
+Moore  J,  Newell  A How  can  MERLIN  understand,  Tech  Rept  (15  November  19/3), 
+Carnegie  Mellon  University 
+
+
+36 
+
+
+[Nilsson  1975] 
+
+Nilsson  N J (Ed.)  Artifical  Intelligence  - Research  and  Applications,  A 1 Croup  Progress 
+Report,  May  1975,  Stanford  Research  Institute,  Menlo  Park,  CA. 
+
+[Paukei  1975] 
+
+Paukei  S C,  Gorry  C A,  Kassirer  J P,  Schwartz  W B.  Towards  the  simulation  of  clinical 
+cognition,  taking  the  present  illness  by  comouter.  American  Journal  of  Medicine,  (in  press) 
+1975. 
+
+[Pople  1972] 
+
+Pop’e  H,  Meyers  J,  Miller  R.  DIALOG,  a model  of  diagnostic  logic  for  internal  medicine 
+Proceedings  of  the  Fourth  International  Joint  Conference  on  Artificial  Intelligence,  Tibhsi, 
+USSR,  September  1975,  pp  848-855. 
+
+[Rand  1975] 
+
+RAND  intelligent  terminals  agent:  design  philosophy,  RAND  Report  1309,  October  1975, 
+The  RAND  Corporation,  Santa  Monica,  CA. 
+
+[Rosen  1975] 
+
+Rosen  C A,  Nitzan  D.  Some  developments  in  programmable  automation,  A I Group 
+Technical  Note  100,  January  1975,  Stanford  Research  Institute,  Menlo  Park,  CA. 
+
+[Shortliffel974a] 
+
+Shortliffe,  E H MYCIN-  A rule-based  computer  program  for  advising  physicians  regarding 
+antimicrobial  therapy  selection,  A I Memo  »25 1 , October  1974,  Computer  Science 
+Department,  Stanford  University.  Also  to  appear  as  MYCIN  Computer-Based  Medical 
+Consultations,  American  Elsevier,  1976. 
+
+[Shortliffe  1974b] 
+
+Shortliffe  E H,  Axline  S G,  Buchanan  B G,  Cohen,  S N.  Design  conside-ations  for  a 
+program  to  provide  consultations  in  clinical  therapeutics  Precented  at  San  Diego  Biomedical 
+Symposium  1974  (February  6-8,  1974). 
+
+[Shortliffe  1 975a] 
+
+Shortliffe  E H,  Davis  R,  Buchanan  B G,  Axline  S G,  Green  C C,  Cohen  S N. 
+Computer-based  consultations  in  clinical  therapeutics  - explanation  and  rule  acquisition 
+capabilities  of  the  MYCIN  system,  Computers  and  Biomedical  Research,  8 (1975)  pp  303-320. 
+
+[Shortliffe  1975b] 
+
+Shortliffe  E H,  Buchanan  B G.  A model  of  inexact  reasoning  in  medicine,  Mathematical 
+Biosciences  23  (1975)  pp  351-379. 
+
+[Siklossy  1 973] 
+
+Siklossy  L,  Roach  J.  Proving  the  impossible  is  impossible  is  possible,  Proc  Third  Int  Joint 
+Ccnf  At,  1973,  Stanford  University,  pp  383-387. 
+
+[Silverman  1974) 
+
+Silverman  H A digitalis  therapy  advisor,  MAC  TR-143  (January  1975)  Project  MAC,  Mass 
+Inst  Tech. 
+
+
+37 
+
+
+[T  versky  197*1] 
+
+Tversky  A,  Kahneman  D Judgment  under  uncertainty:  heuristics  and  biases,  Science,  185 
+( IS  September  1974)  pp  1129-1131 
+
+
+[van  M die  1974] 
+
+van  Melle  W Would  you  tike  advice  on  another  horn.  MYCIN  project  internal  working 
+paper.  December  1974,  Stanford  University,  Stanford  California 
+
+[Waldtngei  1974] 
+
+Waldinger  R,  Levitt  K N.  Reasoning  about  programs,  Artificial  Intelligence,  5 (Fall  1974)  pp 
+235-316 
+
+
+[Warnei  1964] 
+
+Warner  H P.  Toronto  A F,  Veasy  L C.  Experience  with  Bayes  theorem  for  computer 
+diagnosis  of  congenital  heart  disease,  Annals  New  York  Academy  of  Science,  115  (1964)  pp 
+
+558-567. 
+
+[Warnei  1972] 
+
+Warner  H R.  Olmstead  C M,  Rutherford  B D.  HELP  - a program  for  medical 
+decision-making.  Computers  and  Biomedical  Research,  5 (1972)  pp  65-74. 
+
+[Waterman  1970] 
+
+Waterman  D A.  Generalization  learning  techniques  for  automating  the  learning  of  heuristics 
+Artificial  Intelligence,  1 (1970)  pp  121-170. 
+
+[Wmogiatll972] 
+
+" Winograd  T.  Understanding  natural  language,  Cognitive  Psychology,  3 (1972). 
+
+[ Winogi  ad  1975] 
+
+" Winograd  T.  Frame  representations  and  the  procedural/declarative  controversy,  in 
+Rc presentation  and  Understanding,  Bobro'v  and  Collins  (eds.),  Academic  Press,  1975 
+
+[Woodsl972] 
+
+Woods  W A,  Kaplan  R M,  Nash-Webber  B.  The  lunar  sciences  natural  language 
+information  system:  final  report,  BBN  Report  2378,  June  1972,  Bolt,  Beranek  and  Newman, 
+Cainbndge,  Mass. 
+
+[Zobrist  1973] 
+
+Zobrist  A L,  Carlson  F R.  An  advice-taking  chess  computer,  Scientific  American,  228  (June 
+1973)  pp  92-105. 
+
+

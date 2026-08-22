@@ -1,0 +1,2391 @@
+_ .... 
+
+
+jeCEBjMJ* 
+
+im  ■ 
+
+■M  k 
+
+IIMWOUItCES 
+JKTlflUlIM ._ 
+
+
+' • !*5;i  ir  caoa 
+
+
+EXPERIMENTS  WITH  COCH LEAR-TRANSFORMED  SPEECH— 
+
+
+A FIFTH  YEAR  STUDY 
+
+
+Victor  W.  Bolie 
+
+
+A Condensed  Report  for  the  Activities  of 
+September  1,  1975  - August  31,  1976 
+
+
+USAFOSR  Grant  No.  72-2178 
+
+Technical  Report  No.  EE-239(76) AFOSR-222-4 
+(Final) 
+
+
+Compiled  by 
+
+Victor  W.  Bolie,  Professor 
+
+Department  of  Electrical  Engineering  & Computer  Science 
+The  University  of  New  Mexico 
+Albuquerque,  New  Mexico 
+
+a'*  j 87131  D D ( 
+
+
+OCT  20  1976 
+
+
+DISTRIBUTION  ST  ATT  " 
+
+Approved  for  public  ie 
+
+Distribution  Unli:.'  i 
+
+
+mamm 
+
+
+CONTENTS 
+
+
+Page 
+
+
+Background  1 
+Experimental  Results  1 
+The  Re-Packaged  System  3 
+Advanced  Studies  3 
+References  14 
+Appendix  A 15 
+
+
+LIST  OF  FIGURES 
+
+Figure  1.  The  Bolie/USAF  Automatic  Speech  Recognition  System  5 
+
+Figure  2.  Listing  of  the  Average  Response  Vector  for 
+
+Each  Prescribed  Challenge  6 
+
+LIST  OF  TABLES 
+
+
+Table 
+
+1. 
+
+Listing  of  the  Prolongable  Phonemes  in  the 
+English  Language 
+
+7 
+
+Table 
+
+2. 
+
+Hazard  Ranking  of  Perceptions 
+
+8 
+
+Table 
+
+3. 
+
+Nature  of  the  Perception  Errors 
+
+9 
+
+Table 
+
+4. 
+
+Cochlear  First-Moment  Statistics 
+
+10 
+
+Table 
+
+5. 
+
+Permanent  Equipment  Items  (USAF  Property) 
+
+11 
+
+Table 
+
+6. 
+
+Expendable  Supplies 
+
+12 
+
+Table 
+
+7. 
+
+Phoneme  Structure  of  Typical  Words 
+
+13 
+
+1 
+
+
+'V."553 
+
+
+EXPERIMENTS  WITH  COCHLEAR-TRANSFORMED  SPEECH— 
+
+A FIFTH  YEAR  STUDY 
+
+Background 
+
+The  preliminary  findings  reported  herein  are  based  on  the  results 
+of  earlier  studies  in  machine  learning  [1]#  feature  vector  extraction 
+[2],  and  cochlear  modelling  [3,  4],  It  was  quickly  found  in  the  earlier 
+studies  that  a real-time  hardware  system  was  essential. 
+
+A block  diagram  of  the  hardware  system  is  shown  in  Figure  1.  The 
+design  of  the  artificial  cochlea  is  a mix  of  digital  modules  for  data 
+transfer  and  short  term  memory,  and  of  various  analog  components  to 
+handle  the  necessary  information  processing  at  high  speed.  A prelimi- 
+nary version  of  the  system  was  assembled  and  tested  six  months  ago, 
+and  used  to  obtain  the  results  reported  here.  Minor  hardware  problems 
+(mainly  crosstalk  between  digital  and  analog  signals  in  the  ground 
+busses)  necessitated  a hardware  rebuild  which  is  now  nearly  complete. 
+
+A key  feature  of  the  various  hybrid  components  of  the  system 
+shown  in  Figure  1 is  their  "socket-board  construction"  and  the  conse- 
+quent ease  with  which  they  can  be  modified  to  take  advantage  of  a new 
+finding  quickly.  For  example,  it  was  discovered  during  recent  tests 
+that  the  separability  of  an  "OO"  sound  from  an  "NN"  sound  could  be 
+greatly  improved  by  making  a substantial  change  in  the  "middle  ear" 
+component.  Key  feature  of  the  digital  portions  of  the  system  are  com- 
+pactness, flexibility,  ample  memory,  and  facility  for  handling  English- 
+text  (separate  fragments  and/or  connected  strings) . 
+
+Experimental  Results 
+
+Experiments  with  the  preliminary  version  of  the  above  described 
+system  were  done  with  the  phonemes  listed  in  Table  1.  Twelve  samples 
+of  each  sound  were  captured  in  the  data  acquisition  and  stored  on  the 
+tape  to  give  a total  file  of  12  x 21  = 252  cochlear- transformed  sounds 
+for  training  and  challenge  tests.  In  loading  these  phonemes  the  un- 
+voiced sounds  (4  out  of  21)  were  held  steady,  and  for  the  voiced  sounds 
+(17  out  of  21),  the  pitch  was  varied  in  a sing-song  manner.  The  12 
+samples  of  each  sound  were  used  to  develop  21  reference  vectors  and 
+21  tolerance  vectors,  which  were  stored  as  a condensate  of  the  training. 
+
+
+All  252  phoneme  samples  were  then  submitted  in  sequence  as  challenges 
+to  the  recognition  algorithm,  and  the  resulting  252  response  vectors 
+were  stored  for  later  study  of  errors  and  threats.  Figure  2 shows  the 
+average  response  vector  (a  horizontal  row  in  the  chart)  for  any  given 
+sound  challenge.  Fortunately,  the  largest  number  in  each  row  falls  on 
+the  diagonal  of  this  21  x 21  matrix.  The  greatest  consistent  threat 
+appears  to  be  that  of  the  "OU"  against  the  "LL"  sound,  and  the  safest 
+sounds  appear  to  be  the  unvoiced  ones  (SS,  FF,  KH,  SH) . 
+
+The  252  response  vectors  were  analyzed  further  with  respect  to 
+recognition  dangers.  For  this  purpose  a measure  of  hazard  was  con- 
+structed, using  the  formula, 
+
+H(E  I)  = B (E  ,E)  + B (E , I ) , , 
+
+HlE,I)  A(E,E)  - A (E , I)  ' f 11  1 f E' 
+
+in  which  A(E,I)  is  the  element  in  Row  E and  Column  I of  the  response- 
+vector  matrix  shown  in  Figure  2,  and  in  which  B(E,I)  is  the  average  de- 
+viation of  the  12  contributions  to  that  element.  Each  row  of  the  re- 
+sulting "hazard  matrix"  was  then  searched  to  find  the  greatest  hazard 
+value.  The  various  phonemes  were  then  ranked  in  ascending  order  of 
+this  value.  The  results  are  listed  in  Table  2,  together  with  the  actual 
+recognition  errors  found  from  a trivial  search  for  the  largest  element 
+in  each  of  the  252  response  vectors.  As  expected,  the  most  errors  oc- 
+cur where  the  computed  hazard  values  are  greatest,  i.e.,  in  the  bottom 
+region  of  Table  2.  For  more  detail,  the  nature  of  perception  errors 
+are  listed  in  Table  3,  where  it  is  seen  that  practically  all  of  the 
+perception  errors  are  recoverable  in  the  "second-choice"  responses. 
+
+A pleasant  surprise  was  a finding  of  high  consistency  in  the  first 
+moment  of  the  cochlear  response  to  a given  phoneme,  irrespective  of 
+pitch.  This  is  illustrated  in  Table  4 in  which  the  maximum  value, 
+minimum  value,  average,  and  standard  deviation  of  the  first  moment  for 
+each  phoneme  is  listed.  Thus,  even  though  the  FF  sound  has  a nearly 
+pure  noise  appearance  on  the  oscilloscope,  it  has  a very  well  defined 
+cochlear  first  moment  value  (75.6  ± 2.1). 
+
+The  information  shown  in  Figure  2 and  Tables  1-3  is  still  some- 
+what plastic,  and  subject  to  refinements  made  through  further  experi- 
+ments and  tests.  Nevertheless,  it  is  apparent  from  the  data  that 
+
+
+1 
+
+error-free  and  pitch-independent  automatic  recognition  of  many  of  the 
+key  English  phonemes  is  electronically  realizable.  Further,  an  ac- 
+curate identification  of  any  phoneme  traversed  in  continuous  speech 
+provides  a hard  "time-lock"  for  resetting  any  probabilistic  algorithm 
+used  to  resolve  interim  ambiguities. 
+
+The  Re-Packaged  System 
+
+The  final  hardware  system,  nearly  con^lete  now  (August  1976) , cor- 
+rects the  shortcomings  encountered  during  the  acquisition  of  the  above 
+reported  experimental  data,  and  provides  the  means  for  obtaining  the 
+more  comp rehens ive  data  needed  for  advanced  studies  (e.g.,  plosive 
+transients,  masking  noise,  text  synthesis) . This  final  system  includes 
+a re-packaging  of  the  hybrid  electronic  modules  into  a smaller  and 
+neater  (7  x 17  x 20")  chassis  box,  mounted  on  top  of  the  HP-9830A, 
+and  includes  four  power  supplies  instead  of  three  to  avoid  any  further 
+problems  with  ground  currents  and  digital-analog  crosstalk.  The  DIP 
+circuit  boards  (5  master  boards)  are  made  larger  (12  3/8  x 14  3/8)  so 
+as  to  substantially  reduce  the  number  of  vulnerable  slide-interconnects . 
+
+Also,  numerous  front-panel  controls  are  eliminated  by  use  of  programmable 
+sub-circuits.  The  key  elements  of  the  final  system  are  listed  in 
+Tables  5 and  6. 
+
+Advanced  Studies 
+
+Beginning  in  October  1976,  all  of  the  anticipated  hardware  refine- 
+ments will  have  been  completed,  and  the  entire  research  effort  will 
+thereafter  be  devoted  to  the  automatic  recognition  of  continuous  speech, 
+i.e.,  words,  phrases,  and  sentences.  Word  decomposition  will  be  like 
+that  shown  in  Table  7,  with  provisions  for  the  plosives  (at  least  BB, 
+
+GG,  PP,  and  TT) . Speaker-to-speaker  differences  will  be  studied  by 
+using  one  trainer  and  several  challengers,  and  by  generating  a reference 
+and  tolerance  vector  set  from  a composite  of  male  and  female  voices. 
+
+In  processing  the  continuous  stream  of  voiced  phonemes,  a high- 
+level  "lock -on"  program  will  be  used  to  drastically  reduce  the  ongoing 
+decision  options  whenever  an  uncompromised  phoneme  (i.e.,  one  in  the 
+upper  zone  of  Table  2)  is  recognized.  This  is  precisely  where  the 
+meticulous  hardware  work  of  the  past  several  years  will  pay  off,  since 
+
+
+3 
+
+
+the  number  of  decision  options  would  grow  catastrophically  toward  a 
+"combinatorial  explosion"  unless  a significant  fraction  of  the  voiced 
+(variably  pitched)  and  unvoiced  phonemes  are  in  the  low-hazard  category. 
+
+
+For  word  strings,  i.e.,  phrases,  ihe  gaps  between  words  (as  op- 
+posed to  gaps  between  syllables)  will  be  identified  as  they  occur  in 
+real  time,  by  means  of  an  experimentally  verified  "silence  monitor." 
+Transitions  into  and  out  of  the  uncompromised  phonemes  will  present 
+no  difficulty.  A dictionary-dependent  subroutine  will  be  used,  to- 
+gether with  danger-weighted  decision  options,  to  cope  with  transitions 
+into  and  out  of  the  heavily  compromised  phonemes — taking  advantage  of 
+any  adjacent  leading  or  trailing  silence  gap.  Flexibility  in  dictation 
+speed,  inflection,  and  pitch  will  be  retained  to  the  fullest  extent 
+possible. 
+
+
+As  the  experimental  results  accumulate,  the  elementary  aspects  of 
+context  [8],  orthography  [9],  and  vocabulary  scope  [10,  11,  12]  will  be 
+studied  as  potential  aids  to  the  ASR  process.  For  example,  it  is  be- 
+lieved that  an  uncompromised  phoneme  may  well  retain  a significant 
+portion  of  its  decision-option-reduction  value  even  if  it  occurred 
+several  words  earlier  in  the  voiced  sentence.  Also,  certain  rules  of 
+word  structure  (e.g.,  the  rarity  of  B either  before  or  after  G,  or  the 
+almost-zero  occurrence  of  words  ending  in  V,  U,  Q,  or  I)  are  clearly 
+useful  in  resolving  decision  options  which  otherwise  might  be  inde- 
+terminate. Even  without  the  context  and  orthography  aids,  it  is  easy 
+to  modify  the  real  time  ASR  print-out  to  include  all  the  homonyms 
+(e.g.,  bear  and  bare)  and  isophonemics  (e.g.,  three  and  free)  found 
+in  the  stored  vocabulary. 
+
+
+Bolie/USAF  Automatic  Speech  Recognition 
+
+
+V)  N 6o  Oo  V©  vs  VO  bo  Oo  <T* 
+
+
+Q <5  Q cv 
+
+v*i  "*■<  *s  vs 
+
+
+(v  <v)  lo  60 
+
+vH  >s 
+
+
+g U*  KKKjN'M  fo*  * ‘o 
+
+
+X *0 
+
+cn  * 
+
+s "5 
+
+
+vo  to  **>  N 
+vs 
+
+^ N O vo 
+
+<M  ^ -«s  »s 
+
+oo  M vs  ro 
+
+*o  vo  ^ Co 
+
+
+<">  ho  r-  ho 
+
+
+O f"  O'  &0 
+
+*s  _ 
+
+io  O'  w fio 
+
+vs  vs  vs  <M 
+
+<\i  ■*■*  <M 
+
+2* 
+
+V)  »o  »o  ^ 
+
+
+N O 
+
+__CM 
+
+U)  ♦ 
+
+T-o 
+
+vs 
+
+00  no 
+00  _*s 
+
+<M 
+
+»i 
+
+Q)  VO 
+
+
+VJ>  O vC 
+
+j^  »1  (V) 
+
+*i  6o  ^ 
+
+vs 
+
+<0 
+
+
+00  M Ho-  r* 
+
+
+O-  C>0  ‘•"'I 
+>s 
+
+^ ^ co 
+
+•s  ‘vi  >i 
+
+<M  CM  or) 
+
+
+s C> 
+
+
+BIbsbsb 
+
+
+vo  ho 
+
+
+Co  vs  lo 
+co 
+
+
+^ O*  6o  »s 
+
+
+^ cr- 
+
+oo 
+
+
+vrj  cm  Co 
+
+*s  vs  *s 
+
+
+O'  “>  S 
+
+
+<3-  v*'  Go 
+N >0  ^ 
+
+
+‘OO'llo 
+
+
+\0  CHoo  Uo 
+
+
+O' 
+
+£ 
+
+vr> 
+
+Civ 
+
+VO 
+
+*0 
+
+to  r 
+
+>H 
+
+
+N 
+
+N 
+
+AA 
+
+CO 
+
+w 
+
+M>  6o  CM 
+vs  <*) 
+
+
+t y on  <M 
+
+>s  -*s 
+
+
+•*s  6o 
+os  »s 
+
+
+O Vj- 
+
+
+VO 
+
+
+<M  O 
+
+<M  vs 
+
+
+Oo  6o  U)  VS 
+00 
+
+
+r-  6o|  >s ho 
+os  os  hs  ho 
+
+
+or)  v£)  M*  00 
+vs 
+
+
+VS)  10)  VS 
+VO  >s 
+
+
+v9  Vfl 
+
+»o 
+
+
+B 
+
+E 
+
+
+^ <M 
+
+M)  vs 
+
+
+do  o 
+
+Oj 
+
+
+Vo  Co 
+
+vs 
+
+
+<*>1  kv 
+
+
+VO  Vo  oy  Vfl 
+<M  >1 
+
+
+VS  ^ w 
+(V  S S 
+
+
+Tj-  O 
+■*s  »S 
+
+
+o r- 
+
+vs  vs 
+
+
+(Vi  lo 
+
+
+V9  0O 
+
+
+00 
+
+
+Co  O'  Co 
+
+S CO  S 
+
+
+(V)  00 
+
+
+VD  VC  VS) 
+
+
+Q CM  O 
+
+>s  *s  -v* 
+
+
+(j-  v9  Co 
+vs 
+
+‘O'fvJ' 
+O'  O'  N 
+
+Vo  c\j  oo 
+s s 'O 
+
+ru  v9  ru 
+vs 
+
+
+(VI  vfl  O) 
+vs 
+
+
+00  bo  o 
+c\j  cm 
+
+
+£ fc,  6o 
+
+
+VT)  O'  4- 
+
+vs 
+
+
+(Vc  V9  Vs 
+
+'s  vs 
+
+
+Vl  oj  cr- 
+
+cm  *s  c\j 
+
+
+00  vfl  cm 
+ru 
+
+
+vf  CM 
+
+*s  ^s 
+h t- 
+
+vs  VO) 
+
+Vo  0~ 
+VQ  c\i 
+
+oo  oo 
+
+vs  -*s 
+CM  oi 
+
+IT)  Vf~ 
+
+
+'o 
+
+VQ 
+
+00  CM 
+
+VQ  >s 
+‘O  VO 
+
+
+cvi  vf- 
+•*"*  *s 
+
+00 
+
+Vi*  Co 
+vs 
+
+
+io  o~ 
+
+CM 
+
+
+Co  O 
+
+
+m 
+
+Q 
+
+B 
+
+
+vs  o <*■ 
+
+S S ^ 
+
+
+^ vfl  H 
+Vs  vs  VS 
+
+
+CM  CV) 
+
+
+OO  <M 
+
+vs  VS 
+
+
+V9  VC  VT)  Vfl 
+
+
+VO  I Oo 
+
+
+>n  oo 
+
+vs  vs 
+
+
+O' I «o\  to 
+
+
+DO  CM  oo 
+vs 
+
+
+Co 
+
+
+(Y)  or > 
+
+
+VS 
+
+
+CM  CM 
+
+VS  vs 
+
+
+00  CM 
+
+
+VT)  VP) 
+
+
+Vs  vs 
+
+
+K '-S 
+
+
+or)  cm 
+
+
+BBB 
+
+■Bl 
+
+
+O 00 
+■*s  c\i 
+
+
+VS  V9 
+
+
+10  Oo 
+
+
+vs  Co 
+
+
+O vs 
+VS  vs 
+
+
+CO 
+
+CM 
+
+Co 
+
+VS 
+
+
+(T  sf- 
+
+
+Listing  of  the  Average  Response  Vector  for  Each  Prescribed  Challenge. 
+
+
+Table  1.  Listing  of  the  Prolongable  Phonemes 
+in  the  English  Language3 
+
+
+Ident 
+
+Number 
+
+1 
+
+2 
+
+3 
+
+4 
+
+5 
+
+6 
+
+7 
+
+8 
+9 
+
+10 
+
+11 
+
+12 
+
+13 
+
+14 
+
+15 
+
+16 
+
+17 
+
+18 
+
+19 
+
+20 
+21 
+
+
+Omitted  because  of  out-of-context  indistinguishability  are  TH  (thin 
+vs  fin) , DH  (this  vs  vis) , and  the  MM  and  NG  sounds  rum  v£  run  vs 
+rung)  . 
+
+The  listed  sequence  of  21  sounds  are  those  contained  in  the  sentence 
+"Oh,  yes,  as  a full  car  wash  vision." 
+
+
+7 
+
+
+Table  2 
+
+
+Hazard  Ranking1  of  Perceptions 
+
+
+Errors  in  12 
+
+
+Rank 
+
+Sound 
+
+Hazard 
+
+Challenges 
+
+1 
+
+UH 
+
+0.109 
+
+0 
+
+2 
+
+KH 
+
+0.133 
+
+0 
+
+3 
+
+SH 
+
+0.143 
+
+0 
+
+4 
+
+SS 
+
+0.149 
+
+0 
+
+5 
+
+FF 
+
+0.191 
+
+0 
+
+6 
+
+AH 
+
+0.233 
+
+0 
+
+7 
+
+AA 
+
+0.242 
+
+0 
+
+8 
+
+OH 
+
+0.245 
+
+0 
+
+9 
+
+AY 
+
+0.248 
+
+0 
+
+10 
+
+II 
+
+0.258 
+
+0 
+
+11 
+
+AW 
+
+0.267 
+
+0 
+
+12 
+
+ZZ 
+
+0.272 
+
+0 
+
+13 
+
+EH 
+
+0.283 
+
+0 
+
+14 
+
+ZH 
+
+0.325 
+
+0 
+
+15 
+
+00 
+
+0.350 
+
+1 
+
+16 
+
+NN 
+
+0.381 
+
+0 
+
+17 
+
+EE 
+
+0.388 
+
+0 
+
+18 
+
+W 
+
+0.467 
+
+0 
+
+19 
+
+RR 
+
+0.847 
+
+0 
+
+20 
+
+OU 
+
+1.024 
+
+1 
+
+21 
+
+LL 
+
+3.600 
+
+5 
+
+^Hazard  matrix  elements  range  from  0.058  to  3.600. 
+
+
+8 
+
+
+Table  3.  Nature  of  the  Perception  Errors 
+
+
+Challenge 
+
+
+Response  Choices 
+
+
+9 
+
+1 
+
+OU 
+
+W 
+
+OU 
+
+RR 
+
+AA 
+
+ZZ 
+
+10 
+
+1 
+
+LL 
+
+OU 
+
+W 
+
+LL 
+
+RR 
+
+ZZ 
+
+10 
+
+5 
+
+LL 
+
+OU 
+
+LL 
+
+RR 
+
+W 
+
+ZZ 
+
+10 
+
+6 
+
+LL 
+
+OU 
+
+LL 
+
+RR 
+
+W 
+
+ZZ 
+
+10 
+
+7 
+
+LL 
+
+OU 
+
+LL 
+
+RR 
+
+W 
+
+ZZ 
+
+10 
+
+8 
+
+LL 
+
+OU 
+
+LL 
+
+RR 
+
+W 
+
+ZZ 
+
+14 
+
+1 
+
+00 
+
+NN 
+
+OO 
+
+AH 
+
+OU 
+
+AW 
+
+The  original  numerical  code  for  the  cnallenge  sound  is  E. 
+
+
+The  sample  number  of  the  challenge  sound  is  K. 
+
+
+. 
+
+
+Table  5.  Permanent  Equipment  Items  (USAF  Property) 
+
+
+i & 
+
+I ? 
+
+f*  < \ 
+
+
+Manufacturer 
+
+Item 
+
+Serial  No. 
+
+Hewlett-Packard 
+
+HP9830A 
+
+Programmable  Controller 
+
+1303403812 
+
+Hewlett-Packard 
+
+HP  11276 
+
+7904-Word  Memory 
+
+1303A03812 
+
+Hewlett-Packard 
+
+HP  11270 
+
+Matrix  Operations  ROM 
+
+— 
+
+Hewlett-Packard 
+
+HP  11272 
+
+Extended  I/O  ROM 
+
+— 
+
+Hewlett-Packard 
+
+HP  11274 
+
+String  Variables  RD, 
+
+— 
+
+Hewlett-Packard 
+
+HP  11279B 
+
+Adv  Prog  I ROM 
+
+57329 
+
+Hewlett-Packard 
+
+HP  11289B 
+
+Adv  Prog  II  ROM 
+
+57269 
+
+Hewlett-Packard 
+
+HP  11283B 
+
+Printer  Control  ROM 
+
+58539 
+
+Hewlett-Packard 
+
+HP  11336A 
+
+Printer  Interface 
+
+00777 
+
+Hewlett-Packard 
+
+HP  11202A 
+
+TTL  I/O  Interface 
+
+04871 
+
+Hewlett-Packard 
+
+HP  11202A 
+
+TTL  I/O  Interface 
+
+04924 
+
+Hewlett-Packard 
+
+HP  11202A 
+
+TTL  I/O  Interface 
+
+04925 
+
+Hewlett-Packard 
+
+HP  9871A 
+
+Printer/Plotter 
+
+1537A01161 
+
+Hewlett-Packard 
+
+HP  9162 
+
+Burst-Read  Cassette 
+
+9162-0050 
+
+Tektronix 
+
+R5103N 
+
+Oscilloscope 
+
+B046837 
+
+Tektronix 
+
+5A15N 
+
+Amplifier,  with  XI  Probe 
+
+B042153 
+
+Tektronix 
+
+5A15N 
+
+Amplifier,  with  XI  Probe 
+
+B042192 
+
+Tektronix 
+
+5B10N 
+
+Time  Base,  with  Xl  Probe 
+
+B044051 
+
+Tektronix 
+
+C-5 
+
+Oscilloscope  Camera 
+
+CB 369385 
+
+Ward 
+
+Pwrkrft 
+
+10-Drawer  Cabinet 
+
+— 
+
+Powertec 
+
+XR  Series 
+
+3D5-3.0  Pwr  Supplies  (2) 
+
+— 
+
+Power tec 
+
+XR  Series 
+
+3D15-1.2  Pwr  Supplies  (2) 
+
+— 
+
+Continental 
+
+QT59B,S 
+
+Bus  (30)  & Socket  (82)  Strips 
+
+Turner 
+
+35A 
+
+Microphone,  150  ohms,  flat 
+
+— 
+
+Hardware 
+
+Chassis  Box 
+
+, Meter,  Jacks,  5-Board  Stack 
+
+Table  6.  Expendable  Supplies 
+
+
+Controller/Printer  Use 
+
+
+8 Printer  Ribbons 
+30  Digital  Tape  Cassettes 
+2 Printer  Drive  Chains 
+4 Print-wheel  Triads 
+
+2 Tape  Head  Cleaner  Fluids 
+
+3 Boxes  Printer  Paper  (Plain) 
+
+3 Boxes  Printer  Paper  (Carbon) 
+1 TTLi  I/O  Interface  Card 
+
+
+Hybrid  Electronic  Use 
+
+2 Power  Supplies  5V,  3A 
+2 Power  Supplies,  15V,  1.2A 
+1 Turner  35A  Microphone 
+1 Master  Circuit  Board 
+10  Hand  Tools  (for  Ckt  Changes) 
+
+30  Rolls  Hook-up  Wire,  #22-l/C  PVC 
+200  DIP  Chips,  Digital  Type 
+100  DIP  Chips,  Analog  Type 
+300  Capacitors,  CK05BX  Type 
+400  Resistors,  0.25W,  carbon 
+
+
+1 
+
+
+Table  7.  Phoneme  Structure  of  Typical  Words 
+
+
+Phoneme 
+
+English 
+
+Sequence'1' 
+
+Equivalent 
+
+RR 
+
+TH 
+
+Earth 
+
+SS 
+
+UH 
+
+NN 
+
+Sun 
+
+MM 
+
+00 
+
+NN 
+
+Moon 
+
+RR 
+
+II 
+
+W 
+
+RR 
+
+River 
+
+00 
+
+SH 
+
+UH 
+
+NN 
+
+Ocean 
+
+SH 
+
+AW 
+
+RR 
+
+Shore 
+
+00 
+
+EH 
+
+DH 
+
+RR 
+
+Weather 
+
+SS 
+
+UH 
+
+NN 
+
+EE 
+
+Sunny 
+
+RR 
+
+AY 
+
+NN 
+
+Rain 
+
+SS 
+
+NN 
+
+OH 
+
+Snow 
+
+AH 
+
+EE 
+
+SS 
+
+Ice 
+
+SS 
+
+EE 
+
+LL 
+
+II 
+
+NG 
+
+Ceiling 
+
+NN 
+
+AW 
+
+RR 
+
+TH 
+
+North 
+
+SS 
+
+AH 
+
+OO 
+
+TH 
+
+South 
+
+LL 
+
+EH 
+
+W 
+
+LL 
+
+Level 
+
+AA 
+
+ZZ 
+
+II 
+
+MM 
+
+OU  TH 
+
+Azimuth 
+
+EH 
+
+LL 
+
+EH 
+
+W 
+
+AY  SH  UH  NN 
+
+Elevation 
+
+RR 
+
+AY 
+
+NN 
+
+ZH 
+
+Range 
+
+FF 
+
+EE 
+
+OO 
+
+SS 
+
+EH  LL  AH  ZH 
+
+Fuselage 
+
+00 
+
+II 
+
+NG 
+
+Wing 
+
+AY 
+
+LL 
+
+RR 
+
+AH 
+
+NN 
+
+Aileron 
+
+NN 
+
+OH 
+
+ZZ 
+
+Nose 
+
+KH 
+
+AA 
+
+NN 
+
+UH 
+
+NN 
+
+Cannon 
+
+FF 
+
+LL 
+
+AA 
+
+KH 
+
+Flak 
+
+MM 
+
+AH 
+
+EE 
+
+NN 
+
+Mine 
+
+RR 
+
+AH 
+
+EE 
+
+FF 
+
+LL 
+
+Rifle 
+
+SS 
+
+LL 
+
+II 
+
+NG 
+
+Sling 
+
+EH 
+
+RR 
+
+OH 
+
+Arrow 
+
+RR 
+
+UH 
+
+SH 
+
+EE 
+
+UH 
+
+Russia 
+
+FF 
+
+RR 
+
+AA 
+
+NN 
+
+SS 
+
+France 
+
+II 
+
+ZZ 
+
+RR 
+
+AY 
+
+LL 
+
+Israel 
+
+RR 
+
+OH 
+
+MM 
+
+Rome 
+
+KH 
+
+AH 
+
+EE 
+
+RR 
+
+OH 
+
+Cairo 
+
+MM 
+
+AH 
+
+EE 
+
+AA 
+
+MM  EE 
+
+Miami 
+
+AH 
+
+RR 
+
+MM 
+
+EE 
+
+Army 
+
+NN 
+
+AY 
+
+W 
+
+EE 
+
+Navy 
+
+MM 
+
+UH 
+
+RR 
+
+EE 
+
+NN 
+
+Marine 
+
+EH 
+
+RR 
+
+Air 
+
+FF 
+
+AW 
+
+RR 
+
+SS 
+
+Force 
+
+MM 
+
+II 
+
+LL 
+
+II 
+
+SH  UH 
+
+Militia 
+
+RR 
+
+OH 
+
+LL 
+
+Roll 
+
+SS 
+
+KH 
+
+OO 
+
+EE 
+
+ZZ 
+
+Squeeze 
+
+KH 
+
+RR 
+
+UH 
+
+SH 
+
+Crush 
+
+SH 
+
+UH 
+
+W 
+
+Shove 
+
+SS 
+
+OO 
+
+KH 
+
+Soak 
+
+TH 
+
+RR 
+
+OH 
+
+Throw 
+
+The  equalities  TH  = FF,  DH  = W,  and  MM  = NG  = NN  are  made 
+automatically  as  this  2 -column  dictionary  is  loaded  into 
+memory. 
+
+
+13 
+
+
+References 
+
+
+1.  Bolie,  Victor  W.  "Experiments  in  Machine  Learning,"  U.S.  Copyright 
+No.  A114279. 
+
+2.  Bolie,  Victor  W.  "A  Computing  Technique  for  Distilling  Feature 
+Vectors,"  Proceedings  of  Computer  Science  Conference,  Columbus, 
+
+Ohio,  February  1973. 
+
+3.  Bolie,  Victor  W.  "Computer  Optimization  of  Cochlear  Design  Param- 
+eters," Technical  Report  No.  EE-227 (75) AFOSR-222-3 , February  1975. 
+
+4.  Bolie,  Victor  W.  "Computer  Optimization  of  Cochlear  Design  Param- 
+eters," Proceedings  of  the  ACM  Computer  Science  Conference,  Anaheim, 
+California,  February  1976. 
+
+5.  IEEE  Transactions  on  Acoustics,  Speech,  and  Signal  Processing,  Vol. 
+ASSP-2 , No.  2,  April  1976. 
+
+6.  IEEE  Proceedings:  Special  Issue  on  Automatic  Speech  Recognition, 
+April  1976. 
+
+7.  Reddy,  D.  Raj.  "Speech  Recognition:  Invited  Papers  Presented  at  the 
+1974  IEEE  Symposium,"  Academic  Press,  New  York,  1975. 
+
+8.  IEEE  Transaction  on  Acoustics,  Speech,  and  Signal  Processing, 
+
+Vol.  ASSP-23 , No.  1,  February  1975. 
+
+9.  Beckman,  Petr.  "Computerization  of  English,"  pp.  20-27,  IEEE 
+Spectrum,  December  1971. 
+
+0.  Carroll,  John;  Davies,  Peter;  and  Barry,  Richmon.  "The  American 
+Heritage  Word  Frequency  Book,"  Houghton-Mif flin  Co.,  Boston,  1971. 
+
+1.  Roberts,  Aaron.  "A  Statistical  Linguistic  Analysis  of  American 
+English,"  Mouton  Publishers,  The  Hague,  Netherlands,  1965. 
+
+l2.  Sankoff,  David,  and  Lessard,  Re jean.  "Vocabulary  Richness;  A Socio- 
+linguistic  Analysis,"  pp.  689-690,  Science,  14  November  1975. 
+
+
+— T 1 * '• 
+
+
+Reprint  Requests 
+
+
+=p  % jp  LOS  ANGELES  SCIENTIFIC  CENTER 
+i ==3  |=|  1 930  Century  Park  Watt 
+
+Lo*  Angelas,  California  90067 
+
+_ . 04.19,  .»9S 
+
+Dear  J C.'W'C  Y^oVjU*. 
+
+I would  greatly  appreciate  a reprint^reprirj^gf  your  paper/ abstract 
+
+O CbAIa- ^ 
+?A.<«laaaoA«XC 
+
+which  appeared  in  the 
+
+lviWi*>  TU»*4  KfOVft 
+
+Thank  you  for  this  courtesy. 
+
+
+...  and  related  papers. 
+
+
+1yftAW«*oi 
+
+^ • Utc\^ot 
+
+* 
+
+-2W  Dr . BO  LIE 
+
+iJ  would  appreciate  it  very  much  if  you  wold  be  so  hind  as 
+to  send  me  a reprint  of  your  article 
+
+COMPUTER  OPTIMIZATION  OP  COCHLEAR  DESIGN 
+PARAMETERS 
+
+
+ACUSTICA 
+
+
+or  uettr  courtesy 
+
+
+SONICA 
+
+
+1 
+
+
+THE  UNIVERSITY  OF  NEW  MEXICO 
+
+Datei  September  22,  1975 
+
+File 
+
+V.  W.  Bolie,  Principal  Investigator 
+
+Report  on  September  14-20,  1975  Trip  to  California 
+
+The  multiple  purposes  of  the  above  trip  were  the  following: 
+
+1.  Visit  with  personnel  at  the  Stanford  Artificial  Intelligence 
+Institute  on  problems  of  automatic  speech  recognition. 
+
+2.  Attend  WESCON  in  San  Francisco,  with  particular  emphasis  on 
+microprocessors  and  new  mini-computer  equipment  of  value  in 
+automatic  speech  recognition. 
+
+3.  Visit  with  personnel  at  the  Speech  Communications  Research 
+Laboratory  in  Santa  Barbara,  on  problems  of  automatic  speech 
+recognition. 
+
+At  SAI , automatic  speech  recognition  research  was  said  to  be  reduced 
+in  scope.  Some  research  is  continuing  in  automatic  recognition  of  three- 
+dimensional  objects  using  TV  images. 
+
+At  WESCON  it  was  found  that  the  new  Hewlett-Packard  Printer/Plotter 
+(soon  to  be  marketed)  is  ideally  suited  for  use  with  the  H-P  9830A  now 
+being  acquired  at  UNM  for  USAFOSR  speech  signal  research  studies.  It  was 
+also  learned  that  IBM  has  finally  joined  the  mini-computer  builders  by  coming 
+into  the  market  with  a new  portable  (5100  series)  mini -computer . This  re- 
+presents a major  policy  shift  by  IBM. 
+
+At  SCRL , the  interest  continues  in  automatic  speech  recognition,  with 
+emphasis  on  the  fundamentTl  properties  of  real-time  speech.  An  11-minute 
+segment  of  natural  male  speech  has  been  taped,  digitized,  and  densely 
+labelled  for  long-range  studies.  The  SCRL  President,  Dr.  June  Shoup-Hummel , 
+expressed  high  interest  in  the  results  of  my  research  on  computer  simulation 
+of  the  human  cochlea.  Several  of  her  colleagues  asked  that  I send  to  them  a 
+report  on  my  work  thus  far.  It  appears  that  their  PDP/11  computer  facilities 
+are  well  suited  for  addition  of  the  UNM/USAF  cochlear  model  as  a subroutine. 
+
+In  summary,  this  trip  was  highly  beneficial  to  the  UNM/USAFOSR  research 
+project,  and  it  is  hoped  that  one  or  two  additional  trips  can  be  scheduled 
+to  develop  future  cooperative  projects  with  SCRL. 
+
+
+17 
+
+
+■* r — ■ 1 ■ . WW 
+
+
+PRINTED  CIRCUIT  BOARD  TECHNIQUE* 
+
+
+by 
+
+David  N.  Hulsbos 
+
+
+Vj 
+
+
+• j 
+
+• K 
+
+
+UNM  EECS  Dept. 
+Summer  1976 
+
+
+* This  work  done  under  the  direction  of  Dr.  Victor  W. 
+Principal  Investigator,  USAFOSR  Grant  No.  72-2178B. 
+
+
+18 
+
+
+Bolie, 
+
+
+MAKING  PATTERN  OF  CIRCUIT  AND  PHOTO  WORK 
+
+
+The  first  step  of  printed  circuit  board  production  is 
+circuit  design  and  layout.  The  circuit  is  laid  out  on  white 
+poster  board.  Bishop  Graphics  drafting  and  layout  aids  and 
+Centron  Drafting  Aids  are  used  for  the  pattern.  Pattern 
+may  be  made  in  actual  (IX)  size  or  double  (2X)  size.  Using 
+2X  size  will  reduce  amount  of  error  on  finished  board. 
+
+Keep  poster  board  free  of  dirt  and  pencil  marks,  as  these 
+will  appear  on  the  negative  if  left  on  poster  board. 
+
+Removal  of  all  pencil  marks  from  board  is  essential.  The 
+actual  photo  work  is  done  at  Roy  M.  Riedl,  Co.,  1647  2nd 
+St.  N.W.,  243-1957.  Work  can  usually  be  done  in  6 hrs.  Be 
+careful  with  negatives,  keeping  foreign  matter  and  finger- 
+prints off  surface. 
+
+
+Table  1 
+
+Materials  Needed 
+Poster  Board 
+
+Bishop  Graphic  Drafting  Aids 
+Kodak  Photo  Resist  Type  3 
+Kodak  Photo  Resist  Thinner 
+Kodak  Ortho  Resist  Developer 
+
+
+19 
+
+
+CLEANING  BOARD 
+
+
+1.  Shear  copper-clad  boards  to  proper  size.  Drill  small  hole 
+in  corner  of  board  for  hanging  board  for  drying  later. 
+
+Clean  board  with  steel  wool,  SOS  pads,  and  scouring  powder. 
+Remove  all  grease,  oxidation,  and  foreign  matter  from  the 
+copper  surface.  Board  MUST  be  cleaned  down  to  the  copper. 
+Rinse  well  with  water  and  dry  with  air  hose.  Cleaned  board 
+should  be  coated  with  Kodak  Photo  Resist  within  an  hour 
+(before  reoxidation  of  board  occurs) . A clean  board  is 
+essential . 
+
+COATING  BOARD  WITH  KODAK  PHOTO  RESIST  TYPE  3(KPR) 
+
+2.  With  air  hose,  blow  the  dust  out  of  the  glass  tray  used 
+for  coating  boards  with  KPR.  Pour  KPR  into  glass  tray. 
+Cleaned  board  should  be  air  blown  with  hose  to  remove  any 
+dust,  and  dirt  that  may  have  settled  upon  board.  Attach 
+wire  to  board.  Using  paper  towel,  coat  board  with  KPR. 
+
+Coat  MUST  be  of  uniform  thickness  and  cannot  contain  any 
+air  bubbles.  Various  techniques  may  be  tried  to  achieve 
+this.  (1)  Use  paper  towel  as  a "spoon"  and  pour  KPR  onto 
+board,  overlapping  pours.  Then,  using  wire,  spin  rapidly. 
+This  will  help  to  throw  off  excess  KPR  on  board.  However, 
+this  technique  may  result  in  ridges  of  KPR  formed  on  board 
+as  a result  of  excess  KPR  flowing  to  the  edge  of  the  board 
+and  drying  before  it  reached  the  edge  of  the  board  to  be 
+spun  off.  This  ridge  is  unacceptable.  (2)  Again,  using 
+
+
+20 
+
+
+„ 
+
+
+paper  towel  as  a spoon,  pour  the  KPR  over  the  board.  Let 
+the  KPR  run  to  one  edge  of  the  board  and  drip  off.  Hold 
+the  board  in  this  position  until  the  KPR  ceases  to  drip 
+off  the  board.  This  technique  works  well  if  the  edge 
+that  the  KPR  drips  from  is  not  needed.  A thicker  coat 
+will  be  formed  on  this  edge,  but  will  not  interfere  with 
+etching  process  unless  this  edge  is  to  be  left  copper-clad. 
+
+If  the  printed-circuit  pattern  uses  the  entire  board,  then 
+it  is  suggested  that  a slightly  larger  board  than  needed 
+be  sheared.  Drill  the  hanging  hole  in  the  unneeded  portion 
+along  one  edge  and  allow  the  KPR  to  flow  to  this  edge  also. 
+Therefore,  the  portion  needed  for  the  finished  product 
+will  be  coated  with  KPR  of  a uniform  thickness  and  will  not 
+have  any  holes  bored  in  it.  If  the  coating  is  satisfactory, 
+hang  the  board  in  the  light-tight  closet  to  dry  for  12 
+hours.  Save  unused  KPR  and  clean  glass  tray.  All  KPR 
+residue  must  be  removed  from  glass  tray.  If  not,  chunks 
+of  dried  KPR  will  come  loose  from  tray  during  later  KPR 
+coatings,  thereby  contaminating  KPR  solution  and  ruin 
+coating  of  board. 
+
+EXPOSURE  OF  BOARD  TO  UV 
+
+If  the  board  is  to  be  exposed,  developed,  and  etched  the  same 
+day,  the  automatic  etcher  heater  should  be  turned  on  when 
+exposure  is  begun.  Heater  should  be  set  for  approximately 
+120*F . Coolant  hose  should  be  turned  on  (green  hose  to  left 
+of  sink  by  west  door)  . Before  exposure,  negative  should  be 
+cleaned  with  95%  alcohol  if  there  is  any  grease  on  negative 
+
+21 
+
+
+i 
+
+i 
+
+i 
+
+I 
+
+\ 
+
+
+surface  (i.e.,  fingerprints,  etc.)  Use  cotton  swab  dipped 
+in  alcohol.  Care  should  be  taken  in  cleaning  emulsion 
+(dull)  side  of  negative.  Some  emulsion  will  be  removed 
+with  the  alcohol,  therefore,  do  not  press  hard  with  swab 
+or  clean  excessively  long  or  often.  If  negative  becomes  wet, 
+dry  as  soon  as  possible.  If  water  spots  do  form,  cleaning 
+with  95%  alcohol  should  remove  them.  Do  not  allow  the 
+negative  to  become  scratched,  as  this  makes  the  negative 
+useless.  Using  the  air  hose,  blow  dust  particles  off  copper- 
+clad  board  and  negative.  Place  copper  clad  board  copper 
+side  up  in  exposure  tray.  Place  negative  emulsion  (dull) 
+side  down  on  copper-clad  board.  Clean  (if  necessary)  the 
+plexiglass  cover  for  exposure  tray  and  air  blow  dust  from 
+surface.  Align  negative  on  board  and  place  plexiglass 
+cover  over  exposure  tray.  Turn  vacuum  pump  on  and  recheck 
+alignment  of  negative  on  board.  Slide  tray  into  box.  Check 
+U-V  light  circuits.  Turn  switch  on  with  rotary  switch  in 
+desired  position.  Far  counterclockwise  will  turn  all  lights 
+on.  Push  pushbutton  switch  and  release.  Lit  pilot  lights 
+indicate  which  U-V  lamp  circuits  are  not  activated.  Expose 
+board  for  25-30  minutes.  Exposure  initiates  polymerization 
+of  KPR-3  thereby  making  it  unaffected  by  developer. 
+
+
+I 
+
+
+DEVELOPMENT  OF  BOARD 
+
+
+Blow  dust  out  of  2nd  glass  tray.  Pour  KODAK  ORTHO  RESIST 
+DEVELOPER  (KOR)  into  glass  tray.  Place  board  in  tray. 
+
+Agitate  occasionally.  If  developer  is  fresh,  develop  for 
+3-5  minutes.  If  developer  has  been  previously  used, 
+development  for  5-8  minutes  may  be  necessary  to  remove  all 
+unexposed  KPR-3  from  board.  Rinse  board  with  water.  Pour 
+developer  back  into  can.  With  air  hose,  dry  glass  tray. 
+
+Etching  of  Board 
+
+Place  board  in  automatic  etcher.  Automatic  etcher  uses 
+ferric  chloride  solution  and  oxidation-reduction  reaction 
+to  remove  exposed  copper  from  board.  Etcher  will  work  faster 
+when  solution  is  warm.  Make  sure  heater  has  been  on  at 
+least  30  minutes,  preferable  45-60  minutes  to  insure  warm 
+solution.  Etch  board  for  3-7  minutes,  depending  upon 
+temperature  of  solution  and  freshness  of  solution.  Rinse 
+with  water.  If  not  all  exposed  copper  is  removed,  continue 
+etcning.  Rinse  with  water  and  dry.  Remove  KPR-3  from 
+copper-clad  remaining  on  board  with  steel  wool.  This  also 
+roughens  up  the  copper  surface  for  easier  soldering. 
+
+While  etching,  if  it  appears  that  all  of  the  unexposed 
+KPR-3  was  not  removed  from  board  while  developing,  board 
+may  be  rinsed  with  water,  dried,  and  developed  longer.  Care 
+should  be  taken,  however,  not  to  develop  for  too  long  as 
+edges  of  exposed  KPR-3  will  begin  to  be  developed  away. 
+
+
+V 
+
+
+23 
+
+
+IHl'MtUlJUiJM'riJJfll'IJMt. 
+
+
+REPORT  DOCUMENTATION  PAGE 
+
+1.  REPORT  NUMBER 
+
+ftFOSR  -TK-76~lX02y 
+
+4 title  c«irf  Svtoitlai. 
+
+'CJ  EXPERIMENTS  WITH  COCHLEAR-TRANS FORMED  |PEECH 
+A FIFTH  YEAR  STUDY 
+
+*■  i ; ■*  
+
+
+READ  INSTRUCTIONS 
+BEFORE  COMPLETING  FORM 
+
+
+rHiwww-’-«'nw 
+
+
+7.  AUTHORS 
+
+f I r Victor  W 
+
+
+nv 
+
+
+FTH  l EAR  STUDY  / 
+
+~7-~ 
+
+
+W^eiQ\ 
+
+
+5.  TVPeW  REPOttt 
+
+FINAL 
+
+
+«•  PERFORMING  ORG.  REPORT  NUMBER 
+
+TR-EE-^,*!  AFOSR-222-fL 
+
+
+a CONTRACT  CTT  GRART  NUMBER'.) 
+
+AFOS R.  12=21ia 
+
+^T0SR-<2l7?-22/ 
+
+
+* PERFORMING  ORGANIZATION  NAME  AND  AOO 
+
+The  University  of  New  Mexico 
+Department  of  Electrical  Engrg  & Computer  Science 
+
+lKiinnavniiD  KIou  Movi  po  Q "7  1 
+
+
+11.  CONTROLLING  OFFICE  NAME  AND  ADDRESS 
+
+Air  Force  Office  of  Scientific  Research  (NM) 
+Boiling  AFB,  Washington,  DC  20332 
+
+
+MONITORING  AGENCY  NAME  A ADORES 
+
+
+12.  REPQRT  DATE 
+
+
+13  NUMBER  OF  PAQE$___ 
+
+
+16.  Distribution  st  at  cm  BMX4*rTM«  Report)  
+
+Approved  for  public  release;  distribution  unlimited. 
+
+
+from  Controlling  Oltlce) 
+
+R / 
+
+15.  SECURITY  CLASS,  (ot  thlehepoH) 
+
+UNCLASSIFIED 
+
+L -I  1 > 
+
+1S«.  OECL  ASSl  F|  CATION/  DOWNGRADING 
+SCHEDULE 
+
+17.  DISTRIBUTION  STATEMENT  (ol  the  abstract  entered  In  Block  30,  It  different  from  Report) 
+
+
+19.  KEY  WORDS  (Continue  on  reveree  aide  It  neceaeary  and  Identity  by  block  number) 
+
+artificial  ear,  speech  signals,  automatic  speech  recognition,  hybrid  electronics 
+minicomputer  interface 
+
+
+20  ABSTRACT  (Continue  on  raverae  aide  It  necaeeery  and  Identify  by  block  number) 
+
+^This  report  summarizes  the  system  developed  for  investigating  natural  ear  respon 
+to  the  various  sounds  of  English  speech,  and  presents  some  of  the  preliminary 
+results  of  tests  with  21  prolongable  phonemes.  A confusion  chart  is  shown  to 
+illustrate  the  separability  hazards  .V\ 
+
+
+FORM 
+
+I JAN  71 
+
+
+COITION  OF  I NOV  SS  IS  OBSOLETE 
+
+
+09  r- 
+
+
+UNCLASSIFIED 
+
+SECURITY  CLASSIFICATION  OF  THIS  PAGE  (•*",  D.f.  gni;,d) 
+
+
+f 
+
+

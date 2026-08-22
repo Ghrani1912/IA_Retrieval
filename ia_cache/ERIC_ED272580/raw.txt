@@ -1,0 +1,2157 @@
+DOCUMENT RESUME 
+
+
+
+ED 272 580 
+
+
+
+TM 860 499 
+
+
+
+AUTHOR 
+TITLE 
+
+PUB DATE 
+NOTE 
+
+
+
+PUB TYPE 
+
+
+
+EDRS PRICE 
+DESCRIPTORS 
+
+
+
+IDENTIFIERS 
+
+
+
+ABSTRACT 
+
+
+
+Tatsuoka, Kikumi K.; Tatsuoka, Maurice M. 
+Diagnosis of Cognitive Errors by Statistical Pattern 
+Recognition Methods. 
+Apr 86 
+
+30p,; Paper presented at the Annual Meeting of the 
+Psychometric Society (50th, Nashville, TN, June 1-4, 
+1985) . 
+
+Reports - Research/Technical (143) — 
+Speeches/Conference Papers (150) 
+
+MF01/PC02 Plus Postage. 
+
+Artificial Intelligence; Bayesian Statistics; 
+Cognitive Development; *Computer Assisted Testing; 
+Equations (Mathematics); *Error Patterns; *Fractions; 
+Hypothesis Testing; Junior High Schools; *Latent 
+Trait Theory; Mathematical Models; Probability; 
+♦Problem Solving; ^Response Style (Tests) 
+PLATO; *Rule Space 
+
+
+
+The rule space model permits measurement of cognitive 
+skill acquisition, diagnosis of cognitive errors, and detection of 
+the strengths and weaknesses of knowledge possessed by individuals. 
+Two ways to classify an individual into his or her most plausible 
+latent state of knowledge include: (1) hypothesis testing — Bayes* 
+decision rules for minimum errors; and (2) bug distribution — how 
+bugs, incorrect rules used to solve problems, are clustered and 
+related. A 40-item test containing subtraction of fraction items, was 
+given to 535 junior high school students. A computer program was used 
+on the PLATO system to diagnose erroneous rules of operation. Two 
+common erroneous problem-solving rules were used to lluytrate the 
+rule space model. The results were then compared wim the results 
+obtained from a conventional artificial intelligence approach. 
+(GDC) 
+
+
+
+****************************** 
+
+* Reproductions supplied by EDRS are the best that can be made 
+
+* from the original document. 
+
+************************************************ ********^^**^^^^^^^^^^ 
+
+
+
+o 
+
+00 
+
+rvj 
+o 
+
+
+
+Diagnosis of Cognitive hrrors 
+
+
+
+by 
+
+
+
+Statistical Pattern Recognition Methods 
+
+
+
+PERMISSION TO REPRODUCE THIS 
+MATERIAL HAS BfcEN GRANTED BY 
+
+
+
+TO THE EDUCATIONAL RESOURCES 
+INPQHMATION CENTER (ERIC) 
+
+
+
+us DEPARTMENT OF EDUCATION 
+
+OHtrP o( Edu< aitOnai Research and improven*»nl 
+
+EDUCATIONAL RFSOURCES INFORMATIUN 
+CFNTER (ERiCi 
+
+^^is tJocumeni has been reproduced as 
+"deceived 'rom the person or organization 
+
+O' igioafing \\ 
+V Minor cha'iges have been rnade to improve 
+
+reproduction quaiit/ 
+
+• Points ot view or opinions staled <n ihisdocu 
+ment do not necessarily represent otticia 
+OERl position or policy 
+
+
+
+KikuiTd K. Tatsuoka 
+
+University of Ulinois at Urbana-Champoign 
+Computer-based Edjcation Research Laboratory 
+
+
+
+and 
+
+
+
+Maurice M. Tatsuoka 
+
+University of Illinois at Urbana-Champaign 
+Department of Educational Psychology 
+
+
+
+Q 
+
+NO 
+
+
+
+ERIC 
+
+
+
+April 1985 
+
+
+
+Diagnosis of Cognitive Errors 
+
+2 
+
+
+
+Alistract 
+
+cognitive SniII acquihT.icP. ciagr.osir^g cognilive errors, Jetecting the 
+weaknesses and strenglps c.f knowledge possessed by individuals was 
+introduced earlier. This study further discusses the tfieoretical foundation 
+of the model by introducing "hug distribution" and fiypothesis testing (Bayes' 
+decision rules for minimunn errors) for classifying an individual into 
+his/her most plausible latent state of knowledge. The model is illustrated 
+with the domain of fraction arithmetic and compared with the results 
+obtained from a conventional artificial intelligence appr\:ach. 
+
+
+
+3 
+
+
+
+Diagnosis of Cognitive Errors 
+
+3 
+
+
+
+i he aut'^.cr'^ \^'ci..r: ^n^. *.o >..c-s: -(^^'^.'e.o^r- .x^):>'^!'^ Pailiie for ^;e^virr:n'^ 
+several crp^.ter -rogrv- ~ .j-.c: ;cr uieful ,-!:--.ctJssions rvj-cerriirp 
+researx\'^. 
+
+This research was sponsored by tf^.e Personnel ,-^<Vl Training Research 
+Program, Psychological Sciences Division, Office nf N'c'wal Research. 
+
+Some of the analyses presented -ri this report were performed on the 
+PLATO® systenn. The PLATO® system is a development of the University of 
+Illinois and PLATO® is a service mark of the Control Data Corporation. 
+
+
+
+ERIC 
+
+
+
+4 
+
+
+
+Diagnosis of Cognitive Errors 
+
+4 
+
+Intro j'jctiQ^^ 
+
+Severa. err^.^^iGt.., ^^:e^!^ods con^nionlv Lisec in Artifinal Iritelli^OMce have 
+been applied to Jewiop pr^rllerr. -soiv.ng \:rngra:vr.^, '^->r - rror-d.aano^r :c syste^rs. 
+These methods have successfully diagnosed hiindreds of erroneous r^uies of operation 
+in several domains of arithmetic, algebra, and some areas of science. The results 
+of such error analyses have contributed to our current understanding of human 
+thinking and reasoning. 
+
+These approaches, however, fail to take the variability of respcjnse errors into 
+account, and also depend on a specific model of problem solving. Therefore, 
+they often cannot diagnose responses affected by randof-i errors (sometim.es called 
+"slips") or produced by innovative thinking that is not tciNen into account by the 
+current models ;t is very difficult to cevelop a computer program whose underlying 
+algorithms for solving a problem represents a wide range of indiv jal differences. 
+Yet, when these diagnostic systems are used in educational practice, they must be 
+capable of evaluating any responses on test-items, including inconsistent 
+performances and those yielded by creative thinkmg. Recent developments in 
+cognitive psychology and science point cut that a student keeps testing his/her 
+hypothesis and evaluating it until learning advances. As stated by VanLehn (1983), 
+"If they are unsuccessful in an attempt to apply a procedure to a problem they are 
+not apt to just quit, as a computer program does. Instead they will be inventive, 
+invoking certain general purpose tactics to change their current process state in such 
+a way that they can continue the procedure" (p. 10), Birenbaum and Tatsuoka (1985) 
+showed that inconsistent and volatile applications of rules in signed-number 
+arithmetic iL a common phenomenon among nonmasters. Since the 19G0's 
+psychomietriciais have developed probabilistic models to measure latent traits. 
+
+
+
+5 
+
+
+
+Diagnosis of Cognitive Errors 
+
+5 
+
+
+
+As stated by Aivor : ina K'hcrcady (I'rSoj, two gener-ai clashes of latent stuctur-e 
+rrodel? have beep ;.rcpr<--:'. 7' -.-:e ~ Ir-.-o? P.jve '-epn callei Cjntinutjm models and 
+Stai-:^ nv'ce.s. rhe rri^imcrr, rnorielc, trait acquisition is assumed to be 
+
+continuous m o.atu'-o..., v.b.ereas for state moaeis, trait acquisition is perceivea as 
+an 'all-or-^ope' process." Paulson (1985) extended the line of research in latent 
+state models to explain erroneous rules of operation in signed-number arithmetic in 
+which each rule is treated as a discrete state. Some basic assumptions in the state 
+models are: firsi, one m.ust decide hcv m.any latent classes or states the model has. 
+S(?condly, everv subject m,ust belong to exactly one of a finite set of latent classes 
+'vvhich are mutual Iv exclusive and exhaustive. Despite recent developments m 
+methods of estimatmg parameters (Goodman, 1975; Paulson, 1985), [)robabilistic 
+explanation of volatile changes in the applications of i ules is very difficult by 
+state moo^i approacr;es. Moreover, it is extrem.ely difficult to take all students' 
+performances on a test into account in a single model, especially when several 
+different methods are available to solve a given set of problems. Therefore, we need 
+a model that is capable of diagnosing non-systematic cognitive errors and is also 
+capable of evaluating nonconventjonal problem-solving activities. 
+
+Tatsuoka and her associates (Tatsuoka, 1985, 1984b; Tatsuoka & Linn, 1983; 
+Tatsuoka & Tatsuoka, 1983, 1982) have developed such a m.odel called rule space and 
+have successfully applied it to diagnose misconceptions possessed by students in 
+signed-number and fraction arithmetic. The model maps all response patterns into a 
+set of ordered pairs comprising the latent ability variable 0 and one of the IRT- 
+based caution indicts (^) introduced by Tatsuoka (1984b). However, the approach 
+used m their model lacks, somehow, a sound statistical foundation in expressing 
+The simulation study by Tatsuoka and Baillie (1982) showed that the response 
+
+
+
+6 
+
+
+
+Diagnosis of Cognitive Errors 
+
+6 
+
+operatiCn ? yroo\lurj\ :..:T''un f.^r rn d c/j'^tc^r "'re rJi^i, \v:r-"v^-r, ^ hey 
+
+rou^^ci empirically 'hd^ ^^v- '\a.:; rii'J.:m variaclej. i^rj ^ jbla.ne^ frxr^ 'hoce 
+respopse patterns in the cluster fo.low an app^o^:mate rnLiitivaria^.e norma: 
+distribution. Tins cluster around a rule is railed a "bug diGtmbut.cn" Nareafter. The 
+theoretical foundation of this orr.pirical finc.r:g v/iJ be c.scusstrd :n this paper. 
+First, a brief description of *-he probabilistic model introduced :n Tatsuoka il985) 
+v/ill be given. Then the connection of each "bug distribution' to this model will be 
+discussed :n conjunction w.th the theory of statistical pattern classification and 
+recognition. 
+
+Cistribution of Rt-sponses around an Erroneous Rule 
+
+The term "rule" is used loosely, without a prncise definition. Tatsuoka 
+and Tatsuoka (1935) say "A rule is a description of a set of procedures or 
+operations that one can use m solving a problem in some well-defmei procedural 
+donriain such as arithmetic, algebra and the l:ke." A ng^l ruie(s) is defined as a rule 
+that produces the right answer to every item in a test, but an erroneous 
+rule may fortuitously yield the right answer for some subset of the items. A 
+logical analysis of cognitive tasks-identifying subtasks for solving the problems 
+correctly, investigating possible solution paths and constructing a subtask tree or 
+process network for a well-defined procedural domain-is often an important 
+prerequisite to developing a cognitive error-diagnostic test. However, theoretical 
+foundations of dealing with such relational databases can be found elsewhere 
+Reingold, Nievergelt and Deo, 1979; Lee, 1983), and thoy are not our main 
+concerns in this paper. So we here assume that a set of erroneous rules or sources 
+of misconceptions one wishes to diagnose is given a prion. Indeed it is possible to 
+
+
+
+ERIC 
+
+
+
+7 
+
+
+
+Diagnosis of Cognitive Errors 
+
+7 
+
+pred.ct . fv: . f - ^ ^ 1 - : : \' .-irrv i^g (n:t . l.^^.c-i ^ : i-rr\\^\-.. 
+
+(Klein, 198;). T'lr'^er, ^ssur^e 'r\n e^-v rule yields it^ i.riquo response 
+
+patter^;.-) tD the test iVnis, ^^he iin:t ef scorin^^ ^-an 're t' e firvsl o-.svy.--r '^r 
+subprocessess.) Seme ru.es are corr.binatiors of t[-L' right rule anj wr^ong rules, 
+while ethers are combinations of various wrong rules. For example, suppose a 40- 
+Item f^raction subtraction lest contains itemiS requirmg borrowing and those that do 
+r^ot. If a student increases the numerator by 10 instead of adding the denominator 
+when borrowing, then his answer will miost likely be wrong for the items requiring 
+rorrowmg but curTect for those net requiring borrowing. Therefore, this rule- 
+ve^Ktrrec, to as Rule S later— corresponds to the response pattern of ::^::rc''"* for the 
+borrowing item.-:; and ones for the non-borrow.ng items. Tfie st-^t of rules m a study is 
+by no mea^is a coFipiete list of r^ules. Indeed, we will show that somiO responses are 
+mi possible to diagnose. 
+
+The responses around a particular rule of operatior^ in a procedural domain which 
+are produced by not-perfectly-consistent applications of the ruiO to 'he test itemiS 
+form a cluster. They include responses that deviate, in various degrees, from the 
+response generated by the rule. When these discrepancies are observed, they are 
+considered as random errors. These random errors are called "slips" by cognitive 
+scientists (Brown S VanLehn, 1980). The properties of such responses around a 
+given erroneous rule will be investigated in this section. 
+
+First, the probability of having a "slip" on item j ,2,...,n) is assumed to 
+have the same value, p, for all items and it will be called "slip probability" in this 
+paper. Let us denote an arbitrary rule for which the total score is r by Rule R and 
+let the corresponding response pattern be: 
+
+
+
+ERLC 
+
+
+
+8 
+
+
+
+Diagnosis of Cogninive Errors 
+
+8 
+
+
+
+(1) R = 
+
+
+
+= 1 . ana y 
+
+
+
+I 
+
+
+
+/ = 0 . 
+
+
+
+. . e re-r^p.opse patrerns existing one slip away fronn Rule R are of two kinds: a 
+oiip of "one ro zero" occurring at 1 j ^ r and "zero to one" at r v j < n. The 
+
+
+
+number of response patter-ns having one slip is rhpr-^fore + (^q) (V^ } . and 
+
+the probability of having one slip on item = i ,...,n] is given by ) p ' (l-p)-'^'^"''^) 
+p° ii'pf'^ + (S^) po (i.p)" (n-r) (i_p)n-r-l ^.^^ probability n is th- same for 
+all Items, j = l,...,n. Therefore the following equation (2) is obtained: 
+(2) Prcb (x. - 1 for some j = l,...,r or x^ + 1 for some j=r+l ,...,n) 
+
+r 1 
+
+Prob .having a slip on an ite-^i) = | (V) (V) + (o) p' (1-p)''"^ 
+
+Similarly, the probability of having k slips on the items is given by as follows: 
+
+
+
+ERIC 
+
+
+
+9 
+
+
+
+Diagnosis of Cognitive Errors 
+
+9 
+
+
+
+The genera^iM^ fu-ct-r of the Jif^rr:h^t:on cf fr^ (];.:e-c:-:^ up to k -^rs w.I! ::e 
+given by Equation (3) as follows: 
+
+L^;) 2 Frcb ^having uo to k siios) = Z (l-oy^^'^. 
+
+. rv\>'-efore, a cluster >iround Rule R which consists of respc- patterns including 
+various nunVoers of slips j^.ot-perfectly-consioten: applications of Ru'le R) has a 
+prooaoihty distr^ibution cj ti^.e binomial form if ail itenvs hove the saiiie slip 
+prx/oability p. If, on the other hand, we assume each item to have an unique slip 
+probability, tfien the binomial distribuiion expressed by E-uation (3) will become a 
+compound binomial distribution, Equation (4). 
+
+
+
+(4) Prob (havmg up to k slips) = S \ tt p''j (1-p )^ ) \ 
+
+Before an approximation of the slip probabilities is discussed, tfie rule-space 
+concept will be briefly introduced in the next section. 
+A Brief Summary of the Probabilistic Model. Rule Space 
+
+One of the purposes of the model, the rule space, is to interpret semantical ly the 
+relationships among various erroneous rules and the right rule, and compare the 
+characteristics of each rule to the right rule or other rules. An analogy for the 
+underlying motivation of seeking a norm-referenced char-acteristic of "bug behavior" 
+mdy be round in the theory and practice of nornvreferenced tests. Tins starts by 
+
+
+
+ERIC 10 
+
+
+
+Diagnosis of Cc^nitive Errors 
+
+10 
+
+
+
+selecting fr''"> r-i.^:')! r;;!;- c\ ■ -nn r.n i\-,:],y.>r:' tl/-' ;,• v-r rr' -■".c-fM''? ruior-: to 
+
+the c!";cj;"dLte:\i;.v' .•. ' :',c'r~:r,. .r^y £0. :'r,e [-'-yc^on^-tri'; bei\jvi,..r 'Dt "'"-ugs" as 
+
+comparec ^^lt^ the right : ■ :r.ier=^,t,-incirik v.hv ar-c: 'tw ^:i(,.;s :T,.r ; cept:or,s are 
+related and transforr-e'l fro:;- ore '0 acotrer 'a-iII 1..^ evplaiped r^.ore clearly than by 
+just describing the list of bu^s. 
+
+The rule space model begir^.s by mapping all possible binary response patterns 
+into a set of ordered pairs { (0, ^) }, where 9 is the latent ability variable in item 
+response theory (IRT) and ^ (.cr ^^(x : ^)) is one of the IRT-based caution indices 
+.'.atscoNd, l?S-:b; i atsuoka <S Lmn, 1983). The mapping function f (x ) is expressed 
+as an inner product of two residual vectors, P {6) - a and P (9) - T (9) where 
+
+j = l»-",n are the one- or two-parameter logistic-model probabilities, x is a 
+binary response vector end T (9) is the mean vector of the logistic probabilities. 
+fix) 13 a linear mapping function between x and ^ at a given level of 9, and the 
+response patterns having t!ie same sufficient statistics for the maximum likelihood 
+estimate 9 of 9 are dispersed into different locations on the line of 9 = 9. For 
+example, on a 100-item test, there are 4950 different response patterns having the 
+total score of 2. The ^'s for the 4950 binary patterns will be distributed between 
+^min ^"'^ ^max ^^^"^^ ^^in obtained from the pattern having 1 for the two easiest 
+
+Items and zeros elsewhere, and C is Froiri the pattern having 1 fo^ the two most 
+
+max ^ 
+
+n , 
+
+difficult Items, f (x) has the expectation zero and variance X P (9) Q (9) (P 9 - 
+
+T(6)j (Tatsuoka, 1985). Since the expectation of the random varMble x^ (j=l,...,n) 
+
+is P (9) , the expectation of a vector x is P (9) whose jth component is P. (9). The 
+•J ^ J 
+
+vector P (9) will be mapped to zero as shown m (5), thus the pattern corresponds to 
+(9,0) m the rule spr-ce. 
+
+(5) f (p (Oj) =0 
+
+
+
+ERIC 1 1 
+
+
+
+Diagnosis of Cognitive Errors 
+
+1] 
+
+
+
+onto r(R. I ) , ^r<' ^'-^ C v>:".-r- 
+
+
+
+'I '••1 -R ) (f ( 3) -T, J. vy-;' 
+
+
+
+given bv (6h That is. 
+
+
+
+(6) f(R) 
+
+
+
+'•^R 
+
+
+
+:t^^ I 
+
+
+
+imilariy, all the rebponLje vectors resuliirig froin severa: L^iips around rule R 
+will be mapped in the vicinity of (o^ ,1"'^(R)) m the ru!^ soace and forrr a cluster 
+(oalled tihe cluster around R hereafter). 
+The two 
+
+variables 0 and t (x) are mutuallv uncc^rrelatod so their co^'ariance 
+-latrix has a diagonal forn^ dS follows; 
+
+
+
+(7) 
+
+
+
+t var^ [v 
+
+
+
+0 
+
+
+
+var 
+
+
+
+r(f (x)) 
+
+
+
+0 
+
+
+
+0 
+
+
+
+'■r^y6)Q^ [6] (p ^[d] - r \tf)) 
+
+
+
+where 1(0) is the information function of the test and is given aopoximately by 
+Pj (0)Qj (0) where the a^ (j=l,...,n) are item discriminating powers. 
+Let us map all response patterns of the test, including clusters around various 
+rules into the Cartesian product space of 0 and f (x), where 
+
+(8) f(x) = (p (6) , P(e) - 7(0)) -(x ,p(e) - Tie)) 
+
+In particular, Rule R itself will be mapped as 
+
+(9) R = X -> (0j^,f (R)) , 
+
+where f (R) is given by Equation ;9). Tfie variance of the .vjstei around R will be 
+
+
+
+ERIC 
+
+
+
+12 
+
+
+
+Diagnosis of Cognitive Errors 
+
+12 
+
+
+
+The que^ncifies and are dssociated wit'^ Rijie R as as with item j, and their 
+values are upiivr'iowf^. 
+Slip pr^obalMlities 
+
+Suppoee p^ IS t'^e ^-.l'^. prehability ^^f item j :\r6 p^ for 1. Then, the 
+pr^ooaoility .PiisKy ii;[\:tiL'[^ o: c4 cluster -Tw^nii Pxiile R will he a compound bmomioi 
+OiS^r^:'Uitlo:^ . ';e ccv.itional pro.\.'^ihihty that x , ibe r^espor^se to item is not equal 
+
+
+
+to t-e jth element Rule R, , but 1 ~ vviil be either P^(0) or Q [6] 
+depending on wheth'^r^ thc3 jth eieiTient in R is sero or one, respectively. That is 
+
+irvch (x^ - 1 I e^} ^ F ROo) if Xo - 0 
+
+
+
+R^ ~ ' l^^ R^ " "R 
+
+
+
+(11) Prob ix ^=:^x^ 1 Go) = ^ ^ J J 
+
+^; ^ ^''rob (X = 0 I t^j^) - Q {0^} if = 1 
+
+Therefore, the slip probability of item j v/ill be expressed by tf^e logistic function 
+PyO) vyhose parameters are estimated from a sam.ple. The com.pound binomiial 
+distribution of the cluster around Rule R is given by the terms of the expansion of 
+expression (12), and the mean and variance by Equationc. (13) and (H) becau'se the 
+complemient of the slip probability is the condiUonal prx^bability of correct responses 
+gnen Rule R. 
+
+(12) g{R) ^ n (P [0^] + Q (0^)) 
+
+(13) ,R = I P + 7 0 (Op,) 
+
+j-1 ^ J=r+1 ^ 
+
+
+
+ERIC 13 
+
+
+
+Diagnosis of Cognitive Errors 
+
+13 
+
+
+
+ERIC 
+
+
+
+the rr.app.ng function, f;0, the coniroid ^A\: covarinnce ^t^-^.M'iv xviil be g:v--^'^ ?y 
+equotioHG [15] and (16), respectively. 
+
+n 
+
+
+
+Var(:: in the cluster around R] ^ Z? ^ {6)0 (? ^[S] - T(0)) 
+
+J J J 
+
+he varian^"^ of m jny '^hjc^er^ on ^h-'^ o^'^^er hinch '^r^en by the r'^jinrocal 1 A (6) 
+
+
+
+or the mtorrrat^.n tunctior' 
+
+
+
+(!6) VarM^ in the cluster around R) = 1 i 
+
+
+
+The above two var .ces, along with the fact that ^ ar\] are uncorrelated, plus 
+the r^easonable assumption that they have a bivariate normal distribution, allow us to 
+construct any desired percerrL ellipse around each rule point R. The upshot is tihat, if 
+all erroneous rules (and ^'-'^ correct one] were to b- mapped into the rule space along 
+with their neighboring response patterns representing random slips from them, the 
+resulting topography would be somt^ihing like what is seen in Figure 1. That is, ihe 
+population of points would exhibit modal densities at r any rule points that each 
+forms the center uf an envelopir^g ellipse with the density of points getting rarer as 
+we depart farther from the center in any direction. Furthermore, the major and 
+minor axes of these ellipses would - by virtue of the uncorrelatedness of ^ and 0 - 
+be parallel to the vertical (^) and horizontal (9) reference axe : of the rule space, 
+respect 1 vely. 
+
+
+
+Inser^t Fi^^ure 1 dbout fiere 
+
+
+
+14 
+
+
+
+Diaj^nosis cf Co^^nilivG Errors 
+
+14 
+
+
+
+1 
+
+
+
+we irt3y assert tK^l ::he set cf ^^l.^se^ g-^^^'^ o^^r^.p.L-te c^^o.i >-.o^-"'r:ze.: n c-r :'^e rule 
+space. 3y this .s rneiint :^,at, once ^^^-'St:^ ellipses ar^e gA'en, any r^ssponse-pattct^n 
+par^ts can c_:ssi^e':j ..:s rrast hkpiy b^ing a random slip [nMrn ore cr another of the 
+er^i^oneous rules (or t^-^e oorrvct; one). have or,l^. tc ietormar.e, :rr a table 
+percent value, v^hich one of the S'-ver^U e:lip-es ;;n:an^a^'' ipclaoe:. t^e es'en nam., 
+'-' porational Clus u ifisation C'oherne 
+
+The vTC'onietric scheme outhned above for^ classifyi ^ a.ny given r 's::.onse-patteran 
+point ds being a "perturbation" from one or another .f tf^.e r''le points has a certain 
+intuitive appeal (especially ^o those v/ith higfi soatidl ability!). However, it is 
+obviously difficult if not mfeasible to put it into practh:e. We therefore r^.ow 
+describe the algebraic equive' .^nt of the foregoing geciiftrK: classification decision 
+rule, which is none other than the well-known miniinum-D" rule, where D"^ is 
+Mahalanobis' generalised squared-distance (Fukunaga, 1972; Tatsuoka, 1971). Then 
+the Bayes' decision rule for^ minimum error will be discussed in tK^ context of the 
+
+
+
+r^ule soace. 
+
+
+
+Without loss of generality, miay suppose that a given r^esponse pattern point x 
+has to be classified as represer^ting a random slip from one of two rule points R^^ and 
+
+
+
+R9. Let X L^e a poi .t in the rule space corresponding to x ,X ~ ! ^\ 
+estiir.ated Mafialanobis distance of X from each of the two rule r^omts .s 
+
+
+
+The 
+
+
+
+ERIC 
+
+
+
+10 
+
+
+
+Diagnosis jf Cognitive Errors 
+
+15 
+
+
+
+wnere 
+
+
+
+i , and the variance -':ovariance iTiat 
+
+
+
+nx 
+
+
+
+wiK be, 
+
+
+
+1/1(6) 0 
+0 var (f (x) ) 
+
+
+
+.he decision rule is, of course, U) olas'^-ify ^ as a pertorsaPon from if 
+
+D^l < 3nd otherwise as a perturbation from R^-, . However, the decision based 
+
+on the Mahalanoois distai.ces, Vr^ and D^^^ does not provide error probabihties of 
+
+misclassification. The next section will discuss them. 
+
+T?^e Bayes' Decision Rule for Mm um um Erroi 
+
+Suppose R^ and R^ are two cutters of points corresponding to Rules 1 and 2, 
+respectively. 
+
+Let Prob (R^) and Prob (R^j be prior probabilities of the rules R^ and R^, 
+P (X i^i^ 1-1,2 be the conditional density function of Y given R^. Then, Bayes' 
+decision rule is as summarized in Equation (^8). 
+
+(18) If p(Y I R^) Prob{R^) > p (Y 1 R2 Prob (R2) then Y 0 R^ 
+
+Otherwise, Y 6 R^ . 
+
+Sometimes, it is convenient to tvAe tFie negative log of tfie lilvelihood ratio m 
+Expression (18) and rewrite it as Expression (19). 
+
+
+
+16 
+
+
+
+diagnosis of Cognitive Errors 
+
+16 
+
+
+
+(19) 
+
+
+
+K 
+
+
+
+Ti- 
+
+
+
+ne probability of error :s ^'/^e prccability 
+
+
+
+V will be ssigned to ^oe Vvoong 
+
+
+
+group, R^. 
+
+Let us denote the posterior density function by P(R^ | Y) and let and be 
+the rvgior.o such that if Y 6 tl^en P(R^ j Y) > P{R^ | Y) and :f Y t tr 
+. U^o 1 j / r (i-x , I j . 
+
+
+
+^en 
+
+
+
+The probability of error is given by the follo^A^ung equat 
+
+
+
+ion: 
+
+
+
+(20) e ?rob( Y t- F^, I R.) P(RJ -f Prob{Y 6 F, IR^jPfR.) . 
+
+Let ut. denote the probability of Y belonging to when Y is from , then 
+
+
+
+(21) G, = Prob(\' e F^ I R 
+
+
+
+z 
+
+
+
+I R,) = I p(Y i R^) dY, 
+
+
+
+Similarly, the probability of Y belonging to F^ when Y is from R^, £ 2 ^^^^ 
+
+p(Y!R2)dY . 
+
+
+
+(22) 6 2 = P'--^(Y e F^ j R^ 
+
+
+
+F. 
+
+
+
+Then expression (20) can be rewritten as G — € (R^) f (R7) , or inore 
+
+precisely, 
+
+
+
+(23) e = P(R^) 
+
+
+
+^F. 
+
+
+
+p(Y I R^) dY + P(R2) 
+
+
+
+p(Y I R,,) dY . 
+
+
+
+F 
+
+
+
+17 
+
+
+
+Diagnosis of Cognitive Errors 
+
+17 
+
+
+
+i he integrvitiC'H cjr^citicr^a! LL-r^siV; :\.r:'^: :: v'-s-jT) * ;^ ** ^r] ror 
+
+probability f. The dm ensionaiity of \be cor^cA.or^.' der^sity function is often more 
+than one, while the density function p(j? ) R^) of the likelihood ratio is one 
+dimensional so it is sometimes convenient to integrate the latter (Fukunaga, 1972). 
+Hence, Equations (24) and (25) are used to obtain the error probabilities, 6^ and t^; 
+
+
+
+00 
+
+
+
+If the density function p (Y | R ) is normal with expectations \'] and covariance 
+
+1 ^ - I 
+
+matrices then Equation (19) will become Equation (26). 
+
+(25) If h(Y) = -In ;(Y) 
+
+= ¥i) 'il"^ (X- M^) - ^(Y-M^)^^2^ (Y-M,^ 
+
+
+
+12. 
+
+
+
++ ^ In 
+
+
+
+-2 
+
+
+
+P(R2) 
+
+
+
+^' G R 
+Ye R 
+
+
+
+2 
+
+
+
+If 2| — ^2 — then h (Y) becomes a linear function of Y and the decision rule has 
+the following form if Y follows a normal distribution: 
+
+
+
+ERIC 
+
+
+
+18 
+
+
+
+Diagnosis of Cognitive Errors 
+
+18 
+
+
+
+^ ! 
+
+.V] , 
+
+
+
+T - A ' 1 
+
+
+
+(27) 
+
+
+
+t . 
+
+
+
+then, Y e 
+
+
+
+R. 
+
+
+
+le error probability t ^ is given by. 
+
+
+
+GO 
+
+
+
+r CD 
+
+
+
+I p(h(Y) ! rJ dh(Y) = 
+
+
+
+' t 
+
+
+
+. t+Q \|27r 
+
+
+
+pv 
+
+
+
+<p (^r) dz 
+
+
+
+= i--t('-i'i) . 
+
+where t = In p(R^) / p (R^) and (.) is the unit normal distributioi i. The 
+conditional expectation of the iiKelihood function h(Y) is given by (29) and (30), 
+
+
+
+(29) 
+
+
+
+E(h(Y) I R^) = (^2 - M^)' Z'^ (M, - M^) 
+
+
+
+(30) 
+
+
+
+E(h(Y) 1 R^) = (M^ - M^)^ (M^ - = +q 
+
+
+
+and the variance of h(Y) 13 g.ven by Equation (31): 
+
+
+
+ERIC 
+
+
+
+19 
+
+
+
+Diagnosis of Cognitive Errors 
+
+19 
+
+
+
+i 
+
+' -co 
+
+Illustration oF the model with an example 
+
+A 40-item. fraction subtraction test was given to 535 students at a local junior 
+hi'jh school. A computer program adopting a detorminiatic strategy for diagnosma 
+-rroneous ruies -i" operation m subtracting two fractioi^s W3c developed on the 
+; syctem. i iv stuoentc performances on I'-o test v/ere analyzed by the error- 
+
+diagnostic progr-am and summarized by TatsuoKa [IdS-^b]. In order to illustrate the 
+rule space model and the decision rule described in the previous section, two very 
+common erroneous rules (Tatsuoka, 198-4b] are chosen to explain the model. 
+
+Rule 8. This rule is applicable to any fractnn or mixed number. A student 
+su!)tract3 the smaller from the larger number m "unequal corresponding parts and 
+keeps corresponding equal parts as is m the ans'^ver. E'-amples are, 
+
+
+
+1 4 — - - ?—y- - 7 
+
+2. 7l-i = 74 
+
+DO 5 
+o _ ^ — 3 
+
+4 " 8 ~ 4 
+
+Rule 30. This rule is applicable to the subtraction of mixed numbers where the 
+first numerator is smaller than the second numerator. A student reduces the whole- 
+number part of the minuend by one and adds one to the tons digit of tl;c numerator. 
+
+
+
+ERIC 20 
+
+
+
+Diagnosis of Coj^nitive Errors 
+
+20 
+
+
+
+ERIC 
+
+
+
+3. y^^-i.fii^ 9 
+
+
+
+These two rules are applied to 40 .terns and two sets of responses are scored by 
+the "right or ^^/ro^g" scoring procedure. The binary scor'e pattern made by Rule 8 :s 
+denoted bv Ro and the other made by Rule 3C is denoted bv R^n. 
+
+Besides the two rules mer^tioned above, 38 c^irferert t^rrnr types are identiRed by 
+J ^dsk analysis. Hovvsv-r-, theL^o errsr typos do r^ot nei:e^:^sarily represent microlevels 
+or cognitive processes such as erroneous rules of operation. They are, someh(jv.\ 
+defined more coarsely, like borrowing errors being grouped as a sir^.ale err-or type, or 
+the combination of borrowing and getting the least common multiple of tvyo 
+denominators being counted as one error type. In otiier words, 3S binary response 
+patten\s representing 38 error types are obtained. 
+
+The 535 students^ responses on the 40 items are scored and used for estimating 
+item parameters a^ and b^ by the maximum likelihood procedure. By using these a- 
+and b-values, 9-vanues associated with the t^vo rules and 38 error types are 
+computed. Tb-n the corresponding ^-values are calculated Thus, 40 points, 
+k=l,...,40 ar^e plotted in t[^e rule space (Rule 8 is renumbered to 39 and Rule 30 to 
+40. It IS only a coincidence that the numiber of rules equals the rule number.) 
+
+
+
+Insert Table 1 about here 
+Now, two students A and B who used Rules 8 anJ30 for a sub-:ot of 40 items are 
+selected. This was possible because their perfor^mances ar^e diagnosed independently 
+
+
+
+21 
+
+
+
+Diagnosis of Cognitive Errors 
+
+21 
+
+
+
+shown IP. Fi^/.iro 2 r'Gpr'^-''-^rM A .^nd Tiv"^ir ^--^r :: ^v^-^a Mv^~' ,r-.f,w^ ,y - 
+to the ^40 centro:J- .^r e rz:cu[c]\ec re-pe-rAviv anJ r^-^^ c:: .iILj/i '..^.l; r'A'( 
+distances, D", are selected to compute probabilities of errorz.. Table 2 summarizes 
+thr results. 
+
+
+
+'isert Table 2 & Figure 2 about here 
+
+? 
+
+
+
+.^-j Lr values of Stud-nt A to F.ns 40 and 19 are 0.C08 and 0.1 19, 
+
+respectively, and toth ti^.e values are small enough to judge that A may be classified 
+
+^2 
+
+to pi^^.pr or '^^e sets. ,V.mc- U follows the x*^-distrif)ution with two de^^rees of 
+
+freedcm (TaVsuokd, 1971) the null hypotheses that D^.. =0 and 
+
+2 
+
+^l^.^Set 19) " ^ cannot be rejected at, say a ^ .25. The error probabihtes and 
+^2 <are .581 and .266, respectively. Therefore, we conclude A belongs to Set 19, 
+even though D"(A,Set 40) ^'^aller than D"^^^^^^^^ This is because the nnor 
+
+probauihty of Frob (Set 40) is much snnaller than that of Prob (Set 19) where the 
+threshold value, t, is determined as follows: 
+
+t = -Sin [ Prob (Set 40) /Prob (Set 19) J 
+
+and 
+
+Prob (Set k) a a/2w) exp [ - !0^,i;^) ' "Z^'^ (e^,f|^)/2] . 
+
+
+
+22 
+
+
+
+Diagnosis of Cognitive Errors 
+
+22 
+
+
+
+Discisssion 
+
+A pew probabilistic riodr?: that is c^::^b[^ of rT>' ^ ^uvir^o c /e-rk:!: 
+acquiGitiGPu and cf Giav;ni)Sing erroiieoua of opot^^tion in a oro^cedor^il domain 
+
+was introduced by Tatsuoka and her associates (Tatsuoixo, 1985: TatsuoKO 0( Baillie, 
+1983; Tatsuoka & Tatsuoka, 1982; Tatsuoka. 1933; Tat-uoka. 1984a). The model, 
+called i^ule space, involves two miportant components: 1) detei^mmat: -.n of a set of 
+rules to be diagnosed, or in other words, con.ditional density functior 5 representing 
+clusters around the rules, and 2) establlshmpn^ of decision rules for classifying an 
+observed response pattern into one of the clusters around the rules and computing 
+error probabilities. If each cluster aruurid a r^ie can be described by a bivariate 
+normal distribution of 0 and T, the application of the techniques available m the 
+theor7 '-^^ statistical classification and pattern recognition is fair\^y straightfor^ward. 
+With regards to the first component, a list of rules is supplied mdependencly from 
+parv^m^eter estimation of the Item Response Theory models. Diagnoses of stuients' 
+responses to the items are performed by classifying them, into one of the bug 
+distributions if possible, and if not possible then left for the future mvestigation as 
+to searching a cause of rnisclassification. Determination of the list of the rules will 
+be discussed in a future paper. 
+
+This study introduces the fact that the r^luster around the rule consisting of the 
+response patterns resulting from one, two,..., several slips away from perfect 
+application of the rule indeed follows a compound binomial distribution with centroid 
+
+n 
+
+^^R'^R^ '^^^ variance 2 p q where p (j = l,...,n is the pr'obab.lxty of having a 
+
+jzr. { o ^ vJ 
+
+slip from Rule R for item j. The values of p^ and are replaced by the logistic 
+probabilites P,(9j;>) and O^iO^), j = l,...,n, estimated fr 'om the dataset. 
+
+
+
+ERIC 
+
+
+
+23 
+
+
+
+Diagnosis of Cognitive Errors 
+
+23 
+
+by the log.-^:- fi:ncMon 0 r^t.^ro cf :nv^-^t . - .^JhoL:'^ \he f:t witfi 
+
+the data seeni? to 
+
+The aeterrT^i: 'Otiun o: a -^O' ui e;^pse/ reprvsonlmg esters around tf'ie rules can 
+be autCiTiatic after al! the errvjneous r^ules are discovered. Many researcf^:ers in 
+cogrrive science and artificial intelligence have smarted constructing error diagnostic 
+systems in various domains in this decade. Expert teachers usually knov/ their 
+students' errors, as well gl^ the weaknesses and strengths of each crukr::, knowlouge 
+structure. Sirve tiie model dops not require a large-scaiC computation sucri as 
+strategies conLTuniy L.sed :n t^>j area of artificial intelligence do, the rule-spac, 
+:roc-l i-. heipful in more general areas of research and teaching, and for those who 
+have m.icrocomputers for testing their hypotheses, vaiidatrig tf^eir Ucitd with 
+probabilistically sound ipformaiion, and evaluating their tedching methods and 
+materials. iMoreover, the model can be "intelligorn" m tlie ser^.se that the researcher 
+can improve and modify the inf^-^mation for the cluster ellipses as they get ivorc 
+new students whose performances tihey can study. 
+
+The set of ellipses can represent many things besides erroneous rules. They can 
+represent specific contents of some domain, usage err^ors m the langauge arts, or 
+processes required in algebra. However, further research is necessary to develop 
+m.o^hods for determiniwg the set of ellipses other than relying on an expert teacher. 
+The method must be efficient and compatible with recent theories of human cognition 
+and learning. 
+
+
+
+24 
+
+
+
+Dia;.,nosi.s of Cup.nitive Errors 
+
+24 
+
+
+
+Ref oroncos 
+
+models. Applied P iv,-'', Iqj ic '^La^L'rvr > jr,t , J, .^23-;:-;?. 
+Birenbauin, M., S Tatsuoka, K. K. (1986), On the stability oF 3tuG>j;r3' rjles 
+
+oper-ation for solvi. -,^ arnthme ti c problems (Technical Report 86-ONR) . Urbana, 
+
+IL: University of Illinois, Computer-based Education Research Laboratory. 
+Brown, J. S., & VanLehn, K. (1980). Repair Theory: A generative theor7 of bugs 
+
+m procedur-al skills. Cognitiv e S cience , 4,4, 
+Fukunaga, K. (1072). In troduction to stati stical pat^er^ rpcoe^iir.n.^.. \n ; 
+
+Acadeniic Press. 
+
+Goodman, L. A. (1975). A new miodel for^ ■^<\alipg response patterns: An 
+
+application of die qoasi-independence cor^c^pt. Jcur ri.^d of the A merican 
+
+Statistical Association , 70, 755-768. 
+Klein, M., Birenbaum, M., Standiford, S., G Tatsuoka, K. K. (1981). Logical error 
+
+analysis and construct i on of t ests to diagnos e student "bugs " v^ith addition and 
+
+subtraction of fractions (Technical Report 81-6). Urbana, IL: University of 
+
+Illinois, Computer-based Education Research Laboratory. 
+Lee, T. T. (1983). An algebraic theory of relational databases. T' - Bell System 
+
+Technical Journal , 62, 10, 3161-3128. 
+Paulson, J. A. (1985). Latent class representation of systematic patterns in test 
+
+responses (ONR research report). Portland: Portland State University. 
+Reingold, E. M., Nievergelt, J., & Deo, N. (1977). Combinatorial algorithms , 
+
+theory and practice . Englewood Cliffs, NJ: Prentice-Hall. 
+
+
+
+ERIC 
+
+
+
+Diagnosis of Cognitive Errors 
+
+25 
+
+
+
+based on ltd): rt\:pcr .\' \\ \A.yr'l • : ^ ..l:.r:<' :r\ nl ^ i-i.p >:r: ^ v . -i, 
+
+Totsuoko, lEi.; (!/o'L0. A nalysis .'f or ^rui iVjorion ar^i 
+
+siictractmn proble->is (Final Report for Grant No. NlF-G-a 1 -0002) . Urbane, IL: 
+
+University of Illinois, Compute ased Education Rpsearch Laboratory. 
+TotS'.ioka, K. K. (1984b). Caution indices based ?n ito'n responsp theory. 
+
+Psycbornetrika , 9, 95-1 10. 
+iotsuOKa, K. K. (1985). A probabilistic model for diagnoss:^ misconceptions by the 
+
+patt.-rn classification approach. Jou rnal of Edscational S tatistics, jO, 1. 55-73. 
+.atsL'oka. VI. (197 In Multivariate analysis: Techniques fo r ^„du'catioi^al and 
+
+psvcr-ological resea rch. NY: Jolin Wiley S Sons. 
+Tatsuoka, K. K., S Baillie, R. (1982). R ule space, the product space of two scorG 
+
+components in sig ned-number su btra ction: An app r oach to dealing with i nconsistent 
+
+Lise of erroneous rules (Technical Report 82'3-ONR). Urhana, IL: University of 
+
+Illinois, Compute! -based Education Research Laboratory. 
+Tatsuoka, K. K., & Linn, R. L. (1983). Indices for detecting unusual r^esponse 
+
+patterns: Links between two general approaches and potential applications. 
+
+Applied Psychological Measurement , 7, 1, 81-96. 
+Tatsuoka, K. K., S Tatsuoka, M. M. (1982). Detection of aberrant reponse patterns. 
+
+Journal of Educational Statistics , 7, 3, 215-231. 
+Tatsuoka, K. K., & Tatsuoka, M. M. (1983). Spotting erroneous rules of operation by 
+
+the individual consistency jndex. Journal of Educational Measuremen t, 20, 3, 
+
+221 -230. 
+
+
+
+26 
+
+
+
+Diagnosis of Cognitive Errors 
+
+26 
+
+
+
+Diagnosis of Cognitive Errors 
+
+27 
+
+
+
+Table 1 
+
+lAi , J^__C B nj r oj^s _R e g^r e Fr^a c t i o n 
+
+Subtraction Testi (N «■ 535 , n » ,0) 
+
+
+
+Group 
+
+
+
+
+e 
+
+
+
+
+No. of 
+Itemi 
+
+
+Group 
+
+
+e 
+
+
+
+
+No. 
+Ita 
+
+
+4 
+
+
+-2.69 
+
+
+-.80 
+
+
+1 
+
+
+21 
+
+
+
+
+.24 
+
+
+-.89 
+
+
+22 
+
+
+2 
+
+
+-1.22 
+
+
+-. A9 
+
+
+4 
+
+
+22 
+
+
+-.22 
+
+
+-1.23 
+
+
+14 
+
+
+3 
+
+
+-.75 
+
+
+-.66 
+
+
+8 
+
+
+23 
+
+
+.62 
+
+
+-1.55 
+
+
+32 
+
+
+4 
+
+
+-.46 
+
+
+. 75 
+
+
+10 
+
+
+24 
+
+
+1,04 
+
+
+-.61 
+
+
+38 
+
+
+5 
+
+
+.11 
+
+
+.91 
+
+
+18 
+
+
+25 
+
+
+.75 
+
+
+-,05 
+
+
+34 
+
+
+6 
+
+
+.64 
+
+
+1.74 
+
+
+30 
+
+
+26 
+
+
+-.51 
+
+
+-1.62 
+
+
+10 
+
+
+7 
+
+
+-.17 
+
+
+1.48 
+
+
+13 
+
+
+27 
+
+
+-.87 
+
+
+-.56 
+
+
+6 
+
+
+8 
+
+
+.40 
+
+
+-.16 
+
+
+25 
+
+
+28 
+
+
+-1.99 
+
+
+1.01 
+
+
+2 
+
+
+9 
+
+
+.60 
+
+
+-.43 
+
+
+31 
+
+
+29 
+
+
+-.19 
+
+
+1.53 
+
+
+12 
+
+
+to 
+
+
+.57 
+
+
+-.24 
+
+
+29 
+
+
+30 
+
+
+- -4 
+
+
+2.74 
+
+
+10 
+
+
+U 
+
+
+.99 
+
+
+.: 2 
+
+
+37 
+
+
+31 
+
+
+-1.18 
+
+
+1.46 
+
+
+4 
+
+
+12 
+
+
+1.19 
+
+
+.86 
+
+
+39 
+
+
+32 
+
+
+-1 .45 
+
+
+.58 
+
+
+4 
+
+
+13 
+
+
+-.60 
+
+
+-1.58 
+
+
+10 
+
+
+33 
+
+
+.64 
+
+
+1.74 
+
+
+30 
+
+
+14 
+
+
+-.44 
+
+
+-2.31 
+
+
+12 
+
+
+34 
+
+
+.57 
+
+
+-.66 
+
+
+31 
+
+
+15 
+
+
+-.18 
+
+
+.67 
+
+
+14 
+
+
+35 
+
+
+c59 
+
+
+-1.39 
+
+
+30 
+
+
+16 
+
+
+-.08 
+
+
+-1.81 
+
+
+16 
+
+
+36 
+
+
+-1 .66 
+
+
+-1 .96 
+
+
+4 
+
+
+17 
+
+
+.16 
+
+
+-.86 
+
+
+20 
+
+
+37 
+
+
+-.52 
+
+
+-.94 
+
+
+10 
+
+
+18 
+
+
+-.01 
+
+
+-2. 12 
+
+
+18 
+
+
+38 
+
+
+-.32 
+
+
+-1.26 
+
+
+14 
+
+
+19 
+
+
+.09 
+
+
+-2.26 
+
+
+20 
+
+
+39 
+
+
+-.41 
+
+
+-2.57 
+
+
+13 
+
+
+20 
+
+
+.29 
+
+
+-1.51 
+
+
+24 
+
+
+40 
+
+
+.17 
+
+
+-2.34 
+
+
+22 
+
+
+
+«Thfltfl IttMB will hAvi tht icon of 1, othttrwlif the score will bf 0. 
+
+
+
+Diagnosis of Cognitive Errors 
+
+28 
+
+
+
+Table 2 
+
+Student A Student B 
+
+
+
+d2 
+
+
+< 
+
+
+Set 
+
+
+40 
+
+
+.OOP 
+
+
+< 
+
+
+Set 
+
+
+39 
+
+
+.021 
+
+
+
+
+< 
+
+
+Set 
+
+
+19 
+
+
+.119 
+
+
+< 
+
+
+Set 
+
+
+14 
+
+
+.135 
+
+
+£i 
+
+
+
+
+.581 
+
+
+
+
+
+
+
+
+.979 
+
+
+
+
+
+
+
+
+
+
+. 266 
+
+
+
+
+
+
+
+
+.010 
+
+
+
+
+
+
+n 
+
+
+
+
+. 0B8 
+
+
+
+
+
+
+
+
+. 040 
+
+
+
+
+
+
+t 
+
+
+
+
+. 174 
+
+
+
+
+
+
+
+
+.6lo 
+
+
+
+
+
+
+
+23 
+
+
+
+I V ;! 
+
+i i ^ 1 
+
+
+
+.III-- I 
+
+
+
+ill,' \ \ \ \ 
+
+
+
+/ I'' 
+
+1 I 1 
+
+
+
+Figure 1: Fifteen Ellipses Representing Fifteen Error Types Randomly 
+Chosen From ^orty Sets of Ellipses 
+
+
+
+ERIC 
+
+
+
+30 
+
+
+

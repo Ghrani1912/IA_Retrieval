@@ -1,0 +1,798 @@
+AD-A218  939 
+
+
+OTIS  f;l:  copy 
+
+
+A  CONNECTIONIST/CONTROL 
+*  ARCHITECTURE  FOR  WORKING 
+MEMORY  AND  WORKLOAD: 
+
+WHY  WORKING  MEMORY  IS  NOT  7+  /-2 
+
+Technical  Report  AIP  -  26 
+
+Mark  Detweiler  &  Walter  Schneider 
+
+Learning  Research  and  Development  Center 
+Univerity  of  Pittsburgh 
+Pittsburgh,  PA  15260 
+
+
+The  Artificial  Intelligence 
+and  Psychology  Project 
+
+
+Departments  of 
+
+Computer  Science  and  Psychology 
+
+Carnegie  Mellon  University 
+
+
+DT1C 
+
+
+ELECTE 
+MAR  U 1930 1 
+
+
+Learning  Research  and  Development  Center1 
+University  of  Pittsburgh 
+
+
+Approved  for  public  release;  distribution  unlimited. 
+
+qO  03  12  033 
+
+
+(3 
+
+
+A  CONNECTIONIST/CONTROL 
+ARCHITECTURE  FOR  WORKING 
+MEMORY  AND  WORKLOAD: 
+
+WHY  WORKING  MEMORY  IS  NOT  7+  1-2 
+
+Technical  Report  AIP  -  26 
+
+Mark  Detweiier  &  Walter  Schneider 
+
+Learning  Research  and  Development  Center 
+Univerity  of  Pittsburgh 
+Pittsburgh,  PA  15260 
+
+
+29  September  1987 
+
+
+This  research  was  supported  by  the  Computer  Sciences  Division,  Office  of  Naval  Research 
+and  DARPA  under  Contract  Numbers  N00014-86-K-0678  and  by  ONR,  Personnel  and 
+Training  Research  Programs,  Psychological  Sciences  Division  Contract  Number  N0014-86- 
+K-0107;  and  by  the  Army  Research  Institute,  under  Contract  No.  MDA903-86-C-0149. 
+Reproduction  in  whole  or  in  part  is  permitted  for  purposes  of  the  United  States 
+Government.  Approved  for  public  release;  distribution  unlimited. 
+
+
+$ 
+
+
+DTIC 
+
+ELECTE 
+MAR  14 1990 
+
+B 
+
+
+irmTTT.T  1 
+
+
+REPORT  DOCUMENTATION  PAGE 
+
+
+lb  RESTRICTIVE  MARKING 
+
+
+Unclassified 
+
+2*.  SECURITY  CLASSIFICATION  AUTHORITY 
+
+2b.  DECLASSIFICATION  /  OOWNGRAOING  SCHEDULE 
+
+4  PERFORMING  ORGANIZATION  REPORT  NUMBER(S) 
+
+AIP  26 
+
+6*  NAME  OF  PERFORMING  ORGANIZATION 
+
+6b.  OFFICE  SYMBOL 
+
+Carnegie-Mellon  University 
+
+(It  toeiktble) 
+
+Sc  AOORESS  (Oty.  State,  end  ZIP  Code) 
+
+Department  of  Psychology 
+
+Pittsburgh,  Pennsylvania  15zl3 
+
+8a.  NAME  OF  FONOING/  SPONSORING 
+
+Bb  OFFICE  SYMBOL 
+
+ORGANIZATION 
+
+(If  eoohcebte) 
+
+Same  as  Monitoring  Organizatioc 
+
+3  DISTRIBUTION  /  AVAILAIIUTY  OR  REPORT 
+
+Approved  for  public  release; 
+Distribution  unlimited 
+
+
+S  MONITORING  ORGANIZATION  REPORT  NUMBER(S) 
+
+
+7*  NAME  OR  MONITORING  ORGANIZATION 
+
+Computer  Sciences  Division 
+
+Office  of  Naval  Research  (Code  1133) 
+
+
+7b  AOORESS  (City,  State.  end  //A  Cod*) 
+
+300  N.  Quincy  Street 
+
+Arlington,  Virginia  22^.17-5000 
+
+
+9  PROCUREMENT  INSTRUMENT  IDENTIFICATION  NUMBER 
+
+N00014-86- K.-G678 
+
+
+10  SOURCE  OR  FUNOiNG  NUMBERS 
+
+
+PROGRAM 
+ELEMENT  NO 
+
+
+PROJECT 
+
+TASK 
+
+NO 
+
+NO 
+
+S/A 
+
+S/A 
+
+3c.  ADDRESS  (Cry,  Stett.end  ZIP  Code) 
+
+
+ii  Title  (Include  Security  Cltssificetion) 
+
+A  Connectionist/Control  Architecture  for  Working  Memory  and  Workload:  Why  Working 
+Memory  is  Not  7+  / -2 
+
+
+'2  personal  authoR(S) 
+
+M.  Detweiler  5  W.  Schneider 
+
+
+13a  type  or  report 
+
+Technical 
+
+
+i6  supplementary  notation 
+
+
+work  UNIT 
+ACCESSION  NO 
+
+
+13b  TIME  COVEREO  ,  lU  OATE  OR  REPORT  Yttr.  Month,  Oty)  hs  PAGE  COUNT 
+
+prom  ooSeptluro 91 Septl^  87  September  29  |  5 
+
+
+COSATi  COOES 
+
+
+GROUP  |  SUBGROUP 
+
+
+'8  SuSjECT  TERMS  ( Continut  on  r event  it  neceuery  end  identify  by  biock  number) 
+
+Artificial  Intelligence,  connect ionism ,  cognitive 
+pschyology,  working  memory,  long-term  memory, 
+
+
+’9  ABSTRACT  Continue  on  revent  if  neceuery  end  identify  by  biock  number) 
+
+
+y A  runnable  simulation  architecture  for  working  memory  isdescribed  that  provides  an  alternative  to  existing 
+models  of  working  memory^.gTToTAtlMson  and  Shrffrin  (1968)  and  Baddeiey  (1986)*  It  is  used  to  interpret  a 
+variety  of  phenomena,  including  multiple  resources,  workload,  chunking,  sequential  output,  skilled  and 
+episodic  memories,  and  stages  of  skill  acquisition.  The  architecture  is  based  on  a  set  of  modules  organized 
+into  regions  which  communicate  with  each  other  on  an  innerloop  of  processing.  A  new  feature  of  this 
+architecture  is  a  proposed  context-storage  module  that  temporarily  stores  context  information  in  fast  changing 
+connection  weights.  This  enables  the  system  to  expand  effective  working  memory  beyond  the  traditional  7412 
+items.  The  context  storage  system  is  able  to  reload  modules  after  short-term  information  decays  or  is 
+displaced;  in  addition,  it  provides  a  means  of  achieving  stable,  robust  processing  under  conditions  of  high 
+workload.  if 
+
+
+20  DISTRIBUTION/ AVAILABILITY  CE  ABSTRACT 
+□  UNCLASSiE'60/UNLIMi  I  EQ  QQ  SAME  AS  RPT 
+
+
+22*  NAME  OR  RESPONSIBLE  NOiviOUAl 
+
+Dr.  Alan  L.  Meyrowitz 
+
+
+□  0"C  V.SERS 
+
+
+2'  ABSTRACT  SECURITY  CLASSIFICATION 
+
+
+22b  telephone  (Include  Art*  Code) 
+
+(202)  696-4302 
+
+
+SYMBOL 
+
+
+33  APR  edition  mtr  be  used  until  exhausted 
+All  other  editiont  ere  ooiotete 
+
+
+SECURITY  CLASSIFICATION  OF  this  PAGE 
+
+Unclassified 
+
+
+proceedings  Qf  the  Human  Factors  Society,  1987 
+
+
+A  Connectionint/ Control  Architecture  For  Working  Memory 
+and  Workload:  Why  Working  Memory  It  Not  7  +/-  2 
+Mark  Detweiler  St  Walter  Schneider 
+
+Learning  Research  and  Development  Center 
+University  cf  Pittsburgh 
+3939  O'Hara  St. 
+
+|  Pittsburgh,  PA  15290 
+
+-  \  Abatraet 
+
+i 
+
+■  A  runnable  simulation  architecture  for  working  memory  Is  described  that  provides  as 
+
+alternative  to  existing  models  of  working  memory,  e.g.,  of  Atkinson  St  Sblffrln  (19M)  and 
+Baddeley  (1980).  ft  Is  used  to  Interpret  a  variety  of  phenomena.  Including  multiple  resources, 
+workload,  chunking,  sequential  output,  skilled  and  episodic  memories,  and  stages  of  skill 
+acquisition.  The  architecture  is  based  on  a  set  of  modules  organised  Into  regions  which 
+communicate  with  each  other  on  an  Innerloop  of  processing.  A  new  feature  of  thb  architecture  is 
+a  proposed  context-storage  module  that  temporarily  stores  context  information  In  fast  changing 
+connection  weights.  This  enables  the  system  to  expand  effective  working  memory  beyond  the 
+traditional  7  +/-  2  Items.  The  context  storage  system  Is  able  to  reload  modules  a  fur  short-term 
+Information  decays  or  is  displaced;  in  addition,  it  provides  a  means  or  achieving  stable,  robust 
+processing  under  conditions  of  high  workload. 
+
+
+More  than  30  years  ago  Miller  (19S0)  described  bis 
+persecution  by  an  InUger  and  proposed  that  the  span  of 
+Immediate  memory  could  be  best  understood  with 
+respect  to  the  "magic  number  seven,  plus  or  minus 
+two".  In  the  inurvening  years,  however,  both  Miller’s 
+characterisation,  as  well  as  the  modal  model  of  short¬ 
+term  memory  (e.g..  Waugh  A  Norman,  1905;  A 
+Atkinson  A  Shlffrin.  1908.  1971)  have  proven  to  be 
+Inadequau  models  (ef.  Crowder.  1989).  For  */•-»,  e. 
+short-term  memory  can  be  both  much  smai.ci  u.  r 
+larger  than  7  +/-  2.  e.g..  being  aa  small  aa  sise  2  in  ■ 
+digit  cancelling  tasks  and  as  large  as  80+  digits  in  a 
+spaa  task  (Chase  A  Ericsson.  1982).  Furthermore, 
+Baddeley  and  HlUh  (1974)  provide  convincing  evidence 
+that  short- term  memory  Is  much  more  complex  and 
+differentiated  than  previously  supposed.  In  contrast  to 
+the  unitary-  and  multiple-system  theories  of  the  lau 
+1900s  and  early  1970s.  they  proposed  the  Idea  of  a 
+working  memory  system  comprising  separable,  yet 
+IhUractlng  subsysums.  Since  the  publication  of  this 
+classic  paper,  the  concept  of  a  working  memory  sysum 
+has  gained  even  treater  support  (see  Baddeley,  1980). 
+
+The  kinds  of  techniques  that  Baddeley  and  Hitch 
+adopted  required  Ss  to  retain  one  or  more  Items  In 
+short-term  store  while  concurrently  performing 
+reasoning,  language  comprehension  and  learning  tasks. 
+According  to  the  modal  model,  the  concurrent  memory 
+loads  should  have  occupied  some  of  the  7  +/-  2  slots, 
+and  thus  have  adversely  affected  Ss’  performance. 
+Although  bolding  six  items  did  result  in  some  degree  of 
+decrement  on  reasoning,  eg.,  showing  a  3%  to  14% 
+increase  in  errors  and  a  44%  slowing  of  the  response,  Ss 
+
+
+could  still  perform  the  task,  la  addition,  they  found  no  | 
+effect  on  performance  when  only  one  or  three  Items  i 
+were  preloaded.  Hataao  and  Osawa  (1983)  found  a  1 
+similar  lack  of  Interference  In  the  area  of  abacus  i 
+calculation.  When  abacus  experts  were  required  to  I 
+briefly  rehearse  a  list  of  fruit  names  prior  to  the  onset 
+of  the  digit  stream  to  be  calculated,  they  showed  only  a  . 
+slight  drop  in  tbelr  digit  spans.  These  results  provide  1 
+strong  support  for  the  idea  that  multiple  short-term  | 
+memory  stores  exbt  and  that  when  material  b  stored  In  i 
+non-competing  buffer-llke  memories,  working  memory 
+capacity  caa  be  much  larger  than  7  +/-  2. 
+
+Despite  the  upsurge  In  Interest  In  describing  short¬ 
+term  memory  as  a  working  memory  system,  little 
+progress  has  been  made  at  illustrating  bow  such  a 
+sysum  might  function  within  the  conuxt  of  a  working  ! 
+simulation  model.  In  what  follows  we  briefly  describe 
+one  architecture  from  a  class  of  architectures  which 
+moves  beyond  box  model  descriptions  snd  embodies  a 
+working  simulation  model  capable  of  accounting  for  a 
+range  of  working  memory  phenomena.  A  more  detailed 
+description  can  be  found  In  Schneider  snd  Detweiler 
+(1987). 
+
+A  Connectioniat/Control  Architecture 
+Overview 
+
+The  proposed  architecture  offers  a  mesas  for 
+representing  a  class  of  models  of  working  memory  sod 
+workload.  It  Includes  several  different  kinds  or 
+processing  elements  which  result  in  mechanisms  capable 
+or  achieving  stable  information  proc-ssing  of  real-world 
+
+
+■I,::  )ii  ' refers  a 
+
+iirrnul  t-'t'CCSuK'.-U 
+
+
+task  components.  U  also  provides  a  five-phase  account  I 
+of  skill  acquisition  that  is  both  gradual  and  continuous  I 
+(see  Schneider  A  Detweller,  1887).  Before  outlining  the  I 
+three  primary  levels  of  detail,  we  briefly  mention  five  i 
+assumptions  which  serve  to  constrain  the  architecture.  I 
+First,  we  assume  that  processing  occurs  in  networks  of 
+neural-like  units  organised  Into  modules,  sets  of  which 
+In  turn  are  organised  Into  levels  and  regions.  The 
+regions,  e.g.,  visual,  speech,  motor,  etc.  communicate 
+with  one  another  on  an  innerloop  of  connections. 
+Second,  we  assume  these  modules  process  a  restricted 
+class  of  inputs,  exhibiting  local  specialisation  of 
+function.  Third,  we  assume  that  the  connection  weights 
+among  the  neural-llke  units  store  Knowledge.  Changes 
+In  knowledge  due  to  learning  are  represented  by  the 
+strength  of  the  connections  among  units,  or  by  the 
+magnitudes  of  their  weights.  Fourth,  we  assume  that 
+connection  weights  may  operate  using  a  variety  of  rate 
+constants.  These  constants  determine  how  quickly  the 
+connections  change  as  a  function  of  Intervening  learning 
+and  length  or  the  retention  Iterval.  Finally,  we  assume 
+Information  transferred  within  and  between  processing 
+regions  Is  modulated  by  a  control  processing  system  i 
+which  controls  information  maintained  In  and  output  I 
+from  the  modules.  This  system  Is  a  variation  of  the  i 
+CAP1  system  used  to  account  for  automatic  and  i 
+controlled  processing  (see  Shlffrin  A  Schneider.  1977;  A  j 
+Schneider  A  Mumme.  in  preparation).  We  next  describe  i 
+the  architecture  from  three  levels  of  scale.  1 
+
+i 
+
+There  are  three  levels  of  scale  at  which  to 
+conceptualise  and  simulate  the  model.  The  first  scale 
+level,  the  micro-level  structure,  represents  a  neural- 
+llke  network  of  processing  units  capable  of  producing 
+associative  processing  and  attenlional  phenomena. 
+Information  is  transferred  between  modules  via  a 
+message  vector  connecting  output  from  one  module  as 
+Input  to  another  module.  The  output,  i.e..  Information 
+flow,  from  a  module  Is  controlled  by  an  attenuation  unit 
+within  the  module  (see  Schneider  A  Mumme,  1987;  A 
+Schneider  A  Detweller,  1987  for  details).  The  second 
+scale  level,  the  macro-level  struct  are,  represents  i 
+Interactions  among  a  set  of  modules.  Modules  are  i[ 
+organised  In  terms  of  level*  and  regions  of  processing.  ,! 
+Levels  represent  successive  processing  stages,  e.g..  the  ' 
+auditory  module  consists  of,  at  minimum,  stages 
+corresponding  to  phonemes,  syllables,  and  words.  The 
+third  scale  level,  the  system-level  structure, 
+represents  interactions  among  regions  of  modules  (see 
+Figure  1).  Each  region  involves  a  series  of  levels  of 
+modules  and  corresponding  control  structures.  At  the 
+system  level  there  are  two  types  of  processing  analogous 
+to  those  at  the  macro  level.  The  first  Is  a  centra/ 
+control  structure  which  receives  activity  reports  from 
+all  of  the  regions  and  Is  responsible  for  modulating 
+message  transmissions  on  what  we  refer  to  as  the 
+innerloop  of  processing.  The  second,  the  innerloop,  ! 
+represents  the  communication  links  among  modules  | 
+from  regions  possessing  connections  to  one  another. 
+
+
+Figure  1.  System-level  model  description.  This 
+diagram  represents  a  top-down  view  of  the  processing 
+regions  found  within  the  proposed  architecture.  Each 
+region  is  divided  Into  a  series  of  bars  to  reflect  a  series 
+of  processing  levels.  A  region's  rirat  or  last  level  (last 
+level  of  Input  regions  and  first  level  for  output  regions) 
+
+Is  assumed  to  input  to  the  Innerloop  of  connections 
+among  regions.  Modules  on  the  Innerloop  have  separate 
+message  vectors  (pathways)  to  each  of  the  other  modules 
+they  connect  to.  All  or  the  lines  in  Figure  1  represent 
+message  vectors.  The  context  module  transmits  a 
+message  vector  to  all  of  the  other  modules  on  the  : 
+Innerloop.  The  context  module's  output  Is  highlighted  | 
+by  a  thick  line  to  Illustrate  this  connection  pattern. 
+
+
+The  central  control  structure  receives  control  signals  ! 
+from  each  region  and  routes  the  signab  among  the  | 
+various  regions.  For  example,  if  the  motor  region  ; 
+requests  an  Input,  the  central  control  structure  may  | 
+route  the  request  to  the  speech  transmitting  module. 
+
+Here  It  b  important  to  recognise  that  messages  . 
+must  not  all  pass  through  a  central  executive;  Instead.  . 
+regions  can  communicate  with  other  regions  directly  (see 
+Figure  1).  To  minimize  such  Interference  from 
+concurrent  messages,  a  central  control  structure  must 
+sequence  the  region-based  transmissions.  This  type  of  I 
+serlality  can  result  In  messages  being  delayed  or  omitted  . 
+entirely,  thus  mlmlclng  many  of  the  Item  and  order 
+dropout  phenomena  seen  in  short-term  memory 
+literature  and  uoder  conditions  of  high  workload. 
+
+To  model  the  robustness  of  human  processing  aod  i 
+match  some  of  the  learning  data,  the  conneciionist/ 
+control  architecture  embodies  the  notion  of  context  j 
+storage.  In  a  system  In  which  considerable  Information  | 
+must  be  maintained  In  working  memory,  context  serves 
+a  special  function.  In  this  architecture  a  context-storage 
+mechanism  is  proposed  as  a  means  of  associating  the 
+
+
+•*  i:;ur:  -ti.viy 
+
+
+contents  of  mes3i(i3  on  the  Innerloop  to  tlic  temporal  | 
+context  in  which  they  occur.  In  short,  the  context 
+storage  system  is  able  to  reload  modules  after  short¬ 
+term  information  has  decayed  or  been  displaced.  It  is  | 
+also  the  mechanism  responsible  for  maintaining  stable, 
+robust  processing  under  conditions  of  blah  workload. 
+To  Illustrate  how  context  storage  might  work  we  have 
+labeled  one  of  the  regions  on  the  innerloop  as  context 
+(see  Figure  1).  Context  provides  an  association  between 
+the  current  time  and  what  messages  were  transmitted 
+by  other  modules  of  the  Innerloop.  If  a  buffer  is  flushed 
+by  processing  some  Interruption,  the  subject  can 
+activate  the  previous  time  context  and  revoke  the 
+previous  contents  of  the  buffer.  If  multiple  traces  are 
+associated  to  the  same  context.  Interference  occurs. 
+Note,  since  context  has  connections  to  many  modules 
+(see  Figure  1),  It  can  provide  a  very  large  working 
+memory. 
+
+Interpretations  of  Buffering 
+
+The  connectkintat/control  architecture  can  be  used 
+to  account  for  a  number  of  phenomena  found  in  the 
+working  memory  and  workload  literatures.  The  first  set 
+of  phenomena  concern  buffering.  Three  major 
+experimental  effects  are  often  cited  as  supporting  bufrer 
+models,  namely,  recency,  decay,  and  span  effects.  The 
+recency  effect  involves  better  recall  of  the  last  few  items 
+from  a  list  (see  Postman  a  Phillips,  IMS).  The  decay 
+effect  is  the  exponential  dropoff  In  probability  of  recall 
+(Brown.  1958;  Peterson  &  Peterson.  1959).  The  third 
+phenomenon  Is  a  span  effect  found  In  digit  and  word 
+span.  Buffers  are  reflected  In  the  conneetionlst/control 
+architecture  In  the  regional  controllers  and  provide  for 
+the  possibility  of  having  them  In  multiple  leveb  within 
+the  regional  controllers  as  well.  In  order  to  sequentially 
+Input  and  output  information  in  a  buffering  scheme 
+requires  techniques  for  clearing  a  module,  maintaining  a 
+code  within  a  module,  and  outputting  a  code  from  a 
+module. 
+
+Working  Memory  Capacity 
+
+One  of  the  misconceptions  promoted  by  Miller’s  ' 
+(194b)  magic  number  seven  and  the  modal  models  of 
+short-term  memory,  e  g.,  Waugh  a  Norman  (1904)  and 
+Atkinson  a  Shlffrln  (1908,  1971)  is  that  short-term  i 
+memory  capacity  is  limited  to  just  a  few  items. 
+Recently  Card.  Moran,  and  Newell  (1983)  argued  that 
+systera/loterface  designers  need  to  be  able  to  analyte 
+prospective  tasks  and  to  predict  human  performance  on 
+those  tasks.  They  proposed  a  simplified  human 
+information  processing  model  consisting  of  a  set  of  goals, 
+a  set  of  operators,  a  set  of  methods  for  achieving  goals, 
+and  a  set  of  selection  rules  for  choosing  among 
+competing  methods  and  goals-commonly  referred  to  as 
+the  GOMS  model.  Although  the  GOMS  model  is  more 
+sophisticated  than  variations  of  the  modal  model,  e  g., 
+replacing  separate  memory  slots  with  slots  that  are 
+subsiots  of  each  other,  it  fails  to  lake  into  account  the 
+
+
+differential  Impact  of  different  memory  stores, 
+rehearsing  Items  early,  and  using  context.  In  efrect,  the 
+GOMS  model  offers  a  conservative  view  of  working 
+memory  not  well  suited  for  making  realistic  predictions 
+about  a  user’s  short-term  memory  eapabllltea, 
+particularly  when  multiple  memory  stores  are  used 
+concurrently. 
+
+To  make  informed  predictions  about  working 
+memory  limitations  it  is  Important  -o  begin  to  consider 
+what  often  occurs  In  real-world  tasks.  For  examoie.  In 
+electronic  troubleshooting  tasks  a  technician  may  be 
+temporarily  interrupted  while  tracing  a. fault,  yet  within 
+a  few  seconds  of  resuming  the  task  continue  as  if  it  had 
+never  occurred.  An  air-traffic  controller  many  also  be 
+temporarily  Interrrupted  yet  gracefully  resume  the  task. 
+
+In  general,  as  an  operator  b  taxed  with  an  ever  greater 
+mental  load,  hb/her  performance  tends  to  become 
+slower  and  somewhat  more  susceptible  to  errors,  but 
+there  b  no  "red  line*  beyond  which  catastroplc  failure 
+b  Inevitable. 
+
+Several  results  suggest  that  Miller’s  magic  number 
+should  be  called  into  question.  Klapp,  Marshburn,  and  i 
+Lester  (1983)  have  clearly  demonstrated  that  when 
+subjects  are  allowed  to  briefly  rehearse  letters  In  a  spaa 
+task  the  resultant  buffering  does  not  interfere  with  their 
+performance  at  Judging  the  correctness  of  greater- 
+than/less-than  propositions  (experiment  #6).  nor  docs  it 
+greatly  Interfere  with  performance  on  a  variation  of  a 
+Sternberg  scanning  task  (experiment  #7).  Klapp  and 
+Pbillpoff  (1983)  also  demonstated  that  it  b  possible  to 
+store  and  retain  letters  and  concurrently  process  digits 
+In  a  missing-digits  task.  Both  of  these  sets  of  results 
+run  counter  to  the  traditional  view  of  short-term 
+memory.  Other  experiments  offer  additional  support 
+Tor  the  idea  of  multiple  buffers  that  can  be  strategically 
+utilised  to  Increase  storage  capacity  without  serious 
+performance  degradation  In  motor  memory  (Reis berg. 
+Rappaport  if  O’Shaughnesy.  1984)  and  auditory  visual 
+digit  span  (Frick.  1984). 
+
+The  results  above  are  expected  by,  and  can  be 
+accommodated  within,  the  present  architecture.  In  thb 
+model  we  assume  many  different  buffers  exbt  and 
+suggest  that  the  actual  number  available  at  a  given  level 
+of  processing  will  depend  on  the  nature  of  the  modules  “ 
+themselves.  For  example,  auditory  modules  many  be  |  - 
+
+organised  sequentially  and  visual  modules  spatially.  We  Bl 
+assume  these  buffers  are  limited  in  site  and  that  the  i  j— j 
+
+local  control  region  can  manage  only  a  very  small  p- . 
+
+number  of  modules.  The  key  feature  of  having  may  ' 
+
+different  buffers  segmented  Into  different  processing  — — 
+classes  Is  that  by  using  several  different  classes  — — « 
+simultaneously  it  Is  possible  to  enlarge  tbe  effective  j 
+
+workspace  of  working  memory  well  beyond  7  +/-  2.  ■ 
+
+Moreover,  the  proposed  context  storage  system  provides  _ , 
+
+an  additional  mechanism  that  can  greatly  increase  ihe  ,<J®3 
+site  of  working  memory  storage.  To  appreciate  ihe  ■  *  * 
+
+
+, -pedal 
+
+
+magnitude  of  this  Increase.  Imagine  one  has  R  regions  [ 
+and  N  modules  connecting  to  tbe  Innerloop  from  each  j 
+re ilon.  Tbe  context  vector  could  then  be  associated  to  i 
+(R-I)N  modules.  If  there  are  20  re(tons  in  tbe  Innerloop  | 
+and  30  modules  within  each  retion  that  connect  directly 
+to  the  Inneraioop.  then  a  single  context  vector  and  Its  I 
+association  matrices  could  store  $70  codes,  l.c.,  one  per  i 
+module.  Such  a  system  offers  short-term  storage  i 
+capacity  far  exceeding  7  +/-  2  Items. 
+
+Mental  Workload 
+
+The  architecture  presented  here  Is  well  suited  for 
+Investigating  a  number  of  Important  phenomena 
+associated  with  the  study  of  menial  workload.  It  Is  able 
+to  simulate  the  performance  of  multiple  concurrent 
+tasks  explicitly.  First,  as  Illustrated  In  Figure  1.  the  | 
+system  encompasses  a  variety  of  resources  which  can  be  > 
+variously  allocated  to  meet  demands  imposed  by 
+numerous  task  combinations  (cf.  Wickens.  1080).  We 
+assume  these  resources  are  limited  such  that  when  task 
+demands  exceed  resource  capacity,  processing  will  be 
+either  delayed  or  errors  will  occur.  Given  this  view  of 
+multiple  resources.  the  connectlonlst/coatrol 
+architecture  Is  consistent  with  views  such  as  Wleken’s 
+(1080)  that  resources  are  differentiated  by  modality. 
+These  views  divide,  however,  with  respect  to  the  nature 
+of  resource  limitations.  In  addition  to  the  resource- 
+specific  competition  of  multiple  resource  theory,  this 
+architecture  accentuates  the  fundamental  role  played  by  ' 
+competition  for  the  central  control  structure. 
+
+) 
+
+There  are  at  least  five  different  strategies  that  can 
+be  Invoked  to  perform  concurrent  tasks  (see  Schneider 
+4k  Detweller  (1087)  for  details).  Strategy  41:  Buffer 
+and  delay  messages  for  one  of  the  tasks  until  the  other 
+task  haa  been  completed.  Sirafcyy  #&-  Redistribute 
+task  components  Into  low-use  buffers.  Strategy  43: 
+Use  context  storage  to  temporarily  associate  Information 
+to  the  present  context  and  utilise  it  to  load  modules. 
+Attending  to  context  allows  for  the  simultaneous  loading  | 
+of  modules  In  numerous  regions  and  Initiating  numerous 
+concurrent  processes.  Strategy  Build  automstle 
+processes  to  reduee  the  processing  load  on  tbe  central 
+and  regional  controllers.  Strategy  #5:  Reduce  message 
+interference  of  concurrently  transmitted  messages. 
+Interference  can  be  reduced  by  decreasing  the  amount  of 
+time  messages  spend  on  the  innerloop  and  by 
+strengthening  region-to-region  connections  on  the 
+Innerloop. 
+
+CoaduaioD 
+
+Human  working  memory  Is  both  very  limited  (e  g., 
+t*o  digits  in  digit  cancelling)  and  large  (80  digits  skilled 
+memory),  and  this  range  Is  not  interpretable  within  the 
+modal  buffer  mgjnor^  models, (e  g.,  Atkinson  A  Sblffrln, 
+1988).  ■'•The  new  eooneeTlonist/control  architecture 
+predicts  the  very  limited  working  memory  effects  are 
+the  result  of  control  processing  limitations  of  the 
+management  of  message  transmission  on  an  innerloop  of 
+
+
+processing  or  operating  In  a  single  region.  In  contrast.  | 
+context  storage  provides  a  very  luge  working  memory  : 
+as  long  aa  there  are  few  associations  of  a  given  region  to  > 
+a  given  context. 
+
+Acknowledgement 
+
+This  research  was  sponsored  by  the  Army 
+Research  Institute,  under  Contract  No.  MDA903-88- 
+C-OI49  and  Personnel  and  Training  Research  Protrams. 
+Psychologies!  Sciences  Division.  Office  of  Naval  1 
+Research  under  Contract  Nos.  N-0014-80-K-0107  and  . 
+N -0001 4-88- K-0878. 
+
+
+References 
+
+Atkinson.  R.C..  k  ShlffHn.  R.M.  (1088).  Human 
+memory:  A  proposed  system  and  its  control 
+process.  In  K.W.  Spence  A  J.T.  Spence  (Eds.). 
+The  psychology  of  learning  and  motivation.  Vol.  2. 
+New  York:  Academic  Press. 
+
+Atkinson.  R.C..  A  Sblffrln.  R.M.  (1071).  The  control  of 
+short-term  memory.  Scientific  American.  224, 
+82-00. 
+
+Baddeley,  A.D.  (1088).  Working  memory.  Oxford: 
+Clarendon  Press. 
+
+Baddeley.  A.D..  4k  Hitch.  G.  (1074).  Working  memory. 
+In  G.H.  Bower  (Ed.).  The  psychology  of  learning 
+and  motivation,  Vol.  8.  New  York:  Academic  I 
+
+Press.  ”  j 
+
+Brown,  i.  (1058).  Some  tests  of  the  decay  theory  of  j 
+Immediate  memory.  The  Quarterly  Journal  of  l 
+Experimental  Psychology.  io.  12-21.  ”*  j 
+
+Card.  S.K.,  Moran.  T.P.,  4k  Newell.  A.  (1083).  The  i 
+psychology  of  human-computer  Interaction.  I 
+
+Hillsdale,  NJ:  Erlbaum.  • 
+
+Chase,  W.G.,  4k  Ericsson,  K.A.  (1082).  Skill  and 
+working  memory.  In  G.H.  Bower  (Ed.)  The 
+psychology  of  learning  and  motivation.  Voi.  in. 
+New  York:  Academic  Press. 
+
+Crowder.  R.G.  (1982).  The  demise  of  short-term 
+memory.  Acta  Psychologies,  50,  291-293. 
+
+Frick,  R.W.  (1984).  Using  both  an  auditory  and  a 
+visual  short-term  store  to  Increase  digit  span. 
+Memory  A  Cognition,  S07-&14. 
+
+Hatano,  G.,  A  Osawa.  K.  (1983).  Digit  memory  of 
+grand  experts  in  abacus-derived  mental 
+calculation.  Cognition,  15.  95-110. 
+
+
+Klapp,  S.T.,  Marshburn.  E-A..  ft  P.T.  Lester  (1983).  I 
+Short-term  memory  does  not  involve  the  'working 
+memory*  of  Information  processing:  The  demise 
+of  a  common  assumption.  Journal  of 
+Experimental  Psychology  General.  112.  210-204. 
+
+Klapp,  S.T.,  ft  Phllipoff,  A.  (1003).  Short-term  memory 
+limits  in  performance.  In  A.T.  Pope  ft  L.D. 
+Haugh  (Eds.)  Proceedings  of  the  human  factors 
+society  27th  annual  meeting,  Santa  Monica.  CA: 
+Human  Factors  Society. 
+
+Miller,  G  A.  (1956).  The  magical  number  seven,  plus  or 
+minus  two:  Some  limits  on  our  capacity  for 
+processing  Information.  Psychological  Review,  63. 
+81-07. 
+
+Peterson.  L.R.,  ft  Peterson.  J.J.  (1050).  Short-term 
+retention  of  Individual  verbal  Items.  Journal  of 
+Experimental  Psychology,  58.  103-108. 
+
+Postman.  L..  ft  Phillips,  L.W.  (1065).  Short-term 
+retention  of  Individual  verbal  Items.  Journal  of 
+Experimental  Psychology.  70„  473-478. 
+
+Retsberg.  D..  Rappaport,  I.,  ft  O’Sbaughnessy, 
+M.  (1084).  Limits  of  working  memory:  The  digit 
+digit-span.  Journal  of  Experimental  Psychology: 
+Learning.  Memory,  and  Cognition.  10.  203-221. 
+
+Schneider.  W,  ft  Detwetler,  M.  (1087).  A 
+eonnectlonist/control  architecture  for  working 
+memory.  In  G.H.  Bower  (Ed.)  The  psychology  of 
+learning  and  motivation.  Vol.  2^.  New  York: 
+Academic  Press. 
+
+Schneider  W.,  ft  Mumme,  D.  (1987).  Attention, 
+automatlclty  and  the  capturing  of  knowledge:  A 
+two-level  cognitive  architecture.  Manuscript  for 
+submission. 
+
+Sblffrln,  R.M.,  ft  Schneider.  W.  (1077).  Controlled  and 
+automatic  human  Information  processing.  II. 
+Perceptual  learning,  automatic  attending  and  a 
+general  theory.  Psychological  Review,  84,  127-190. 
+
+Waugh,  N.C.,  ft  Norman.  D.A.  (1965).  Primary 
+memory.  Psychological  Review.  72.  89-104. 
+
+Wlckens.  C  D.  (1980).  The  structure  of  attentlonal 
+resources.  In  R.  Nickerson  (Ed.).  Attention  and 
+performance.  VIII.  Hillsdale,  NJ:  Erlbaum. 
+
+

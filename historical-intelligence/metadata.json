@@ -1,0 +1,6 @@
+{
+  "name": "Historical Intelligence",
+  "description": "Historical research AI assistant exploring 1970s–1990s AI archives and Wayback snapshots with citation confidence and verifiable evidence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

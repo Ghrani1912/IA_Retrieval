@@ -1,0 +1,3517 @@
+DOCUMENT RESUME 
+
+
+
+ED 289 735 
+
+
+
+SE 048 820 
+
+
+
+AUTHOR 
+TITLE 
+
+SPONS AGENCY 
+PUB DATE 
+NOTE 
+
+AVAILABLE FROM 
+
+PUB TYPE 
+
+EDR3 PRICE 
+DESCRIPTORS 
+
+
+
+IDENTIFIERS 
+
+
+
+lozzi, Louis A.; Bastardo, Peter J. 
+
+Decisions for Today and Tomorrow: Teaching Notes. 
+
+Issues in Science-Technology-Society. 
+
+National Energy Foundation, Sal^ Lake City, UT. 
+
+Nov 87 
+
+45p.; For related documents, see SE 048 821-822. 
+Sopris West, Inc., 1120 Delaware Ave., Longmont, CO 
+80501. 
+
+Guides* - Classroom Use - Guides (For Teachers) (052) 
+
+MFOl Plus Postage. PC Not Available from EDRS. 
+Agriculture; Air Pollution; Artificial Intelligence; 
+Decision Making; *Environmental Education; Genetic 
+Engineering; Hazardous Materials; Nuclear Energy; 
+*Science Activities; *Science and Society; Science 
+Education; Secondary Education; *Secondary School 
+Science; Simulation; *Social Studies; Teaching 
+Methods ; *Technology 
+*Environmental Problems 
+
+
+
+ABSTRACT 
+
+This teacher's guide was de 
+senior high school level classes as a suppl 
+in the areas of science and social studies, 
+included in the guide may be used independe 
+into a separate course on the relationships 
+technology, and society. The separate chapt 
+technology; (2) decision making in a high-t 
+engineering; (4) artificial intelligence; { 
+acid precipitation; (7) hazardous wastes in 
+and agriculture; (9) organ transplantation; 
+robotics; and (12) technology and decision 
+guide includes lesson plans, teaching tips, 
+worksheets. (TW) 
+
+
+
+signed to be used with 
+ement to existing programs 
+
+Each of the 12 chapters 
+ntly or may be combined 
+
+between science , 
+ers deal with: (1) 
+ech world; (3) genetic 
+5) nuclear energy; (6) 
+
+the environment; (8) food 
+
+(10) transportation; { 11) 
+making. The teacher's 
+
+and student handouts and 
+
+
+
+************************************** 
+
+* Reproductions supplied by EDRS are the best that can be made 
+
+* from the original document. 
+
+********************************************************************* 
+
+
+
+CO 
+CM 
+
+
+
+"PERMISSION TO REPRODUCE THIS 
+MATERIAL IN MICROFICHE ONLY 
+
+has:been granted by 
+
+
+
+DECIS 
+
+
+
+
+
+TO THE EDUCATIONAL RESOURCES 
+INFORMATION CENTER (ERIC)." 
+
+
+
+U.8 DEPARTMENT OF EDUCATION 
+
+0tfiC9 Of EducttioAst RoMAfCh and Improvement 
+
+EDUCATIONAL RESOURCES INFORMATION 
+CENTER (ERIC) 
+
+^&This document has been reproduced as 
+"'received from the person or oro>'^i2Ation 
+oriQinating it 
+D Minor changes have been made to improve 
+reproduction quality 
+
+• Points o( view or opinions stated mthisdcci*- 
+ment do not necessarily represent o»f«ci?{ 
+OERI pos-tK>n or poiicy 
+
+
+
+
+for Today and Tomorrow 
+
+
+
+id 
+
+ERIC 
+
+
+
+Miiii i COPY AVAILABLE 
+
+
+
+ABOUT THE AUTHORS. 
+
+
+
+Dr. Louis A. lozzi is Associate Professor of Science and Environmental Education at Cook 
+College, Rutgers University ( New Brunswick, N.J.). He earned a bachelor's degree in scier.ce 
+education and elementary education, a master's degree in geology, and a doctorate in science 
+education. His teaching experience ranges from elementary school through graduate univer- 
+sity levels. Dr. lozzi has authored or co-authored more than 80 books, monographs, and journal 
+articles dealing with science, environmental education, education, and science-technology- 
+society issues. 
+
+
+
+Dr. Peter J. Bastardo is Manager of the Regional Curriculum Services Unit - Central (New Jer- 
+sey Department of Education). He earned a bachelor's degree in social studies education and 
+elementary education and a master's degree and doctorate in social studies education. Dr. 
+Bastardo has taught a variety of subjects from the elementary school level through college. He 
+has authored or co-authored several articles and books dealing with social studies, environ- 
+mental education, and issues dealing with science-technoiogy-society. 
+
+
+
+Decisions for Today and Tomorrow: 
+Issues In 
+Science - Technology - Society 
+
+All Rights Reserved 
+.ght ®1 987 by Louis A. lozzi 
+
+Cover artwork by Jon Dee Burton. Used w'th 
+permission of the National Energy Foundation. 
+
+This book may not be reproduced in whole 
+or in pait, by mimeograph or any other means, 
+without permission. 
+
+For information: Sopris West, Inc. 
+1 1 20 Delaware Avenue, Longmont, CO 80501 
+
+
+
+TABLE OF CONTENTS. 
+
+
+
+Audience and Program Usage 1 
+
+Program Objectives 2 
+
+Program Materials 2 
+
+Chapter 1. What is Technology? 3 
+
+Chapter 2. Decision-Making in a High Tech World 7 
+
+Chapter 3. Biotechnology: Genetic Engineering 11 
+
+Chapter 4. Computer Technology: Artificial Intelligence 12 
+
+Chapter 5. Energy: Nuclear Power 15 
+
+Chapters. Environment: Acid Precipitation 19 
+
+Chapter 7. Environment: Hazardous Waste 25 
+
+Chapter 8. Food and Agriculture 27 
+
+Chapter 9. Medical Technology: Organ Transplantation 29 
+
+Chapter 1 0. Transportation: Space Travel 30 
+
+Chapter 1 1. Computer Technology: Robotics 31 
+
+Chapter 1 2. Technology and Decision-Making 35 
+
+
+
+
+ERIC 
+
+
+
+SPECIAL ACKNOWLEDGMENT 
+
+
+
+The authors and publisher would like to acknowledge the NATIONAL ENERGY FOUNDATION 
+(Salt Lake City, Utah) and its President, Dr. Edward A. Dalton for its support in developing 
+this volume. 
+
+The National Energy Foundation (NEF) is a unique nonprofit educational organization devoted 
+to the development and provision of instructional programs and materials. Supported by 
+resources from business, government and education, NEF is dedicated to presenting energy, 
+science, technology, and other contemporary issues in an objective and accurate manner. In 
+an effort to comprehensively provide educational resources, NEF actively participates in 
+cooperative programs with other educational organizations. Decisions for Today and Tomorrow 
+is one such collaborative effort. 
+
+For more information about NEF contact 
+
+Dr. Edward Dalton 
+National Energy Foundation 
+51 60 Wiley Post Way, Suite 200 
+Salt Lake City, UT84116 
+(801)539-1406 
+
+
+
+DECISIONS FOR TODAY AND TOMORROW 
+Audience and Program Usage 
+
+
+
+Decisions for Today and Tomorrow: Issues m Scier^ce-TechnologySociety was dt^signed for 
+the senior high school level (grades 9- 1 2) as a supplement to existing programs in the areas of 
+scieice and social studies education. Depending upon the students involved, the program 
+can also be used with more capable younger students, as well as students well beyond the 
+senior high school grades. Each of the twelve chapters ir.cluded in the Student Guide is com- 
+plete and inde pendent and can, therefore, be taught or studied in any sequence selected by 
+the teacher. This feature is particularly helpful when coordinating this supplementary pro- 
+gram with an existing program of study. Of course, this program can stand on its own and be 
+taught as a separate and distinct Science-Technology-Society program if so desired. 
+
+This program can be used in many ways. It could be used as a basal text for a course in S-T-S at 
+nearly any grade level, 9 through 12. In this case, one would use the program in the same way 
+that any other textbook is used. Hence, one would typically start with chapter one and move 
+sequentially through the book chapter by chapter. It is not critical that the text oe followed 
+chapter by chapter in strict order. You can skip around. However, it is highly recommended 
+that, if you want to change the order of the chapters for any reason, you first teach chapter 1 
+and chapter 2. You can then reorder chapters 3 throught 1 1 . Chapter 1 2 is best utilized as the 
+last chapter studied, although it too, can stand on its own if necessary. 
+
+Another approach is to supplement existing courses in social studies and science by em- 
+phasizing those sections that apply directly to the course being used in the classroom and 
+then moving more quickly • or even eliminating - those chapters that are not specifically related 
+to the existing course of study. Still another method might be to teach the course in the way 
+one might deal with current events in the classroom. That is, set aside one day per week to 
+cover a current event dealing with S-T-S. One week the students could do most of the reading 
+and in subsequent weeks they can do the activities. While this approach tends to result in 
+somewhat of a disjointed approach, it can be effective when there is little other choice. 
+
+Highly capable students or highly motivated students enjoy using the program for science or 
+social science enrichment. In these cases, the student(s) can work pretty much on their own 
+with minimal help from you, the teacher. The text and activities stand on iheir own and work well 
+in a variety of settings and with infinite variations. These are only a few of the typical con- 
+figurations in which the program is used. There are many other arrangements as well. Use your 
+imagination, creativity, and resourcefulness. As you come up with your own great ideas, let us 
+know. This way we can share your ideas with others, too. 
+
+Teachers of specific disciplines (e.g., science, social studies, etc.) will probably want to elant 
+the discussions and acti cities so as to focus more heavily on the content and skills considered 
+important to their discipline. Thus, teachers of science might want to supplement Dec/s/ons for 
+Today ar)d Tomorrow with other readings focusing on the science concerns of the issue being 
+studied. Likewise, teachers of social studies/science might want to focus more on the social 
+concerns by supplementmg the text with additional appropriate readings or articles. Of course, 
+all teachers should strive to relate the S-T-S issues included in the student text to the existing 
+curriculum and regular classroom textbooks in science and social science. Another exciting, 
+challenging, but highly rewarding, approach is to "team teach" the course in which this pro- 
+gram is used. 
+
+
+
+1 6 
+
+
+
+Program Objectives 
+
+While the basic purpose of this program is to help students develop more mature n ental struc^ 
+tures, higher-order thinking skills, and a knowledge of present and emerging issues in S-T-S, 
+specific objectives include the following: 
+
+■- To increase student's knowledge about issues that interface science, technology, and 
+society now and in the future. 
+
+To increase student's ability to analyze issues that arise in our technological society. 
+
+— To increase the socio-scientific reasoning ability of students. 
+
+— To develop student's higher-order thinking skills, including problem-solving, decision- 
+making, and critical analysis/thinking. 
+
+— To develop student's awareness of his/her role in the process of technological change. 
+
+— To help students recognize the complexity of decision- making in our high-tech world. 
+
+— To provide opportunities for students to examine possible future technologies brought 
+about by advances in science, engineering, and societal changes. 
+
+— To increase student's ability to communicate more effectively orally and in writing. 
+
+— To increase student's ability to develop and present effective arguments in a logical, con 
+sistent, and comprehensive manner. 
+
+— To increase student's ability to read analytically and critically. 
+
+Program Materials 
+
+Dscisions for Today and Tomorrow is comprised of three parts. 
+
+The Science^Technology'-Society Teacher's Guide provides an overview of the program, a 
+description of the model upon which the curriculum was developed and a discussion uf the 
+teaching strategies and activities utilized in the program. It is essential that the teacher be 
+familiar with the contents of this publication in order to adequately implement Decisions for 
+Today and Tomorrow, 
+
+The Student Guide contains the program readings and activity directions for each of the 
+twelve "Decisions" units. The Guide is non-consumr.ble and should be made available to 
+each student. 
+
+Teaching Notes contains specific teaching directions and/or suggestions for each of the 
+twelve chapters. At the end of each chapter, master copies of student handouts are provided 
+for the teacher's use. These should be duplicated for distr''oution to students. 
+
+
+
+TEACHING NOTES 
+
+
+
+Chapter 1. What Is Technology? 
+
+1. Have the students read the Introduction. 
+
+2. Lead a class discussion of the questions presented in the Student Guide (e.g., What does 
+the age of technology mean?}. 
+
+At this point, simply have the students express themselves and their ideas. There is no need to 
+correct false ideas or perceptions since answers to all of the questions posed in this section 
+will be fully explored in the next chapter. 
+
+3. Make sufficient copies of the Technology Inventory (Handout 1 ) for your class. 
+
+A"master*' copy, which should be duplicated, appears at the end of this section. You will need 
+at least one copy of the inventory per student for this part of the activity and a second copy for 
+each student for Part B of the activity. 
+
+4. Have the students read New Technology: Mass Production and complete the Tech- 
+nology Inventory. 
+
+The reading should provide sufficient information to enable the students to complete the 
+Technology Inventory. Students may find it helpful to read through this article twice - the first 
+time to get an overall understanding about mass production, and the second time to read for 
+detail. You might also fini it helpful to discuss the article with theclass after the first reading to 
+ensure that the students understand the major ideas before going on to read for detail. 
+
+To complete the activity, students will have to think about what they read and then analyze 
+and apply that knowledge. For the most part, the students wii: not be able to simply "lift" the 
+information from the readi ng and "plug it into" the chart. Thus, some students might need help 
+thinking through the reading. Provide assistance and guidance as you fee! it is necessary. 
+However, be careful not to provide too much guidance. This activity was designed to make 
+students think and, t^ erefore, the reading was deliberately written to promote analytical th ink- 
+ing skill development. 
+
+Encourage the students to include as many ideas as they can possibly conjure. What at first 
+glance appears to be insignificant may, from a long-term perspective, have profound effects. 
+
+5. Review Activity Part A with your students. 
+
+For the most part, the students have given little thought to the societal and institutional 
+changes brO!;ght about by a new technology and may find the assignment confusing. A 
+detailed review o\ the example given will help to clarify their questions. 
+
+Reproduce the chart on the board or overhead transparency and fill in the boxes with the 
+students. The items for the categories Resource Requirements and Consequences have not 
+been delineated andwillneedto be extracted from the narrativesection of the exampla.As you 
+progress through the example, students will inevitably begin to offer their own suggestions 
+and discover that the task is not as formidable as they might have originally believed. 
+
+6. Have the students complete a Tech nology I nventory for one of the technologies listed in 
+Part B - Other Technologies. 
+
+
+
+
+Each student will need a second copy of the Technology Inventory. Since the list of tech- 
+nologies is short, if there are other technologies that students wish to examine, they should 
+feel free to substitute. 
+
+Allow approximately one class period for the students to complete their charts, or have them 
+complete thechartasahomeworkassignment. In eithercase,thestudentswill need sufficient 
+time to think about many interactions that may not, at first, be obvious. 
+
+An alternative to having the students complete the chart individually is to have pairs or small 
+groups of students complete a single chart. In small groups, the brainstorming technique is a 
+useful one to initiate the development of ideas. In brainstorming, each item is considered m 
+turn. In a round robin fashion each student will present an idea. Each idea is recorded, and the 
+process of presenting an idea continues until all ideas seem to be exhausted. During this initial 
+process, the students should not attempt to evaluate the ideas presented. All ideas should be 
+accepted and added to the list as stated. As a second step, the group as a whole will then 
+evaluate the ideas and select those to be included. In some instances, several ideas may be 
+combined to form a major concept. 
+
+The students may need to be reassured that there are no single "right" answervS to this exer- 
+cise. Depending upon an individual's earlier experiences or peropectives, one person's view 
+about a given technology may be very different from that of another person. Try to help the 
+students explore the ramifications of the technology by asking pertinent questions when it 
+appears that an impasse has been reached. 
+
+7. After the charts are complete, have the students meet in small groups to share their 
+results. 
+
+In the process of sharing ideas, new ideas will emerga, some of which the students may wish to 
+include in their charts. The questions at the end of Pa.i B should be discussed in the groups. 
+
+8. Have representatives from each group present a summary report of group's proceedings 
+to the entire class since most students will want to hear the topics discussed in the 
+other groups. 
+
+9. Summarize the activity results with the class. 
+
+Do not neglect tof ully discuas the questions since they are important for helping the students 
+JeveloD various thinking skills. The lastquestion'W/?af/s your cfe//n/f/ono/f^^ 
+ticularly important since it is a logical "lead in" to the next section which defines vyhat technol- 
+ogy is all about. 
+
+1 0. Read and Discuss What is Technology? A Definition. 
+
+As witn all of the readings in this text, it is important to spend some time in discussing the impor- 
+tant points and ideas presented. This is the time to clarify and/or correct any misconceptions. 
+This reading is particularly important because it defines what technology is and sets the stage 
+for the ensuing chapters. The reading is very comprehensive and merits the time necessary to 
+ensure that the students have a good grasp of the information presented. 
+
+
+
+4 
+
+
+
+9 
+
+
+
+student Handout 1 
+TECHNOLOGY INVENTORY 
+
+
+
+New Technology 
+
+
+
+CHANGES 
+
+
+
+Individual 
+
+
+
+
+Community 
+
+
+
+Business 
+
+
+
+I 
+
+Government 
+
+
+
+RESOURCE REQUIREMENT 
+
+
+
+Natural 
+
+
+
+\ 
+
+Man-Made 
+
+
+
+\ 
+
+Human 
+
+
+
+CONSEQUENCES 
+
+
+
+Knowledge 
+
+
+
+Beneficial 
+
+
+
+Negative 
+
+
+
+Unpredicted Changes 
+
+
+
+10 
+
+
+
+Chapter 2. Decision Making In a High-Tech World 
+
+1. Have the students read and discuss the General Decision-Making Model. 
+
+
+
+You may find it helpful to make an overhead transparency of the model illustrated m the text- 
+book and keep it projected while you go over the various steps in the model. 
+
+The students should have little difficulty in understanding what is meant in Step 1 , Define the 
+Problem or in Step 2, Identify Alternatives. They may, however, need help with the third step. 
+Quantify Alternatives. You may need to explore with the students what is meant by the terms 
+risk, benefits, and risk/benefit analysis. They may also need help in understanding what is 
+meant by long- and short-term risks and benefits. 
+
+In discussing Apply Decision Aids, the fourth step in the model, you may want to discuss "judg- 
+ment" and perhaps how "good" judgment is developed. Your discussion of Decision Trees and 
+the Decision Matrix need not now be very elaborate. These tools will be discussed m detail in 
+the next section. Similarly, since other aids (models, gaming, and simulation) won't be used 
+until later chapters, they should be discussed only briefly at this time. Understanding steps 5 
+and 6 (Decision and Implement) should present little difficulty for the students. 
+
+It is most useful to compare and contrast the model with the "Scientific Method". You might 
+explore the following: 
+
+— How are they similar? Different? 
+
+— Could you substitute one for the other? Why? Why not? 
+
+2. After you have fully discussed the Decision Making Model, construct an activity which will 
+give students experience in using the model. 
+
+You could suggest several problems from school or other real-life situations or have the 
+students themselves suggest problem situations; for example, 
+
+— decide which college to attend, 
+which automobile to purchase, or 
+which courses to take in school. 
+
+The only decision aids used at this point will be previous knowledge about the issue and 
+hopefully, good analysis and reasoning. Do not go into a lengthy discussion of decision trees 
+or decision matrices until they are introduced later in this chapter. 
+
+Depending on the class, you might first want to ''walk them" through one or two problems 
+before they work on their own. 
+
+After the students have had an opportunity to work out some problems independently, have 
+them compare their results. 
+
+— Were the decisions made by various individuals the same? Different? Why? 
+
+— Which appeared to be a "better*' resolution of the problem situation? Wh^? 
+
+Important: Keep some of these problems (and the decisions made) for review at the conclu- 
+sion of this chapter when studentswill work on some of the same problems using the decision 
+tree and/or the decision matrix. Students will then see more easily if their decisions are any 
+different when using these additional aids. 
+
+
+
+
+u 
+
+
+
+3. Have the students read The Decision Tree and discuss its process. 
+
+In discussing the decision tree and later, the decision matrix, make sure that the students 
+understand that these are not stand-alone decision making models. Rather, they are decision- 
+making aids that can be employed as part of step 4 in c .r decision-making model. 
+
+Read through the procedure once or tv,fice. It is doubtful that the students will understand the 
+process well enough to use it with any degree of accuracy at this point. Don't spend too much 
+time on the procedure, but simply guide the students carefully through the example. It is 
+usually after this part of the activity has been completed that the students begin to seo what 
+the steps in the procedure really mean. 
+
+If you feel that the students are capable of dealing with this activity effectively on their own, by 
+all means use your own professional judgment. Spend as much time on the example and 
+analyzing/reviewing the completed sample decision tree, as necessary. 
+
+4. Have the students use the decision tree to solve the previously defined problems, par- 
+ticularly those types of problems that can be broken down into a choice between two 
+actions or choices. Again, use real-life problems, school problems, etc. 
+
+important Note: It might seem strange that the sample problem in the Student Guide does 
+not deal specifically with a science-technology-society related problem. This was done de- 
+liberately. To develop good thinking skills, students need to acquire experiences dealing with 
+different types of real-life problem solving. Through the application of learned strategies to 
+new and different situations, more effective and meaningful thinking skill development is pro- 
+moted. Later, students will be provided with opportunities to solve problems created at the 
+interface of science, technology, and society. 
+
+5. Have the students read The Decision Matrix and discuss its process. 
+
+in dealing with the decision matrix, you should again walk the students through the problem 
+and show how the calculations are made. All of the steps, including the calculations, are fully 
+illustrated in thestudent textbook. However,somestudents might still have difficulty in follo.yv- 
+ing the example. Make b -re that every student understands each step in the process before 
+going on. Alu, be sure that the students understand that the "best" course of action when 
+using the decision tnatm is the one with the Highest number and not, as with the decision tree, 
+the Lowest number. 
+
+6. Provide the students with ample opportunities to £»fjply the decision matrix to solving 
+other problems. 
+
+This extension is critical if the students are to understand the techniques (decision aid use) 
+and be able to apply them towards solving other problems. 
+
+Make as many copies of the Decision Matrix(Handout 2) as you will need for your class. A mas- 
+ter copy of this chart appears on the next page of this guide. 
+
+
+
+Chapters. Biotechnology-Genetic Engineering 
+
+
+
+1. Have the students read Genes and New Life Forms. 
+
+This reading deals with a very complex topic. It is important for you to review any scientific 
+terms and/or concepts used in the reading with which the students are unfamiliar (some of the 
+terms that might be new to your students have been defined parenthetically in the text). 
+
+At many points throughout the reading the student is presented with important ques- 
+tions. When the students encounter the questions, they should be encouraged to interrupt 
+their reading and respond to them at that time. To r.elp "encourage" the students to not skip 
+over the questions, you can require them to briefly write out their responses. In addition, all of 
+the questions in the readings should bediscussed in class at aconvenient time. Other types of 
+questions included later in the text require the student to analyze a point of view or problem 
+and then express an opinion. Those questions should also be explored fully in class. 
+
+Of course, a full discussion of the article (including the questions) should be conducted after 
+the students have carefully read the entire article. 
+
+2. Have students read The Tulelake Story and respond in writing to the questions at the end 
+of the reading. 
+
+The responses shouid be collected and stored for later comparison with the responses de- 
+rived when the activities You be the Judge - Parts A and B are completed. The quality of the 
+students' written work should be held to the highest standards possible - even their responses 
+to the questions. This is important for a variety of reasons which are discussed m the Teachers 
+Guide. (See the section on writing skill development) 
+
+3. Complete the activity You be the Judge - Part A 
+
+The instructions for this activity are quite simple. The basic question is "Should an injunction 
+be issued to stop the experiment?" The students should follow the decision tree proceduies 
+detailed in Chapter 2. If necessary, review the procedures vyith the class again before they do 
+this activity. 
+
+4. Complete the activity You be the Judge - Part B. 
+
+Use a decision matrix(Handout 2) to help decide who should regulate and monitor the field of 
+biotechnology. Students should use the information provided in the readings to "extract" the 
+alternatives and the selection criteria. While this is not a simple task, it should be well within 
+the capability of most students. Of course, you can assist those students that require additional 
+help as necessary. 
+
+
+
+Chapter 4. Computer Technology -Artificial Intelligence 
+
+
+
+1. Have the students read Smart Machines. Can Computers Make the Human Brain Ob- 
+solete? 
+
+Throughout the reading, several questions are posed for the students to answer. Encourage 
+them to take the time to pondei the questions before continuing with the reading. Also, plan to 
+provide ample time in class for a lively discussion of these questions and any others you feel 
+are important. 
+
+"If - Then" statements, as they relate to artificial intelligence, are discussed. The students are 
+asked to develop "if - then" rules for a variety of problems. This type of activity helps students 
+gain useful insights into this important aspect of Artificial Intelligence and. at the same time, 
+promotes the development of higher-order thinking skills. 
+
+Interest in "expert systems" and the various opportunities this approach offers is increasing 
+daily. The students are asked to speculate why this might be so. Probably the beot answer/ 
+reason is commercial value. Simply, much money can be made if these types of Artificial 
+Intelligence programs "catch on". 
+
+The students are asked to "try writing down everything a child has to do to stack up3 blocks mti 
+a little fower''(see Student Guide for full instructions). Make every effort to have the class con- 
+ductthis activity and then have them read their procedures to the class. Discuss with theclass 
+the problems they encountered in trying to write out the program (instructions). What dif- 
+ficulties did they experience? How did they overcome them? Did they overcome them? If time 
+permits, have the students try to write "programs" for various other simple (apparently) tasks. 
+
+2. Conduct the Delphi Survey activity 
+
+Comprehensive instructions for this activity are included in the Student Guide. Duplicate 
+What Are Your Future Forecasts? (Handout 3) for distribution to your students. 
+
+3. Conduct Activity il Create the Future, 
+
+This scenario-writing activity is fully explained in the Student Guide. For general information 
+on scenario writing, see the accompanying Teacher's Guide. 
+
+
+
+13 
+
+
+
+16 
+
+
+
+student Handout 3: What Are Your Future Forecasts? 
+
+
+
+
+
+In Your Opinion How 
+Desirable is This? 
+
+
+When Do You 1 hink 
+This Will Occur? 
+
+
+
+
+
+
+very 
+desirable 
+
+
+desirable 
+
+
+neutral 
+
+
+not 
+desirable 
+
+
+1990- 
+2000 
+
+
+2001 - 
+2010 
+
+
+2011 - 
+2020 
+
+
+beyond 
+2020 
+
+
+never 
+
+
+What Are Some of 
+the Effects? 
+
+
+Explain Why You Came 
+to This Conclusion 
+
+
+ADVANCES IN COMPUTERS 
+
+1. Computers will understand human speech 
+& respond to spoken instructions. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Computers will learn from experience & 
+correct their own mistakes. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. Computers will perform thinking and 
+
+pidlllllliy laoKo. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. Computers will operate motor vehicles, 
+Trains, suuways & snips wiinoui neea oi 
+human operators. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+rulUiic unHnuCu 
+
+1. Every household will have a computer. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Nearly everyone will know how to 
+program a computer. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. Most courses in schools will be taught by 
+computers. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. We will use computers to decide where to 
+live, who to marry, what job to take, how to 
+spend money. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5. If one wants information about another 
+person, one can obtain it from a computer 
+data bank. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6. With computerized banking & exchange of 
+money electronically, cash will not be 
+needed. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7. A majority of people will spend most of 
+the day at home. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18 
+
+
+
+Chapter 5. Energy - Nuclear Power 
+
+1 . Have students read a transcript from a Smithville Town Meeting. The Smithville DectSion. 
+
+This reading gives the students an opportunity to assume roles as Smithville residents and 
+attempt to come to a decision about whether or not to permit the construction of a nuciear 
+power plant in their com munity. The arg uments are presented in the form a transcript of a town 
+meeting. 
+
+The students should first read the transcript silently and then, if you like, the script can be pre- 
+sented as a dramatization with students playing the various rolea If you decide not to conduct 
+this activity as a dramatization, the various "parts" can be simply read aloud - each part read by 
+a different student, or just have the students read the article a second time to ensure their 
+understanding. 
+
+2. After the students complete the reading, they should form into small groups of from 3 to 5 
+students each to discuss and evaluate the different arguments that are presented in 
+the transcript. 
+
+Distribute a copy of the Argument Summary Sheet (Handout 4). A master copy which can be 
+duplicated appears on the next page of this guide. The worksheet will help the students to 
+logically sort their thoughts and arguments. 
+
+3. The class will then reconvene as a group to hear the various reasons selected and the 
+decisions of each group. 
+
+The presentations should be limited to about 5 minutes in length. At the conclusion of the 
+class discussion, each student will then cast his/her vote on the proposal. To avoid the 
+possibility of "stronger willed" students trying to pressure other students to vote "their wa/', it 
+is suggested that the vote be conducted as a secret ballot. 
+
+The first part of this activity is completed with a discussion of the questions at the end of the 
+section. While conducting this discussion, keep in mind the various suggestions made m the 
+Teacher's Guide regarding classroom discussions. 
+
+4. Have the students read Smithville Tod 
+
+This second reading provides additional background information for the activity The Gover- 
+nor's Decision, and should be read prior to conducting a class discussion. This script can also 
+be acted out by members of the class or simply read toacquire an information base upon which 
+the students can call when discussing the scenario later in this activity. 
+
+It is interesting to note that recent studies indicate that growth in mental structures and 
+reasoning occurs to an even greater extent when students are involved in ' acting out" scenarios 
+as in role play or creative drama activities, than when they simply read and then discuss the 
+scenario. Significant growth still occurs when using this latter strategy, however, not to the 
+same degree as it occurs in the former. 
+
+5. Conduct the activity. The Governor's Decision. 
+
+Use the same strategies and techniques discussed above and the suggestions presented pre- 
+viously in the Teacher's Guide (Conducting Classroom Discussions). 
+
+6. Conduct the activity Technology, Consequences and Responsiblllbties. 
+
+In conducting this activity, the students should complete Handout 5 while in sHidll groups. A 
+master copy of the handout appears at the end of this section. 
+
+
+
+,7 19 
+
+
+
+The handout includes a series of six technologies and for each technology an undesirable 
+effect is indicated The students are to consider line types of new responsibilities that people 
+must assume when they use the technology and list the responsibilities under the appropriate 
+column. They will then suggest a solution th^* averts or remedies the undesirable effect. 
+
+When the small groups have completed the assignment, the class should then meet as a large 
+group. At that time, a spokesperson from each of the small groups should report the group's 
+decsion/conclusion to the entire class. Following the presentations, the class should com- 
+pare and contrast the different reports and discuss some of the more important issues that 
+emerged. The questions at the end of the activity can serve to stimulate further dis- 
+cussion. Again, see the notes and suggestions regarding "Conducting Classroom Dis- 
+cussions" in the Teacher's Guide. 
+
+
+
+20 
+
+18 
+
+
+
+student Handout 4: Argument Summary Sheet 
+
+1- In a summary form list the arguments "for" and "against** allowing the nuclear generating plant to be built m the 
+area (e.g., FOR— need for electricity; AGAINST— change natural environment) 
+
+2 According to your opinion, how important is each reason? Indicate the level oflmporiance with a number from 1 
+to 4 in the "importance*" column. 
+
+4 - most important 
+3 - much importance 
+2 - some importance 
+I - no importance 
+
+
+
+Import- Import- 
+FOR ance AGAINST ancc 
+
+
+
+21 
+
+
+
+Student Handouts 
+Tochnology, Consequences, and Responoibilities 
+
+
+
+TECHNOLOGICAL AN UNDESIRABLE 
+INNOVATION EFFECT 
+
+
+
+Plastics Production of piP'Jtics 
+
+create toxic waste 
+products that are 
+difficult to safely 
+dispose of. 
+
+
+
+NEW POSSIBLE 
+RESPONSIBILITES SOLUTIONS 
+FOR PEOPLE 
+
+
+
+Automobiles Car exhaust fumes 
+
+create smog which 
+causes lung diseases 
+and even death. 
+
+
+
+Weather 
+modification 
+such as cloud 
+seeding and 
+hurricane control 
+
+
+
+Hurricanes are 
+diverted from 
+one's own 
+country and sent 
+over another country' 
+(perhaps to an 
+unfriendly neighbor?). 
+
+
+
+Television Alters the way 
+
+that political campaigns 
+are run and propels 
+"media" candidates 
+
+
+
+Sonar Enables fishermen to locate 
+
+large schools of fish. This 
+may lead to the depletion of 
+oceanic food supplies. 
+
+
+
+ERIC 
+
+
+
+22 
+
+
+
+Chapter 6. Environment - Acid Precipitation 
+
+1 . Have the students read A Growing Problem. 
+
+A variety of questions have been included throughout the reading to help students th ink about 
+and process the information presented. It is important, as was the case in all previous chap- 
+ters, to provide sufficient opportunities and time for the students to study and to discuss these 
+questions. This helps the students to focus on the issues presented and fosters the develop- 
+ment of a variety of thinki(.g skills. 
+
+The pH chart included in the student textbook can be used to compare and contrast pH levels 
+in various parts of the U nited States. An effective'way to initiate a lively discussion on the topic 
+Is to begin with the questions that accompany the chart. 
+
+2. Conduct the scenario activity Acid Lakes and Jobs. 
+
+After the students read the scenario "Acid Lakes and Jobs'*, they should discuss the main 
+question: 
+
+Should Governor Jones order the companies to burn low sulfer coal? Or, should he 
+allow them to continue to burn high sulfur coal? 
+
+After surveying the opinions of the class regarding this question, and some of their reasons for 
+their opinions, organize the class into several groups of 3-5 students each. Ask each group to 
+discuss the questions again and to identify the most important reason and the second most 
+important reason why Governor Jones should take that action. 
+
+When the groups arrive at their answer, reassemble the entire class and ask each group to 
+report its results to the class. 
+
+An Evaluatfon of Possible Effects 
+
+Again form the class into several groups of 3-5 students. Duplicate copies of Handout 6 "An 
+Evaluation of Possible Effects". A master copy of this form appears at the end of this section. 
+
+The groups should follow the instructions in the Student Guide to complete the Han- 
+dout. While completing the form, they should consider thequestion in the text that follows the 
+scenario "Acid Lakes and Jobs". 
+
+Discuss the results of this activity as suggested in the Student Guide. 
+
+3. Conduct the role-play simulation Amending the Clean Air Act 
+
+In this activity, the students will simulate a Senate Committee conducting a hearing on a bill 
+concerning acid precipitation. Seven students will represent Senators while the remaining 
+students will represent one of the six special interest groups. Each group will make a formal 
+presentation to the Senators, when the presentations are completed, the Senators will cast 
+their votes and announce the results. 
+
+Students can be assigned to roles by self-selection or by teacher assignment. Either method 
+offers advantages and disadvantages. You know your own class best, so u^e the approach 
+that appeals to you. The ideapoint is to group theclass so that a dynamic inte.s^hange of ideas 
+will be produced. For more information on grouping, see the section of the Teacher's Guide on 
+"Classroom Discussion" and grouping. 
+
+Provideampletimeforthestudentstostudytheir role positions. Through careful review of the 
+background information, they can identify the major arguments associated with the position 
+they will portray. Moreover, the students should have at least one class period or more to iden- 
+ify the major issues and develop their presentations. Additional research by students will 
+enhance their learning experiences and provide other ideas for the debate. 
+
+21 23 
+
+
+
+The Fact Sheet (Handout 7) (a master copy appears on the next page of this guide) should be 
+used by members of the interest group to aid in the development of their presentation. The 
+Senators will use Handout 8 (master copy also included in this guide) at the hearing to help 
+them organize their notes and comments on each group. 
+
+Upon completion of the hearing, the senators will meet to determine the outcome of the 
+hearings. Each vote is to be accompanied by a short rationale statement. The Chairperson 
+announces the decision and explains the reasons of the Senators. 
+
+The following gives an overview of the simulation schematically: 
+
+Simulation Overview 
+Students read background reading 
+
+I 
+
+Form various interest groups 
+
+I 
+
+Groups develop presentation 
+I 
+
+Presentations to Senate Committee 
+
+I 
+
+Senate Committee votes 
+
+
+
+24 
+
+22 
+
+
+
+student Handouts 
+
+AN EVALUATION OF POSSIBLE EFFECTS 
+THE SOIL AND WATER IN PARKLANDS BECOME MORE ACID 
+
+
+
+Immediate Consequence, 
+
+
+Harm 
+
+
+Future Consequences 
+
+
+Harm 
+
+
+1. 
+
+
+
+
+
+
+1. 
+
+
+
+
+2. 
+
+
+
+
+
+
+2. 
+
+
+
+
+3. 
+
+
+
+
+
+
+3. 
+
+
+
+
+4. 
+5. 
+
+
+
+
+
+
+4. 
+5. 
+
+
+
+
+6. 
+
+
+
+
+
+
+6. 
+
+
+
+
+THE GLASS COMPANIES CLOSE DOWN. AND 
+POWER PLANTS BURN LOW SULFUR & COAL 
+
+
+Immediate Consequences 
+
+
+Harm 
+
+
+Future Consequences 
+
+
+Harm 
+
+
+1. 
+
+
+
+
+
+
+1. 
+
+
+
+
+2. 
+
+
+
+
+
+
+2. 
+
+
+
+
+3. 
+
+
+
+
+
+
+3. 
+
+
+
+
+4. 
+
+
+
+
+
+
+4. 
+
+
+
+
+5. 
+
+
+
+
+
+
+5. 
+
+
+
+
+6. 
+
+
+
+
+
+
+6. 
+
+
+
+
+
+ERIC 
+
+
+
+student Handout 7 
+INTEREST GROUP: FACT SHEET TO DEVELOP ARGUMENTS 
+
+
+
+26 
+
+
+
+Argument 
+
+
+Reasons and Benefits 
+
+
+Supporting Facts 
+
+
+Possible Opposing 
+Arguments 
+
+
+Response to Arguments 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1) List your arguments logically and precisely; 2) Make sure Reasons & Benefits justify your arguments; 3) Be sure to 
+include supporting facts and materials to support your argument; 4) Anticipate possible objection or opposing statement to 
+your argument and be prepared to defend your position. 
+
+
+
+student Handouts 
+SENATOR'S WORKSHEET 
+
+
+
+Interest Group Name 
+
+
+Argument 
+
+
+Facts Presented 
+
+
+Benefits to 
+My State 
+
+
+Disadvantages to 
+My State 
+
+
+Questions to Ask 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1) Fill in the columns as the arguments are presented by the various interest groups; 2) Write down any question you may 
+wish to ask the spokesperson; do not interrupt his/her presentation. Ask your questions at the end of the presentation. 
+
+
+
+28 
+
+
+
+Chapter 7. Environment - Hazardous Wastes 
+
+
+
+1. Have the students read Hazardous Wastes. 
+
+Provide opportunities for the students to respond to the questions posed in the reading. 
+Students are given feedback on their answers at various points later in the reading. While 
+scientific terms are explained parenthetically in the text, you may need to provide additional 
+explanation/examples for some classes. 
+
+Relate Paracelsus' statement regarding "dose'' being the prime difference between *'a poison 
+and a remedy" to the use of drugs. A discussion of drug abuse is very appropriate at this 
+point For instance, you might discuss how the proper use of drugs can lead to the misuse 
+of drugs. 
+
+Early in the reading, the idea of risk/benefit comes up again. This will happen several times 
+throughout the text. That is, new ideas and concepts will keep appearing in different con- 
+texts as the student goes through the program. This was done intentionally to help foster the 
+development of thinking skills by applying similar strategies to different situations and con- 
+ditions. At this time, it might be useful to referthe students back to previous chapters in which 
+a risk/ benefit ratio was used (e.g.. Chapter 2). 
+
+It would be most helpful to have a few copies of Silent Spring available for the students to read 
+in conjunction with this chapter. An "extra credit" assignment can be developed using this 
+classic book. It is readily available in paperback in most bookstores. 
+
+When discussing the chemical structures of the various organic compounds, use your own 
+judgment aboutthe amount ofdetail you include. Thetext provides enough information forthe 
+students to understand the concept and the problems. You can, however, go into as much 
+detail and structural analysis as you like or as time permits. Allow Su.'f icient time for analyzing 
+the data presented. A considerable amount of information is packed into the tables and 
+graphs. 
+
+2 Have the students read Everybody's Problem and have the class discuss the questions 
+posed at the end of the reading. 
+
+3. Conduct the activity Harry Carter's Grain Company. 
+
+This scenario is presented in several parts. Make sure the students understand the problem 
+or dilemma as well as the various facts that impact on the problem. Follow the procedures 
+outlined in the Teacher's Guide. 
+
+The problem described in this scenario can also be addressed using a decision tree. If you 
+decided to use this approach, try the procedure outlined above first, then use the decision tree 
+and then compare the resulta Were the results similar? Different? Why? If time will not permit 
+the use of both approaches, try having half the class deal with the scenario in a dilemma/ 
+discussion format and half the class use the decision tree format. Then you can compare the 
+results of the two groups. 
+
+4. Conduct the activity Car? Society Really Help? 
+
+Comprehensive instructions for this "formal debate" activity are provided in the Teacher's 
+Guide (see Debates). Besuretoprovidethestudentswiththedebatepointersgivenattheend 
+of this section in their texts. If you feel it necessary, duplicate any or all of the instruction for a 
+formal debate and "debate printers" for distribution to your students. 
+
+Background information obtained from reading this and other chapters is used to illustrate the 
+
+
+
+27 
+
+•30 
+
+
+
+point that technology is advancing well beyond the level of understanding of much of society. 
+
+It is very important to spend a sufficient amount of time fully explaining the questions presen- 
+ted under Concluding Observations in order to tie together a lot of 'loose ends". You can have 
+the entire class deal with each question individually, have small groups of students work on 
+one question each, or use any other configuration that you choose. 
+
+
+
+31 
+
+28 
+
+
+
+Chapter 8. Food and Agriculture 
+
+
+
+This chapter requires the student to extract information from tables, analyze the data in 
+several ways and from a variety of perspectives, and then synthesize the information in a crea- 
+tive writing activity. 
+
+1 . Have students read Forecasting the Future. 
+
+In this brief reading students are introduced to some basic forecasting concepts and terms. In 
+addition, students read about three important forecasts for the future. Interestingly, each 
+forecast depicts a very different scenario for the future. Some are optimistic while others are 
+somewhat pessimistic. The students are then asked to consider several questions that guide 
+them towards systematically examining why the forecasts that presumably are based on the 
+same data bases suggest very different futures. 
+
+2. Have the students examine the data from the Cornucopia Project 
+
+This data details trends in the area of food and agriculture. I n responding to some of the ques- 
+tions about the Cornucopia data posed in Whats Happening to Farming, students will be 
+required to extract and analyze data f •'om the table. That is, the student will not be able to read 
+theanswerto the questions directly from theTable. Rather, he/she will be required to calculate 
+the correct answers. Your guidance in extracting the necessary data and performing the 
+appropriate calculations will be most importan t here. I n Al I cases, the answers to the questions 
+can be 
+
+read directly from the table, 
+
+— derived by making the necessary calculations using data provided in the table, or 
+
+— derived by extrapolating data provided in the table. 
+
+At the end of each section the student is required to make a Summary Statement describing 
+the meaning of the information they have uncovered. Since these summaries will be used at 
+the end of the chapter to complete Activity B, make sure that the st udents arrive at justifiable 
+conclusions and make accurate/reasonable summary statements. It is useful to collect and 
+critique each of the summary statements and then return them to the students for necessary, 
+"reconsideration", revision, and/or correction. 
+
+3. Have students complete the Cost of Farming Activity, 
+
+This activity is very similar to Activity A in format except that the information presented is 
+interspersed with questions (and summary statements). Again, make sure that the students 
+use the data provided correctly and prepare justifiable Summary Statements. 
+
+4. Conduct the summary activity Averting Future Food Shortages. 
+
+This activity is most important because it requires the student to draw together all of the infor- 
+mation and data gathered previously and use it to develop a comprehensive plan to prevent or 
+avert future food shortages. The procedure used is quite simple and straightforward. However, 
+your guidance will be particularly needed in helping the students to get started. From then on, 
+your major concern will be organizing the class activity. You might have the students work in 
+small groups after each student develops his/her own plan of attack. 
+
+5. Have the students read "Farming Is Who I Am" 
+
+This reading adds another dimension to the problems addressed in this chapter. Whereas the 
+first part of the chapter was rather factual and "data" oriented, this reading adds the ''human 
+
+
+
+
+elemenr and illustrates how the personal lives of farmers are being impacted by "hard times". 
+After reading this section, you might want to discuss the plight of the U.S. farmer. Perhaps 
+some of your students live on farms or know farmers personally. Do they agree with the farmer 
+pdrayed in this reading? Why? Why not? Using the information and data collected in conjunc- 
+tion with the first partof this chapter, the students might be able to suggest ways to helpthe far- 
+mer. Continue the discussion of this section as long as it appears to be useful. 
+
+6. Have the Students read The Agricultural Mechanization Controversy. 
+
+This is a real-life case study that discusses a frequently ignored or unrecognized aspect of 
+technology. While the entire case is not presented here, enough information is provided to 
+give the student an understanding and an appreciation of the problem. Questions designed to 
+emphasize important points and considerationsare interspersed throughout the reading. Pro- 
+vide ample opportunities to explore these questions fully. At times, the positions presented 
+may get complicated and difficult to follow (depending on grade level, ability of students, 
+etc.). Use the various "probe questions" outlined in the Teacher's Guide. 
+
+The University of California vs. CRLA case may have some far-reaching implications for re- 
+searchers and for society in other areas outside agriculture. Pursue this topic with the students. 
+Use a series of "what if" questions to assist you in this activity 
+
+7. Conduct the court simulation debate activity The Agricultural Mechanization Contro- 
+versy 
+
+This activity simulates the court case of the farm workers(plaintiffs) vs. University of California 
+-Davis (defendants). 
+
+A. Select 3-5 students (depending on class size) to serve as judges. On the basis of the 
+arguments presented by each debating team, thejudges will determine how the courts 
+should decide. The judges should select one member to serve as the Presiding or 
+Chief Judge. 
+
+B. Divide the remainder of the class into two equal teams: the plaintiffs and the defen- 
+dants. The plaintiffs will "speak" for the farm workers and try to convince the judges 
+that their position is the one they should favor. The defendantswill present arguments 
+supporting the University of California Determinewhich team will be the plaintiffs and 
+which will be the defendants by "flipping a coin". 
+
+C. Conduct the Debate using the procedures outlined the the Teacher's Guide (see 
+"Debates"). While eitherthe"lnformaror the Formal" debate prodecure can be used, 
+the "Formal" approach is recommended for use with this chapter activity. 
+
+
+
+30 
+
+
+
+33 
+
+
+
+Chapter 9. Medical Technology - Organ Transplantation 
+
+
+
+1. Have the students read Recycling Human Bodies and Who Gets the Heart? 
+
+It is mostimportant to provide enough time and opportunities to fully explore the various ques- 
+tions posed in the readings. While the first reading is primarily factual, the issues raised in 
+"Who gets the Heart" can be somewhat emotional. The teacher should not allow the discus- 
+sion to deteriorate into an argument of emotions, but strive to have the students deal v^ith the 
+issues rationally. It is important to create an empathetic and compassionate atmosphere, 
+while at the same time, promote rational decision-making. 
+
+2. Conduct the scenario discussion surrounding the Baby Jane Case. 
+
+Follow the guidelines presented in the Teacher's Guide. Scenarios can be very effectively 
+"acted ouf using creative drama techniques to highten the interest of the class. 
+
+In discussing the Baby Jane Case, make sure that the students focus on why Baby Jane should 
+or should not get the heart. These "why*' types of questions are critical for developing think- 
+ing skills. 
+
+3. Have students write guidelines for organ transplant patient selection. 
+
+The guidelines may be written as an individual assign ment or as a small-group assignment (3 
+to 5 students per group). If the guidelines are to be written as a group, it is important that the 
+group as a whole first discuss each topic to get input and opinions from all the members, and to 
+come to some general consensus about the group*s major concerns. Each gioup member 
+should then select a specific topic to develop. 
+
+After everyone has completed the assignment, each individual (or small group) will present 
+his/her list of guidelines to the class. While each individual/group is presenting his/her guide- 
+lines, the remainder of the class should keep notes on any guideline(s) that 
+
+— they disagree with, 
+— - are not clear, 
+
+— appear to be faulty, 
+
+— seem to be unfair, or 
+
+— propose anything else they feel should be questioned, challenged, or discussed further. 
+
+After each individual or group presentation is completed, students may then, using their notes 
+as a guide, ask questions, challenge statements and positions, or ask for additional elabora- 
+tion on any statement made by the presenters. Students should try to analyze all arguments 
+and positions and be on the lookout for any statements or ideas that 
+
+— indicate biases as part of the argument, 
+
+— are based on unjustifiable assumptions, 
+
+— are based on any ambiguous or unfair claims or arguments, 
+
+— are inconsistent or based on faulty lines of reasoning, or 
+— - are weak arguments. 
+
+NOTE: ANY CHALLENGES OR QUESTIONS RAISED DURI NG THIS PART OF THE ACTIVITY 
+SHOULD BE MADE IN A COURTEOUS AND RESPECTFUL MANNER. 
+
+
+
+31 34 
+
+
+
+Chapter 1 0. Transportation - Space Travel 
+
+
+
+1. Have students read the background information on transportation. 
+
+Once again, it is important that the students critically read and think about the information pre- 
+sented inthis section.Thequestions included in this reading have been specifically developed 
+to help the student relate the information to their own personal experiences. Use these ques* 
+tions (and any others that you may generate) to encourage your students to think about the 
+variety of issues related to the many modes of transportation. ' 
+
+2. Have the students read The Space Shuttle-A Case Study. 
+
+The script for this activity is based on the actual space shuttle tragedy which took place on 
+January 28, 1986. Many students will be able to add their own personal recollections and 
+experiences to this case study. You may wish to have one student read the case study to the 
+rest of the class in a dramatic setting. 
+
+3. Have the students read The Findings ana The Recommendations. 
+
+Discuss the questions .t the end of this section. Try to get the students to read 'Into" V^e data 
+and allow them to arrive at their own conclusions based on the data and information pre- 
+sented. 
+
+4. Conduct the Shuttle Program Discussion Activity. 
+
+Allow the activity to continue as long as it appears useful. Use the guidelines in the Student 
+Guide. You may find it useful to use the best arguments for and against continuing the Space 
+Shuttle program. 
+
+5. Conduct the scenario writing activity Transportation in the Future. 
+
+In this activity the students are to write a scenario based on one of the topics suggested in the 
+Student Guide. Alternatively, they may wish to develop a transportation topic related to thei^ 
+own particular area of interest. The main purpose of this activity is to have the students 
+examine potential changes or effects created by a given decision or situation. Using the 
+scenario format, the students can begin to consider the many complex and intricate issues sur- 
+rounding the different modes of transportation. 
+
+The students should be organized into small groups. Each group should select one of the 
+topics suggested or another topic of their own choosing. After the students complete their 
+scenarios, the scenarios should be presented to the entire class. 
+
+
+
+33 35 
+
+
+
+Chapter 1 1 . Computer Technology - Robotics 
+
+
+
+1 . Read the "want ad" that opens the chapter to the students. 
+
+Have the students try to determine just who or what can fill the job being advertized This will 
+generate interest in the reading and issues that follow. 
+
+2. Have students read background information on robotics. 
+
+The reading has been developed to highlight many of the issues surrounding the field of 
+robotics, including latest technology, economic considerations, societal impact, and future 
+possibilities for robotic technology. Students are challenged to make future predictions as 
+they address the questions incorporated in the readings. You should further challenge your 
+students to uncover other issues that might underlie a potential robotic society. You may wish 
+to have th. students discuss other sources of information that may contribute to everyone*s 
+background on this topic. New information usually appears daily in newspapers or magazines 
+-concerning the topic of robotics. 
+
+3. Conduct the Case Study Mr. Harris' Factory, Part /. 
+
+In conducting this activity, follow the instructions included in conjunction with teaching chap- 
+ters4, 5, 6, etc., and conducting scenario discussions. If you have not used th is strategy before, 
+it would also be useful to review the material dealing with conducting classroom discussions, 
+scenario discussion, and questioning strategies presented previously in the Teacher's Guide, 
+
+4. Conduct the Case Study Mr Harris' Factory, Part 2. 
+
+The purpose of this activity is similar to most others that utilize the classic prisoners' dilemma 
+approach (Hyman, 1 978). The activity seeks to have the students examine the socio-ethical 
+issues related to the scenario pay-off chart. This simulation presents a values conflict in which 
+two students are required to make a decision on the same question but without knowledge cf 
+each other's thoughts or forthcoming decisions. There is oral communication at only one point 
+during the simulation. 
+
+Make sure that the students fully understand the scenario, how the simulation is to be conduc- 
+ted, its purpose, and the rules before starting this activity. 
+
+Mr. Harris' scenario is concerned with a conflict between two people - Mr. Harris and Mr. 
+Fredericks. Each person has the same two choices to make during the simulation. Both have 
+the choice of either installing robots or not installing robots in their factories. There are four 
+possible outcomes: 
+
+1. Both install robots. 
+
+2. Both do not install robots. 
+
+3. Mr. Harris installs robots while Mr. Fredericks does not. 
+
+4. Mr. Fredericks installs robots while Mr. Harris does not. 
+
+For each of these possibilities, there is a "payoff" in terms of profits that can be gained (see 
+Payoff Chart in the student text). 
+
+Theconflictin this simulation lies in theway the payoffsarecreated. These payoffs constitutea 
+non-zero sum game. That is, for each "winner** there is not necessarily a loser, as in a game of 
+football or baseball. The players are confronted with a conflict because it appears that, no mat- 
+ter what choice they make, it appears they will not fare very well. 
+
+The players decide to install or not install robots without first talking to each other or knowing 
+what the other will decide. They pass written notes to each other to announce their decision • 
+
+
+
+35 36 
+
+
+
+No talking or discussion talces place at this point. The players communicate face-to-face 
+only after they have made some initial decisions. 
+
+The students requlreonly a pencil, scrap paper, a copy of Mr. Hams' Case Study, and the Payoff 
+Chart. Master copies of the Payoff Chart appear on the next page of this guide, as well as m the 
+student textbook. 
+
+
+
+Divide the class into pairs and either assign the role of Mr. Harris or Mr. Fredericks to each stu- 
+dent or, as a second possibililty, hav'e the students select their own preference. Tell them to sit 
+back-to-back without talking to each other at ANY time until directed to do so. 
+
+After the first decision is made in writing, the players pass their decisions (slips of paper) over 
+theirshoulderstotheother players. Each player records each other's response on h\s, her own 
+record sheet. 
+
+
+
+There is no suggested time limit for conducting this simulation. The players write 1 0 separate 
+decisions back-to-back during 1 0 rounds of play. After 1 0 rounds, the players confer face-to- 
+face for 3 to 5 minutes about what has happened thus far. The players then repeat the first part, 
+making 10 more separate decisions sitting back-to-back. 
+
+After the twentieth round, you should debrief the exercise. This debriefing gives the players an 
+opportunity to find out what others did, to reflect upon what they did, and to put the entire pro- 
+cess together. 
+
+One strategy you may use for debriefing includes the following: 
+
+1. Describe what happened. 
+
+2. Analyze the game's message. 
+
+3. Plan future discussions and activities. 
+
+4. Prepare summary and concluding statements. 
+
+Allow ample time for the students to vent some of the feelings they experienced during this 
+activity. Then encourage them to discuss what happened during the simulation using the 
+following questions: 
+
+— What decisions did you make? 
+
+— Who switched decisions during the game? 
+
+— Why did you switch? 
+
+— How did you feel about your opponent's decisions? 
+
+— Were you able to predict you opponent's decisions? Why? 
+
+— Upon what did you base your decision? 
+
+— What did you talk about during the 3- to 5-minute conversation? 
+
+— V/hat way can we relate this simulation to real-life situations? 
+
+— What, if anything, did you learn about compromise? 
+
+Help your students to make generalizations and draw conclusions about the simulation and 
+the issues contained in the scenario. Have the students brainstorm a list of ideas that wefe 
+generated from this simulation. What generalizations and conclusions can be drawn from 
+them? 
+
+One final strategy you may wish to consider is to have the students complete the following sen 
+tence: ''After going through this simulation^ I now realize that.,," You can then compare and 
+contrast the responses by listing the commonalities and differences on the chalk board. 
+
+
+
+36 
+
+37 
+
+
+
+5. Conduct the activity Examining the Effects of Robots: Tfie Futures Wheel, 
+
+
+
+A futures wheel is a technique used to explore the consequences of an idea, trend, or decision. 
+The effects are displayed in a graphic form that permits one to examine multiple interactions 
+and "spinoffs". The central idea/trend is entered in a circle in the center of the paper. Spokes 
+extend from the central circle and end with a circle in which is entered a First-order effect. The 
+process is repeated with second-order effects radiating from the first, third from the second, 
+and so on. 
+
+Working in small groups, students will select one of toe ideas suggested or utilize one of their 
+own ideas to complete a futures wheel. Review with the students the instructions and the 
+example shown in the student textbook If possible, it is helpful to have large sheets of paper 
+(i.e., newprint) available. This will permit the members of the group to work on the wheel 
+simultaneously. 
+
+
+
+ERIC 
+
+
+
+37 38 
+
+
+
+CHAPTER 12. TECHNOLOGY AND DECISION-MAKING. 
+
+
+
+Recently, government officials, as well as the public, have acknowledged the important need 
+to recognize adverse effects of technologies before they become widely instituted How to 
+avert potential catastrophies and unpleasant side effects is a difficult challenge because 
+there are so many unknowns. We would all welcome an accurate "crystal ball" which forecasts 
+all future effects. But given that crystal balls are beyond our grasps, we have begun to develop 
+methodologies for evaluating the potential impacts of technologies. Such evaluation tech- 
+niques fall under the rubric of "technology assessment". The purpose of technology assess- 
+ment is to provide decision-makers and policy-makers with a broad information base to help 
+them make w'se judgments. Technologyassessmentinvolvesasystematicgatheringofinfor- 
+.mation using a variety of techniques, including input from experts from various disciplines, 
+evaluating different options; and organizing the information in a useful manner. The focus is 
+not only on direct consequences, but on higher order consequences such as effects on peo- 
+ple, social organizations, institutions and the physical environment In a sense, a technology 
+assessment is a societal impact statement that examines how a technology might influence 
+social, legal, political, economic, and educational sectors. It provides data for decision- 
+making so that people can better select directions for the f Jture. 
+
+This final chapter draws upon all of the knowledge and '^kill the students developed as a resuU 
+of studying the previous chapters. However, even it the previous chapters have not been 
+studied prior toconducting this activity, students should still be able to accomplish many of the 
+objectives of this chapter. 
+
+In this final activity, students will evaluate potentialfuture activities using a technology assess- 
+ment process. While such techniques as technological forecasting, cost benefit and benefit 
+nsk analysis, systems analysis, modeling, and other types of futures forecasting methodologies 
+are beyond the scope of many high school students, they can at least begin to identify and 
+think about how a new technology might influence, f.ffect, or change our existing society. The 
+intent of this simulation is thus to challenge students to search for possible unintended, 
+indirect, or delayed impacts of a new technology in order that people can prepare to make 
+necessary adjustments or appropriate responses. 
+
+The students will work in one of four interest groups and assume the role-perspective of that 
+group. From a list of future technologies, they will select those that will best promote the goals 
+of their group. Using the technology assessment flow chart, they will examine each technol- 
+ogy and its impact on the areas listed. Based on the assessment, the group will then select 
+four technologies to submit to the World Review Court for final evaluation. To complete the 
+activity the students will write a scenario describing a world of the future where the "court 
+approved" technologies have been instituted. 
+
+The following flow chart summarizes the sequence of events for this activity. 
+
+
+
+SIMULATION PLAN 
+
+Parti 
+Group Preparation 
+
+
+
+1. 
+
+
+
+Students form four (4) groups. Factory 
+workers. Government Officials, 
+Industrialists, Preservationists. 
+
+
+
+2. 
+
+
+
+Each group reviews goals, studies 
+issues, and selects four technologies. 
+
+
+
+3. 
+
+
+
+Each group assesses the four 
+technologies and prepares its 
+presentations. 
+
+
+
+
+Part II 
+World Review Court 
+
+1. Class assumes roles of World Review 
+Court to hear presentations of 
+technologies. 
+
+2. Court evaluates each technology and 
+approves or rejects it. 
+
+Part III 
+Scenario of the Future 
+
+Students write a scenario of the future 
+that describes how the accepted 
+technologies have been or will be 
+applied. 
+
+Part I - Group Preparation. 
+
+Students will work together ir. one of four groups: 
+
+— Industrial Workers 
+
+— Government Workers 
+
+— Industrialists 
+
+— Preservationists 
+
+You may wish to assig n students to groups or allow them to select their own groups. In cither 
+case, the groups should be evenly divided. 
+
+Review the different steps of the simulation so that everyone understands the purposeand the 
+tasks. Have the students examine Diagram 1 which outlines the sequence of events. This is 
+also a good time to review the completed example in the student text so that any student ques- 
+tions about the tasks can be answered before they begin the activity. Each student should 
+receive a copy of the Technology Assessment Wo ASheet (Handout 9). A Master copy of this 
+form appears at the end of this section. 
+
+In their groups, the students should begin a discussion of their goals so that all group members 
+will share a common understanding. They should then compile a list of issues or "problems to 
+be solved'*. This list serves as a guide in helping the group identify technologies related to 
+its goals. 
+
+The group members will make their selections from the list of Future Technologies. Since the 
+list is rather lengthy, the members may wish to divide the list and have different members study 
+the various sections. Also, since some technologies will be discarded after the assessment, a 
+nu mber greater than four should be selected A good strategy is to ran k those selected in their 
+order of importance and then evaluate each in turn. When four technologies have been selec- 
+ted, those items remaining need not be further considered 
+
+The members may wish to conduct the assessment and fill in the worksheet as a group or 
+individually. There are advantages to both methods. Group size may be the determining factor. 
+However, having several students provide input facilitates the development of more ideas. 
+
+After the assessments are completed and group members have agreed upon the four pro- 
+posed technologies, each group develops a five-minute report for each technology to be pre- 
+sented orally before the World Review Court. This report is essentially an argument in support 
+of the technology and should demonstrate the beneficial changes that will result if the technology 
+
+40 
+
+
+
+40 
+
+
+
+wereadopted Information from the completed worksheets provides the basic concepts which 
+are furtherelaborated upon in therepcrt. Allow approximately two to threeclass periods fortne 
+students to complete this portion of the simulation. 
+
+PART II. World Review Court Hearing. 
+
+At the designatedtimetheclass will convene at the World ReviewCourt. One student will serve 
+as the Presiding Judge whois responsible for maintaining order and calling upon presenters m 
+turn. He or she should also be assisted by a time-keeper who ensures that the presentation 
+does not exceed the time limit. 
+
+The students must now assume their roles as World Court Judges. Apart from the time when 
+they make their presentations as representatives of an interest group, they must take the role 
+of impar j'al judges who are responsible for the well-being of the world-at-large. They will 
+undoubtedly experience internal conflict because they are promoting their own proposal and 
+at the same time must exercise objective judgment In many respects, this is not unlike 
+situations experienced by members of Congress or other elected officials who must respond 
+to the special interests of the constituency who elected them while considering national 
+needs and policy. Try to impress upon the students the importance of their role as judges and 
+challenge them to stretch their critical thinking abilities. 
+
+Each student receives a copy of the World Review Court Evaluatiqn Sheet. On it is a list of 
+"objections" that they should consult periodically during each presentation. On the reverse 
+side is a table for recording the results. Master copies for duplication appear at the end of 
+this section. 
+
+
+
+It may be useful to review with the class the list of objections and cite an example for each 
+objection. This will help the students to better understand the meaning and implications of 
+those objections. 
+
+In a rotation sequence, the four interest groups will present their technologies before the 
+World Review Court. Following each report, the judges have an opportunity to cite an objec- 
+tion. Each objection must be accompanied by an explanation as to why the technology is 
+undesirable or potentially dangerous. The Court as a whole will then vote on the acceptability 
+of the objection. Technologies that receive two objections are eliminated 
+
+After all presentations are heard and evaluated, the technologies meeting the Court s approval 
+are announced by the Presiding Judge. The interest group with the greatest number of tech- 
+nologies accepted is declared the group that has successfully achieved its stated goal. 
+
+PART IIL Discussion of Results and Scenario of the Future. 
+
+Following the simulation, the students will write a scenario ot the future describing a world 
+where the selected and approved technologies have been instituted. The scenario may be 
+written individually, in small groups or as a homework assign ment. In writing the scenario, the 
+students will need to organize some of their own ideas developed during the course of the 
+simulation and explore their thoughts about how the various technologies might influence 
+future events. This writing activity challenges the students to make projections about future 
+changes brought about by the new technologies and to include their personal commentary 
+about those changes. While they have been evaluating technological impact throughout the 
+simulation, the scenario provides a format for students to evaluate the final decisions they 
+made and bring all their thoughts together. 
+
+In the scenario the students will answer the question, "How will the future be affected by the 
+decisions we made?" The technologies selected will be examined from a broader perspective 
+
+
+
+41 
+
+
+
+41 
+
+
+
+and in terms of how one technology interacts with another. Scenario writing is, in fact, a 
+methodology used by future forecasters to explain or explore a projection of the future. By 
+developing a story or narrative around a series of possible events or desired goals, one can 
+begintoexamin8thecompIexinteractionsoffactorsandvariablesofthatsituation.lt provides 
+a flexible format for the writer to consider possible changes, consequences, and interrela- 
+tionships in a more holistic manner. In this particular scenario-writing exercise, the students 
+will be making predictions about future changes and identifying ways in which society pre- 
+pares for and responds to those ch anges. This will enable students to gain additional insights 
+about technology and change. 
+
+Follow the guidelines for writing scenarios present in the chapters preceding this one as well 
+as the suggestions provided in the Teacher's Guide. 
+
+Comments and Suggestions. 
+
+The list of "Technological Innovations" included in the student textbook contains a number of 
+technologies that are, of course, unfamiliar to most people. Students will need to learn more 
+about these technologies and the uses. Hence, it is important to provide the students with suf- 
+ficient time to research. Increased knowledge will help to make the assessment task easier 
+and make the simulation more interesting. The amount of time to be devoted to research is 
+best determined by you and your knowledge of the students' needs and interests. 
+
+There are no prescribed time limits for the group meetings. However, a flexible schedule 
+should be established to provide the students with a guideline of tasks to be accomplished. 
+
+
+
+42 
+
+42 
+
+
+
+student Handout 9 
+TECHNOLOGY ASSESSMENT WORKSHEET 
+
+
+
+What needs influence the 
+development of the 
+technology? 
+
+
+
+T 
+
+
+
+What are the components of 
+the technology? 
+
+
+
+Who will control the technology 
+and who will benefit from it? 
+
+
+
+Technology 
+
+Give an example of its use . 
+
+
+
+t 
+
+
+
+First order consequence - What is the intended effect(s)? 
+
+
+
+Second order consequences - What effects are related to the technology? 
+
+
+
+Higher order consequences - What broad changes will occur? 
+
+
+
+Impacts on Other Areas 
+
+
+
+Individual Health and 
+Safety 
+
+
+
+Family Life 
+
+
+
+Government and Laws 
+
+
+
+Community 
+
+
+
+Natural Resources 
+
+
+
+Waste Disposal 
+
+
+
+Workplace 
+
+
+
+Bufiiness 
+
+
+
+Energy Needs 
+
+
+
+Environment 
+
+
+
+Industry 
+
+
+
+Student Handout 10 
+
+
+
+WORLD REVIEW COURT EVALUATION SHEET 
+
+Objections 
+
+The new technology will. 
+
+1 — Violate individual freedom and freedom of choice 
+
+2 — Cause irreparable damaging change to the environment of human life 
+
+3 — Create overcrowding and widespread famine 
+
+4 — Create large scale unemployment 
+
+5 — Invade personal privacy 
+
+6 — Produce dangerous waste products 
+
+7 — Enable government to make more of our personal decisions 
+
+8 — Produce conflict between nations and increase likelihood of global warfare 
+
+9 — Increase the gap between the rich and the poor nations 
+
+10 — Drain nonrenewable natural resources 
+
+1 1 — Create economic instability as a result of government overspending 
+
+12 — Increase social unrest and conflict by widening the gap between the rich and poor 
+
+13 — Increase competition among nations for scarce resources 
+
+14 — Produce situations where people feel alienated, useless or a lack of control over 
+
+their own lives 
+
+15 — Leads to "Big Brotherism" — government increases the monitoring of its citizens 
+
+16 — Reduces the value of human life and human dignity 
+
+
+
+Instructions: 
+
+• Record the title of the new technology 
+presented and the name of the group 
+sponsoring it. During the presentation, 
+you are to decide whether or not the tech- 
+nology will create/cause any of the objec- 
+tions listed above. 
+
+« Try to think of different ways in which 
+the technology might be used. Ask your- 
+self the questions: "What might happen if 
+the technology were used or controlled by 
+an unscrupulous person or group?'', 
+"What might happen if it were used in 
+ways other than its intended purpose?", 
+or "Will it create unresolvable problems 
+for future generations?" 
+
+• When the presenter is finished, you, as 
+
+
+
+judges, may in turn, cite an objection. Re- 
+cord the number of the objection in the 
+box next lo the title. The entire panel of 
+judges will then vote on that objection: 
+Yes '— if they agree with the objection. No 
+— if they disagree with the objection. Re- 
+cord the number of Yes votes and No 
+votes. Other objections will be made and 
+voted upon in a similar manner. Do this 
+until all objections are heard. A technol- 
+ogy which produces two or more objec- 
+tions will be eliminated. Therefore, if the 
+judges agree upon two objections, it is 
+unnecessary to hear any additional objec- 
+tions. Proceed to the next technology un- 
+til all 16 technologies have been heard and 
+evaluated. 
+
+
+
+14 
+
+
+
+RECORD SHEET 
+
+
+
+Name of 
+
+Technology Group Objection Number and Record of Vote 
+
+
+
+1 
+
+
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+No 
+
+
+
+
+No 
+
+
+
+
+No 
+
+
+
+
+No 
+
+
+
+
+No 
+
+
+2 
+
+
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+No 
+
+
+
+
+No 
+
+
+
+
+No 
+
+
+
+
+No 
+
+
+
+
+No 
+
+
+3 
+
+
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+No 
+
+
+
+
+No 
+
+
+
+
+No 
+
+
+
+
+No 
+
+
+
+
+No 
+
+
+4 
+
+
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+No ■ 
+
+
+No 
+
+
+
+
+NO 
+
+
+
+
+NO 
+
+
+
+
+No 
+
+
+5 
+
+
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+No 
+
+
+No 
+
+
+No 
+
+
+No 
+
+
+No 
+
+
+6 
+
+
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+No 
+
+
+No 
+
+
+No 
+
+
+No 
+
+
+No 
+
+
+7 
+
+
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+No 
+
+
+^0 ■■■ 
+
+
+
+
+No 
+
+
+No 
+
+
+
+
+No 
+
+
+8 
+
+
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+No 
+
+
+No 
+
+
+
+
+No 
+
+
+No ■ 
+
+
+No 
+
+
+9 
+
+
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+No 
+
+
+
+
+No 
+
+
+No 
+
+
+No 
+
+
+No 
+
+
+10 
+
+
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+No 
+
+
+No 
+
+
+No 
+
+
+No 
+
+
+No 
+
+
+11 
+
+
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+Ho 
+
+
+
+
+No 
+
+
+
+
+No 
+
+
+No 
+
+
+No 
+
+
+12 
+
+
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+No 
+
+
+
+
+No 
+
+
+
+
+No 
+
+
+No 
+
+
+No 
+
+
+13 
+
+
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+No 
+
+
+No 
+
+
+
+
+No 
+
+
+
+
+No 
+
+
+No 
+
+
+14 
+
+
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+No- 
+
+
+No 
+
+
+
+
+No 
+
+
+
+
+No 
+
+
+No 
+
+
+in 
+
+
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+No 
+
+
+No 
+
+
+
+
+No 
+
+
+
+
+No 
+
+
+No 
+
+
+16 
+
+
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+Yes 
+
+
+
+
+No 
+
+
+
+
+No 
+
+
+
+
+No 
+
+
+
+
+No 
+
+
+
+
+No 
+
+
+
+ERIC 
+
+
+
+45 
+
+
+

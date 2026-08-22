@@ -1,0 +1,7217 @@
+*  « L 
+
+
+AD-A216  898 
+
+i 
+
+
+A  RAND  NOTE 
+
+
+DTIC 
+
+ELECTE 
+JAN  19  1990 
+
+
+The  RAND-ABEL®  Programming  Language: 
+Reference  Manual 
+
+
+Norman  2,  Shapiro,  H.  Edward  Hall, 
+Robert  H.  Anderson,  Mark  LaCasse, 
+Marrletta  S.  Glllogly,  Robert  Weissler 
+
+
+December  1988 
+
+
+PPE  ^  release 
+
+Jfattlbuooa  Uajjmi^ 
+
+
+9  0  01  18  018 
+
+
+The  research  described  in  this  report:  yes  sponsored  by  che 
+Director  of  Net  Assessment,  Office  of  the  Secretary  of  Defense 
+(OSD),  under  RAND’s  National  Defense  Research  Institute,  an 
+OSD-supportcd  Federally  Funded  Research  and  Development  Center, 
+Contract  No,  MDA903-85-C-0Q30. 
+
+
+The  RAND  Publication  Series:  The  Report  is  the  principal  publication  doc¬ 
+umenting  and  transmitting  RAND’s  major  research  findings  and  final  research 
+results.  The  RAND  Note  reports  other  outputs  of  sponsored,  research  fw 
+general  distribution.  Publications  of  The  RAND  Corporation  do  not  neces> 
+sarily  reflect  the  opinions  or  policies  of  the  sponsors  of  RAND  research.. 
+
+
+Published  . by  The  RAND  Corporation 
+1700  Main  Street,  P.O.  Box  2138,  Santa  Monica,  CA  90406-2138' 
+
+
+A  RAND  NOTE 
+
+
+N-2367-1-NA 
+
+
+The  RAND-ABEL*  Programming  Language: 
+Reference  Manual 
+
+
+Norman  Z.  Shapiro,  H.  Edward  Hall, 
+Robert  H.  Anderson,  Mark  LaCasse, 
+Marrietta  S.  Giliogly,  Robert  Weissler 
+
+
+RAND 
+
+
+December  1988 
+
+
+Prepared  for 
+
+The  Director  of  Net  Assessment, 
+Office  of  the  Secretary  of  Defense 
+
+
+AcCOSIOii  For 
+
+
+NTIS  CRA&I 
+OTIC  TAB 
+Unannounced 
+Justification 
+
+
+□ 
+
+□ 
+
+
+By _ 
+
+Distribution/ 
+
+
+Availability  Codes 
+
+
+Dlst 
+
+
+ft' I 
+
+
+A  research  publication  from 
+The  RAND  Strategy  Assessment  Center 
+
+
+Avail  and/or 
+Special 
+
+
+APPROVED  FOR  PUBLIC  RELEASE,  DISTRIBUTION  UNLIMITED 
+
+
+-  iii  - 
+
+
+PREFACE 
+
+
+The  RAND-ABED51  was  developed  at  The  RAND  Corporation,  originally 
+for  use  in  writing  complex  decision-model  "agents"  as  part  of  a 
+knowledge-based  simulation  for  automated  war  gaming.  It  was  designed 
+and  implemented  initially  by  Norman  Z.  Shapiro,  H.  Edward  Hall,  and  Hark 
+LaCassa.  Robert  Weiss  lor  has  made  important  subsequent  contributions. 
+
+RAND-ABEL  is  an  evolving  operational  languago  that  is  now  being 
+used  in  a  number  of  diverse  projects.  It  will  be  available  in  the 
+public  domain.  This  Note,  which  updates  a  1985  publication,  documents 
+tho  RAND-ABEL  language  as  it  existed  in  March  1988.  It  is  intended 
+primarily  for  programmers.  It  gives  a  torse  but  complete  description  of 
+tho  language.  It  assumes  the  reader  is  fluent  in  at  least  one  high- 
+level  programming  language  and  is  familiar  with  the  notation  and 
+concepts  used  to  describe  tho  formal  syntax  of  programming  languages. 
+
+For  background  on  RAND-ABEL's  origin  and  underlying  principles,  see: 
+
+Shapiro,  Norman  Z.,  H.  Edward  Hall,  Robert  H.  Anderson,  and 
+Mark  LaCasse,  Tho  RAND-ABEL'*  Programming  Languago: 
+
+History,  Rationalo,  and  Design ,  Tho  RAND  Corporation, 
+
+R-3274-NA,  August  1985. 
+
+Current  plans  are  to  complete  by  the  end  of  1988  the  addition  of 
+several  now  RAND-ABEL  features.  Those  new  features  will  broaden  the 
+scope  of  problems  addressed  by  RAND-ABEL,  and  allow  for  clearer  and  more 
+efficient  modoling.  The  features  include:  sets  (with  cnumcrative 
+values  as  legal  members),  type-unions  (with  dynamic  type  assignment  and 
+checking) ,  data  structures  of  arbitrary  complexity,  and  lists  (including 
+a  variety  of  operators  for  manipulating  them).  Readers  having  versions 
+of  RAND-ABEL  produced  after  this  manual's  publication  should  check  tho 
+relevant  on-line  documentation  to  see  what  additional  features  their 
+software  supports  (see  file  UPDATES  in  the  main  RAND-ABEL  source 
+directory) . 
+
+
+lRAND-ABEL  is  a  trademark  of  The  RAND  Corporation. 
+
+
+-  iv  - 
+
+
+This  work  was  conducted  by  the  RAND  Strategy  Assessment  Center  and 
+sponsored  by  the  Director  of  Not  Assessment  in  the  Office  of  the 
+Secretary  of  Defense,  undar  the  auspices  of  RAND's  National  Defense 
+Research  Institute,  a  Federally  Funded  Research  and  Development  Conter 
+sponsored  by  the  Office  of  the  Secretary  of  Defonse. 
+
+Inquiries  and  comments  arc  welcome  They  may  bo  sent  directly  to 
+the  authors  or  to  Dr.  Paul  K.  Davis,  Director  of  the  RAND  Strategy 
+Assessment  Contor. 
+
+
+-  v  - 
+
+
+summary 
+
+
+This  reference  manual  describes  the  RAND-ABEL  programming  language. 
+In  designing  Che  RAND-ABEL  language/  wo  docormir.od  that 
+
+
+•\'f}RAND-ABEL  should  be  suitable  for  large,  rule-based  systems. 
+
+-  It  should  lend  itself  to  program  development  by 
+multimcmbor  programming  tooms. 
+
+-  It  should  bo  relatively  oasy  to  maintain. W 
+
+'  RAND-ABEL  should  bo  suitable  for  war  gaming  and  mulciscenario 
+
+sensitivity  analysis. 
+
+-  Domain-substantive  RAND-ABEL  rules  should  be  readable  by 
+domain  specialists  who  arc  not  RAND-ABEL  programmers,  and 
+the  code  should  be  relatively  self-documenting. 
+
+-  RAND-ABEL  should  be  efficient  in  execution.  'S 
+
+•  ^RAND-ABEL  should  be  suitable  for  use  by  any  of  several 
+
+governmental  gaming  and  analysis  organizations. 
+
+-  It  should  be  transportable  to  various  computers  capable 
+of  hosting  the  UNIX  operating  system. 
+
+
+The  RAND-ABEL  language  was  designed  for^tho  specific  requirements 
+of  the  RAND  Strategy  Assessment  Center  (RSAC).  The  RSAC  has  dcveloped^a 
+large  system  for  automated  and  semiautomated  war  gaming  in  which 
+
+JR—  -  ' 
+
+separate  models  represent  U.S.,  Soviet,  and  third-country  behavior. 
+RAND-ABEL  is  a  preprocessor  for  the  C  programming  language  under  the 
+UNIX  operating  system,  which  makes  RAND-ABEL  quite  portable  Gcross 
+different  computers.  RAND-ABEL  is  very  fast  in  execution  time  compared 
+with  other  languages  of  similar  readability.  We  estimate  that  C 
+language  programs  execute  no  more  than  three  times  faster  than 
+comparable  RAND-ABEL  programs.  ^ {  . 
+
+
+i  /_ 
+
+
+xSee  Davis  and  Winnefeld,  1983;  Davis,  Bennett,  and  Schwabe,  1988; 
+Davis,  1988;  and  Davis  and  Hall,  forthcoming. 
+
+
+-  Vi  - 
+
+
+In  the  RAND  Strategy  Assessment  System  (RSAS)  environment, 
+
+RAND-ABEL  is  used  with  a  data  dictionary,  a  data  editor,  and  support  for 
+coroutines.  This  allows  n  flexible,  hierarchical  modeling  system, 
+allowing  human  teams  to  replace  some  of  the  models.  Although  designed 
+for  the  RSAS,  we  anticipate  that  RAND-ABEL  will  bo  of  interest  for  ocher 
+applications  on  UNIX  systems  requiring  a  highly  readable  languoge,  fast 
+performance,  and  early  discovery  of  errors  (for  example,  in  the  dosign 
+of  large  rulo-boscd  models  and  simulations). 
+
+The  RAND-ABEL  language  provides  a  numbor  of  unique  capabilities, 
+including  support  for  tables  within  the  source  code.  Tables  con  be  used 
+as  decision  cables  or  to  govern  an  iterative  execution.  Wo  find  that 
+tabla  statements  provide  a  much  more  succinct  and  readable  alternative 
+to  long  sequences  of  sentence-like  rules  typical  of  rula-bascd 
+languages.  When  used  as  decision  cables,  RAND-ABEL  cables  correspond 
+closely  to  the  decision  crocs  analysts  and  reviewers  use  in  working  out 
+a  logically  complete  argument.  RAND-ABEL  tables  havo  a  syntax  chat  is 
+inherently  two  dimensional. 
+
+RAND-ABEL  is  a  strongly  typed  language,  permitting  certain  types  of 
+errors  in  complex  programs  to  bo  uncovered  early.  Many  of  RAND-ABEL's 
+features  are  derived  from  constructs  in  the  C  programming  language. 
+
+
+“  vii  - 
+
+
+acknowledgments 
+
+
+Joan  LaCasso  tested  the  RAND-ABEL  Translator's  robustness  and 
+diagnostics  at  various  stages,  helped  debug  some  o£  the  code,  and  wrote 
+preliminary  documentation. 
+
+Sovoral  other  members  of  the  RAS'D  Scratogy  Assessment  Center  (RSAC) 
+staff  have  made  valuable  suggestions  regarding  RAND-ABEL  syntax  and 
+requisite  foaturos.  These  include  Steven  Bankas,  Arthur  Bullock,  Paul 
+Davis,  William  Jones,  Christo  McHonomy,  Ross  Quinlan,  and  Horbort  Shukiar. 
+
+We  especially  wish  to  acknowledge  strong  and  continuing  support  for 
+the  development  of  ehe  RAND-ABEL  language  by  Paul  Davis  and  Herbert 
+Shukiar  of  RSAC.  Paul's  stubborn  refusal  to  bo  satisfied  with  anything 
+loss  than  our  best  effort  at  meeting  RSAC's  real  needs,  Herb's  effective 
+and  knowledgeable  guidance,  and  choir  allocation  of  resources  to  RAND-ABEL 
+when  its  future  was  uncharted  are  responsible  for  RAND-ABEL* s  success  to 
+dace. 
+
+
+CONTENTS 
+
+
+WfFACE  . iii 
+
+SUMMARY  . v 
+
+ACKNOWLEDGMENTS  .  vii 
+
+Section 
+
+X.  INTRODUCTION  .  1 
+
+Notations!  Conventions  .  5 
+
+II.  NAMES,  IDENTIFIERS,  WHITE  SPACE,  AND  COMMENTS  .  7 
+
+Names  and  Identifiers  . . .  7 
+
+A  Note  on  White  Space  and  Comments  .  9 
+
+III.  DATATYPES  .  II 
+
+Basic  Data  Types  .  II 
+
+Enumerated  Data  Types  . 13 
+
+IV.  VALUES,  EXPRESSIONS,  AND  OPERATORS  .  16 
+
+Values  and  Simple  Expressions  .  16 
+
+Operators  .  30 
+
+V.  DECLARATIONS  .  28 
+
+To  Declare  a  Variable  . 28 
+
+To  Declare  an  Array  .  29 
+
+To  Declare  a  Function  . 30 
+
+VI .  FUNCTIONS  .  33 
+
+Dofining  a  Function  . . 33 
+
+Named  Function  Calls  and  Function  Invocations  .  3A 
+
+VII.  RAND-ABEL  STATEMENTS  .  37 
+
+Assignment  . 37 
+
+Conditional  Execution  . 39 
+
+Repetitive  Execution  .  AO 
+
+Table  Statement  .  A3 
+
+Functions:  Invoking  and  Exiting  .  50 
+
+Inrnt/Output  .  52 
+
+Compound  and  Null  Statements  .  59 
+
+VIII.  META-STATEMENTS  .  62 
+
+, '/define  .  62 
+
+Include  .  63 
+
+Debugging:  Trace  and  Untracc  .  6A 
+
+
+-  x  - 
+
+
+IX.  DATA  DICTIONARY  .  6S 
+
+Defining  Declarations  . 67 
+
+Identifying  Declarations  . 72 
+
+Informative  Declarations  . . 72 
+
+Creating  and  Recoving  Default  Declarations  .  73 
+
+Example  of  a  Data  Dictionary  Declaration  Section  .  75 
+
+X.  COPRQCESSES  . 76 
+
+Creating  a  Coproeess  . . . . .  76 
+
+Rutting  a  Process  to  Sleep  . . . .  76 
+
+Terminating  a  Coprocess  . . . 77 
+
+Reserved  Coproeess  Variables:  Self  and  Parent  . .  77 
+
+Rules  for  the  Use  of  Coprocesses  . . .  77 
+
+XI.  TOP-LEVEL  RAND-ABEL  DECLARATION'S,  DEFINITIONS,  AND 
+
+STATEMENTS  . 79 
+
+APPENDIXES 
+
+A.  ”  LOCAL  SUPPORT  ENVIRONMENT  FOR  RAND-ABEL  .  01 
+
+B.  QUICK  REFERENCE  GUIDE  TO  THE  RAND-ABEL  LANGUAGE  .  87 
+
+
+INDEX  .  105 
+
+BIBLIOGRAPHY  .  113 
+
+
+-  1  - 
+
+
+I,  INTRODUCTION 
+
+
+RAND-ABEL  is  a  computer  programming  language  implemented  on  the 
+UNIX1  operating  system.  A  program  called  the  "RAND-ABEL  Translator" 
+compiles  RAND-ABEL  statements  into  a  C  program  (Kernighan  and  Richie, 
+1978),  which  is  in  turn  compiled  and  run. 
+
+RAND-ABEL  was  developed  at  the  RAND  Strategy  Assessment  Center 
+(RSAC),  to  bo  used  in  the  development  of  complex  models.  Six  primary 
+design  goals  guided  the  development  of  RAND-ABEL.  RAND-ABEL  is  intended 
+to  be: 
+
+•  Reasonably  self-documenting.  Tito  RAND-ABEL  code,  by  itself, 
+should  convey  the  meaning  of  a  program. 
+
+•  Understandable  by  English  spoakors  familiar  with  the  subject 
+matter.  Readers  of  the  program  should  not  need  detailed 
+programming  knowledge  to  comprehend  the  program. 
+
+•  Reasonably  easy  to  learn  and  use  by  individuals  with  good 
+analytic  capability  and  modest  programming  skills.  Analysts 
+and  application  specialists  with  only  some  prior  experience  in 
+a  high-level  programming  longuage,  such  as  FORTRAN,  should  be 
+able  to  program  effectively  in  RAND-ABEL  without  extensive 
+training  and  study. 
+
+•  Rapid  in  execution.  Since  RAND-ABEL  was  specially  designed  for 
+building  rule-based  programs  with  many  qualitative  variables, 
+it  is  important  that  these  large  programs  be  able  to  execute 
+rapidly  and  efficiently. 
+
+•  Portable  across  different  types  of  computer  hardware. 
+
+RAND-ABEL  and  systems  developed  in  it  should  not  be  unique  to  a 
+single  computer  or  manufacturer's  computers  but  rather  be 
+portable  across  a  range  of  minicomputers  and  powerful 
+microcomputers. 
+
+•  Supportive  of  specialized  needs  of  the  RAND  Strategy  Assessment 
+System  (RSAS),  such  as  coroutines  and  tabular  data,  and  well- 
+suited  to  the  creation  of  complex  simulations  by  groups  of 
+developers. 
+
+
+‘UNIX  is  a  trademark  of  AT&T  Bell  Laboratories. 
+
+
+-  2  - 
+
+Although  reading  and  changing  RAND-ABEL  programs  is  relatively  easy 
+and  within  the  capabilities  of  many  analysts  who  know  some  othor 
+computer  language,  some  RAND-ABEL  programming,  such  as  changing  the  RSAS 
+Data  Dictionary,  requires  relatively  high  levels  of  programming  skill 
+and  knowledge.  RAND-ABEL  is  not  unique  in  requiring  high  skill  levels 
+in  order  to  exploit  the  full  capabilities  of  the  lang*ngc;  however,  its 
+friendly  readability  can  give  an  orroncous  impression  regarding 
+wrienbility. 
+
+Prior  to  the  development  of  RAND-ABEL,  the  RAND  Strategy  Assessment 
+Center  used  the  R0SIEs  language  (Fain  ot  al.,  1981)  for  programming  the 
+Scenario  Agent.  The  ROSIE  program  representing  the  Scenario  Agent  of 
+the  Nark  II  RSAC  system  is  documented  in  Schwabc  and  Jamison  (1982).  Wo 
+found  that  ROSIE  was  too  slow  for  our  future  needs,  which  included 
+operating  large-scale  simulations  in  a  matter  of  minutes.  Also,  wo 
+sought  special  foaturos  such  as  docision  cables  chat  wore  not  likely  to 
+be  available  in  ROSIE.  Therefore,  RAND-ABEL  was  developed  os  a  soparaco 
+language.1  Nevertheless,  much  of  the  form  and  stylo  of  the  statements  in 
+RAND-ABEL  derives  from  its  ROSIE  heritage.  Because  analysts  wore  using 
+only  a  portion  of  the  features  of  ROSIE,  it  was  possible  to  design 
+RAND-ABEL  as  a  simpler  language. 
+
+The  goals  of  speed  in  execution  and  portability  were  achieved  by 
+writing  a  RAND-ABEL  compiler  (called  the  RAND-ABEL  Translator)  that 
+translates  RAND-ABEL  statements  into  statements  in  the  C  language. 
+Because  C  and  its  host  operating  system,  UNIX,  arc  available  on  many 
+different  computers,  RAND-ABEL  is  similarly  portable.  In  addition, 
+efficient  C  language  compilers  arc  available,  thereby  permitting  the 
+efficient  compilation  of  RAND-ABEL  statements  through  this  two-stop 
+compilation  process.  As  a  result,  RAND-ABEL  can  be  used  on  any  computer 
+running  the  UNIX  4.2bsd  operating  system  and  having  a  C  language 
+compiler.  Moving  RAND-ABEL  to  later  versions  of  AT&T's  UNIX  system 
+should  be  trivial. 
+
+2 ROSIE  is  a  registered  trademark  of  The  RAND  Corporation. 
+
+1The  history,  rationale,  and  design  of  RAND-ABEL  is  described  in 
+Shapiro  ct  al.,  1985. 
+
+
+-  3  - 
+
+
+RAND-ABEL  has  proven  to  bo  exceptionally  useful  for  know ledge - 
+based  modeling  and  has  been  used  to  generate  approximately  250,000  linos 
+of  code  representing  modols  dealing  with  political-military 
+decisionmaking,  situation  assessment,  command-control,  and  adjudication 
+of  results  of  force  interactions.  It  should  bo  noted,  howovor,  that 
+RAND-ABEL  is  a  procedural  language  and  does  not  have  an  "inference 
+engine."  It  is  therefore  quite  suitable  for  representing  knowledge  of 
+v.\o  form  If  <sicuneion>  Then  <action>,  but  it  does  not  have  the 
+particular  inforoncing  capabilities  of,  for  example,  LISP,  PROLOG,  and 
+ROSIE. 
+
+RAND-ABEL  is  a  strongly  typed  language;  that  is,  tha  properties  of 
+all  identifiers  arc  declared  before  they  are  used.  The  RAND-ABEL 
+compiler  uses  these  properties  to  test  the  validity  of  RAND-ABEL 
+statements  so  that  certain  types  of  errors  (particularly  control -related 
+and  daca-relaced  errors)  may  be  caught  at  the  earliest  possible  time. 
+
+The  RAND-ABEL  language  contains  a  number  of  novol  fcacu:  *s . 
+
+Perhaps  the  most  novel  construction  in  RAND-ABEL  is  the  table  statement, 
+described  in  detail  in  Sec.  VII  of  this  manual.  The  following  is  valid 
+RAND-ABEL  code.  (In  this  and  other  examples  within  this  manual, 
+
+RAND-ABEL  keywords  are  printed  in  boldface  to  distinguish  them  from 
+identifiers,  constants,  and  comments  chosen  by  the  user  to  describe  a 
+particular  application.  Comments  appear  within  square  brackets.) 
+
+Table  Deploy 
+
+(This  table  orders  deployment  of  forces] 
+
+
+ih% 
+
+unit-type 
+
+unit-owner 
+
+to-arca 
+
+20 
+
+% 
+
+Troops 
+
+Denmark 
+
+CEur-res 
+
+20 
+
+% 
+
+Troops 
+
+Netherlands 
+
+CEur-res 
+
+20 
+
+% 
+
+Troops 
+
+FRG 
+
+CEur-res 
+
+1 
+
+0 
+
+Troops 
+
+UK 
+
+CEur-res 
+
+All  RAND-ABEL  tables  consist  of  column  headings  followed  by  rows 
+containing  data.  In  this  example,  there  are  five  columns.  The  meaning 
+of  the  top  row  of  the  table,  as  defined  by  the  Deploy  function,  orders 
+20  percent  of  the  troops  "owned  by"  Denmark  to  deploy  to  CEur-res 
+
+
+-  u  - 
+
+
+(Central  European  theater  rcsorves).  The  table  calls  the  Deploy 
+function  four  times  (once  for  oach  rew  of  data)  with  five  parameters 
+(corresponding  to  the  ontry  in  each  column  of  the  table).  On  tho  fourth 
+call,  one  division  of  British  troops  (the  "0"  moons  number,  rather  than 
+percent)  are  deployed. 
+
+The  table  statement  is  a  powerful  device,  capable  of  both  defining 
+iterative  processes  and  creating  decision  eablcs.  Its  syntax  is  fully 
+two  dimensional.  A  function  call  or  RAND-ABEL  statement  (possibly  a 
+compound  statement)  occurring  immediately  aftor  tho  table  keyword  is 
+called  once  for  each  row  in  the  table,  with  tho  table's  column  headings 
+being  parsed  and  matched  with  function  parameters  or  variables  in  the 
+statement.  Tho  table  statement  was  developed  because  tablos  of 
+information  arc  commonly  used  by  many  types  of  planners  and  analysts. 
+
+A  second  noteworthy  feature  of  RAND-ABED  is  "declaration  by 
+example."  Ail  identifiers  are  declared  by  giving  oxamplos  of  their  use, 
+usually  by  an  assignment  statement  such  as: 
+
+Declare  message  by  example:  Let  messago  be  "I  havo  Checkmate", 
+or  more  briofly 
+
+Declare  message:  Let  message  be  "I  havo  Checkmate". 
+
+which  declares  the  variable  "message"  to  be  a  character  string.  In  this 
+manner,  the  data  type  associated  with  an  identifier  is  declared  without 
+requiring  the  use  of  a  whole  vocabulary  (o.g.,  integer,  real,  character 
+string,  Boolean,  process,  enumerated  variable,  array)  that  may  not  bo 
+meaningful  to  analysts  who  are  not  professional  programmers. 
+
+Furthermore,  it  is  especially  useful  in  rule-based  systems  with  many  nd 
+hoc  data  types  that  otherwise  would  require  names  for  strong  typing 
+(i.e.,  the  data  types  to  which  enumerated  variables  belong). 
+
+RAND-ABEL  also  has  a  built-in  set  of  functions  to  handle  coroutines 
+and  a  "data  dictionary"  to  coordinate  external  data  references  among 
+program  modules  being  developed  independently.  These  language  features 
+are  discussed  in  Secs.  IX  and  X  of  this  manual. 
+
+
+-  s  - 
+
+
+NOTATIONAL  CONVENTIONS 
+
+This  manual  presents  the  form  and  content  of  the  RAND-ABEL 
+programming  language.  In  doing  so,  it  must  use  a  set  of  stylistic 
+conventions  to  represent  RAND-ABEL1 s  form.  These  conventions  must  not 
+be  confused  with  the  form  of  the  RAND-ABEL  syntax  itself.  The 
+conventions  used  in  this  document  are: 
+
+
+1.  The  RAND-ABEL  language  relies  on  a  number  of  special  keywords, 
+or  reserved  words,  which  have  a  particular  meaning.  Appendix  B 
+contains  a  complete  list  of  RAND-ABEL  keywords.  As  mentioned 
+earlier,  in  this  manual  RAND-ABEL  keywords  arc  printed  in 
+boldface,  to  distinguish  them  from  ocher  language  constructs. 
+
+In  a  RAND-ABEL  program,  these  keywords  must  be  written  in  lower¬ 
+case,  with  the  first  lotcor  optionally  upper-ease.  Therefore, 
+tho  only  two  valid  ways  of  writing  a  keyword  are: 
+
+Declare,  declare 
+
+This  same  case  freedom  does  not  extend  to  RAND-ABEL  identifiers 
+or  character  strings.  The  variable  name  "Country"  is  distinct 
+from  the  (dangerously  similar)  name  "country". 
+
+2.  The  syntax  of  RAND-ABEL  is  sometimes  best  dascribcd  in  terms  of 
+a  set  of  syntactic  categories,  which  themselves  have  a  defined 
+structure.  These  syntactic  categories  are  represented  by  a 
+word  or  phrase  in  italics,  like  expression.  What  is  allowed  in 
+place  of  those  categories  is  described  in  various  sections  of 
+this  manual.  To  find  tho  definition  of  one  of  these 
+categories,  look  under  chat  category  in  the  index  to  this 
+manual;  it  tolls  on  which  page  that  definition  occurs.  A  list 
+of  syntactic  categories  is  given  in  Appendix  B. 
+
+3.  To  represent  a  set  of  options,  one  of  which  must  bo  chosen,  we 
+use  a  single-spaced  vertical  stack  of  options.  For  example, 
+
+Trace  If. 
+
+Trace  Function. 
+
+
+This  notation  means  that  the  TRACE  statement  can  take  the  forms 
+"Trace  If."  or  "Trace  Function.".  To  represent  a  continuation 
+of  the  previous  line,  we  indent  the  second  part  of  the 
+definition.  For  example, 
+
+Declare  variable-name: 
+
+Let  variable-name  be  expression . 
+
+
+-  6  - 
+
+
+Let  variable-name  be  identifier  constant. 
+Let  variable-nama  be  enumerated  variable. 
+
+
+indicates  that  the  phrase  "Let  variable-name  be"  is  a  required 
+part  of  the  Declare  statement,  and  that  it  must  bo  followed  by 
+a  representative  of  one  of  the  throe  syntactic  categories 
+listed:  expression ,  identifier  constant,  or  enumerated 
+variable.  One  valid  form  of  the  Declare  statement  is  therefore 
+
+Declare  variable-name:  Let  variable-name  be  expression. 
+
+
+4.  Ellipses  (i.o.,  "throe  dots"  notation)  are  used  to  represent  a 
+sequence  of  zero  or  more  RAND-ABEL  constructs.  For  oxamplo, 
+
+statement  .  .  .  statement 
+
+means  that  zero  or  more  statements  can  occur  in  a  sequence.  By 
+extension,  if  a  delimiter  is  used  after  the  first  occurrence 
+and  boforo  the  second  occurrence  with  the  threo-dot  notation  in 
+between,  it  moans  zero  or  more  instances  of  that  construct  can 
+occur  in  sequence,  separated  from  each  othor  by  that  delimiter. 
+For  example, 
+
+
+nama  ,  .  .  .  ,  name 
+
+moans  that  zero  or  more  RAND-ABEL  names  can  occur,  separated  by 
+commas  (the  delimiter  here).  When  ONE  or  more  oexurrcnccs  are 
+required,  the  above  notation  is  sometimes  used  for  convenience, 
+with  a  no.:*  immediately  below  the  syntax  diagram  stating  that 
+restriction. 
+
+S.  The  structure  representing  a  particular  RAND-ABEL  language 
+category  is  boxed  so  that  it  can  be  found  easily.  Rules 
+specifying  various  restrictions  and  notes  regarding  this 
+structure  then  follow.  The  particular  syntactic  category  being 
+(perhaps  partially)  dofined  is  shown  within  the  top  border  of 
+the  box.  For  example: 
+
++-statement - + 
+
+I  I 
+
+|  If  Boolean-expression  Then  statement  | 
+
+
+If  Boolean-expression  Then  statement  Else  statement  | 
+
+
+-  7  - 
+
+
+II.  NAMES,  IDENTIFIERS,  WHITE  SPACE,  AND  COMMENTS 
+
+
+NAMES  AND  IDENTIFIERS 
+
+The  entities  of  a  RAND-ABEL  program  (o.g. /variables)  have  names. 
+Each  is  represented  by  a  RAND-ABEL  idanttfSar,  which  is  composed  of  a 
+sequence  of  one  or  more  of  the  following  characters,  without  intervening 
+spaces: 
+
+upper-  and  lower-case  lectors  (A-Z,  a-z) 
+digits  (0-9) 
+
+the  hyphen  (-)  (or  its  synonym,  the  underscore  (_)) 
+
+the  number  or  pound  sign  (0) 
+
+the  percent  sign  (X) 
+
+the  plus  sign  (+) 
+
+the  ampersand  sign  (&) 
+
+the  slash  (/) 
+
+the  period  (.) 
+
+Rules: 
+
+1.  An  identifier  cannot  end  with  a  period. 
+
+2.  An  identifier  should  not  begin,  with  a  hyphen  (-),  its  synonym 
+underscore  (_)  or  a  period  (.). 
+
+3.  An  identifier  cannot  extend  ovor  a  line  of  text  (i.c.,  it 
+cannot  contain  a  carriage-return  or  lino-food  character).  It 
+also  cannot  extend  ovor  a  lino  of  text  by  being  hyphenated; 
+the  hyphen  is  treated  just  as  any  other  character.  (An 
+identifier  used  as  a  column  heading  in  a  tablo  statement  is  an 
+exception  to  this  rule.  See  the  discussion  of  the  table 
+statement  in  Sec.  VII.) 
+
+4.  Upper-case  letters  arc  distinct  from  lower-case  letters  within 
+identifiers;  for  example,  the  following  identifiers  represent 
+different  data  items: 
+
+Country,  country,  COUNTRY,  CounTry 
+
+Within  RAND  we  recommend  a  programming  style  in  which  global 
+variables  are  capitalized  and  local  variables  arc  not.  For 
+instance,  "British-mood"  indicates  a  global  variable,  while 
+,;british-mood"  signifies  a  local  variable.  It  should  bo  noted 
+that  this  is  a  programming  convention,  not  a  requirement  of 
+RAND-ABEL  syntax. 
+
+
+-  8  - 
+
+
+5.  A  sequence  of  characters  mooting  the  above  restrictions,  and 
+intended  as  an  identifier,  must  also  not  bo  recognizable  as 
+anything  else,  such  as  an  integer  or  real  number. 
+
+There  is  no  restriction  on  length,  ocher  than  the  one-lino 
+limitation  (Rule  3  above). 
+
+K  should  bo  noted  chat  various  text  formatters  in  use  at  RAND  and 
+elsewhere  interpret  a  period  (.)  in  column  1  as  a  special  formatting 
+instruction,  thereby  causing  problems  if  chat  is  not  intended.  No 
+RAND-ABEL  statement  begins  with  a  period,  but  one  could  inadvertently 
+appear  in  column  1  if  an  identifier  begins  with  a  period  and  a  statement 
+is  continued  onto  a  following  lino,  causing  an  identifier  to  appear 
+first  on  the  succeeding  lino.  It  is  safest  not  to  start  any  identifier 
+with  a  period. 
+
+The  C  compiler  generates  variables  that  begin  with  initial  hyphens 
+(-)  and  initial  underscores  (_).  To  preclude  the  possibility  of 
+confusion,  it  is  recommended  that  RAND-ABEL  identifiers  avoid  this 
+usage:  i.e.,  do  not  begin  an  identifier  with  a  hyphen  or  on  underscore. 
+
+Examples  of  valid  RAND-ABEL  identifiers: 
+country 
+
+Order-WTVDl- force-assignment 
+
+assumptions-re-Europc-On-Call 
+
+84flightfl-2 
+
+An  identifier,  having  the  form  described  above,  can  also  be  an 
+"identifier  constant"  as  a  member  of  the  range  of  an  enumerated  data 
+type.  Sec  Sec.  Ill  for  more  information  on  enumerated  data  types. 
+
+In  RAND-ABEL  variables  and  functions  may  be  assigned  attributes 
+such  as  ownership.  Variables  may  be  global,  owned,  or  local;  functions 
+may  be  owned  or  global.  The  majority  of  variables  and  functions  in  the 
+RSAS  are  owned.  Ownership  is  described  in  detail  in  Sec.  IX. 
+
+
+-  9  - 
+
+
+A  NOTE  ON  WHITE  SPACE  AND  COMMENTS 
+
+RAND-AbEL  statements  and  definitions  consist  of  a  sot  of  words, 
+some  of  them  reserved  keywords,  some  of  them  names  (of  variables, 
+functions,  ctc.)»  and  some  of  them  unexecuted  noise  words  or  comments, 
+made  up  by  the  program's  author.  The  following  rules  hold  in  writing 
+RAND-ABEL  programs.  Since  RAND-ABEL  is  built  upon  the  C  language,  the  C 
+conventions  for  program  form  should  be  followed  in  ease  of  uncertainty. 
+
+Form  Rules: 
+
+
+1.  One  or  more  spaces  separating  RAND-ABEL  language  constructs  is 
+considered  to  be  "white  space"  that  acts  as  a  separator.  Any 
+comment  enclosod  by  square  brackots  is  also  considered  to  bo 
+white  space.  Examples: 
+
+Let  (the  variable)  Country  be  US. 
+
+Letftho  variablejCountry  be  US. 
+
+Both  of  these  statements  are  equivalent  to  the  statement: 
+
+Let  Country  be  US, 
+
+White  space  occurring  within  a  RAND-ABEL  table  header  has 
+special  meaning;  those  rulos  do  not  strictly  apply  within  it. 
+Sco  the  subsection  "Table  Stctcment"  in  Sec.  VII  for  further 
+information. 
+
+2.  Carriogo  returns  or  line  feeds  are  equivalent  to  space 
+characters  in  creating  white  space;  they  have  no  other 
+syntactic  or  semantic  meaning.  Examples: 
+
+Declare  (the  function)  plan  by  example: 
+
+Let  (the)  plan  of  US,  (the  originator] 
+
+(in)  1984,  [the  time  period) 
+(within)  Europe  (the  locale) 
+be  Dcfend-bordcrs. 
+
+
+The  above  statement  is  equivalent  to  the  statement: 
+
+
+Declare  plan  by  example: 
+
+Let  plan  of  US,  1984,  Europe  be 
+
+Def end-borders. 
+
+
+Spaces  and  ocher  characters  occurring  within  a  string  enclosed 
+in  double  quotes  (“)  are  taken  licornlly  and  are  not  considered 
+white  space  ns  the  term  is  boing  used  in  this  discussion.  For 
+further  information  about  character  strings,  see  Sec.  Ill  or 
+the  syntax  of  character  strings  in  the  C  language  definition. 
+
+Also,  spaces  are  treated  specially  within  cable  hoadors.  See 
+the  discussion  of  the  table  statement  for  further  information. 
+
+
+-  11  - 
+
+
+III.  DATATYPES 
+
+
+BASIC  DATA  TYPES 
+
+Tho  RAND-ABEL  language  recognizes  nine  basic  data  types.  In 
+addition,  the  use  of  enumerated  data  typos  and  the  ability  to  create 
+pointers  and  arrays  allow  the  user  to  construct  an  arbitrary  number  of 
+additional  data  types.  Every  simple  variable,  value,  and  expression  in 
+the  language  is  of  one  of  these  data  types,  either  through  explicit 
+declaration  or  (in  tho  ease  of  expressions)  by  derivation  from  tho  form 
+of  constants  and  the  prior  declaration  of  variables  used  within  them. 
+
+Tho  nine  basic  RAN’D-ABEL  data  types  are  shown  on  page  12. 
+
+Integer,  real,  string,  Boolean,  process,  and  stream  data  types  are  built 
+into  the  RAND-ABEL  language.  Enumerated  data  typos,  pointors,  and 
+arrays  are  constructed  data  types.  Process  and  stream  data  typos  are 
+usually  hard-wired  into  RSAS  underlying  code  where  casual  users  do  not 
+encounter  them. 
+
+Strong  Typing 
+
+RAND-ABEL  is  a  "strongly  typed"  language.  That  is,  the  data 
+variables,  values,  or  expressions  on  either  sida  of  an  assignment 
+statement,  or  binary  operator,  or  used  in  place  of  a  function's  formal 
+parameter,  must  agree.  This  strong  typing  is  possible  because  all 
+identifiers  must  bo  declared  explicitly  prior  to  use,  thereby 
+associating  tho  identifier  with  a  data  type  (or  in  the  caso  of  a 
+structure  or  function,  a  sequence  ol  data  types).  The  RAND-ABEL 
+translator  will  flag  a  statement  as  being  in  error  if  thoro  is  a 
+mismatch  of  data  typos  within  the  statement.  (The  only  exception  to 
+this  statement  relates  to  tho  integer  data  type  as  explained  under 
+"Comparison  Operators"  in  Sec.  IV.) 
+
+
+-  12  - 
+
+
+Data  Typo  _ Description 
+
+
+Examplc(s) 
+
+
+1.  Integer1 
+
+2.  Real5 
+
+3.  String1 
+
+4.  Boolean 
+
+5.  Enumerated 
+
+6.  Array 
+
+7.  Pointer 
+
+8.  Process4 
+
+9.  Stream 
+
+
+I,  -3567,  0,  +45 
+
+
+"Ally 
+
+mi 
+
+
+Whole  number  with  +  or 
+-  prefix  optional  (no 
+intervening  space)  and  no 
+decimal  point  explicitly 
+given. 
+
+Decimal  numeric  value  with 
++  or  -  prefix  optional  (no 
+intervening  space)  and  with 
+decimal  point  explicitly 
+positioned. 
+
+String  of  aero  or  more 
+characters  delimited  by 
+quotation  marks. 
+
+A  logical  data  item 
+that  can  take  on  only 
+one  of  the  two  values: 
+
+Yes,  No. 
+
+An  explicit,  finite-ordored 
+list  of  values,  consisting 
+of  RAND-ABEL  identifiers. 
+
+A  tablo  of  values  of  one  or 
+more  dimensions,  indexed  by 
+integors  and/or  enumerated 
+data  type(s). 
+
+A  variable  whose  value  is 
+the  address  of  a  variable 
+or  function. 
+
+An  identifying  number  for  a 
+RAND-ABEL  coprocoss.  Two  rosorved 
+RAND-ABEL  keywords  represent  the 
+current  process  (Self)  and 
+its  parent  (Parent). 
+
+Output  file  pointers.  log-file 
+
+
+5.34,  -.0079,  0.0,  3. 
+
+6.02  E  23  (=  6.02  x  10**23) 
+4  E  3  (=  4000.0) 
+
+4  E  -3  (=  .004) 
+
+
+is  not  responsive. 
+
+
+Yes,  No 
+
+
+Red,  Blue,  Green 
+USA,  France,  FRG 
+
+
+‘Integers  arc  implemented  in  R/\ND-ABEL  os  the  C  language  data  type 
+"long  int",  and  arc  therefore  subject  to  C  restrictions  for  that  data 
+type. 
+
+IThosc  numbers  must  have  a  decimal  point  contained  in  them,  or  use 
+"F."  (exponential)  notation  to  represent  a  power  of  10.  If  they  use  "E" 
+notation,  the  number  following  the  "E"  must  bo  a  whole  number.  Sinco 
+use  of  the  E  operator  could  be  construed  os  part  of  an  identifier  (c.g., 
+in  4E3  or  even  4.0E3),  it  must  bo  separated  from  its  arguments  by  white 
+space  as  shown  in  the  examples  above.  Real  numbers  arc  implemented  in 
+RAND-ABEL  as  tho  C  language  data  type  "float",  (i.e.,  single  precision 
+floating-point  numbers)  end  are  therefore  subject  to  C  restrictions  for 
+that  data  type. 
+
+3A  string  may  be  up  to  256  characters  in  length  and  may  contain 
+embedded  special  characters  such  as  carriage  returns  and  lino  feeds. 
+These  are  specified  by  the  special  escape  sequence  backslash  (\),  such 
+as  \n  for  line  feed  (see  "Format  Specification"  in  Sec.  VII).  The 
+normal  syntax  and  rules  for  character  strings  in  the  C  language  apply 
+for  character  strings  in  RAND-ABEL. 
+
+‘How  coprocesses  arc  started  and  manipulated  is  described  in  Sec.  X. 
+
+
+-  13  - 
+
+
+In  fact,  the  strong  typing  goes  considerably  deeper  for  constructed 
+data  typos.  Consider  the  following  examples: 
+
+
+*  A  pointer  is  declared  to  point  to  an  array  of  real  numbers. 
+
+The  array  has  two  indices:  an  integer  and  on  enumerated  data 
+type.  All  assignments  of  this  pointer  to  other  data  constructs 
+must  retain  all  of  these  characteristics:  a  two-dimensional 
+array  scoring  real  numbers,  indexed  by  an  intogor  and  that  same 
+enumerated  data  type,  respectively. 
+
+*  A  function  is  declared  to  return  a  process  as  its  valuo  and 
+
+has  throe  formal  parameters:  a  Boolean,  a  character  string,  and  a 
+pointer  to  an  array  having  the  characteristics  given  in  the 
+previous  example.  All  calls  on  this  function  must  meet  all 
+these  dace  type  constraints,  including  the  corrocc  data  types 
+on  the  indices  and  scored  values  of  the  array  pointed  to  by  the 
+third  parameter. 
+
+
+ENUMERATED  DATA  TYPES 
+
+In  addition  to  the  six  built-in  data  types,  additional  data  types 
+may  be  constructed  by  the  following  mechanisms:  enumerated  data  typos, 
+arrays,  and  pointers  to  various  data  constructs. 
+
+Enumerated  data  types  are  constructed  by  definitions  of  the 
+following  form: 
+
+Define  Enumeration  Type-country:  Franco,  Germany. 
+
+
+This  defines  a  '•ew  data  type,  Typo-country,  that  can  cake  on 
+exactly  two  values:  the  identifiers  France  and  Germany.  Those  values 
+will  dc  called  "identifier  constants"  within  this  document.* 
+
+definitions  of  enumerated  data  types  are  always  made  in  the  Data 
+Dictionary  files.  (See  Sec.  IX.) 
+
+Enumerated  types  arc  used  in  declarations*  of  the  form: 
+
+Declare  country  by  example:  Let  country  be  Typo-country. 
+
+Declare  Maginot-line:  Let  Maginoc-linc  be  Type-country. 
+
+
+-  14  - 
+
+
+These  declarations  create  the  two  distinct  variables  "country"  and 
+"Maginot-linc"  that  can  each  take  on  only  the  values  listed  in  che 
+definition  of  Type-country:  either  "France"  or  "Germany".  (See  Sec.  V 
+for  a  description  of  declaration  options.)  Tho  phrase  by  example  is 
+optional.  It  should  be  noted  that  a  declaration  is  NOT  an  assignment 
+statement.  In  tho  above  exnmplos,  neithor  variable  has  any  value  yet. 
+
+Enumerated  data  typos  are  simply  data  typos  that  take  on  an 
+explicit,  finito-ordorod  list  of  values.  Tho  values  are  simple 
+RAND-ABEL  identifiers.  In  the  above  example,  because  Franco  is  listed 
+first,  it  can  bo  said  to  be  "less  than"  Germany.  This  property  can  be 
+used  effectively  in  conditional  statements  when  a  specific  portion  of 
+the  list  of  tho  enumerated  data  typo  needs  to  be  referenced. 
+
+The  only  way  an  identifier  constant  is  established  is  by  the 
+declaration  of  an  enumerated  data  type,  including  that  identifier 
+constant  in  its  range  (i.c.,  as  part  of  tho  specified  lisc).  Tho  set  of 
+valid  identifier  constants  is  given  in  a  definition  of  the  form: 
+
+Define  Enumeration  Typo-color:  Red,  Green,  Blue. 
+
+In  this  example,  "Typo-color"  is  a  new  data  type,  and  "Red,"  "Green," 
+and  "Blue"  arc  the  (only)  identifier  constants  in  its  range. 
+
+There  is  one  reserved  enumerated  value  that  is  a  member  of  all 
+enumerated  data  types,  even  chough  it  is  not  explicitly  listed.  It  is 
+tho  value  Unspecified.  Any  enumerated  data  type  can  cake  on  this  value. 
+The  value  can  be  explicitly  given  to  an  enumerated  type  through  uso  of 
+the  keyword  Unspecified  (or  its  synonym  "--")  used  in  place  of  an 
+
+declarations  using  enumerated  data  typos  are  usually  made  in  the 
+Data  Dictionary  files,  unless  the  variable  is  a  local  variable.  For 
+local  variables,  declarations  arc  made  in  the  relevant  RAND-ABEL  source 
+code. 
+
+
+-  15  - 
+
+
+Identifier  constant  in  an  assignment  statement.  Koto  that  it  is  KOI 
+automatically  assigned  by  RANQ-ABEL,  however.  Enumerated  types  have  KQ 
+value  before  one  is  explicitly  assigned  (i.e.,  Unspecified  is  KOT  the 
+default  value  for  enumerated  types). 
+
+All  enumerated  data  types  are  distinct  from  ono  another. 
+
+Therefore,  the  value  of  one  enumerated  data  type  cannot  be  assigned  to 
+another  (because  this  violates  the  "strict  type  checking"  rule  that  only 
+the  same  data  types  may  be  compared,  assigned,  or  operated  on  together). 
+Furthermore,  all  identifier  constants  are  distinct  from  each  othor.  For 
+example  consider  the  two  declarations: 
+
+Define  Enumeration  Type-color:  Red,  Green,  Blue. 
+
+Declare  color:  Let  color  be  Typo-color. 
+
+Define  Enumeration  Type-mood:  Angry,  Slue,  Querulous. 
+
+Declare  mood:  Let  mood  be  Typo-mood. 
+
+If  the  two  assignment  statements  wore  executed: 
+
+Let  color  be  Blue, 
+
+Let  mood  be  Blue. 
+
+chon  not  only  is  it  KOT  true  that  the  value  of  color  equals  the  value  of 
+mood  (because  the  two  Bluos  ore  distinct  identifier  constants),  BUT  IN 
+ADDITION,  THEY  CAN'T  EVEN  BE  COMPARED,  ns  in: 
+
+If  color  =  mood  Then  . . . 
+
+because,  as  stated  earlier,  color  and  mood  are  two  distinct  data  types, 
+and  therefore  it  is  illegal  to  compare  them. 
+
+
+-  16  - 
+
+
+IV.  VALUES,  EXPRESSIONS,  AND  OPERATORS 
+
+
+VALUES  AND  SIMPLE  EXPRESSIONS 
+
+In  a  programming  language,  c.  value  Is  informally  considered  Co  be  a 
+simple  term  chnc  can  be  evaluated  co  yield  oiehcc  a  storage  location  or 
+the  contents  of  that  location.  If  it  appears  on  the  lofthand  side  or'  on 
+assignment  statement,  its  evaluation  yields  a  location  at  which  the 
+assignment  is  to  be  made;  if  it  appears  on  the  righthond  side  of  an 
+assignment,  or  elsewhere,  its  evaluation  yields  a  data  value.  The 
+description  of  the  syntax  of  RAND-ABKL  relies  on  the  following 
+categories  of  values  and  expressions,  which  arc  explained  in  this 
+section: 
+
+
+Name 
+
+Informal  meaning 
+
+array-access 
+
+Access  to  the  value  stored  at  one 
+of  the  colls  in  an  array. 
+
+lvaluo 
+
+A  reference  that  can  appear  on  the 
+lofthand  side  of  an  assignment 
+statement;  that  is,  it  designates 
+a  storage  location  at  which  a  value 
+is  located. 
+
+unitparam 
+
+A  value  cnat  is  assigned  to  a  parameter 
+in  a  function  call.  A  simple  value, 
+or  else  a  parenthesized  expression. 
+
+simple-expr 
+
+Any  of  the  above  values,  or  in 
+addition  a  pointer  to  a  function. 
+
+expression 
+
+A  value,  or  a  sequence  of  values 
+related  by  operators. 
+
+The  following  tables  give  more  precise  definitions  for  these  terms, 
+nested  to  show  the  manner  in  which  some  definitions  include  others.  For 
+example,  since  the  boxes  defining  unitparam  and  lvalue  are  contained 
+within  the  box  labeled  simple-expr ,  all  of  the  varieties  of  unitparam 
+
+
+-  17  - 
+
+
+and  lvalue  (defined  by  the  contents  of  thoir  boxes)  can  be  used  wherever 
+a  siaplo-oxpr  is  needed.  Similarly,  the  various  typos  of  array-access 
+can  be  used  whenever  an  lvalue  is  needed. 
+
+
+^-expression - + 
+
+I  I 
+
+|  Report  from  function- invocation  \ 
+
+I  I 
+
+I  Evaluate  unitparam  .  .  .  unitpacaa  \ 
+
+j  Evaluate  with  format-spec  unitparan  .  .  .  unitparan  \ 
+
+I  I 
+
+|  unary-operator  expression  \ 
+
+j  expression  binary-operator  expression  j 
+
+I  I 
+
+|  siaplo-oxpr  j 
+
+I  I 
+
++ . + 
+
+
+Rules: 
+
+1.  The  Report  from  function-invocation  expression  calls  the  named 
+function  and  returns  as  its  value  the  value  returned  by  the 
+function.  Exomplo: 
+
+Let  message  be  Report  from  plan  of  US,  1984,  Europe. 
+
+2.  The  Evaluate  expression  allows  the  RAND-ABEL  writer  to  generate 
+a  string  of  characters  (usable  in  further  RAND-ABEL  processing) 
+from  a  sequcnco  of  arguments,  each  of  them  a  unitparam.  This 
+string  may  then  bo  used  in  subsequent  RAND-ABEL  statements,  for 
+example,  as  an  argument  to  a  function  that  requires  a  string  as 
+one  of  its  parameters.  The  format-spec  is  a  string  of 
+characters  that  can  control  the  formatting  of  the  resultant 
+string;  the  syntax  and  options  available  for  a  format-spec  arc 
+described  in  the  subsection  "Input/Output"  in  See.  VII. 
+
+Example: 
+
+
+Perform  date-logging 
+
+using  Evaluate  "The  ally  of"  country  "is" 
+(ally  of  country) 
+
+
+as  message. 
+
+
+-  18  - 
+
+
+In  the  above  oxomple,  note  that  blanks  arc  not  requirod  within 
+cho  character  strings  to  prevent  the  value  of  country  from 
+running  into  "The  ally  of"  and  "is";  this  is  because  the 
+default  print  format  for  an  enumerated  variable  contains  prefix 
+and  postfix  blanks.  (Soo  "Default  Output  Formats"  within  the 
+"INPUT/OUTPUT"  subsection  of  Sec.  VII.) 
+
+
+A  siapio-axpr  is  defined  by  the  following  nosted  set  of  tables. 
+The  nesting  again  shows  that  certain  terms  are  contained  within  cho 
+definitions  of  others.  For  example,  a  unit  pawn  is  one  valid  type  of 
+siapla-axpr,  so  any  of  cho  methods  of  constructing  a  unitparam  can  be 
+used  wherever  a  siapla-oxpr  is  needed. 
+
+
+-  19  - 
+
+
+■b-simpla-oxpr - + 
+
+I  I 
+
+|  Function  (unecion-nama  I 
+
+I  1 
+
+|  +-uniCparaa - +  | 
+
+
+Yes 
+
+No 
+
+onumo.accd-valuo 
+numeric- litoral 
+quoted-scring 
+variablo-namo 
+Unspecified 
+
+(  expression  ) 
+
+
+4 - -  ~  - - - - 
+
++-lvnluQ - - - + 
+
+
+variable-noma 
+
+Value  of  variabla-nnma 
+Value  of  arrny-accoss 
+
+Pointer  to  variablo-namo 
+Pointer  to  Attribute  array-namo 
+
++-array-accass - + 
+
+l  I 
+
+\  array-namo  of  simplo-axpr  ,  ...  | 
+
+!  in  ,  and  | 
+
+I  by  ,  and  | 
+
+
+,  simplo-axpr 
+,  and 
+
+
+Rules: 
+
+1.  The  Function  keyword,  followed  by  the  name  of  a  RAND-ABEL 
+function  returns  as  its  value  the  address  of  that  named 
+function.  This  returned  value  is  of  type  pointer.  Note: 
+Function  is  on  alios  for  Pointer  to. 
+
+
+-  20  - 
+
+
+2.  is  a  synonym  for  the  keyword  Unspecified,  which  is  used  in 
+conjunction  with  enumerated  data  types.  (See  the  discussion  of 
+enumerated  data  types  in  Sec.  III.)  In  tables,  the  "don't 
+care"  symbol  "**"  is  also  available. 
+
+3.  Tim  variablo-nnno  or  array-access  following  the  keywords  Value 
+of1  must  be  of  data  typo  pointer.  Tito  clause  returns  the 
+contents  of  the  storage  location  pointed  at  by  that  pointer. 
+
+A.  The  Pointer  to*  clause  yields  a  value  of  typo  pointer.  For 
+example: 
+
+Pointer  to  Attribute  country-array 
+roturns  a  pointer  to  the  array  named  "country-array". 
+
+
+OPERATORS 
+
+The  operators  used  to  construct  expressions  con  be  categorized  os 
+numeric  operators,  comparison  operators  (providing  equality  and 
+inequality  tests),  logical  operators  (yielding  a  Yes  or  No  rosult),  and 
+string  operators.  Each  of  these  categories  is  described  below.  In  each 
+cose,  we  list  a  "preferred  form"  for  roprosonting  these  operators  to 
+create  os  much  consistency  and  roadability  in  RAND-ABEL  programs  as 
+possible. 
+
+
+'The  Value  of  keyword  is  identical  in  moaning  to  Occupant  of  used 
+in  earlier  vorsions  of  RAND-ABEL.  Both  keywords  ore  currently 
+supported,  but  Occupant  of  is  being  phased  out. 
+
+*Thc  Pointer  to  keyword  has  the  same  meaning  as  Address  of  in 
+earlier  versions.  Both  keywords  arc  currently  supported,  but  Address 
+of  is  being  phased  out. 
+
+
+-  21  - 
+
+
+Numeric  Operators 
+
+
+Mathematical 
+Notation 
+(Preferred  Form) 
+
+"English- like" 
+Notation 
+
+Meaning 
+
+plus 
+
+Addition 
+
+- 
+
+minus 
+
+Subtraction 
+
+* 
+
+times 
+
+Multiplication 
+
+/ 
+
+divided  by 
+
+Division 
+
+modulo 
+
+Modulo 
+
+negative 
+
+unary  sign 
+
+When  on  integer  variable  accepts  che  resulc  of  the  division  of  two 
+integers,  che  result  will  bo  truncated  coward  zero  to  an  integer. 
+Examples: 
+
+
+73/10  evaluates  to  the  value  7 
+73/10  evaluates  to  tho  value  -7 
+
+
+Division  by  zero  results  in  a  run-time  error. 
+
+Those  operators  can  yield  floating  point  exceptions  (i.c.,  error 
+conditions)  in  a  machino-dopendont  mannor. 
+
+The  modulo  operator  returns  the  remainder  upon  division.  Example: 
+
+23  modulo  8 
+
+
+is  7.  The  modulo  operator  requires  integer  arguments. 
+
+Only  integer  and  real  data  types  may  be  used  as  arguments  for  these 
+operators.  (Exception:  the  more  stringent  requirement  for  modulo 
+
+
+-  22  - 
+
+
+Comparison  Operators 
+
+Comparison  operators  arc  categorized  below  as  "equality”  or 
+"inequality"  typo  operators.  All  comparison  operators  yield  a  value 
+that  is  Boolean.  It  is  permissible  that  one  of  the  operands  to  these 
+comparison  oporators  have  on  ambiguous  data  type,  IF  that  ambiguity  can 
+bo  resolved  by  the  requirement  of  consistency  with  the  other  operand's 
+data  type.  RAND-ABEL  does  not,  howevor,  accept  two  operands  of 
+ambiguous  data  typo  and  attempt  to  resolve  the  mutual  ambiguity. 
+(Ambiguity  can  ariso  from  a  value  like  the  identifier  constant  Blue,  if 
+more  chan  one  enumerated  data  typo  contains  this  constant  in  its  range.) 
+
+Equality  Tests 
+
+
+Mathematical 
+
+Notation 
+
+"English- like" 
+
+(Preferred  Form) 
+
+Notation 
+
+Meaning 
+
+- 
+
+is 
+
+Is  equal  to 
+
+(s  not 
+are  not 
+
+Is  not  equal  to 
+
+Both  arguments  to  these  operators  must  have  tho  same  typo  (with  one 
+exception:  an  integer  appearing  where  a  real  is  needed  is  interpreted  as 
+a  real  for  that  purpose) . 
+
+Two  operands  from  any  one  data  typo  may  be  compared  using  those 
+equality  operators. 
+
+Two  strings  arc  equal  only  if  they  have  the  same  length  (including 
+possibly  zero  length--!. e. ,  tho  null  string)  and,  at  each  respective 
+character  position,  their  corresponding  characters  arc  equal. 
+
+(Upper-case  and  lower-case  versions  of  a  character  are  treated  as 
+different  characters  in  this  test.) 
+
+
+-  23  - 
+
+
+Two  enumerated  values  are  equal  only  if  they  are  represented  by  cho 
+same  identifier  constant  and  are  in  cite  range  of  the  same  (enumerated) 
+data  type.  It  is  an  error  if  two  enumerated  values  ore  compared  that 
+belong  to  different  (enumerated)  data  types.  The  reserved  word 
+Unspecified  is  tho  only  exception  to  this  rule:  Any  enumeration  may  be 
+compared  with  Unspecified. 
+
+
+Inequality  Tests 
+
+
+Mathematical 
+Notation 
+(Preferred  Form) 
+
+"English- like" 
+Notation 
+
+Moaning 
+
+>= 
+
+is  at  least 
+
+Greater  chan  or 
+
+equal  to 
+
+<= 
+
+Is  at  most 
+
+Less  than  or 
+
+equal  to 
+
+> 
+
+is  greater  than 
+
+Greater  chan 
+
+< 
+
+is  less  than 
+
+Loss  than 
+
+Both  arguments  to  those  operators  must  have  the  same  typo  (with  ono 
+exception:  an  integer  appearing  whore  a  real  is  needed  is  interpreted  ns 
+a  real  for  that  purpose) . 
+
+Tho  following  data  typos  may  bo  compared  using  cho  inequality 
+operators:  integer,  real,  string,  enumerated.  Note  that  Boolonn  data 
+typos  CjVIHOT  bo  compared  using  those  operators. 
+
+Integer  and  real  data  types  compare  according  to  their  values. 
+
+Strings  a  and  b  compare  ns  follows.  (Note:  in  comparing  two 
+individual  characters,  the  collating  sequence  for  the  individual 
+computor  on  which  RAND-ABEL  resides  is  used;  this  test  is  therefore 
+implementation  dependent.) 
+
+
+-  24  - 
+
+
+a.  If  a  And  b  Are  both  the  null  string,  they  Are 
+
+b.  If  one  of  then  is  che  null  string  And  the  other  is  utu, 
+the  null  string  is  less  then  the  other. 
+
+c.  Otherwise,  compare  strings  a  And  b  character  by  ch&r&ei&v;  H 
+each  of  these  comparisons  is  Yes  (i.e.,  true)  er  ?U«i  vise  rh* 
+end  of  one  of  che  strings  is  reached,  but  the  cth*>,  scr.-ng 
+still  has  additional  characters,  then  the  shorter  s*vlt£  ir 
+less  chan  the  longer  one. 
+
+d.  v  Setwise,  compare  strings  a  and  b  character  by  ch&. 
+
+i 'ch  of  chose  comparisons  is  Yes  (i.e.,  true'  up  to  c«  acter 
+position  k,  but  is  No  (i.e.,  false)  at  charatet  position  k+1, 
+then  if  string  a's  character  in  position  k+l  is  less  than,  or 
+greater  than,  string  b's  character  in  position  k+l,  then  string 
+a  is  less  than,  or  greater  than  (respectively)  string  b. 
+
+
+Knuiatkaied  values  compare  with  the  inequality  operators  according 
+to  che  following  rules: 
+
+
+a.  If  either  or  both  values  is  Unspecified  (or  its  synonym  "--"), 
+then  che  result  is  No. 
+
+b.  If  the  values  belong  to  different  (enumerated)  data  types,  it 
+is  an  error. 
+
+c.  Identifier  constant  Cl  is  less  chan  identifier  constant  C2  if 
+and  only  if  Cl  appears  before  C2  in  the  sequence  of  identifiers 
+defining  the  range  of  their  common  (enumerated)  data  type.  If 
+they  are  che  same  identifier  within  this  data  type,  they  are 
+equal.  For  example,  for  che  enumerated  data  type  defined  as 
+
+Define  Enumeration  Type-color:  Red,  Green,  Blue,  Purple. 
+
+comparisons  will  show 
+
+Red  <  Green 
+Purple  >  Blue 
+Green  *  Green 
+
+
+Logical  Operators 
+
+
+Logical  operators  arc  used  to  combine  two  different  Boolean 
+operands--that  is,  ones  taking  the  values  Yas  or  No--to  yield  a  new 
+Boolean  value.  For  example,  a  RAND-ABEL  program  might  require  the 
+logic: 
+
+
+-  25  - 
+
+
+If  Agreement  and  (Red-violatcs  or  Blue-violatos) 
+Then  Let  Agreement  be  No. 
+
+
+The  assignment  of  the  value  No  to  the  variable  "agreement"  will 
+take  place  only  if  the  existing  value  of  agreement  is  Yes,  and  in 
+addition  either  "Rad-violaees"  or  "Blue-violatos"  (or  bosh)  is  Yes. 
+
+
+"English- like" 
+
+Mathematical  Notation 
+
+Notation  (Preferred  Form)  Meaning 
+
+
+& 
+
+and 
+
+Logical  "and" 
+
+1 
+
+or 
+
+Logical  "or" 
+
+not 
+
+(unary)  Logical 
+
+«•  it 
+
+The  meanings  of  those  operators  ore  given  by  the  following  toble: 
+
+
+I  II  I  I 
+
+a  |  b  ||  not  o  |  a  and  b  |  a  or  b 
+
+- + . ++ . + . + . 
+
+yes  |  yes  | |  no  |  yes  |  yes 
+
+yes  j  no  j |  no  j  no  j  yes 
+
+no  j  yes  j  j  yes  |  no  j  yes 
+
+no  j  no  j  j  yes  j  no  j  no 
+
+
+The  logical  operators  roquire  Boolean  values  (that  is,  Yes  or  No) 
+as  their  arguments  and  return  a  Boolean  value  as  the  result. 
+
+Remember,  Boolean  variables  are  not  enumerations.  That  is,  they 
+cannot  be  Unspecified.  In  tables,  can  be  used  to  denote  "don't 
+
+care"  for  Booleans  as  for  any  other  data  type.  However,  or 
+"Unspecified"  con  be  used  only  for  enumerated  data  types. 
+
+
+-  26  - 
+
+
+String  Operator 
+
+There  is  one  string  operator,  which  performs  concatenation  of  two 
+strings  to  yield  one  resulting  string.  Concatenation  may  bo  used,  for 
+example,  in  the  creation  of  tailored  messages,  ns  in: 
+
+
+Let  outstr  be  "WARNING:  "  $  message  $  "  PLEASE  RESPOND  (Y/N): 
+
+In  this  example,  the  string  variable  "outstr"  receives  a  string 
+containing  a  variable  "message",  along  with  standard  prefix  and  suffix 
+strings. 
+
+
+Mathematical 
+Notation 
+(Preferred  Form) 
+
+"English-liko" 
+
+Notation 
+
+Moaning 
+
+$ 
+
+concatenated  with 
+
+Concatenation 
+
+Only  string  values  may  be  concatenated  togothcr.  The  result  is  a 
+string  consisting  of  the  first  string  followed  by  the  second  string. 
+Example: 
+
+"This  is  "  $  "a  test." 
+
+"This  is  "$"a  test." 
+
+"This  is  "  concatenated  with  "a  tost." 
+
+
+"This  is  a  test." 
+
+
+are  all  equivalent  to: 
+
+
+-  27  - 
+
+
+There  is  a  way  to  include  values  of  other  data  typos  by  converting 
+thea  to  strings  with  the  Evaluate  statement  as  described  under  "Values 
+and  Simple  Expressions"  at  the  beginning  of  this  seceion. 
+
+Order  of  Precedence 
+
+Whenever  there  is  any  ambiguity  or  uncertainty,  parentheses  should 
+bn  used  to  specify  the  order  in  which  operators  should  be  applied  within 
+an  expression.  When  more  than  one  operator  is  used  in  a  sequence, 
+precedence  relations  aro  used  to  resolve  the  order.  Operators  with 
+higher  precedence  arc  performed  first;  within  the  same  precedence, 
+operators  are  performed  within  the  expression  from  left  to  right. 
+Operators  of  cho  same  precedence  associate  to  the  loft.  For  example, 
+
+(a  &  b  &  c)  «  ((a  t  b)  &  c). 
+
+The  following  table  gives  the  precedence  of  RAND-ABEL  operators. 
+Operators  in  cho  same  row  aro  of  equal  precedence. 
+
+
+Highest  precedence: 
+
+
+~  (not) 
+
+-  (unary) 
+
+*  / 
+
+modulo 
+
+<  > 
+
+<=  >: 
+
+Z  mZ 
+
+&  (and) 
+
+1  (°r) 
+
+Lowest  precedence: 
+
+
+-  25  - 
+
+
+V.  DECLARATIONS 
+
+
+TO  DECLARE  A  VARIABLE 
+
+^-declaration - - - - + 
+
+1  ,  I 
+
+|  Declare  variable-naze:  | 
+
+I  Declare  variable-naze  by  example:1  j 
+
+
+Let  variable-nano  be  expression. 
+
+Let  variable-nano  be  identifier  constant. 
+Let  variable-nane  be  enumerated  variable. 
+
+
+Rules: 
+
+
+1.  The  type  of  the  variable  becomes  the  same  os  the  type  of  the 
+expression. 
+
+2.  The  type  of  the  expression  must  be  uniquoly  determinable  at  the 
+time  this  statement  is  encountered.  (For  example,  if  the  some 
+identifier  constant  appears  in  tho  range  of  several  enumerated 
+data  types,  chon  it  may  not  be  used  in  on  assignment  uithin  o 
+declaration.)  If  Typo-color  includes  Red,  Blue,  and  Green, 
+while  Type-mood  consists  of  Happy,  Blue,  and  Quorulous,  then 
+
+Declare  tint:  Let  tint  be  Green. 
+
+declares  the  variable  "tint"  to  be  of  type  "Type-color",  but 
+
+Declare  tint:  Let  tint  be  Blue. 
+
+is  ambiguous  and  therefore  an  error. 
+
+Examples: 
+
+Declare  troop-strength: 
+
+Let  troop-strength  be  10000. 
+
+Declare  force-ratio: 
+
+Let  force-ratio  be  5.8. 
+
+Declare  mossngo: 
+
+Let  message  be  "Help!". 
+
+
+lThe  phrase  by  example  is  optional  in  a  declaration. 
+
+
+-  29  - 
+
+
+Declare  agreement; 
+
+Let  agreement  be  Yes. 
+
+Declare  current-force-tesc  by  example; 
+
+L«t  eurrene-force-tese  be  Function  calel. 
+
+Declare  alliance-member: 
+
+Let  alliance-member  bt  Franct. 
+
+
+The  spatial  alignment  of  these  statements  is  not  important; 
+they  are  aligned  by  variable  name  here  merely  for  ease  in 
+reading. 
+
+
+TO  DECLARE  AN  ARRAY 
+
+The  syntax  diagram  below  shows  how  to  declare  a  RAND-ABRL  array. 
+
+
+^-declaration - - - — - - + 
+
+I  I 
+
+|  Declare  array- name:  | 
+
+j  Declare  array-naze  by  example:  I 
+
+i  Let  array-naze  of  siaple-expr  ,  .  .  .  j 
+
+l  Let  array-naze  In  siaple-expr  ,  and  j 
+
+j  Let  array-naze  by  siaple-expr  ,  and  j 
+
+I  I 
+
+|  .  .  .  ,  siaple-expr  \ 
+
+j  .  .  .  ,  and  siaple-expr  | 
+
+I  I 
+
+|  be  expression.  | 
+
+
+Rules: 
+
+
+1.  There  must  bo  at  least  one  siaplo-axpr. 
+
+2.  The  type  of  the  array  is  the  typo  of  the  expression ,  which  must 
+bo  determinable  at  the  time  this  statement  is  encountered. 
+
+3.  Arrays  con  have  one  or  more  indices.  (Arrays  with  zero  indices 
+are  equivalent  to  variables.) 
+
+
+-  30  - 
+
+
+A.  The  sSppla-exprs  that  are  used  to  index  the  array  muse  be 
+either  of  type  integer  or  enumerated. 
+
+5.  If  any  index  is  of  eypo  integer,  ie  is  designated  by  a  single 
+integer  constant,  n,  in  place  of  sipple-expv.  This  index  can 
+then  take  on  the  integral  values  0  .  .  .  n  .  Note  that  index  n 
+means  chat  the  index  can  eake  on  n+1  distinct  values. 
+
+
+Note  that  a  one-dimensional  array,  indexed  by  the  smallest  positive 
+integers  (1,  2,  3,  .  .  .  )  is  ofeen  called  a  "vector"  in  some  oeher 
+computer  languages.  A  two-dimensional  RAND-ABEL  array  indexed  by  the 
+smallest  positive  integers  corresponds  with  the  term  "matrix"  in  other 
+computer  languages. 
+
+Example  of  an  array  with  integer  indices  and  enumerated  value: 
+
+
+Declare  chessboard-square: 
+
+Let  chessboard-square  of  1 ,  and  7  be 
+Typo-ehoss-piece. 
+
+
+where  Typa-che.ss-piece  has  been  previously  defined  as 
+
+Define  Enumeration  chessboard-square: 
+
+king,  queen,  knight,  bishop,  rook,  pawn,  empty. 
+
+
+TO  DECLARE  A  FUNCTION 
+
+Every  function  that  is  used  must  bo  declared.  Every  function 
+either  always  returns  a  value,  or  never  returns  a  value.  The  function 
+declaration  indicates  which  of  these  cases  applies,  as  well  ns  the  data 
+typo  of  elm  arguments  and  value  returned,  if  any. 
+
+
+-  31  - 
+
+
+•^•declaration . - - - + 
+
+I  I 
+
+|  Declare  func-narte:  | 
+
+j  Declare  func-nama  by  example;  j 
+
+I  I 
+
+S  Let  expression  be  Report  from  named- function-call .  j 
+
+\  Perform  naned- function-call .  i 
+
+I  I 
+
++ . - . + 
+
+
+Rules: 
+
+
+1.  The  first  form  must  be  used  when  cho  function  returns  a  value. 
+The  typo  of  the  axprcssion  must  be  the  same  as  the  type  of 
+value  returned  by  the  function.  The  typo  of  the  expression 
+must  bo  determinable  at  cho  time  this  statement  is  encountered. 
+
+2.  The  second  form  is  used  only  when  a  function  does  not  return  a 
+value, 
+
+3.  A  function  must  bo  doclarcd  before  it  is  defined,  and  it  must 
+bo  defined  before  any  \so.  See  Sec.  VI  for  a  description  of 
+function  definitions. 
+
+
+A  named- function-call  is  one  that  explicitly  uses  the  function  namo 
+to  invoke  it,  not  a  poincor  to  choc  function.  See  Sec.  VI  for  a 
+description  of  named- function-call . 
+
+
+Examples: 
+
+
+Declare  select-country: 
+
+Let  France  be  Report  from 
+
+select-country  using  alliance  as  range, 
+
+and  strength  as  criterion. 
+
+Declare  force-calc  by  example: 
+
+Let  5.0  be  Report  from  force-calc  using 
+
+France  as  country. 
+
+Declare  validity-check: 
+
+Perform  validity-check. 
+
+
+-  32  - 
+
+
+Functions  may  have  parameters  associated  with  choir  use.  F.ach  such 
+parameter  is  given  a  keyword  chat  is  used  in  the  declaration  of  the 
+function,  in  its  definition,  and  in  all  calls  to  tho  function.  The 
+pairing  of  this  keyword  with  a  value  means  chat  arguments  to  a  function 
+can  bo  listed  in  any  order.  Within  the  definition  itself  the  keyword 
+behaves  like  a  local  variable  chat  has  been  assigned  the  associated 
+argument  value  from  eho  function's  coll.  Such  keywords  muss  bo  unique 
+for  a  given  function,  but  can  be  (and  frequently  are)  reused  for  ocher 
+functions. 
+
+
+-  33  - 
+
+
+VI.  FUNCTIONS 
+
+
+DEFINING  A  FUNCTION 
+
+RAND-ABEL  hns  two  typon  of  functions:  those  that  return  a  value 
+(always),  and  those  that  do  not  (over).  The  function  declaration 
+indicates  which.  A  declaration  is  any  of  the  declaration  types 
+(starting  with  the  keyword  Declare)  listed  in  Sec.  V  titled 
+Doc’ jrations.  It  is  an  essential  part  of  the  function  definition. 
+
++- function-definition - + 
+
+I  I 
+
+|  Define  named- function-call  :  declaration  ...  I 
+
+j  declaration  j 
+
+{  stataaant  ...  j 
+
+j  stataaant  | 
+
+I  I 
+
+|  End.  | 
+
+I  I 
+
++ . - . + 
+
+
+If  the  function  returns  a  value,  at  least  one  of  the  statements 
+within  the  function  definition  must  be  "Exit  Reporting  sinple-oxpr" . 
+Moreover,  one  such  statement  must  bo  reached  during  execution  of  the 
+function,  otherwise  a  run-time  error  will  occur. 
+
+If  the  function  does  not  return  a  value,  it  is  exited  either  by  on 
+explicit  Exit  statement  or  else  by  "falling  through"  the  statements  to 
+the  End  statement. 
+
+Local  variables  may  bo  declared  after  the  definition  heading  of  a 
+function  and  before  any  executable  code.  These,  along  with  any  function 
+parameters  (which  are  NOT  declared  in  the  function  heading),  may  be 
+referenced  like  any  other  variable  throughout  the  function  body  but  are 
+not  accessible  to  any  other  functions  called  from  within  that  function. 
+
+A  function  may  call  itself,  either  directly  or  indirectly,  but  is  given 
+a  new  set  of  local  variables  each  time. 
+
+
+-  34  - 
+
+
+Note  that  local  variables  may  also  bo  declared  after  the  opening 
+brace  and  before  any  executable  code  within  an  internal  program  block. 
+Such  a  variable  will  bo  valid  until  the  corresponding  closing  brace  is 
+reached. 
+
+
+Examples: 
+
+
+Define  Timed-wakoup: 
+
+If  Time  is  at  least  Timo-to-wako  of  (Command-id  of  self) 
+Then 
+
+{  Record  "Starting  move  at  maximum  time  =  "  Time 
+Exit  Reporting  Yes. 
+
+) 
+
+Else  Exit  Reporting  No. 
+
+End. 
+
+
+NAMED  FUNCTION  CALLS  AND  FUNCTION  INVOCATIONS 
+
+A  naaad- function-call  is  an  invocation  of  a  function  in  which  the 
+name  of  the  function  appears  explicitly.  It  is  required,  for  example, 
+as  part  of  the  declaration  of  chat  function  (which  announced  tho  names 
+and  data  types  of  its  arguments,  and  the  typo  of  its  returned  valuo,  if 
+any). 
+
+
+^r-naaed- function-call - + 
+
+I  I 
+
+|  func-naao  I 
+
+I  I 
+
+|  func-ntimo  using  expression  as  param-noao  ,  .  .  .  I 
+
+j  for  ,  and  | 
+
+
++ 
+
+
+,  expression  as  param-naao 
+,  and  for 
+
+
+-  35  - 
+
+
+Rules: 
+
+
+1.  In  a  named- function-call ,  cho  func-namo  must  be  given 
+explicitly;  a  pointer  to  a  function  is  not  allowed  in  this 
+ease. 
+
+2.  When  used  os  on  example  in  a  function  declaration,  the  typos  of 
+each  expression  must  bo  determinable  at  the  time  the 
+declaration  is  encountered. 
+
+
+By  contrast,  a  function-invocation  has  the  same  form  as  a  named- 
+function-call  ,  but  it  con  have  a  pointer  to  a  function  in  place  of  an 
+explicit  function  name: 
+
+
++- function- invocation - + 
+
+I  I 
+
+|  named- function-call  | 
+
+I  I 
+
+|  func-ptr  | 
+
+I  I 
+
+|  func-ptr  using  expression  as  param-name  ,  ...  j 
+
+
+for  ,  and 
+
+expression  as  paraa-namo 
+
+
+When  a  function  does  not  return  a  value,  it  is  invoked  through  the 
+statement 
+
+
+Perform  function-invocation . 
+
+
+When  a  function  returns  a  value,  it  is  accessed  via  the  expression 
+
+
+Report  from  function-invocation 
+
+
+-  36  - 
+
+
+Examples: 
+
+
+Let  message  be  Report  from  noxc-movo 
+
+using  pawn  as  whites- lnst-movc-picco. 
+
+If  Report  from  Timcd-wakcup 
+
+using  now  as  time  is  Yes 
+Then  Perform  Work. 
+
+Else  Perform  Error-handler. 
+
+
+If  {unction-CQ-parHorm  is  a  function  pointer,  then 
+
+
+Let  function-co-porform  be  the  Function  noxc-movo. 
+Perform  funccion-to-pcrform  using  pawn  as 
+whitos-lasc-movc-pioco. 
+
+
+-  37  - 
+
+
+VII.  RAND-ABEL  STATEMENTS 
+
+
+Statements  arc  used  in  RAND-ABEL  to  define  the  operation  of  a 
+function.  (Several  statements  can  also  occur  at  the  "top  level"  in 
+RAND-ABEL  outside  of  a  function  definition  to  sot  the  global  context  in 
+which  other  statements  will  operate:  namely,  declarations,  the  Data 
+Dictionary  (see  See.  IN),  and  the  Trace  ond  Untrace  statements. 
+
+The  various  forms  of  RAND-ABEL  statements  are  described  below 
+within  the  following  categories: 
+
+Assignment 
+
+Conditional  Execution 
+
+Repetitive  Execution 
+
+Table  Statement 
+
+Functions:  Invoking  and  Exiting 
+
+Input/Output 
+
+Compound  and  Null  Statements 
+
+All  RAND-ABEL  statements  begin  with  a  keyword  that  uniquely 
+identifies  the  statement  typo.  In  general  all  RAND-ABEL  statements  ond 
+with  a  period;  the  only  exceptions  are  compound,  conditional,  and 
+repetitive  statements  whoso  form  has  an  embedded  statenant  as  the  last 
+entity  within  the  form;  In  those  eases,  the  period  ending  the  embedded 
+statoaont  becomes  the  statement  delimiter. 
+
+ASSIGNMENT 
+
+Assignment  statements  are  used  to  store  a  value  into  the  location 
+specified  by  either  a  variable  or  an  array  element. 
+
+
+-  38 
+
+
++-scatenanc - + 
+
+I  I 
+
+|  Let  lvalue  be  expression .  1 
+
+I  Let  pointer  be  expression .  | 
+
+
+j  Increase  lvalue  by  expression.  j 
+|  Decrease  lvalue  by  expression .  j 
+|  Multiply  lvalue  by  expression.  j 
+j  Divide  lvalue  by  expression .  j 
+
+I  I 
++ . + 
+
+
+Rule:  The  (data)  typos  of  tho  terms  on  cho  "lofthand  side"  and 
+"righchnnd  side"  of  the  assignment  statement  must  match. 
+
+Two  exceptions: 
+
+1.  If  a  real  number  is  required  by  tho  lofthand  side,  then  if  the 
+value  of  cho  expression  is  integer  chat  integer  is  coerced  into 
+a  real  for  cho  purpose  of  this  statement. 
+
+2  Tho  righchand  side  can  be  an  enumerated  identifier  constant  of 
+ambiguous  data  type  if  that  ambiguity  is  rosolvcd  by  tho  typo 
+of  the  lvalue  or  pointer  on  tho  lofthand  side.  For  oxamplo, 
+the  "Blue"  in 
+
+Let  color  be  Blue. 
+
+could  be  "mood"  except  that  the  typo  associated  with  "color" 
+unambiguously  identifies  cho  type  of  Blue  ns  a  member  of  the 
+enumerated  data  typo  "Typo-color". 
+
+
+Tho  terms  lvalue  and  expression  arc  defined  in  Sec.  IV.  In 
+general,  nn  lvalue  is  what  can  normally  occur  on  the  lofthand  side  of  an 
+assignment  statement:  namely,  a  term  giving  tho  address  of  a  named 
+storage  location,  not  a  pure  value. 
+
+
+-  39  - 
+
+
+Examples : 
+
+
+Let  gross-profit  be  gross-sales  -  cost-of-salos. 
+
+Let  forco-racio  be  Report  from  force-calc 
+
+using  France  as  side-1  and  Yugoslavia  as  sido-2. 
+
+Decrease  forco-racio  by  2.S  . 
+
+
+CONDITIONAL  EXECUTION 
+
+Conditional  execution  is  controlled  by  the  If  statement.  It  allows 
+certain  RAND-ABEL  statements  to  bn  executed  only  if  certain  conditions 
+are  true.,  or  arc  false. 
+
+
++-statnmcnt - + 
+
+I  I 
+
+|  If  Boolean-expression  Then  statement  | 
+
+I  I 
+
+|  If  Boolean-expression  Then  statement  Else  statement  | 
+
+
+Rules 
+
+
+1.  The  Boolean-expression  is  any  expression  chat  evaluates  to  type 
+Boolean  (i.o.,  chat  cakes  on  values  Yes  and  No). 
+
+2.  If  the  Boolean-expression  evaluates  to  Yes,  then  the  first 
+statement  is  executed. 
+
+3.  If  the  Boolean-expression  evaluates  to  No  and  the  Else  clause 
+is  present,  the  statement  following  the  Else  keyword  is 
+executed.  If  the  Boolean-expression  is  No  and  no  Else  clause 
+is  present,  no  action  is  taken. 
+
+A.  As  is  normal  programming  language  practice,  if  conditional 
+statements  are  nested,  an  Else  clause  is  attached  to  the 
+nearest  previous  If  clause  chat  docs  not  yet  have  an  Else 
+clause  attached.  (If  one  needs  a  null  If  or  Else  clause  to  keep 
+the  logic  straight,  use  the  RAND-ABEL  null  statement, 
+consisting  of  just  a  period,  as  in: 
+
+If  king-unchecked  Then.  Else  Perform  Think. 
+
+or 
+
+If  king-in-check  Then  Perform  Think.  Else. 
+
+
+-  AO  - 
+
+
+This  statement  is  not  delimited  by  a  period  Cor  reasons  given  at 
+the  beginning  oC  this  section:  the  last  statement  embedded  within  the  If 
+statement  will  contain  its  own  delimiter. 
+
+Either  statement  can  of  course  bo  a  compound  statement  (that  is, 
+one  or  more  declarations  and  statements  contained  within  "("  and 
+braces)  thereby  allowing  any  needed  r  nplexity  in  logic  to  be  stated  in 
+the  Then  or  Else  clauses. 
+
+
+Example: 
+
+If  usor-rosponso  is  "Y"  or  user-response  is  'Y.’.S" 
+
+Then 
+
+(  Perform  Recalculation. 
+
+Print  "Calculation  Completed.  More?  (Y/N):  " 
+
+Let  user-response  be  Report  from  query-user. 
+
+) 
+
+Else  If  user-response  is  "N"  or  user-response  is  "NO" 
+
+Then 
+
+{  Print  "No  action  taken.  More?  CY/N) :  " 
+
+Let  user-response  be  Report  from  query-user. 
+
+) 
+
+Else  If  user-response  is  "?" 
+
+Then  Perform  Help-function. 
+
+Else 
+
+(  Print  "Your  response  not  understood." 
+
+Perform  Help-function. 
+
+) 
+
+Note  that  If  .  .  .  Then  rules  can  also  be  formed  using  the  table 
+statement. 
+
+
+REPETITIVE  EXECUTION 
+
+The  RAND-ABEL  For  and  While  statements  allow  one  or  more  statements 
+to  be  executed  repetitively- -that  is,  zero  or  more  times,  depending  on 
+the  controlling  variable  or  expression. 
+
+
+-  41  - 
+
+
++-stacopicnt - + 
+
+I  I 
+
+|  For  variable  :  statement  j 
+
+I  I 
+
+|  While  Boolean-expression  :  statement  | 
+
+I  I 
+
+4- . + 
+
+
+Rules: 
+
+
+1.  In  the  firse  form,  chc  variable  muse  be  of  enumerated  data 
+typo.  Tito  statement  is  executed  once  for  each  identifier 
+constant  in  the  range  of  chc  variable,  with  the  variable  bound 
+in  turn  to  each  identifier  constant,  in  the  order  in  which  tho 
+identifier  constants  are  declared  as  being  the  range  of  the 
+enumerated  data  typo. 
+
+Examples: 
+
+
+Define  Enumeration  Type-alliance:  Franco,  Germany,  Spain. 
+Declare  alliance-members: 
+
+Let  alliance-members  be  Type-alliance. 
+
+For  aiiinnco-members  Perform  Force-cnlc. 
+
+For  each-country  (US  or  UK  or  FRG  or  Belgium): 
+
+< 
+
+Let  Membership  of  each-country  bo  Nato. 
+
+Let  Side  of  each-councry  be  Blue. 
+
+) 
+
+
+Noco  chat  chc  use  of  the  or  Keyword  hero  limits  the  execution 
+of  this  for  statement  to  only  the  listed  identifier  constants 
+within  the  enumerated  data  typo  "oach-country".  All  other 
+elements  of  chat  data  type  arc  excluded  by  use  of  cha  or 
+construct. 
+
+2.  In  tho  While  form,  the  Boolean-expression  is  evaluated;  if  its 
+value  is  Yes,  then  the  statement  is  executed;  if  the  value  is 
+No,  no  further  action  is  taken.  If  the  statement  executes, 
+the  Boolean-expression  is  then  re-evaluated,  and  if  Yes  the 
+statement  is  re-oxccuted.  This  sequence  continues  until  the 
+value  of  the  Boolean-expression  becomes  No. 
+
+
+Example: 
+
+Let  k  be  3. 
+
+While  k>0:  { 
+
+Print  resultsfilo  k. 
+
+Decrease  k  by  l. 
+
+) 
+
+loads  to  the  following  records  sent  to  the  rosultsfilo: 
+
+
+3 
+
+2 
+
+1 
+
+The  following  two  RAND-ABEL  statements  are  used  within  a  repetitive 
+execution  to  change  ehe  flow  of  the  program's  logic: 
+
+
++-sc/itcxenc - - - + 
+
+I  I 
+
+|  Continue  | 
+
+I  I 
+
+|  Break.  I 
+
+I  I 
+
++ . + 
+
+
+Rules: 
+
+
+1.  Within  a  repetitive  execution,  the  Continue  statement  acts  as 
+completion  of  the  current  repetition,  and  control  passes  to  the 
+next  repetition  of  the  loop,  if  any. 
+
+2.  The  Break  statement  acts  os  completion  of  all  repetitions  of 
+the  loop,  and  control  passes  to  the  statement  following  the 
+repetitive  statement. 
+
+3.  In  both  cases,  control  returns  to  the  most  immediately 
+inclusive  Table,  For,  or  While  statement.  That  is,  to  the 
+innermost  repetitive  statement  if  they  arc  nested. 
+
+Examples: 
+
+
+Let  k  be  3. 
+
+While  k>0: 
+
+{ 
+
+If  k=l  Then  Break. 
+
+Else  {Print  resultsfilo  k.  Decrease  k  by  1.) 
+
+) 
+
+
+-  A3  - 
+
+
+loads  co  the  sequence  of  records  in  rosultsfile: 
+
+3 
+
+a 
+
+9» 
+
+Let  k  be  3. 
+
+While  k>0: 
+
+( 
+
+If  k=2  Then  Continue. 
+
+Else  (Print  resulesfile  k.  Decrease  k  by  l.) 
+
+) 
+
+loads  co  one  printed  record  in  resulesfile: 
+
+3 
+
+followed  by  an  infinite  loop,  with  k«2  and  the  While  statement 
+repetitively  executing  with  no  effects. 
+
+Repetitive  execution  can  also  be  achieved  by  cho  RAND-ABEL  cable 
+statement.  This  special  RAND-ABEL  statement  is  described  in  the 
+following  section. 
+
+TABLE  STATEMENT 
+
+The  Table  statement  is  the  most  powerful  statement  in  RAND-ABEL. 
+
+It  can  bo  used  co  call  a  function  repeatedly,  with  different  arguments, 
+
+or  a  decision  cable.  It  is  an  example  of  a  statement  with  a  two- 
+* 
+
+dimensional  syntax;  the  spatial  layout  of  the  cable-header  is  important 
+in  determining  cho  meaning  of  cho  cable  statement. 
+
++-stateaanc - + 
+
+I  I 
+
+|  Table  func-ntma  I 
+
+|  Table  conpound-scotcacnt  I 
+
+Decision  Table  I 
+
+
+tahjo-hcodcr. 
+table-body . 
+
+
+-  A  A  - 
+
+
+Function  Table 
+
+Basically,  che  table  statement  allows  the  named  function  or  tho 
+compound -scaCcaenc  to  be  executed  once  for  each  row  of  data  in  tho  Cable- 
+body.  If  the  table  statement  contains  a  named  function,  then  the 
+columns  of  data  within  the  cable-body  are  matched  up  with  the  function's 
+formal  parameters  by  means  of  che  column  headings  within  the  Cable - 
+header;  if  tho  table  statement  contains  a  cozpound-scacenonc ,  then  the 
+local  variables  declared  within  the  highest  level  block  of  chat  compound 
+statement  arc  matched  with  the  columns  of  data  within  tho  cable-body  by 
+means  of  che  column  headings  within  the  Cablo-heador. 
+
+Tho  concept  and  power  of  the  table  statement  is  best  illustrated  by 
+example.  The  following  RASD-ABKh  cable  uses  che  function  "Deploy".  It 
+is  similar  to  the  deployment  table  shown  in  Sec.  I  of  this  manual  but, 
+here,  is  expanded  to  seven  columns. 
+
+Table  Deploy 
+
+(This  table  initiates  che  deployment  of  assigned  forces  to  tho 
+
+
+Central  European  cheater) 
+
+qty  a-\  unit -type 
+
+unit-owner 
+
+in-area 
+
+assigned-to 
+
+co-orea 
+
+100 
+
+%  Troops 
+
+Denmark 
+
+CEur 
+
+All 
+
+CEur-1 
+
+100 
+
+%  Troops 
+
+Netherlands 
+
+CEur 
+
+All 
+
+CEur-2 
+
+25 
+
+%  Troops 
+
+FRG 
+
+CEur 
+
+All 
+
+CEur-3 
+
+100 
+
+X  Troops 
+
+UK 
+
+CEur 
+
+All 
+
+CEur-A 
+
+100 
+
+m  Troops 
+
+Belgium 
+
+CEur 
+
+All 
+
+CEur-5 
+
+This  tabic  statement  causes  che  function  Deploy  to  be  called  five 
+times,  once  for  each  row  of  the  cable-body .  (Each  row  has  seven 
+entries,  che  last  two  being  "folded  over"  so  that  they  appear  underneath 
+che  columns  labeled  "unit-owner"  and  "assigned-to". ) 
+
+
+-  A  5  - 
+
+
+Decision  Table 
+
+Another  important  use  of  a  table  statement  is  as  a  docision  table. 
+It  is  required  by  the  syntax  of  the  table  statement  that  slash  (/)  bo 
+used  within  the  table  header  of  a  docision  table  to  separate  the 
+conditions  from  the  action  to  bo  token.  For  example,  consider  the 
+following  decision  table  (a  macro  table)  used  as  the  "Then"  clause  of  o 
+conditional  statement: 
+
+
+If  Current-situation  is  Eur-demo-tac-nuc 
+
+
+("Eur-dcrao-cac-nuc"  represents  the  situation  that  one  or  both 
+superpowers  have  used  some  tactical  nuclear  weapons  in  Europe, 
+but  have  done  so  primarily  for  demonstrative  purposes  —  i. o. , 
+to  coerce  the  opponent  into  terminating! 
+
+Then 
+
+( 
+
+Table 
+
+{ 
+
+Declare  Basic-status#:  Let  Basic-status#  be  Basic-status. 
+
+Declare  Risks#:  Let  Risks#  be  Risks. 
+
+Declare  Escalation-guidance#:  Let  Escalation-guidance# 
+be  Escalation-guidance. 
+
+
+) 
+
+
+} 
+
+
+If  (Basic-status#  is  Basic-status  or 
+Basic-status#  is  Unspecified)  and 
+(Risks#  is  Risks  or  Risks#  is  Unspecified) 
+
+Then 
+
+( 
+
+Let  Escalation-guidance  be  Escalation-guidance#. 
+Break. 
+
+) 
+
+
+Basic-status# 
+
+
+Escalation 
+Risks#  /  guidance# 
+
+
+goals -met 
+progress -good 
+progress -marginal 
+progress -good 
+progress-marginal 
+
+
+low 
+
+low 
+
+marginal 
+
+marginal 
+
+
+Eur-term 
+
+Eur-demo-tac-nuc 
+
+Eur-gen-tac-nuc 
+
+Eur-demo-tac-nuc 
+
+Eur-gen-tac-nuc 
+
+
+Note  the  use  of  the  Break,  statement  within  the  compound  statement 
+
+
+-  46  - 
+
+
+defining  the  operation  of  the  Table  statement,  in  order  to  stop  the 
+iteration  through  the  table  rows  as  soon  as  a  satisfactory  condition  is 
+found. 
+
+Using  tho  Decision  Table  construct,  the  macro  table  above  reducos 
+to  the  succinct: 
+
+
+Decision  Table 
+
+Basic-status 
+
+Risks  / 
+
+Escalation- 
+
+guidance 
+
+goals-mot 
+
+— - - -  J 
+
+Eur-corm 
+
+progress -good 
+
+low 
+
+Eur-dcmo-tac-nuc 
+
+progress-marginal 
+
+low 
+
+Eur-gcn-tnc-nuc 
+
+progress -good 
+
+marginal 
+
+Eur-dcmo-tac-nuc 
+
+progress -marginal 
+
+marginal 
+
+Eur-gon-tnc-nuc 
+
+Tho  rules  for  constructing  a  Cabla-hondov  arc  as  follows: 
+
+
+1.  A  tabla-hendar  consists  of  one  or  more  "text  island,"  each 
+representing  the  name  of  a  parameter  (if  a  function  is  named) 
+or  tho  name  of  a  local  variable  (if  a  compound- staCaaont  is 
+used)  or  tho  name  of  a  local  or  global  variable  (in  decision 
+cables) . 
+
+2.  A  "text  island"  is  a  two-dimensional  grouping  of  characters 
+such  that  each  character  of  the  group  is  directly  adjacent 
+(cither  horizontally  or  vortically-not  diagonally)  to  some 
+ocher  character  in  the  group. 
+
+3.  Spaces  ore  not  permitted  within  on  identifier  used  as  a  column 
+header,  so  indications  of  ownership  in  such  on  identifier 
+(c.g.,  "Red's  Prcsumed-opponenc")  are  not  permitted. 
+
+4.  Newlines  ore  checked  for  in  tables  at  the  end  of  each  logical 
+row.  There  may  bo  extra  newlines  interspersed  (allowing  the 
+multilinc-per-row  table  as  shown),  but  the  newline  break  at  the 
+end  of  the  row  must  occur.  This  is  quite  useful  for  finding 
+errors  involving  table  rows  with  missing  or  extra  items. 
+
+5.  In  addition  to  normal  "white  space"  characters  (space,  tab, 
+newline)  and  comments  (enclosed  in  square  brackets),  the  equal 
+sign  (=)  is  also  considered  "white  space"  in  determining  the 
+"text  islands"  composing  a  table  header. 
+
+
+-  47  - 
+
+
+6.  If  ft  "connector  chnractor"  is  useful  in  retaining  the  integrity 
+of  a  "text  island,"  the  following  characters  may  bo  used.  Thoy 
+provide  the  adjacency  required  by  rule  ill  Gbovo,  but  are  not 
+themselves  considered  part  of  tho  identifier  reprosonted  by  the 
+text  island: 
+
+
+I  C  ) 
+
+(These  connector  characters  also  "count"  in  determining  tho 
+ordering  of  eho  text  islands;  that  is,  their  position  ns  part 
+of  a  column  heading  helps  determine  tho  relative  position  of 
+that  coli«mn  heading.) 
+
+
+The  following  example  is  a  table  header  contrived  to  demonstrate 
+most  of  the  above  rules: 
+
+
+Table  Ked-to-3rd-countries 
+
+
+country- 
+
+( 
+
+affected 
+
+France 
+
+GDR 
+
+
+cooper- 
+side  at  ion 
+
+
+White  Uncooperative 
+Red  Combat-basing 
+
+
+=ou  ropcan  -==swa  -== 
+=involvcmcnt=involvcmcnt= 
+
+Disengaged  Disengaged 
+
+On-Call  Noncombatant 
+
+
+This  example  colls  the  function  "Red~to-3rd-countrios"  twico  (once 
+for  each  row  of  the  table).  Tho  data  in  the  table  body  are  matched  to 
+five  function  parameters  having  the  following  names:  country-affected, 
+side,  cooperation,  curopean-involvement,  swa- involvement.  Those 
+function  parameters  need  not  have  been  declared  or  defined  in  that 
+order. 
+
+Tho  use  of  the  vertical  bar  (|)  as  a  conmctor  character  keeping  a 
+"text  island"  together  within  a  tablo-haadar  allows  text  headings  to  be 
+associated  with  individual  columns  of  a  table  in  a  very  flexible  way. 
+Consider  the  following  valid  RAND-ABEL  table  statement: 
+
+
+Table  Initialize 
+
+
+Country *set  (is  it  a  country?,  not  a  region/sea) 
+
+I 
+
+|  Superpower *set  (is  it  one?] 
+
+I  I 
+
+|  ]  Player-status  (should  the  model  simulate  it?] 
+
+|  j  |  Decision 
+
+j  |  j  Borders -WP  -delay 
+
+Mil  (l-366]| 
+
+Mil  Assertive-country  (always  fight  if  attacked)  (  days]) 
+
+
+1 
+
+1 
+
+1 
+
+1  1 
+
+Nuclear-capable 
+
+Men 
+
+Orion 
+
+Red- 
+
+Blue- 
+
+1 
+
+1 
+
+1 
+
+1 
+
+1  1 
+
+1 
+
+ber 
+
+ca 
+
+Tempo %  i 
+
+pres 
+
+pres 
+
+1 
+
+Region 
+
+1 
+
+1 
+
+1 
+
+1  1 
+
+|  Leader 
+
+ship  tion 
+
+merit 
+
+ence 
+
+ence 
+
+1 
+
+xsrssxrzszssxs 
+
+3 
+
+3 
+
+3 
+
+X  X 
+
+s  xnsinRzrssss 
+
+X3SK 
+
+SX3BS 
+
+x asss:  -*rn 
+
+=33X3 
+
+88IB3 
+
+sr* 
+
+Afghanistan 
+
+Y 
+
+N 
+
+Y 
+
+Y  N* 
+
+N  USSR 
+
+-- 
+
+Red 
+
+Captive 
+
+Major 
+
+None 
+
+i 
+
+Arabian-Sea 
+
+N 
+
+N 
+
+N 
+
+N  N 
+
+N  — 
+
+-- 
+
+-- 
+
+-- 
+
+-- 
+
+-- 
+
+-- 
+
+Australia 
+
+Y 
+
+N 
+
+Y 
+
+N  N 
+
+N  UK 
+
+AN2S 
+
+Blue 
+
+Moderate 
+
+None 
+
+Token 
+
+2 
+
+Austria 
+
+Y 
+
+N 
+
+Y 
+
+Y  N 
+
+N  — 
+
+-- 
+
+White 
+
+Reluctant  None 
+
+None 
+
+4 
+
+Belgium 
+
+Y 
+
+N 
+
+Y 
+
+N  N 
+
+N  US 
+
+NATO 
+
+Blue 
+
+Reliable 
+
+None 
+
+TripW 
+
+1 
+
+At  times,  more  table  columns  are  needed  to  describe  a  situation 
+than  will  fit  in  the  width  of  a  single  page.  To  allow  wide  tables  to  be 
+described,  the  following  additional  format  rules  for  a  table-header 
+allow  a  "wrap-around”  header  to  be  created,  in  which  one  or  morn 
+additional  rows  of  "text  islands"  provide  the  needed  continuation. 
+
+Rules  for  constructing  a  multirow  table-header: 
+
+
+(1)  Table  headers  may  be  continued  onto  succeeding  lines,  if  all 
+characters  in  text  islands  composing  one  row  of  the  header  are 
+below  all  characters  composing  the  previous  row  of  the  header. 
+
+(2)  Within  a  row  of  text  islands,  column  headers  are  read  left- 
+to-right. 
+
+(Note  that  by  this  set  of  rules,  the  table  above  qualifies  as 
+having  only  a  single  row  of  column  headers,  since  the  vertical  bars  (|) 
+associating  text  strings  with  columns  keep  the  "text  islands"  defining 
+each  column  header  from  being  separated  vertically.)  In  table 
+construction,  the  keyword  --  can  be  used  as  a  synonym  for  Unspecified, 
+and  **  is  used  to  indicate  "don't  care". 
+
+
+Multircw  cable  headers  ore  best  understood  by  example.  Consider 
+the  following  table  statement,  with  six  formal  parameters: 
+
+Table  Function-of-6 
+
+First-  Second-  Third-  Fourch- 
+
+paromccer  parameter  parameter  parameter 
+
+
+Fifth-  Sixth- 
+
+parameter  parameter 
+
+
+12.5 
+
+Green 
+
+512 
+
+"String  T 
+
+10002 
+
+(A  +  10) 
+
+9.0 
+
+Blue 
+
+221 
+
+"String  2 
+
+9943 
+
+(A  -  24) 
+
+Note  that  a  blank  line  has  boon  used  to  clearly  separate  the  first 
+and  second  rows  of  the  table  header;  this  is  not  strictly  necessary, 
+but  aids  in  keeping  the  text  islands  separate.  Note  also  that  the 
+entries  in  the  table  body  "wrap  around"  in  the  same  manner.  In  fact, 
+the  entries  arc  merely  read  line-ac-a-timc  and  matched  to  elm 
+corresponding  headers  in  the  table  header.  Although  thoy  have  been 
+staggered  so  that  they  may  be  plocod  beneath  their  corresponding  header, 
+this  is  again  not  strictly  necessary;  it  simply  aids  in  human 
+comprehension  of  the  table. 
+
+The  rules  for  a  table-body  are  simple:  A  tabla-body  consists  of  a 
+sequence  of  entries,  each  of  which  is  a  unitparam.  (Sec  the  section 
+Values  and  Expressions  for  the  formal  definition  of  a  unitparam.  It  is 
+essentially  a  primitive  value  or  a  parenthesized  expression.)  The 
+following  additional  rule  holds  for  a  table-body : 
+
+
+Rules: 
+
+
+1.  If  the  tabla-haadcr  describes  n  formal  parameters  or  variable- 
+names,  then  the  number  of  entries  in  the  table  body  must  be  a 
+multiple  of  n.  (Normally  the  entries  are  placed  in  columns 
+beneath  the  column  headers  within  the  table-hander ,  so  that 
+each  row  of  the  table  naturally  consists  of  n  entries,  except 
+when  wide  rows  "spill  over"  onto  the  next  line  as  in  the 
+example  above.) 
+
+
+-  so  - 
+
+
+2.  Each  entry  must  match  in  typo  with  the  corresponding  formal 
+parameter  or  local  variable.  For  example,  "Second-parameter" 
+is  an  enumerated  data  typo  of  typo  Typo-color. 
+
+The  tabla-hcadar  and  tablo-hody  are  each  followed  by  a  period  (.) 
+os  delimiter. 
+
+The  RAND-ABEL  Translator  that  interprets  a  table  merely  counts  n 
+entries  in  the  table  body,  then  either  calls  the  named  function  or 
+executes  the  compound- statement ,  then  acquires  the  next  n  entries  (until 
+a  is  encountered  instead).  Thore  is  no  moaning  attached  to  the 
+grouping  of  table  entries  into  rows. 
+
+FUNCTIONS:  INVOKING  AND  EXITING 
+
+The  declaration  of  functions  was  covered  in  Sec.  V  (Declarations). 
+Section  VI  is  devoted  to  the  definition  of  functions  and  presented  the 
+syntax  for  a  function- invocation .  Functions  returning  a  value  arc 
+invoked  by  the  expression  Report  from  function- invocation .  Functions 
+not  returning  a  value  (presumably  exocutod  for  their  sido-of focts)  are 
+invoked  by  a  Perform  statement,  discussed  hero  as  part  of  a  description 
+of  all  RAND-ABEL  statements.  We  also  present  hero  the  Exit  statement 
+that  allows  completion  of  a  function's  execution,  whether  or  not  it 
+returns  a  value. 
+
+•^-statement - + 
+
+
+I 
+
+|  Perform  f unction- invocation .  | 
+
+
+Rule:  This  statement  is  used  to  execute  a  function  that  does  not 
+
+return  a  value.  (That  is,  it  is  executed  for  the  side-effects 
+it  causes.) 
+
+
+In  some  programming  languages,  a  function  not  returning  a  value  is 
+called  a  subroutine.  In  RAND-ABEL,  all  program  logic  is  contained  in 
+functions;  a  function  not  returning  a  value  is  equivalent  to  a 
+subroutine. 
+
+
+-  51  - 
+
+
+Example: 
+
+Perform  fovce-racio-calc 
+
+using  France  as  side-1, 
+Yugoslavia  as  sidc-2, 
+and  3.5  E  4  as  multiplier. 
+
+
+Within  the  statements  defining  a  function,  the  following  statement 
+is  used  to  return  program  control  to  the  place  from  which  the  function 
+was  invoked: 
+
+
++-scatoaont - 
+
+I 
+
+|  Exit. 
+
+I  Exit  Reporting  sintpla-oxpr. 
+
+I 
+
++ . - . 
+
+
+4 
+
+
+4 
+
+
+Rules: 
+
+
+1.  If  the  Reporting  clause  is  omitted,  then  the  function  does  not 
+return  a  value. 
+
+2.  If  the  Reporting  clause  is  used,  then  the  function  always 
+returns  a  value  of  the  samo  data  typo  as  the  simpla-cxpr. 
+
+3.  If  there  is  more  than  one  Exit  Reporting  statement  within  the 
+definition  of  a  function,  then  oach  of  those  statements  must 
+contain  an  expression  of  the  same  data  type.  Howavor,  the 
+simpla-axpr  may  be  of  ambiguous  data  type  if  that  ambiguity  is 
+resolved  by  the  function's  dccloration. 
+
+
+If  a  function  does  not  return  a  value,  it  is  always  invoked  by  the 
+RAND-ABEL  statement: 
+
+
+Perform  function- invocation . 
+
+
+If  a  function  returns  a  value,  then  it  is  always  invoked  using  the 
+expression: 
+
+
+Report  from  function- invocation 
+
+
+-  52  - 
+
+
+Even  functions  reporting  a  value  may  have  sido-offc&ts  and  in  that  sense 
+are  not  equivalent  to  a  mathematical  function.  If  a  function  is 
+declared  as  returning  a  value,  then  it  must  return  n  value  using  the 
+Reporting  clause.  If  it  is  not  declared  as  returning  any  value,  it 
+must  return  using  Exit. 
+
+Examples: 
+
+Exit. 
+
+Exit  Reporting  ‘'Success. " 
+
+Exit  Reporting  ({multiplier  *  force-ratio)/2.0) . 
+
+
+INPUT/OUTPUT 
+Print,  Log  Statements 
+
+The  following  I/O  statements  are  used  to  communicate  with  the 
+"outside  world"--chac  is,  the  computer  system  environment  within  which 
+RAND-ABEL  is  running. 
+
+Before  the  formal  syntax  description,  some  general  terms  should  be 
+understood  by  the  render.  RAND-ABEL  operates  within  a  C  language 
+environment,  within  the  UNIX  operating  system.  The  general 
+characteristics  of  C  and  UNIX  are  assumed.  The  UNIX  system  has  the 
+(very  powerful)  concepts  of  "standard  Input"  (which  is  often  a 
+terminal's  keyboard)  and  "standard  output"  (which  is  often  a  terminal's 
+display  screen).  Input  and  output  consist  of  a  stream  of  characters, 
+which  is  usually  directed  to  the  standard  input  and  output  ports. 
+However,  these  data  streams  can  be  redirected,  for  instance  into  a  file, 
+or  into  the  output  or  input  streams  of  another  process  running  in  the 
+computer. 
+
+As  data  are  emitted  from  a  RAND-ABEL  program,  it  is  either 
+formatted  (according  to  its  data  type)  in  a  standard  (i.o.,  default) 
+manner,  or  else  the  programmer  can  exercise  some  control  over  the  format 
+in  which  it  appears.  A  special  language  of  format  codes,  consisting  of 
+a  string  of  characters,  is  used  to  specify  formatting  of  I/O.  The 
+default  formatting  for  each  of  RAND-ABEL' s  data  types,  and  the  special 
+format  codes,  are  described  within  this  section. 
+
+
+-  53  - 
+
+
++-scaccncne - + 
+
+I  I 
+
+|  Print  unieparan  .  .  .  unieparan.  1 
+
+j  Print  with  Comae -spec  unit  pars  a  .  .  .  unieparan.  I 
+
+l  I 
+
+|  Print  sereannano  unieparan  .  .  .  unieparan.  I 
+
+|  Print  sercannano  with  Caveat- spec  unieparan  .  .  .  unieparan.  j 
+
+I  I 
+
+|  Log  unieparan  .  .  .  unieparan.  I 
+
+|  Log  with  Comac-spcc  unieparan  .  .  .  unieparan,  j 
+
+
+Log  sereannano  unieparan  ...  unit paean. 
+
+Log  sereannano  with  Comae-spec  unieparan  .  .  .  nit  pa  tan. 
+
+
+Rules: 
+
+
+1.  The  Log  statement  causes  a  scream  of  data  (defined  by  the 
+sequence  of  unieparans  within  the  statement  to  be  sent  to  the 
+output  stream. 
+
+2.  The  Print  statement  causes  a  scream  of  data  (defined  by  the 
+sequence  of  unieparans  within  the  statement)  to  be  sent  to  an 
+output  stream. 
+
+3.  The  default  output  stream  is  the  UNIX  sCdouC',  if  n  stroannano 
+is  given,  output  from  Print  or  Log  is  directed  to  chat  output 
+scream  instead.1 
+
+A.  If  the  optional  with  CornaC-spnc  clause  is  omitted,  all  output 
+is  formatted  according  to  standard  defaults  determined  by  tho 
+data  types  of  the  unieparans  being  output. 
+
+5.  If  the  with  Cornae-spac  clause  is  included,  tho  Cormab-spoc  is 
+a  RAND-ABEL  expression  of  type  string.  The  character  string  Is 
+interpreted  as  a  specification  for  formatting  of  output,  and 
+output  is  formatted  according  to  its  specifications. 
+
+6.  A  value  of  type  pointer  can  be  output  as  a  hexadecimal  number 
+for  debugging  purposes,  but  this  is  not  expected  to  be  used  in 
+a  production  program. 
+
+
+lIf  the  RAND-ABEL  program  is  executing  in  the  context  of  tho  RSAC 
+system,  output  should  not  be  sent  to  the  default  stdout ,  as  this  will 
+conflict  with  system  CRT  screen  management. 
+
+
+-  5 6  - 
+
+
+The  definition  of  a  unicpuraa  is  contained  in  the  subsection  Values 
+and  Expressions  within  Sec.  IV.  Basically,  it  is  a  simplo  value  or  a 
+parenthesized  RAND-ABEL  expression. 
+
+Default  output  formats  arc  used  for  each  data  typo  when  no  control 
+is  provided  by  an  explicit  forcac-spcc.  These  default  oueput  formats 
+are  described  in  the  following  subsection. 
+
+Examples  of  the  Print  and  Log  statements  arc  given  at  the  end  of 
+this  subsection,  after  ehe  various  formatting  options  are  presented. 
+
+Default  Output  Formats 
+
+If  no  special  format  controls  are  given,  each  data  type  has  a 
+standard  way  in  which  its  value  is  printed.  These  default  output 
+formats  are  given  by  the  following  table. 
+
+
+Data  Typo 
+
+
+Default  Output  Format 
+
+
+Integer 
+
+
+Real 
+
+
+String 
+
+
+Boolean 
+
+
+Pointer 
+
+
+A  string  of  digits,  with  on  optional 
+profix  minus  sign.  No  decimal  point. 
+Delimited  by  one  blank  on  each  sida. 
+
+A  string  of  digits  with  nn  embedded 
+decimal  point.  At  least  one  digit 
+is  printed  before  and  after  the  decimal 
+point,  even  if  it  is  a  zero.  Optional 
+profix  minus  sign.  Numbers  loss  than 
+one-millionth  (1  E  -6)  are  considered 
+a  zero.  Otherwise,  for  numbers  less  than 
+one,  enough  decimal  places  arc  printed  to 
+show  at  least  two  digits  of  significance. 
+Delimited  by  one  blank  on  each  side. 
+
+The  string  is  printed  literally,  with 
+no  surrounding  quotation  marks,  and 
+not  delimited  by  blanks. 
+
+The  string  "Yes"  or  "No"  is  printed, 
+without  surrounding  quotation  marks. 
+Delimited  by  one  blank  on  each  side. 
+
+A  pointer-type  value  is  output  as  a 
+hexadecimal  number  for  debugging  purposes, 
+
+
+-  55  - 
+
+
+using  the  some  conventions  as  tho 
+integer  data  typo. 
+
+Enumerated  The  identifier  constant  is  printed 
+
+without  surrounding  quotation  marks. 
+Delimited  by  one  blank  on  oach  side. 
+
+
+Format  Specification 
+
+A  formac-sptc  is  used  to  control  the  formatting  of  output.  It  is  a 
+sequence  of  characters  that  are  printed  os  listed,  except  when  tho 
+special  characters  "X"  and  "\"  ore  encountered.  Tito  3*  is  followed  by  a 
+special  formatting  code.  The  formatting  codes  recognized  by  RAND-ABEL 
+are  as  follows: 
+
+%i  Enumerated  data  typo 
+»s  String 
+
+Sb  Boolean  (Yes  or  No) 
+
+!Sd  Integer  without  a  decimal  point 
+
+to  Real  (or  floating  point)  scientific  notation 
+
+tf  Real  (or  floating  point)  fixed  decimal  point 
+
+tg  Real  (or  floating  point)  general;  uses  scientific  notation 
+
+or  fixed  decimal  point,  whichever  is  shortest. 
+
+A  litoral  percent  sign  is  entered  in  a  format  string  as 
+
+A  number  may  bo  placed  between  the  percent  sign  and  the  letter. 
+
+That  number  specifics  the  overall  number  of  characters  allocated  to  tho 
+value.  If  a  number  is  used,  the  field  will  bo  blank  padded,  unless  the 
+field  width  number  begins  with  a  loading  zero,  in  which  caso  the  field 
+will  bo  zero  padded.  The  field  width  number  can  optionally  bo  followed 
+by  a  decimal  point,  and  then  another  number.  Tho  second  number  will  bo 
+the  number  of  digits  to  appear  after  the  decimal  point  for  *e,  %f,  or  %g 
+formats . 
+
+There  are  other  special  options  that  can  be  used  in  these  format 
+strings.  They  obey  the  conventions  of  "printf(3)"  in  Section  3  of  the 
+UNIX  Programmer' s  Manual,  Ball  Laboratories.  That  document  should  be 
+consulted  for  more  detailed  information. 
+
+
+D 
+
+
+-  56  - 
+
+
+The  backslash  (\)  is  followed  by  a  character  or  sequence  of  3  octal 
+digits  that  represent  special  characters: 
+
+
+\n  Newline  (line  feed) 
+
+\r  Carriage  return 
+
+\t  Horizontal  tab 
+
+\b  Backspace 
+
+\£  Formfeed 
+
+\\  Backslash 
+
+\*  Single  quote 
+
+\ddd  Any  bit  pattern  (exactly  3  digits  in  octal  notation) 
+
+
+These  special  escape  sequences  allow  any  ASCII  character  to  bo 
+produced.  For  example,  "\n"  allows  more  chan  one  lino  of  text  to  bo  put 
+in  the  some  string,  and  "\f"  causes  a  page  eject.  By  using  a  3-digit 
+octal  (i.e.,  base  8  number  system)  code,  any  ASCII  character  can  bo 
+produced;  o.g.,  one  could  make  the  CRT  terminal  "bell"  ring  by  the 
+following  statement: 
+
+
+Print  "\007". 
+
+
+Streams 
+
+A  stream  is  a  pathway  through  which  information  is  tronsf erred  from 
+a  program  to  a  terminal,  file,  or  other  program.  The  information  is 
+transferred  ns  a  stream  of  characters. 
+
+The  normal  output  stream  for  Log  and  Print  statements  is  the  UNIX 
+"standard  output,"  which  is  initially  sot  to  the  user's  terminal. 
+
+If  a  scrc/imtwaa  has  been  used  in  a  Log  or  Print  statement,  but 
+chat  stream  has  not  yet  been  opened,  then  a  runtime  error  will  be 
+generated. 
+
+The  three  predcclorcd  and  preopened  streams  are:  "Input", 
+
+"Output",  and  "Error".1  "input"  is  tho  stream  of  characters  received 
+from  the  user's  terminal  keyboard.  Reading  a  character  from  Input 
+causes  UNIX  to  wait  for  tho  user  to  typo  in  a  line  of  input  text. 
+
+*  It  will  rvelp  the  C  programmer  to  know  that  those  correspond 
+directly  to  C's  stdin,  stdout ,  and  stdarc. 
+
+
+-  57  - 
+
+
+"Output"  corresponds  to  the  user's  terminal  screen.  Printing  n  line  on 
+the  stream  "Output"  causes  the  line  to  appear  on  the  user's  terminal. 
+"Error"  is  also  directed  to  the  user's  terminal.  Ie  is  defined 
+separately  from  "Output"  since  the  program  may  wont  to  redefine  one  of 
+these  to  go  somewhere  clso. 
+
+RAND-ABEL  supports  three  predefined,  stream-oriented  functions. 
+They  ore: 
+
+
+Function  Name 
+
+Argument  1 
+
+Argument  2 
+
+Roturn  Value 
+
+Open-scream 
+
+fiJa-naso 
+
+zodti 
+
+scraannaao 
+
+Closo-scrcaro 
+
+screasnane 
+
+(none) 
+
+Flush-scream 
+
+screaznaza 
+
+(none) 
+
+In  the  above  function  calls,  fila-naao  is  a  string  argument  chat  Is 
+eichor  a  UNIX  file  name  or  else  a  full  UNIX  pathname  (i.c.,  giving 
+directory,  subdirectory,  etc.).  Mode  is  one  of  the  strings:  "read", 
+"write",  "append".  The  valuo  returned  from  the  Open-stronm  function 
+should  bo  assigned  to  an  integer  variable  that  stores  the  ID  of  the 
+scream.  This  same  variable  is  then  used  as  an  argument  to  the 
+Close-stream  and  Flush-stream  functions. 
+
+The  Open-stream  function  associates  a  UNIX  file  or  path,  in  road, 
+write,  or  append  mode,  with  a  scraaanaea.  If  a  file  is  opened  in  write 
+mode  and  the  file  does  not  exist,  it  is  created.  If  tho  file  does 
+exist,  it  is  deleted  first.  If  a  file  is  opened  in  append  mode,  all 
+writing  to  choc  file  is  appended  to  the  end  of  the  existing  file,  if 
+any. 
+
+Tho  Close-stream  function  closes  a  stream,  making  it  unavailable 
+for  further  use  (until  reopened).  It  is  stondard  practice  to  close 
+streams  when  they  will  no  longer  be  used  by  the  program. 
+
+Tho  Flush-stream  function  is  useful  primarily  for  debugging 
+purposes.  Typically,  when  a  RAND-ABEL  program  executes  a  Log  or  Print 
+statement,  the  only  effect  is  Vo  fill  that  file's  buffer  in  the 
+operating  system.  Later,  tho  operating  system  will  perform  the  actual 
+
+
+-  58  - 
+
+
+write  to  the  file  on  disk.  This  buffering  of  output  provides 
+significant  performance  advantages.  This  buffer  will  bo  written  to  the 
+appropriate  file  when  a  RAND-ABEL  program  stops  execution  in  tho  normal 
+manner.  However,  it  is  possible  for  a  RAND-ABEL  program  chat  has  on 
+error  to  abnormally  exit  without  first  writing  the  buffer  to  disk.  This 
+can  causo  tho  programmer  to  chink  that  his  RAND-ABEL  program  terminated 
+at  a  point  much  earlier  than  is  actually  the  case.  To  got  around  this 
+problem,  the  Flush-stream  function  con  be  called  to  write  the  contents 
+of  the  buffor  to  disk.  Because  continued  use  of  this  function  can 
+degrade  system  performance,  it  is  used  primarily  for  debugging  purposes. 
+
+Since  "Input",  "Output",  and  "Error"  are  olroady  prodoclnred  by  tho 
+system,  thoy  con  bo  used  to  declare  other  stream  variables.  For 
+example: 
+
+
+Declare  Output-file  by  example:  Let  Output-file  be  Output. 
+
+Examples  of  Input/Output  Statements  and  Functions 
+
+Tho  following  examples  illustrate  many  of  the  possible  uses  of  tho 
+various  input/output  statements  and  functions  described  in  this  section. 
+
+
+I  Dcclaro  Message-file  to  be  a  strenmnome  ] 
+
+Declare  Message-file  by  example:  Let  Messnge-filo  be  Output. 
+
+(  Use  the  Open-stream  function  to  associate  a  UNIX  file  with  this 
+streomnamo,  and  set  its  mode  to  write-only  ] 
+
+Let  Message-file  be  Report  from  Open-stream 
+
+using  "~andcrson/ABEL/programs/mossages"  for  file-name, 
+and  "write"  for  mode. 
+
+(  Perform  a  set  of  writes  to  that  file  J 
+
+Print  Message-file  with  "Threat  level  is  now:  %5d  in  country:  %i\n" 
+
+threat  (Report  from  select-country 
+
+using  Country-list  as  options). 
+Print  Message-file  with  "Force  ratio  is  %3.1f  at  time  %d  \n" 
+
+ratio  game-time. 
+
+Print  Message-file  "End  of  game  reached.  \n\n" 
+
+[  Close  file  ] 
+
+Perform  Close-stream  using  Message-file  as  streamname. 
+
+
+-  59  - 
+
+
+COMPOUND  AND  NULL  STATEMENTS 
+
+A  compound  statement  is  a  sequence  of  aero  or  more  declarations 
+followed  by  a  soquenco  of  zero  or  moro  RAND-ABEb  statements,  all 
+delimited  by  braces.  It  can  occur  wherever  a  statement:  can.  It  allows 
+moro  complex  program  logic  to  bo  described  than  is  allowed  by  the  basic 
+sot  of  RAS’D -ABEL  statements: 
+
++-statcaent - 
+
+I  I 
+
+|  (  declaration  .  .  .  declaration  \ 
+
+I  I 
+
+|  statement  .  .  .  statement  }  | 
+
+I  I 
+
++ . + 
+
+
+Rules: 
+
+
+1.  All  declarations  occurring  within  a  compound  statement  aro 
+local  to  that  statement;  they  have  no  effect  outside  that 
+statement. 
+
+2.  Each  declaration  is  processed  in  turn,  then  each  statement  is 
+executed  in  cum.  To  obtain  moro  control  flow  options, 
+conditional  and  repetitive  execution  statements  con  be  used,  as 
+wall  as  function  invocations. 
+
+
+Notice  that  a  function-dofinition  is  not  allowed  within  a  compound 
+statement.  All  function  definitions  aro  at  the  "top  level"  of  a 
+RANB-ABEL  program. 
+
+The  compound  statement  is  not  terminated  by  a  period,  since  a 
+period  occurs  as  a  delimiter  to  the  lart  statement  within  its  body. 
+
+If  the  compound  statement  requires  more  than  one  line  of  program 
+text,  it  is  traditional  to  line  up  the  braces  vertically,  for  case  in 
+visualizing  the  matches  between  balancing  braces.  This  positioning  is 
+for  human  consumption  only;  it  is  not  used  by  the  RAND-ABEL  Translator. 
+
+
+-  60  - 
+
+
+Example:  The  following  sot  of  nested  conditional  statements  uses 
+
+compound  statements  to  denote  the  set  of  RAND-ABEL 
+statements  to  be  executed  at  various  places  within  the 
+conditional  logic.  This  oxamplo  is  repeated  from 
+earlier  in  this  manual. 
+
+If  usor-responso  =  "Y"  or  usor-responso  =  "YES" 
+
+Then 
+
+{  Perform  Recalculation. 
+
+Print  "Calculation  Completed.  More?  (Y/N):  " 
+
+Let  user-response  be  Report  from  quwry-uscr. 
+
+) 
+
+Else  If  user-response  =  "N"  or  usor-responso  =  "NO" 
+
+Then 
+
+{  Print  "No  action  talon.  More?  (Y/N):  " 
+
+Let  user-response  be  Report  from  query-user. 
+
+) 
+
+Else  If  user-response  =  "?" 
+
+Then  Perform  Help-function. 
+
+Else 
+
+{  Print  "Your  response  not  understood." 
+
+Perform  Help- function. 
+
+) 
+
+
+A  null  statement  consists  of  a  period,  the  normal  terminating 
+delimiter  on  a  RAND-AEEL  statement,  only.  It  is  useful  within 
+conditional  statements  to  control  logic  flow.  Empty  curly  braces  are 
+also  a  null  statement. 
+
+b-statanent - + 
+
+I  I 
+
+I  I 
+
+I  O  I 
+
+I  I 
+
++ . + 
+
+
+Rule:  This  statement  causes  no  effect. 
+
+Note  that  a  side  benefit  of  this  statement  is  that  extraneous 
+periods  used  in  error  as  statement  delimiters  (for  example,  after  a 
+conditional  statement)  do  not  cause  a  syntax  error  and  have  no  effect. 
+
+
+-  61  - 
+
+
+Example:  The  following  example,  repeated  from  carlior  in  this 
+manual,  illustrates  tho  uso  of  the  null  statement  to  control 
+logic  flow  within  a  conditional  statement. 
+
+If  king-unchecked  Then.  Else  Perform  Think. 
+
+
+-  62  - 
+
+
+VIII.  META-STATEMENTS 
+
+
+The  following  special  statements  can  bo  used  to  influence  how 
+RAND-ABEL  programs  are  writton  and  interpreted. 
+
+^DEFINE 
+
+The  #define  statement  provides  an  ability  to  create  a  macro  giving 
+a  synonym  or  alias  for  a  string  of  characters  to  bo  substituted  wherever 
+that  macro  identifier  appears: 
+
+
++-mQta-statcmont - + 
+
+I  I 
+
+|  #define  nam  [  unquoted-string  ] .  | 
+
+I  I 
+
+- - - 
+
+
+Rules : 
+
+
+1.  The  noma  may  be  any  RAND-ABEL  identifier. 
+
+2.  Wherever  that  identifier  appears,  it  is  replaced  by  the 
+unquoted-string  sequence  of  characters  BEFORE  THE  RAND-ABEL 
+TRANSLATOR  INTERPRETS  THE  RESULTING  STATEMENT. 
+
+3.  After  replacement,  the  RAND-ABEL  Translator  continues  its  scan 
+at  the  beginning  of  the  replacement  string,  so  any  #define 
+identifiers  it  contains  will  similarly  bo  replaced.  #define 
+statements  may  be  nested  to  any  level. 
+
+
+This  form  of  "macro  string  substitution"  can  be  used  to  change  the 
+surface  appearance  of  RAND-ABEL  programs.  It  should  be  used  cautiously, 
+since  the  resulting  programs  might  well  become  less  readable  to  persons 
+who  know  the  RAND-ABEL  language. 
+
+
+-  63  - 
+
+
+Example: 
+
+^define  c-docl 
+
+[  Declare  country: 
+
+Let  country  be  Franco. 
+
+]• 
+
+
+INCLUDE 
+
+^-aac/i-scotamonc — - — - + 
+
+
+j  Include  "filonaaa".  j 
+
+
+Rules: 
+
+
+1.  The  contents  of  the  file  whose  name  (or  pathname)  is  givon  aro 
+inserted  at  this  point  in  the  RAND-ABEL  (or  C)  program.  The 
+file  name  or  pathname  is  interpreted  rolativo  to  the  UNIX 
+directory  containing  the  current  source  file. 
+
+2.  After  the  text  insertion  tokos  place,  the  interpretation  of  the 
+resulting  file  begins  at  the  start  of  the  newly  inserted  text 
+linos,  so  if  they  contain  Include  statements,  those  statements 
+are  executed  os  they  arc  encountered.  Include  files  can  bo 
+nested  up  to  eight  levels  deep. 
+
+
+An  Include  statement  is  often  used  to  incorporate  a  standard  sot  of 
+declarations  or  definitions  into  a  RAND-ABEL  program. 
+
+
+Example: 
+
+
+Include  "librarics/rcd-agcnt/dictionary.D". 
+
+
+-  64  - 
+
+
+DEBUGGING:  TRACE  AND  UNTRACE 
+
++-statcaant - + 
+
+I  I 
+
+j  Trace  If.  j 
+
+j  Trace  Function.  j 
+
+I  I 
+
+j  Untrace  If.  j 
+
+j  Untrace  Function.  1 
+
+I  I 
+
++ . . . . + 
+
+Rules: 
+
+1.  Trace  turns  on  reporting  for  either  If  statements  or  function 
+invocations;  Untrace  turns  off  reporting. 
+
+2.  All  trace  data  arc  appended  to  a  sipccinl  file  named  "debug. out" 
+within  the  current  UN'IX  directory. 
+
+Function  trace  data  consists  of  readable  statements  upon  entrance 
+to  a  function  stating  tho  function's  name  and  the  values  assigned  to 
+each  of  its  formal  parameters.  If  the  function  returns  a  value,  that 
+value  is  reported  to  the  file  upon  exit  from  tho  function. 
+
+"If"  trace  data  writes  to  the  same  "debug. out"  file.  Each 
+execution  of  a  conditional  statement,  when  Trace  If  is  on,  causes  the 
+conditional  statement  itself  to  be  written  to  tho  file,  along  with  an 
+indication  of  whether  tho  Bool oan- expression  evaluated  to  Yes  or  No. 
+
+Trace  and  Untrace  arc  not  executable  statements.  Rathor,  thorc 
+arc  commands  to  the  RAN’D-ABEL  Translator  to  embed  tracing  information 
+within  the  generated  C  program.  Trace  and  Untrace  statements  can  be 
+nested;  an  Untrace  turns  off  the  corresponding  nearest  Trace  of  the 
+same  type. 
+
+Tracing  can  significantly  reduce  tho  speed  of  RAND-ABEI,  program 
+execution  and  tends  to  generate  largo  amounts  of  output.  It  should 
+therefore  be  used  selectively  and  only  during  program  development. 
+
+Currently,  tho  Interpreter  allows  two  additional  forms  of  tracing, 
+namely  Trace  Decision  Table  and  Trace  Let. 
+
+
+-  65  - 
+
+
+IX.  DATA  DICTIONARY 
+
+
+Tho  Data  Dictionary  facility  in  RAND-ABEL  permits  largo,  complex 
+systems  to  bo  developed  from  separate  modules  that  nro  created 
+individually  by  different  programmers.  It  is  a  much,  more  elaborate  and 
+useful  facility  than  the  old  concept  of  a  "common"  area  in  programs  that 
+sti.es  data  used  in  common  by  tho  different  programs. 
+
+Tho  RAND-ABEL  Data  Dictionary  describes  the  contents  and  attributes 
+of  a  data  sot  to  bo  used  in  common  by  all  tho  RAND-ABEL  modules 
+constituting  a  system. 1  This  common  data  sot  contains  tho  specification 
+of: 
+
+•  A  list  of  items  (variables,  attributes,  tables,  otc.)  to  be 
+included  in  the  common  data  sot 
+
+•  A  list  of  items,  similar  to  tho  list  above  but  including  sub- 
+procoduros  and  functions,  which  are  not  part  of  the  common  data 
+sot 
+
+•  A  structuring  of  tho  source  filos  chat  make  up  the  system 
+
+•  Access  restrictions,  ownership,  method  of  implementation,  and 
+other  such  attributes  for  data  items  and  source  code 
+
+•  Ancillary  information,  such  as  the  author,  module  name,  and 
+other  administrative  attributes  associated  with  data  items  and 
+source  code 
+
+Tho  Data  Dictionary  consists  of  a  set  of  files  that  arc  maintained 
+in  an  extended  RAND-ABEL  language.  The  RAND-ABEL  processor  translates 
+these  files  into  C  language  data  structures.  Tho  resulting  C  code  can 
+be  used  by  a  system  monitor  (a  special  program  providing  the  foundation 
+for  the  system  being  developed)  for  allocating  memory  for  the  data  items 
+described  and  also  by  a  front-end  data  editor  that  can  be  used  for 
+display  and  manipulation  of  these  items. 
+
+lIn  the  RAND  Strategy  Assessment  System  (RSAS),  this  common  data 
+set  is  called  the  World  Situation  Data  Set  (WSDS) . 
+
+
+-  66  - 
+
+
+A  Data  Dictionary  entry  begins  with  a  Declare  statement.  (See  the 
+earlier  section  of  this  manual  on  Declarations.)  After  this  declaration 
+of  an  item  arc  a  numbor  of  statements  describing  the  item.  Tho  sequence 
+of  descriptions  is  ended  when  a  new  Declare  is  found  for  the  next  item, 
+a  new  Default  statement  is  reached,  or  the  End  Declarations  statement  is 
+encountered. 
+
+Many  attributes  that  can  bo  associated  with  a  data  item  will  be  tho 
+same  for  an  entire  group  of  items  (o.g.,  author,  access  restrictions, 
+otc).  To  avoid  tho  need  for  typing  a  wholo  list  of  attributes  for  each 
+item,  "default"  attributes  may  be  declared.  When  a  default  is  dcclarad, 
+it  affects  all  subsequently  declared  data  items  within  the  current  file 
+and  any  files  "Included"  within  that  file.  A  default  docs  NOT  affect 
+any  files  that  have  "Included"  tho  file  that  contains  it.  This  nested- 
+default  mechanism  allows  higher- lovol  files  to  create  default 
+environments  for  lower-level  files  without  worry  of  a  default  in  a  lower 
+level  file  causing  side-effects. 
+
+The  set  of  Data  Dictionary  declarations  has  tho  following  syntax: 
+
++-dnta  dictionary  s pacification  block - + 
+
+I  I 
+
+|  Begin  Declarations.  | 
+
+|  [No]  Default  DDdoclaration  ...  j 
+
+I  I 
+
+|  declaration  \ 
+
+I  I 
+
+|  DDdoclaration  ...  j 
+
+I  I 
+
+|  DDdoclaration  \ 
+
+I  I 
+
+|  declaration  | 
+
+I  I 
+
+|  DDdoclaration  ...  | 
+
+I  I 
+
+|  DDdoclaration  | 
+
+
+End  Declarations. 
+
+
+-  67  - 
+
+
+The  individual  data  dictionary  declarations  (i.o.,  DDdaclarations)  arc 
+of  throe  types: 
+
+
+1.  Defining  declarations.  Information  that  actually  affects  the 
+object  code,  such  as  typo,  size,  or  access  data. 
+
+2.  Identifying  declarations.  Information  that  is  documentary  but 
+mandatory. 
+
+3.  Informative  declarations.  Information  that  is  optional  but 
+useful  as  documentation. 
+
+
+Each  of  these  categories  of  declarations  is  described  below. 
+
+
+DEFINING  DECLARATIONS 
+
+These  declarations  aro  mandatory  for  each  external  data  item  but 
+may  bo  handled  by  default  declarations  that  arc  in  effect.  (See  Creating 
+and  Removing  Default  Declarations  below.) 
+
+
++-DDdaclaration - + 
+
+I  I 
+
+|  Method:  Direct.  | 
+
+j  Method:  Function.  j 
+
+|  Method:  Macro.  j 
+
+I  .  I 
+
+|  Function:  func-namo .  1 
+
+I  I 
+
+|  Macro:  string-literal .  \ 
+
+I  I 
+
++ . + 
+
+
+Rule:  Method  means  "method  of  access."  An  item's  access  method 
+tolls  whether  the  variable  is  accessed  directly  or  via  a 
+function  or  macro.  If  an  item  is  accessed  via  a  macro,  the 
+macro  must  be  defined  using  a  Macro  statement.  If  it  is 
+accessed  via  a  function,  the  name  of  the  function  must  be 
+given  using  the  Function  statement.  The  Macro  or  Function 
+statement  must  immediately  follow  the  Method  declaration. 
+
+
+-  68  - 
+
+
+Examples: 
+
+Method  Function. 
+
+Function:  calculato-atfcrition. 
+
+whore  "calculatc-attrition"  muse  be  a  function  that  returns  a  value. 
+Method  Macro. 
+
+Macro:  ((*GQVERN_ontry)(char  *)F  +  2)  -  F->govcrns  +  1  . 
++-DDdcclaraCion - - - + 
+
+
+Use:  Clone. 
+Use:  No  Clone. 
+Use:  Constant. 
+
+
+Rule:  The  Use  declaration  indicates  whether  an  item  is  to  bo 
+created  dynamically  (Clone)  when  the  Push  function  is 
+invoked  and  discarded  when  tho  corresponding  Pop  function  is 
+executed;  or  whether  one  instance  of  the  data  item  is  to  be 
+maintained  throughout  a  Push  and  Pop  (No  Clone) .  Data  that 
+are  never  changed  during  program  execution  are  declared  with 
+tho  Constant  option. 
+
+
+Currently,  No  Clone  is  not  implemented.  Variables  declared  No 
+Clone  will  behave  os  declared  Clone. 
+
+
+Example: 
+
+
+Use:  Clone. 
+
+
++-DDdacJaration - **+ 
+
+I  I 
+
+|  Owner:  ownor-nano.  ! 
+
+I  I 
+
+|  Owner:  Global.  | 
+
+I  I 
+
++ . + 
+
+
+Rule:  This  declaration  allows  different  modules  to  have  separate 
+
+items  with  the  same  name.  Source  code  also  has  an  owner  and 
+automatically  accesses  either  its  own  or  "global"  data 
+items,  unless  otherwise  specified  by  this  declaration. 
+
+
+-  69  - 
+
+
+The  "awnor-naeia"  is  one  of  a.  set  of  commonly  agreed-upon  names  by 
+which  the  various  groups  developing  code  are  identified.  The  keyword 
+Global  is  used  if  there  is  no  specific  owner. 
+
+Examples: 
+
+Owner:  Red. 
+
+Owner:  Global. 
+
+
++-DDdQclarnciotv 
+
+
+Read 
+
+Read 
+
+Read 
+
+
+Everyone. 
+
+ownov-naao 
+
+ownor-naao 
+
+
+Noread  Everyone. 
+Noread  ovnar-naaa 
+Noread  ounar-nana 
+
+Write  Everyone. 
+Write  ounov-naao 
+Write  ouncr-nana 
+
+Nowrite  Everyone. 
+Nowrite  ownar-nana 
+Nowrite  ownar-naao 
+
+
+.  .  .  owner-name. 
+
+,  .  .  .  ,  owner-name. 
+
+.  .  .  aunor-naao. 
+.  owner-name. 
+
+.  .  .  ovnor-nano. 
+...  .  oumr-rtana. 
+
+
+.  .  .  ounor-nano . 
+
+.  .  .  ,  owner-name. 
+
+
+Rule:  These  declarations  specify  which  source  code  owners  (i.o., 
+"access  groups")  con  road  or  write  this  item.  The  "No" 
+prefix  con  turn  off  a  default  or  serve  documentary  purposes 
+by  establishing  a  lack  of  access  for  a  particular  group. 
+
+
+The  special  group  Everyone  applies  to  all  access  groups  and  can  bo 
+used  to  grant  or  deny  access  for  all  groups. 
+
+
+-  70  - 
+
+
+Examples: 
+
+Noread  Blue,  Neutral, 
+Write  Everyone. 
+
+
+■i-OtklccIaration - - - - - - — - - — - - + 
+
+I  I 
+
+|  Read  Format:  stcing-JAtarftl  •  | 
+
+I  '  I 
+
+|  Write  Format:  string-i/cerai,  j 
+
+
+Rule:  The  preferred  format  for  roading  and  writing  this  data  item 
+is  seated  as  a  quoted  string  of  format  descriptors.  (See  the 
+subsection  Format  Specification  within  the  INPUT/OUTPUT 
+portion  of  Sec.  VII,  RAND-ABEL  Statements.)5 
+
+
+It  is  desirable  to  specify  output  formats  for  string  variables, 
+integers,  and  real  (floating  point)  data  whenever  possible,  since  it 
+holps  the  display  programs  format  the  data  in  a  consistent  manner.  It 
+is  unnecessary  to  specify  output  formats  for  enumerated  variables  since 
+the  fiold  width  neoded  to  display  them  is  easily  determined  by  the 
+display  programs. 
+
+
+Example: 
+
+
+Write  Format:  "%5.3f". 
+
+
+sFor  programmers  familiar  with  the  C  language:  the  format 
+specification  is  the  same  as  those  used  for  the  scan/  and  print/ 
+functions. 
+
+
+-  71  - 
+
+
+^-DCdeclacaiion - — . — - + 
+
+I  I 
+
+j  Validation  Range:  nuaocaJ  to  nuaocaJ.  | 
+
+j  j 
+
+j  Validation  Function:  /wnc-na«e.  j 
+
+I  I 
+
++- . - . - . - . -- . - . - . + 
+
+
+Rule:  In  the  first  fora,  on  inclusive  range  of  numeric  values 
+(either  integer  or  real)  is  given.  In  the  second  form,  a 
+Boolean  function  is  named  that  is  expected  to  return  Yes 
+for  a  valid  item,  and  No  otherwise. 
+
+Examples: 
+
+Validation  Range:  2.7  to  8. 75  . 
+
+Validation  Function:  Check-value. 
+
+
++~PDdccJacaCion - + 
+
+I  I 
+
+|  Prompt  Function:  func-naao.  I 
+
+j  Prompt  String:  string" Jieeral .  I 
+
+I  I 
+
++ . + 
+
+
+Rule:  In  the  first  form,  the  named  function  will  be  called  prior 
+to  input  for  this  data  item.  It  returns  a  string  that  will 
+bo  displayed  on  the  user's  CRT  screen.  In  the  second  form, 
+a  quoted  character  string  is  given  for  display  prior  to 
+input  of  tho  data  item.  In  the  RSAS  environment,  the  input 
+of  data  is  performed  from  the  Data  Editor  program. 
+
+
+Examples: 
+
+Prompt  Function:  Show-message. 
+
+Prompt  String:  "Type  ratio  as  a  decimal:  ". 
+
++-DDdaclaration - + 
+
+I  I 
+
+Initialize. 
+
+
+No  Initialize. 
+
+
+Rule:  This  declaration  indicates  whether  the  item  can  be 
+initialized  by  the  RAND-ABEL  Translator  or  not. 
+
+
+-  72  - 
+
+
+Ac  this  cine,  the  Initialize  declarations  may  bo  used  in  a  program, 
+but  choir  effect  has  not  been  implemented.  Consequently,  they  do  not 
+alter  program  behavior. 
+
+Examples: 
+
+Initialize. 
+
+No  Initialize. 
+
+IDENTIFYING  DECLARATIONS 
+
+These  declarations  are  mandatory  but  toko  an  arbitrary  comment  ns 
+an  argument.  They  arc  used  for  standardized  documentation  of  a  module. 
+
++-DDdcclarntion - - - - - * - + 
+
+I  I 
+
+|  Author:  cocaanc.  j 
+
+I  I 
+
+|  Date:  coanont.  | 
+
+I  I 
+
+|  Definition:  coamant.  | 
+
+
+Rule:  The  conaant:  may  be  a  freo-format  comment  enclosed  in  the 
+documentation  of  the  program  or  data  item. 
+
+Examples: 
+
+Author:  [  Mark  LaCasso  ). 
+
+Date:  [  83/02/05  ). 
+
+Definition:  [  This  function  returns  a 
+string  value  that  should 
+bo  displayed  prior  to  input 
+of  the  force  structure  ratio  ] . 
+
+INFORMATIVE  DECLARATIONS 
+
+These  declarations  are  optional.  They  provide  additional 
+structured  documentation  of  a  RAND-ABEL  program  module. 
+
+
+-  73  - 
+
+
++-DDdcclaration - 
+
+I 
+
+j  References:  coancnt. 
+
+i 
+
+|  Comments:  conaan t. 
+
+I 
+
+|  Status:  conaant. 
+
+I 
+
++ . 
+
+Rule:  The  coaaont  may  be  a  froo-format  comment  enclosed  in  square 
+brackets  "[  )"  that  aids  in  tho  documentation  of  the  program 
+or  data  item. 
+
+Tho  Status  declaration  is  often  used  to  represent  whothor  a 
+variable  is  "proposed"  (indicating  tho  author  is  willing  to  ontortain 
+proposals  for  change)  or  "confirmed"  (indicating  tho  author  has  closed 
+debate  on  the  subject). 
+
+Examples: 
+
+References:  (  See  R-1258,  Section  II  ). 
+
+Comments:  [  This  function  is  a  placeholder 
+until  «  more  complete  computation 
+can  be  developed  ] . 
+
+Status:  [  Proposed  j. 
+
+CREATING  AND  REMOVING  DEFAULT  DECLARATIONS 
+
+As  mentioned  above,  all  the  mandatory  Data  Dictionary  declarations 
+;.ecd  not  be  given  for  each  data  item  or  function.  Many  of  these 
+declarations  can  be  covered  by  use  of  declared  defaults. 
+
+Any  of  the  DDdcclarations  described  in  this  section  may  be  preceded 
+by  the  keyword  Default.  If  that  is  done,  that  setting  for  the 
+particular  DDdoclaration  remains  in  force  within  the  current  file  (and 
+files  Included  within  it)  until  a  now  default  is  given  cr  a  No  Default 
+is  declared  for  that  typo  cf  DDdoclaration .  Any  default  setting  may  be 
+overridden  by  individual  DDdoclarations  associated  with  a  particular 
+data  item  or  function. 
+
+
+-  74  - 
+
+
+Examples: 
+
+Default  Owner:  Rod-Agent. 
+
+Default  Method:  direct. 
+
+Default  No  Initialize. 
+
+Default  Author:  [  Mark  LaCassc,  randvaxllncassc  ). 
+
+
+Tha  following  No  Default  statements  may  bo  issued  to  remove  a 
+dofault  sotting  on  a  type  of  DDdaeJaracdon: 
+
+
++-DDdcclaracion - 
+
+I 
+
+!  No  Default  Author, 
+
+j  No  Default  Comments, 
+
+i  No  Default  Date. 
+
+1  No  Default  Definition. 
+
+\  No  Default  Initialize, 
+
+j  No  Default  Method, 
+
+j  No  Default  Owner. 
+
+)  No  Default  Prompt  Function, 
+
+j  No  Default  Prompt  String, 
+
+j  No  Default  Read  Format. 
+
+|  No  Default  Write  Format. 
+
+|  No  Default  References. 
+
+]  No  Default  Status. 
+
+|  No  Default  Use, 
+
+|  No  Default  Validation  Function, 
+
+j  No  Default  Validation  Range. 
+
+
++ 
+
+
++ 
+
+
+When  No  Default  is  specified  for  any  mandatory  DDdoclarations , 
+such  a  DDdaclacation  must  accompany  each  data  item  or  function  until  the 
+next  Default  or  End  Declarations  statement  is  reached. 
+
+
+Examples  of  No  Default  statements: 
+
+No  Default  Comments. 
+
+No  Default  Prompt  String. 
+
+No  Default  Read  Format. 
+
+No  Default  Validation  Function. 
+
+
+-  75  - 
+
+
+EXAMPLE  OF  A  DATA  DICTIONARY  DECLARATION  SECTION 
+The  following  is  a  comploto  example  of  a  Data  Dictionary 
+declaration  soccion  within  a  RAND-ABEL  program.  Such  a  RAND-ABEL  code 
+section  is  often  contained  in  a  file  that  can  bo  Included  within  another 
+RAND-ABEL  file  to  obtain  the  standard  defaults  and  definitions  required. 
+
+
+(  Sample  Data  Dictionary  Entries  for  Blue  Agent  January  1984  J 
+
+Begin  declarations. 
+
+Default  Owner:  Blue. 
+
+Default  Method:  Direct. 
+
+Default  Read:  Bluo. 
+
+Default  Write:  Blue. 
+
+Default  Use:  Clone. 
+
+Default  No  Initialize. 
+
+Default  Author:  (  Mark  LoCasso,  randvax! lacasso  ). 
+
+Default  Date:  [  84/01/05  ). 
+
+Define  Enumeration  Type- lookahead-opponent:  BR1,  BR2. 
+
+(  BR1  is  Blue's  Red  version  one  ] 
+
+[  BR2  is  Blue's  Red  version  two  ) 
+
+Declare  Lookahead-opponent  by  example: 
+
+Let  Lookahcad-opnnncnt  be  Typo-lookahcad-opponent. 
+
+Definition:  (  Blue's  Red,  opposes  Blue  in  Lookaheads  ). 
+
+Declare  Timo-to-wnkc  by  example: 
+
+Let  Time-to-wake  be  45786. 
+
+Prompt  String: 
+
+"Enter  the  date  and  time  in  the  format:  MMM  DD,  hh.mm". 
+Validation  Function:  Check-time- input. 
+
+Definition:  [  General  purpose,  future  time  to  wake  Bluo  ). 
+
+
+End  Declarations. 
+
+
+-  76  - 
+
+
+X.  COPROCESSES 
+
+
+A  coprocoss  is  an  executing  program  (a  process)  that  is  started  by 
+another  executing  program  (its  parent).  The  two  then  execute 
+independently  and  asynchronously  of  one  another  This  section  discusses 
+how  coprocesses  are  created,  put  to  sleep,  and  terminated. 
+
+CREATING  A  COPROCESS 
+
+Coprocesses  arc  created  by  calling  a  built-in  RANU-ABEL  function 
+called  Startup-plan.  It  takes  two  arguments,  plan-start  and  plan-name. 
+Plan-start  is  given  an  object  representing  the  top-level  function  of  the 
+to-be-created  process.  This  object  can  be  created  by  use  of  the 
+function  expression.  Plan-name  is  a  string  identifying  the  new  process. 
+The  function  Startup-plan  returns  an  object  that  is  of  type  process. 
+Therefore,  the  initiation  of  a  new  process  might  bo  performed  by  a 
+statement  such  as  the  following: 
+
+Declare  ncw-proc:  Let  now-proc  be  Self. 
+
+Let  now-proc  be  Report  from  Startup-plan 
+
+using  (Function  Top-of-plan)  as  plan-start 
+and  ‘'Offensive  strategy"  as  plan-name. 
+
+Note  the  use  of  the  expression  (Function  Top-of-plan)  to  create  an 
+object  representing  the  user's  function  named  "Top-of-plan",  which  is  to 
+be  executed  as  tins  beginning  of  the  new  process. 
+
+The  execution  of  the  Startup-plan  function  is  the  only  method  by 
+which  a  value  of  typo  process  can  be  created. 
+
+PUTTING  A  PROCESS  TO  SLEEP 
+
+A  process  can  cause  itself  to  "go  to  sleop"--that  is,  to  stop 
+processing  until  it  is  awakened  by  some  external  program.  This  is  done 
+by  calling  a  built-in  function  called  "Sleep".  Sleep  takes  no  arguments 
+and  returns  no  value: 
+
+
+Perform  Sleep. 
+
+
+-  77  - 
+
+
+There  ore  no  facilities  within  the  RAND-ABEL  language  itself  for 
+awakening  a  function  once  it  is  sleeping;  at  present,  those  facilities 
+arc  part  of  the  support  environment  in  which  a  RAND-ABEL  procoss 
+resides  and  must  bo  invoked  directly  within  that  support  environment. 
+(See  Appendix  A  for  some  further  information  on  the  support  environment 
+for  RAND-ABEL.) 
+
+TERMINATING  A  COPROCESS 
+
+To  terminate  a  coprocoss,  the  "Remove-plan"  function  is  used.  It 
+takes  ono  argument,  called  procoss:  an  object  of  typo  procoss  that 
+identifies  the  process  to  be  terminated.  Therefore,  to  terminate  the 
+process  created  by  the  example  above,  one  would  write: 
+
+
+Perform  Rcmovo-plan  using  now-proc  as  procoss. 
+
+RESERVED  COPROCESS  VARIABLES:  SELF  AND  PARENT 
+
+The  RAND-ABEL  system  contains  two  reserved  process-type  variables: 
+Self  and  Parent.  Self  is  always  equal  to  the  current  process.  Parent 
+always  rofors  to  the  parent  process  that  spawned  a  given  process.  Thoso 
+variables  con  also  be  used  in  Declare  statements  ns  examples  of 
+processes,  so  that  new  variables  of  typo  process  can  be  declare'*. 
+
+RULES  FOR  THE  USE  OF  COPROCESSES 
+
+The  following  rules  govern  the  use  of  coprocesses. 
+
+
+1.  A  coprocoss  may  not  call  Remove-plan  on  itself. 
+
+2.  Processes  can  be  the  object  of  assignment  statements,  so  that 
+statements  such  as: 
+
+Let  me  be  Self. 
+
+are  valid. 
+
+3.  Processes  can  be  values  of  suitably  defined  variables  or 
+arrays.  This  was  illustrated  in  above  example,  where  "me"  is  a 
+variable  taking  on  a  process  as  its  value. 
+
+
+-  7C  - 
+
+
+4.  Procosscs  can  bo  arguments  of  suitably  declared  arrays.  For 
+example: 
+
+Declare  activo_proeoss: 
+
+Let  activo_procoss  be  Self. 
+
+Declare  array:  Let  array  of  activo_proccss  be  17. 
+
+5.  Processes  cm  bo  parameters  of  functions.  For  example,  tho 
+built-in  function  "Remove-plan"  has  ns  its  single  parameter  an 
+object  of  tyyc  process. 
+
+6.  Processes  aro  subject  to  no  other  operations. 
+
+In  the  RSAS  environment,  coproccsses  correspond  to  decisionmaking 
+agents  or  othor  simulation  models.  At  tho  top  level,  a  system  monitor 
+controls  tho  execution  of  coproccsses. 
+
+A  given  agent  (coprocoss)  may  create  several  subordinate 
+coproccsses  to  create  an  organizational  hierarchy  (such  ns  a  hierarchy 
+of  command  in  a  military  command  structure  os  demonstrated  by  RSAS 
+decision  models). 
+
+
+-  79  - 
+
+
+XI.  TOP-LEVEL  RAND-ABEL  DECLARATIONS,  DEFINITIONS, 
+
+AND  STATEMENTS 
+
+
+The  RAND-ABEL  "language"  is  a  complocc  programming  language. 
+However,  only  certain  of  the  RAND-ABEL  statements  and  declarations  can 
+occur  at  the  top  lovol  of  a  RAND-ABEL  program.  All  other  RAND-ABEL 
+constructions  occur  within  these  top-level  statements  and  declarations. 
+
+The  only  RAND-ABEL  declarations  and  statements  that  can  occur  at 
+the  cop  level  arc: 
+
+
+•  Any  valid  RAND-ABEL  Declare 
+
+4  Any  valid  RAND-ABEL  Define 
+
+♦  The  RAND-ABEL  stataaonts : 
+
+Trace  If. 
+
+Trace  Function. 
+
+Untrace  If. 
+
+Untrace  Function. 
+
+*  One  of  the  two  mutually  exclusive  statements: 
+
+Owner:  name. 
+
+Owner:  Global. 
+
+•  A  special  top-level-only  Declare: 
+
+Declare  Ignore  name  .  .  .  name. 
+
+Declare  Ignore  name,  ...»  name. 
+
+*  The  set  of  declarations  providing  information  to 
+the  Data  Dictionary  facility  (see  Sec.  IX). 
+
+Begin  Declarations. 
+declaration 
+
+DDdeclaration  .  .  .  DDdeclaration 
+declaration 
+
+DDdeclaration  .  .  .  DDdeclaration 
+
+
+End  Declarations. 
+
+
+-  80  - 
+
+
+The  meanings  of  all  normal  RAND-ABEL  Declares,  Defines,  and 
+statements  are  found  in  earlier  sections  of  this  document.  The  moaning 
+of  tne  ownership  statements  (Owner)  is  found  in  Section  IX;  when  used 
+here,  the  statements  declare  the  ownership  tag  to  bo  put  on  all 
+subsequent  RAND-ABEI.  code. 
+
+The  Declare  Ignoro  statement  is  used  to  add  a  set  of  identifiers 
+to  a  list  (initially  null)  that  the  RAND-ABEI#  Translator  will  ignoro 
+whenever  they  are  encountered.  These  identifiers  can  then  bo  used  as 
+"noise  words"  in  RAND-ABEL  statements,  presumably  to  increase  choir 
+readability. 
+
+For  example,  elm  declaration: 
+
+Declare  Ignore  a,  an,  the. 
+allows  one  to  write  a  KASD-ABF.L  statement  such  as: 
+
+Lot  the  color  of  a  piece  be  white. 
+
+which  is  equivalent  to  the  RAND-ABEI#  statement  using  explicit  comments: 
+
+Let  (the)  color  of  (a)  piece  be  white, 
+or,  the  more  brutally  simple: 
+
+Let  color  of  piece  be  white. 
+
+Care  should  bn  taken  in  the  declaration  and  use  of  such  noise 
+words,  since  readers  of  RAND-ABEI#  code  might  overlook  the  Declare 
+Ignore  statement  and  belie.vo  that  these  words  arc  port  of  valid 
+RAND-ABEI.  syntax,  possibly  leading  them  to  write  incorrect  RAND-ABEI. 
+programs.  Also,  it  should  bn  noted  chat  in  normal  English  the  phrases 
+"a  piece."  and  "the  piece"  mean  qiutc  different  things,  whereas  they  do 
+not  in  a  RAND-ABEI.  program  in  which  both  "a"  and  "the"  arc  declared  to 
+be  noise  words,  again  creating  the  possibility  of  confusion  in  the 
+RAND-ABEL  reader's  mind. 
+
+
+-  81  - 
+
+
+Appendix  A 
+
+LOCAL  SUPPORT  ENVIRONMENT  FOR  RANO-ABEL 
+
+
+This  appendix  briefly  discusses  the  use  of  RAND-ABEL  at  The  RAND 
+Corporation.  Its  contents  ace  specific  to  this  site.  Currently, 
+RAND-ABEL  is  used  at  RAND  only  in  the  context  of  the  RAND  Strategy 
+Assessment  System  (RSAS).  Consequently,  the  following  guidelines  are 
+KSAS-specific. 
+
+The  RAND~ABEL  Translator  is  generally  used  in  two  modes:  (1)  ns  an 
+aid  in  preparing  syntactically  correct  RAND-ABEL  rules,  and  (2)  to 
+produce  compilable  C  code  for  actual  incorporation  into  the  executable 
+RSAC  model.  The  basic  difference  between  (1)  and  (2)  is  the  handling  of 
+the  Data  Dictionary. 
+
+Essentially,  in  preparing  RAND-ABEL  programs  data  items  are 
+frequently  added,  changed,  or  removed;  as  a  result,  the  writer  connot 
+use  the  master  data  dictionary,  but  must  use  his/her  own  extract  of  it. 
+This  seeming  inconvenience  can  actually  be  an  aid,  as  it  forces  the 
+writer  to  be  aware  of  how  his/her  program  integrates  with  the  other 
+parts  of  the  model. 
+
+In  all  cases  the  writer  incorporates  the  Data  Dictionary  into  the 
+program  by  the  RAND-ABEL  Include  statement  (described  in  Sec.  VIII). 
+Since  this  mechanism  allows  nesting  (that  is,  included  files  can  contain 
+ocher  include  statements),  a  two-level  approach  is  used.  At  the  top  of 
+o  RAND-ABEL  program  file  is  an  Include  for  a  single  Data  Dictionary 
+file;  this  file  in  turn  contains  Includes  for  all  needed  Data  Dictionary 
+components.  In  the  finished  program,  the  program  file  instead 
+incorporates  the  master  Data  Dictionary  file. 
+
+All  Data  Dictionary  files  end  in  ".D",  while  all  RAND-ABEL  program 
+files  end  in  ".A",  The  RAND-ABEL  Translator  is  applied  to  the  ".A" 
+files  only  (with  the  Includes  introducing  the  Data  Dictionary).  The 
+result  of  applying  the  RAND-ABEL  Translator  is  (possibly)  a  series  of 
+
+
+-  82  - 
+
+
+«rror  massages  and  two  flits:  a  ".A.c"  flit  and  a  ".A. I"  flit.  Thtsa 
+files  art  chtn  ustd  to  build  tht  Integrated  RSAS  model. 
+
+All  Data  Dictionary  and  RAND-ABEL  program  files  art  evtntually 
+registered  vith  the  RSAC  Data  Dictionary  administrator  for  the  final 
+integration. 
+
+Running  the  RAND-ABEL  Translator  itself  is  quite  simple.  Applying 
+it  to  the  file  "rules. A"  would  involve  typing  (on  a  Sun  workstation1 
+used  by  RSAS): 
+
+
+/pl/install/bin/anabei  rules. A 
+
+Most  people  will  probably  want  to  use  an  alias  f >r  this  and  so  will 
+place  the  line: 
+
+alias  enabel  /pl/install/bin/enabel 
+into  their  ".cshrc"  files. 
+
+In  reviewing  the  error  messages  produced  by  the  RAN!) -ABEL 
+Translator,  two  things  should  be  kept  in  mind: 
+
+
+(1)  The  range  of  legal  RAND-ABEL- language  inputs  is  quite  large; 
+sometimes  it  takes  several  keywords  for  the  enAbeler  to  detect 
+that  an  error  has  occurred.  Thus,  net  only  should  the  line 
+number  and  word  printed  by  the  RAND-ABEL  Translator  bo  checked 
+for  the  error,  but  tho  code  immediately  preceding  it  as  well. 
+
+(2)  A  problem  with  block-structured  languages  (like  RAND-ABEL)  in 
+general,  and  with  top-down  parsers  like  the  RAND-ABEL 
+Translator  in  particular,  is  a  difficulty  in  recovering  from 
+certain  errors.  (That  is,  there  is  often  a  problem  with  finding 
+the  start  of  legal  statements  after  the  error  and  in  recovering 
+context  skipped  over  because  of  the  error.)  As  a  result,  it  is 
+quite  possible  for  a  single  error  to  produce  a  hundred  error 
+messages.  Thus,  there  are  occasions  where  o.'ly  the  first  error 
+reported  is  an  actual  problem,  while  subsequent  error  messages 
+are  a  result  of  declarations,  definitions,  or  statement 
+boundaries  having  been  missed.  Note  that  this  is  not  always 
+the  case.  If  a  several-line  gap  appears  between  errors,  there 
+is  a  good  chance  that  the  later  error  is  valid.  However,  an 
+
+
+*Sun  workstations  running  Sun  operating  system  Release  3.2  (a 
+System  V/Berkeley  UNIX  derivative  operating  system)  are  supported. 
+
+
+-  83  - 
+
+
+error  in  a  declaration  con  cause  spurious  errors  wherever  the 
+item  being  declared  is  subsequently  used,  oven  it  thousands  of 
+error-free  lines  intervene. 
+
+
+In  all  cases,  the  RAND-ABKL  pcogram  writer  has  to  do  a  certain 
+amount  of  learning  through  experience  and  through  sharing  experience 
+with  other  writers.  Also,  there  are  certainly  cases  where  the  RAND-ABKL 
+Translator  can  do  a  better  Job  of  finding  and  reporting  errors,  and  in 
+recovering  from  them.  Communication  is  thus  very  important. 
+
+CHANGING  RAND-ABEL  RULES  (SOURCE  CODE) 
+
+To  make  changes  to  the  rules  governing  program  execution,  the 
+analyst  must  edit  the  relevant  RAND-ABKL  source  file  (denoted  by  a  ".A" 
+suffix  on  the  filename).  Those  changes  can  be  checked  for  correct 
+syntax  and  incorporated  into  the  RSAS  game  by  either  of  two  methods. 
+
+The  first  involves  the  use  of  the  RAND-ABKL  Interpreter,  while  the  other 
+compiles  the  code  using  the  so-called  "Knabolor"  or  RAND-ABKL 
+Translator.  These  methods  ore  described  briefly  below. 
+
+
+Interpreting  Source  Code 
+
+The  fastest  way  to  incorporate  new  rules  into  the  RSAS  gaming 
+environment  is  to  move  the  functions  containing  those  rules  into  a 
+special  Interpreter  directory  called  INT  under  Rsas/Run.  Anytime  a  ".A" 
+RAND-ABKL  source  file  is  created  or  modified  in  that  directory,  the  RSAS 
+monitor  will  use  that  code,  instead  of  the  compiled  version  of  the 
+source  coda,  when  the  game  is  star'  -d  or  restarted  from  the  RSAS  Control 
+Panel. 
+
+Some  words  of  caution  will  help  to  avoid  confusion  and  mistakes 
+when  moving  RAND-ABEL  rules  to  the  INT  directory.  First,  copy  the 
+source  files  containing  the  functions  of  interest  to  the  INT  directory. 
+Then,  edit  the  interpreted  files  to  remove  (1)  all  Include  "filename" 
+statements  in  the  file,  and  (2)  any  other  functions  that  have  been  left 
+unchanged  from  their  compiled  counterparts.  Removing  unchanged 
+functions  simply  reduces  the  amount  of  code  interpreted  and  results  in 
+faster  execution,  since  compiled  code  executes  approximately  an  order  of 
+
+
+magnitude  faster  than  interpreted  code.  Also,  make  certain  that  there 
+is  an  Owner:  statement  at  the  beginning  of  the  file  (Owner:  Blue.** 
+for  example). 
+
+The  file  ".defines"  contains  all  BOefine  macro  statements  identical 
+to  the  ones  in  Rsas/Inic/incl.D  that  are  used  during  compilation.  This 
+file,  along  with  the  Data  Dictionary  itself,  is  automatically  included 
+by  the  Interpreter. 
+
+To  temporarily  prevent  interpretive  executic'  of  a  source  file, 
+move  the  source  file  to  the  Hide  directory  that  exists  under  the  1ST 
+directory.  When  it  is  desired  to  interpret  the  source  file  again, 
+merely  move  it  back  up  to  the  1ST  directory. 
+
+The  following  diagram  illustrates  the  relationship  of  source 
+directories  to  the  interpreted  source  directory. 
+
+Source  and  Interpreter  Directory  Structure 
+
+Rsas 
+
+/  \ 
+
+'  Src  Run 
+
+/  \ 
+
+SCL  Awp  Green  ...  INT 
+
+/  \  \ 
+
+Red  Blue  Hide 
+
+When  the  System  Monitor  begins  or  resumes  running  a  game,  it  will 
+first  check  the  INT  directory  for  source  files  to  interpret  and  invoke 
+the  Interpreter  to  process  these  files.  If  the  files  are  free  of  syntax 
+or  ocher  errors,  the  Interpreter  will  log  a  message  in  the  scrollable 
+text  window  under  the  Control  Panel  (the  game  log  window)  indicating 
+chat  the  functions  in  these  files  will  be  interpreted,  and  System 
+Monitor  will  then  continue  the  game.  Otherwise,  error  messages  will 
+appear  in  the  game  log  window  and  the  game  will  stop  immediately.  If 
+the  game  is  resumed  a  second  time,  no  further  files  will  be  interpreted 
+(until  the  user  edits  them  correcting  the  errors),  and  the  game  will 
+continue  using  the  compiled  versions  of  the  functions. 
+
+
+-  85  - 
+
+
+Compiling  and  Loading  Source  Code 
+
+Thore  ore  two  steps  involved  in  producing  on  executable  RSAS  from 
+the  RAND-ABEL  source  files.  The  first  step  is  to  "cnnbol"  the  source 
+code,  checking  syntax,  producing  C  code  and  eventually  ".o"  object 
+files.  The  next  step  is  to  combine  the  various  ",o"  modules  into  a 
+single  executable  (binary)  file  called  run. sun  in  Rsas/bin  directory. 
+
+Incremental  Changes  to  Source  Code 
+
+Changes  to  a  source  file  can  be  incorporated  into  RSAS  runs  by 
+compiling  it  and  loading  the  resulting  output  with  the  existing  compiled 
+modules.  See  the  instructions  above  for  determining  which  configuration 
+file  to  touch3  in  ordor  to  compile  a  sot  of  .A  files. 
+
+In  ordor  to  build  a  new  executable  RSAS  file,  use  the  makefile  in 
+the  cop-lavol  Rsas  directory.  By  typing  "make"  in  chat  directory,  all 
+source  code  will  be  chocked  for  modifications  (the  updated  files  will  be 
+recompiled)  and  loaded  into  a  now  "run. new"  executable  »ile  in  the 
+Rsas/bin  directory.  Renaming  that  file  to  "run. sun"  will  cause  it  to  be 
+used  in  subsequent  RSAS  runs. 
+
+Full  Data  Dictionary  Remake 
+
+When  changes  are  made  to  Data  Dictionary  declarations  (o.g.,  by 
+adding  a  new  variable  or  enumeration  type),  it  is  noccssary  to  remake 
+all  RAND-ABEL  source  files.  This  can  be  dono  by  "couching"  the 
+dictionary. D  file  in  Rsns/Init  directory  and  starting  the  RSAS  "make" 
+from  the  top-level  Rsas  directory  as  shown  below  (assuming  the  current 
+working  directory  is  Rsas) : 
+
+cd  Init 
+
+touch  dictionary. D 
+
+cd  . . 
+
+make 
+
+
+2 
+
+
+Touch  is  a  UNIX  command. 
+
+
+-  86  - 
+
+
+A  "full"  Data  Dictionary  rcmako  will  also  produce  a  new  Vorld 
+Situation  Data  Sot  (WSDS)  filo  called  "wsds.ncw"  in  Rsas/Run/Wsds 
+directory  that  should  bo  subsequently  renamed  to  "wsds"  to  use  it  in  an 
+RSAS  run.  In  addition,  a  "scdb.now"  filo  is  produced  in  Rsos/Run  that 
+should  be  renamed  "scdb.S"  for  using  the  Source  Code  Data  Base  (also 
+known  ns  the  Cross  Reference  Tool). 
+
+
+87 
+
+
+Appandix  B 
+
+QUICK  REFERENCE  GUIDE  TO  THE  RAND-ABEL  LANGUAGE 
+
+KEYWORDS 
+
+The  following  is  a  list  of  RAND-ABEL  keywords.  Words  that  always 
+occur  in  saquanca  as  phrases  ara  shown  together;  words  are  shown 
+separately  that  are  optional  or  are  one  of  several  possible  choices 
+within  a  phrase. 
+
+
+-  88  - 
+
+
+and 
+
+For 
+
+are 
+
+Format 
+
+are  not 
+
+from 
+
+as 
+
+Function 
+
+Attribute 
+
+Author 
+
+Global 
+
+Begin  Declarations 
+
+If. .  .Than 
+
+Break 
+
+If. ..Than. ..Elsa 
+
+by 
+
+Ignore 
+
+Clone 
+
+in 
+
+Include 
+
+Comments 
+
+Increase.. .by 
+
+Concatenated  with 
+
+Initialize 
+
+Constant 
+
+is 
+
+Continue 
+
+is  at  least 
+
+Date 
+
+Is  at  most 
+is  greater  than 
+
+Declare 
+
+is  lass  than 
+
+Declare... by  example 
+
+is  not 
+
+Decrease  by 
+
+Default 
+
+Let. .  .be 
+
+Define 
+
+Log 
+
+#define 
+
+Definition 
+
+Macro 
+
+Divide. .  .by 
+
+Make 
+
+Divided  by 
+
+Method 
+
+End 
+
+minus 
+
+modulo 
+
+End  Declarations 
+
+Multiply. .  .by 
+
+Erasable 
+
+Erase 
+
+negative 
+
+Evaluate 
+
+No 
+
+Everyone 
+
+Not 
+
+Exit 
+
+of 
+
+or 
+
+Owner 
+
+In  addition,  the  following  special  symbols  also  act 
+having  special  meaning: 
+
+
+e 
+
+(...) 
+
+(...) 
+
+[».]  , 
+
+♦ 
+
+* 
+
+/ 
+
+X 
+
+=  ~= 
+
+>= 
+
+<= 
+
+>  < 
+
+In  the  above  lists, 
+
+ellipses 
+
+(...)  are 
+
+used  to  represent 
+
+Parent 
+
+Perform 
+
+plus 
+
+Pointar  to 
+
+Print 
+
+Prompt 
+
+Ranga 
+
+Raad 
+
+Racord 
+
+Rafarancas 
+
+Raport  from 
+
+Raporting 
+
+Saif 
+
+Sami-erasable 
+
+Status 
+
+String 
+
+Table 
+Thera  is 
+times 
+Trace 
+
+Unorasable 
+
+Unspecified 
+
+Untrace 
+
+Use 
+
+using 
+
+Validation 
+Value  of 
+
+While 
+
+with 
+
+Write 
+
+Yes 
+
+
+as  keywords 
+
+
+intervening 
+
+
+-  89  - 
+
+
+words  in  a  standard  phrase.  (Noto:  Elsewhere  in  this  manual,  ellipses 
+are  used  to  represent  certain  syntactic  options;  soc  item  //A,  below.) 
+
+BNF  DESCRIPTION  OF  RAND-ABEL 
+
+To  describe  the  RAND-AB».L  language  in  a  concise  format  for  easier 
+scanning,  the  Backus-Naur  Form  (BNF)  of  RAND-ABEL  is  shown  below.  The 
+following  notacional  conventions  are  used  in  this  BNF.  Nonterminals  in 
+the  language  arc  denoccd  by  names  with  a  capitalized  first  letter  (e.g., 
+Abel),  while  terminal  symbols  arc  all  uppercase  (e.g.,  ENUMERATION). 
+
+Note  that  the  nonterminals  that  represent  keywords  are  shown  hero  in  all 
+uppercase,  whereas  in  a  RAND-ABEL  program  only  the  first  character  may 
+be  capitalized.  A  few  special  symbols,  namely 
+
+|  anynamo*  <cir.pty> 
+
+arc  part  of  the  notation,  NOT  part  of  the  RAND-ABEL  programming 
+language.  Star  ' '*"  immediately  follows  any  quantity,  represented  by 
+''anynnmc"  above,  chat  can  be  repeated  zero  or  more  times.  Tho  "|M 
+separates  alternative  selections  that  ore  valid  in  the  same  construct. 
+<cmpcy>  indicates  that  an  option  may  be  omitted  entirely. 
+
+
+Abel 
+
+Component 
+
+
+Declaration 
+
+
+:=  Component* 
+
+:=  Declaration 
+Definition 
+OWNER  :  NAME 
+OWNER  :  GLOBAL 
+
+Trace_rcquest  IF  Opt_file_clouse  . 
+Tracc_rcquest  FUNCTION  Opt_filc_clause  . 
+Trace_rcqucst  NAME  TABLE  Opt_filc_clause  . 
+Trace_rcquest  LET  Opt_file_clause  . 
+
+TRACE  TO  FILE  STRING  . 
+
+Dictionary 
+
+:=  DECLARE  NAME  :  Assignment  . 
+
+DECLARE  NAME  :  Call  . 
+
+DEFINE  ENUMERATION  :  Member_list  . 
+
+
+FOR  NAME  :  Statement 
+
+FOR  NAME  Expr  :  Statement 
+
+FOR  NAME  PREPOSITION  Expr  :  Statement 
+
+FOR  NAME  NOT  PREPOSITION  Expr  :  Statement 
+
+BREAK  . 
+
+CONTINUE  . 
+
+EXIT  . 
+
+EXIT  REPORTING  Expr  . 
+
+Trace_request  IF  Opt_file_clause  . 
+Trace_request  FUNCTION  Opt_£ile_clause  . 
+Trace_request  NAME  TABLE  Opt_file_clause  . 
+Trace_request  LET  Opt_file_clause  . 
+
+TABLE  Element  .  Opt_newlines  Rows  . 
+
+TABLE  Block  .  Opt_newlines  Rows  . 
+
+NAME  TABLE  .  Opt_newlines  Rows  . 
+
+:=  {  Opt_declarations  Statements  } 
+
+:=  LET  Expr  BE  Expr 
+
+
+Block 
+
+Assignment 
+
+
+-  91  - 
+
+
+Call  ::=  PERFORM  Element  Opt_uso_clauso 
+
+Io_call  ::=  Io_primitivc  Expr_iist 
+
+|  Io.primitivc  WITH  Expr  Expr_list 
+
+|  Io_primitivo  NAME  WITH  Expr  Expr_list 
+
+Io_primicivc  : :=  PRINT 
+|  LOG 
+
+|  EXPLAIN 
+
+Conditional  ::=  IF  Expr  THEN 
+
+Tracc_rcqucst  : :=  TRACE 
+
+|  UNTRACE 
+
+Opt_£ilc_clausc  ::=  <cmpty>  |  TO  FFILE  STRING 
+Expr_list  : :=  Expr* 
+
+Row  : :=  Expr_list  NEWLINE  Opt_ncwlinos 
+
+Rows  : : =  Row* 
+
+Expr  : :=  Logexpr 
+
+|  Eval_clauso  Expr_list 
+
+Eval.clause  : :=  EVALUATE 
+
+|  EVALUATE  WITH  Factor 
+
+Logexpr  : :=  Logterm 
+
+|  Logexpr  OR  Logterm 
+
+Logterm  : :=  Logfactor 
+
+|  Logterm  AND  Logfactor 
+
+Logfactor  : :=  Subexpr 
+
+|  Logfactor  EQUAL  Subexpr 
+
+|  Logfactor  N0T_EQUAL  Subexpr 
+
+|  Logfactor  LESS_THAN  Subexpr 
+
+|  Logfactor  GREATER_THAN  Subexpr 
+
+|  Logfactor  LESS_0R_EQUAL  Subexpr 
+
+|  Logfactor  GREATER_OR_EQUAL  Subexpr 
+
+Subexpr  : :=  Term 
+
+|  Subexpr  +  Term 
+
+|  Subexpr  -  Term 
+
+|  Subexpr  DOLLAR  Term 
+
+Term  : :=  Factor 
+
+
+-  92  - 
+
+
+Factor 
+
+
+Domlist 
+
+
+Paramoxpr 
+Pa ram list 
+
+
+As_for 
+
+Element 
+
+
+Term  '*•  Factor 
+Term  /  Factor 
+Term  MODULO  Factor 
+:=  Element 
+
+Element  IS  IN'  Element 
+REPORT  FROM  Element 
+REPORT  FROM  Element  Paramoxpr 
+Element  PREPOSITION  Domlist 
+-Element 
+NOT  Element 
+=Elcmont 
+~aE lament 
+<F.  lament 
+>Element 
+<=Elomont 
+>=E lament 
+MAX*  Element 
+MIN  Element 
+:=  Factor 
+
+Factor  COMMA  AND  Domlist 
+Factor  COMMA  Domlist 
+:=  USING  Expr  As_Cor  NAME  Parnmlist 
+<empty> 
+
+COMMA  Expr  As_£or  NAME  Paramlist 
+COMMA  AND  Expr  As_for  NAME  Paramlist 
+:=  AS 
+FOR 
+
+:=  VALUE  OF  Element 
+POINTER  TO  Element 
+FUNCTION  Element 
+(  Expr  ) 
+
+{  NAME  SUCH  THAT  Expr  ) 
+
+{  ) 
+
+{  Member.. list  } 
+
+
+-  93  - 
+
+
+Me,mbor_list 
+
+
+Poss_clauso 
+
+Qpt.ncwlincs 
+
+Dictionary 
+
+Dict_cntrics 
+
+Dict_ontry 
+
+
+Description 
+
+Descriptor 
+
+
+|  STRING 
+|  FLOAT 
+|  INTEGER 
+|  BOOLEAN 
+|  UNSPECIFIED 
+i  UNIVERSE 
+|  NAME 
+
+|  Poss_elausc  NAME 
+: :=  NAME 
+
+|  NAME  Hcmbcr_lise 
+
+|  NAME  COMMA  Member.. list 
+
+: :=  POSSESSIVE 
+|  Poss_clnuso  POSSESSIVE 
+::=  NEWLINE* 
+
+::=  BEGIN  DECLARATIONS  .  Dict_cntrios  END  DECLARATIONS 
+: :=  Dict_ontry 
+|  Dict_entrics  Dict_cntry 
+::=  DEFAULT  Descriptor 
+|  Declaration  Description 
+|  Nodofault_dccl 
+: :=  Description* 
+
+: :=  Ownership 
+|  Access_method 
+|  Macro_mcthod 
+|  Func_method 
+|  Usage 
+|  Init_struct 
+|  Acccss^type 
+|  Prompt_func 
+|  Prompt_string 
+|  Val_func 
+j  Val_range 
+|  Format 
+I  Author 
+
+
+-  94  - 
+
+
+Ownership 
+
+
+Acccss.mcthod 
+
+
+Macro„mcthod 
+
+Func.mothod 
+
+Usage 
+
+Usc_typo 
+
+
+Inic_struct 
+
+Accoss_typo 
+
+
+Group_list 
+
+
+Group 
+
+Piompt_func 
+
+Prompt..string 
+
+Val_func 
+
+
+Dace 
+
+lnformative_dof 
+
+References 
+
+Comments 
+
+Status 
+
+:=  OWNER  :  NAME  . 
+
+OWNER  :  Poss_ciausc  NAME  . 
+
+OWNER  :  GLOBAL  . 
+
+OWNER  :  EVERYONE  . 
+
+:=  METHOD  :  DIRECT  .  . 
+
+METHOD  :  MACRO  . 
+
+METHOD  :  FUNCTION  . 
+
+:=  MACRO  :  STRING  . 
+
+:=  FUNCTION  :  NAME  . 
+
+FUNCTION  :  Poss_clause  NAME  . 
+
+:=  USE  :  Usc_typo  . 
+
+:=  CLONE 
+NOCI.ONE 
+CONSTANT 
+:=  INITIALIZE  . 
+
+NO  INITIALIZE  . 
+
+:=  READ  :  Group_list  . 
+
+NOREAD  :  Group_Iist  . 
+
+WRITE  :  Group_Iist  . 
+
+NOWRITE  :  Group_Iist  . 
+
+:=  EVERYONE 
+Group 
+
+Group_list  COMMA  Group 
+::=  NAME 
+
+|  Poss_clauso  NAME 
+
+::=  PROMPT  FUNCTION  :  NAME  . 
+
+|  PROMPT  FUNCTION  :  Poss_clause  NAME 
+::=  PROMPT  STRING  :  STRING  . 
+
+::=  VALIDATION  FUNCTION  :  NAME  . 
+
+
+-  95  - 
+
+
+Val_rangc  : 
+
+Number  : 
+
+Formic  : 
+
+Author  : 
+
+Date  : 
+
+InfQrmntiva_dof  : 
+References  : 
+
+Comments  : 
+
+Stneus  : 
+
+Nodafnult_dccl  : 
+
+
+I 
+
+
+I 
+
+
+Comment 
+
+
+VALIDATION  FUNCTION  :  Poss_clausc  NAME  . 
+=  VALIDATION  RANGE  :  Number  TO  Number  . 
+
+-  INTEGER 
+FLOAT 
+
+;=  READ  FORMAT  :  STRING  . 
+
+WRITE  FORMAT  :  STRING  . 
+
+=  AUTHOR  :  [  STRING  )  . 
+
+*  DATE  :  [  STRING  )  . 
+
+=  DEFINITION  :  (  STRING  )  . 
+
+=  REFERENCES  :  (  STRING  )  . 
+a  COMMENTS  :  (  STRING  )  . 
+
+=  STATUS  :  (  STRING  )  . 
+
+=  NO  DEFAULT  METHOD  . 
+
+NO  DEFAULT  USE  . 
+
+NO  DEFAULT  INITIALIZE  . 
+
+NO  DEFAULT  READ  . 
+
+NO  DEFAULT  WRITE  . 
+
+NO  DEFAULT  PROMPT  FUNCTION  . 
+
+NO  DEFAULT  PROMPT  STRING  . 
+
+NO  DEFAULT  VALIDATION  FUNCTION  . 
+
+NO  DEFAULT  VALIDATION  RANGE  . 
+
+NO  DEFAULT  OWNER  . 
+
+NO  DEFAULT  READ  FORMAT  . 
+
+NO  DEFAULT  WRITE  FORMAT  . 
+
+NO  DEFAULT  AUTHOR  . 
+
+NO  DEFAULT  DATE  . 
+
+NO  DEFAULT  DEFINITION  . 
+
+NO  DEFAULT  REFERENCES  . 
+
+NO  DEFAULT  COMMENTS  . 
+
+NO  DEFAULT  STATUS  . 
+
+
+:=  [  STRING  ] 
+
+
+-  96  - 
+
+
+SUMMARY  OF  RAND-ABEL  SYNTAX  CATEGORIES 
+
+The  following  pages  contain  a  summary  of  the  RAND-A8KL  syntax 
+chores  contained  within  this  document. 
+
+
+•^-expression - - - - «— - + 
+
+j  Report  from  in  net  Jon  -  in  vocation  j 
+
+I  I 
+
+|  Evaluate  unitparan  .  .  .  unieparaa  | 
+
+|  Evaluate  with  forsat-spec  unit par am  .  .  .  unitparao  j 
+
+I  ! 
+
+|  unary-operator  expression  | 
+
+j  expression  binary-operator  expression  j 
+
+I  I 
+
+|  sinpio-expr  | 
+
+I  I 
+
+
+-  97  - 
+
+
+■i-sinple-expr - + 
+
+i  i 
+
+I  Function  funetion-n/isc  | 
+
+!  I 
+
+j  ^-unitparaa . . . . . +  | 
+
+
+Yes 
+
+No 
+
+enucarated-value 
+nuceric- literal 
+quoted-string 
+variable-nasa 
+Unspecified 
+
+Mt 
+
+(  expression  ) 
+
+
+,  ■  --  - T  | 
+
+I  +- lvalue - - — - - -f  | 
+
+
+I  |  variable- nane 
+
+I  I 
+
+|  j  Occupant  of  variabla-naao 
+
+j  j  Occupant  of  array-access 
+
+I  I 
+
+|  |  Pointer  to  variable-naae 
+
+j  j  Pointer  to  Attribute  array-naae 
+
+i  i 
+
+!  i  +-array-accoss - - (■ 
+
+ill  I 
+
+{  |  |  arrny-nam  of  sitaplo-expr  ,  ...  | 
+
+ill  in  ,  and  | 
+
+III  by  ,  and  j 
+
+
+,  siaple-cxpr 
+,  and 
+
+
+-  98  - 
+
+
++ -declaration — - - - - - — 
+
+I 
+
+|  Declare  variable-name: 
+
+j  Declare  variable-name  by  example: 
+
+I 
+
+|  Let  variable-name  be  expression . 
+
+j  Let  variable-name  be  id on ci Hoc  constant. 
+
+|  Let  variable-name  be  enumerated  variable 
+
+I 
+
+j  Declare  array 'name: 
+
+j  Declare  array-name  by  example: 
+
+I 
+
+1  Let  array-name  of  simple-oxpr  ,  .  .  , 
+
+j  Let  array-name  In  simplo-expr  ,  and  .  .  . 
+
+j  Let  array-name  by  simplo-expr  ,  and  .  .  . 
+
+I 
+
+|  .  .  .  ,  simplo-expr 
+
+j  .  .  .  ,  and  simplo-expr 
+
+I 
+
+|  be  expression . 
+
+I 
+
+|  Declare  func-namo  : 
+
+j  Declare  func-namo  by  example: 
+
+I 
+
+|  Let  expression  be  Report  from  named-function-call . 
+
+Perform  named- function-call . 
+
+
+-  99  - 
+
+“"a  i/flut  10U~QGk  lUJ.LJ.Ou  -------- 
+
+1 
+
+|  Define  namcd-function-call 
+
+:  declaration  .  .  . 
+
+I 
+
+% 
+
+1 
+
+declaration 
+
+1 
+
+statement  .  .  . 
+
+1 
+
+1 
+
+statement 
+
+|  End. 
+
+1 
+
++-naaed- function-call - 
+
+I 
+
+|  func-namo 
+
+I 
+
+|  func-u/aa  using  expression  as  param-name  ,  .  .  . 
+
+|  for  ,  and 
+
+I 
+
+!  .  .  .  ,  expression  as  param-naao 
+
+j  ,  and  for 
+
+
+*- fence  ion- invocation - 
+
+I 
+
+|  named- function-call 
+
+I 
+
+|  i f unc- per 
+
+I 
+
+|  func-ptr  using  expression  as  param-namo  ,  .  . 
+
+I  for  ,  and 
+
+I 
+
+I  .  .  .  ,  expression  as  param-naao 
+
+j  ,  and  for 
+
+
+-  100  - 
+
+
+•^-statement - + 
+
+I  I 
+
+|  Let  lvalue  be  expression.  \ 
+
+j  Let  pointer  be  expression.  j 
+
+
+Increase  J value  by  expression. 
+
+Decrease  Ivaluo  by  expression. 
+
+Multiply  lvalue  by  expression. 
+
+Divide  lvalue  by  expression. 
+
+If  Boolean-expression  Then  statement 
+
+If  Boolean-expression  Then  statement  Else  statement 
+
+For  variable  :  statement 
+
+While  Boolean-expression  :  statement 
+
+Continue. 
+
+Break. 
+
+Table  (unc-nnno 
+Table  compound-statement 
+Decision  Table 
+
+table-header. 
+
+table-body. 
+
+Pe  r  f  or  m  f unc t ion  - invoca t ion . 
+
+Exit. 
+
+Exit  Reporting  sinplo-expr. 
+
+Print  unitparan  .  .  .  unit  par  am. 
+
+Print  with  format-spec  unit  pa  ram  .  .  .  unitparan. 
+
+Print  straannand  unit  pa  ram  .  .  .  unitparam. 
+
+Print  streannane  with  format-spec  unitparam  .  .  .  unitparan. 
+
+Log  unitparan  .  .  .  unitparan. 
+
+Log  with  fornat-spec  unitparan  .  .  .  unitparan. 
+
+Log  streamnamo  unitparan  .  .  .  unitparam. 
+
+Log  streanname  with  format-spue  unitparan  .  .  .  nit  par  am. 
+
+{  declaration  .  .  .  declaration 
+
+
+statement  .  .  .  statement  } 
+
+
+-  101  - 
+
+
+{} 
+
+Trace  If. 
+
+Trace  Function. 
+
+
+Untrace  If. 
+Untrace  Function. 
+
+
+-  102  - 
+
+
++-data  dictionary  specification  block 
+
+I 
+
+|  Begin  Declarations, 
+j  [No)  Default  DDdcclaration  ... 
+
+i 
+
+|  declaration 
+
+I 
+
+|  DDdcclaration  .  .  . 
+
+I 
+
+I  DDdcclaration 
+
+i 
+
+|  declaration 
+
+I 
+
+|  DDdcclaration  .  .  . 
+
+I 
+
+|  DDdcclaration 
+
+
+End  Declarations. 
+
+
++ -DDdccla ra tion - 
+
+I 
+
+|  Method:  Direct. 
+
+1  Method:  Function. 
+
+|  Method:  Macro. 
+
+I 
+
+1  Function:  func-namo. 
+
+I 
+
+j  Macro:  string-litoral . 
+
+I 
+
+|  Use:  Clone, 
+
+j  Use:  No  Clone, 
+
+j  Use:  Constant. 
+
+
+Owner: 
+
+owner-name . 
+
+Owner: 
+
+Global. 
+
+Read 
+
+Read 
+
+Read 
+
+Everyone. 
+owner-name  .  . 
+
+owner-name  ,  . 
+
+.  owner-name . 
+
+.  .  ,  owner-name. 
+
+Noread 
+
+Noread 
+
+Noread 
+
+Everyone. 
+owner-name  .  . 
+
+owner-name  ,  . 
+
+.  owner-name. 
+
+.  .  ,  owner-name. 
+
+Write 
+
+Write 
+
+Everyone. 
+owner-name  .  . 
+
+.  owner-name . 
+
+-  103  - 
+
+
+Write  ounor-nnna  ,  ...  ,  ounar-mma.  \ 
+
+I 
+
+Nowrite  Everyone.  | 
+
+Nowrite  owner-name  .  .  .  owner-nan o.  | 
+
+Nowrite  owner-name  ,  .  .  .  ,  owner-name.  j 
+
+I 
+
+Read  Format:  string-literal .  | 
+
+I 
+
+Write  Format:  string-literal .  \ 
+
+I 
+
+Validation  Range:  numeral  to  nuciorfl  1 .  \ 
+
+I 
+
+Validation  Function:  func-namo.  | 
+
+I 
+
+Prompt  Function:  (unc-nana.  i 
+
+Prompt  String:  string-litoral .  I 
+
+I 
+
+Initialize.  j 
+
+I 
+
+No  Initialize.  j 
+
+I 
+
+Author:  common t.  | 
+
+i 
+
+i 
+
+Date:  coanont.  I 
+
+I 
+
+Definition:  comment.  | 
+
+I 
+
+References:  comment.  | 
+
+Comments:  comment .  | 
+
+I 
+
+Status:  comment.  | 
+
+I 
+
+No  Default  Author.  | 
+
+No  Default  Comments.  | 
+
+No  Default  Date.  j 
+
+No  Default  Definition.  | 
+
+No  Default  Initialize.  j 
+
+No  Default  Method.  j 
+
+No  Default  Owner.  | 
+
+No  Default  Prompt  Function.  j 
+
+No  Default  Prompt  String.  | 
+
+No  Default  Read  Format.  | 
+
+No  Default  Write  Format.  j 
+
+No  Default  References.  j 
+
+No  Default  Status.  | 
+
+No  Default  Use.  j 
+
+No  Default  Validation  Function.  | 
+
+No  Default  Validation  Range.  j 
+
+I 
+
++ . . . + 
+
+
+-  104  - 
+
++-r.QCa-scacezanc - 
+
+I 
+
+|  ^Define  nano  t  unquoccd-sfiring  ) . 
+
+1  Include  " filename". 
+
+I 
+
+.t _ _ 
+
+
+-  105  - 
+
+INDEX 
+
+
+\  (backslash)  codas,  used  in  format-spec  for  I/O  56 
+
+.  .  .  nocation,  meaning  of  6 
+
+(...)  used  co  delimit  compound  statement  59 
+
+|  logical  or  operator  25 
+
+-=  operator  22 
+
+-  logical  not  operator  25 
+
+--  (synonym  for  Unspecified)  14 
+#define  meta-statement  62 
+$  string  concatenation  operator  26 
+5  codes,  used  for  I/O  formatting  55 
+t  logical  and  operator  25 
+
+*  (Hulciplication  operator)  21 
+
+*  (Addition  operator)  21 
+,  and  19 
+
+-  (Subtraction  operator)  21 
+
+-  (Unary  negation  sign)  21 
+/  (Division  operator)  21 
+<~  operator  23 
+
+<  operator  23 
+
+=  operator  22 
+
+operator  23 
+>  operator  23 
+
+.A  RAND-ABEL  program  files  at  RAND  61 
+.A.c  file,  produced  by  RAND-ABEL  Translator  82 
+
+.A. I  file,  produced  by  RAND-ABEL  Translator  82 
+
+.eshre  file,  inclusion  of  an  alias  within  82 
+.D  data  dictionary  files  at  RAND  61 
+
+Addition  operator  (*)  21 
+
+Address  of  phrase  20 
+
+Alias  for  RAND-ABEL  Translator  access  path,  how  to  create 
+Aliases,  creation  of  using  ^define  meta-statement  62 
+and  (fc)  logical  operator  25 
+and  19 
+
+are  not  operator  22 
+
+Array  declaration,  prefix  form  of  29 
+
+Array  Declarations  29 
+
+Array,  basic  data  type  12 
+
+array-access  16 
+
+array-access ,  definition  of  19 
+
+ASCII  characters,  production  of  in  output  56 
+
+Assignment  statement  37 
+
+as  34  „  35 
+
+Author  data  dictionary  declaration  72 
+
+
+82 
+
+
+Backslash  (\)  codes,  used  in  format-spec  for  I/O  56 
+Backus -Naur  Form  of  RAND-ABEL  89 
+
+
+-  106  - 
+
+
+Basic  RAND-ABEL  data  types  11 
+Begin  Declarations  66 
+binary-operator  17 
+3NF  description  89 
+Boldface,  meaning  of  5 
+
+Boolean  data  type,  default  output  format  for  54 
+
+Boolean  values,  result  of  logical  operators  25 
+
+Boolean,  basic  data  type  12 
+
+Break  statement  42 
+
+Buffers  in  RAND-ABEL  I/O  58 
+
+Built-in  RAND-ABEL  data  types  11 
+
+by  19 
+
+C  programming  language  1,  2 
+
+Case  shifts,  distinguishing  global  from  local  variables  7 
+
+Case  shifts,  in  RAND-ABEL  keywords  5 
+
+Changing  RAND-ABEL  rules  in  the  RSAS  environment  83 
+
+Character  string,  basic  data  type  12 
+
+Clone  option  in  Use  declaration  68 
+
+Close-stream  function  57 
+
+Comments,  notation  for  9 
+
+Comments  data  dictionary  declaration  73 
+
+Comparison  of  two  enumerated  values  24 
+
+Comparison  of  two  strings  23 
+
+Comparison  Operators  22 
+
+Compiling  and  loading  source  code  85 
+
+Compound  statement  59 
+
+concatenated  with  string  operator  26 
+
+CortHtional  execution  39 
+
+Constant  option  in  Use  declaration  68 
+
+Continue  statement  42 
+
+Coprocesscs  76 
+
+Coprocessos,  rules  for  the  use  of  77 
+
+Coroutines  (sec  coprocesses)  76 
+
+Creating  a  coprocess  using  Startup-plan  function  76 
+
+Creating  a  data  value  of  type  process  76 
+
+Data  dictionary  declaration  section,  complete  example  75 
+
+Data  dictionary  files  at  RAND  81 
+
+data  dictionary  specification  block  66 
+
+Data  Dictionary  65 
+
+Data  Editor,  in  RSAS  71 
+
+Data  types  11 
+
+Date  data  dictionary  declaration  72 
+
+Debug. out  file  64 
+
+Debugging,  statements  useful  for  64 
+
+Decision  table,  example  45 
+
+Declaration  of  functions  30 
+
+Declarations  28 
+
+Declare  ignore  statement  80 
+
+Declare... by  example  array  declaration  29 
+
+
+-  107  - 
+
+
+Declare... by  example  declaration  28 
+
+Declare  array  declaration  29 
+
+Declare  declaration  28 
+
+Decrease. . .by  statement  38 
+
+Default  declarations,  creating  and  removing  73 
+
+Default  output  formats  54 
+
+Default  data  dictionary  declaration  73 
+
+Define  statement  for  function  definition  33 
+
+Defining  declarations  within  a  data  dictionary  declaration 
+
+Definition  data  dictionary  declaration  72 
+
+Directory  structure  diagram,  RSAS  84 
+
+direct  option  in  method  declaration  67 
+
+Divide. .  .by  statement  38 
+
+divided  by  operator  21 
+
+Division  by  xoro  21 
+
+Division  oporaeor  (/)  21 
+
+Don't  care  19 
+
+Ellipsis  (.  .  .),  meaning  of  6 
+Else  39 
+
+cnabcl,  program  name  of  RAND-ABEL  Translator  82 
+End  Declarations  66 
+End  33 
+
+Enumerated  data  type  13 
+
+Enumerated  data  typo,  default  output  format  for  55 
+Enumerated,  basic  data  type  12 
+Equality  cost  for  character  strings  22 
+
+Equality  test  for  enumerated  values  23 
+
+Equality  Tests  22 
+
+Error  messages  produced  by  RAND-ABEL  Translator  82 
+
+Error  scream  56 
+
+Evaluate. .  .with  expression  17 
+
+Evaluate  expression  17 
+
+everyone  option  in  read  and  write  declarations  69 
+
+Exit  reporting  33 
+
+Exit  statement  51 
+
+Exponential  notation  12 
+
+expression ,  definition  of  17 
+
+expression ,  moaning  of  16 
+
+File  read/writc  access  data  dictionary  declarations  69 
+
+Flush-scream  function  57 
+
+format-spec  17 ,  53 
+
+format-spec ,  definition  of  55 
+
+Formats,  default  output  54 
+
+For  statement  41 
+
+Full  Data  Dictionary  remake  85 
+
+Function  Definition  33 
+
+function- invocation  35 
+
+Functions,  declaration  of  30 
+
+Functions,  invoking  and  exiting  50 
+
+
+67 
+
+
+-  108  - 
+
+
+Function  expression  19 
+
+function  option  in  method  declaration  67 
+
+Global  data  dictionary  declaration  68 
+
+How  to  change  RAND -ABEL  rules  without  recompiling 
+Hyphen  (-)  and  underscore  (_),  in  identifiers  7 
+
+Identifier  constant  13 
+
+Identifier  constant,  default  output  format  for  55 
+jtfencJ/ ier  7 
+
+Identifying  declarations  72 
+
+If. .  .Then. .  .Else  statement  39 
+
+Include  meta-statement  63 
+
+Increase. . .by  statement  38 
+
+Incremental  changes  to  source  code  85 
+
+Inequality  of  two  identifier  constants  24 
+
+Inequality  of  two  strings  23 
+
+Inequality  Tests  23 
+
+Information  declarations  72 
+
+Initialize  data  dictionary  declaration  71 
+
+Input  stream  56 
+
+Input/output  statements  52 
+
+Integer  data  type,  default  output  format  for  54 
+
+Integer,  basic  data  type  12 
+
+Interpreter  directory  83 
+
+Interpreter  83 
+
+Interpreter,  preventing  execution  84 
+Invoking  a  function  50 
+in  19 
+
+is  at  least  operator  23 
+is  at  most  operator  23 
+is  greater  than  operator  23 
+
+is  less  than  operator  23 
+is  not  operator  22 
+is  operator  22 
+Italics,  meaning  of  5 
+
+Keywords ,  RAND -ABEL  5 
+
+Keywords,  table  of  all  RAND-ABEL  88 
+
+Let... be  statement  38 
+
+Loading  compiled  source  code  85 
+
+Local  support  environment  for  RAND-ABEL  81,  87 
+
+Logical  data  type  12 
+
+Logical  Operators  24 
+
+Logical  operators,  meaning  of  25 
+
+Log  statement  53 
+
+lvalue  16 
+
+lvalue,  definition  of  19 
+
+
+83 
+
+
+Macro  definitions,  using  #define  meta-statement  62 
+
+macro  option  in  method  declaration  67 
+
+Matrix,  represented  in  RAND-ABEL  30 
+
+Meta-statements  62 
+
+Method  data  dictionary  declaration  67 
+
+minus  operator  21 
+
+modulo  operator  21 
+
+Multiple  rows  in  cablo-hofider  48 
+
+Multiplication  operator  (*)  21 
+
+Multiply. ,  .by  statement  38 
+
+named- funecion-cal 1 ,  definition  of  34 
+
+negative  operator  21 
+
+No  clone  option  in  Use  declaration  68 
+
+No  Default  data  dictionary  declaration  74 
+
+No  Initialize  data  dictionary  declaration  71 
+
+Noise  words,  abiliey  to  declare  and  use  80 
+
+Noread  data  dictionary  declaration  69 
+
+not  (~)  logical  operator  25 
+
+Nowrite  data  dictionary  declaration  69 
+
+No  12,  19 
+
+Null  statement  60 
+
+Numeric  Operators  21 
+
+Occupant  of  phrase  20 
+of  19 
+
+Open-stream  function  57 
+Operators  20 
+Options,  notation  for  5 
+or  (|)  logical  operator  25 
+
+Output  formats,  default  54 
+
+Output  stream  56 
+
+Owner  data  dictionary  declaration  68 
+
+Parenthesized  expression  19 
+
+Parent  reserved  coprocoss  variable  77 
+
+Parent  13 
+
+Perform  statement  35,  50 
+Period  (.),  in  identifiers  7 
+plus  operator  21 
+
+Pointer  data  type,  default  output  format  for  55 
+
+Pointer  to  phrase  19 
+
+Pointer,  basic  data  type  12 
+
+Precedence  relations  for  RAND-ABEL  operators  27 
+
+Prefix  form  of  array  declaration  29 
+
+Print  statement  53 
+
+Process,  basic  data  type  13 
+
+Prompt  function/string  data  dictionary  declaration 
+Quick-reference  guide  to  RAND-ABEL  syntax  87 
+
+
+-  no  - 
+
+
+RAND  Strategy  Assessment  Center  (RSAC)  1 
+RAND  Serategy  Assessment  System  (RSAS)  1,  65,  81 
+RAND-ABEL  Interpreter  S3 
+RAND-A8EL  keywords  5 
+
+RAND-ABEL  local  support  environment  81,  87 
+
+RAND-ABEL  reserved  words  5 
+
+RAND-ABEL  syntax,  quick-reference  guide  to  87 
+
+RAND-ABEL  Translator  1,2 
+
+RAND-ABEL  Translator,  access  to  at  RAND  82 
+
+Read  format  data  dictionary  declaration  70 
+
+Read  data  dictionary  declaration  69 
+
+Real  data  typo,  default  output  format  for  54 
+
+Real,  basic  data  type  12 
+
+References  data  dictionary  declaration  75 
+
+Remaking  the  full  Data  Dictionary  85 
+
+Remove-plan  function  to  terminate  a  process  77 
+
+Repetitive  execution  40 
+
+Report  from  expression  17,  35 
+
+Reporting  51 
+
+Reserved  words,  RAND-ABEL  5 
+
+Reserved  words,  coble  of  all  RAND-ABEL  88 
+
+Returning  control  from  a  function  with  exit  statement  51 
+
+ROSIE  programming  language  2 
+
+RSAC  (RAND  Stratogy  Assessment  Center)  1 
+
+RSAS  (RAND  Strategy  Assessment  System  1,  65,  71,  78,  81 
+
+RSAS  directory  structure  diagram  84 
+
+run. sun  05 
+
+Self  reserved  coprocess  variable  77 
+
+Self  13 
+
+sJctplQ-Qxpr  16 
+
+sJapla-expr ,  definition  of  19 
+
+Sleep  function  for  coproccssos  76 
+
+Special  characters  within  a  tablo-bcador  46 
+
+Special  symbols,  cable  of  all  RAND-ABEL  88 
+
+Standard  input  52 
+
+Standard  output  52 
+
+Startup-plan  function  76 
+
+stacenant  37 
+
+Status  data  dictionary  declaration  73 
+stdacr  56 
+sedin  56 
+
+sedout  ns  standard  output  stream  53 
+stdouc  56 
+
+Stream,  basic  data  type  13 
+streonnam  53 
+Streams  (for  I/O)  56 
+
+String  data  type,  default  output  format  for  54 
+String  Operator  26 
+String,  basic  data  type  12 
+
+Strongly  typed  language  11 
+
+
+-  Ill  - 
+
+
+Subroutines,  seme  as  functions  in  RAND-ABBL  SO 
+
+Subtraction  operator  (-)  21 
+
+Support  environment  for  RAND-ABEL  81,  87 
+
+Synonyms,  creation  of  using  ^define  meta-statement  62 
+
+Syntactic  categories,  list  of  RAND-ABEL  96 
+
+Syntax  chart,  explanation  S 
+
+Syntax  of  RAND-ABEL,  quick-reference  guide  to  87 
+
+cablo-bodys  rules  for  constructing  49 
+
+cabJa-baader,  ru»es  for  constructing  46 
+
+Table  statement  43 
+
+Terminating  a  corrocess  77 
+
+Text  island,  within  a  cabla-beador  46 
+
+Then  39 
+
+times  operator  21 
+
+Top-level  RAND-ABEL  declarations,  definitions,  and  statements  79 
+Trace  statement  64 
+
+Truncation  of  result  in  integer  division  21 
+unary-oparacor  17 
+
+Underscore  (_)  and  hyphen  (-),  in  identifiers  7 
+unicparan  16 
+
+vnScparan,  definition  of  19 
+UNIX  1 
+
+Unspecified  14,  19 
+Untrace  statement  64 
+
+Use  Clone/No  Clone/Constant  data  dictionary  declaration  68 
+using  34,  35 
+
+Validation  range/function  data  dictionary  declaration  71 
+
+Value  of  phrase  19 
+
+Vector,  represented  in  RAND-ABEL  30 
+
+While  statement  41 
+
+White  space,  in  RAND-ABEL  statements  9 
+World  Situation  Data  Set  (WSDS)  65 
+Write  format  data  dictionary  declaration  70 
+Write  data  dictionary  declaration  69 
+
+Yes  12,  19 
+
+
+-  113  - 
+
+
+BIBLIOGRAPHY 
+
+
+Bell  Laboratories,  UI1IX  Programmer' s  Manual. 
+
+Davis,  Paul  K.,  Applying  Artificial  Intel  1 igencu  Techniques  to 
+Strategic-Level  Coming  and  Simulation,  The  RAS'D  Corporation, 
+
+N-2752-RC,  June  1988.  (Also  published  in  H.  Elzas,  T.  I.  Oren,  and  B. 
+P.  Zeigier  (eds.),  Modelling  and  Simulation  Methodology  in  the 
+Artificial  Intelligence  Era,  Elsevier  Science  Publishers,  8.  V. 
+
+(North- Holland) ,  1986,  pp.  315-33S. 
+
+Davis,  Paul  K. ,  Bruce  W.  Bennett,  and  William  Schwabe,  "Analytic  War 
+Gaming  with  the  RAND  Strategy  Assessment  System  (RSAS),"  The  RAND 
+Corporation,  P-7464,  July  1988. 
+
+Davis,  Paul  K. ,  and  H.  Edward  Hall,  Overview  of  RSAS  System  Software , 
+Tim  RAND  Corporation,  N-2755-NA,  forthcoming. 
+
+Davis,  Paul  K.,  and  James  A.  V innate Id,  The  RAilD  Strategy  Assessment 
+Center:  An  Overview  and  Interim  Conclusions  about  Utility  and 
+Develops;, <nt  Options ,  The  RAND  Corporation,  R-2945-DNA,  March  1983 . 
+
+Fain,  Jill,  D.  Gorlin,  F.  Hays-Roth,  S.  Roscnschcin,  H.  Sowizral,  and  D. 
+Waterman,  The  ROSIE  Language  Reference  Manual,  Tho  RAND  Corporation, 
+N-1647-ARPA,  December  1981. 
+
+Kornigban,  Brian  V.,  and  Dennis  M.  Ricl*io,  Tho  C  Programming  Language 
+Proncic-Hall,  Englewood  Cliffs,  New  Jersey,  1978. 
+
+Schwabe,  William,  and  Lewis  M.  Jamison,  A  Rule- Based  Policy-Level  Model 
+of  Ronsu per power  Behavior  in  Herat  epic  Conflicts ,  The  RAND 
+Corporation,  R-2962-DNA,  December  1982. 
+
+Shapiro,  Norman  Z.,  H.  Edward  Hall,  Robert  H.  Anderson,  and  Mark 
+
+LaCosse,  The  RARD-ABEL  Programming  Language:  History,  Rationale,  and 
+Design,  Tho  RAND  Corporation,  R-3274-NA,  August  1985. 
+
+

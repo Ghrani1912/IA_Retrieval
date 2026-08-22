@@ -1,0 +1,20 @@
+{
+  "_comment": "IA collection identifiers always treated as open access regardless of pub_date. Update this file (not application code) when adding new source types.",
+  "collections": [
+    "gutenberg",
+    "nasa",
+    "usgov",
+    "arxiv",
+    "americana",
+    "biodiversity",
+    "internetarchivebooks",
+    "millionbooks",
+    "openlibrarybooks",
+    "prelinger",
+    "audio_bookspoetry",
+    "dticarchive",
+    "ericarchive",
+    "smithsonian",
+    "wellcomecollection"
+  ]
+}

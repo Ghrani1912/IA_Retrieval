@@ -1,0 +1,491 @@
+{
+  "_comment": "Ground-truth labeled query set. chunk_ids verified by manual BM25 search against real corpus (6588 chunks, 40 sources). All chunk IDs confirmed to exist in the DB.",
+  "queries": [
+
+    {
+      "id": "q001",
+      "query": "What are semantic networks and how do they represent knowledge in AI?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [4370, 4369, 4376, 4406, 4407],
+      "date_range": null,
+      "notes": "DTIC_ADA022584 — Woods 1975 paper on semantic network foundations"
+    },
+
+    {
+      "id": "q002",
+      "query": "How do expert systems like MYCIN and PROSPECTOR use rule-based inference?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [9156, 9157, 9158, 4100, 8392],
+      "date_range": null,
+      "notes": "DTIC_ADA215915 (1985 AI survey) and DTIC_ADA019641 (production rules)"
+    },
+
+    {
+      "id": "q003",
+      "query": "What approaches were developed for natural language parsing and speech understanding?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [4240, 4241, 4252, 4262, 4266, 4368],
+      "date_range": null,
+      "notes": "DTIC_ADA022559 — Bolt Beranek Newman 1975 speech parsing report"
+    },
+
+    {
+      "id": "q004",
+      "query": "How does machine learning acquire concepts from structural descriptions?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [4412, 4413, 4414, 4442, 3994],
+      "date_range": null,
+      "notes": "DTIC_ADA025074 — Hayes-Roth & McDermott 1976 knowledge acquisition paper"
+    },
+
+    {
+      "id": "q005",
+      "query": "What planning systems use goal reduction and heuristic search?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [6504, 7060, 7483, 7942, 6356, 6427],
+      "date_range": null,
+      "notes": "DTIC ADA1046749/47/43/44 — Mechanical Transformation series 1981"
+    },
+
+    {
+      "id": "q006",
+      "query": "What resolution theorem proving techniques were developed for automated deduction?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [4911, 4912, 4868, 4877, 8265, 8424, 8425, 4406, 4407, 3007, 8859, 3624],
+      "date_range": null,
+      "notes": "DTIC_ADA031481 + DTIC_ADA460377. Ground truth enriched with vector hits (3007, 8859, 3624) to remove BM25-only bias."
+    },
+
+    {
+      "id": "q007",
+      "query": "How do robotic systems use computer vision for motion and object recognition?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [9162, 9163, 6404, 6405, 6406, 6407, 6914],
+      "date_range": null,
+      "notes": "DTIC_ADA215915 (1985 AI survey vision section) and DTIC_ADA149435 (1984 robotics)"
+    },
+
+    {
+      "id": "q008",
+      "query": "How does the blackboard architecture support cooperative problem solving?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [8510, 8512, 8513, 8491, 4688, 4689, 8931],
+      "date_range": null,
+      "notes": "DTIC_ADA458359 (1988 multiagent survey) and DTIC_ADA027844 (Hearsay-II 1976)"
+    },
+
+    {
+      "id": "q009",
+      "query": "What production system languages like LISP and Prolog were used for AI programming?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [3444, 2953, 8249, 4100, 8941, 2942, 2982, 3223],
+      "date_range": null,
+      "notes": "Handbook of AI vol 2&3. Ground truth enriched with vector hits (2942, 2982, 3223) to remove BM25-only bias."
+    },
+
+    {
+      "id": "q010",
+      "query": "How does constraint propagation work in combinatorial search problems?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [3791, 3474, 3071, 3083, 3304],
+      "date_range": null,
+      "notes": "handbookofartific02barr and 03cohe — constraint satisfaction chapters"
+    },
+
+    {
+      "id": "q011",
+      "query": "What methods were developed for case-based reasoning and analogical problem solving?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [8363, 5422, 5427, 5428, 3604, 2762],
+      "date_range": null,
+      "notes": "DTIC_ADA328569 (1990 plan modification) and ERIC_ED328274 (1990 AI in information retrieval)"
+    },
+
+    {
+      "id": "q012",
+      "query": "What military and defense applications of artificial intelligence were being developed in the late 1970s and early 1980s?",
+      "query_type": "date_range_filtering",
+      "relevant_chunk_ids": [9154, 9155, 9164, 9165, 9169, 9173, 9174, 9179],
+      "date_range": {"from": 1975, "to": 1985},
+      "notes": "DTIC_ADA215915 — 1985 AI applications in military survey"
+    },
+
+    {
+      "id": "q013",
+      "query": "What knowledge base verification and consistency checking methods were developed in the late 1980s?",
+      "query_type": "date_range_filtering",
+      "relevant_chunk_ids": [8952, 8956, 8900, 8957, 8356, 8346, 8338, 8323],
+      "date_range": {"from": 1985, "to": 1995},
+      "notes": "DTIC_ADA245620 (1990 QUEST KB quality) and DTIC_ADA328569 (1990 PRIAR)"
+    },
+
+    {
+      "id": "q014",
+      "query": "How did the Hearsay speech understanding systems process acoustic and linguistic knowledge?",
+      "query_type": "date_range_filtering",
+      "relevant_chunk_ids": [4768, 4518, 4742, 4580, 4771, 4609, 4621, 4242],
+      "date_range": {"from": 1974, "to": 1980},
+      "notes": "DTIC_ADA027844 (1976 Hearsay-II working papers) and DTIC_ADA022559 (1975 speech parsing)"
+    },
+
+    {
+      "id": "q015",
+      "query": "What image processing and computer vision research was conducted in the mid-1970s?",
+      "query_type": "date_range_filtering",
+      "relevant_chunk_ids": [6872, 6874, 6892, 3448, 3506, 3509, 3520, 3533],
+      "date_range": {"from": 1975, "to": 1985},
+      "notes": "DTIC_ADA035315 (1976 image processing research) and handbookofartific03cohe vision chapter"
+    },
+
+    {
+      "id": "q016",
+      "query": "What natural language database interfaces were developed in the late 1980s?",
+      "query_type": "date_range_filtering",
+      "relevant_chunk_ids": [8546, 8551, 5496, 5475, 5568, 5567],
+      "date_range": {"from": 1985, "to": 1995},
+      "notes": "DTIC_ADA216965 (1988 RAND-ABEL database) and ERIC_ED328274 (1990 AI information systems)"
+    },
+
+    {
+      "id": "q017",
+      "query": "What knowledge engineering and acquisition methods were formalized during the 1980s?",
+      "query_type": "date_range_filtering",
+      "relevant_chunk_ids": [6788, 6695, 7251, 7674, 8133, 8900, 8952],
+      "date_range": {"from": 1980, "to": 1990},
+      "notes": "DTIC ADA1046749/47/43/44 (1981 operationalization) and DTIC_ADA245620 (1990)"
+    },
+
+    {
+      "id": "q018",
+      "query": "What AI research programs were funded by DARPA and DoD in the 1975-1977 period?",
+      "query_type": "date_range_filtering",
+      "relevant_chunk_ids": [4512, 4518, 4580, 4609, 4447, 4467, 3951],
+      "date_range": {"from": 1974, "to": 1978},
+      "notes": "DTIC_ADA025353, ADA027844, ADA025315 — DARPA-funded AI projects 1975-76"
+    },
+
+    {
+      "id": "q019",
+      "query": "What learning algorithms were being developed for inductive concept acquisition in the early 1980s?",
+      "query_type": "date_range_filtering",
+      "relevant_chunk_ids": [6694, 7250, 7673, 8132, 4413, 4412, 3994],
+      "date_range": {"from": 1978, "to": 1984},
+      "notes": "DTIC ADA1046749/47/43/44 (1981) and DTIC_ADA025074 (1976 knowledge acquisition)"
+    },
+
+    {
+      "id": "q020",
+      "query": "How were natural language dialogue systems built in the mid-1970s compared to later systems?",
+      "query_type": "cross_decade_comparison",
+      "relevant_chunk_ids": [3931, 3932, 3933, 3934, 3951, 3930, 4079, 5203],
+      "date_range": {"from": 1974, "to": 1980},
+      "notes": "DTIC_ADA006294 (1975 program-understanding dialogue) — early decade anchor"
+    },
+
+    {
+      "id": "q021",
+      "query": "How did views on the prospects and limitations of artificial intelligence change between the 1970s and 1990s?",
+      "query_type": "cross_decade_comparison",
+      "relevant_chunk_ids": [3951, 4176, 4079, 6386, 8816, 5423, 5424, 9154, 9164],
+      "date_range": null,
+      "notes": "DTIC_ADA006294 1975 + DTIC_ADA019702 1975 (early) vs DTIC_ADA215915 1985 + ERIC_ED328274 1990 (later)"
+    },
+
+    {
+      "id": "q022",
+      "query": "How did machine learning for concept acquisition evolve from early 1970s structural learning to later 1980s methods?",
+      "query_type": "cross_decade_comparison",
+      "relevant_chunk_ids": [4412, 4413, 4414, 3994, 5424, 5423, 8538],
+      "date_range": null,
+      "notes": "DTIC_ADA025074 1976 (Hayes-Roth early) vs ERIC_ED328274 1990 + DTIC_ADA218860 1988 (later)"
+    },
+
+    {
+      "id": "q023",
+      "query": "How did production rule systems develop from early 1970s implementations to the mid-1980s expert systems?",
+      "query_type": "cross_decade_comparison",
+      "relevant_chunk_ids": [4100, 4168, 4176, 4093, 3994, 9156, 9157, 9158, 8941],
+      "date_range": null,
+      "notes": "DTIC_ADA019641 1975 + DTIC_ADA019702 1975 (early) vs DTIC_ADA215915 1985 + DTIC_ADA245620 1990 (later)"
+    },
+
+    {
+      "id": "q024",
+      "query": "How did knowledge representation approaches shift from early semantic nets to later frame-based and logic-based systems?",
+      "query_type": "cross_decade_comparison",
+      "relevant_chunk_ids": [4370, 4369, 4376, 4406, 4407, 8424, 8425, 8265, 8249],
+      "date_range": null,
+      "notes": "DTIC_ADA022584 1975 (Woods semantic nets) vs DTIC_ADA328568 1985 + DTIC_ADA460377 1988 (logic/MRS)"
+    },
+
+    {
+      "id": "q025",
+      "query": "How many times has eff.org been archived in the Wayback Machine, and what are the earliest and most recent snapshots?",
+      "query_type": "website_history",
+      "relevant_chunk_ids": [],
+      "date_range": null,
+      "cdx_domain": "eff.org",
+      "expected_stats": {
+        "total_count_min": 90000,
+        "earliest_year": 1996,
+        "latest_year_min": 2025
+      },
+      "notes": "Real CDX data verified: 92,632 snapshots, 1996-10-20 to 2026-08-15. No chunk_ids — CDX-only query answered by snapshot stats endpoint."
+    },
+
+    {
+      "id": "q026",
+      "query": "Was eff.org more actively archived in the 2010s or the 2020s, and were there any years with zero snapshots?",
+      "query_type": "website_history",
+      "relevant_chunk_ids": [],
+      "date_range": null,
+      "cdx_domain": "eff.org",
+      "expected_stats": {
+        "gap_years": [],
+        "busiest_decade": "2020s",
+        "snapshots_2024": 7461,
+        "snapshots_2025": 26697,
+        "no_gap_years_after": 2000
+      },
+      "notes": "Real CDX data: continuous coverage 1996-2026, no gap years. 2025 is busiest (26,697 snapshots)."
+    },
+
+    {
+      "id": "q027",
+      "query": "When did regular archiving of eff.org begin, and what was the snapshot frequency in the late 1990s?",
+      "query_type": "website_history",
+      "relevant_chunk_ids": [],
+      "date_range": null,
+      "cdx_domain": "eff.org",
+      "expected_stats": {
+        "earliest_year": 1996,
+        "snapshots_1996": 3,
+        "snapshots_1997": 16,
+        "snapshots_1998": 9,
+        "snapshots_1999": 38
+      },
+      "notes": "Real CDX data: eff.org first archived 1996-10-20, sparse early coverage (3-38/year until 2001)."
+    },
+
+    {
+      "id": "q028",
+      "query": "What is the gap pattern in eff.org archiving during the early 2000s?",
+      "query_type": "website_history",
+      "relevant_chunk_ids": [],
+      "date_range": null,
+      "cdx_domain": "eff.org",
+      "expected_stats": {
+        "gap_years": [],
+        "snapshots_2001": 321,
+        "snapshots_2002": 97,
+        "snapshots_2003": 31
+      },
+      "notes": "Real CDX data: no gap years — coverage every year from 1996 onward. 2001 spike (321) then drops."
+    },
+
+    {
+      "id": "q029",
+      "query": "What work on abductive inference and non-monotonic reasoning was done in the late 1980s?",
+      "query_type": "date_range_filtering",
+      "relevant_chunk_ids": [8249, 8265, 8264, 8816, 8255],
+      "date_range": {"from": 1986, "to": 1994},
+      "notes": "DTIC_ADA460377 (1988 abductive inference) and DTIC_ADA255280 (1989 rational belief)"
+    },
+
+    {
+      "id": "q030",
+      "query": "What multiagent and distributed AI architectures were proposed for cooperative problem solving?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [8510, 8512, 8513, 8491, 8495, 8931],
+      "date_range": null,
+      "notes": "DTIC_ADA458359 (1988 distributed AI architectures survey)"
+    },
+
+    {
+      "id": "q031",
+      "query": "What plan modification and replanning techniques were proposed for dynamic environments?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [8323, 8338, 8346, 8356, 8363],
+      "date_range": null,
+      "notes": "DTIC_ADA328569 (1990 PRIAR plan modification with validation structures)"
+    },
+
+    {
+      "id": "q032",
+      "query": "How did early 1975-1976 DARPA research programs approach speech understanding compared to the Hearsay-II approach?",
+      "query_type": "cross_decade_comparison",
+      "relevant_chunk_ids": [4240, 4241, 4242, 4262, 4266, 4518, 4580, 4609, 4610, 4688, 4689, 4742, 4768, 2864, 2794, 2785],
+      "date_range": {"from": 1974, "to": 1978},
+      "notes": "DTIC_ADA022559 vs DTIC_ADA027844. Ground truth enriched with vector hits (2864, 2794, 2785) to remove BM25-only bias."
+    },
+
+    {
+      "id": "q033",
+      "query": "What mathematical and logical foundations were laid for automated theorem proving in the 1970s?",
+      "query_type": "date_range_filtering",
+      "relevant_chunk_ids": [4911, 4912, 4868, 4877, 4407, 4406],
+      "date_range": {"from": 1974, "to": 1980},
+      "notes": "DTIC_ADA031481 (1976 deductive system) and DTIC_ADA022584 (1975 semantic network logic)"
+    },
+
+    {
+      "id": "q034",
+      "query": "What approaches to intelligent tutoring and computer-aided instruction were developed using AI?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [4447, 4467, 5203, 8538],
+      "date_range": null,
+      "notes": "DTIC_ADA025315 (1976 online assistance system) and DTIC_ADA218860 (1988 skill acquisition)"
+    },
+
+    {
+      "id": "q035",
+      "query": "What research was conducted on probabilistic and Bayesian reasoning in AI during the late 1980s?",
+      "query_type": "date_range_filtering",
+      "relevant_chunk_ids": [8816, 8815, 8817],
+      "date_range": {"from": 1986, "to": 1994},
+      "notes": "DTIC_ADA255280 (1989 rational belief and probabilistic reasoning)"
+    },
+
+    {
+      "id": "q036",
+      "query": "How did the EFF (Electronic Frontier Foundation) website grow in its web presence from the late 1990s to the 2020s based on archiving frequency?",
+      "query_type": "website_history",
+      "relevant_chunk_ids": [],
+      "date_range": null,
+      "cdx_domain": "eff.org",
+      "expected_stats": {
+        "growth_trend": "exponential from ~30/year in 1999 to 26697 in 2025",
+        "archiving_intensity_2024": 7461,
+        "archiving_intensity_1999": 38
+      },
+      "notes": "Real CDX data shows ~200x growth in archiving frequency from 1999 to 2024."
+    },
+
+    {
+      "id": "q037",
+      "query": "What graph search algorithms and heuristic methods were applied to problem solving in AI?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [4050, 3083, 3071, 3791, 4710],
+      "date_range": null,
+      "notes": "DTIC_ADA014815 (1975 search techniques) and handbookofartific02barr constraint chapters"
+    },
+
+    {
+      "id": "q038",
+      "query": "What AI techniques were proposed for intelligent information retrieval and document processing in the late 1980s and early 1990s?",
+      "query_type": "date_range_filtering",
+      "relevant_chunk_ids": [5423, 5424, 5427, 5428, 5422, 5420, 5475, 5496],
+      "date_range": {"from": 1988, "to": 1995},
+      "notes": "ERIC_ED328274 (1990 AI in information retrieval) — comprehensive survey"
+    },
+
+    {
+      "id": "q039",
+      "query": "How did the Handbook of Artificial Intelligence describe the state of AI planning and problem solving?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [2762, 2885, 3071, 3083, 3304, 3444, 3474, 3604],
+      "date_range": null,
+      "notes": "handbookofartific01barr and 02barr (1981-1982, americana collection) — planning chapters"
+    },
+
+    {
+      "id": "q040",
+      "query": "How did AI research in the 1975-1980 period approach the challenge of building intelligent question-answering systems?",
+      "query_type": "cross_decade_comparison",
+      "relevant_chunk_ids": [3930, 3931, 3932, 3933, 3934, 3951, 4447, 4467, 4512, 3007, 2698, 4010],
+      "date_range": {"from": 1974, "to": 1980},
+      "notes": "DTIC_ADA006294 + ADA025353 + ADA025315. Ground truth enriched with vector hits (3007, 2698, 4010) to remove BM25-only bias."
+    },
+
+    {
+      "id": "p001",
+      "query": "How did early computer programs mimic human reasoning about medical diagnosis?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [2601, 2781, 2782, 3332, 3333, 3335, 9151, 9156, 9157],
+      "date_range": null,
+      "notes": "Paraphrase of expert systems/MYCIN. Ground truth from UNION of BM25+vector — avoids 'expert system', 'MYCIN', 'rule-based'. Semantic-biased query."
+    },
+
+    {
+      "id": "p002",
+      "query": "What techniques allowed machines to decode spoken words in the 1970s?",
+      "query_type": "date_range_filtering",
+      "relevant_chunk_ids": [2794, 2864, 2785, 2788, 2789, 4581, 4238, 4266, 4507],
+      "date_range": {"from": 1974, "to": 1980},
+      "notes": "Paraphrase of speech recognition. Avoids 'speech', 'parsing', 'acoustic'. Vector finds different chunks than BM25 — tests semantic retrieval."
+    },
+
+    {
+      "id": "p003",
+      "query": "How were graph structures used to organize conceptual relationships in intelligent systems?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [2752, 2764, 2942, 3742, 4258, 5057, 5203, 3698],
+      "date_range": null,
+      "notes": "Paraphrase of semantic networks. Avoids 'semantic network', 'frames', 'knowledge representation'. Zero BM25/vector overlap — pure semantic test."
+    },
+
+    {
+      "id": "p004",
+      "query": "What methods enabled programs to draw conclusions from incomplete information?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [3007, 8859, 2698, 3624, 3223, 4010, 8227, 7768],
+      "date_range": null,
+      "notes": "Paraphrase of inference/theorem proving. Avoids 'theorem', 'resolution', 'logic'. Zero BM25/vector overlap — pure semantic test."
+    },
+
+    {
+      "id": "p005",
+      "query": "How did researchers teach computers to generalize from specific instances to broader patterns?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [2692, 2696, 2781, 3553, 3602, 3625, 4008, 4010, 6692, 8492],
+      "date_range": null,
+      "notes": "Paraphrase of ML/inductive inference. Avoids 'machine learning', 'training', 'inductive'. BM25/vector overlap only on 3602."
+    },
+
+    {
+      "id": "p006",
+      "query": "What was the Japanese national initiative to build fifth-generation computing systems?",
+      "query_type": "date_range_filtering",
+      "relevant_chunk_ids": [6400, 6401, 6403, 9147, 9167, 9168, 9169, 9171, 9172, 9179],
+      "date_range": {"from": 1982, "to": 1992},
+      "notes": "Paraphrase of Japan 5th gen project. High BM25+vector overlap (7/10) — validates that both modalities find these chunks. Controls for this query type."
+    },
+
+    {
+      "id": "p007",
+      "query": "How did AI systems coordinate multiple independent modules working toward a shared goal?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [2970, 2982, 3001, 3143, 4675, 8484, 8489, 8509, 8510, 8750],
+      "date_range": null,
+      "notes": "Paraphrase of blackboard/multiagent. Avoids 'blackboard', 'cooperative', 'distributed'. Vector finds different set than BM25."
+    },
+
+    {
+      "id": "p008",
+      "query": "What challenges arose when translating visual scenes into symbolic descriptions?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [3447, 3457, 3491, 3527, 3528, 3562, 4915, 8270],
+      "date_range": null,
+      "notes": "Paraphrase of computer vision. Avoids 'computer vision', 'image processing', 'feature extraction'. Zero BM25/vector overlap — pure semantic test."
+    },
+
+    {
+      "id": "p009",
+      "query": "How did early AI programs organize sequences of actions to achieve objectives?",
+      "query_type": "book_lookup",
+      "relevant_chunk_ids": [2782, 2783, 2941, 2942, 2943, 2950, 2971, 2973, 3138, 3222],
+      "date_range": null,
+      "notes": "Paraphrase of planning systems. Avoids 'planning', 'STRIPS', 'goal reduction', 'heuristic'. Mostly vector-found chunks."
+    },
+
+    {
+      "id": "p010",
+      "query": "What was the trajectory of optimism about thinking machines from the early days to the period of reduced funding?",
+      "query_type": "cross_decade_comparison",
+      "relevant_chunk_ids": [3332, 3333, 3334, 5125, 5126, 5141, 5153, 5159, 8847, 8860],
+      "date_range": null,
+      "notes": "Paraphrase of AI history/winter. Avoids 'AI winter', 'history', 'DARPA', 'funding'. Zero BM25/vector overlap — pure semantic test."
+    }
+
+  ]
+}

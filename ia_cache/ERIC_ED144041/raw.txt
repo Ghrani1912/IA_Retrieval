@@ -1,0 +1,3474 @@
+DOCOHEHT BESOHE 
+
+
+
+ED.ua oai* 
+
+•AOTHOH 
+TITLE 
+
+
+
+INSTITOTIOH 
+
+SPONS AGENCY 
+
+^OB D&T'E 
+CONTRACT 
+GRANT 
+NOTE 
+
+E«RS PRICE 
+.DESCRIPTORS 
+
+
+
+CS»003 701 ^ 
+
+Brown, Ann L. ,> •• ^ ' , «- . 
+
+Tlieories of Meapry and the Prdbl§as .of Peyelopaent: 
+'Activity, Gtovzb, and Knowledge. TecKnick|.' Report No., 
+51. . r . . 
+
+Bolt, Beranek and Newaan, Inc., Caaliridge, Hass.; 
+Illinois Oniv.^ Orbana. Center for the" Study of 
+Reading. ' - * ^ 
+
+National icst. -of- Education (DHEB) 
+D.C. ■ ..... ■ • 
+
+Jul. 77 « 
+t»00-76-0116 ' . ■ ) 
+HD-05951; HD-06864 
+59p. 
+
+
+
+9ashing^n, 
+
+
+
+* HP-$0*ff3 ^C-$3.50 Plus Postage. ^ ' y 
+
+♦Artiticial Int ellicence; *Child Development; ^ 
+♦Cognitive Processes; ^Developmental Psychology;' 
+♦Literature Rev^iews; Hsmojry; ♦Bodeli^;^ Psychological 
+Btudies 
+
+IDENTIFIERS *Center for the Study of Reading <Illinoi§)' 
+
+/iss TRACT ' ' ; 
+
+The first section of tti?.s report examines, from a 
+developmental perspective, the mjajot theoretical posi^tions dominating 
+the literature' on adult cognition* Iwo criteria are considered. . ^ 
+First, how compatible are the theories with the notion that thinking 
+.systems develop within specific environments? Second, wha't are the ' 
+J^mplicit or explicit assumptions concerning the developmental 
+* processes of growth? The second section examines the general cl^s of 
+levels-o't-processing (LOP) models, which, ^ unlike other theories of 
+adult; cognition, have been: widely adopted by developmentalists. The, 
+^essential cl5mpatibility of LOP models and*- developmental interests 
+f ^lows from* a shared concern* with three main issuer: the importance 
+or involuntary memory, the activity of • the subject and the goal of 
+that activit.y, aild "headf itting** (the coVpatibi Jity between what is 
+known and what can be known) . Developmental data are often 
+particularly apt d^monstra-^ions of the' main tenets of the LOP . 
+frameworks, and XOP models provide a language and a viewpoint t^iirough 
+which'the issues of interest to developmentalists can b^ ^ 
+reinterpreted. (AA) / 
+
+
+
+7 
+
+
+
+.1. 
+
+
+
+♦ * Documents acquired by. E8IC include ^many informal unpublis'hed,..^ ♦ 
+
+♦ materials not available from* other sources. EEIC makes every effect 
+
+♦ to obtain the best copy available. Nevertheless, items of marginal 
+
+♦ repro&^ucibility are often encountered land this affects the guali'ty ^ 
+^ of -the microfiche aji4 hardcopy reproductions ERIC makes available «^ 
+
+♦ -via the ERIC Document Reproduction Service (EDRS) ♦ EDRS is not ' ^ 
+
+♦ responsible for the quality &f the original document. ' Reproductions 
+
+♦ supplied by ^EDRS are the best that can be, made from the original. * 
+
+
+
+* 
+
+
+
+/CENTER FOR raE STUDY OF READING 
+
+
+
+0$ DEPARTMENT OF HEALTH. 
+EDUCATION 4 WELFARE 
+NATiONALINSTITUTE OF 
+EDUCATION 
+
+THIS DOCUMENT HAS BEEN REPRQ. 
+DUCED EXACTCy AS RECEIVED FROM 
+THE PERSON OR ORGANIZATIONORlGlN- 
+ATlNG IT POINTS OF VIEW OR OPINIONS 
+STATED DO NOT NECESSARILY RSPRE- 
+SENT OFFICIAL NATIONAL INSTITUTE OF 
+EDUCATION POSITION OR POLICY 
+
+
+
+^chnical Report No* 51- 
+
+Theqries of Memory theferoblems of 
+Development: ' Activity; Growtdit ^nd- Knowl 
+
+
+
+edge 
+
+
+
+Ann L* Brov/n 
+
+
+
+University af Illinois at Urbana-- Champaign 
+
+
+
+|uly 1977 
+
+
+
+Unwersity of Illin(>is - 
+
+at Urbana-Champaign 
+51 Gerty Drive " ^ 
+Champaign, Illinois 61820 
+
+
+
+Bolt Beranel^ and lleman Inc. 
+50 Moultoh/street 
+Cambridge/ liassachusetts 02138 
+
+
+
+The preparation of 'this' manuscript was. supported in part by Grants HD 06864, 
+HD 05951, and a Research Career Development Award HD OOllli from the National , ' 
+Institutes of Child Health and Hunran Development and ih part by the Reading Center 
+grant MS-NIE-C- 400- 76'-0ll6,^ ' . - 
+
+rr^ To appear in- F. I. M. Ci;aik & L. Cennak (Eds. )» Levels cif processing and -memory . 
+
+.•O Hillsdale, N. J. : Lawience .Erlbaum. Associates , 1978. , , •. . 
+
+^ • ' ^ 4b 
+
+
+
+ERIC 
+
+
+
+^ * 
+
+
+
+\ . . , TaWe of Contents 
+
+I. Introduction • ^ . . / . . . . . . . . , \ .... - -1 
+
+* • f - » 
+
+II. Theories of Cognition and the Problem of Growth. . . • . . . .'^"f " " ' 
+
+A. Information processing models: The computer metaphor. ...... 2 
+
+B. The ep;tsodic-s©nantic distinction. . • v . . • 6' 
+
+C. S^fiantic memory models I * 8 
+
+p. Schema theories, of knowing . 10 
+
+E. Developmental theories ^ 16 
+
+III.- Levelsol Recessing and Developmental Psychology .21 
+
+A. Voluntary vs. Involuntary Memory 22 
+
+*B. ^Activity aSd the Gofil of Actions . ^ .28 ^r-^ 
+
+"^iev^^eadfltting . . . ^ \ , .39 ^ 
+
+IV. Summary • • . \. . . . , 43 
+
+
+
+♦ 
+
+
+
+
+I. Introduction % 
+±3 chapter \cons is ts of two parts* In the first section, I examine briefly, 
+
+■ ■ J- 
+
+f rom ^ developmental perspective, the tiiajor theoretical positions dominating the . 
+
+° ' I • f 
+
+literature on adult cognition. Two criteria are considered: first, how compatible 
+are the theories with the notion that thinking systems ^develop within living environ- 
+ments? Second, wh^t are the implicit or explicit assumptions of the theories con- 
+cerning the quintessential developmental problerj^Df ^o^th* 
+
+In the second section I consider the general* class o^ levels of processing ntxiels. 
+These fnameworks, unlike other theories of adult cognition, have been widely adopted by 
+develojjnentaJists. I argue that developmental theories are particularly compatible 
+with such models becayse they are themselves variants of fkvels of processing approaches 
+Both emphasize three major issues: the importance of involuntary memory, the activity'of 
+the subject and the goal of that activity, and headfittiixg, i*e., the coDjpatibility be- 
+tween what is known and what can be known. To Illustrate*, I compare current levels of 
+processing models and similar developmental theories, notably European structuralism, « 
+represeutecTbyPiagety and Soviet dialecticism, as represented by Leo«it *ev, Vygotsky aid 
+
+Zlnche'tako. The European tradition and the emergence of level.of processing frameworks 
+
+/ / 
+
+converged to assert a powerful influence on developmental studies of cognition. 
+
+: ' .\ ' r ^ 
+
+Throughout the chapter I have attempted to demonstrate xdiere developtnental data are 
+
+particularly relevant for an Issue of concern for adult theories and where adult 
+
+models can guide the^ theory construction of deveAopmentalists. > To date, however, 
+
+the dominant approach to human cognition has been teleological and there is an Im- 
+
+plicit acceptance that human thought processes reaclv a steady 'state, i».e., become 
+
+static an.d Impj table at maturity, I argue here that a consideration of ontogenetic . 
+
+. . ■ ' V ' *' • / * ' . 
+
+factors would^ncrease^our understanding not only of the child but of the adtjlt thinker. 
+
+^11.^ Theories of Coaodtlon and the* Problem, of Qrowth " ; 
+
+The dialogue* between developmental psychology and adult cognition has been le^s 
+
+than.av4tal force in th^ evolution of either discipline;, why this lack of communication? 
+
+
+
+^ At the trivial level it is true that the adherents often fail^to follow each, otfier^s 
+literatures, an oversight which is inevitable given the Infotmation overload resulting 
+from the proliferation 'of research outlets. I have been reduced t}o treating the ta^k 
+of following current contiroversy in adult cognition, as a semantic shadowing task-, I only 
+divert-^y full attention to the relatively unattended channel when a topic of particular • 
+personal salience is .raised. - • \. *^ ^ 
+
+In general, developmental psychologists have^^hown a lamentable insensitlvity to 
+
+/' \ ' ^ . • * ^ " V 
+
+the need'tfor theory guided research, perhaps due to the origins of the discipline, rooted 
+
+as they are^ in clinical and educational practice. As such it is not uncommon to encounter 
+developmen tal cognitive psychologists who are. not only unaware of major trends in adult 
+cognitioi^, but .are also oblivious to the need for such awareness . ''By the same token, 
+cogiiitive psychologists often fail consider, pertinerii: developmental, data even' when such 
+,data COUI5I provide, theroptimal test for a question of. interest. Cross-fertilization 
+I among* the disciplines ,'cquld be pf help to both. ' . • ^ 
+
+At ^ more fundamental level, the crucial issues for a developmentali^t, i.e. .'change 
+and growth, have' not in the past b^en major conce'rns.'of adult models.' In fact.^adult 
+'^dels share major problems which^are most apparent- when the topic^of cognitive growth 
+.is consideted. It is precisely because of these characteristic weaknesses that develop- 
+•iften% psychologists seeking theories" have often looked e.lsewhere for guidance.. ' In the^ 
+next s^tlon I will illus;trate this point with 'a tursory" examination of the main trends ' 
+in adult cognition. The concentration is on how the models . speak .^o developmeptal con- 
+cerns and how developmental data can' be .used to investigate some c,^cial issues for the 
+models ♦ • ir>'*v. * . \ ^ ^ ' . * 
+
+A. Information proc^sslft g modl^s:' "^The computer.Lta phor. • ' - ' • ' 
+
+Cralk and Lockharfs, a9725 original pap^^r was primarily motivated by a reaction to 
+the than dominant Metaphor of adtrlt cognition, the computer. " I fio not lish to reiterate 
+their well-known criticisms herej instead I. would like to add a .further complaint arising 
+from a developmental perspective.. Computer metaphor models concentrate on the flow of 
+
+
+
+Information in dnd bet\?een the major architectural structures of the syst^ent (STM, LTO> ^ 
+
+■ ^ . / ' 
+
+etc). The primary, issues are when, where, and how, rather' fhan what .information is 
+
+procelsed. The principal structures^ of the system are fixed;, they do 'not grow, neither 
+
+do they function in dynamic interaction with a meaningful environment. Shaw 'and 
+
+Bransford (1977) characterized the systems as "mechanistic," "purposeless, \' and '"passive. 
+
+A system that cannot grow, or show adaptive modification to a changing environment is a 
+
+strange metaphor for human, thought processes v^ich are constantly changing over a^life 
+
+span of the individual and the 's5cio-cultural evolution of the race (Kvale, 1975; Riegei, 
+
+1975). This is th^ major criticism of niich models raised by-^ecologi^J. psychologist^, 
+
+*• • ?# * ^ ' _- 
+
+for example, Shaw and Bransford who believe that a * , * ^ 
+
+•man-machine analogy becomes a hindrance rather than an\aid to psychological 
+•theory when^ it derails our* thinking abotlt how living creatures gather and 
+act upon knowledge In dynamic natural contexts* Such questions can in no 
+way be reduced to questions of how information is napresefited, stored, or ^ 
+retrievedj^ftom storage by 'static devices in artificially controlled experi- 
+ments, ^haw & Bransford, 197.7, pp. 4-5) 
+
+Notwithstanding these obvious llmitatioris for. a field devoted to understanding cog- ' 
+
+nitive gr^£ir, theory-oriented develofmiental psychologists did adopt the prevailing* 
+
+^ . * ^ - * ♦ 
+
+metaphor, w;Lth some success, but also* with, many attendant- problons that can serve to . 
+
+' • . .V * 
+
+. - ' .1 ' • 
+
+illustrate^ some limitations to' the original model. 
+
+First thh modal model of this type makes a sharp distinction between .structure ' 
+
+and process. This distinction has npt gone unchallenged even within the domain of 
+
+adult cognition „CWinograd, 1975). ^ Newell (1972) has pointed out, what we' regard , as 
+
+strutiture and. what we regarli as process is very much a function of the theoretical 
+
+^ ^ ■ ' ' V ■ ^ 
+
+viewpoint we adopt. But this is everf m.ore troublesome far develqpment^lists for what . 
+
+• ' - . ^ ^ ^^ 
+
+we regard . as structural must> undergo change, if by structure we mean some limitation 
+
+imposed by the. impoverished state of the child's knowledge base (Brown, 1975; Chi, 197^. 
+
+A more specific, type iof /structure limitation has been suggested by the cotoputer 
+
+models; it is 'more akin to the notion of channel capacity, tf children do poorly on 
+
+a rate.,recall* task, -one might ask whether this is bedause of some capacity limitation. 
+
+
+
+defined In tferms of piSesence or absence of a major system, amount "of B^ace with one of 
+the systems, _or rate of decay. The notion tHat immature learners do suffer from some 
+form of llmilfedlnemofy capacity is a dominant one (Chi, 1976), and it is only recently 
+'.that a series of iitgenious developmental studies (Chi, 1976, and Huttenlocher & Burke, 
+^*JL976) have come to grips with the difficulties in distinguishing between the "capacity" 
+limitations of the immature that are structural or procedural. In summary of this work, 
+tliere- appeals to be.no compelling data 'to suggest that capacity differences, defined 
+by presence or ^sence of an architecturlil system (e.g., STM), amount of space in one 
+of the architectural units (e.g., the number of slots in STM), or In terms of durability 
+of information dn these systems, differentiates the child from the adult thinker 
+(Belmont, J,972; Belmont & Butterfield, 1969; Brown, 1974; Chi, 1976; Wickelgren, 1975). 
+Ii/hat does Hamper, the inexperienced !,is the paucity of strategic processes available to 
+the system and the debilitating effect of an impoverished knqwledge base^ (Brown, 1978a). 
+The studies of Chi concerned with STM limitations and iconic memory in children illus- 
+
+/ * r 
+
+trate the complexity of separating out process and structure, an Illustration that is 
+no less Informative to the student of adult cognition. ' _^ ' ( 
+
+Chi's (1976, 1978) ,thfeory is a good example oi an information-processlajt^evelop- 
+mental model which emphasizes the problems of dn Imjpoverished knowledge biAse. '^ jErog- 
+term memory is seen as the repository of rules, strategies, and operation^ which can 
+be used to make more efficient use of a limited capr^ity system; .young children have 
+not yet acquired these routines. In* addition, Chi believes that thecMld's knowledge- 
+base is deficient In at least three ways: (a) the amount' of Information it &ntains,' 
+(b) the orgaiiization and'^inter^l coherence, of that informaiton, and (c) th^^ number 
+lot available routes by which it ckn be reached. These differences Impose several lim- 
+itatlons on the child/ s In foifmatlon- processing abilities, even iri^such simple situa- 
+tlons as reading ihformation from the loon or maintaining InfQrmatlon ip STM (Chi,^1975, 
+197^). *Such basic cognitive ^roceaae^^as ease of retrievablli'ty, and speed of encoding 
+naming, and recognition are all ^ influenced by restrictions Imposed by an impoverisjieil 
+
+
+
+knowledge base. ' • ^ * 
+
+Although models sifch ds Chi's provide some insight into wha^ might develop within - 
+an information-pirocessing frtoework, ' there are still gome Interesting difficulties when 
+one tries to account tox qualitative rather thaa quantitative - growth, ^ow does the 
+.system^ become rich, rather than impoverished, if by that we mean mor^ than.a^ere accum- 
+ulationof facts? How does the organization and inteimal cohesion of information change 
+qu&iitatiyely with age? What is meant by the^number of routes b^ which information is 
+reached? ^Others have noted the problem^ With basic m^ory metaphors (Bransford & Franks, 
+1976; Neisser, 1967) with their emphasis on searching in discrete locations. If we 
+really believe in_an accumulation of facts, which become increasingly accessible by means 
+,of well-trodden routes, we must face^ fundamental problems when it comes to dealing with 
+questlons^ such as, how such a system can recognize novelty (Hdffding, 1891; Neisser, 
+1967) and why the expert does not take longer to**'access" his known fact^ than the novice 
+(Bransford, Nitsih & Franks, *1977)» ' * 
+
+The episodic-%femantic distinction . ' * 
+
+Cbae of the^ost influential distinctions to be made In tlie area of memory In recent 
+years is .th^t between semantic and episod^ic memory (Tulving, 1972). But the^ terms have 
+come to mean different things to different people, and*lt is not at all clear that they 
+prt)duc^ either an exhaustive or exclusive classification^ The confusion that has fol- 
+Ipwed the idiosyncratic and varying usage of the terms has been dealt with elsewhere 
+(Nelson & Brown^ 1978). Here I will consider, briefly, the distinction In connection 
+with how thinking systems gt*ow* ^ ^ 
+
+In view of the controversy concerning terminology I will state explicitly my use 
+of the terms. The term episodic is used to refer to a form of ^e m^^y input leading both 
+^o repiembered autobiographical eveifts (Tulving, 19*72), e.g., what rappened *on one's 
+fifth birthday, and' to 'the fonnation of generalized event structures, ,pr scripts' tNilson, 
+1977; Schank, 1975), e.g., what you expect to happen iiT^S restaurant", at a st^c^re,' etc* 
+Both Schank (1975) and Nelson (1977) .conceive of these generajAjjed event structures as 
+
+
+
+Important components of an underlying conceptual memory, and as the ^nost important com- 
+
+.ponent for the young child^ The terra semantic memory is reserved for fhe storing of 
+
+informa,tion aTjout words and concepts represented in the language, i.e^ , the strictly 
+
+linguistic (lexical or semantic) . ^ • ' , ^ * 
+
+• There has been h -tendency in current developmental resea;:ch to classify all 6i 
+
+the child's real-worj.^ knowledge as semant-uc lyapwledge (Brown, 1^75: see also Naus St 
+
+Halasz, this volume') thereby avoiding the central question of how semantic structures 
+
+develop from episodic experience. For example, there is an increasing body of* ^.iter- 
+
+afu3?e concerned with the very young' child's memory for non-linguistic inforSlation, 
+
+such as spatial layouts^ (Siegel & Whita, 1975), spatial locations (Acredolo, Pick & 
+
+Olsen, 1975; Harris, 197 3)* and actigns (jFoellinger & i;?:abasso, 1977). But, these types 
+
+of memories ai:e neither "semantic" nor "episodic*' a^ these terms have previously been 
+
+defined. Clearly one of the majoi ' developmental questions, especially in the preschool 
+
+period, is how such . nonverbal memory relates to verbal memary, as well as -vice versa. 
+
+_Xabelling both types of representation semantic obscures rather t;han illuminates the 
+
+problem. * . * ^ 
+
+The crucial developmental question^as been raised and dropped by most theorists 
+
+concerned with some variant of the episodic-semantic distinction. For example, Waiving 
+
+(1972) stated that: ' . ' 
+
+relatively little is known about the role that the, perceptual system and 
+episodic iiemory play in *the' storage of informatiori" into semantic memory. 
+Problems of acquisition of semantic fnformation, -and problems of modifi- 
+cation of existing, semantic structures, have not yet -been studied by " 
+students of semantic memory, . , (Tulvin^, 1972, p.- 3935. ^ L 
+
+This- statement emphasizes the uncertain^relation between semantic and episodic memory 
+arid, the role of experience in the fbrmation of both. Earlier, Posner and Warren (1971) 
+were boncemecf with how automatic structures ^(semantic memory) are derivable from traces 
+^ (episodic experience) but they .to(/dropped the quaj;^^. Similarly, Kintsch asked how 
+does "general knowledge (semantic memory) dev^l^ on the basis of particular exper- 
+iences (episodic memory)" although he notes "thlb question need not concern us here" 
+
+
+
+• ' . . f ^ . 7 
+
+. ^ "(Klntsch,'1974, p. 79). Kintsfch w^^lso sensitive to the fact that -nonverbal rep- 
+
+re8entafcicmv6f. knowledge must exist for he states that; ' ' * 
+
+' .• • • • • ^ 
+
+It is .ufflikely that all knowledge can be represented in the same way. 
+^ Propositional knowledge, which wiM be our sole concern, is primarily - 
+
+verbal, though it is possilbe to represent nonverbal information by such *• ' 
+means as well . .-. . On the other hand, analog representation of know- 
+ledge may underlie sensorimotor memory. The decTsion, to' neglect non- ' 
+propositional knowledge here b'y no means implies a judgment that only verbal 
+sources of kni-wledge are worth Considering for the psychologist. It merely 
+reflects tfte state of the art today (KintscK, -1974, p. 15). ■ ', 
+
+This recurrent proble^as especial importance for the developmental psychologist who' 
+must ask: how does the meEory system of the young child encode and reconcile nonverbal 
+and verbal^ seurces of knowledge? How does the latter emerge from the former? Nelson's 
+(1977) 'attempts to deal with this issue are of .great importance for developmental 
+theory and the adult "models themselves could be enriched by a considferation of Che de- 
+, velopmental issue. ' . _ ' * ' , 
+
+C. (Semantic memory .models . ' < • 
+
+Semantic memory models are currently fashionable an^ controversial (Collins & ' 
+Loftus, 1976), I do not wish to enter this arena but will consider thS" models as they 
+relate -to tjie probl&i of growth. An excel],ent discussion, of growth and semantic models 
+can be found in several recent papers of Bransford and hib colleagues (Bransforci & 
+Franks, 1976; Bransford & Nitsch, 1977; Bransford, Nitsch & Franks, 1977), and there-* 
+fore I will only touch on the main points. 
+
+The* main con; roverey engrossing semai tic memory modelers -concerns the nature of 
+the organization in LTM, wtiether this is characterized as sets of features (Smith, * 
+Shoben & Rlpd, 1974),. or networks of relationships (Collins & Lof tus , 1976). The main 
+game played by the participants^ is some variant of a verification task. Subjects are 
+required tb verify that a canary has skin, of is yellow. The latter they do more , 
+
+quickly-Hwhy? Whatever theory is espoused,, a basic tenant is that the ease of verifi- - 
+
+♦ 
+
+cation can be accounted for by making assumptions concerning the preexisting structure 
+• of already acquired Information, | ' * , 
+
+EMC ^ . ' ' 10 . . * ' • ^ 
+
+
+
+' " • r • 
+
+, , . Theories of semantic memory therefore attempt' to' account for knowing - • 
+
+. solely on the basis of the structure o£ already acquired information. So- 
+called "propess" models of semantic memory are involved witli elucidating 
+how one uses already stored ttnformar.ion to retrieve facts, make comparisons, 
+etc. However these notions bf "process" are riot equivalent to the processes^ 
+involved in the development of knowing. From the present perspective, the- 
+liUportant processesr involve knowing how to do something to gg beyond wh^t one - 
+}cnows right now (Br^n^ford, Nitsch & Franks, 1977, m^'. p. .)• 
+
+The* major, developmental* lofays in this area have>)een studies showing that children 
+
+have networks ^milar to adults (Relcon & Kosslyn, 1975) but again Wthout cotisidera- ' 
+
+tion^of how these structures arose or developed. . ' 
+
+Although it would be simplistic to deny' that ?in important aspect of 'understanding ' 
+/ , . .' . . ' . . • 
+
+involves the^ relationship between -what is- now to be understood and. what is already' known 
+
+Bransford and his colleagwe-S^are certainly right -in emphasizing that it is at ^ast 
+
+equally important tq consider Jiow' novelty is comprehended. Novelty cannot s'imply be 
+
+understood as a recombination of alr^ady/^ilable information and this is nowhere more 
+
+apparent than when one considers the' problem of development. Children: are universal 
+
+novices; thiy must cbpe. vrith novelty constantly. Semantic memory models cannot help 
+
+u8 anjwer the problem of growth for they have jyx?^eeTi primarily concerned with th&l_ 
+
+issue of how one becomes a netwc^k, or feature^epository, or how there develops a 
+
+' - t • * • • ' 
+
+structure through which spreadtog activation, can activate. This problem is isomorphic 
+
+which the^-p^iously^-mentioned t^estion of how, an abstract decontextualized system^f 
+
+knowledge evoIves( from the persdr^ episodic, experience of* the child (Neison, 1977: 
+
+Nelson Brown, .1978>. The virtual equation of understanding with contacting previous 
+
+knowledge must bring such. models face to face with the problems of growth, novelty 
+
+and preformism, problems which present difficulties for all psycholQgicSl theories. 
+
+D y Schema theories of knowing > „ • . ' • ' 
+
+Schema theories of httman thought have been popu;.ar at least since Kantjs (1787) 
+
+€Atique^ of Pure Reason ! they *have never been totafljf in abeyance although in the hey- 
+
+... ' . ^ ' ^4 
+
+day of radical behaviorism they lurked nredcminantly under the cover of the "soft" . 
+
+areas of developmental (Piaget, 1928) and social (Allport & Postman, 1945;' Bartlekt , 
+
+1932) psyphology^ ^ - . . — * . - * . 
+
+
+
+i * ' Of J 
+
+
+
+rt .is probably true that some ver^ifon of a^schema tlieory' is, the dominant' metaphor 
+
+Of current xognifive psychologists; at least^^t is a very healthy contender for diat 
+
+. . ^ • ' ^ » I - ' ' Tt,:.. ^ ^ /'^T . * 
+
+, position, vying only with the competing inf ormation-prdtreaSing computer metaphor. i 
+
+Computer metaphors themselves have begun to incorporate schema-like entities into their 
+
+conceptualization. ^Mirisky's (1975) fiaJie^. notion, which has been 4avore^d*,by workers in 
+
+the Artificial InteUigence field tChaimiak, 1375; Winograd, 1975)^^ .ana Schank's script^ 
+
+
+
+and plan| are basically schemata notions (Schank & Abelspn, 1975); Jhe LNR group h'as 
+not been entirely uninfluenced by AI and they have also ddvfeioped theories of schemata- 
+driven cogaftion (Bobrow & Normanl^575; Norman, 1975; Rumelhart & Ortony, 1977). 
+
+The defining features -of schema theories are somewhat difficult, to specify.' The 
+use of the term schema is widespread' vague *and, not always overladen wSkih meaning. One 
+of my favorite games is to remove the work schema from a paper written in schematese 
+and look for changes in ijeaning. Take, for example, the sentence "preexisting know- 
+ledge^schemata functJ.on to orient people to interpret, a message in a certain way*." 
+Whe?e is the loss of clarity in removing the word schemata' It is somewhat surprising 
+to find that there rarely ?!*s a loss of meaS^ng following such ablation tactics. The 
+above sentence was *one of mj? own, by the way, and' I had^ already been through ,the paper 
+eradicating superfluous schemata. To be fair, many of the^more recent theo\ie8 are far 
+more precise in their use of the term (Runelhart & Ortony, 1977), but there is still 
+
+■ • • \ ■ ' • ■ • 
+
+an abundance of needless schema tes^^ in contemporary cognitive psychology, 
+
+• * * ^ - 
+
+'* ' , ^ ' 
+
+^ The va^^t scaf f oldlnjg of schema theories seems to be some version of the Piagetian 
+
+assimilation atid accommodation interaction, or the reflection, refraction transactions 
+
+of Siwiet dialectic ^theories* (Wozniak, 1975), Assimilation is the function by which , 
+
+tlie events of the world are incorporated into pretoisting Imowledge structures while 
+
+accotmnodation Is the prcft^ess by which the^existing knowledge structures are modified 
+
+in accordance with novel events. By the, reciprocal influence of injput on preexisting. 
+
+concepts and*extant knowledge ^n input the thinker cotnes to know his World, There — 
+
+
+
+are nontrivial. pjyjblems" asWiated with bo terms. Recent theorists' have -taken 
+'4 ; • . * ' r * ^ * • ^ - r - * , 
+
+* . ^ , . • 't * 
+
+' divergent opinions or the issue, Ringing from ^hose^pho haVe fews*,probl/Bms with 'asslm- 
+
+. ^ • « , ^ * * . ^ • ^ ♦ 
+
+' ilation but question -how accommodation occurs." (Anderson, 1977) , ' those wha accept 
+
+accommodation but exl)ress^concertis 'with aslsimilit ion (Neisser^ 1976a), and' tJiQ$f^who 
+
+* Appear to be disconcerted "by Jjoth (Tdr^ey, 1977); Onel'aannot fegitimatelVVconsider. 
+
+* assimilation withovt* accommodation 6r vice versa,.» 'as they. ar^^t^cJln mechanisms In a 
+dynamic transaction. But I will try to giye the flavor of , object ions to botl processes, 
+as if they coUld be separated/ Ii\ keeping with "the , focus, of this, chapter I will c'dft- 
+centrate only on issues of critical interest to the basic developmental questions^-/ 
+growth and change. ' . ' \ . , 
+
+A major criticism of schema * theories in adult cognition' is that they are basically 
+assimilation models. Mechanisms wliich pdcmit acquisition and articulation of schemata 
+are not specjff ied in .sufficient detail to afford an adequate* developmental perspective. 
+
+
+
+How are existing conceptions 'modified In the face of incQnsistSKEMaput? * How do s,uch 
+theories deal-vit^nbvelty? ^ To say that "lear^iing may be dea^lt w±W Sy supposing that 
+when a^^radically hew input is. encountered a [new schema] w^ithout >^ariables is constructed 
+(Rumelhart «fprtony, 197?, ms. p. 42) does liot tell us either how we fenow'^it is a 
+
+" . . , « , ' ' / - ' • ' s ♦ 
+
+
+
+new input or, how W construct a i/ew schema. / Similarly i^is undoubtedly true that much 
+schema 
+
+
+
+growth can be aqcSunted ^or hy^,J^^ti^n processes 'of scb^ina genera\ization ^i^d 
+schema specification (Rumelhart* & Ortopy, 1977) but the, theory is quite yague concerning 
+the mechanisms and contects yhich^would ijefmit^.such de^lopraent. , ^ 
+
+The problem of growth' is not only one of gradual .j^xtension and ref in,emen,t of 
+schemata but* an adequate feheory must.be able to acccnint fot ma^pr changes in perspective 
+(Anderson, .1977) or paradigmatic shifts of theory or worid view (Kuhn, -1970). It mu^t 
+also-deal with emotipnally-bas^ed reeis^^^ce to ^ieb major cognitive reorganization 
+it is true, that inconsistencies and counterexamples are often assimilated into schemata 
+to Which a person Is heavily committed, as Abelson's (1973) Cold Warrior example can 
+iliuStrAte. Accpmmodation is not the necessary result of inconsistent input. What 
+
+
+
+thAnNrould constitute' necessary or sufficient conditions ■ for a schema shift, or major 
+• accotnmQdatlgn; to occur?' does our 'preexistihg knowledge change' as a funfition of ^ 
+experience?— by grad^^ e:;t:ension~by dynamic shifts Ip perspectives? (for a detajlled 
+discussion pf *this point see Anderson, 1977). ; I ' ' ^ . ^ 
+
+Thejre are those ^or whon^^the problems of accommodation are relatively trivial for 
+one must first account fbt'^ assimilation. Cibsonian-attuned theorists find the lattet 
+
+N > * 
+
+to be thfe more problematic concept. Assimilation presupposes at least two interrelated 
+assumptions that repder the concept i^iplausible for Gibsonians and embarrassing for 
+^ schema theorists whose consciousness has Ijeen raised by thia scliool (Neisser, 1976a). 
+First, one can .know only by reference to prior .kfiowledge. Closely linked to this problem 
+is th.e age-oli.one of preformism, or radical nativism, i.e., the organism must come ^ 
+Tprewlred^with a^^t of schemata; some knowledge about the world mi^st be present from 
+the very beginning . ' . . • , ' ■ . ^ 
+
+r 
+
+: ^ - • . • ► 
+
+The problem of preformism has be^ dealt* with in depth by Shaw & Bransford (1977). 
+
+No one really questions that^phylogenetic attunement of some kind must pre,s^et an or^an- 
+
+Sim to interact with hi^ environment. Radical empiricism is no longer a v(iable tenant, 
+
+for most contonporary theories accept some form of genetic attunement, some^ primitive 
+
+
+
+universals, even though ther.e is considerable discussion concerning what these might 
+
+i-' ' ^ . ^ ' . ' ' > " ' 
+
+♦ be. ' - ' ^ A 
+
+The notion tha^ assim^||sation Involves epistemic mediation of some form is also 
+
+' , A' ^ ' 
+
+a theoretfcaHy 'controve^al one (Tttrvey, 1977)..' Gibsonians, as direct 'though 
+critical realists, bejieve that everything we can perceive we perceive directly and 
+there is no probj^ for such theories of input change or internal representation. Schema 
+theorists on the^ther hdnd do invoke some epistemic mediation. Truly constructive 
+•^thfeo^ies are awkwardly autistic; if* we truly construct our world, and w^ all construct. . 
+it on the basis of our unique configuration of ^individual experience, it 'would be ' ' 
+Viff^l^t to account for how^accurately we perceive o*ur world and how constant is the 
+
+* ~,pattem of major ontpgeoetlc change* Neissar (1976a) reaches a form of compromise in 
+
+O ; , . • 
+
+
+
+that he assumes that perceiving does not change the world, it clianges the perceiver, ^ 
+so that information In the vrorld 'is only significant, indeed can only be picked up, 
+if tttere is ,'!a developmental format ready to accept it." For a full discussion of 
+these differences the reader is referred to Nefsser (1976a>, Turvey and Shaw (this ~ 
+volume), Bransford, Franks, Morris, and .Stein (tlis volume),. arid Shaw Bransford, (1977) 
+
+Thus a majoi; problem with assimilation theories is the now .familiar ^arguement 
+that^it is only possible to understand current* input by tefjrence to preexisting. struc- 
+tures; This is as problematic for schema theories as for any other/^ And it is exacer- 
+bated by the tendency of some schema .theorists to maintain th€t terminology, of a memory 
+metaphor by referring to Schemata' as if they were knowledge structures stored in the 
+head. Schemata have^sldts into which ^thing^"^it; frames often read very mtf&h like 
+static places to put things in. But if this ds so then one could only know by rifling* 
+through available schemata until .one^ finds a suitable fit; or one could invoke a notion 
+of content-address-able schemata!! This is one. of the common pitfalls that schema the- 
+
+ories wish to ^void. Experience does not result in the, formation of an inner replica 
+
+' i ' ' ^* ^^^^ / V 
+
+of ^ah Bvent in the h§ad, but it functions more bH^ltering or tuning the organfs^i in 
+
+such a way that it will see all subsequently related events in a new light i Reconsti- 
+
+tuted schema theories (Neisser, 1976a) do go part of the way in avoiditig the ^ content- 
+
+addressable problem by- this notioji of tuning j/hich is the result of ^ the dynamic, re-^ 
+
+ciprocal relation between the current cognitive-perceptual situation and the significant 
+
+information in the environment (Bransford et al., 1977). Schemata are not filed in a 
+
+library system in the mind. As- Neisser points out, "someone who haa a currently in- 
+
+active schema should not be thought, of as an* owner of a particular kind of mental 
+
+property. He is just an organism with a particular potentiality. His inactive sphema 
+
+V 
+
+are not objects but aspects of the structure of his nervous system" (Keisser, 197<^a, 
+
+p. 62). Slittilarly, Brahsford^s notion of experience setting, the stag^ <%ansford & 
+
+♦ 
+
+Franks ,^976) for graspiig the si^ificance of an event is a tuning nqtion which has much 
+
+3^ ' 
+
+
+
+13 ' 
+
+
+
+in comon with the Gibsonian Wepte of the mutual , compatibility between the organisnvLs " ' 
+eff activities- (gpai-directed futons wbich reflect- Its potential actions)- and the ' 
+environmental affordances (Turvey & Shaw, this volume)". There'are major differences. * 
+to be^'sure. betweenW*eibsonian ecqlogica/ thel^is'' aq^' ev^n reconstituted schema 
+
+, theories (Neisser 1976a), and these- differences, centef on 'the- problem of 'epistemic 
+
+mediation (l^vyey, 1977). ' But there is a convergence 'on the->portant issue which ^, 
+
+^ remains the mutual compatitility of "the Organism and.its Naturally evolving en¥ron- 
+-^mental nifehe. . - • ' . ■ ' 
+
+In summary, the -fundamental problems facing schema' theories, are the sane ts those 
+that must eventually be confronted by any adequate psychological model. They must' be 
+
+^ able to deal with such issues as: wJth wljat preexisting structures .must the nascent 
+
+organism come equipped; how do these structures, undergo Vhange with age and experience; 
+how- does the organism go beyond it^^current_ state <)f knowing; how are the perceptual --' , 
+and cognitive systems pre-attuned by experience-, in short/how doW account for cognitive 
+growth. One of the major ina.uences of the ecological theories <(Shaw & Bransford,<^977; 
+Turvey, 1977) is that they focce us to address just fhose Issues even if they cannot 
+yetr" resolve them. / *^ ' , , ^ - 
+
+E. Developmental Theories . . K 
+
+;in the last stop in this quick tour ^of theories of cognition and the coircept of , 
+
+growth, I will now consider briefly developn^erit'al theories, lumped together into one - 
+
+i f ■ 
+
+uneasy category.. It is a natural step to go from a cpnsTderation of schema theories , 
+to the developmental literature as most of the dominant theorie/ of cognitive develop-, 
+ment are based on some schema-like construct. This is true of European (Binet.& 
+Henri, 1894; t>iaget, 1971), Soviet (Reig4l, 1975; Woznfak, JL975),' and American ^Werner, 
+1^48) psychology, in some guise or another. Jt would^ of course, be. impossible^o 
+give even a thumbnail description of the;yiable developmental models, and in keeping ^ 
+with the main focus -of this- section of the paper, I, will concentrate only on how de-- 
+velopmental models cope with growth*. One might imagine that a cons ideation of theories 
+
+
+
+ERIC 
+
+
+
+* ■ ■ ■ 16 ■" : - 
+
+
+
+specif ica^y addressed toi growing organisms might provide some answers not found in 
+
+adult models. A concern jith growth should be a defining feature of a theory of 'cog^'^ 
+
+nitive development. .Unfortunately this is not so; developmental theories have also^ 
+
+been ad^pt at aVcj-lding thei basic issue of growth by describing what develops rather 
+
+than concentrating. on how growth occurs. . Indeed, just ks a major problem with adult,' 
+
+models is that they are^gen^rally silent, on the issue of how thinking systems grow 
+
+or Change, sa too, a major objection to raafty developmental models is that. at best 
+
+th'ey 'provide a description of the st£?ges or stiat^s of development but they cannot 
+
+, account for^the transformations chat lead to'gr^th (Nelsoi^ 1977). There is consid- 
+
+enable disagreement ^rrounding even such basic issues as whether cognitive growth is 
+
+a continuous process that proceeds slowly and gradually or whether it consists of a 
+
+set of abrupt stage-like leaps 19/1; Toussaint, 1974) . 
+
+' ^ ^ ^ \ ^ ' . 
+
+To illustrate bow developmental models have difficulty with the concept of growth, 
+
+*I Willie a somewhat extreme example. \ At; a recent conference cortcemed witb intelli- 
+gence, Klahr (1976) i^resented a simulation of children's performance on Piagetian con- 
+servation problems. But, irr order to successfully model this development Klahr would 
+need _ to build pitcfhis system some accommodation-like process. In short, to model* 
+growth cme must understand it. Neisserias the discussant of t^e , paper, pointed out 
+
+
+
+tliat this';!^ exactly what^ystems like .Klahr 's cannot?^, for we do not yet understand 
+
+the processes ^of growth. According to Neissef, the .system proposed by Klahr 
+
+. . • does not undergo^ accommodation; it does ndt iearn- Klahr agrees 
+that the issue of self-modification ds central to the^ conception of 
+* intelligence,, but neither bis own system^or any* of- those reviewed by 
+him meet this issue successfully. For better or worse my (Neisser's) 
+196? claim that Artificial-^Intelligence has not modeled cognitive devel- 
+ppment remains valid. There i^ a reason for this./ The development ot 
+human intelligence occurs in a real environment with* coherent proper- 
+ties of its own. Many of these 'properties vary g^reatly from one situation ' / ' 
+to anotRer; others reaaltr invariant at #r deep^ level. As long as pro- 
+grams do not represent this^ environment systeioatic^lly . in at least some ' 
+of its complexity, they cannot represent cogn;ft/ive growth either. 
+(Neisser, 1976b, pp. 143-144). '# , 
+
+, Thus for Neisser-, as well as for ecological theorists (Shaw •& Bransford, 1977 2 
+
+* " / 
+
+Turvey & Shaw, th^^ volume)^ the minimum unit of Analysis must be the activity of 
+
+
+
+the organism in its natural environmental »nilhe. \ - 
+
+' It is perhaps not too surprising that Klahr could not successfrflly capture the 
+
+•essence of accommodation in a computer simulation. But how successful in this regard,:, 
+ha^been the pivot;al developmental model, Piagetian theory. -I have a sneaking suspi- ' 
+cion that Piaget's' theory is a gigantic {srojective tdst and it Is possible to find 
+there 'what one >s looking for, surely a confirmation ,of Piaget"^ basic tenet. What 
+pllows^is my interpretation of the ess.ence-of the theoSry. Piaget's theory»rests on' 
+his changing notion of equilibration which is seen by so^e to be a homeostatic mech- 
+anism (Ri^el, 1975), ^ 'Da.e organism is constantly seeking balance and stability. 
+Every interaction with the 'environment vprecipitates ^ compensating equilibration ac- 
+tivity consisting of both an assimilative and accommodative function. = The end state 
+of these reciprocal forces is balance. A problem here is that such a homeostatic 
+notion would serve to maintain a "child at a given. level of development and one major' 
+issue has been how Piaget extracts himself from the dilemma ol prbvfding a basicali7 * 
+
+Jidmecfetatjlc model to account for growth* " - . , 
+
+Piaget is not insensitive to this issue as some of his critics would have us be- 
+lieve (Riegel,^ 1974) and in. his more recent writings he has introduced the bomeorhetric' 
+(PufalL, 1977) processes of ph^cal and 'reflective abstractioji (Piaget, 1970, 1971). 
+
+
+
+These are not easy concepts to^ome to grips with and luckily, for my purposes here, 
+it is sufficient to point out that the miajor questions that Piaget is attempting 'to ^ 
+answer in his more recefit work focus on^the problem of growth. Indeed, Riegel (1974) 
+has characterised Piaget *s own development's one of thjfee stages, the functional, 
+^the structural and now the transf ormatiotial periods^ 
+
+■ ' ^ / 
+
+Thus, it would seem that ev^n djevelo 
+
+
+
+ental theories have not ^yet arrived at a 
+Satisfactory conception of change" and growth ; as with adult theories the tendency is 
+
+
+
+to fall ^ack on an aylpttlajtion notion sometimes accompanied by reference to some ^ 
+
+unspecified qualitative reorganization jat some unspecified critical stages^ In defense 
+
+* * k * \ **' ^ 
+
+of such theories, however, ^it should be saiav that they do address the iss^e; it is a 
+
+
+
+.V ■ - .. • . ^ ■ _ ■■ ■ 
+
+constant concern; it is tKe, focal point where theoretical controversy centos. For, 
+^example, the stage ys. continuous growth controversy. (?lavell, 1971), which dominated 
+the 1960Si' centered on the prob^' of growtij. In the 19708, another theoretical con- 
+^ troversy has arisen, although not everyone would believe it to be a controversy (Yoiinisg, - 
+^ 1974), between J'iagetian "structuralism" and Soviet dialectism as espoused by its Amer- 
+icfan adherents (Riegel, 1975; Wozniak, 1975). This controversy wds nicely illWtrat^d 
+^y the football analogy' introduced by Gardner (1973) and fextenda4 by Riegel (J?974). In ^ 
+. .order to illustrate the methods of structural analysis used by Levi-Strauss' to examine 
+
+rituals and orgies of primative societies, Gardner subjected American football to a ' 
+similar analysis.* There is structure in^the field, the .rules of the game^'and the ^ 
+, strategies of performance. The action is chatacterized by a sequence of sudden quicfc 
+actions each leading to a new structural state where the action appears to be temporar- ^ 
+ily frozen* 'Riciel believes this analogy 'is suitable for eapturitig th^, essence of a ' * 
+• structui;al theory of growth lik€ Piaget's early conojeptions. By" contrast, Riegel. 
+
+believes that dialectic theories, sue}} as his own, can best be characterized ^by analogy * 
+to soccer, a game of ceaseless action which depends on continuous interactions between 
+the individual memb^ers and the transaction bet'^een'the members of' apposing teams.^ 
+Soccer, like dialectic theory, is a game of cont^^^uous motion; football^ like ^Iructural 
+theory, is one &f stfdden activity producing stable states. The analogy has^ija^s cer- 
+tainly, but it does illustrate that'o^e of the current? c^l^rovetsies in developmental 
+theory, dialectism vs. Piagejtian structuralism,^ is jool^d in thia^notions, of growth ai^d 
+€hai\ge'. Whether or not these theoretical metaphors ever lead^ a ccJhctete incre^se^ ^ 
+in ouf understanding of human growth, the^at least sensitize us'to^ a* major problem 
+for psychological theory. ^' \ * 
+
+Although space lim:(.tatipns must restrict my treatment of most aspects of "thevdia- ^ . 
+lectic approach to human grouth,* I would lilje to a^d one point. Another criticism 
+leveled against Piagetian theo-ry by the dialectic school is that it concentrates on ^ 
+biological maturation and' individual^ interaction^ with objects in the world; the 
+
+■ ' ^ 
+
+ERIC . • . *. — f 
+
+
+
+impression 4s that these forces pla^ the primary role. in development. By contr^stf, " 
+
+Riegel (1975) and his adherents stress. the Soviet position that 'development .Is. largely 
+
+>the .te8ult of socio-historicai influeA^es. I believe the differen,ce is" only one of ' 
+
+emphasis and , the value of both theories, is the concentration on the- individual , en- 
+
+vironmenfc,. and the mutual compatUbil'ity between, the two. Together with many recent 
+
+calls for an "ecologicar psydhblogy" (Brown, 1977, 1978a; Brown .& DeLpaclie, 1978; 
+
+Bruner, .1972; Coin & siribner, 1977; Neisser, 1976a^ 1976b; ShJ & Brans ford, 1977), 
+
+<■>■>*'•' . , . , „ 
+
+,the t\Kf major global developmental theories ^y stress on the essential 'importance of 
+
+co^Qsl,^rjlng ontogenetic and phylogenetic adaptation, as adaptation to dynamic n.aturQl 
+
+contexts. ^ Human ^thought is. natUrally evoiving^and although this undoubtedly compli- 
+
+cates the idsue, psychologists eventually -n-^st consider adaptation in raferencB to 
+
+' the particular spcio-historical, context in whiph the, organism has evolved* and must 
+
+survivc^l ^ ' ^ " ' ^ , 
+
+. I would IJLkfe to end this section with anotffer quote from Neis8«r. "^o theory 
+
+that -fails to acknowlegde the possibility of development cVn b^. taken seirlou'sly as 
+
+an account ot'*human cognition'^ (Neisser, i976a, p, 62). As yet, neither the major 
+
+afult or developmental models, <^n 'satisfactorily account for growth, *other than by./ 
+
+postulating a gradual accumulation of facts, accompanied by some unspecified quali- 
+
+tative reorganization and restructuring ♦ We are, however, beginning to see frame^ 
+
+wo;rks-in which to couch the question, particularly Brarlsford and Nitsch^s (1977> a1)-^ 
+
+duction schema, Neisser'6 (1976a) updated schema theory, Piaget^s <1971) inchoate 
+
+notions of reflective abstraction fnd %he ecological theories of Turvey & Shaw (this 
+
+volimie). The main point of this section^was not, unfortunately, ta provide^new 
+. - ' ^- , ' - \ ' . ' J- ' - 
+
+insights into the'^'problem of, growth, t but to illustrate that attention to issues of 
+
+. * ' " ^^^^ J / . ■ • ; • 
+
+growth and change should be .ai^ essential facthr in the formation of -our conceptions ^ 
+about human thought. _ " ? , 
+
+
+
+levels of Pi:oc^88ing and 'Developmental Psychology * * c''\* 
+
+To^have progressed this' far in 'the paper without mentioning levels of pr'pcessing 
+(LOP) moacls might seem somfewhat-perverse given the theme of the volume but the par- ' 
+ticfpants were encouraged to consider alte;mate viewpoint^. In the preceding section 
+. I dealt mainly with r^ons why developmental psychologists and those concjerned wit^ ^' 
+•adult cognition. do not generally cross-fertilize each other^s theory constrlictibn. 
+\ ' I%Ahis section I will emphasize why it is that; LOP frameworks are the major exception 
+to this rule. Fr'om-their .very Inception the LOP frameworks have been adopted and in- 
+torporated into', "the developmental literature.' Why should this be so? What distin- ' 
+^ p^lshes LOP models fromother^^ models^ s& th^t they are particularly compatible 
+witlj developme^a3r~lpfr0fiiches?„ They certainly do not :deal satisfactorily with the 
+
+issue 'gr.QWtlii relying; as they do on the typical gradual ipcreioei^t^l motion. T:hay 
+
+t.i " ^ ' ' ' ^ ' ' 
+
+bypass .the thorny problgm of assimilatipn-accomftbdation with^tatements such es *1iighly- 
+
+famiUar, meaningful stimuli are cbmpatible by definition (emphasis mine) With existing 
+
+cognitive structures" (Craik & Lockhart, 1972^ p: 6/6). Although they helped us avoid' 
+
+- some of the less fruitful' blind alleys of tb^ container metaphors (Brown & DeLoache, 
+
+• ^ ' * - - * > 
+
+^ 1978) t5iey still maintain much of the tepiinology of general- memory metaphors (Bransford 
+
+* & Franks, 1976). Why tben have LOP fratoework^ been so readily adopted by developmental* 
+
+theorist's? - • ' 
+
+♦ I have described the major impact of LOP frameworks ^in previous papers (Srown,» 
+
+1974% 1975) and Naus' arid Halasz* (this, volume) alsQ give an^ excellent in d^th r^iew 
+
+of the literature; I do not want to reiterate^mu/:h of this discussion. I will argue' 
+
+hefe that the compatibility between LOP approaches and developmental psychology is due 
+\*- Is . ' ~ . 
+
+- to the fact that developmental models have always "been predominantly LOP frameworks.^ 
+
+Both emphasize three (not independent) main points: (a), thfiu .concept of voluntary^ 
+» * . * » ' ' , 
+
+^'vdlrsus involuntari^ memory, (b) the ides ttet it Is the actiyjfey of the sjibject that 
+dete^rmines what is remembered, and- (c> headfitting (Brown, 1975; Jenkljas, X971, 1974), 
+nicely captured in Jenkins* ;quote; "the head remembers what it does" or is capable of 
+
+
+
+21 
+
+
+
+ERIC . • , . . , . 
+
+
+
+doing.. These thyee points are the major issues that guide empirical work in develop- ' 
+mental psychology whethei" the orientation is European- (Binet ft^enri; 1894; Piaget, > 
+1970), American (Brown, 1975), or Kussian- (Istoaina, 1975; Vygotsky; 1962.; Yendovit- 
+skaya, 1971). * ' . ' 
+
+A. Voluntary vs> Involuntary Mepiory » - ' 
+
+I/' Voj.untary & Deliberate .learning. A priory distinction made^ by • Soviet d^vel- 
+opi^erxtal psychologists is that between voluntary and involuntary memory. This is^^ 
+roughly equivalent tJ/the LOP distinction between incidental and intentional leaming^^ 
+Voluntary or intentional learning refers to the standard situation in laboratory^ 
+
+
+
+ory^ tests (and schools) Awhere the subject ts specifically requestW to invgtke all 
+efforts to retain the mat^ial. Under such circumstances adults deploy a remarkaile * 
+array of ingenious mnemonics eVen when faced *v7ith the most impoverished stimuli or 
+
+_ ' ^ . ^. _ : 
+
+artificial laboratory tasks (RejLtman, 1970); indeed, it is extremely difficult to , 
+interfere w€th this ingenuity* There is however ample evidence that young. children 
+do not spontaneously -employ a variety of strategii: methods until the on^t of .the 
+grade school years and they contjnuia to refine^d extend their repertoire as they 
+mature. Along with the gradukl emergence and refinement of specific memofia^ strati^ 
+Regies, the child's knowledge and 'control of these processes also develop' as he is 
+faced increasingly with more demanding situations.. He learns to eVtluate realist ic^ll^y 
+the ta^k demands (Brown, 1978^, 1978b), hi^ men\d/y a>iiit:y (Brown, Campione, & Murphy, 
+1977; Brown & Lawton, 1977; Flavell, Ftiediichs, 6f.Hoyt, 1970), -and the intefactibri 
+of his abilities and the task (Bro™ & Barclay, 1976). The development of knowledge 
+about memory,* metamemO'r> (Brown, 1975, 1977, 1978a; Brown & D.0Loaehe,* 1978; Campiorte^ 
+& Brown, 1977; Fra:v^ll h Wellman, 1977), has only^ recently received attention, hdwever, 
+such knowledge and beliefs concerning one's own memory ^processes must Rlay a vital 
+role in determining if strategies and plans will be adopted ar>d if appropriate plans 
+will be usfed. Without such Introspective (knowle^dge, it would be ^^^f'^lt, If not 
+impossible, tcf select an appropriate strategy at the ons«t of "a task and to change o^ 
+
+
+
+22 
+
+
+
+'20 
+
+
+
+modify that strategy in the'- f«cs of it's success or failiare\ 
+
+; " ' ' ' ' ■ ' ' f • 
+
+To Illustrate the development of knowledge and control of deliberate strategies I' 
+/ ' * . . ^ ' ' f 
+
+_ for learning, I will briefly describe some ongoing research f&i m'y laboratory concerned J 
+
+with acquiring information frdm prose passages (Brow. & Sailey, 1977a, 1977b). "Our ' \ 
+subject population ^has ranged" fmn preschoolers as young as three years of age to college 
+students, and the stories are adapjred^ to suit the difterent age groups". We find two^^ 
+■main consistencies across age:, with or without conscious intent to do so, subjects fex- 
+tract the main theme X)f a story .and "ignore trivia, Even the youngest child's recall " 
+favdrs the essential action sequeS^ieg^bf the story. In addition, children are misled 
+^ in their compreh^<|' of stories by the saas snares that trap adults (Brown, Smiley, ' 
+^y, Townsend & Lawton, 1977). Led to believe certain "facts" concerning a main char- 
+acter or. the location of an action, facts^which never appear in the original story, 
+' ohliarea. -disambiguate and elaborate in the same way as adults (Anderson & Reder, this ' 
+volume). They false. recognize theme congruent distradtors in recognition tests, and • " 
+introduce Importations from rheir preexisting fcnowledge when recalling. Kurthermore, ' 
+- they have -difficulty distinguL^hing' between their own elaboratlonfl and the aet:u»J ■gtovy 
+content. ' - • 
+
+There are some interesting developmeAtal trends, however, which follow from the 
+increasingly strategic nature of thre older chii^d's study habits. . As children mature 
+^ they become able to Identify^ the .essential organizing features and crucial elements of 
+texta, (Brown & Sfl\i3.ey, 19?7a, 1977b). Thaniis to this foreknowledge, they make better 
+
+•-^ use of extended study time. If given an extra period for study, children' from seventh 
+gra(je up improve^ their recall considerably for important elements of text; recall of 
+less important details does not feprove. Children below seventh grade do not usually 
+show sucn effective use of additional stojdy 'time^ tljeir recall improves, if at all, 
+evenly across all levels of importance. .As a rfesult, older sttfiients' recall protocols 
+
+. foliot/lng study include al3. the essential clemeixts And little trivia. Younger child- 
+.ren's recall^ though still fe\'orin|, important elements, has iflany such elements missing. 
+
+
+
+ERJC 
+
+
+
+^ Xbe older students benefit from^lncifeased study time as a direct result of their 
+strategic intervention which in turn rests_ on their kblllty to' predlctf^dhead of time ' " 
+what are. Important 'elements of the text. Younger students, not so prescient, cannot - 
+be expected to distribute extra time intelligentlyj they do not concentrate, on only 
+the Important elements, since they do .not knot^ in advance what they are. to substantiate 
+'this hypothesis consider the overt study'^actlons of the subjects, in particular, the 
+physical records they provided, notes and underlining of texts, A certain proportion 
+of children from f^th grade and up spontaneously underlined or took notes during study. 
+At ^all ages, the physical rec9i-ds of spontancipus subjecj^s f^vored^the important ele- 
+ments; i.e., the notes or underlined sections concentrated on elements of the text * ^ 
+previously^ rated as crucial to the theme. - . 
+
+Students induced to adopt one of these strategies did not show a similar sensi- 
+tivity to importance; they took notes or underlined more *randotoly. Some of the very 
+young children underlined almost all the text when ^Id to underline! Although the 
+efficiency of physical record keeping in induced subjecfe^ did Improve with a§e, ^t 
+never reached the standard set by spontaneotSs users of the strategy. l\irthermore, the- 
+recall scores of spontaneous producers wei'^ much supexior.' Even the few fii^th graders 
+\^ii o spontaneously underlined showed an adult-like pattern and used extra study to dif- 
+ferentially improve their recall of impdrtaivt elements. The relationship between ^ 
+spontaneous strategy use and effective recall was clear for all ages. , 
+
+This brief summary of some ongoing research illustrates what I believe to be a 
+repetitive pattern in cognitive development. What develops with age and experience is 
+often increasing strategic xonti^l over an. early emerging process. For exgjnple, even 
+young children extract the essential gist of a story if they are not misled by red 
+herrings, such as artificially inci:eased salience of nonessentiSil detail-. ♦ With in- 
+creasing experience with such tasks children acquire the lemming process and gradually 
+refine their' control over these strategies. Dskng their knowledge about elements of, 
+texM, their knowledge concerning how to study, and the interface of these two factors. 
+
+
+
+1 * m 
+
+IC- ■ 24. 
+
+
+
+7^ 
+
+
+
+. 22 . 
+
+older students can/ become, much more efficient when prc^ssing information presented in 
+texts, A similar developmental pattern xan be found in many other deliberate (volun- 
+tary) learning situations (Brown, • 1974/ *1975) / * ^' ' / - 
+
+2*1 Involuntary Memory or Incidental leamlj^g*- Involuntary memory is roughly the 
+equivalent of incidental leam|ng in the LOP framework, and^lnde^ both the Soviet ^nd 
+
+American schools distinguish between two main types of involuntary memolTr* The first 
+
+- ^^^^ s \ I - _ ^ ^ . 
+
+is^he product of a deliberate learning task, for the subject, is involved in a learning "^'"^ 
+
+problem, during which he is efxposed^ to material which -is irrelevat\t to the task as „ 
+
+spec^ified by the learning instructions • This is a Type IX incidental learning situa- 
+
+tion according to Postman's (1964) nomenclature* Both American and Soviet (Smimov & 
+
+
+
+Ziuchenko, 1969; Vygotsky,' 1962; Zinchenko, 1962) developmental psychologists have ^ . 
+.found the same pattern in children.- As they mature^ they Increasingly attend to informa- 
+
+I '^'"^^ \ 
+
+tive and ignore irrelevant aspects.-of a learning sdtuation. , ♦ 
+
+The second type of incidental learning situation, the Type I task (Postman, 1964),^ 
+has generated. the most interest within the LOP models.. Here the subject is exposed to 
+the .stimulus. material but is given no explicit instructions to leam; he interacts 
+with the material for purposes other than the intent to learn per se. Under these cir- 
+cumstances, addlts (Craik & Lockhart, 1972), as well/*^ children (I^tomin^i, J975; Murphy. 
+& Brown, 1975; Smimov Zinchenko, 1969), retain more information if the orienting 
+irfstructions ar^ sufficient to induce optima^, prqcessing. The^prradigm is of particular 
+
+interest to developmentalists- because a specific developmental prediction can, be made. 
+
+„ i . . \ 
+
+^As young children are .not noted for the production of effective strategies in response 
+
+to instructions to learn, children per||frming a favorable orienting task should do . 
+
+better than those, under Instructions to attempt deliberate learning jy^ith no mention of 
+
+what strategy they might ado pt.*^ Again, both Soviet (Vygotsky, 1962; Zinchenko, 1962), 
+
+and American 4^^urphy & Browiv^ 1975)' developmental psychologists have confirmed this pre- 
+
+diction. In Table^4- prepent some representative^ data. Although the-^ absolute l^vel 
+
+N ' ' ~ ^:.T— - ^ . ^ ' 
+
+Insert Table 1 about here 
+
+
+
+.: ' ■ • r .•■ 23 
+
+of recall varies, aa do this experimental procedures, the same' pattern is -observed. 
+.Intentional learners .do more poorly than those .gerfqrmin^ any of a 'variety of semantic ' 
+orienting tasks.' Indeed, they p^form at' approximate ly'the same level a* children - 
+-performing formal orienting tasks 'such as identfifying the color of objects or" initial' ' 
+sounds of words. ' ■ , " ♦ ■ ^4. ■ / 
+
+We have further evidence that it is thu deployment of task suitable strategies 
+
+that Induces effective learning. Thieman (1976), in an unpublished do qitopal disser-. 
+
+• I - *.i - ' ' . - ■ * > 
+
+tation, 'divided^his intentional learners (adults) intb subgroups depending on the strat- 
+
+egj' they reported using, ^ese data are shown in Table Z: When one considers the com- 
+
+Insert Table 2 abou\here- • ^ ^ ^ 
+
+
+
+bined mean for all intentional learners they appear f?b be perfiorminf as well as^'lft the 
+most effective sema^ic orienting conditions, a typical finding, in the literature. 
+However, when one considers the intentional learners, as a function pf the strategy, 
+they adopt, the more ingenious tend to perform betler than subjects in the best semantic 
+Orienting conditions and the less ingenious tend to perform as* poorly as on the worst 
+semantic orienting task and, indeed, as poorly as in the formal orienting conditions. 
+These 'data, taken togethet with the developmental literature, provide strong support 
+for the hypothesis that intentional learning instructions are only effective t6 jthe 
+degree that, they induce task suitable strategies. Insttuctions to learn per se are 
+irrelevant*. ' ^ — ^ ' 
+
+As a fin ^1 example of tlie interesting interaction of age by voluntary-involuntk^ry 
+m-emory conditions, I have chosen one- of Che original studies conducted with the para-^,^ 
+digm by Zinchenko in approximately 1940 (see Wertsch, 1977, for translation) . this, is 
+a particularly^ interesting study, pot only because its early emergence reinforces a 
+cyplical notion of history ,^11 the elements of our current incidental-intentional, 
+studies are there, but also because it provides some evidence of an interaction between 
+
+
+
+orienting activity; and the oature of the material to be processed, a basic LOP notion; 
+'Adult and chijd subjects Wre given sets of four words, eSchl consisting of a target ^ 
+
+
+
+item (e.g., hous^) an^' three assWfcates calleiaggical (e,^ building), concrete (e.g. 
+wi3[idow); or no ^eaning^ul connection (fis^). These aire th* only -.examples given so it 
+is 4ifficUlt to specify what^^ lo*gical or concrete connection is exactly.' However, from 
+the example it Ibofe- like they are^dealijjg ^>rLth taxonomie-supercrrdinate* versus thematic 
+categories. ,(Overcas t, ^urphy, Smiley, & Brown,. 1975) . For adult subjects, there' were 
+three inafdental orienting ta^s: underline the word in eaph set"^tK (a) a logical 
+.connection, (b) a concriete connection, and (c) with no meaningful connection to the tar- 
+get. 'ThH data for iimnediate (surprise) free recall are given in Table 3. There is an • 
+
+
+
+interaction" between type of material and orienting activity. Logitral connections are 
+recalled better than comirete ones, irtiich'ln turn are' rfcalled better than the unrelated 
+
+
+
+K '■• • . I ^ ' ^ ' . * 
+
+
+
+Insert Table 3 about here 
+
+
+
+itemq. Variations in orienting instruction, however, modify this somewhat, for, subjects 
+
+
+
+Seeking concrete coAections remonber as many concrete vords as* logical ones.. ^ Note 
+cTs 
+
+
+
+4 
+
+
+
+also that the subjecTs in the no-connectlon^roupi dramatically improve 'their recall of* 
+
+
+
+no-connection words. ^ TJie interaction of material* with orienting instructi<% is ^ inter- 
+
+
+
+esting one which is ^peated in the data ^ro?n further groups ^f adults who performed 
+the same orienting task together with instructions to learrr the specific words- they • 
+underline. The degree of retention is a fmj^tfon of both the type of material .and the 
+orienting task of .tfie^ui^ject. " ^ - . V 
+
+The developmental data, also included in Table 3^ are incomplete, a little cofi- 
+
+
+
+fusing. The pattern for young school children is, reasonably clear^ Inc^ental orientltig 
+Instructions, If, anything, produce better recall than, intentional learning situations,!! . 
+even when the same activisty. wak engaged in by both groups. For older childly, tl)e % 
+pattern is mor^ doinplex. ' Jti 4:he j^cidentalrr Condition, the samp pattern of results is ^ 
+
+
+
+found (with lower overall recall scores), for both adults and' ohildren, an intelractdon 
+of orieihting >cti%ity and stimulus ty^e. In the intentional condition j however. 'a 
+different pattern .emerged. Zinchenkg describes these' middle school' children -as just 
+at the stage when t;hey had gained considerable control of iSiemonics of rote recall, 
+which they applied diligently'. But they haJ. gr'eki difficulty initially remembering 
+\ any oF the 'unrelated wo^^^^^ a result they demoted considerable extra effort in the 
+intentional condition; ^when asketi to remember the unrelated words. Subsequently, -they - 
+dramatic4iy improved recall of unrelated words at the expense of the logical and con- 
+Crete connections. This is a complicated study and its insults can only be explained 
+by recourse to much post \ioc speculation (a clean.replication would be welcomed) ; how- 
+ever, it does show that the interaction between strategies and material is an interesting 
+
+
+
+^one. 
+
+
+
+B. • Activity and the Goal of ^tlons ' ' ' . 
+
+Activity,- referred, to variously as mental, operations or- mental a-Ctiyity, is a 
+
+cet^tral Issue for LOP frameworks- CratK and* Tulving summarized the'literature in 1975: 
+
+^ * ^._-^'<?''^^ — ' — -^r-^ ^ 
+All these studie^onform to the new look in memory research in that the . ^ 
+stress, is on mental operations; items aire remembered not as presented stimuli 
+acting .on the organism, biit^as components of mental activity. Subjects re- 
+. member not what was out there but what they did^during encoding (Craik & 
+Tulvlng, 1975, p. 292). - . / \ . 
+
+, • , • , - ^ 
+In its first, instantiation ' this("new" focus on activity involved a somewhat 
+* ' * ^ • ' r , . 
+
+slfeplistic conception of good and bad opetatio»^ that^could be p^formed by tt^e learner. 
+
+. ' • " ^ * p. *■ 
+
+Fofe3^ampie, ^t was easy *to infer from, the original desWipttons of cnrienting activities 
+^ ^ . ^ - ^ ^ ■* * 
+
+. '{hat semantic bnes were good and formal on^s were Bad. There are at ieast.two proKLems 
+
+with the invited inference-. First it su^sts^a neat dichotomy between the t3n?es of.- * 
+
+'tasks, and second it ignores the necessary .relationship between a processing activity 
+
+and tfie goal at handi 
+
+* Con^^fer first' the dichotomy notion. Semantic 
+
+those that required the subject to consiider the meaning of stimuli, while formal 
+tasks did* not require a consideration of m^anin^. * While the division of orienting 
+
+
+
+.orienting tasks J7efe thought to 
+
+
+
+1 ' • 26 
+
+tasks based on the presence or absence of a requirement to consider^meanlng has a good 
+
+deal of intuitive appeal, this view is not without its difficulties. First \b the 
+
+■J _ ' ■ - ' . 
+
+problem o% determining an appropriate point of division, between semantic and" nonsem- 
+
+•antic tasks, for ssveral of the tasks selected appear, to fall into a virtual no man's 
+
+land. One difficulty of categorizing some tasks is that they can be preformed in sev- 
+
+eral ways; so, the tasks themselves are neither semantic ^lor non semantic , but the 
+
+^ operations carried out to perform the ta§ks can be based' on either type'of strategy. 
+For example,* determining the' part of speech of words may be performed either by paying 
+attention to the morphology or phonology of the words or by considering their meanings. 
+.This is not to imply that the two levels, of decision are mutually exclusive, but 
+differences in emph'asis may expla^in why Hyde and Jenkins (1973) edii.sider this a non- 
+semantic task, whereas Eagle and Leiter (1964) and Handler and Worden (1973) consider 
+it, a gemanticAtask,^ In short, a more reasonable assessment of the type of operations 
+^ that can' be perforaed-by the learner is that they form a -continuum in* terms of the 
+degrej^ of semantic analysis that must be undertaken '(Thieman^ 197&). 
+
+^further problem relate!" to the ciassif ica^tion of tasks or* underlying processes 
+
+. as semantic or nonsemantic on the basis of recall performance is the o^ten .cited cir- 
+cular and post hoc nature of this reasoning. Roughly, the argument states that since 
+
+^ semattt'ic or deep processing results in efficient retention, then if an orienting task 
+prodtices high retention in' incidental learning, it must Have entailed semantic proces- 
+
+. sing. But how strongly should the argument aligning memory and meaningful Analysis, be 
+
+"'^"^^^"^ • 
+
+made? Tl)e stronges*- position holds that semantic processing is both a necessary and 
+sufficient condition for "good memory : This 'view is expressed by^Craik and TulvJ.ng^ 
+
+^ (1975), who state *'tt seems clear that' atten1ion.*t;o ;the word's 'meaning is a necessary 
+prerequisite of good retention" (p. 269), Md tliat "itrnov becomes posslMe ta enter-^ - 
+.tfSin the* hypothesis that dptima^ processing of individual words, qua individual words, 
+is sufficient to support gopd^recall" (p* 270), An equally .extreme alternative position 
+
+^would .be that semantic analysis is neither nece^s^ry nor ^sufficient for good memory. 
+
+
+
+but the efficiency of retention is attributable, to some other factor, stlch as the de- 
+velogji^t of effective retrieval cues, .which may be semantically^r non-semantically 
+related to the presented material. . \ 
+
+A compromise between the^fwo positions seems to have been re^hed (Julving, this* 
+
+volume), i.e., recall of a lafrge dumber of unrelated items will be -unsuccessful,' re- 
+
+* * r ' 
+
+gardless of whether the i^eaning of each item has been considered, unless there -exists 
+
+some systematic retrieval mechanisms reinstating 'those items j'at recall. Experiments 
+by Craik and Tulving (1975), Sbhulman (1975) and Moscovitch and Craik.<1975) also pro- 
+vide strong evidence that under certain circumstances semantic analysis is insufficient 
+to 'insure high recall' unless the products of fhis semantic analysis form a . ''coherent , 
+integrated unit" which can serve effective redinte^rative cue at recall (Horowitz 
+
+& Prytulak, 1969). The compatibility of encoding and retrieval environments h4s been- 
+discussed at length by other 'contributors th this volume /Jacoby & Craik, Tulving & 
+
+Btansford^.et al). - 
+
+-* ^ ^ ^ " , ^_ 
+
+The controversy c;)hceming eiicoding^rptrieval cdpifiatibility was a reaction to the 
+early attempts of LOP adherents to** classify .Activity irrespective of the goal of that 
+activity. Postmaa .(19^5) suggested that there is a significant distinction to be 
+drawn'between deep processing and optimal' processing f but optimal can pnly he defined 
+in the context of the particular goal o^ the 'processing. Optimal processing must be^ 
+whatever is most effective 'in the'' total copte?c^Nqf the subjects' goal-direpted activ-- 
+ityj for it is the purposive nature of .activities that guides the E^elecStion of infor- ' 
+taation (Cassirer, .1946)%- Seen in this light, 'it ^h'ould ntft matter where on the formal- 
+semantic "dimension an encoding,.act:ivity might fall, the crucial variable woul| t^e'thl 
+compatibility 'of the^^ctivity witTi the task demands.,, tksk demands, that include re- < 
+trieval as Well |8 acquis Itionr restraints/ BrarUford and his collegues (Bransford eft 
+at this volume, Mori^is^ Bransford & Tranks, . 1977) report an experimenti in support of* ' 
+this position, for under cert^in\conditlons a typical formal task, rhyming, can be 
+superior to M typfcal, semantic task, fitting, words into sent'ence$. ^ The tricMw^s that"' 
+
+
+
+\ ■ ■ y- s _ j _ . - '■ 28- 
+
+^ . the "retentlite" test required the suijects to make use o* rhyme relevant information. 
+
+The main ^oint is that it is only in the context of .what the subject is- doinO that' one 
+
+can me£fe:|^f^lly speak' of optimal activity. This .statement is also 'a fair representa- 
+
+^tion of one of the basic tenets of the Soviet theory of activitjy (Leont'ev^ 1974; 
+<" , ' ' ' . \ ■- ' • 
+
+H^rfcsch, 1977; Zinchenko, 1962), that actions< Operations, aod activities are always 
+
+y purposive?;'' they do not occur in a vacuum; they occur in the context of some meaningful 
+goal. t . 
+
+One of the main difficulties of giving a quick sketch of the Soviet theory of 
+activity is c|)nfusion conperning their nomenclature, and I- am sure that real "devotees 
+will find much to quarrel with in my usage of terms. The Soviets make quite subtle 
+j distinctions between terms such as activities, actions,' acts, bper'ations-; motives, 
+
+means, and goals. For this reason it is often difficult to folW their discourse, ~ ■ 
+
+— ,t. ' ■ 
+
+•. and I suspect Chat the problem is exacerbated because 6he Wmz, so subtly defined, 
+
+'\ ' • ' ■ ' • , 
+
+_ , originally, are'-sometimes used interchangealjly -by translators. A detailed review of 
+
+the theories can be found elsewhere (Meacham, 1977; Wertsch, 1977); "here I will give 
+
+my translation of the major positions, changing the terms when jieccssary ,to be con- 
+
+sistent. , - - ' ^ " ^ ' » 
+
+' ' ' ' . " 
+
+The most difficult teian'is that of activity itself* Activities are define^^^ 
+
+molar processes by which ve . ' * . 
+
+transfprm objects into subjective forms and make objective the more sub- * 
+jec^ive aspects of personality (cf, assimilation and accomodation in* ^ 
+Piaget's theory). Thus activities structure the relationship of the in- ^ 
+dividual^ to his material and social world, and. it Is thifough his activities 
+that the -individual's able to undet^tand pr give meaning to his e^ctemal *^ 
+' . world (Meacham, 1977, p\ 7). . v • ^ 
+
+Thus the term activity is used to refer to" the assimilation-accomodation interaction 
+. of man and his external world. But. it is also used to r^far to the current social/ 
+pursuit the individual is engaged lii. At each stage of development, a particular form * 
+
+. of activity becomes dominant, that is it is the "leading" activity of that stage "of 
+
+ontogenesis.. It, is within the context of the leading actlvltfy that the- major reo^gaa- 
+izatlons of mental processes ylll occur. For example, it- is. withfi^ thfe context of 
+
+or ^ ; t ' ' • ■ ■ ^ , > , 
+
+ERIC ^ ' ,^ . 31' . > : ■ 
+
+
+
+.a; 
+
+
+
+'/ . ■ ' * -f 29 
+
+
+
+manip,«iWing obj^^^ts and developing meang of direct emotional commuiication, the -leaa^ • 
+\W& adtlvitie^ of infancy, that thj'- very^young child comes to know his world, and ta 
+i^- - structtijffe' that kibwled^^. Aithoufeh the sequence of leading activities will be modified 
+
+\ • . ii^' . • ■ f • . ' " j-:^ - • 
+
+by the particular environment, in which the individual must functitm, the "normal" pro- • 
+
+t gression de'scribed by the Soviet? for modern development In schooled societies^is man- * - 
+
+ipulation of objectc knd direct emotional conmunlcation, followed by play, then school- 
+
+related learning ^hd interperson&J coimniinication, and finaj.ly career-related learning ' - 
+
+. activities (Elkoain, 1972; Kussman, 1976). Fot examj^le , • it J.s a typical Soviet-iti- ' 
+
+spired statement that the leading activity of schools is the development of decontex- 
+
+tualized skills^of deliberate learnin^^rown, 1978a). ' ' - 
+
+Activities, wBether leading or otherwrse, serve tcr motivate certadVi sf)ecific i 
+
+actions: (sometimes confusingly tia^lled acts) , ^ijhich are directed toward a conscious 
+
+- . ♦ ' ;' 
+
+goal. A goal-directed action can be performed by means of various operations depending* 
+
+^on the particular task demand. Even: these operations might have subpart!, sometimes 
+
+, , • . ^ * J ' - 
+
+•called actsp^ssociarted with them. Tq^ interject some well-needed concrete .exantplea, 
+
+consitier the case of a chilM, during a play activity of constructing a toy boat, going ' ■ 
+
+to get a list> of items needed for that consyruction. The leading activity o^ early 
+
+childhood is'play. Th\. specific goal -directed act^ion the child^ls , currently engaged 
+
+in i# building .the-boat» 'One operatipn*he musfperform in order tq carry out this 
+
+action is remembefring the list of items he must fetch, and an act of remem'berlng might, 
+
+be rehearsal. Note t(l\at the operation of 'remembering here is subordinated to the 
+
+action of building a toy; i^t is not thar goal in itself. In anotl>er context remembering 
+
+could be the goal. For example, consider an older child In a school situation. xAo is 
+
+' * . . , 
+
+directed to learA a vocabulary list. Here the leading activity of middle childhood 
+
+is school-related learning; the specific goal^lB^^ed action is rote remembering; 
+
+' an operation that might be used to a'ccompHsfi this could be. rehearsal. Note two things: 
+
+refiearsal, ^or example, out of context, c^mot be designated an act, an operation, or 
+
+' ^ ^ / ^- ■ 
+
+^- an action. It cart- only b^ defined in jfeerms df its place within the total activity ^cf 
+
+. o . - V - > • 32' 
+
+.ERIC . ' , / ' ^ 
+
+
+
+-the child In context. Second, note that in both examples, remembering is more or. less 
+
+^-del^berate, but in the second If is the goal itself, while in the fiTst it is subor- 
+
+• * • 
+
+dlnated to' the gdal of building a toy^ This is an important distinction for the Smriet 
+
+for they believe j:hat actions that are the goal of an activity , are better remembetedv ' 
+than those tha't merely help , one realize a' goal, "a point I cannot elaborate 'here. ,,Fin- 
+ally, it should be emphasized that the, voluntaryr-involuntary distinction, as wgll as 
+the definition of an activity can onljr be made in the context 'of a purposive goal- 
+directed -pi/rsuit. ' , ' ' ^ ' . - " 
+
+Although the- terminology of tlie^Rqssian literature mas^be les§^ than helpful, the ^ 
+basic philosophy is simple and entir.ely compatible with the position that the subjects' 
+activities, are optimal ^aj^y iu the sense that they are tailored to som^' goal in a * 
+^urpasives^quence. .Activities. are'purposiveT^goal-directed,* and tfcc<ir in natural ' 
+
+contexts. The theory has much in common with that of transfer appropriate processes* 
+
+■Si ' - /' 
+
+developed bjT'Bransf ord- and his cgllegues (this volume) . ' • 
+
+Before leaving the Soviet theory of activity, there is one implication that has 
+
+pa^cticular relevance for developmentalists but also might be' informative for those who 
+
+deal with adult subjects. The Soviet position that one cannot divorce an activity 
+
+from^ts purpose^ and that activities take place Irl natural contexts is beginning to 
+
+have an important influence on the way developmental psychologist^ conduct their^in- 
+
+vestigations. Developmental psychology as an experimental science Is a relatively new 
+
+area qf specialization in American psychology. Initial forays in this field were* very.. 
+
+mich influenced' by experimental psychology whJ,cH until the l%Os tnfeant animal experi- 
+
+i ^ » * 
+
+mentation. ' The early questions were borrowed from the animal literature, and children.' 
+were set to solve such gripping problems as two-choice discrimination 'learning tasks 
+and run for m^ny triads until they reached^^criterion —'or refused to cooperate. The 
+experimental situation was' also -adapted from animal laboratories; a large number of- 
+studies in the 1960s actually used 'a modified Wisconsin ^General Test Apparatus — a sort 
+of cage developed by Harlow for testing monkeys. That children. were alsa enclosed in. 
+
+
+
+r 
+
+
+
+^ bwkes- was presunrably a" safeguard 'to protect- the purity* of ihe ^experimental ^emandsj for 
+I assume children^ 'the 1960s were not rabid and, thejre^re^ the physigii protectioh 
+<i^he Atperlmenter could not have^been a prime motivation, to cl^pl^e the child as 
+
+anlm^^ metaphor, 'it yas a typical pMctice to, place stimuli ovef'^Tieward wells which . 
+
+— \ . » ■» / -i 1 
+
+wejre -baf^d (with M&Ms, the develc^pmentalist's lab i^how). All social- or verbal inter- 
+
+actions witk the child were minimized, and any su^estion df a purpose for the activity 
+
+\ '■■ ■ / ■ V 
+
+was reduced toN;he plea to the child tf? "come ^iay my game." , ^ 
+
+Children wer^^otoMously unreliable §<fcomplices ; the variability in their data 
+
+. suggested perversity\ath|r than compliance. Even if they reached solution, -they were 
+
+too'temperamentalto 4iairkain a criterion run. The language , ' the experimental setup 
+
+*\ . ■> . . . — / 
+
+and the task were all inspired by the animal metaphor. Chiidren- usually outperformed 
+
+animals but they still performed- abysmally, and the resultant vTew^of^the young child 
+
+was negative; he was not a -pro^Ocer, not strattegic^ did not/ifediat'e, did-not transfer 
+
+' • \ ' ' ^ 
+
+rules, etc. (Brown & DeLoache, ly78) 
+
+With the wld^ dissemination of the Russian developmental literature, American 
+
+psychologists have begun to consider' children's competencies in more naturalistic sit-, 
+
+" V . , \ ^ . 
+
+uations. Observational and clinical methods ar^^being combined with experimentation- in 
+
+^ innovative way^ and It is becoming commonplace for developmental -psychologists to 
+
+at least pay lip service to the need to evaluate a child's potential in a meaningful 
+
+^ situation. Soviet T)8ychologis:t8 have always conducted their developmental inquiries. jt.n 
+
+this manner. For example^ Istomina (1975), in aXstudy conducted in- the early 19408, 
+
+examined how^ children would go abgut rememberingvA five item list^ Americans will 
+
+tell yo^ that under normal laboratory learning instructions one^can expect about two 
+
+_ items from cooperative three-year-olds.^ But one of tite most interesting features of 
+
+Istom^na*s experiment was § comparison between children's memory for lists of words in 
+
+\ 
+
+, the relatively standard list-learning situation vs. „ their memory for .comparable JLists, 
+
+* ^ \ ' * ' 
+
+embedded , in a meaningful (to the child) activity of buyinA items at a store. Istoteina^s, 
+
+reasoning for contrasting these two conditions was the standard Soviet contention that 
+
+
+
+FRir 
+
+
+
+34 
+
+
+
+■ . . ' ' ■ * ' , • ■: i ' ' • 32 . 
+
+"the development- of retention and recall -as internal', purposeful^cts takes place ^ - ' 
+initially as parf of a broader, articulated, .and meaningfjil activity (siiice it-ls $tiy 
+within the^ context of such activity that the specific acts of rememberik/'ahd recall 
+have any meaning tot a child) (p. 8-9;.. This hypothesis was conf inaed- as recall was \ 
+clearly superior in the game situation, for younger children /recall was twice is good 
+when bu^ng^items ^t a store than in a typical rote' learning situation. 
+
+
+
+• 'Istomina^not only ^recorded the objective data produced in, each cond^.ti:oi^ she also 
+observed the* activities of the children as they under todk the tadk,' tWei providing a 
+-rich clinical picture of the developing skills. To extract 'some exiles: Three- 
+year-old Valerik barely waiped for the list of items to be read before rushing off to 
+th§ store. ThW three-year-old ^s view of the game seems to be. limited to assuming the 
+role of going to the stpre and returning with items, but^oes not seem to include the^ 
+notion of bringing back the specific items on the list. Four-year-old Igox listened 
+attentively to the shopping list, and then tried to carry out his erranS as quickly as 
+possible. He even seemed to try tcTavoid distractrion, refusing to. stop and talk when 
+on his way to the store. V^jj^ feV four-year-olds showed mor^ specific mnemonic be- 
+haviors, but betweer^r fei/r -and five a qualitative shift- seemed, to occur, and all the 
+
+older ^subjects sgemed to make active attempts to remember. Som^ f Ive- and six-year- 
+• ^ * ' ' ' ' ' ^ ^ ^ ^ \ . ' 
+
+olds actively rehearsed; they were often observed moving their lips, repeating the 
+
+words over tb ttfttoselvefiT as the experimenter read them and as they walked to the store. 
+
+Many of the older children seemed to be monitoring th^eir own memory states 'and 
+even checking themselves ^to determine how well they would, remember* Some children 
+were even seen^ testing themselves on the'way to the store. nnally,_the oldest childreji 
+(six-sevSn years old) displayed quite sophisticated strategies of trying to form 
+logical connections between the items on .their lists, often rearranging the orSer of- 
+.the wordiS based on their meaning; f ' 
+
+Istomina's 'X1975) work ie -fascinating not just for the infoirmatfoh it provides 
+about young children's memory processes, but. also for the methodological point it em-* 
+
+
+
+.phasizds. JThe best situation in which tq^^ud;y very eaifly memory development is in a 
+
+nr • - ^ / 35 / " 
+
+
+
+natural context In which the child is likely to understand the task and be motivatfed * 
+toperforttt it. The. young child's performance on laboratory , tasks is* often markedly 
+ylnferior-to his, perjorraance -in a game setting. Although this variable is crucially 
+important when studying very young children, the same general point is applicable to 
+other ages as wdll. - Subjects of any age, even adults, are likely* t6 perform better 
+in a'meaningful task in which they are actively engaged. , Mental acts, occur in living"' 
+...contexts-, and, to reiterate^ PKevioj^ theme of this paper, the minimum unit of anal- 
+ysis mqst bytfiJ^p'^atious perforaed by an individual in context (Neisser;' 1976a) . / ' 
+_ This is ayf extremely important point for deyelopmentalists who must consider intel- 
+ligeju/behavior of children in terms^^f the naturally occuring contexts of e^rly 
+ildhood (Brown, 1975, 1978a) ot divergent cultures (Brown, 1977, 1978a; Cole & 
+Scribner,' 1975)., But the^essage might have some, import for "theories of adult cog- 
+) nition, particularly varieties such as LOP models, with th^r ^t>licit concern with 
+tWe influence of activities on levels of knowing* 
+
+C. HeadfAtting ^ " ^- - . 
+
+The final %0i^fof coftpatibility between"* developmental psychology and LOP frame- 
+works is a conc^n for headfitting , (Brown, 1975;, Jenkins, 1971, 1974). Again, I have 
+fdealt with this topic elsewhere (Brown, 1975), and Naus ,^nd Helasz (this, volume) have" 
+, , : a detaileid overview of the. problem. Here I wiU restrict myself -to- tihree points: 
+headfittlng as^ a source o£ error variance; headfitting for instructional purposes; 
+
+- and' headfitting arid the problem of meaning. = • 
+
+First, what do I' mean by headfitting? The basic premise is that there is an 
+
+intimate relation between what is known and what can be known, apd because we must 
+
+* » . , * ^ 
+
+^ , come to know more with increasing age and experience, there must be a close corres- * 
+\ pondence between what^ a child can under^tgnd at any point in his life and his con- 
+
+- curretft .cognitiv^^ status. The typical position of both adult and develojmiental ' • 
+^constrtictivists is that meaning does notf reside in ,the^world,*it Is c*onst;ructed from 
+
+the Interaction between the curreijt state of knowledge and that which is to be known. 
+
+ERIC ' . . - 36 - - / , : ' 
+
+
+
+>* - ' - ^ " 34 
+
+As we have seen, there a^e p>ilosophical^probleins/wlth this position (Segtions II. D. . 
+
+/ • ' 4 
+
+a^d E.) which I will not. reiterate here. But, the very concept of meaning for those 
+of a constructivist persuasion is' one of. headfittiug. LOP framework? ^have always 
+^incorporated a heafflfitting notion, reflected in terms such^ts ''compatibility (of ^ 
+material) with the analyzing structures," In more recent instantiations of the LOP 
+approach^CLockhart, Craik^ ,& Jc^coby, 1975) '*:he proponents become more explicitly em- 
+broiled in the problem, as they address the question of ^"automatic" encoding for ' 
+material highlj^ compatible with the preexisting contents of the head* ^' 
+
+How have developmental psychologists been concerned with the headfitting issue? 
+Experimental psychologists often operate as if they ^^jLshed to control for it, e,g,, 
+they regard developmental ^^ariations 'in knowledge as a source of extraneous variabil- 
+ity. For example, in stand^dj memory tasks they attempt to insure tHat even their 
+^youngest subjects are familiar with the stimuli, at least to the level ^hat they can 
+^ jaame them. If a name is not readily given by"a sdall participant^, the experimenter ' 
+generously provides one, and then operates" as if stimulus familiarity were equated 
+across ages (see Chi, 1978. for a full treatment df this problem). That familiarity 
+may involve mc :e than access, _or even speed of a^cdess to the name code is rarely con^ 
+sidered. Variations in performance across ages , can now be attributed to JEactors other, 
+than variati^s in knowledge, e.g, , capacity limitations or strategy deficits (Chi^ 1976). 
+
+* ^ A more enlightened way that developmental psychologists have expressed concern 
+
+* * ' »- 
+
+with the headfittStirg problem has been m their treatment of instruction. If one wishes 
+
+to instruct, -a. child to perform in a way he previously could not, the most intelligent 
+
+x^ay to jtfbceed is to find out where his head is at initially.^ Developmental psychol- 
+
+oglsts interested ^in instruction have typically indulged in detailed task analyses that 
+
+f " - ' * 
+
+map the progression of the child as he moves toward addlt-like understanding. Such 
+task. analyses provide detailed specif iCc4tion8 of feasible rules for solution, and sy^- ^ 
+tenwu^c error patterns are used to diagnose the child's pretralning competencies, areas 
+of w^llkness, etc. so that instructional routines can. be tailQ.red*|Eo fit the iiiagnosee 
+^'-egl^r, 1976), -On - «u ^ ' 
+
+
+
+It is widespread assumptiqn of developmental psychologists of quite divergent 
+. theoretical viewpoints that the distance between Che child's existing knowWge and 
+
+•the new in formation^, he must acquire is a critical determinant of hov; successful training 
+^11 be ./Brown,- 1975; Inhelder, Sinclair, & Bovet, 1974; P'iaget, 1971r ^egler,. 1976).- 
+fear training, i.e. , training aimed at just one le/el above a child's starting'knowledge*, 
+is far more successful than far training, aimed at least, two Jevells beyond the child's 
+understanding (Siegler, 1976). Thu6, it is a cxlALlhslTcS'^c^rn fqr those involved in 
+instruction to detail the stages through which the learner must pass. And' the map te- 
+tween the child's cur;:ent understanding and tTie instructional routine is a critical 
+determinant of what instruction will be introduced — a prectic^ headfitting problem.- 
+The third headfitting issue is the "task by head" interaction , stressed -by many 
+■ developmental .theorists. A task is easy or hard, material is comprehensible or -not, 
+to the extent that it maps onto the preexisting knowledge and preferences of the 
+learners. Extreme versions of this approach .suggest that if material is highly com- 
+, patible, understanding will be "automatic" (Brown, 1975; Jenkins, 1974) and that both 
+comprehension and memory are '^orn of "meaning (Plaget & Inhelder, 1973)". " One-way that 
+the "developmental literature' has been influenced by rtiis position is- that there has 
+been a shift towards studying such phenomena as, sonantic integration;, inferential 
+reasoning^ efec* in the context of meaningful materials such as prose passages. It 
+as if turfiing to prose is by itself a reflection of concern for meaning/ As Jenkins 
+(197-4) pointed out in his seminal treatment of t'hp psychologist definition of meaning, \ 
+what one regards as meaningful is very much a matter of historical press. In their 
+time those concerned with memory for \^ords looked askance at retrogressive advocate's 
+of the nonsense syllabled Now it is trendy 'to berate those who look at words, or even, 
+sentence's, for meaning is carried in larger chunks of texts* .Butvif mean-ing.is not in 
+the material but in the compatibility of the subject's level of understanding and the 
+nature. -of the material, then changing stimulus types does not help or hinder the basic 
+questionf.j Even^forTfie learner 'attempting to. acquire nonsense syllables €he basic unit 
+
+ERIC ' •. . -35 
+
+
+
+of- analysis Is the relatlons^iip"..of' his prior knowledge,' his current activity, and the/ 
+material.- Both y}? frameworks and developmental theories: that espouse a headfitting 
+notion must somehow deal "with the pro&lem of meaning, where meaning is defined as one- 
+of task and sub'ject compatibility. \. ' 
+
+The ultimate demonstrat^ion of the headfitting notion is one that should be readily 
+found in thef^dgvelopmental literature. Ideally, little thinkers lacking some basic 
+knowledge should be hindered in their comprehension of any iriformation that presupposes 
+the existence of that prior knowledge. While this is undoubtedly truer it has proved 
+difficult to demonstrate ttte phenomenon n.eatly within wpll controlled experiments. '"The 
+main thrust of the plagetian work on the development of memory has been to demonstrate 
+the close alliance of preexisting kn^edge and memory (Piaget & Inhelder, 1973). Thes^ 
+e^p(Brimenta.hayft,nqt been totally successful. " > 
+
+Another ploy is to show that experimentally induced preexisting knowledge deter- 
+mines what is'^ understood. While this'^has been ^succB^sfully demonstrated with both 
+children (BrUm, Smiley, Day, Townsend, & Ldwton, 1977) and adults * (Anderson &.Plchert, 
+1977) > no interesting developmental trends have been identified; even the younger 
+children disambig;;iated yague or misleading sections of text ici a manner congruent with 
+their preexisti-ng expectations. In^e^d it .is not necessary in the standard Bartlett 
+prose recall situation tb manipulate age as well as preexisting knowledge. Inducing 
+^adi,g:fc& 'to take different perspectives before reading a passage is an ideal way of dem-' 
+onstrating that comprehension is an interaction of expectations and actual textual 
+materials/ (Anderson & Pichert, 19?7; Bower, 1977). Thus,' while we\have ample anec- 
+dotal evidence* that the younger reader '-s comprehension is^'teeted by .a limited knowl- 
+edge. base, e»g.^ reports that children r.ead stories in terms of the concr^e action 
+sequences rather than the deeper allegorical meaning (Bro^j5[i, 1978b), we do not have 
+
+neat experimental evidence of the id&al type — little heads leading to little under- ^ 
+
+• t . - . 
+
+Standing. * • ' . 
+
+What we do have isthe inverse of the <ideal finding, and it is just as pertinent 
+
+to my i^rgumerit; indeed, it may be more so because it^^is so dr>amatic» In a redent ' 
+
+IC '■ • ' 39 ■ 
+
+
+
+37 
+
+
+
+series of studies, Chi a978) has be|ji' investigating the memory and metamemory'perform- 
+ance of skilled chess players, an -h^ffloMie psj^tihological pursuit dating back at least 
+
+- , . • — • - - ^ , 
+
+■to Binet (1894). Chi's twist is that in her sample of players knowledge is^ orthogonal 
+to. age. In general the children are the exper^W while the adults are the .novices; .It- 
+is the experts who outperform the novices both in terms of actual memory performance ' 
+and in predicting in advance how well they will^^perform — a nice example df-T:he head- 
+fitting notion. It is not hovT old^your head is but how much it has' experienced in a 
+particular cognitive domain. 
+
+
+
+IV. n Summary ' 
+
+
+
+In view of the traditional separation of developmental theories from current 
+adult models tl^e widespread adoption of LOP f^a^w^^ks is particularly noteworthy. ' I 
+have suggested here that the essential compatibili,t^y of LC^^ model's and developmental * 
+, interests follows from a shared concern with thr,ee ma#n issues,^ involuntary memory, . 
+activity and headfitting. Developmental data'^re often particularly' apt demonstrations 
+of the main tenets of the LOP ffamewprks and LOP models provide a language and a view- 
+point through which the issues of interest for developm^talists can be reinterpreted. 
+/ Another theme of this ahapt||^ is that thinking systems ^re naturally evolv^^g; a^d , 
+>^ theories of cogn^ition must eventually consider how their model of man came^feout. "the 
+teleological position has been fruitful in guicfin^ ^^srearch but it ^s not- surprising 
+that any theory that can account for only^ a ^Imited subsefj|f adult be'havior jon. at set^ */ 
+of severely constrained tasks, may hav^ difficulty dealing wittj the questions of growtli 1 
+
+and change. A considera"ti(m^ of the phylogeneticand ontogenetic forces that shape the 
+
+♦* ^ 
+
+evolution of thought might lead to a richer understanding of how humans come to know 
+
+r * * 
+
+' the significant^ information of their environment.. , . ' . 
+
+
+
+I 
+
+
+
+RIC 
+
+
+
+4& 
+
+
+
+. . "* ^ ' • ' , Referenc es *. » 
+
+* ^ , , ^~ • . , ' ^ 
+
+\Abel80tt, R. iP._ The structure 0/ belief systems. In R'. C. Schanb& K..M. .Colby (Eds.)?!', 
+
+* ■ Computer models of ^thought and lan^ap^. , San Francisco : Freeman, ip 7?. ^ 
+
+^ Acredqlqgf L. P.. Pick, H. L/, JrV&,0l8e;;, M. 6. -Environmental differentiation ' 
+• " ■ ■ - - 0 
+
+^ •and familikrt^x^^s determinants oT cjfejcen'.s memory for "spatial location. 
+
+♦ / ' ^^^^^ ^ 
+
+•(Deveiopm ental Psvcholo|;v. 1975, 11,. 495-501-. . " . ' ' 
+
+^ *^ =■ — ■ , ' . ■ . '■ - 
+
+Allport,, G. V, , & tostman, L.. J. The basic psychology of rumor. Transactions of 
+the New York Academy^of. Science . Seties II, 1945, 8, 61-81. 
+
+* Anderson, R. C. -The notion of schemata and the eduBtibn enterprise. In R. C.. , ' 
+
+Anderson, R^. J, Spiro, & W; E. >tontague (Eds.), SchooliW 'the acquisition ' 
+
+,-^<fcOf knowledge. Hillsdale, N. J. t J^wrence Erlbaua 'Associates, 1977, in press. 
+
+Anderson, R. C,- & Pichert, J,' W.t Recall of previously unrecallable information 
+
+following a shift in p erspective ([Tecl?: Repo. ;^o. 14). TJrbana; Illinois:- 
+
+University of IlliiMs, Center for the "study of Reading, \pril 1977. 
+
+Bartlett, F.-. C. Rememberings 'A study in -experimental and social psycholbgy.- 
+
+'Cambridge: CaSibrldge-^nivStsity Press, 193?j - 
+' ■. ^ - • . , ■ . ' ' -f 
+
+^ BeMont, J. M. ■ Relation of age and Intelligencfe to short-term -color memory^ • • 
+, 4 % r ■ • • ■ ; . ^ ; . 
+
+Child Development. 1972. 43, 1Q-9Q. . , . ' , " '.^ 
+
+' ' i ' 
+
+' -Belman.t, J./M. ; <^ Butt erf i?teld. E. C;. The' relation of short-.term memory -to develop- 
+ment yd intelligence.'- In L. P. Li^'sitt & "H. W. Reese (Eds. ),; Advanoes in ■ 
+' ■ -' . • - ' ^ . ' ' . . , ' " ■■ , ' ■ ' \ ' 
+
+child development, and- behavior (Vo'i.i^4).' New York: 'Academic Press , 1969. 
+
+
+
+. "Pp. 30-81. ^ 
+
+
+
+. ^31net> - Psychologle des grahds galculateur et loueiirs d^echi&ss . *«n.s: Hachette, 
+
+
+
+. . ■ \ ; - ' * * 
+
+Bin^t, A., &.Henri|^V. La inemolr& des, phrases Xmemoire des iddes). L'anh^e 
+
+'v. rP'sychoftgique^|^1 894. ■ 1'/ 24-59. - / *" , 
+
+
+
+r 
+
+
+
+39 - 
+
+, ' Bobrotf, G., & Nomaivjufi; A. Some princip-les of ^memopy. .schemata. , In D. G. 
+
+Bobrqw &>. Mr^olllns. (Eds. ) , Representation 'agd understanding-; > Studies In- y ; 
+4 cognitive science . New York:* Academic Press, 1975. ^ * ' \ ' ' ' 
+
+Memory .for prose. Paper presented at the meeting of the .Western 
+- ' % , • " . ' ' ' * 
+
+Psychological" Association, Seattle, .Washington, April, 1977. ' , " 
+
+Bransford, J. ,D., & Franks, J.. Toward a framewcfrk fo#understandlng-leamlng. 
+■ \ Jt^-^: ^*®f The psycho logy of^earnlng and motivation (Vol.' 10). New .' 
+
+York:., Academic.* Press," 1971. * * - ' 
+
+, Bransford, J, D; & Nitsch, i^. E. Coming to ^inderstand things we could not previously 
+^understand. Unpublished manuscript, Vanderb lit Unlvferslty, 19^7^. 
+Bransford, J. D. , Nltsch, K. E. , & Franks, J. J. Schooling and .the facilitation . 
+"bf.knpWlng.- In R. C. Anderson, R. J. Spiro, & W.* E. Montague (Ed&.), Sc^oollnR 
+and the acquisition of knowledge , Hillsdale, N.J. : Lawrerifce firlb^um Assocl- 
+* ^tres, 197^ In press, • ' , ' \ ' - 
+
+Brown,' A.- LT^The Tola of st?:ate'glc behavior In retardate memory. In N. R. ElAs 
+(Ed.),^' Ihtematloria3f> review n:)f research In mental retardation (Vol. 1). New 
+York: Afcademlc Press, 1974; Pp.^55-Hl. ^ ^ ^ ' ^ \ ^ 
+
+Brown, A. L. The ^elopiaent of memoty: Knowing, knowing about knowing, and ; 
+^ kn,owlnj5\ how -to know. In H. W. Reese, (Ed.), Xdvanees.ln child development and 
+- ' behavior (Vol. 10). New-^l^ork: Ao^mlc P:^ss, .1975. Pp. 103-152.- 
+
+Browii, a: L. Development,, schooling 'and the acquisition: of knowledge about • 
+: * knowledge; ^In R. C. Anderson, R. J. Splfo, & W. E. Montague (Eds.) , ^Schoolir^ 
+and the a cquisition of 4c3iowledge . * Hillsdale, N. J. : La^rerice Eritauk-Assooi- , 
+^ates, 1977, In press. * a ^ ^ 
+
+Brown, A. L. Knowing when, '^where, <and how to remember: A problem of metacognitlon. 
+
+In R. N^aser (Ed. ) , ^Advances In instructional pgychology > Hillsdale, N.J. 
+^ I^wrence Erlbaum Associates, 1978, iL press, (a) ' . . » 
+
+
+
+, - . ■ .40 
+Brown, A. L. Me'tacognitive development' and reading. -In Rand J. Spiro, Bertram^ 
+Bruce, and Wm. F. Brewer (Eds.), Theoretical Is^ufea/^f^^dlng comprehension . 
+Hillsdale^ N; J.: Lawrence E'rlbaum Associates, 1978, in press, (b) 
+. Brown,* A.- L., & Barclay, C. R, 'ihe effebts^of training -specific mnemonics on 
+^ the metamnemonic efficiency of retarded children. Child Development . -1976, 
+
+• • 47, 71-80. ^ ■ • ' ■ ' ' . , " - 
+
+' Blown, A. L., Campione, J. c": , & Mu^^hy, M. D. Mainte^nce and generalization 
+\ of trained metamnemonic awareness in educable retarded children. Journal of 
+Experimental Child Psychology , 1977, in press. 
+^ Brown, A. L. , & DeLoache, J. S. Skills, plans and self-re'gulation. 'In R. Siegler 
+- (Ed.), Camegie-Me llpn symposium on cognition . Hillsdale, N. J.": Lawrence 
+Erlbainn Associates, 1978, In preps. , , ' 
+
+•Brown, A^ L. , & lawton-, S. C. The feeling of knowing experience in .educable 
+
+* retarded children. Developjnental Psychology / X977, in pressf-- . : 
+
+Brown/ A. L* , & Smiley, S. S. The deVeio pmeAt^x)f strateg.ieB _f o r studyl ng^jxose. 
+/ passages . - Unpub l>^edy manuscript * •Univetslty^pf Illinois ,^1977. (a) . ^ 
+
+Brown, A. L. , Smijey, S. S. Rating the Importance of- structural units of 
+prose passages: A prafalem of metacognitive develojarfent. Child Development , 
+1977, 4&, 1-8.^ (b) ^ ^ ' ' 
+
+Brown, A. L.^, Smiley, S. S. , Day, J. D. , Townsend, M. A. T^. , & Lawton/S. C. 
+Intrusion of a tht&Hfcic idea in children's comprehension and retention of 
+. * 'Stories/ Child. Develoipment . 1977, in press. ' . . , 
+Bruner, J. S. Nature* and lifces of immaturity. American Psychologist , 1972t, 
+27, 687-708.' 
+
+Campion^, J.'C. , & Btown, A. *L. Memory and^etamemory development in educab'le 
+retarded chjll^n. In R. 'V. Kail, Jr., & J. W. Hagen (Eda.), Perspectives 
+on the d4ve^^ent of memory and cognition . Hillsdale, N.J.: ^Lawrence 
+Erlbaum Associates, 1977, in press. ^ 
+
+
+
+• i - ' ' ' * 
+
+Casfirer^ E. Language arid mvth. ^ew' Yfti-Vi Dover Publications , 1946. ^ 
+■ ' ^ , ' ^- .V ' .< 
+
+ChaAiak. E. Organization and infe-reiice-iri.-^fr^^Uke system of common sense 
+
+* ' ' ' • • *■ . "' ' 
+
+. knowledge In -Proceedings of theoretical Issues In. natural language pro- * 
+
+ceasing; An in<;^rdisciTyllnary workshpp. Cambridge," Mass". : Bolt,' Beranek 
+
+
+
+SJIewman, Inc., 1975. Pp. 42-51-.' . - !^ * \ 
+
+
+
+ii"»^. ^ T.B^ The- devel opment of short-term memory capacity . Unpublished 
+■^'doctoral^di^sertatioti, Carnegie-Mellon University, 1975. " • " " 
+Chi, M. T. H. Short-term memory limitations in- qhildren: Capacity or processing 
+
+deficits? Memory and Cognition. 1976, 4(5).,' 559-572; 
+Chi, T. H. Knowledge structure :^nd memory deyelopmenti In i^. Siegler (Ed!), 
+Camegie-Mellpn sympos ium on co^ition > Hillsdale, N.J.: ta^frence Erlbaum 
+Associates, 1978, in press./. - ' \ % \ f ' . • 
+
+Cole, M. , & Scribner, S'. Theorizing about socialization of cognition."' ^tHo£, 
+
+1975, 3, 249-268. * »■ "~ . • 
+
+Cole, M., & Scribner, S. Cross-cultural studieji^ memo^:y'and co^ition.- In 
+R. V. Kail, Jr., & J. W. Hagen '(Eds..), Perspectiyes-'on~d[e development of . 
+
+* ■ - \ - . . - 
+
+memory arid cognition . Hillsdale, N.J. : B'awfenp/s .Eifiblaum AssoclateB^ 1977, 
+, in press. ^ • 
+
+■ . . " :\ r = • ■^. • - 
+
+Collins, A'* M. , & Loftus,'.E. F. A spreading-actfvaCi^ theory pf semantic 
+
+processing. ^Psychological Review . 1975, 82, ^07*^28. ' ; 
+Craik, F, I.. M. , ^& Lockhart, R. S.- Levels of procgssing: X fr^imework for 
+
+memory . research. Jpurn^l of Verbal Learning &nd Verbal Beha^^ior , •'1972 11 
+. 671-684. ^ V ' 0 
+
+Craik, .F. I. M. & Tulvlng* E. Depth of ppdcessiqg and the_^retention of words 
+
+tn episodic memo.^y. Journal 'of 5x£e:Ki3itea;t^ Psychology , 1975, .104 , 2^^^294. 
+Eagle^ M. , & Letter, E. Recall and recognition J.n^J.ntentional*Tind incidental 
+
+learning. Journal ot Experimental Psychology , 1964, 68, 58-*»63. " ^ , 
+
+
+
+7 
+
+
+
+■ . ' ■ ' ' , 42 
+
+Elkonln, D.- B. Toward the problem of stages in the mental development of the '> 
+... child _ Sovle t Psvcholo"^ . 1972, 10, 22^-251.' * * - - ' 
+, Flavell, J. Sta&e-related properties' of cSgnitive development. Cognitive 
+
+Psychology / 1971. 2, 421-453/ ' ' ' 
+
+"' •'.'■"*.• 
+Flavell. J. H., Fri'edrichs, A. bT, & Hoyt, J; D. Developmental changes %n 
+
+memorization processes.. Cognitive Psychology . 1970, 1.,. 324-3,40. 
+
+Flavell, J. H., & Wellman, - H.' M. Metamemory. ' In R. y. Kail, Jr., & J. W. Hagen 
+
+\ ' Perspectives on the develop ment of memory and coenltlon . Hillsdale, 
+
+N.J.: Lawrence Erlbaum Associates-, 1977, in press. . • . . ' 
+
+Foelllnger. D.' B. . & Trabasso, T.^ Seeing,^ hearing and doing: A developmental 
+
+study of memory for actions. Child. Deyelopment . 1977, in press. 
+
+Gardner, H.- .The quest -for^nind; Ela2et. , Lgvl-Strkuss and, the structur^H^f 
+
+. . I movement. New York: Alfreli Knopf. 1973, U * - 
+
+' I * ■■' • 
+
+Hggenv J. W. S.trategies for remembering. In S. rarnham-Dlggory (Ed. ). Inforaa- 
+. ^tlon processing in Children. New York: Academic press, 1972,- Pp. 66-7.8. 
+. Harris, f. L. P^rseverative errors in sekrch by yorag infants:- Child Devfrlopment . 
+\l973, 44, "28-33. ■ ^ ' ' - . \ ■ ' ' 
+
+Hdffding," H. Outlines of .psycholo p y . New-Tork:- Macklllan, 1891 
+Huttenlocher, J., & Burfce-, D. Why does memory span^itlcrease with age. Cognitive 
+
+Psychology . 1976,- 8^, 1-31. \ ^ 
+
+.Hy^e, T. S. . & Jenkins, J. J. kj^^/ words as a fuyction'of s«^tic. 'graphib, 
+; ^and syntactic orienting.- tasks . > Journal- of Ve rbal Learning and Vprh.i B^H.v^nr,^ 
+^rr973, 12 , 471-480. , . ' * ' . \ 
+
+. Inhelder, B., Sinclair, H. S Bovet, M'. Learning and the, development of cognition. 
+. -4 Cambridge, Mass.: Harvard University PreffS, 1974. \ ' - - 
+
+Istomlria^Z. M. -The development of voluntary memory In pr^achool-age children. 
+' ■ • ' Soyiet Psychology . Summer 19/5, l3(4),5-64. 
+
+
+
+45 
+
+
+
+Jenkins, J. J. Sfecoud dlLussant's connnentsf ^What's left to gay? - ff.'m.qn . '• 
+Deveiopment. 1971, 14, 279-286. . ■ * ' • ' ■ 
+
+Jenkins, J., J. Remember that old theory of memory? Well, forget it! American 
+
+^ t / , , _ 
+
+PsycholoRist. 1974, 2^^, 785-X95. ^ . 
+
+Critique of pure reason (1st ed.'i78l', 2nd ed. 1787, -trans. N. Kemp 
+Smith). London: McMillan & Company, 1963. , • . < 
+
+Kintsch, W. • The repres entation of meaning in memory . Hillsdale', .N.J. : Uwrence 
+
+.,' , ^ - 
+
+Erlbaum Associates, 1974. 
+Klahr, D. • Steps towards the Simulation of intellectual development. In h. 
+. Reshlck (Ed. ) , Intelligence . Hillsdale, N.JT: Lawrence Erlbaum' Associates, 19757 
+Kuhn, T. S. The structure of scientific fevolutiongr ~ Chicago: University 6f 
+
+Chicago Pres^l970. 
+
+Kussman, T. The Soviet concept of development. In K. V. Rlegel & J. A. Meacham ' 
+
+(Eds.), The devel oping individual in a changing worlH (Vol. 1: .Historical 
+. ancTcultural issues). The Hague i M^ton, 1976. 
+
+Kvale-, S. Memory and dialectics: -Some reflections on Ebbinghaus and Mao Tse-tung. 
+Human Development . 1975^18, 205-222. ' 
+, Leont'ev, A. N. The problem of activity in psychology. Soviet PsvcholoW. 1974, 
+
+Lockhart, R. S... Craik, F. I. "M., & Jacoby, L. L. Depth of processing in lecog- 
+nitlon aqd recall: Some aspects of a general memory system. .In J. Bro* ri 
+(Ed.), Recognition and recall .' London: Wiley, 1975. 
+Handler,^ G. ,^ & Worden,* P. E. Semantic processing without permanjent storage. 
+
+. Journal of ^erl&entarl Pgy<:hology^ 1973, 100 , 277-283. 
+Ijleachaia, J. A. Soviet investigations of memory development.^ In R. V. Kail, Jr., 
+
+S J. W. Ha'gen (Eds. J", Perspectives on the development of memory and cognition . 
+
+^ \ ' ♦ * . 
+
+Hillsdale,, N.J. : Lawrence Erlbaum Associates, 'a977, in press. J 
+* ^ ' ' ^ > \ . 
+
+, I . . ^ 
+
+, , ' 3 / - ' " ' ^ . ' ^ 
+
+
+
+' ^, 44. 
+
+
+
+Mlnsky, M. 'A framework for representing ."knpt^ledge. la P. H. Winston (Ed,), 
+The- psycfiolt)gv of computer visions , New York: McGraw-Hill, 1975. ' ■ / 
+
+
+
+Moscovitch, M., i Craik, F. I. M. - Depth of processing." retrieval cues, and 
+
+uniqueness of encoding as factors in- recall . Unpublished manuscript, 
+
+Erindale College, University of Toronto, 1975. 
+Murph^M. D. Brown, A. L. Incidental learning 'in preschool children as a 
+
+function df level of cognitive analysis. Journal of Experimental Child 
+
+Psychology, 1975; 19', 509-523 r ' , ' ^ 
+
+Neisser, U. Cognitive psychology , New^^ork: Appleton-Century-Crqf ts, 1967. 
+
+; Neisser, U. Cognition and reality . San Francisco: W, H. Treeman, 1976. (a) 
+* ' * ■ 
+
+Neisser, ti. General, academic and artiiical intelligence. In L. Resnick (Ed,), 
+
+Intellieeac4» Hillsdale, ^H.^J. : Lawrence Erlbaum Associates, 1976. (b) 
+Nelson, ^K. Cognitive development and the acquisition of concepts. In R. 
+
+Anderson, R. J. Splro,*&.W. E. Montague (Eds* ) , Schooling and the acj^ulsltlon - 
+' - of knowledge , ^Hillsdale, N.J.; Lawrence Erlbaum Associates, 1977^ in press. 
+
+Nelson, K., & Brown, A. L. The semantic-episodic distinction in manory development. 
+\ In ?• Omstein (Ed.), Memory development . Hillsdale, NTJ. : Lawrfence Erlbaum 
+
+A^^ciatesp 1978, in press. " . ^ 
+
+Nelson, K. ICosslyn, S. Semantic retrieval in children and adults. Develop- 
+mental Psychology. 1975, 11, 807-813. , ' / , 
+Newell, A. A note on process^-structure distinctions in developmental psychology. 
+Iii S. ?amham-Diggory (Ed.), Information processing in children . New York: 
+* i .Academic ^ress, 1972. ' 
+
+% Norman, D. A. Rescurces_and schemas replace stages. of processing. Paper pre- 
+sented at the Sixteenth iuinual Meeting, Psychonomic Society, ^ Denver, Colorado,, 
+" Noveinber, 1975,., v . * , 
+
+ErJc . . 47 ■ 
+
+
+
+..Overcast, T. D. , Murphy, .M.- D. , Smiley, S. S., &' Brown, A. L. iKe effects of 
+
+instruction >n recall and recognition of categorized lists in-.tbe elderly/ Z^" 
+Bulletin of the Psychonomic Society , 1975, 2> 339-341. ' • • 
+
+Piaget, J. The child *s conception of the world , l^ew York: Harcourt Brace, 1928. 
+
+Piaget, J. The child and reality; Problems of fenetic psychology * New York: 
+
+J 
+
+Grossman Publications, 1970. ^ * - 
+
+
+
+Piaget, J. Biology and bl9^^M^e . Edinburgh: ^ Edinburgh iHJniver^ity Press, 19,71'. 
+Piaget,^ J.; & Inhelder,^'^ Memory and intelligence . ,New York: Basic Books, 1973; 
+Postman, L. .Shortrjtferm memory and inciden^tal learning. ^ In A. W. MeIto^ (Bd.)>*'\ 
+
+Categories of hfaman- learning . New York: Academic Press, 1964.- 
+Postman,. L. Verbal -learning and memory. Annual Review of .Psychology , 1975, 26, 
+
+291-335^ . ^ 
+
+Pufall, B. The 'development of thought: On perceiving and knowing. In R. 
+
+Shaw & J. Bransf^rd (Eds.), Perceiving^ acting and knowing . Hillsdale, N. J. :'^ 
+
+Lawrence Etlbaum Associates , 1977. - : 
+
+Reitman, W.^^ What does it take to remember?. In Norman (Ed.)-, Models of human 
+
+memory . New York: Academic Press, 1970. ^470-509. T" • 
+
+Rlegel, K. F. The structure of the structuralists. Contemporary Psychology > 
+' 1974, 19, 811-813. 
+
+Rlegel, K. F. ^StructWe and ti;an's format ion in modem intellectual, history* In - 
+
+K. F. Riegel & G. C. Rosenwald (Eds.), Structure and transformation: Devjelop.- 
+
+mental and historical aspects . New York: Wiley, 1975; 
+# 
+
+Rumelhart, D>> & Ortony, A. The representation of knowledge in memoty. In R* C. 
+* % -* * >- -I " " 
+
+Anderson, tt. J. Spiro, & W, E. Monjrague (Eds.), Schooling and the' acquisition 
+
+r "if 
+
+of knowledge . 'Hillsdale, N.J. : Lawrence ^E^lbaum Assoeiates, 1977, In press. 
+
+Schank, Ri» C* The structur| of episodes in memory. In D. G. -Bobrow & A. M. 
+
+♦ 
+
+Collins (Eds.), Representation* and understanding . New York: Academic Press, 
+1975. Pp..a37-272. 
+
+. • 48 . . 
+
+
+
+■ 46 ' 
+
+Sghank, R. C, & Abelson, R. P. Scripts, plans and knowledge. In Advance 
+
+Papers of the Fournh Tntematlonal' Joint Conferenc e on ArtlfiM.i T^.l.U^ • 
+
+Tbilisi, Georgia, USSR, 1975. Pp. 15ll-lkz. 
+^Schulmari, A. i; ^coding processes.. a^d th^ memorability of events. In^ A. 
+• . '.Kennedy & A. Wilkes (Eds.), Studies in lon.-tPr. ...n^, ^ew York: Wiley, 1975^ 
+
+Shaw, R.,' & Bz:ans.ord. J. D. Introductionr Psychological approaches to. the prob- 
+^ lem of knowledge. 1. R. Shaw , J. dT Bxansford (Eds.), Perceiving, a.'t-ln. .n. 
+
+lS2wini. Hillsdale, N.J. : Lawrence Erlbaum Associates, 1977. ' 
+Siegel, A. W. & White, S. H. 'ihe development of spatial representations of larie^-^ 
+. scale environments. In H. W. Reese (Ed.), Advances in chllH dgy^oomlt 'anf - ' 
+Behavior (Vol. 10). New York: Academic-^ Press, 1975. Pp. ^^f. ' ^'"^^ 
+Siegler, R. S. Three. aspects of cognitive development. Cognitive PS»cholnf >v. 
+1976, 8, 481-520. . " . ' 
+
+Sm;lmov. A. A., & Zinchenko, P. I. ^ Problems in the psychology Sf :^„,ory. In M. 
+Cole & 1. Maltzman (Eds.), A handbook of contemporary Soviet psvcholo>rv. New. 
+York: Basic Books,' 1969. Pp. 452-502^ 
+Smith. E, E,,_Shoben, E. J., & Rlpa, Lr J. Structure and process ^^T^ntic 
+. ^ memory: A featural^model for semantic decisions. Psychol ogica'l ^c^^L. ' 
+
+■81, 214-241. • N ; ^ ^ 
+
+Thienfan, T. J. Wha-t's so d'eejf about deep processing: A critical .analy_sis_of 
+
+■■ the relation :;between_inciXen orienting tas ks and retention . Unpublished ' 
+
+.doctoral aissertatioh. University of Illinois, 1976. ' ^ 
+
+Toussaint. N. A. An analysis of synchrdny between Goncrete-operational tasks- In- 
+
+terms of structure and performance demands. Child Development. 1974, 45, 992-1001 
+Tulvlng, E. Ei^lsodlc and semantic memory. In E. Tulving & Wr D onaldson (Eds.), 
+
+* Organization of memory. 'NewZorkr Academic Press^ 1972. Pp. 382-402. 
+Turvey, !• Contrasting orientations t^ the theory of visual information 
+pro<res8lng* Psychalogieal Review , 1977> 67-89. > 
+
+
+
+Vygotsky, L. s: Thought and -language . Cambridge: M. I. T. Press, 1962. 
+Werner, H. Comparative psychology o f mental develop mp.nt. Chicago; Jollett/l948 
+Werfe8cIv,,J.'-V. The concept of activity in Soviet psychology , irnpubfished ' 
+manuscript, Northwestern University, 1977. ^ . , , • 
+
+I Wicicelgren, W. A. Age and storage dynamics in continuous reiognition m^ry» ^ 
+
+Developmen tal Psychology , m's, M(2), 165-165. • ^ 
+
+^ Winograd, T. Frame representations and the declarative/pfocedural controversy. 
+
+In D. G. Bobrow & A. Collins_ (^g! ) , Representation and" understanding; Studies 
+in cognit ive science . New York i Academic Press, 1975. Pp. 185-210. 
+Wozniak, R. H. Dialecticism and structuralism; The philosophical foundation of- ' 
+Soviet psychology and Piagetian cognitive developmental. theory. In K. F. 
+J Ri-egel & G. C. Rosenwald (Eds.), Structure and 4:ransfoimations: Developmental ' 
+and histo rical 'aspects . New York; Wiley, 1975. Ppj. 25-47. - 
+Yendovitskaya, T. V. Development pf memory., In..A, V. Saparozhets & D. B. Elkonin 
+(Eds/),. The psychol ogy of preschool chlMren . Massachusetts: MM.T. / 1^71, 
+Pp.. 89-110. ^ ' ' ' . . \ 
+
+Youniss, J. Operations and everyday thinking: . A commentary on "dialectical 
+-^operations". Human Developments 1974, 17, 386-391, 
+- Zin<:henko, P. ir Involuntary memory and the. goal-directed nature of activity. ^ 
+• In P. I, Zinchenko (Ed.),, Involuntary. moaory. Moscow: Academy of Pedagogical 
+Science Press, 1962. 
+
+
+
+• Footnotes 
+
+
+
+-iThe preparation of* this manuscript was supported in part by Grants HD 06864. 
+
+^HD 05951, and a Research Career Development Award ffl) 001 iT, from the' National 
+Institut.e-8 o^ Child Health and- Human Development and in part by' the Reading Center 
+
+'.grant MS-NIE-C.400,76-0116. I would like to thank Joseph" C. ^^^pione for his' 
+comments on an earlier version of this manuscript and Richard C. Aaderson, John 
+Brans-fdrd, Katherine^Nelson. Rand Spiro, Thoman Thieman and James Wertsch for dis- 
+cussions that led -to my interest in the topic. Of course responsibility for the 
+final contend is entirely my own and the people with whom I have discussed these 
+issues should not be blamed for any of my misinterpretations. ^ J ' 
+
+
+
+Table 1 
+
+
+
+Proportion Cprrfect Recall by Intentional and 
+Incidental Learners: Preschool- Children 
+
+
+
+Condition 
+
+
+
+Study la 
+
+
+
+Study 2^ 
+
+
+
+Intentional Learning 
+
+Seman^ Orienting Tasks 
+Categorize 
+
+Buying Items at Store 
+Nice^Naaty 
+
+Formal Orienting' Tasks 
+Sound 
+Color 
+
+
+
+.33 
+
+
+
+.49 
+.51 
+
+
+
+".29 
+.24 
+
+
+
+.22-. 
+
+
+
+.41 
+
+
+
+,38 
+
+
+
+.18 
+
+
+
+^Adapted from^urphy & Brofe (1975). ■ 
+^Adapted from Zlnchenko (1962). 
+
+
+
+52 
+
+
+
+50 
+
+
+
+A 4 
+
+
+
+■ ' Taljle 2 
+
+Mean Proportion Correct Recall of Intentional Leame'rs 
+
+• ' r? • ' 
+
+as a Pvinction of Strate&y Adapted (from Thieman, 1976) 
+
+
+
+Group 
+
+
+
+Experiments 
+
+1 '2 
+^4 ^ 
+
+
+
+Intentional Learners 
+
+
+
+(Ji) Stories, Sentenc^*^ 
+or Scenes v ^ 
+
+(l^) Interitem Associates 
+or Categories 
+
+
+
+Incidental Learners^* 
+
+
+
+Ro^e Rehearsal 
+/ ' Total 
+
+,(a) Semantic Orientation 
+/(b) Formal Orientation ^ 
+
+
+
+.67 
+
+
+.59. 
+
+
+^6 
+
+
+.36 
+
+
+.48 
+
+
+.45 
+
+
+.30 
+
+
+.37 
+
+
+*.34 
+
+
+.44 
+
+
+..48 
+
+
+.42 
+
+
+
+;=33-.46-.38-J>9 .44-. 51 
+■ .30-*35 " .31 ^ 
+
+
+
+/ 
+
+■^The incidental learners are included foi? comparative reasons^ The orienting 
+tasks varied wide^ across studies* Included here is the range between/the 
+leaat 'and inost effective conditions. ""^ • * ^ 
+
+
+
+1^ # k 
+
+
+
+7' ■ . • 
+
+* J • Table 3 . * ■ 
+From P. IksiZinchenko', Involuntary Memory (1962) 
+College Student Data 
+
+
+
+51- 
+
+
+
+Orienting Condi tiou 
+
+
+Incidental 
+
+* 
+
+
+
+
+Intentional 
+
+
+
+
+Instructions 
+
+
+' Logical 
+
+
+Concrete 
+
+
+tiJone 
+
+
+Logical 
+
+
+donoreie 
+
+
+None 
+
+
+Material 
+
+
+
+
+
+
+0 ' 
+
+
+
+
+
+
+
+
+Logical 
+
+
+7.0 
+
+
+5.9 , 
+
+
+5.2 
+
+
+7.1 
+
+
+5.2 
+
+
+' A. 8 
+
+
+Concrete 
+
+
+A. 7 
+
+
+5.2 
+
+
+4.5 
+
+
+A.l . 
+
+
+' 5.A ^ 
+
+
+A. A 
+
+
+None 
+
+
+1.8 
+
+
+2.0 
+
+
+3.2 
+
+t 
+
+
+1-5 
+
+
+1.6 
+
+
+.3. A 
+
+
+
+Old School ^ Children 
+
+
+
+V 
+
+/ * • , 
+
+Logical 
+
+
+1- 
+
+
+• 
+
+&.3 , > 
+
+
+2.8 ^ 
+
+
+Concrete 
+
+^pe — ^ 
+
+
+3.6- ; , 3.7 . 
+
+0.4 . . ^ • ' 2;9 
+
+^ 
+
+
+-0.5 
+
+
+2.-3 
+6.2 
+
+
+• 
+
+
+Young School Children 
+
+
+> • 
+
+
+
+
+Logical 
+Concrete 
+
+
+•5, 
+
+■ ,2.-6 , ' " 
+
+
+- A.O J 
+2.4 ^' • 
+
+
+
+
+None 
+
+
+1.1 ' 
+
+>, w 
+
+
+1.0 . 
+
+
+
+
+
+• - CENTER /Fal^^WE fjaOY flF^READING 
+r ^' . .TEGHNICAi REPORTS 
+
+
+
+
+I 
+
+
+
+Nff. Halff, ^H. M.- qrapmcaf Evaluation of Hierarchical CI ust^n'g ^Schemes , . 
+
+^October ,1975/ » (E^IC Documentrl^eprdduction Ser^Pce No. ED 926; 
+' Up., HC2$K67, Mp$.83). * ' ' ' 
+
+No/'2f * Spjpo, J.' -Irtferehtial Reconstruction^ in Memory for Connec^d Discourse , 
+* ' . ^ober 197S. *'(ERIC Docufnetit' Rep^Ejsduction Service No. ED 136 187, 
+, \ - 8lp., He-$A.67; MF-$.83]r, . ; \ . . 
+
+
+
+No."' 3: 
+
+
+
+Goet^z, £. T. . S.enten_cgs in Lists and i^^ j pto l ^ted ^i scoursg ,, November 1975 
+^"'^(ERIC Document Reproduction Servic?M|^D 13^ 927, 75p., HC-$3-.50, 
+. ^MF-$.83).' ' • - \ 'T^*^ " • 
+
+No.^^.^: ' Alessi, S< M., Anderson, T. H., S Biddle,'^W. B; . /Hardware and Software 
+' ^ ' Cfens {.derations in Computer Based Course Management , November .I97S/ " 
+'"^IC Document 'Reprodufct ion Service, No, ED 13^.^928, 21 p., Hb-$1.67^ 
+
+
+
+No. 5: ^.Schallerr; D. L. l;T»prpvi ng Jiemory for Prose: Tbe Relationship Between 
+' ^ . ' Depth of pg-qfei^sing arijel Context , November 1975. (ERIC Document ^ * 
+^'"^ ' .Reprodtjction Ser^c'e No. ED 13^ 929,.)7p.r rfC-^2.96, ^$0.83)^ 
+
+^o.' 6:,. Anderson, R. C.^^ Goetz^E. T.^PicheJ, J. W. , &^alf f./ . M^. Two Faces ^ ' 
+, - / , • of the Conceptual Peg'Hypbtbes i s , JanuaVy* 1976/ (ERIC Document 
+; • ' Reprbduction Service No. ED 13^ 930, 29p., HC-$2.06, MF-$^83) ^* ^ 
+
+fclo.'7: 'Ortqpy,*'A, Names, Descriptions, and Pragmatics, , 'February v1976. ^ERIC 
+
+' , V Document Reproduction Service No.^D 13^ 931, 25p., HG-$1.67, MF-$.83) ^ 
+
+No. ^: -Mason, ^^M^v^Quest ioning the'Notioh of Irtdependefit Processing Stages 
+in Readi,ng j^ Fe!>ruary. 1976« (Journal of Educatfonal Psycholoqy,*' 
+
+
+
+19.77, 69, 28a|^970 ^ 
+
+'Hio. Sj ";Sieg^K, M. A. Teacher BettavldVs and Cirrrrcgluny l^a.ckages; Implications. 
+^ ^ ' Research and Teacher Education^ April 1976. (ERIC Document ^ 
+
+.-$-.83)* 
+
+
+
+^ ^p^ ductjop Service No. ED 13^ 932,^., ffC"$2.06, MR-$^8 
+
+<*. ^ ^T,. ^ ' * * • ' ^ . ' ' 
+
+.Net. >10::.-Andei*son^- FT.. C.^ Pichert, d. W.^ Goetz, E. T. , S£|;ariert, D.i., olcvcm:, 
+
+* ' K. )>•., § TronjR,^S. RV/ 'Instantlation of ,6enerar Terms , Mar<;h9l976 
+
+^ * % (eRfj^Documeat Reproduction Service No. ED •13^ 933, 30p.\ HC-$2.06, 
+
+. >ifF-$.83)'r • ... . , ^ 
+
+
+
+Stevens, 
+
+
+
+No. 11: ^A»^nibruster, B... B. Learnyq Prfnciples^f r^m Prose: A Cognitive Approach 
+fra-sed on ^Sghema Theory , July 1976. .(ER*1C Docpient Reproduction ' . 
+. s " Service No.^ ED 13^ 93^, 48p.s ^-$2.06; KF-|p3)'* 
+
+/•^ No: 12* ^Anderson, X. ,' Mynol cfs^ llV ^Schallert , D> l\ y & Goetz, E. T. 
+
+,^ • ^ '' Frameworks for Comp.rehertdipg 'Disj:gurse ,* July 19V6.* (ERIC Document 
+l" : ' . ^ Reproallc^^ . 
+
+,n6»' 13; "l^uliin. A.' D.^ Bruce, B. ZtU'& Brown, J* A^rocess-orientei Language 
+\ • , 'for Describing Aspects of Read! ng. tgmprohens ion , November -1 97b. 
+.t,*^ \ : ( EJR I C -Document Reproduction Service No. ED 1 36. 1*88,^' ^1 p.', •HC^$2.06, 
+
+. ■ V. V ^M.-83>, ; ^, ■ V. > . % 
+
+
+
+/ 
+
+
+
+' No. ]k: Pichiert, J. W. , ^& Anderson, R. C. Taki«^ Different Perspectives on a -' ^ 
+Story ,- Nove'mber 1S76. (ERlDUDcument Reproduction Service. No. 
+ED 13^^36, 30p., HC-$2.06, MF-$.83) 
+
+No.^15: Schwartz, .R. M* Strategic Processes in Begipfrrig Reading , Novegiber 1976. 
+, ^ (ERIC Document. Reproduction Service No/eD 13^ 937, 19p., HC-$1 .67, ' 
+
+• • MF-$.83) ^ ; . ^ 
+
+f No. 16: Jenkins% J. ,R.^ S^Pany, 'D. Curriculum Biases in Reading Achievement 
+
+
+
+y^TD 13^ 938, 2i4p.,-H(r-$K67, 'm1:-$.83) 
+
+
+
+Jes_ts, November ^*9 76. MERiC Document Reproduction Service No. 
+
+-No. 17: AsfrJI^ S. R. , Hymel,' S, & Wig)^el d-,* A. Children's Compreheps iort. of 
+^ . ^ , Highi and Low^lnterest Material, and a Cqmparison of Two Cloze 
+
+Scoring Methods ,'' {November 1976> (ERICDocument Reproduction *' 
+' Servic^JiP^lD" 13^.939, 32p.. HC-'$2.^06, MF-$.83) ^ ^ , 
+
+Nd.^lSe^ Brown, A. L.,- Smiley, S. S.^, Day, J. D., Townsend, M. A.>R., & Lawton, ' 
+• ^ ' S. C. Intrusion of a. Thematic Idea in' Chi Idrenjs Comprehension 
+
+and Retention of Stories, December 1976. (ERIC Document Reproduc- * 
+tion Service No. ED I36 189, 39d., HC-$2;'o6, MF-$.83) " ' 
+
+'I " • ' ' - 
+
+No. 19: Kleiman,*^. "M. The Prel ingui stic Cognitive Basis of Chi Idren' s Communi- 
+cative Intentions , February ]977>. (ERtC Document Reproduction ^ 
+Ser>/ice«No. ED 13^ 3^6, 51p., HC-$3.50, MF-$.83) 
+
+No. 20: ftleiman, G. fi. The gffect of Previous Context on Reading Individual 
+
+' - ^ Words ,' Februarv^l977> (ERIC Documeht Reproduction Service No. , 
+ED 13^ 9ifl,A7^, HC-$V.67, MF-$.83) 
+
+
+
+No. 21 : Kane^ J.^^ tt>, Anderson, R. C\ Depth of-Processing and pit^rf erence 
+
+Effects in the Learning aind Retpembering of Selitences , February 1977. 
+" \^ ^ (ERI'C Dodament Reproduction Service No'.' 'ED 13^ 9^2, 29p., HC-$2.06,'^ 
+\ MF-$.83) _ . . * ^ . * ' u 
+
+No.'^22: Br^^L A. 1^, ^ Campione, J. 'C. Hemory Sirrateg ies in Learning : / 
+^ ^rainiP^' Children to Study Strategicfal ,ly ,' Mar<yh 1977> (IrIC 
+Document Reproduction S^vice No. ED 136 '23i|, 5^p. , HC-$3.50, * 
+MF-$.83) ' - ^ I? 
+
+
+
+No. 23: Smi^e^y, S/ S,., Oakley^'^O. D., Wor^then, D., Campione, J. C.,^S Brown, v 
+A^ L. . Reca^ of Thematidally Relevant Material by. Adolescent 
+Good and Poor Readers as. a Function of Written Versus Oral ^e^ 
+sentation , March 1977* ^(ERIC DociHnent Reproduction Service No. 
+ED 136 235, 23p., T1C-$1.67, MF-$.-83) ' . " * ' • 
+
+No. 2^: . Arfderson, R. C.^.Spiro, R. J., & Anderson,^. C. Schemata a.s* Scaffold i ng 
+
+" for the Representation of* Infprmation in Connlected Discourse , 
+^ ' March 1977. \(ERiC Document Reproduction Sp:^J^i^ No., ED 136 236, 
+
+l8p.,^HCr$1.67, ttt-$'.83) 
+
+N^ 25: Pany, 0*1, S Jenkirls^ J. fj. ^ Learging Word Meanings: ^ Comparhsop^of 
+. Instructional Procecjures and Effects on Measures o6s-Readin j 
+Comprehension with Learning Disabled Students , March 19^7* 
+*(ERIC Document' Repfroduct ion §eYvice No. ED J 36, 237, • 3*^p- 1 
+
+
+
+
+HC-$l2.06„ MF-'$.83) 
+
+ERiC . "56^ - . , \ '4 
+
+
+
+. No^. 26: 'Armbruster,'B, B'.i Stevens, R. J., & Ros.ensh i ne, B. Analyzing Cojitent 
+Coverage^and Emphasis; A Study of Three Curt^icu!^ dnd Twd^ Tests ; 
+March 1977. (ERIC Document ^Reproduction Service No! ED 136 238;>4 
+' 2'2n,,. HC-$'1.67, MF-$.83)? ' 
+
+No. 27: Ortony, A., Reynolds-, R. E., Arter J.''>V- ' Metaphorr -Woretica^K 
+and Empirical Research , March\l977. <ERIC Document, Reprodpction 
+Service N6. ED*V37 752, 63p. NC-:$3.50^ MF-$.53)\ ■ 
+
+\ No. 28^ O'ctony, A. Remembering and Understanding jJatpberwocky^ and Small TTalk , 
+
+• * March 1977. (ERIC Document Reproduction Servik:e No. ED 137. 753,^-^ 
+
+♦ 36p., HC-$2.06,' MF7$.83)'^ ^ , ^ ' % 
+
+
+
+No. 29:^ Schallert, D. L., Kleiman, G. M. S Rubin, A. t). ' Analys-is. of^i ff erenges 
+
+' ' Between Oral and Written language , April \^H\ '7' I ^ ^ 
+» ' * ^' 
+
+^o. 30: G6etz, E^ T.'; S Osborn, -J. Procedures for Sampling Texts arxj Tasks 
+
+* * in Kindergarten through^ Eighth Grade , April 1977. 
+
+* ' * - ' _ ' ' ~\ ^ . _ 
+No. »31: Nash-Webber.;,\. Anaphora:^ A Crpss-gj set pi i nary Survey ^ April 197> 
+
+^.-'"^^' ^ _^ ' 4^ 
+
+No**, 32: ' Adams, M. J., 8 Collins, A. A Schema-Theoret ic View of R eading Compre- 
+- ^ ^ hension, ' April .1977 T ^. \ \ ^ ~ 
+
+No. 33: Huggins, W. F. r SyntactIc Aspegts of f^ead ing^Compr ehegsTon-. April 1977.' 
+
+^^Np. 3^:* Bruce, B. Plans and .Social' Actions , Aprjir'1977. ' 
+
+No.-^35: Rubin, A. D. Comprehension Processes. ih Oral and Wj^^t^n; Language , - 
+
+On Formal 
+
+
+
+.April'1977: ^ 
+
+f^No. 36: Nash-We.b'ber, ^.'^ S Relter, R.^ Anaphora and LoqicaT Form: 
+
+- - Meanif^g' Represerl.tat iorts tP?:Natural Language ^ Apr M J 977 
+
+
+
+No. 37: Adams, M. J. Failures to Comprehe^ld and Levels Processing in 
+-. Heading , ApTiTTgTTT ^ ^ ' 
+
+No.^38:''Nfl/^ds, W.y\. Mul t iple- Theo?y», Formation^ in High-Leve l Percept ion, 
+
+ApHij9^^;f^^ ' ^"^"^ • . I 
+
+
+
+No. 39:^ Nickerson, B. S,. j& Adams, M'^ J. Uses of . Context in Speech Under- r 
+
+• standing and^- Rea^^lVtg , April 1977-. ^ < ' . 
+
+ilo. ,i|0: Brown^^ S.,"^S Collins/ A, ." Model-^ased' Versus T ext-Based ^Reasoni no. 
+^ M/rY\ J977. ' ' ' ^ \ 
+
+' ' ^o. k] \ ""Anderson, R. C, S Pichert, J. W. Recatl' of Previously Unrecal.l abU ^ 
+* • Information Foil owir^g a Shift in Perspective , April 1977. 
+
+No. hi: Mason, J.', 0%b^rn,-J., S^Rosen5h ine,' B: yA Sons ider^efon of Skill 
+Hierarchy Approaches tb the Teaching of Reading , April 1977. 
+
+r; No, ^3: Coll ins, A. Brown,'^A^ L. , Morgan, J. L., S Brewer, W. ^. The 'Analysis 
+
+• ' of Reading Tasks and Texts ; April 1977. ^ ^ 
+
+> 
+
+.ERJC . % - ■ 
+
+
+
+1 > 
+
+
+
+No. kk: - McCIure, E/* Aspects of Code-Switching in the Discourse of Bilingual ^ • 
+Mexican-Ameri can Children,' Apr! 1 1977. . - 
+
+No. 45: Schwartz, R. M. Relation of Context Utiliza4:ion and Otzthographl c 
+Automatic! ty in Word Identification , May 1977. T""^ 
+
+* ' ' ' Z ' ' / * ' 
+
+No. 46:^Anderson, R. C, Stevens, K. C, Shifrin, z',^ S Osborn, J. InstantTa- * 
+tion of Word Meanings ia Chlldcen , May 1977. » 
+
+No. 47: Brown, A- L. Knovjgjng When^S/j^Ve^ and How to Remember;^ ^ A Problem of 
+Metacogni t ioa ,^^>kLne 1977— ' 
+
+No. 48: Brown, A. L., S DeLoache, J. 5. Skills, Plans, and Se'l f -Regu lat ion , - 
+_ ■ ■ July 1977. " ■ 
+
+No. hS: Go^tz, E. T. Inferences in the Comprehens i on "of and Mem ory for Tex^t, 
+July I977T ■ ~ ' T-^' 
+
+No.jSQ: Anderson, R. C. Schema-Pi rected Processe s in Language Comprehension, 
+- ^ July 1^977. : ' ^ 
+
+No. 51: ..Brown^ A. L. Theories of Memory and the Problems of Development :^ 
+Activity, JSrowth, and Knowledge , 'July 1977. 
+
+No.' 52:, Morgan, J. L. Two Types of Convention in Indirect Speech Acts , July 1977. 
+
+No; 53: Brown.;- A. L., Smiley, S. S.,:5 Lawton,'S, C. .The.- Effects of Experience 
+- 'bn the Selection of Sui table^-RetVieval Cues Tor Studying from 
+. Prose Passages , July 1977- 7~ZT~, ^ ^ ^ - 
+
+No. 5^: Flef shV, L* S., 5 Jenkins, J. R. Effects of Contextual iz^ed .and 
+
+^ Decohtextual ized Practice Conditions on .Word R^cogni t ion ,^ J.uly 1977* 
+
+No. 55: Jenki ns, J. R., s Larson, K. Evaluattng^gEKror Correction Procedures 
+^ for Oral RgadiTO , August 1977. ^ , ^ ' * 
+
+Nq. 56: ^nderson, T. H. , Standiford, S. N., & Alessi, S. M^ Computer Assisted 
+Problem Solving in an Intiyductory Statistics Course ,^ Augjjst 1977. 
+
+No. 57: Barnitz, J. tnterrel'atjonship of Orthography and Phonological Structure ' 
+^ \ ' in tlearn ing ;l:o Read , August 1977» ' / . , ' 
+
+No. 58; Mason,. J. M. The Role of Strategy in' Readi ng^jn the Heptally Retarded , ^ 
+
+September 1977* ' : U ' ^ 
+
+
+
+'* Jl^;59: Mason, J. M. Reading Re^dlnfe^s; ' VDefin?tion and Skills Hierarchy 
+' ' * from Preschoolers-V D'evelopirfg Conceptions^ oP Print , September 1977. 
+
+. ' No. 60:. » Spiro, R. J.,\S Esposito, J.. J. Superficial Processing of Inferences 
+* -'^^ ' * . Presented in Text , October -1 977*^'. 
+
+^1 : .Spiro, R. J., & Smit'tt,' PT * ^ Di st ingut gh i nj Sub- Types of Poor Compre- 
+hendersr Overrel iance on> Conceptual vs> Data-Drjven Processes , 
+. ' October 1977.- . • ^ ' \> 
+
+
+
+Jfo".^62: Splra, R. J., S Rl ttenhouse, R. K. Attribute Clarity !n Conservation 
+Instructions and Horizontal Dfecalage In Normal Hearing and Deaf 
+Children, October 1977.'^" 
+
+No. 63: Spirp, R. J^, ^ Anderson, H. C. \Thege and Subordination in Sentence 
+- . Recall , October.^ \977*/ ' .a 
+
+No. 6k: Splro^ R. J*, i Harti-n, J. E. Contextual Factors^ ! n Ithe Recall of * 
+Alterna^tivc Surface Structures , October 1977-^ 
+
+No. 65; Brewer, W. F,^ Memory for the Pragmatic Implications of Sentences , 
+^ October 1977- - ^ ' 
+
+
+
+
+r 
+
+
+
+59 
+
+
+

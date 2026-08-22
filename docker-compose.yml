@@ -1,0 +1,109 @@
+services:
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: platform
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  opensearch:
+    image: opensearchproject/opensearch:2.11.0
+    environment:
+      - discovery.type=single-node
+      - OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m
+      - DISABLE_SECURITY_PLUGIN=true
+    ports:
+      - "9200:9200"
+      - "9600:9600"
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+          cpus: "2.0"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:9200/_cluster/health || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 12
+
+  qdrant:
+    image: qdrant/qdrant:v1.18.0
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: "2.0"
+    healthcheck:
+      test: ["CMD-SHELL", "timeout 1 bash -c '</dev/tcp/localhost/6333' && echo ok || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  # NOTE: MinIO CE was archived (read-only, no security patches) on April 25, 2026.
+  # Object cache replaced with a local filesystem volume — same interface, no orphaned dep.
+  # To migrate to S3/R2/Backblaze later, swap app/ingestion/object_cache.py only.
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file: .env
+    volumes:
+      - ia_cache_data:/cache
+    depends_on:
+      postgres:
+        condition: service_healthy
+      opensearch:
+        condition: service_healthy
+      qdrant:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: >
+      sh -c "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000"
+    profiles:
+      - full
+
+  worker:
+    build: .
+    env_file: .env
+    volumes:
+      - ia_cache_data:/cache
+    depends_on:
+      - redis
+      - postgres
+      - opensearch
+      - qdrant
+    command: python -m arq app.jobs.worker.WorkerSettings
+    profiles:
+      - full
+
+volumes:
+  postgres_data:
+  qdrant_data:
+  ia_cache_data:    # Filesystem object cache — replaces MinIO (archived April 2026)

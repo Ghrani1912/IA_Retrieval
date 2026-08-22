@@ -1,0 +1,742 @@
+Best 
+
+Available 
+
+Copy 
+
+
+coj  t Soviet  R £ D Articles 
+
+
+£ l-i  T C 
+
+
+International  Co'jft  retir.c  on  Artificial  Intelligence 
+
+Radioinot of  Oil  Si'.ci.i- 
+
+1 l’*;r*!ir.f>Jastic  Film  Joe  Optica]  Stern 
+
+i*  indicator 
+
+In  laying  (.  h'.  vt  i ri:  t it.:-  on  I It  ore:  • < > j » 1 ; l ?. j cr  . 
+
+Di  s-c  rctc  Optical  i may. in  ft 
+
+Improved  Glass  for  Optical  Registry 
+
+Radioactive  j her.  n''ivi ' i c r? 
+
+Imploded  j-'u > i • <i  Hanii.i 
+
+M ctallio  V.  r A r ...... 
+
+Haiti: rv  '.Vit*.  >V  .i --r  Odcd /.«■-, 
+
+Magnetic  : Ming  rap]./ 
+
+J.ascr  Pimped  !»v  i.<  ! ,;\i.  f.%  i 
+
+Romania  ' O'.  [.Me  Kesta;  : cli  instile*  o 
+
+Character ' f ; ics  ! ' r.  c-.  . • 
+
+Model  ! \> v .1  ,>c.!f  it;;,  ' C ' •!!  :-  t K 
+
+Ucc«  nt  Public:;.  
+
+
+APPROVt D FOR  PUi-li*.  Rill  AVI.  1,'lal ! Sift  !OK  UNIiMlIlP 
+
+
+UNCLASSIFIED 
+
+
+31M  no 
+
+
+IfCUDlTV  CLASSIFICATION  OF  THIS  PACE  fUTlAn  Oolo  Fnlotod)  
+
+r- — _kl  _ . HEAD  INSTKI '<TKi*;s 
+
+I REPORT  DOCUMENTATION  PAGE ! CF.FORF.  rOMPI  I TINT,  M'K' 
+
+I,  report  number la.  govt  accession  no.  > necpient-s  catalog  num  ... 
+
+
+4 TITLE  (fid  Sobtltlo) 
+
+SOVRaD  - A Digest  of  Recent  Soviet  R&D 
+Articles,  Vol.  1,  no.  9,  1975 
+
+
+S TYPE  OF  REPORT  & PERIOD 
+
+
+Scientific  . . . Interim 
+
+
+6 PERFORMING  ORG  RLF-om  •.  jUf! 
+
+
+7.  authorc*; 
+
+S.  Hibben,  L.  Boylan,  J.  Kourilo, 
+R.  Shresta,  M.  Ness 
+
+
+*.  performing  organi z ation  name  ano  aooress 
+Informatics  Inc. 
+
+6000  Executive  Boulevard 
+
+Rockville,  Maryland  2085Z . 
+
+it.  controlling  office  name  ano  aooress 
+Defense  Advance  Research  Projects  Agency/TAO 
+1400  Wilson  Blvd. 
+
+Arlington.  Va,  22209 
+
+U.  MONITORING  agency  name  4 AOORESSflf  ditteionl  hom  Controlling  Olhco) 
+
+Defense  Supply  Service  - Washington 
+Room  1D245,  Pentagon 
+Washington,  D.  C.  20310 
+
+
+t CONTRACT  O R OR  AN  T NUMSF  R-  . I 
+
+
+MDA-903-7(»C-00«‘» 
+
+TO  PPOGRAM  EL  LMt N T PROJt  ’ T*  • 
+AREA  * PORK  UNIT  NJMBLN, 
+
+DARPA  Order  No.  3097 
+Program  Code  No.  Pol.  10, 
+P6D10,  P6E20,  P6G10 
+
+
+12  REPORT  DATE 
+
+September,  1975 
+
+
+n number  of  pages 
+
+15.  SECURITY  CLASS,  (o I thin  rr j irt 
+
+UNCLASSIFIED 
+
+is*  declassification- dF* -75  » * d i n 
+schedule 
+
+
+is.  DISTRIBUTION  STATEMENT  <ol  IhU  Rr  port) 
+
+
+Approved  for  public  release;  distribution  unlimited. 
+
+
+17.  DISTRIBUTION  STATEMENT  fof  (A*  obottoct  ontorod  In  Block  10,  II  ditto ronl  Irom  Report 
+
+
+Reproduced  bv 
+
+NATIONAL  TECHNICAL 
+INFORMATION  SERVICE 
+
+US  Ceps'TmBOl  o<  CommoK* 
+Spnegfiwld,  VA  2*iV 
+
+
+a 
+
+
+IB  supplementary  notes 
+
+
+Scientific  . . . Interim 
+
+
+If  key" POROS  (Contlnuo  on  rovoroo  wldo  It  nocoooory  ornd  Identity  l>r  block  number; 
+
+Underwater  Optics  E-Beam  Interaction 
+
+Laser  Spectroscopy  Semiconductor  Research 
+
+Geophysics 
+Material  Science 
+
+Oceanography 
+
+20  ABSTRACT  fContlnuo  on  rovoroo  oldo  It  nocoooory  ond  Idonllty  by  block  numbor) 
+
+This  is  a collection  of  brief  abstracts  on  miscellaneous  topics  from  the  currrn 
+Soviet  technical  literature.  The  intent  is  to  supply  a quick  look  at  items  of 
+possible  interest,  including  topics  not  necessarily  named  in  the  DARI  A mterob 
+profile,  as  a supplement  to  our  reportage  on  specified  topics. 
+
+It  is  intended  to  publish  this  collection  on  a monthly  basis,  to  continue  to 
+provide  prompt  coverage  of  numerous  aspects  of  Soviet  R&D.  As  an  added 
+feature,  all  recently  acquired  books  will  be  listed  as  they  are  received.  A 
+
+
+J AN  73  1 473  EOITION  OF  I NOV  65  IS  OBSOLETE 
+
+
+UNCLASSIFIED 
+
+SECURITY  CLASSIFICATION  OF  THIS  PAGE  Hl'.n  *1*  I 
+
+
+INTRODUCTION 
+
+
+This  is  a collection  of  brief  abstracts  on  miscellaneous 
+topics  from  the  current  Soviet  technical  literature.  The  intent  is  to 
+supply  a quick  look  at  items  of  possible  interest,  including  topics  not 
+necessarily  named  in  the  DARPA  interest  profile,  as  a supplement  to 
+our  reportage  on  specified  topics. 
+
+It  is  intended  to  publish  this  collection  on  a monthly  basis, 
+to  continue  to  provide  prompt  coverage  of  numerous  aspects  of  Soviet  RkD. 
+As  an  added  feature,  all  recently  acquired  books  will  be  listed  as  they  are 
+received.  A list  of  source  abbreviations  u appended. 
+
+For  further  information  the  reader  is  invited  to  call 
+Stuart  Hibben  or  Lee  Boylan  at  Informatics  on  (301  )-770-3000. 
+
+
+10/ 
+
+
+International  Conference  on  Artificial  Intelligence  (extract) 
+
+
+The  Fourth  International  Joint  Conference  on  Artificial 
+Intelligence  was  held  recently  in  Tbilisi,  USSR.  The  eleven-section 
+conference  was  attended  by  more  than  1000  delegates  representing  3 5 
+nations.  In  response  to  general  questions  from  a correspondent.  Candidate 
+of  Technical  Sciences  Ye.  A.  Aleksandrov  describes  a mobile  robot 
+platform  developed  by  the  Institute  of  Cybernetics  of  the  Ukrainian  Academy 
+of  Sciences,  based  on  operating  princij  les  developed  by  N.  M.  Amosov. 
+
+I he  platform  is  said  to  be  somewhate  similar  in  external  appearance  to 
+the  Soviet  lunar  rover.  It  can  negotiate  an  obstacle  course  in  its  self- 
+propelled  route  to  an  object.  Aleksandrov  concludes  that  the  conference 
+demonstrated  three  areas  for  further  work:  1)  the  study  of  the  intelligence 
+of  man  as  a personality;  2)  the  development  of  models  for  man's  information 
+processing;  and  3)  a thorough  knowledge  of  the  sphere  of  human  endeavor 
+in  which  these  models  should  be  used.  [A  thinking  machine?  Sovetskaya 
+Rossiya,  23  September  1975,  p.  4 cols.  2-3J. 
+
+
+Radiometry  of  Oil  Slicks  (abstract) 
+
+laboratory  measurements  are  reported  of  the  radio 
+brightness  temperature  of  a smooth  water  surface  covered  by  oil  or 
+kerosene  films,  as  measured  by  a high-sensitivity  centimeter-band  radio- 
+meter Experimental  data  on  dependence  of  the  increment  of  radio  brightness 
+temperature  on  the  thickness  of  the  film  are  compared  to  theoretical  data 
+obtained  in  an  isothermal  approximation. 
+
+A brief  description  of  the  radiometer  is  given,  together  with 
+graphical  data  on  differential  brightness  temperature  as  a function  of  film 
+thickness  and  signal  polarization  for  A -2.08  cm. 
+
+The  results  of  this  analysis  confirm  the  possibility  for 
+remote  detection  of  films  of  liquid  oil  products  over  a calm  water  surface 
+by  high -sensitivity  radiometry.  A centimeter-band  radiometer  should 
+thus  be  able  to  detect  films  with  thickness  on  the  order  of  0.  1 mm. 
+
+[Glotov,  A.  A.,  D,  T.  Matveyev,  V.  G.  Mirovskiy,  M.  D.  Rayev, 
+
+V.  Yu,  Rayzer,  I.  A.  Troitskiy,  7c.  A.  Sharkov,  and  V.  S.  Etkin. 
+
+Study  of  radio-frequency  thermal  emission  of  a water  suxface,  covered 
+by  an  oil  film.  Meteorologiya  i gidrologiya,  no.  6,  1975,  90-93 J. 
+
+
+.Thermoplastic  Film  for  Optical  Storage  (verbatim  > 
+
+. . Experimental  and  theoretical  studies  have  been  made  of 
+inhomogeneities  in  the  thickness  (phase  noise)  of  a new  material  for 
+
+!hi0oumut0n-St0iagre:  th*rmoPlastic  Broadening  and  narrowinu  of 
+
+J?*  ° I P 8!!ai0f  * coherent  optical  system,  which  transforms  sinusoidal 
+
+nf8ra  o1ufC°  a 7 ther.m°Plastic>  are  considered.  An  evaluation  is  made 
+of  resolution  and  dynamic  range  of  the  sxstem.  The  concept  of  "noise 
+
+coefficient  of  the  information  carrier"  is  introduced  which  makes  it  possible 
+to  compare  various  carriers.  A study  of  dependence  of  noise  coefficient 
+
+on  spatial  frequency  is  also  discussed.  |Aym binder,  M.  S.  N ivl 
+
+“S'l'  VI,aT°-  Ye-  Yu-  K.  A.  Mark'.,*. 
+
+P.  Ya.  Melnichenko,  J.  V.  Miroshnichenko,  and  V.  V.  Slmlovskiy. 
+
+thermoplastics  in  a coherent  optical  system.  IVUZ  Kadiofiz  1974  * 1? 
+no.  10,  1493-1500.  (RZhF,  4/75,  no."  4D1048)].  ’ 
+
+
+Matrix  Indicator  (verbatim) 
+
+
+A matrix  indicator  is  proposed  which  contains  isolated 
+transparent  substrates  with  horizontal  and  vertical  elect rodos,  and  a 
+liquid -crystal  filler.  To  eliminate  crosstalk,  a transparent  plate  is 
+placed  between  adjacent  substrates;  on  each  side  of  the  transparent  plate 
+a transparent  conductive  coating  is  applied.  The  space  between  the  plate 
+and  substrates  is  filleu  with  the  liquid  crystal  substance.  I Anisimov,  A.  i\.  , 
+and  A.  V.  Veselovskiy.  Matrix  indicator.  Author's  Certificate,  USSR,  No. 
+42 1 “ 71 , published  3/9/74.  (RZhElektr,  4/75,  #4P394  p)J. 
+
+
+Imaging  Characteristics  on  Thermoplastic  (abst  ract) 
+
+Effects  of  the  parameters  of  thermoplastic  information 
+carriers  on  the  intensity  of  light  in  an  image  reproduction  plane  is  considered. 
+Analytical  expressions  are  obtained  and  analyses  are  given  which  correlate 
+gradation  of  image  with  light  wavelength,  refractive  index,  depth  of  defor- 
+mation and  thickness  of  the  thermoplastic  layer,  as  well  as  with  characteristic 
+of  recording  electron  beam.  Results  obtained  show  that  an  increase  in  then  >, 
+plastic  layer  thickness  also  increases  the  effective  exposure  range,  and  lower 
+the  coefficient  at  surface  tension,  y.  At  sufficiently  great  thickness, 
+qualitative  image  repr  luction  is  possible  only  with  higher  exposure  levels. 
+Increasing  the  electr-.i  beam  width  reduces  the  exposure  range  and  in<  re.is<  s 
+the  image  contrast,  but  the  resolving  power  of  recorded  information  on  the 
+thermoplastic  layer  is  reduced. 
+
+The  cited  findings  enable  selection  of  concrete  valm  s of  the 
+thermoplastic  layer  thickness  and  electron  beam  radius,  so  that  the  desin-d 
+> and  effective  exposure  range  are  obtained.  (Valentvuk,  A.  N. , and  K.  t . 
+Predko.  Characteristics  of  optical  imaging  from  thermoplastic  carrier* 
+
+OiS.  v.  39.  no.  1,  197$,  18(»-189]. 
+
+
+Discrete  Optical  Imaging  (verbatim) 
+
+A patent  disclosure  has  been  filed  on  a system  for  quant  ixi 
+and  transmitting  an  optical  image.  The  design  includes  a matrix  of  die!.  . t r:< 
+waveguides  and  multimode  output  with  horn  transmitter.  To  obtain  the 
+multimode  regime  for  excitation  and  conversion  of  the  focused  image  to  dis.  r<  i 
+form,  the  matrix  is  designed  in  the  form  of  a two-dimensional  plate  fixed 
+with  a regular  pattern  of  polymer  fibers  of  the  required  length.  | I'udacyan, 
+
+1.  F.  , V.  F.  Dubrovin,  S.  N.  Kamlyuk,  D.  1.  Mirovitskjv,  arid  \.  S. 
+
+Chagulov.  Device  for  quantization  and  transmission  of  an  optical  image. 
+Author's  Certificate,  USSR,  no.  438070,  submitted  14  Dec.  1072.  awarded 
+1 Aug.  1975.  (RZhRadiot,  7/75,  no.  7Yell6  P>], 
+
+
+Improved  Class  For  Optical  Registry  (abstract) 
+
+Various  chalcogenide  glasses  used  for  optical  recording  <>t 
+data  are  discussed,  and  a Cu-As-Se-I  system  is  proposed  which  has  in>pro\» 
+write/erasc  characteristics.  The  proposed  type  is  compared  to  existin', 
+types,  namely  As^Se^,  A82S3  and  AsSel,  which  show  relatively  poor  erase 
+and  rewrite  response.  Comparative  response  of  the  new  type  shows  good 
+repeatability  of  registering  quality  up  to  seven  write/erase  cycles.  I he 
+
+2 
+
+
+governing  factors  are  discussed  in  terms  of  reordering  stability  in  the 
+chain-layer  structures  of  the  glasses.  Experiments  described  used  a 
+He-Ne  laser  for  data  recording.  [Kikineshi,  A.  A.,  and  D.  G.  Semak. 
+Reversibility  of  photoprinting  on  glasses  of  the  Cu-As-Sc-1  system. 
+ZhTF  P,  v.  1,  no.  6,  1975,  269-273J.  
+
+
+i I ] Radioactive  Thermometer? 
+
+
+The  possibility  of  affecting  the  decay  rate  of  a radioactive  body 
+by  intense  laser  application  was  suggested,  for  example,  by  Gol'danskiy  and 
+Letokhov  (ZhETE,  v.  67,  no.  2-  1974,  513-516).  A subsequent  article 
+by  G.  Voronov  speculates  further  on  this  idea,  noting  that  lasers  of  the 
+required  energy  are  now  available  to  realize  such  an  experiment,  for  example 
+wi^h  Tcy"  as  a target.  The  intense  ionization  of  the  radioactive  specimen 
+should  measurably  retard  the  decay  rate.  The  fact  that  intensity  of  radio- 
+activity thus  depends  on  degree  of  ionization  suggests  the  possibility  of  uaing 
+the  technique  to  measure  the  resultant  high  temperatures,  i.  e.  an  the  or.  or" 
+of  10  degrees.  [Voronov,  G.  Lasers  and  radioactivity:  Sovie  scientists 
+propose  use  of  a laser  to  control  radioactive  decay  rate.  Khimiva  i zhizn' 
+no.  3,  ’975,  8J.  ‘ ’ 
+
+
+I 
+
+i . 
+
+I 
+
+l! 
+
+0 
+
+0 
+
+f! 
+
+! 
+
+i 
+
+
+Imploded  Fusion  Plasma  (abstract) 
+
+A theta-pinch  magnetic  compression  system  using  an 
+explosion -acce’erated  metallic  liner  to  initiate  a controlled  nuclear  fusion 
+process  is  desc  ibed  by  a closed  set  of  equations.  The  equations  take  into 
+account  compressibility  and  viscosity  of  the  liner  material  and  the  explosive. 
+Solution  of  the  equations  by  the  finite  differences  method  gives  the  optimum 
+parameters  of  the  system,  i.  e.  , system  geometry,  explosive  quantity, 
+plasma  initial  temperature  and  density,  which  would  be  required  to  conduct 
+an  experimental  verification  of  the  possibility  for  achieving  energy  conversion 
+efficiency  corresponding  to  the  Lawson  criterion.  Fusion  energy  released 
+in  the  experiment  should  be  equal  to  energy  stored  in  the  explosive  charge. 
+[Cnurayev,  V.  A.,  K.  M.  Lobanov,  V.  P.  Fcdyakov,  V.  D.  Dyatlov,  and 
+A.  M Timonin.  Plasma  compression  by  an  explosion-accelerated  conductin'’ 
+liner.  ZhTF,  no.  7,  1975,  1375-1380J. 
+
+
+Metallic  Water  (abstract) 
+
+Another  in  the  series  of  high-pressure  phase  conversion  tests 
+by  Vereshchagin's  group  is  reported.  In  this  experiment,  ice  at  -HO  to  - in  r 
+was  compressed  atone  megabar  and  its  electric  resistance  K was  measured. 
+The  data  show  that,  at  a certain  value  of  applied  force,  R at  200  K dropped 
+by  six  orders  of  magnitude.  R of  the  specimen  reverted  to  its  original  value 
+on  being  heated  to  220  K.  The  observed  "defrosting"  of  the  conducting  state 
+led  the  authors  to  conclude  that  the  metastable  conducting  water  reverts 
+to  the  original  dielectric  phase.  Thus,  R discontinuity  under  pressure  is 
+related  to  a phase  conversion.  [Vereshchagin,  L.  F.  , Ye.  N.  Yakovlev, 
+and  Yu.  A.  Timofeyev.  Conversion  of  water  into  conductive  state  at  - I Mbar 
+static  pressure.  Zh ET F P,  v.  21,  no.  11,  1975,  643-045^ 
+
+
+3 
+
+
+II 
+
+B 
+
+[1 
+
+
+Battery  With  Water  Oxidizer  (verbatim) 
+
+
+The  possibility  is  shown  for  substantially  raising  the  unit 
+power  characteristic  of  water -activated  current  sources  by  using  water 
+as  the  oxidising  agent.  Several  anode  and  cathode  materials  are  proposed, 
+whose  use  in  the  suggested  type  of  battery  could  achieve  a unit  energy 
+output  of  350  watt -hr s /kg.  [Berkman,  Ye.  A.,  Ye.  G.  ivanov,  G.  M. 
+Potrova,  A.  B.  Pospelov,  B.  V.  Chulkov,  and  V.  A.  Barsukov.  Elect r»- 
+
+chemical  generators  using  water  as  oxidizer.  IN:  Sb.  rabot  po  khlrrn 
+
+istochnikrun  toka.  Vses.  n-i.  akkumulator.  in-t. , no.  10,  1975  391-401 
+
+(RZhElektrotekh,  21F,  8/75,  no.  8F124)J. 
+
+
+Magnetic  Holography  (abstract! 
+
+
+n 
+
+1 1 
+
+u 
+
+r 
+
+i j 
+
+
+i 
+
+
+Principles  of  holographic  recording  of  information  on 
+magnetic  tapes  are  studied,  in  which  recorded  information  can  he  in  discrete 
+form  or  as  a phase  hologram.  Requirements  on  the  optical  system  for 
+discrete  recording  are  considered.  A major  factor  which  determines  the 
+density  of  recording  of  discrete  data  by  the  cited  thcrmomagnetic  method 
+is  the  quality  of  the  optical  system;  a feasible  density  is  5 x 10*'  bit/om2. 
+
+The  important  characteristics  of  the  thermomagnetic  material  in  the  readout 
+process  of  discrete  information  is  its  signal -to-noise  ratio,  and  a quality 
+index  for  the  thermomagnetic  material  based  on  Faraday  rotation  and 
+coefficient  of  absorption.  Materials  such  as  EuO  or  _uS  have  good  quality 
+indices  (10  deg/cm)  at  cryogenic  temperatures. 
+
+
+The  holographic  method  of  recording  on  magnetic  tape  is 
+interesting  for  its  high  noise  rejection  as  well  as  its  high  recording  density 
+arid  fast  readout.  Its  drawbacks  are  a low  diffraction  intensity  ( - 10-2%)  and 
+the  need  to  use  a laser  with  high  output  power.  The  possibility  is  discussed 
+for  production  of  transparencies  with  magnetooptic  control  on  the  basis  <>f 
+magnetic  bubble  domains.  [Petrov,  M.  P.  Magnetic  holography.  IN: 
+
+7.?4.Materialy  6'y  zimn°y  shkoly  po  fizike  poluprovodnikov,  1975.  Leningrad 
+1974,  257-279.  (RZhRadiot,  5/75,  no.  5E261)]. 
+
+
+Laser  Pumped  by  Relativistic  E-Beam  ( v e r batim ) 
+
+
+Experiments  are  described  in  which  relativistic  electron 
+beams  were  used  to  excite  gas  lasers.  Advantages  of  laser  p-impim:  by 
+relativistic  beams,  as  compared  to  other  techniques,  are  discussed.  I he 
+results  are  described  of  the  study  of  energy  transfer  from  the  relativistic 
+beam  to  the  host  gases,  which  are  under  various  conditions,  so  as  to  arri  « 
+at  the  optimum  operating  regimes  of  such  lasers.  Neon,  molecular  nitrogr-o 
+and  hydrogen  ^lasers  were  developed.  The  maximum  output  using  nitroy.u 
+attains  4x10  w at  a pulse  duration  of  8 nanoseconds.  |.Magda,  I.  1. 
+
+Tkach,  Ya.  B.  Faynberg,  and  G.  V.  Skachek.  Use  of  relativistic'  electron 
+beams  in  producing  powerful  optical  pulse  generators.  IN:  Sb  111  Ukr. 
+
+elektron.  optike  i yeye  primeneniyam,  posvyashch.  250-lctiyu 
+Tezisy  dokl.  Ch.  2.  Khar'kov,  1974,  lf>6-167.  (RZhRadiot. 
+
+
+1 
+
+
+4 
+
+
+j 
+
+
+Romania  Plans  Oceanographic  Research  Institute  and  Fleet  (abstract) 
+
+
+Following  a brief  discussion  of  Romanian  participation  in 
+international  oceanographic  research  projects.  Professor  M.  Hacoscu 
+states  that  by  1978,  Romania  will  have  well-equipped  vessels  for  fisheries 
+and  oceanographic  research.  The  problem  of  ocean  resources  development 
+is  to  be  the  prime  mission  of  a "future"  Romanian  oceanographic  institute. 
+[Bacescu,  M.  The  resources  of  tl.e  ocean.  Romania  Today,  no.  7,  lf»7% 
+32-33]. 
+
+
+Characteristics  of  Dolphin  Sonar  (verbatim) 
+
+Results  are  summarized  on  studies  of  the  echo-ranging 
+mechanism  of  dolphins.  The  techniques  are  described  of  sound  recording 
+directly  on  the  head  of  the  dolphin.  These  techniques  make  it  possible  to 
+detect  amplitude  and  shape  of  signals  at  different  points  on  the  surface  of 
+the  dolphin's  head.  Mechanisms  of  sound  generation  are  proposed;  the  most 
+probable  sound -emitting  elements  are  thought  tc  be  air  cavities  which  are 
+excited  by  impact.  In  the  case  of  HF  pulses,  the  radiation  has  a non -resonant 
+character,  while  for  LF  pulses,  it  is  weakly  resonant. 
+
+Experiments  on  directivity  of  radiation  show  that  while  the 
+skull  plays  a major  role,  the  soft  tissue  of  the  dolphin's  head  also  pla\  s a 
+definite  part  in  narrowing  the  directional  pattern  at  high  frequencies. 
+
+Possible  mechanisms  of  sound  reception  by  dolphins  are  also  discussed. 
+
+The  results  are  given  of  the  study  of  noise  stability  of  the  dolphin's  echo- 
+ranging mechanism,  as  well  as  the  capability  to  determine  the  direction 
+toward  the  sound  source  and  to  distinguish  underwater  objects.  A method  is 
+described  for  the  protection  of  the  dolphin  hearing  organ  (Tursiops  truncatus) 
+against  intense  echo-ranging  pulses  by  skull  shielding  together  with  a systen 
+of  air -containing  ducts.  Methods  for  evaluating  the  efficiency  of  a dolphin's 
+echo- ranging  mechanism  are  given.  [Romanenko,  Ye.  V.  Some  characteristics 
+of  dolphin  echo-ranging  mechanisms.  Trudy  5-y  Vscsoyuznoy  shkoly-semina ra 
+po  stat.  gidroakustike  (SG-5) . Novosibirsk,  1974,  31n-331.  (RZhF,  o/75, 
+#hZh979)J. 
+
+
+Model  For  Focusing  an  Acoustic  Wave  (abst ract ) 
+
+An  approximate  model  for  the  diffraction  structure  of  a focusei 
+acoustic  field  in  its  focal  plane  is  offered.  The  treatment  is  mainlv 
+simplified  b\  accounting  for  nonlinearity  and  diffraction  separately,  even 
+though  their  effects  occur  simultaneously;  the  resulting  tppr« -xin.atmn  i 
+a reasonably  accurate  description  of  the  space-time  charai  teristi*  s f ' • <• 
+focused  field.  Several  variants  are  treated,  including  subsonic  and  supers"- d< 
+excitation.  The  authors  note  that  neglecting  nonlinearity  is  actually  <nl\ 
+justifiable  at  sufficiently  high  sonic  frequencies,  e.  g.  10  MHz  in  water. 
+
+A numerical  example  is  given  to  illustrate  optimum  conditions 
+for  the  co  nbined  nonlinear  and  diffraction  effects.  This  shows  that  for 
+
+
+5 
+
+
+excitation  at  1.  5 MHz  in  water,  maximum  gains  will  attain  8 kw/cm*' 
+at  the  focus,  which  is  half  again  as  much  as  the  value  obtained  without 
+accounting  for  nonlinearity,  but  still  below  cavitation  threshold. 
+[Ostrovskiy , L.  A.,  and  A.  M.  Sutin.  Focusing  finite -amplitude  acoustii 
+waves.  DANSSSR,  v.  221,  no.  n,  1975,  1300-1303). 
+
+
+I 
+
+
+Recent  Publications 
+
+
+Ayzinov,  M.  M.,  and  A.  M.  Ray rashevskiy . Radiotekhnika 
+i radionavigatsionnyye  pribory.  Uchebnik.  (Radio -frequency  techniques 
+and  radio -navigational  instruments.  Textbook).  Moskva,  Transport, 
+
+1975,  431  p,  (LC-VKP)  
+
+Druzin,  Ya,  V,,  and  S.  E.  Koganer.  Televizionnyyc 
+sistemy  otobrazheniya  informatsii.  (Television  data-di splay  systems). 
+Leningrad,  Energiya,  1975,  78  p.  (LC-VKP) 
+
+Elektronnyye  characteristiki  i elektron-fononnyye 
+vzaimodeyst\  iya  sverkhprovodyashchikh  metallov  i splavov.  (Electron 
+character istics  and  electron -phonon  interactions  of  superconducting 
+metals  and  alloys).  Fizicheskiy  institnt  im.  P.  N.  Lebedeva.  Tr,:,i y f 
+no.  82.  Moskva,  Nauka,  1975,  102  p.  (LC-VKP) 
+
+Fedotov,  Ya.  A.  Poluprovodnikovaya  elektronika,  god 
+2001  ->'•  (Semiconductor  electronics  in  the  year  2001).  Moskva,  Sov.  radio 
+1975,  102  p.  (LC-VKP)  
+
+Corn,  L.  S. , and  I).  I.  Khazanov.  Izbi ratel'nyye  radiometri 
+(Selective  radiometers).  Moskva,  Atomizdat,  1975,  373  p.  (LC-VKP) 
+
+
+Issledovanyye  elektricheskikh  silovykh  impuJ’snykh  sistem. 
+Sbornik  nauchnykh  trudov.  (Investigation  of  electrical  pulsed  power  systems. 
+Collection  of  scientific  papers).  Novosibirsk,  Institut  gornogo  dela,  1974, 
+
+143  p.  <LC- VKP) 
+
+
+Kalinina,  L.  S.  Kachestvennyv  analiz  polimerov. 
+(Qualitative  analysis  of  polymers'.  Moskva,  Khimiya,  1975,  24 
+
+
+p.  ( I \ K I ’ 
+
+
+Kaminskiy,  o.  S.  Ustroystiv  obrahotki  signalov  na 
+ul'trazvnkovyh  poverkhnostnykh  volnakh.  (Device  for  processing  ultrasonic 
+surface-wave  signals).  Moskva,  Sov.  radio,  1975,  17'.  p.  (LC-VKP) 
+
+Met rologicheskiye  voprosy  radiofiziki.  Sbornik  stato\. 
+
+(Met rological  problems  of  radiophysics ).  Meteorologicheskive  instituty 
+SSSR . Trudy,  no.  158(218).  Leningrad,  VNILM,  1974,  154  p.  fl.C-YI-  p, 
+
+
+Nov-yye  metody  issledovaniya  polimerov.  Sbornik  statey. 
+
+(New  methods  in  polymer  research.  Collection  of  articles).  Kiyov 
+Nauk.  dumka,  1975,  19°  d.  (LC-VKP)  — 1 
+
+Oleynik,  E.  F.  , A.  L.  Ruchachenko,  and  Ye.  V.  A i :ri  • 
+Spectroskopicheskiye  metody  issledovaniya  polimerov.  (Spect rose  opic 
+methods  of  polymer  research).  Moskva,  Znaniye,  V>75.  \,3  p.  (l.r‘-  \ i | 
+
+Orlova,  ^ e.  ^u.,  et  al.  Oktogen  - termostoykoye 
+vzry vchatoy e veshchestov.  (Octogene  - a heat-resistant  explosive).  Mosk\  . 
+Nedra,  lr>75,  125  p.  (LC-VKP)  
+
+
+Protsessy  rosta  i sinteza  poluprovodnikovykh  kristallov 
+i plcnok.  Materialy  simpoziuma.  (Growth  and  synthesis  processes  of 
+semiconductor  crystals  and  films.  Proceedings  of  symposium). 
+Novosibirsk,  Nauka,  Sib.  otdeleniye,  1975.  (LC-VKP) 
+
+Rubinchik,  L.  Ye.  Elektropechi  s nagrevatelyami  i/. 
+karbida  kremniya.  (Electrical  furnaces  with  silicon  carbide  heaters). 
+Moskva,  Energiya,  1975,  94  p.  (LC-VKP) 
+
+Tekhnolog-'  <s  stroitel'nov  lerciruiki  i iskustvonnykh 
+poristykh  zapolniteley.  Suornik  statey.  (Technology  of  structural  ceramic 
+and  artificial  porous  fillers.  Collection  of  articles).  Gosudar  stvenny 
+VNII  stroitel'nykh  materialov  i konstruktsiy,  VNllSTROM.  Sbornik 
+trudov,  no.  29(57).  Moskva,  1974,  159  p.  (LC-VKP) 
+
+
+H 
+
+
+SOURCE  IDENTIFICATION 
+
+
+IVliZ  Radiofiz 
+
+Izvestiya  vysshikh  uchobnykh  zavcdcniy 
+Radiofizika 
+
+RZh  Elektr 
+
+- 
+
+Referativnyy  zhurnal.  Eleklronika  i ye 
+primencniyc 
+
+OiS 
+
+- 
+
+Optika  i spoktroskopiya 
+
+RZhRadiot 
+
+- 
+
+Referativnyy  zhurnal.  Radiotokhnika 
+
+ZhTF  P 
+
+- 
+
+Pis'ma  v Zhurnal  tekhnichoskey  fiziki 
+
+ZhTF 
+
+- 
+
+Zhurnal  tekhnichoskoy  fiziki 
+
+ZhETF  P 
+
+- 
+
+Pis'ma  v Zhurnal  ekspcrimental ' noy  i 
+teoreticheskoy  fiziki 
+
+R ZhElektrotekh 
+
+- 
+
+Referativnyy  zhurnal.  Elcktrotckhnika 
+
+RZhF 
+
+- 
+
+Referativnyy  zhurnal.  Fizika 
+
+DAN  SSSR 
+
+- 
+
+Akademiya  nauk  SSSR.  Doklady 
+
+<) 
+
+

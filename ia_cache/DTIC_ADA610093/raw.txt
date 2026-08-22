@@ -1,0 +1,709 @@
+Army  Research  Laboratory 
+^ 
+
+Impact  of  Cognitive  Architectures  on  Human- Computer 
+
+Interaction 
+
+by  Sidney  C  Smith 
+
+
+ARL-TR-7092 
+
+
+September  2014 
+
+
+Approved  for  public  release;  distribution  is  unlimited. 
+
+
+NOTICES 
+
+Disclaimers 
+
+
+The  findings  in  this  report  are  not  to  be  eonstrued  as  an  oftieial  Department  of  the  Army  position  unless  so 
+designated  by  other  authorized  doeuments. 
+
+Citation  of  manufaeturer’s  or  trade  names  does  not  eonstitute  an  oftieial  endorsement  or  approval  of  the  use 
+thereof. 
+
+
+Destroy  this  report  when  it  is  no  longer  needed.  Do  not  return  it  to  the  originator. 
+
+
+Army  Research  Laboratory 
+
+Aberdeen  Proving  Ground,  MD  21005-5067 
+
+
+ARL-TR-7092 
+
+
+September  2014 
+
+
+Impact  of  Cognitive  Architectures  on  Human- Computer 
+
+Interaction 
+
+
+Sidney  C  Smith 
+
+Computational  and  Informational  Sciences  Directorate,  ARL 
+
+
+Approved  for  public  release;  distribution  is  unlimited. 
+
+
+REPORT  DOCUMENTATION  PAGE 
+
+
+Form  Approved 
+OMB  No.  0704-0188 
+
+
+Public  reporting  burden  for  this  collection  of  information  is  estimated  to  average  1  hour  per  response,  including  the  time  for  reviewing  instructions,  searching  existing  data  sources,  gathering 
+and  maintaining  the  data  needed,  and  completing  and  reviewing  the  collection  information.  Send  comments  regarding  this  burden  estimate  or  any  other  aspect  of  this  collection  of  information, 
+including  suggestions  for  reducing  the  burden,  to  Department  of  Defense,  Washington  Headquarters  Services,  Directorate  for  Information  Operations  and  Reports  (0704-0188),  1215  Jefferson 
+Davis  Highway,  Suite  1204,  Arlington,  VA  22202-4302.  Respondents  should  be  aware  that  notwithstanding  any  other  provision  of  law,  no  person  shall  be  subject  to  any  penalty  for  failing  to 
+comply  with  a  collection  of  information  if  it  does  not  display  a  currently  valid  OMB  control  number. 
+
+PLEASE  DO  NOT  RETURN  YOUR  FORM  TO  THE  ABOVE  ADDRESS. 
+
+
+2.  REPORT  TYPE 
+
+Final 
+
+
+1.  REPORT  DATE  (DD-MM-YYYY) 
+
+September  2014 
+
+
+4.  TITLE  AND  SUBTITLE 
+
+Impact  of  Cognitive  Architectures  on  Human-Computer  Interaction 
+
+
+6.  AUTHOR(S) 
+
+Sidney  C  Smith 
+
+
+3.  DATES  COVERED  (From  -  To) 
+
+January  2014-June  2014 
+
+
+5a.  CONTRACT  NUMBER 
+
+
+5b.  GRANT  NUMBER 
+
+
+5c.  PROGRAM  ELEMENT  NUMBER 
+
+
+5d.  PROJECT  NUMBER 
+
+
+5e.  TASK  NUMBER 
+
+
+5f.  WORK  UNIT  NUMBER 
+
+
+7.  PERFORMING  ORGANIZATION  NAME(S)  AND  ADDRESS(ES) 
+
+US  Army  Research  Laboratory 
+ATTN:  RDRL-CIN-S 
+
+Aberdeen  Proving  Ground,  MD  21005-5069 
+
+
+9.  SPONSORING/MONITORING  AGENCY  NAME(S)  AND  ADDRESS(ES) 
+
+
+8.  PERFORMING  ORGANIZATION 
+REPORT  NUMBER 
+
+ARL-TR-7092 
+
+
+10.  SPONSOR/MONITOR'S  ACRONYM(S) 
+
+
+11.  SPONSOR/MONITOR'S  REPORT 
+NUMBER(S) 
+
+
+12.  DISTRIBUTION/AVAILABILITY  STATEMENT 
+
+Approved  for  public  release;  distribution  is  unlimited. 
+
+
+13.  SUPPLEMENTARY  NOTES 
+
+Author  email:  <sidney.c.smith24.civ@mail.mil> 
+
+
+14.  ABSTRACT 
+
+Researchers  have  been  developing,  using,  and  implementing  cognitive  architectures  in  an  attempt  to  understand  how  humans 
+gather,  process,  and  use  information.  Cognitive  architectures  have  been  used  to  advance  the  study  and  application  of  artificial 
+intelligence.  They  have  also  been  used  to  predict  human  performance  and,  in  so  doing,  evaluate  user  interfaces.  In  this  report  we 
+will  review  the  influence  of  several  cognitive  architectures — specifically,  asking  what  promises  were  made,  what  impacts  were 
+realized,  and  what  potential  impact  can  we  reasonably  expect  in  the  future. 
+
+
+15.  SUBJECT  TERMS 
+
+human-computer  interaction  (HCI),  cognitive  architectures,  ACT-R,  CLARION,  EPIC,  Soar 
+
+
+16.  SECURITY  CLASSIFICATION  OF: 
+
+17.  LIMITATION 
+
+OF  ABSTRACT 
+
+18.  NUMBER 
+
+OF  PAGES 
+
+19a.  NAME  OF  RESPONSIBLE  PERSON 
+
+Sidney  C  Smith 
+
+a.  REPORT 
+
+Unclassified 
+
+b.  ABSTRACT 
+
+Unclassified 
+
+c.  THIS  PAGE 
+
+Unclassified 
+
+UU 
+
+18 
+
+19b.  TELEPHONE  NUMBER  (Include  area  code) 
+
+410-278-6235 
+
+11 
+
+
+Standard  Form  298  (Rev.  8/98) 
+Prescribed  by  ANSI  Std.  Z39.18 
+
+
+Contents 
+
+
+1.  Introduction  1 
+
+2.  Cognitive  Architectures  Overview  2 
+
+2. 1  The  Atomic  Components  of  Thought-Rational  (ACT-R) .  2 
+
+2.2  CLARION .  3 
+
+2.3  EPIC .  3 
+
+2.4  Soar .  3 
+
+3.  Early  Promises  4 
+
+4.  Applications  of  Cognitive  Architectures  5 
+
+5.  Conclusions  and  Future  Work  6 
+
+6.  References  9 
+
+Distribution  List  12 
+
+
+iii 
+
+
+Intentionally  left  blank. 
+
+
+IV 
+
+
+1.  Introduction 
+
+
+Newell  and  Card  observed  a  phenomenon  that  they  related  to  Gresham’s  law,  whieh  states,  “Bad 
+money  drives  out  good.’’^  Sir  Thomas  Gresham  notieed  that  the  newer  eoins  were  eonsidered 
+more  valuable;  therefore,  they  began  to  disappear  from  eireulation  because  people  would  rather 
+pay  with  the  older  coins,  which  were  considered  less  valuable.  Mundell  argues  that  the  expression 
+is  backwards  and  should  be  rendered,  “Good  money  drives  out  bad.’’^  I  suppose  it  depends  upon 
+whether  the  buyers  or  the  sellers  have  more  control  over  the  currency.  Newell  applies  this  same 
+logic  to  science  and  observes  that  “hard  science  drives  out  soft.’’^  Using  three 
+examples — Operations  Research,  Human  Factors,  and  Programming  Languages — Newell  and 
+Card  illustrate  how  the  hard  sciences  of  linear  programming,  engineering,  and  parsing  have 
+relegated  the  soft  sciences  into  the  background.  I  have  seen  this  in  software  engineering,  where 
+the  hard  functional  requirements  push  the  soft  nonfunctional  requirements  into  the  background. 
+Our  terminology,  functional  versus  nonfunctional,  displays  the  bias.  We  all  agree  that  usability, 
+maintainability,  and  security  are  important,  but  since  we  do  not  really  know  how  to  measure  these 
+things,  they  take  a  back  seat  to  things  that  we  can  measure. 
+
+Working  as  an  information  assurance  professional  for  10  years,  I  have  found  that  the  progression 
+of  security  is  directly  proportional  to  our  ability  to  measure  it.  Newell  and  Card  are  convinced  that 
+for  psychology  to  remain  relevant  in  human-computer  interaction  (HCI),  it  must  harden.  Their 
+vision  is  for  psychology  to  provide  engineering  style  theory  that  influences  the  design  of 
+computer  interfaces.  They  acknowledge  that  there  are  competing  visions.  One  vision  uses 
+psychology  primarily  as  an  evaluation  tool.  The  other  vision  provides  an  explanation  where  the 
+work  is  done  to  prove  that  the  theory  is  correct  and  not  to  provide  useful  tools  to  designers.  While 
+acknowledging  the  value  of  these  visions,  Newell  and  Card  clearly  state,  “They  will  never  beat 
+Gresham’s  Law.’’^  Hardening  a  science  is  difficult,  and  Newell  and  Card  acknowledge  four  major 
+obstacles  to  realizing  their  vision:  psychology,  as  it  applies  to  computer  interfaces,  is  too  low 
+level,  the  scope  is  too  limited,  it  is  too  late,  and  it  is  too  difficult  to  apply.  ^  The  hardest  science  in 
+this  space  deals  with  cognitive  architectures  and  makes  use  of  Fitts’s  Law,^  which  provides 
+empirical  data  that  may  be  used  to  provide  numbers  that  designers  may  incorporate  into  their 
+designs.  Card  et  al.  used  this  kind  of  science  when  they  built  the  Model  Human  Processor  and  the 
+Goals,  Operations,  Methods,  and  Selection  (GOMS)  model,  which  they  used  to  investigate  text 
+editing  with  a  line  editor  on  a  teletype  machine."^  One  of  the  key  issues  is  that  the  problems 
+designers  are  trying  to  solve  are  much  bigger  than  the  problems  researchers  are  investigating. 
+
+
+1 
+
+
+Moreover,  the  findings  in  the  researeh  do  not  seale  up  to  solving  the  problems  of  the  designers. 
+Newell  and  Card  demonstrate  that  the  average  life  eyele  of  a  user  interfaee  deviee  is  about  20 
+years.  By  1985  when  they  had  eompleted  their  work,  teletype  maehines  had  been  replaeed  by 
+glass  terminals,  and  line  editors  had  been  replaeed  by  full  sereen  visual  editors.  By  the  time  I 
+started  my  eareer  in  1989,  teletypes  where  a  relie  of  the  past,  and  the  only  ones  I  ever  saw  were 
+the  eonsoles  of  Digital  Equipment  Corporation  Virtual  Address  extension  DEC  VAX  11-785 
+super  minieomputers  that  were  themselves  eonsidered  old  at  the  time.  Beeause  of  the  rapid 
+ehanges  in  teehonology,  by  the  time  the  researeh  is  eoneluded  and  the  findings  have  been 
+published,  the  results  are  diffieult  to  apply  to  modern  teehnologies. 
+
+In  this  report,  I  will  examine  the  progress  that  has  been  made  sinee  1985  to  diseover  how 
+sueeessfully  the  seienee  has  been  hardened  and  gauge  the  realization  of  Newell  and  Card’s  vision. 
+In  Seetion  2, 1  will  review  some  of  the  eognitive  arehiteetures  being  used  in  HCI.  In  Seetion  3, 1 
+will  outline  some  of  the  early  promises  made  in  this  field.  In  Seetion  4, 1  will  eover  the 
+applieations  of  eognitive  arehiteetures.  In  Seetion  5, 1  will  eonelude  by  eomparing  the  promises  of 
+Seetion  3  to  the  deliveries  in  Seetion  4. 
+
+
+2.  Cognitive  Architectures  Overview 
+
+
+Cognitive  arehiteetures  are  used  to  express  the  psyehologieal  theories  in  a  quantitative  format  to 
+drive  the  models  neeessary  to  allow  applieation  designers  to  design  more  usable  systems  and  to 
+generate  intelligent  behavior.^  They  are  also  foeused  on  those  aspeets  that  are  eonstant  over  time. 
+Eangley  et  al.  related  this  to  a  building,  saying,  “There  is  also  a  direet  analogy  with  a  building’s 
+arehiteeture,  whieh  eonsists  of  permanent  features  like  its  foundation,  roof,  and  rooms,  rather  than 
+its  furniture  and  applianees,  whieh  one  ean  move  or  replaee.”^  The  goals  of  quantitative  models 
+and  intelligent  behavior  are  eomplementary,  and  eaeh  serves  to  mature  or  harden  this  seienee. 
+Eangley  et  al.  inelude  brief  summaries  of  18  separate  eognitive  arehiteetures,  but  foeus  on  only 
+4.^  In  a  similar  manner  we  will  foeus  on  only  a  few  arehiteetures. 
+
+2.1  The  Atomic  Components  of  Thought-Rational  (ACT-R) 
+
+In  their  book  The  Atomic  Components  of  Thought,  Anderson  and  Eebiere  present  their  ACT-R 
+eognitive  model,  whieh  they  elaim  “eonsists  of  a  theory  of  the  nature  of  human  knowledge,  a 
+theory  of  how  this  knowledge  is  deployed,  and  a  theory  of  how  that  knowledge  is  aequired.”^ 
+ACT-R  is  eomposed  of  modules  that  eommunieate  with  a  eentral  produetion  system  through 
+
+
+2 
+
+
+buffers.  The  number  of  modules  is  not  key  to  the  theory,  and  more  may  be  added  as  necessary. 
+Theories  and  techniques  have  been  incorporated  from  other  cognitive  architectures  like  Executive 
+Process-Interactive  Control  (EPIC)  cognitive  architecture.  The  core  is  the  buffering  to  the  central 
+production  system  because  the  central  production  system  may  work  with  only  the  data  that 
+currently  reside  in  its  buffers.  Anderson  et  al.  go  to  great  lengths  to  show  how  their  architecture 
+maps  to  the  regions  of  the  brain  as  seen  in  integrated  brain  imaging.^ 
+
+2.2  CLARION 
+
+The  CEARION  cognitive  architecture  is  composed  of  four  subsystems:  the 
+action-centered-centered  subsystem  (ACS),  the  non- action-centered  subsystem  (NACS),  the 
+motivational  subsystem  (MS),  and  the  meta-cognitive  subsystem  (MCS).^  Each  of  these 
+subsystems  has  both  an  implicit  and  explicit  representational  structure.  The  ACS  uses  neural 
+networks  to  compute  the  quality  of  each  action.  It  then  selects  the  action  with  the  highest  quality. 
+There  is  a  Q-learning  algorithm  that  improves  this  assessment  over  time.  The  NACS  provides  the 
+memory  for  the  architecture.  MS  sets  the  goals  and  evaluates  whether  the  goal  has  been  achieved. 
+The  MCS  monitors  the  system  to  improve  its  cognitive  performance.^ 
+
+2.3  EPIC 
+
+David  Kieras  and  David  Meyer  presented  the  EPIC  cognitive  architecture  and  used  it  to  explore 
+human  performance.^  The  EPIC  cognitive  architecture  builds  upon  the  Model  Human  Processor"^ 
+and  is  composed  of  a  collection  of  models  of  human  performance,  fashioned  together  by  a 
+simplified  theory,  and  tuned  using  performance  information  gathered  from  the  literature.  To 
+validate  the  model,  they  used  EPIC  to  examine  common  problems  in  HCI  (e.g.,  choosing  an  item 
+from  a  pull-down  menu,  typing  spoken  data,  and  processing  multiple  visual  information  sources). 
+Eor  each  of  these  problems  the  predictions  from  EPIC  were  compared  to  actual  human 
+performance.^  What  differentiates  EPIC  from  ACT-R  is  that  EPIC  has,  from  the  beginning,  used 
+empirical  data  to  provide  constraints  on  the  model,  like  how  long  it  takes  a  human  to  move  a 
+hand,  or  the  smallest  area  upon  which  an  eye  may  focus. 
+
+2.4  Soar 
+
+The  Soar  cognitive  architecture  uses  problem  spaces  connected  to  a  production  system  that  uses 
+subgoaling  via  impasse  detection,  learning,  and  chunking  to  create  a  model  of  human  thought. 
+The  cognitive  architecture  was  built  iteratively  with  new  modules  and  functionality  being  added 
+to  almost  every  new  version.  In  2004  Nuxoll  and  Eaird  added  episodic  memory  to  the  Soar 
+architecture.^^  In  2008  Eaird  presented  extensions  to  Soar  that  included  nonsymbolic 
+
+
+3 
+
+
+representation,  new  learning  mechanisms,  and  long-term  memories.  These  extensions  enable 
+working  memory  activation,  reinforced  learning,  emotion,  semantic  memory,  episodic  memory, 
+and  visual  imagery.^^  In  2010  Rosenbloom  created  a  variant  of  the  Soar  architecture  based  upon 
+graphical  models. 
+
+
+3.  Early  Promises 
+
+
+Over  the  years  researchers  investigating  cognitive  architectures  have  identified  the  potential  in 
+these  models  to  impact  HCI.  Newell  and  Card  discussed  sound  theories  coming  out  of  cognitive 
+architecture  that  would  be  used  by  interface  designers  the  same  way  that  engineers  use  the 
+theories  of  physics  to  build  bridges.'  They  also  envisioned  a  design  tool  that  would  have  the 
+theories  and  the  quantitative  data  embedded  inside  of  it,  providing  this  capability  to  the  designer 
+while  insulating  the  designer  from  it.'  Kieras  and  Meyer  talked  about  using  cognitive 
+architectures  to  predict  human  performance  and  to  compare  different  user  interface  approaches.^ 
+Langley  et  al.  discussed  using  cognitive  architectures  to  simulate  humans  for  pedagogical  or 
+entertainment  purposes.^  Pirolli  asserted  that  psychology  ought  to  be  able  to  answer  questions 
+about  how  to  design  application  programs.'"'  In  their  1990  work,  Olson  and  Olson  identified  five 
+roles  for  cognitive  architectures:'^ 
+
+1.  Initially  constraining  the  design  space,  so  that  one  does  not  build  an  interface,  for 
+example,  that  requires  more  items  to  be  kept  in  memory  than  will  fit  in  working 
+memory  (WM). 
+
+2.  Answering  specific  design  decisions,  so  that  one  can  decide,  for  example,  between 
+a  dialogue  that  requires  few  keystrokes  but  difficult  retrieval  from  memory  or  one  that 
+involves  more  keystrokes  but  is  easier  to  remember. 
+
+3.  Estimating  the  total  time  for  task  performance  with  sufficient  accuracy  to  make 
+decisions  about  how  many  people  are  needed  to  staff  the  performance  of  a  repetitive 
+operational  task  on  a  computer. 
+
+4.  Providing  the  base  from  which  both  to  calculate  training  time  and  to  guide  training 
+documentation  to  help  the  user  determine  in  which  situations  which  method  is  most 
+efficient. 
+
+5.  Knowing  which  stages  of  activity  take  the  longest  time  or  produce  the  most  errors, 
+in  directing  research  toward  the  aspects  of  human-computer  interaction  that  will  have 
+strong  future  performance  implications. 
+
+
+4 
+
+
+With  the  exception  of  using  cognitive  architecture  to  simulate  humans,  I  believe  that  their  list 
+provides  a  useful  summary  of  the  early  promises  of  cognitive  architectures  to  the  HCI  community. 
+
+
+4.  Applications  of  Cognitive  Architectures 
+
+
+In  the  last  30  years  since  Newell  and  Card  published  their  work  on  the  prospects  of  this 
+technology,  researchers  have  made  significant  progress.  Space  will  not  permit  an  exhaustive 
+summary;  however,  I  have  highlighted  some  of  this  work: 
+
+
+•  John  and  Vera  were  able  to  use  GOMS  analysis  and  the  Soar  cognitive  architecture  to 
+predict  the  behavior  of  an  expert  using  a  highly  interactive  machine-based  graphic  task  (i.e., 
+a  video  game)  with  a  60%  success  rate.^^ 
+
+•  Gray  et  al.  used  GOMS  analysis  in  Project  Ernestine  to  compare  the  time  it  took  telephone 
+company  operators  to  complete  certain  tasks. This  study  showed  that  the  performance  of  a 
+new  workstation  was  actually  slower  than  the  previous  workstation.  Their  theoretical 
+findings  were  validated  with  empirical  data.^’ 
+
+•  Byrne  reported  the  work  of  Nelson  et  al.  in  constructing  the  NASA  Test  Director  (NTD) 
+simulator  in  NTD-Soar.^^  This  simulation  was  able  to  perform  the  3,000  pages  of  tasks  that 
+an  NTD  would  need  to  perform  before  a  launch.  Although  this  simulation  probably  will  not 
+be  used  to  launch  spacecraft,  it  could  be  used  to  test  new  interfaces  to  automate  some  of  the 
+NTD’s  work.^^ 
+
+•  Chella  et  al.  proposed  a  cognitive  architectural  approach  to  the  solve  problems  with 
+artificial  vision  for  an  autonomous  agent. 
+
+•  Huguenard  et  al.  conducted  a  study  of  telephone  menus  and  discovered  that  contrary  to 
+prevailing  wisdom,  smaller  menus  do  not  reduce  error  rate.  The  cognitive  architecture 
+provided  a  theoretical  explanation  of  why  this  happened. 
+
+•  Sweller  et  al.  described  their  use  of  cognitive  architectures  for  designing  curriculum.^' 
+
+•  Byrne  used  the  ACT-R  cognitive  architecture  to  successfully  predict  human  performance  in 
+menu  selection. 
+
+
+5 
+
+
+•  Cockburn  et  al.  used  the  Hick-Hyman  and  Fitts’s  law  to  compare  4  different  menu 
+technologies:  traditional,  recency,  frequency,  and  adaptive.  They  compared  their  results 
+with  empirical  data  and  found  that  they  matched  extremely  well.^^ 
+
+•  Hornof  used  the  EPIC  cognitive  architecture  to  compare  the  performance  of  several 
+different  visual  layouts. 
+
+•  Salvucci  successfully  used  the  ACT-R  cognitive  model  to  explain  and  predict  the  effects  of 
+distraction  upon  driving  an  automobile.^^ 
+
+•  Magerko  et  al.  used  the  Soar  cognitive  architecture  to  implement  characters  in  a  computer 
+game  based  upon  Unreal  Toumament.^^  They  observed  that  every  computer  game  in 
+existence  is  proof  that  you  do  not  need  realistic  artificial  intelligence  (Al)  in  the  nonplayer 
+characters  (NPCs)  for  the  game  to  be  enjoyable.  They  lamented  that  many  of  the  most 
+popular  games  like  Quake  have  very  limited  violent  adversarial  relations  with  the  NPCs, 
+which  are  basically  just  “computerized  punching  bags.”^^  Their  goal  is  to  create  a 
+nonviolent,  plot  driven  game  that  really  needs  Al  characters.  The  basic  framework  for  this 
+game  is  complete,  and  now  they  are  enriching  it  toward  their  ultimate  goal.^^ 
+
+•  Tambe  et  al.  are  using  cognitive  architectures  to  simulate  human  pilots  in  a  battlefield 
+simulation.  In  this  work  they  were  preparing  for  the  Synthetic  Theatre  of  War- 1997  exercise 
+where  between  10,000  and  50,000  automated  agents  would  work  with  up  to  1,000 
+humans. The  results  of  this  exercise  are  documented  by  Laird  et  al.^^ 
+
+
+5.  Conclusions  and  Future  Work 
+
+
+To  assess  whether  cognitive  architectures  have  been  able  to  fulfill  their  potential,  in  the  following 
+paragraphs,  I  will  take  each  role  as  outlined  by  Olson  and  Olson,  plus  the  promises  of  simulated 
+humans,  and  compare  it  against  the  accomplishments  listed  in  Section  3: 
+
+•  Role  #1:  “Initially  constraining  the  design  space,  so  that  one  does  not  build  an  interface,  for 
+example,  that  requires  more  items  to  be  kept  in  memory  than  will  fit  in  working  memory 
+(WM).”^^  Miller’s  rule  of  7,  plus  or  minus  2,^^  has  made  its  way  into  the  mainstream  of 
+interface  design  thinking.  It  is  not  clear  to  me  that  cognitive  architectures  played  a 
+significant  role  in  establishing  this  rule;  however,  this  is  clearly  a  case  where  psychology 
+has  influenced  interface  design. 
+
+
+6 
+
+
+•  Role  #2:  “Answering  specific  design  decisions,  so  that  one  can  decide,  for  example, 
+between  a  dialogue  that  requires  few  keystrokes  but  difficult  retrieval  from  memory  or  one 
+that  involves  more  keystrokes  but  is  easier  to  remember.”^^  Byrne’s  work  on  menu 
+selection,^^  Cockbum  et  al.’s  work  on  menu  technology,^^  and  Hornof ’s  work  on  visual 
+layout^"^  show  that  cognitive  architectures  are  indeed  being  used  to  fill  the  role;  however,  it 
+seems  that  these  tools  still  have  not  made  their  way  into  the  hands  of  interface  designers. 
+When  Tullis  et  al.  were  considering  navigation  architectures  for  a  redesign  of  the  Fidelity 
+Regional  Security  &  Operations  Website,  no  consideration  was  given  to  the  information 
+gained  from  cognitive  architectures.  They  simply  used  intuition  and  imitation  to  create  6 
+navigation  strategies  and  conducted  a  usability  study  to  discover  which  worked  the  best.^° 
+
+•  Role  #3:  “Estimating  the  total  time  for  task  performance  with  sufficient  accuracy  to  make 
+decisions  about  how  many  people  are  needed  to  staff  the  performance  of  a  repetitive 
+operational  task  on  a  computer.” The  work  of  Gary  et  al.  on  Project  Ernestine 
+demonstrates  the  value  of  cognitive  architectures  for  this  purpose. 
+
+•  Role  #4:  “Providing  the  base  from  which  both  to  calculate  training  time  and  to  guide 
+training  documentation  to  help  the  user  determine  in  which  situations  which  method  is  most 
+efficient.” Sweller  et  al.  demonstrate  that  cognitive  architectures  can  and  have  been  used 
+for  this  purpose. 
+
+•  Role  #5:  “Knowing  which  stages  of  activity  take  the  longest  time  or  produce  the  most 
+errors,  in  directing  research  toward  the  aspects  of  human-computer  interaction  that  will 
+have  strong  future  performance  implications.”'^  Huguenard  et  al.’s  work  with  phone  menus 
+demonstrates  how  cognitive  architectures  may  be  used  for  this  purpose. 
+
+•  Role  #6:  Providing  a  simulated  human  in  simulated  environments  for  training  and 
+entertainment.  The  work  of  Magerko  et  al.  and  Tambe  et  al.  demonstrates  the  ability  of 
+cognitive  architectures  to  fulfill  this  role. 
+
+
+Although  there  has  been  work  which  demonstrates  that  cognitive  architectures  are  capable  of 
+fulfilling  each  of  the  roles  promised  by  early  researchers,  we  are  still  a  long  way  from  the  vision 
+Newell  and  Card  described  where  psychology  would  provide  design  principles  that  would  be  used 
+by  interface  designers.  Interface  designers  are  still  more  likely  to  use  intuition  and  imitation  to 
+complete  their  work  rather  than  consult  psychologist  and  cognitive  models.  This  might  be  the 
+time  for  the  technology  to  establish  itself  in  Website  design.  World  Wide  Web  applications  are 
+mature  enough  for  the  research  to  be  able  to  provide  relevant  information.  Palmer’s  study  clearly 
+indicates  that  more  usable  Websites  have  the  ability  to  generate  more  revenue.^'  Increased 
+
+
+7 
+
+
+revenue  may  provide  the  incentive  necessary  to  utilize  this  technology  if  it  were  packaged  in  a 
+way  that  was  easy  for  Web  designers  to  use.  I  can  envision  a  virtual  Web  user  similar  to  the  virtual 
+NTD  described  earlier  that,  given  a  Website  and  goals,  would  be  able  to  assess  the  usability  of  the 
+site  and  provide  some  kind  of  score  and  suggestions  on  improvements.  Over  the  past  few  months, 
+I  have  personally  used  10  different  automated  Web  usability  tools,  but  almost  all  of  them  report 
+on  compliance  to  the  legal  requirements  to  support  usability  of  disabled  persons.  As  a  later 
+refinement,  research  into  the  cultural  aspects  of  Web  design  may  be  incorporated. 
+
+
+8 
+
+
+6.  References 
+
+
+1.  Newell  A,  Card  SK.  The  prospects  for  psychological  science  in  human-computer  interaction. 
+Hum.-Comput.  Interact.  1985;l(3):209-242. 
+
+2.  Mundell  R.  Uses  and  abuses  of  Gresham’s  law  in  the  history  of  money.  Zagreb  Journal  of 
+Economics.  1998;2(2):3-38. 
+
+3.  Soukoreff  RW,  MacKenzie  IS.  Towards  a  standard  for  pointing  device  evaluation, 
+perspectives  on  27  years  of  Fitts’  law  research  in  HCI.  International  Journal  of 
+Human-Computer  Studies.  2004;61(6):751-789. 
+
+4.  Card  SK,  Moran  TP,  Newell  A.  The  psychology  of  human-computer  interaction.  Boca  Raton 
+(FL):  CRC  Press;  1986. 
+
+5.  Fangley  P,  Faird  JE,  Rogers  S.  Cognitive  architectures:  research  issues  and  challenges. 
+Cognitive  Systems  Research.  2009;10(2):141-160. 
+
+6.  Anderson  JR,  Febiere  C.  The  atomic  components  of  thought.  New  York  (NY):  Psychology 
+Press;  1998. 
+
+7.  Anderson  JR,  Bothell  D,  Byrne  MD,  Douglass  S,  Febiere  C,  Qin  Y.  An  integrated  theory  of 
+the  mind.  Psychological  Review.  2004;111:1036-1060. 
+
+8.  Sun  R.  The  importance  of  cognitive  architectures:  an  analysis  based  on  CFARION.  Journal 
+of  Experimental  &  Theoretical  Artificial  Intelligence.  2007;19(2):159-193. 
+
+9.  Kieras  DE,  Meyer  DE.  An  overview  of  the  epic  architecture  for  cognition  and  performance 
+with  application  to  human-computer  interaction.  Human-Computer  Interaction. 
+1997;I2(4):39I-438. 
+
+10.  Faird  JE,  Rosenbloom  P.  The  evolution  of  the  Soar  cognitive  architecture.  In:  Mind  matters:  a 
+tribute  to  Allen  Newell;  Steier  D,  Mitchell  T,  editors.  New  York  (NY):  Psychology  Press; 
+2014;  p.  1-50. 
+
+11.  Nuxoll  A,  Faird  JE.  A  cognitive  model  of  episodic  memory  integrated  with  a  general 
+cognitive  architecture.  In:  Proceedings  of  the  International  Conference  on  Cognitive 
+Modelling,  ICCM  2004;  2004  July  30-August  1;  Pittsburgh,  PA.  p.  220-225. 
+
+
+9 
+
+
+12.  Laird  JE.  Extending  the  soar  cognitive  architecture.  Erontiers  in  Artificial  Intelligence  and 
+Applications.  2008;  17 1:224. 
+
+13.  Rosenbloom  PS.  Rethinking  cognitive  architecture  via  graphical  models.  Cognitive  Systems 
+Research.  2011;  12(2):  198-209. 
+
+14.  Pirolli  P.  Cognitive  engineering  models  and  cognitive  architectures  in  human-computer 
+interaction.  In:  Handbook  of  applied  cognition;  Durso  ET,  Nickerson  RS,  Damis  S, 
+Eewandoskey  S,  Perfect  TJ,  editors.  West  Sussex,  England:  John  Wiley  &  Sons;  1999.  p. 
+441-477. 
+
+15.  Olson  JR,  Olson  GM.  The  growth  of  cognitive  modeling  in  human-computer  interaction 
+since  GOMS.  Hum.-Comput.  Interact.  1990;5(2):221-265. 
+
+16.  John  BE,  Vera  AH.  A  GOMS  analysis  of  a  graphic  machine-paced,  highly  interactive  task. 
+
+In:  Proceedings  of  the  SIGCHI  Conference  on  Human  Eactors  in  Computing  Systems;  1992  ; 
+Monterey,  CA.  CHI  ’92,  New  York,  NY,  USA:  ACM;  1992.  p.  251-258. 
+
+17.  Gray  WD,  John  BE,  Atwood  ME.  Project  Ernestine:  validating  a  GOMS  analysis  for 
+predicting  and  explaining  real-world  task  performance.  Human-Computer  Interaction. 
+1993;8(3):237-309. 
+
+18.  Byrne  MD.  Cognitive  architecture.  In:  The  human-computer  interaction  handbook: 
+fundamentals,  evolving  technologies  and  emerging  applications;  Jacko  JA,  Sears  A,  editors. 
+Hillsdale  (NJ):  Eawrence  Erlbaum  Associates  Inc.;  2003;  p.  97-117. 
+
+19.  Chella  A,  Erixione  M,  Gaglio  S.  A  cognitive  architecture  for  artificial  vision.  Artificial 
+Intelligence.  1997;89(1):73-111. 
+
+20.  Huguenard  BR,  Eerch  EJ,  Junker  BW,  Patz  RJ,  Kass  RE.  Working-memory  failure  in 
+phone-based  interaction.  ACM  Transactions  on  Computer-Human  Interaction  (TOCHI). 
+1997;4(2):67-102. 
+
+21.  Sweller  J,  Van  Merrienboer  JJ,  Paas  EG.  Cognitive  architecture  and  instructional  design. 
+Educational  Psychology  Review.  1998;  10(3):25 1-296. 
+
+22.  Byrne  MD.  ACT-R/PM  and  menu  selection:  applying  a  cognitive  architecture  to  HCI. 
+International  Journal  of  Human-Computer  Studies.  2001;55(l):41-84. 
+
+23.  Cockburn  A,  Gutwin  C,  Greenberg  S.  A  predictive  model  of  menu  performance.  In: 
+Proceedings  of  the  SIGCHI  Conference  on  Human  Eactors  in  Computing  Systems;  2007.  San 
+Jose,  CA.  p.  627-636. 
+
+
+10 
+
+
+24.  Hornof  AJ.  Cognitive  strategies  for  the  visual  search  of  hierarchical  computer  displays. 
+Human-Computer  Interaction.  2004;  19(3):  183-223. 
+
+25.  Salvucci  DD.  Modeling  driver  behavior  in  a  cognitive  architecture.  Human  Factors:  The 
+Journal  of  the  Human  Factors  and  Ergonomics  Society.  2006;48(2):362-380. 
+
+26.  Magerko  B,  Laird  J,  Assanie  M,  Kerfoot  A,  Stokes  D.  AI  characters  and  directors  for 
+interactive  computer  games.  In:  Proceedings  of  the  Sixteenth  Innovative  Applications  of 
+Artificial  Intelligence  Conference;  2004  July  27-29;  San  Jose,  CA.  Menlo  Park  (CA):  AAAI 
+Press;  2004.  p.  877-883. 
+
+27.  Tambe  M,  Johnson  WL,  Jones  RM,  Koss  F,  Laird  JE,  Rosenbloom  PS, 
+
+Schwamb  K.  Intelligent  agents  for  interactive  simulation  environments.  AI  magazine. 
+1995;I6(I):I5. 
+
+28.  Laird  JE,  Coulter  KJ,  Jones  RM,  Kenny  PG,  Koss  L,  Nielsen  PE.  Integrating  intelligent 
+computer  generated  forces  in  distributed  simulations:  Tacair-soar  in  STOW-97.  Paper 
+presented  at:  Simulation  Interoperability  Workshop.  1998  March  9-13;  Orlando,  PL. 
+
+29.  Miller  GA.  The  magical  number  seven,  plus  or  minus  two:  some  limits  on  our  capacity  for 
+processing  information.  Psychological  Review.  1956;63(2):81. 
+
+30.  Tullis  TS,  Connor  E,  LeDoux  L,  Chadwick-Dias  A,  True  M,  Catani  M,  Investments  P.  A 
+study  of  website  navigation  methods.  Paper  presented  at:  Usability  Professionals  Association 
+Conference.  2005  June  27-July  1;  Montreal,  Quebec. 
+
+31.  Palmer  JW.  Web  site  usability,  design,  and  performance  metrics.  Information  Systems 
+Research.  2002;  13(2):  15 1-I67. 
+
+32.  Luna  D,  Peracchio  LA,  de  Juan  MD.  Cross-cultural  and  cognitive  aspects  of  web  site 
+navigation.  Journal  of  the  Academy  of  Marketing  Science.  2002;30(4):397-410. 
+
+33.  Kralisch  A,  Eisend  M,  Berendt  B.  Impact  of  culture  on  website  navigation  behaviour.  In: 
+Proceedings  of  the  Ilth  International  Conference  on  Human-Computer  Interation;  2005  ;  Las 
+Vegas,  NV.  Lawrence  Erlbaum  Associates,  Inc.;  2005. 
+
+
+II 
+
+
+1  DEFENSE  TECHNICAL 
+(PDF)  INFORMATION  CTR 
+
+DTIC  OCA 
+
+2  DIRECTOR 
+
+(PDF)  US  ARMY  RESEARCH  LAB 
+RDRL  CIO  EL 
+
+IMAL  HRA  MAIL  &  RECORDS  MGMT 
+
+I  GOVT  PRINTG  OFC 
+(PDF)  A  MALHOTRA 
+
+I  DIR  USARL 
+(PDF)  RDRL  CIN  S 
+S  SMITH 
+
+
+12 
+
+

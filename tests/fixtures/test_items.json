@@ -1,0 +1,13 @@
+{
+  "_comment": "20-item dev fixture from query: subject:\"artificial intelligence\" AND date:[1975-01-01 TO 1990-12-31]",
+  "query": "subject:\"artificial intelligence\" AND date:[1975-01-01 TO 1990-12-31]",
+  "media_type": "texts",
+  "items": [
+    {"ia_identifier": "bitsavers_mitaiaitr_6600537", "expected_source_type": "paper"},
+    {"ia_identifier": "artificialintelligence00wins", "expected_source_type": "book"},
+    {"ia_identifier": "computervisionint00balt", "expected_source_type": "book"},
+    {"ia_identifier": "introductiontoar00russ", "expected_source_type": "book"},
+    {"ia_identifier": "knowledgerepres00brac", "expected_source_type": "book"}
+  ],
+  "_note": "Populate with real identifiers from your first discover() run against the live IA API"
+}

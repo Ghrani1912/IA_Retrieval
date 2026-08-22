@@ -1,0 +1,2233 @@
+AD/A-006  294 
+
+^[-jYPOTHETICAL  dialogue  EXHIBIT! NG 
+A KNOWLEDGE  BASE  FOR  A P ROG R A M- U NDE R- 
+STANDING  SYSTEM 
+
+
+Cordell  Green,  et  al 
+Stanford  University 
+
+
+Prepared  for! 
+
+Advanced  Research  Projects  Agency 
+
+
+J anu  ary  197  5 
+
+
+DISTRIBUTED  BY: 
+
+
+National  Technical  Information  Service 
+U.  S.  DEPARTMENT  OF  COMMERCE 
+
+
+UNCLASSIFIED 
+
+
+security  classification  of  this  page  CHTien  Oala  EnlaraJ) 
+
+
+REPORT  DOCUMENTATION  PAGE 
+
+
+1.  REPORT  NUMBER 
+
+
+I2,  GOVT  ACCESSION  NO. 
+
+
+RErtD  INSTRUCTIONS 
+BEFORE  COMPLETING  FORM 
+3.  RECIPIENT'S  CATALOG  NUMBER 
+
+
+STAN-CS-75-476 
+
+
+|4.  TITLE  (and  Subtitle) 
+
+
+5.  TYPE  OF  REPORT  & PERIOD  COVERED 
+
+
+A HYPOTHETICAL  DIALOGUE  EXillBITING  A KNOWLEDGE 
+BASE  FOR  A PROGRAM -UNDERSTANDING  SYSTEM, 
+
+
+technical,  Jan.  1975 
+
+
+6,  PERFORMING  ORG.  REPORT  NUMBER 
+
+STAN-CS-75-476 
+
+
+|7.  AUTHORCs) 
+
+
+8.  CONTRACT  OR  GRANT  NUMBERfs; 
+
+
+C,  Green  and  D«  Barstow 
+
+
+DAHC  1!?-73-C-0435 
+
+
+9.  PERFORMING  ORGANIZATION  NAME  AND  ADDRESS 
+
+
+Stanford  Univer.sity 
+Computer  Science  Department 
+Stanford,  California  94-305 
+
+11.  CONTROLLING  OFFICE  NAME  AND  ADDRESS 
+
+ARPA/IPT,  Attn:  Stephen  D.  Crocker 
+
+I400  Wilson  Blvd.,  Arlington,  Va.  C2L09 
+
+
+10.  PROGRAM  ELEMENT,  PROJECT,  TASK 
+AREA  a WORK  UNIT  NUMBERS 
+
+
+12  report  date 
+
+
+Jan.  1975 
+
+
+13.  NUMBER  OF  PAGES 
+
+
+"14.  MONITORING  AGENCY  NAME  & ADDRESSCi^  ditlerant  tram  Conltolling  Ollica)  [ IS.  SECURITY  CLASS,  (of  this  report) 
+
+
+ONR  Representative:  Philip  Surra 
+
+Durand  Aeronautics  Bldg.,  Rm.  I65 
+Stanford  University 
+Stanford,  California  94505 
+
+16.  DISTRIBUTION  STATEMENT  (ol  this  Report) 
+
+
+UNCLASSD'IED 
+
+
+ISa,  DECLASSI  FI  CATION--' DOWN  grading 
+SCHEDULE 
+
+
+Releasable  without  limitations  on  dissemination. 
+
+
+17,  DISTRIBUTION  STATEMENT  (ol  the  abstract  erUared  in  Block  20,  U di/ler^nt  from  Report) 
+
+
+18.  Supplementary  notes 
+
+
+Reproducnd  by 
+
+NATIONAL  TECHNICAL 
+INFORMATION  SERVICE 
+
+
+US  DopartmonI  of  Commofco 
+Spiingfiold,  VA  22151 
+
+
+I 1 9^  KEY  WORDS  (Continue  on  rt'vorso  ; Ido  if  i^ecessary  and  identify  by  block  number) 
+
+
+ABSTRACT  (Continue  on  reverse  side  if  necessary'  and  identify  by  block  number) 
+
+
+A hypothetical  dialogue  with  a fictitious  program-understanding  system 
+is  presented.  In  the  interactive  dialogue  the  computer  carries  out  a 
+detailed  synthesis  of  a simple  insertion  sort  program  for  linked  lists. 
+The  content,  length  and  complexity  of  the  dialogue  reflect  the  under- 
+j.ying  programming  knowledge  which  would  be  required  for  a system  to 
+accomplish  this  task.  The  nature  of  the  knowledge  is  discussed  and 
+the  codifi  ;ation  of  such  programming  knowledge  is  suggested  as  a major 
+research  area  in  the  development  of  program-unders banding  systems. 
+
+
+FORM  1/170 
+1 JAN  73  ^ 
+
+
+EDITION  OF  1 NOV  6S  IS  OBSOLETE 
+
+
+uWSiSUBilEa  TO  CHANGE 
+
+
+SECURITY  CLASSIFICATION  OF  THIS  PAGE  (When  Data  Entetod) 
+
+
+1 
+
+
+Stanford  Artificial  Intelligence  Laboratory 
+Memo  AIM-258 
+
+
+JANUARY  1975 
+
+
+Computer  Science  Department 
+Report  No.  STAN-CS-75-476 
+
+
+A Hypothetical  Dialogue 
+Exhibiting  a Knowledge  Base 
+For  a Program-Understanding  System 
+
+
+by 
+
+
+Cordell  Green 
+David  Barf?tow 
+
+
+ABSTRACT 
+
+
+A hypothetical  dialogue  with  a hctitious  program-iinclei  standing  system  is  presented.  In 
+the  interactive  dialogue  the  computer  carries  out  a detailed  synthesis  of  a .umplc  insertion  sort 
+program  for  linked  lists.  The  content,  length  and  complexity  of  the  dialogue  reflect  the 
+underlying  programming  knowledge  which  would  be  required  for  a system  to  accomplish  this 
+task.  The  nature  of  the  knowlcdg.;  is  discussed  and  the  codification  of  such  programming 
+knowledge  is  suggested  as  a major  research  area,  in  the  development  of  program- 
+understanding systems. 
+
+
+Tfiis  research  xuas  suppoual  by  the  Advanced  Research  Projects  Agency  of  the  Depaument  of 
+Defense  under  Contract  DAHC  D-7hC-043^  The  I'iews  and  conclusions  contained  in  this 
+document  are  those  of  the  authot(s)  and  should  not  be  interpreted  as  necessniily  representing  the 
+official  policies,  either  expressed  or  implied,  of  Stanford  University.  ARP  A,  or  the  V.  S. 
+Covernment. 
+
+
+Reproduced  in  the  V.S.A.  Avail able  from  the  National  Technical  Information  Service,  Springfield, 
+Pirginia  22151. 
+
+
+Ili^l 
+
+
+A HYPOTHETICAL  DIALOGUE 
+
+EXHIBITING  A KNOWLEDGE  HASE  FOR  A PROGRAM-UNDERSTANDING  SYSTEM 
+Green  and  Barr.tow  January,  1975 
+
+
+TABLE  OF  CONTENTS 
+
+
+INTRODUCTION 
+
+1 
+
+(a) 
+
+SUMMARY 
+
+1 
+
+(b) 
+
+DOMAIN  OF  DISCOURSE 
+
+2 
+
+A DIALOGUE 
+
+3 
+
+(a) 
+
+INTRODUCTION 
+
+3 
+
+(b) 
+
+PART  1:  Setting  Up  the  Main  Tasks 
+
+5 
+
+(0 
+
+PART  2:  Synthesizing  the  Selector 
+
+11 
+
+(d) 
+
+PART  3:  Synthesizing  the  Constructor 
+
+17 
+
+(e) 
+
+PART  4:  Completing  the  Program 
+
+31 
+
+III.  TYPES  OF  PROGRAMMING  KNOWLEDGE  33 
+
+IV.  SUMMARY  AND  CONCLUSIONS  35 
+
+V.  ACKNOWLEDGEMENTS  36 
+
+
+VI.  REFERENCES 
+
+
+37 
+
+
+INTRODUCTION  Pase  1 
+
+I.  INTRODUCTION 
+
+(a)  SUMMARY 
+
+The  overall  objective  of  our  research  is  to  gain  more  insight  into  the 
+programming  process  as  a necessary  step  toward  building  fno^ram-inulnuanilnu;  systnus. 
+Our  approach  has  been  to  examine  the  process  of  synthesizing  very  simple  programs  in 
+the  domain  of  sorting.  We  hope  that  by  beginning  with  this  simple  domain  and 
+developing  and  implementing  a reasonably  comprehensive  theory,  we  can  then  gauge 
+what  is  required  to  create  more  powerful  and  general  program-understanding  systems. 
+
+Toward  this  end,  we  are  working  on  first  isolating  and  codifying  the  knowledge 
+appropriate  for  the  synthesis  and  understanding  of  programs  in  this  class  and  then 
+embedding  this  knowledge  as  a set  of  rules  in  a computer  program.  Along  the  way,  we 
+have  developed  some  preliminary  views  about  what  a program-understanding  system 
+should  know. 
+
+Our  goal  in  this  particular  paper  is  to  present  a di  gI I ( ^A/ 1 1 h a 1 1 
+program-understanding  system.  A dialogue  was  chosen  as  a method  of  presentation 
+that  would  exemplify,  in  an  easily  understood  fashion,  what  such  a systonri  should  know. 
+The  subject  of  the  dialogue  is  the  synthesis  of  a simple  insertion  sort  program.  Each 
+step  in  the  dialogue  corresponds  to  the  utilization  of  one  or  more  pieces  of  suggested 
+programming  knowledge.  Most  of  this  knowledge  is  stated  explicitly  in  C'och  step.  The 
+dialogue  presented  here  is  a highly  fictional  one,  although  some  portions  of  the 
+reasoning  shown  in  the  dialogue  have  been  tested  in  an  experimental  system. 
+
+
+INTRODUCTION 
+
+
+page  2 
+
+
+We  are  now  in  the  process  of  formulating  the  necessary  programming  knowledge 
+as  a set  of  synthesis  rules.  However,  the  scope  of  this  paper  does  not  include  the 
+presentation  of  the  current  state  of  our  rules.  So  far  come  110  rules  have  been 
+developed  and  are  being  refined  in  a rule-testing  system.  The  synthesis  tasks  on  which 
+tr^ese  rules  are  being  debugged  include  two  insertion  sorts,  one  selection  sort,  and  a 
+list  reversal.  We  hope  to  present  in  a later  paper  a description  of  the  set  of  rules. 
+
+As  will  become  apparent  in  the  dialogue,  one  of  our  conjectures  is  that  a 
+program-understanding  system  will  need  very  large  amounts  of  many  different  kinds  of 
+knowledge.  This  seems  to  be  the  key  to  the  flexibility  necessary  to  synthesize, 
+analyze,  modify,  and  debug  a large  class  of  programs.  In  addition  to  the  usual  types  of 
+programming  knowledge,  such  as  the  semantics  of  programming  languages  or  techniques 
+of  local  optimization,  many  other  types  are  needed.  These  include,  at  least,  high-level 
+programming  constructs,  strategy  or  planning  information,  domain-specific  and  general 
+programming  knowledge,  and  global  optimization  techniques.  In  Section  111  we  discuss 
+this  further  and  show  where  these  kinds  of  knowledge  occur  in  the  dialogue. 
+
+
+(b)  DOMAIN  OF  DISCOURSE 
+
+
+Topics  mentioned  in  Uie  dialogue  include  data  structures,  low-level  operations, 
+and  high-level  programming  constructs.  The  main  data  structures  mentioned  in  our 
+dialogue  are  ordered  sets  represented  by  lists  The-low  level  operations  mentioned 
+include  assignment,  pointer  manipulation,  list  insertion,  etc.  Some  of  tile  higher-level  (in 
+some  sense)  notions  or  constructs  we  consider  are  permutation,  ordering  (by  various 
+
+
+INTRODUCTION 
+
+
+pace  3 
+
+
+criteria),  set  enumeration,  generate  and  test,  generate  and  process,  proof  by  induction, 
+conservation  of  elements  during  a transfer,  and  methods  of  temporary  marking  (or 
+place-saving)  of  positions  and  elements,  Time  and  space  requirements  tor  various 
+methods  are  not  discussed, 
+
+The  target  language  is  LISP,  in  particular  the  INTERLiSP  language  flO],  However, 
+in  the  dialogue  we  represent  the  programs  in  a fictitious  meta-USP. 
+
+
+II.  A DIALOGUE 
+
+
+<a)  INTRODUCTION 
+
+
+In  this  section  we  wish  to  exhibit  what  wo  consider  to  be  a reasonable  level  of 
+understanding  on  the  part  of  a program-understanding  system.  It  is  not  obvious  how 
+best  to  present  this  in  a way  that  is  easy  for  the  reader  to  follow,  since  the  synthesis 
+process  is  rather  complex.  Wc  hope  that  an  English  language  dialogue  is  adequate.  We 
+have  added  to  the  English  several  "snapshots"  of  the  developing  program  that  help  to 
+indicate  where  the  system  is  in  the  programrning  process.  These  diagrams  are  similar 
+to  the  stepwise  refinements  used  in  structured  programming  [1].  Our  dialogue  may  be 
+considered  as  a continuation  of  the  technique  of  presentation  used  by  Floyd  for  a 
+program  verifier-synthesizer  [2],  although  our  more  hypothetical  system  has  been 
+allowed  to  know  more  about  program  synthesis  for  its  domain  of  discourse. 
+
+In  certain  ways  we  feel  that  the  dialogue  is  not  representative  of  how  a 
+program-understanding  system  v/ould  appear  to  the  user  during  the  synthesis  process 
+
+
+A DIALOGUE 
+
+
+page  4 
+
+
+(although  such  a low-level  dialogue  would  at  times  have  its  place),  For  expository 
+purposes  the  dialogue  has  certain  choices  and  inferences  made  by  the  machine  and 
+Olivers  made  by  the  user.  Depending  upon  the  application,  these  decisions  and 
+inferences  could  reasonably  be  re-distributed  between  user  and  machine,  with  some 
+made  by  other  automated  "experts",  such  as  an  efficiency  expert,  and  other  decisions 
+forced  by  the  context  in  which  the  program  is  written.  For  example,  the  data 
+structures  for  this  insertion  sort  might  be  determined  in  advance  if  the  sort  routine 
+were  part  of  a larger  system,  and  all  choices  made  by  the  user  could  be  made  instead 
+by  rules  calculating  the  efficiency  of  each  branch,  A more  typical  user-machine  dialogue 
+would  usually  be  conducted  at  a much  higher  level  and  in  the  words  used  to  talk  about 
+the  application  area  for  the  program.  But  to  present  a hypothetical  dialogue  in  which 
+the  program  merely  said,  "OK,  Tm  all  finished,"  or,  "I  wrote  a sort  program  as  part  of 
+your  operating  system,"  wouldn’t  explicate  very  much  programming  knovdedge. 
+
+The  style  of  the  dialogue  is  not  intended  to  be  a strong  suggestion  about  what 
+the  process  of  sf’cafyhis  a program  should  be.  In  fact,  we  feel  that  program 
+specificaticn  is  a difficult  problem  in  automatic  programming  research  [4|,  and  we  touch 
+on  only  a few  aspects  of  it  here.  However,  some  of  the  techniques  used  in  the 
+dialogue  will  probably  find  some,  as  yet  undetermined,  place  in  program-understanding 
+systems.  The  obvious  techniques  include  interactive  specification,  natural  language 
+communication,  and  the  periodic  presentation  of  summaries  of  the  structure  and  content 
+of  the  evolving  program. 
+
+We  note  that  we  have  endowed  our  hypothetical  system  with  various  abilities. 
+
+
+-■  - ■ ■ 
+
+
+A DIALOGUE 
+
+
+page  5 
+
+
+including  an  inference  capability,  a program  simplification  capability,  and  the  ability  to 
+illustrate  and  summarize  where  it  is  in  the  programming  process.  Further,  the  dialogue 
+sometimes  takes  on  the  character  of  a decision-tree,  sometimes  of  goal-orientsd 
+problem-solving,  and  sometimes  of  step-wise  refinement,  These  all  seem  appropriate 
+to  the  task. 
+
+Various  decisions,  such  as  how  large  to  make  a step,  when  to  suppress  or 
+explicate  an  inference,  and  when  to  present  a diagram,  are  somewhat  arbitrary,  but 
+were  made  primarily  on  the  basis  of  what  seemed  to  be  the  clearest  exposition, 
+
+Before  the  start  of  the  dialogue,  we  wish  to  remind  the  user  that  the  focus  is 
+not  on  the  particular  mechanisms  which  might  be  employed  to  produce  the  hypothesized 
+behavior,  but  rather  on  the  reasoning  itself. 
+
+(b ) PART  1:  Setting  Up  the  Main  Tasks 
+
+1.  User!  Please  write  me  a sc^rt  program  Use  linked  lists  to  represerit  the  input  and 
+
+output,  which  are  ordered  sets,  The  output  set  should  be  ordered  so  that  each 
+element  is  mnnnicnily  greater  than  the  preceding  element.  The  input  set  will  be 
+called  INPUT  and  the  output  set  will  be  called  OUTPUT, 
+
+2.  Machine:  As  I understand  it,  a sort  program  produces  as  output  a permutation 
+
+(of  the  input)  that  satisfies  a test.  In  this  case,  the  test  is  that  the  elements  be 
+ordered  on  the  basis  of  the  above-mentioned  ordering  relation,  "numerically 
+greater  than".  Please  choose  one  of  the  two  known  methods)  for  finding  a 
+
+
+t The  limitation  to  only  two  "known"  choices  is  arbitrary,  but  it  is  reasonable  to  expect 
+a system  to  have  a limited  number  of  choices. 
+
+
+PART  1:  Setting  Up  the  Main  Tasks  page  6 
+
+permutation  tliat  satisfies  a test: 
+
+(a)  Generate  and  test  permutations  until  the  desired  one  is  found, 
+fb)  Carefully  construct  the  desired  permutation. 
+
+3.  User:  Carefully  construct  the  desired  permutation. 
+
+4.  M achine:  Should  the  output  set  be  constructed  in  the  same  list  cells  as  the 
+
+input  set,  or  should  a new  list  be  created? 
+
+5.  User:  A new  list  should  be  created.! 
+
+6.  Machine:  Do  you  want  an  iterative  or  recursive  program'' 
+
+7.  User:  Iterative.  [We  wish  to  remind  the  reader  that  the  distinctions  between 
+
+"user"  and  "machine"  are  somewhat  arbitrary.  Yet  a decision  must  be  made,  so 
+we  have  chosen  to  let  our  hypothetical  "user"  make  it.  Furthermore  there  is  no 
+reason  to  expect  the  user  to  have  a preference  for  an  iterative  or  recursive 
+program.  We  have  our  user  choose  an  iterative  structure  over  what  might  be  a 
+more  natural  recursive  structure,  because  there  are  fundamental  aspects  of  the 
+algorithm  which  are  more  explicit  in  its  iterative  form.] 
+
+8.  Machine:  Then  the  program  will  be  in  the  form  of  a transfa  which  must 
+
+be  totall  The  program  will  transfer  all  elements  from  the  input  to  positions  in 
+the  output,  such  that  the  final  output  is  a permutation  (of  the  input)  which 
+satisfies  the  above  ordering  relation,  namely  increasing  by  numerical  value. 
+
+
+! This  does  not  preclude  overwriting  the  input  sot  during  the  sort.  Overwriting  might  be 
+done  in  order  to  indicate  which  elements  have  been  selected  from  the  input. 
+
+? By  "total",  we  mean  that  the  transfer  loop  must  be  repeated  until  all  clerrionts  have 
+been  transferred. 
+
+
+<Lt«tv»->.itfa4tt*wfc'we»»i'«w.«tf'f«-y*«».»g>'*uj^tV<JCT^*q»t;.**.  .in 
+
+
+PART  1:  Setting  Up  the  Main  Taskr 
+
+
+page  7 
+
+
+The  transfer  paradigmit 
+
+
+transfer  proriratn: 
+
+LOOP  UNTIL  all  elements  of  input  have  been  processed; 
+se I cc  tor : 
+
+select  the  next  element  from  input; 
+constructor: 
+
+add  this  element  to  output; 
+
+REPEAT, 
+
+
+9.  Machine:  In  order  to  write  such  a transfer  program,  1 must  achieve  several 
+goals: 
+
+(1)  Write  a .u-lcdcr.  On  each  call,  the  selector  will  find  that  element  of 
+the  input  which  comes  next  in  the  chosen  transfer  order.  The  selector 
+consists  of  two  parts: 
+
+(a)  selector  initializer 
+
+(b)  selector  body 
+
+(2)  Write  a constructor.  On  each  call,  »he  constructor  will  produce  a new 
+output  (or  modify  the  old  output),  so  that  the  new  element  is  in  the 
+appropriate  position  but  that  otherwise  the  order  of  elements  in  the 
+output  is  unchanged.  The  constructor  consists  of  two  parts: 
+
+(a)  constructor  initializer 
+
+
+t As  illustrated,  the  transfer  program  has  a "selector"  part  and  a "constructor"  part, 
+The  selector  produces  the  elements  one  at  a time,  and  the  constructor  builds  the  new 
+set.  Either  the  selector  or  the  constructor  may  re-order  the  sot,  i.e.,  the  selector  can 
+produce  the  elements  in  an  order  different  from  the  stored  order,  or  the  constructor 
+can  build  a set  with  an  ordering  different  from  the  order  of  receipt  of  the  elements. 
+
+
+I We  will  generally  present  in  our  diagrams  only  those  parts  which  seem  relevant  o 
+the  current  coni  t. 
+
+
+PART  1;  Setting  Up  the  Main  Tasks 
+
+
+page  8 
+
+
+(b)  constructor  body 
+Before  I can  write  these  parts,  1 must: 
+
+(3)  Select  a transjn  o»(/('»--the  order  in  which  the  variables  will  be 
+transferred  from  the  input  to  the  output. 
+
+(4)  Select  a iransfcT  tcrmimuion  meihoil — a test  that  all  elements  have 
+been  transfered,  and  a position  in  the  program  appropriate  to  the  type  of 
+test  selected. 
+
+(5)  Select  a name  for  the  tmrujn  variable— a variable  which  holds  as  its 
+value  the  element  being  transferred. 
+
+After  writing  the  parts,  I must: 
+
+(6)  Combine  the  selector,  constructor  and  transfer  termination  test  into 
+a generate  and  [noccss  loop.  This  completes  the  ^inal  program. 
+
+
+PART  1:  Setting  Up  the  Main  Taokc 
+
+
+page  8 
+
+
+(b)  conctructor  body 
+Before  I can  write  these  parts,  I must: 
+
+(3)  Select  a :ransfn  ox/a— the  order  in  which  the  variables  will  be 
+transferred  from  the  input  to  the  output. 
+
+(4)  Select  a tramjer  tfrmination  method — a test  that  all  elements  have 
+been  transfered,  and  a position  in  the  program  appropriate  to  the  type  of 
+test  selected. 
+
+(5)  Select  a name  for  the  tiamjer  variabk—st  variable  which  holds  as  its 
+value  the  element  being  transferred. 
+
+After  writing  the  parts,  I must: 
+
+(6)  Combine  the  selector,  constructor  and  transfer  termination  test  into 
+a genantc  and  process  loop.  This  completes  the  final  program. 
+
+
+PART  1:  Setlinc  Up  the  Main  Tasks 
+
+
+page  9 
+
+
+The  basic  structure  of  the  program  (including  test  position)! 
+
+
+transfer  ini  t i n I i rf'r : 
+se  lector  i n i t i n I i cer : 
+constructor  initializer: 
+transfer  hocly: 
+
+LOOP  UNTIL  DONE: 
+
+
+(1)  (a) 
+
+(2)  (a) 
+
+
+transfer  termination  test: 
+
+[F  all  elements  have  been  transferred 
+THEN  DONE: 
+selector  hocly: 
+
+select  the  next  element  from  input; 
+constructor  body: 
+
+add  (he  plen;ent  to  nutpul; 
+
+DONE:  II A IX 
+
+
+lA) 
+
+
+fl)  fb) 
+(2) (b) 
+
+
+10.  Machine:  Should  the  transfer  order  be  linear  with  respect  to  the  initial  order 
+
+or  the  final  order?! 
+
+11.  User:  Linear  with  respect  to  the  initial  order. 
+
+12.  M achine:  Should  the  transfer  order  be  identical  to  the  initial  order  or  the 
+
+converse  of  the  initial  order? 
+
+13.  User:  Identical. 
+
+
+t Our  syntax  for  iterative  statements  and  exits  is  that  proposed  by  Zahn  [11]  and 
+supported  by  Knuth  [G],  Loops  are  exited  upon  encountering  an  err'd,  such  as  DONE  in 
+the  above  example.  The  program  exits  to  the  occurrence  of  the  event  iabel  after  the 
+body  of  the  loop.  Events  are  declared  after  Lnni’jiNTn-  hrTJ’AT  denotes  the  end  of  the 
+loop. 
+
+
+? We  define  the  "initial"  and  "final"  orders  to  be  the  conventional  list-repi  esentation 
+ordering  of  the  input  set  and  of  the  desired  output  set,  respectively.  By  "linear  with 
+respect  to  an  order"  we  mean  either  identical  to  that  order  or  the  converse  of  that 
+order.  The  user's  choice  of  "linear  with  respect  to  the  initial  order"  amounts  to 
+choosing  an  insertion  sort  algorithm,  rather  than  a selection  sort  algorithm.  The  full 
+effect  of  this  choice  will  be  seen  when  choosing  the  "construction  re-ordering"  during 
+the  synthesis  of  the  constructor. 
+
+
+PART  1:  Setting  Up  the  Main  Tasks 
+
+
+page  10 
+
+
+14.  Machine:  Now  let’s  select  a transfer  terninalian  method.  This  will  consist  of  a 
+
+test  and  a position  for  the  test.  Since  the  transfer  will  be  total,  the  transfer 
+termination  test  must  test  whether  all  elements  have  been  transferred.  This  is 
+equivalent  to  testing  whether  no  elements  remain  to  be  selected.  This  is  the 
+same  test  which  is  used  by  the  selector  to  stop  its  generation  of  elements.  I will 
+use  this  test  as  the  transfer  termination  test.  While  writing  the  selector  I will 
+thus  have  to  write  a third  part:  the  selector  termination  test.  Since  this  test 
+must  precede  a call  to  the  selector  body,  I v;ill  put  the  test  at  the  beginning  of 
+the  loop.t 
+
+15.  M achinc:  I will  use  ELEMENT  as  the  transfer  variable.! 
+
+
+t For  ease  in  presentation  the  preceding  diagram  showed  the  result  of  this  choice  (i.e., 
+the  test  appeared  in  the  proper  location),  although  the  choice  had  not  yet  been  made. 
+Considering  all  of  the  tests  which  might  have  been  used  and  all  of  the  places  where 
+such  a test  might  have  been  put,  one  could  imagine  a great  deal  of  planning  going  into 
+making  this  rather  difficult  decision. 
+
+
+? To  choose  meaningful  variable  names  requires  knowledge  about  comrriunication  with 
+the  user  and  is  a difficult  problem. 
+
+
+PART  2:  Synthesizing  the  Selector 
+
+
+page  1 1 
+
+
+(o)  PART  2:  Synthesizing  the  Selector 
+
+
+We  are  about  to  work  on  the  indicatcdl  parts  of  the  selector 
+
+
+transfer  initioliner: 
+
+selector  initializer: 
+constructor  initializer: 
+transfer  bodg: 
+
+LOOP  UNTIL  DONE: 
+
+transfer  termination  test: 
+
+[F  all  elerients  have  been  transferi'ed^ 
+
+'ll 
+
+all  elements  huie  been  selected 
+TKEh  DONE; 
+selector  body: 
+
+select  the  next  element  pom  input; 
+constructor  body: 
+
+add  the  element  to  output: 
+
+REPEAT: 
+
+DONE:  HALT. 
+
+Tl 
+
+16.  Machine:  I will  now  choose  a idecdon  re-ordering.  I will  use  the  term  "selection 
+re-ordering"  to  refer  to  the  relation  between  (a)  the  order  of  the  elements  in 
+the  input  (positional  order)  and  (b)  the  order  in  which  the  elements  are  selected 
+by  the  selector  (temporal  order).  Since  the  transfer  order  is  linear  and  Jonoard 
+
+
+T Throughout  this  dialogue,  we  wiil  use  special  characters  and  type  fonts  to  indicate 
+different  sections  of  these  diagrams.  We  present  the  meaning  of  the  fonts  here  in  case 
+confusion  arises,  but  the  meaning  should  be  clear  from  the  context. 
+
+areas  not  uncler  cons icier.'it  i on 
+
+(iiith  • • • inclicat'mcj  areas  omitted] 
+areas  ciniently  under  eonsideration 
+PROGRAM  PART.S  JUST  COMPLETED 
+RESERVKn  wnitnn 
+
+BA5IC  LIGI>  rUNCTIOMS 
+
+USER"  OR  MACHINE-DEFINED  LABELS 
+
+=>  the  right  arrow  indicates  a stop  in  the  refinement  process 
+
+
+! PART  2:  Synlhesizi  nc  the  Selector  pas©  12 
+
+(that  is,  identical  to  the  input  order),  the  selection  re-ordering  must  also  be 
+linear  and  forward, 
+
+I 17.  Machine:  A selector  is  a type  of  roicnavf,  a "total"  generator  that  produces 
+
+each  element  of  the  input  once  and  only  once.  Corresponding  to  the  three  parts 
+of  a selector,  this  type  of  gunorator  also  has  three  parts:! 
+
+(Da  body  which  actually  produces  the  elements 
+
+(2)  an  initial'zer  which  can  set  up  the  generator  before  it  is  called  the 
+
+! first  lime 
+
+I (3)  a termination  test  (to  be  used  as  the  transfer  termination  test) 
+
+I 
+
+j which  tests  whether  all  elements  have  been  generated 
+
+18.  MachiiicI  I must  now  select  the  s'cte-stuiini;  schnne  by  which  the  generator  will 
+
+I save  its  state  after  each  call.  In  order  to  save  its  state,  the  generator  must 
+
+remembe,'-  how  the  input  sot  is  divided  into  two  sets; 
+
+(D  those  elements  which  have  already  been  generated 
+
+(2)  those  elements  which  arc  yet  to  be  generated 
+Recall  that  the  generator  is  moving  Imcoiiy  through  the  input  list  from  first  to 
+last  to  find  each  new  eleirn  nt.  Theiefore  ail  elements  before  its  current  position 
+in  the  list  have  already  been  generated,  and  all  elements  after  its  current 
+position  are  yet  to  be  generated.  To  save  the  state  of  the  generator,  I need 
+
+
+f Technically,  before  these  parts  can  be  written,  the  production  rc-ordoting  for  the 
+generator  must  be  chosen.  In  this  case,  it  is  obviously  the  same  as  the  selection  re- 
+ordering, so  vjc  have  omitted  it  from  the  dialogue  in  the  interests  of  clarity.  The 
+initializer  is  written  after  the  producer,  since  in  general  the  form  of  an  initializer  is 
+dependent  on  the  body  of  the  loop  to  be  inituiiizcd. 
+
+
+.‘it-. 
+
+
+PART  2:  Synthesizing  the  Selector 
+
+
+page  13 
+
+
+only  save  a marker  for  the  generator’s  current  position  in  the  input  list.  One 
+pointer  will  be  adequate  for  this  purpose.  Let  us  call  this  pointer  REST. 
+
+We  are  about  to  work  on  the  indicated  parts  of  the  selector  body 
+
+transfer  initial izer: 
+
+• • • 
+
+transfer  boclii: 
+
+LOOP  UNTIL  DONE; 
+
+
+selector  hocly: 
+
+select  the  next  cl<‘'ment  from  input=> 
+
+c|cncrate  the  next  element  from  input  = 
+produce  element; 
+increment  state  of  generator; 
+
+
+'T1  (2) 
+'Tl  (1) 
+
+
+REPflAT; 
+
+DONE:  KAI.T, 
+
+
+19.  Mnohine:  Now  I will  synthesize  the  body  of  the  generator.  I need  code  for 
+two  pieces: 
+
+(1)  increment  the  state  of  the  generator 
+
+(2)  produce  the  next  element 
+
+
+9 
+
+
+PART  2:  Synihesizing  the  Selector 
+
+
+1 
+
+1 
+
+1 
+
+page  14  1 
+
+
+20,  Maohine:  To  increment  the  state  of  the  generator,  I will  advance  the  position  1 
+
+pointer  by  one.  Since  the  representation  is  a linked  list,  the  code  for  this  is 
+merely: 
+
+REST  - CDR(REST)t 
+
+
+21.  Machine:  Now  I will  write  the  producer  Since  the  state-saving  scheme  uses  a 
+pointer,  REST,  to  separate  those  elements  generated  from  those  not  yet 
+generated,  and  since  the  next  element  to  be  generated  is  the  first  element  of 
+the  non-generated  set,  then  the  process  of  saving  the  state  will  also  effectively 
+mark  the  next  element  to  be  generated,!  To  produce  the  next  element,  then,  I 
+need  merely  take  the  first  element  of  the  non-generated  set,  which  is  pointed  to 
+by  REVT.f  Since  the  representation  is  linked-lists,  the  subprogram  for  this  is; 
+
+ELEMENT  »-  CAR(REST) 
+
+
+tv 
+
+
+22.  Machine:  I now  put  the  pieces  of  the  generator  body  together  into  a block: 
+
+ELEMENT  •-  CAR(REST); 
+
+REST  »-  EDR(REST) 
+
+
+t Throughout,  we  will  use  the  standard  LISP  terminology; 
+
+CAR(L)  gives  the  first  element  of  L 
+CDR(L)  gives  the  remaining  elements  of  L 
+
+CONSfX  L)  creates  a new  list  with  first  element  X and  with  the  rest  of  the 
+elements  being  those  of  the  list  L 
+
+NIL  is  the  empty  list  (and  list  terminator) 
+
+f In  a selection  sort,  the  code  to  find  the  next  element  to  be  generated  would  be 
+considerably  more  complex  since  it  would  need  to  find  the  largest  of  the  remaining 
+elements. 
+
+f There  are  situations  in  which  the  value  of  the  element  or  a pointer  into  the  list  might 
+be  returned,  rather  than  the  element  itself, 
+
+
+PART  2:  Synthesizinc  the  Selector  page  15 
+
+
+We  have  jupl  finished  the  indicated  parts 
+
+
+23.  Machine:  I will  now  write  the  generator  initializer  and  the  generator 
+
+termination  test.  Since  I am  using  the  pointer  REST  to  mark  the  elements  not 
+generated,  and  since  initially  no  elements  have  been  generated,  I must  initialize  it 
+to  the  entire  input  set: 
+
+REST  - INPUT 
+
+24.  Machine:  Now  let’s  write  the  generator  termination  test  (which  will  be  used 
+
+as  the  transfer  termination  test).  To  test  whether  all  elements  have  been 
+generated,  I will  test  whether  there  are  no  elements  remaining,  Since  the 
+elements  are  being  generated  in  a forward  linear  order,  I simply  test  for  being  at 
+the  end  of  the  input  list.  Since  the  representation  is  a linked  list,  this  is  simply  a 
+test  for  emptiness: 
+
+REST  . NIL  7 
+
+
+PART  2:  Synthesizing  the  Selector 
+
+
+page  16 
+
+
+We  have  just  finished  the  indicated  parts 
+
+
+transfer  initinlirer: 
+
+selector  ini  t iai  i zer!:> 
+
+generator  initializer:^ 
+
+REST  «-  INPUT;  'll 
+
+• • • 
+
+transfer  l.iockj: 
+
+LOOP  UNTIL  DONE; 
+
+transfer  termination  lest: 
+
+IF  all  elements  have  hcen  transfcrrec]s> 
+all  elements  liave  been  selected^ 
+
+all  elements  have  been  generated^ 
+no  elements  remains 
+
+REST  - NIL  'll 
+
+XilFN  DONE; 
+selector  body: 
+
+select  the  next  eleiiicnt  from  inputs 
+
+ejenerate  tlie  riext  element  from  inputs 
+produce  rlrmrnt=>- 
+
+ELEMENT  CAR(REST); 
+increment  state  of  cjcnerator:> 
+
+REST  CDRIREST); 
+
+• « • 
+
+REPEAT; 
+
+DONE:  HALT. 
+
+
+25.  Machine:  I have  finally  finished  the  generator  which  the  selector  needed.  In 
+fact,  that  is  all  there  is  to  the  entire  selector,  so  the  selector  is  finished. 
+
+
+PART  3:  Synthesizing  the  Constructor 
+
+
+page  1 7 
+
+
+S 
+
+
+I 
+
+I 
+
+t 
+
+
+L 
+
+(> 
+
+■ir_. 
+
+S 
+
+t 
+
+
+<d)  PART  3:  Synthesizing  the  Constructor 
+
+
+We  are  now  working  on  the  indicated  parts  of  the  constructor 
+
+
+transfer  i n i t i a I i zer : 
+selector  i n i t i a I i zer : 
+constnictoi  initialiTcr: 
+transfer  Ijocly: 
+
+LOOP  IJNTII.  DONE: 
+
+transfer  termination  test: 
+
+IF  all  elements  have  been  transferred= 
+all  elements  have  been  selected 
+THEN  DONE; 
+selector  Ijody: 
+
+select  the  next  element  from  input; 
+constructor  body: 
+
+add  the  dement  to  output; 
+
+REPEAT; 
+
+DONE:  HALT 
+
+
+T1 
+
+
+26.  Machine*.  One  way  to  create  an  output  set  that  is  a permutation  of  the 
+elements  received  by  the  constructor  is  to  write  an  inductive  constructor  that 
+satisfies  the  following  constraints: 
+
+(1)  The  initial  output  set  must  be  empty. 
+
+(2)  Each  construction  operation  must  be  such  that  the  new  output  set 
+consists  of  the  old  set  plus  one  new  element. 1 
+
+(3)  After  each  construction  operation,  the  new  set  must  satisfy  our 
+ordering  relation. 
+
+27-  Machine:  To  write  such  a constructor,  two  decisions  must  first  be  made: 
+
+(1)  Choose  a construction  re-ordering. 
+
+t It  is  sometimes  convenient  to  think  of  the  constructor  as  producing  a sequence 
+of  output  sets,  and  sometimes  as  successively  modifying  one  output  set. 
+
+
+4 
+
+
+PART  3:  Synthesizing  the  Constructor  page  18 
+
+(2)  Choose  a construction  method  for  building  a new  set,  given  the  old 
+set,  the  new  element,  and  the  position  where  the  new  element  should 
+occur  in  the  set. 
+
+After  these  choices  are  made,  we  will  produce  code  for  the  constructor  body  and 
+then  the  constructor  initializer.! 
+
+28.  Machinel  I will  now  choose  a construction  re-ordering.  I will  use  the  term 
+"construction  re-ordering"  to  refer  to  the  relation  between  (a)  the  order  in  which 
+the  elements  are  received  by  the  constructor  (temporal  order)  and  (b)  the  order 
+of  the  elements  in  the  output  (positional  order).  The  re-orderings  may  be  linear 
+or  complex,  where  linear  means  same  as  or  converse  of.  Since  the  order  in 
+which  the  elements  are  received  (the  transfer  order)  is  the  same  as  the  input 
+order,  and  the  desired  output  order  is  not  necessarily  the  same  as  (nor  the 
+converse  of)  the  input  order,  the  construction  re-ordering  must  be  complex  (non- 
+linear).! This  re-orderin;,  will  be  based  on  the  "numerically  greater  than"  ordering 
+relation.  This  means  that  the  correct  position  of  each  element  in  the  output  list 
+will  be  such  that  all  preceding  elements  are  less  than  or  equal  to  the  new 
+element  and  all  following  elements  are  greater  than  the  new  element.! 
+
+
+T Note  that  we  have  implicitly  decided  that  the  construction  consists  of  two  steps;  (1) 
+finding  the  position;  (2)  adding  the  element  to  the  set.  One  might  imagine  schemes  in 
+which  finding  a position  and  modifying  the  set  are  interleaved  operations, 
+
+f This  choice  of  a complex  construction  re-ordering,  along  with  the  choice  of  a linear 
+selection  re-ordering,  completes  the  specification  of  an  insertion  sort,  all  of  which 
+follow  from  the  user’s  choice  of  a transfer  order  "linear  with  respect  to  the  initial 
+order". 
+
+I For  clarity,  we  will  refer  throughout  to  an  element  being  "less  than"  or  "greater  than" 
+
+
+PART  3:  Synthesizing  the  Constructor 
+
+
+page  19 
+
+
+29.  Machinel  Now  we  must  select  a construction  method  for  building  a new  set  from 
+
+the  old  one.  The  choices  are: 
+
+(a)  List  insertion:  Modify  the  structure  of  the  old  list  by  inserting  a new 
+cell  containing  the  new  element. 
+
+(b)  Shifting:  Allocate  a new  space  at  the  beginning  (or  end)  of  the  set 
+and  shift  all  elements  before  (after)  the  new  element  by  one  position. 
+
+Then  put  the  new  element  into  the  vacant  place.! 
+
+(c)  Copying:  Copy  the  old  set  into  a new  space,  one  cell  larger  than  the 
+old  space,  with  the  new  element  taking  up  the  extra  position. 
+
+Which  shall  I use? 
+
+30.  User*.  List  insertion. 
+
+31.  Machine:  Now  I will  write  the  body  of  the  constructor.  The  body  consists  of 
+
+two  parts: 
+
+(Da  position  finder,  which  finds  the  position  where  the  new  element 
+belongs 
+
+(2)  a list  inserter,  which  inserts  the  element  at  this  position 
+
+32.  Machine:  When  a position  has  been  found,  there  are  several  ways  to  indicate 
+
+that  position.  First  we  must  select  one  of  these  representations  for  a position. 
+
+
+another  element  and  mean  that  the  first  element  precedes  or  follows  the  second 
+element  according  to  the  chosen  ordering  relation. 
+
+t Perhaps,  since  the  "shifting"  operation  is  such  an  unlikely  choice  when  lists  are 
+being  used,  it  shouldn't  be  presented  to  the  user.  It  could  be  celled  forth  only 
+upon  questioning  or  in  unusual  programming  contexts. 
+
+
+PART  3:  Synthesizing  the  Constructor 
+
+
+page  20 
+
+
+We  are  considering  positions  to  be  between  two  elements  in  a list.  Since  the 
+construction  meihod  involves  inserting  a new  cell  into  the  list,  we  must  choose  a 
+representation  appropriate  to  insertions  into  linked  lists.  I know  about  two  types 
+of  such  representations: 
+
+(a)  Use  one  pointer  as  illustrated; 
+
+(pos i I i on) 
+
+1 — 
+
+
+BEFOnE 
+
+
+In  using  this  representation,  a special  unique  value  for  BEFORE  must  be  used  if 
+the  correct  position  is  at  the  front  of  the  list.  "FRONT"  will  be  used  for  this 
+purpose. 
+
+
+(b)  Use  two  pointers  as  illustrated: 
+
+(post  t i on) 
+
+
+BEFORE 
+
+
+AFTER 
+
+
+In  using  this  representation,  a special  unique  value  for  BEFORE  must  be  used  if 
+the  correct  position  is  at  the  front  of  the  list.  "FRONT"  will  be  used  for  this 
+purpose.  If  the  correct  position  is  at  the  end  of  the  list,  AFTER  will  point  to  the 
+empty  li..t. 
+
+
+V/hich  shall  I use? 
+
+33.  Uwer:  Please  use  two  pointers.  [This  choice  might  be  based  either  on  looking 
+ahead  or  on  knowing  at  this  point  that  the  BEFORE  pointer  is  useful  for  inserting 
+
+
+PART  3:  Synthesizing  the  Constructor 
+
+
+page  21 
+
+
+into  the  list  and  the  AFTER  pointer  is  useful  for  incrementing  the  state  of  the 
+p-sition  imder  and  for  testing  the  correctness  of  a position.] 
+
+34.  Machine:  1 need  variable  names  for  the  two  pointers.  1 will  use  BEFORE  and 
+
+AFTER. 
+
+We  arc  about  to  work  on  the  position  finder  as  indicated 
+
+
+transfer  ini  tied  iner: 
+
+• • • 
+
+transfer  body: 
+
+LOOP  UNTII.  DONE: 
+
+• • • 
+
+constructor  body: 
+
+add  the  element  to  output^ 
+
+Jind  the  liosiiion  Joi  (In'  nem  eloncnti 
+insert  the  neu  element  into  the  position; 
+
+RF.PFAT; 
+
+DONE;  HAl.T, 
+
+
+'vl 
+
+
+36.  Machine:  1 am  now  writing  the  program  that  finds  the  position.  First  we  will 
+select  a srard,  sirau-^y  for  searching  the  output  list  to  find  the  correct  position. 
+The  only  strategy  which  1 know  about  for  linked  lists  is  a Jorwnul  Ihuar  scan,  so  1 
+
+will  use  that  strategy. 
+
+36.  Machine:  Since  the  saarch  strategy  is  a forward  linear  scan  of  a finite  list,  tl  e 
+search  strategy  is  total;  that  is,  all  possible  positions  will  be  considered.  Since 
+the  old  output  set  is  well-ordered,  and  since  the  ordering  relation  applies  to  all 
+elements  involved,  one  of  these  possible  positions  must  be  correct.  Therefore, 
+the  search  for  a correct  position  must  succeed,  and  no  exit  will  be  lequired  for 
+the  case  of  not  finding  a correct  position.  So  1 will  use  a loop  which  consists  only 
+
+
+PART  3:  Synthesizing  the  Constructor 
+
+
+page  22 
+
+
+of  a test  and  exit  on  the  correctness  of  the  position  and  an  incrementer  The 
+incremenler  will  increment  the  state  of  the  search  according  to  the  search 
+strategy  and  specify  the  next  position  to  be  considered.  I will  also  need  to 
+initialize  the  loop 
+
+37.  Machine:  Since  the  search  strategy  is  forward  linear,  the  correctness  test  and 
+the  incrementer  are  independent.  This  means  that  the  next  position  specified  by 
+the  incrementer  does  not  depend  on  the  results  of  the  correctness  test.  This 
+allows  a simple  non-branching  incrementer.i 
+
+We  are  about  to  work  on  the  indicated  parts  of  the  position  finder 
+
+
+transfer  initiallrer: 
+
+• • • 
+
+transfer  lioMu: 
+
+LOOP  lINTH.  DONE: 
+
+
+con' ti  i.c  *nr  Ijotl'i: 
+
+,ir|f|  *n<?  elen'ent  'o  '.  'I'l'iit  » 
+
+I I nrt  the  iio'.tlinn  tor  fiv  ncii  elencnt^ 
+iC'Hi  'h  jnulii  .'.v,": 
+lOgPJINTIt.  CORKECT  POGiTION  FOUND; 
+
+IF  /(i,/.'/  >1  IS  ifiici/ 
+
+Tllldl  CORRECT  POSITION  FOUND; 
+tnitn'ii’i!  shUf  <nxi!  sonify  f>csiticmi 
+nrrr/\T, 
+
+CORRECT  POSITION  FOUND: 
+insert  the  nen  element  into  the  position; 
+
+REPrAT; 
+
+DONE:  HALT. 
+
+
+'T|  (3) 
+
+
+38.  Machine:  Now  let’s  design  the  incrementer  First  we  must  select  a scheme  for 
+
+
+t If  the  search  strategy  had  been  to  use  a binary  chop,  for  example,  then  the  next 
+position  to  be  tested  would  be  ba'cd  on  the  results  of  the  test 
+
+
+PART  3;  Synthesizing  the  Constructor  pgge  23 
+
+representing  the  state  of  the  search.  The  incrementer  will  increment  this  state 
+and  will  also  specify  the  next  position  to  be  considered. 
+
+39.  Machine:  Since  the  search  strategy  is  a forward  linear  scan  of  the  linked  list, 
+
+and  since  the  two-pointer  position  representation  has  been  selected,  the  two 
+pointers  (BEFORE  and  AFTER),  which  are  already  being  used  to  represent  the 
+position,  are  also  sufficient  to  remember  the  state.! 
+
+40.  Machine:  An  incrementer  for  a forward  linear  scan  using  the  two-pointer 
+
+position  representation  requires  two  pieces  of  code:  one  to  reset  BEFORE  to  the 
+value  of  AFTER,  and  one  to  increment  AFTER.  This  is  adequate  both  for  the 
+general  case  in  the  interior  of  a linked  list,  and  in  the  special  case  at  the  front  of 
+a list,  where  BEFORE  originally  has  the  special  value  "FRONT”  and  is  reset  to  point 
+to  the  first  cell  in  the  list.  The  pieces  will  be  put  together  in  that  order. 
+
+41.  Machine:  I am  now  writing  the  code  to  reset  BEFORE  to  the  value  of  AFTER. 
+
+The  code  to  do  that  is: 
+
+BEFORE  *•  AFTER 
+
+4,2.  Machine:  I am  now  writing  the  code  to  increment  AFTER.  Since  the 
+
+representation  is  a linked  list,  the  code  to  do  that  is: 
+
+AFTER  CDR(AFTER) 
+
+
+f The  position  memory  and  the  state  memory  need  not  always  be  the  same,  For 
+example,  if  only  BEFORE  were  used  to  remember  the  position,  a good  choice  of  state- 
+memory  would  probably  include  a pointer  playing  the  same  role  as  AFTER. 
+
+
+PART  3:  Synthesizing  the  Constructor 
+
+
+page  24 
+
+
+43-  Machine:  Putting  these  two  pieces  together,  we  have  the  following 
+
+incrementer  for  the  position  find.'r: 
+
+
+BEFORE  - AFTER; 
+AFTER  •-  CDR(AFTER) 
+
+
+44.  Machine!  I will  also  need  a position  initializer  which  initializes  both  the  state 
+
+of  the  position  finder  and  the  position  representation  to  the  first  position 
+according  to  the  search  strategy, 
+
+45.  Machine:  Since  the  position  representation  is  also  used  to  represent  the 
+
+state,  we  need  only  initialize  the  position  representation. 
+
+46.  Machine!  Since  the  search  strategy  is  forward  linear  scan,  we  must  initialize 
+
+the  position  representation  to  the  position  at  the  front  of  the  list.  The 
+convention  for  representing  the  position  at  the  front  of  the  list  is  that  BEFORE  has 
+the  unique  value  "FRONT"  and  that  AFTER  points  to  the  entire  list. 
+
+47.  Machine!  The  code  to  set  BEFORE  to  "FRONT"  is: 
+
+BEFORE  "FRONT" 
+
+
+48.  Machine!  The  code  to  set  AFTER  to  the  entire  list  is: 
+AFTER  ♦-  OUTPUT 
+
+
+49.  Machine!  Putting  these  two  pieces  together,  the  initializer  for  the  position 
+finder  is: 
+
+
+BEFORE  "FRONT"; 
+AFTER  ♦-  OUTPUT 
+
+
+ttiMiiliiiiliiii 
+
+
+PART  3:  Synthesizing  the  Constructor 
+
+
+page  25 
+
+
+We  have  just  finished  the  indicated  parts  of  the  position  finder 
+
+
+transfer  i n i t i a I i zer : 
+
+• • • 
+
+transfer  hoclij: 
+l.GOP  lINTll.  DONE: 
+
+• • • 
+
+constructor  l:ody: 
+
+add  the  element  to  output^ 
+
+find  the  position  for  the  neu  element:* 
+initialize  position  finder  loop*- 
+BEFORE  *-  “FRONT"; 
+
+AFTER  - OUTPUT; 
+
+LOOP  lINTlI.  CORRECT  POSITION  FOUND; 
+
+[F  position  is  correct 
+
+TllltN  CORRECT  POSITION  FOUND; 
+increment  state  and  specify  position* 
+BEFORE  - AFTER; 
+
+AFTER  - CDRiAFTER); 
+
+QnPPATi 
+
+CORRECT  POSITION  FOUND: 
+insert  the  ncii  clement  into  the  position; 
+
+njLPnATi 
+DONE:  HALT, 
+
+
+•n 
+
+'TJ 
+
+
+'ll 
+
+'ll 
+
+
+50.  Machine:  I will  now  work  on  the  exit  test  for  the  correct  position.  I will  first 
+
+
+try  to  infer  the  necessary  pieces  of  this  test. 
+
+61.  Machine*.  Sin^u  the  set  is  ordered,  it  follows  from  transitivity  that  the  new 
+element  need  not  be  compared  against  all  of  the  elements  of  the  set,  but  merely 
+against  the  elements  immediately  adjacent  to  the  position  being  considered, 
+
+52.  Machine:  Since  the  search  strategy  is  forward  linear  scan,  at  any  point  in  the 
+search,  all  of  the  elements  occurring  before  the  current  position  in  the  list  have 
+already  been  tested  and  found  to  be  less  than  the  new  clement.  This  holds  for 
+all  positions  including  the  initial  position  in  which  no  elements  occur  before  the 
+
+
+v^f3  .'.'j  ■yi.",'  !i,yi ' jp,m  . v ,,  yiy 
+
+
+PART  3:  Synthesizing  the  Constructor  page  26 
+
+63.  Machine:  Thus,  the  test  for  correctness  of  position  need  only  include  a test 
+that  all  elements  occurring  after  the  current  position  in  the  list  are  greater  than 
+the  new  element. 
+
+54.  Machine!  To  test  that  all  elements  occurring  after  the  current  position  are 
+
+greater  than  the  new  element,  the  program  must  first  test  whether  there  are  no 
+elements  occurring  after  the  current  position.  Then,  if  there  are  such  elements, 
+it  must  test  whether  all  such  elements  are  greater  than  the  new  element. 
+
+55.  Machine!  A test  that  there  are  no  elements  occurring  after  the  current 
+
+position  is  simply  a test  whether  the  list  pointed  to  by  the  second  pointer 
+(AFTER)  is  empty: 
+
+AFTER  « NIL  ? 
+
+66.  Machine!  As  noted  previously,  the  correctness  test  need  only  consider  the 
+
+immediately  adjacent  elements,  so  that  a lest  that  all  elements  occurring  after 
+the  current  position  are  greater  than  the  new  element  is  simply  a test  that  the 
+first  element  occurring  after  the  current  position  is  greater  than  the  new 
+element.  To  write  such  a tost  I need  code  to  extract  the  first  element  from  the 
+list  pointed  to  by  AFTER  and  a test  whether  this  element  is  greater  than  the  new 
+element. 
+
+67.  Machine!  The  code  to  extract  the  first  element  from  a list  is; 
+
+CAn(AFTER) 
+
+68.  Machine!  The  code  to  test  whether  this  element  is  greater  than  the  new 
+
+element  is: 
+
+CAn(AFTER)  > ELEMENT  ? 
+
+
+PART  3;  Synthesizinc  the  Constructor 
+
+
+60.  Machine;  Given  the  two  partial  tests,  the  complete  correctness  test  is  an 
+ordered  Of\t  of  the  two  partial  tests: 
+
+[AFTER  • NIL]  OR  [OAR(AFTER)  > ELEMENT)  ? 
+
+
+The  indicated  parts  cornploto  the  position  finder 
+
+transfer  i n i t i a i i zer : 
+
+• • • 
+
+transfer  borkj: 
+
+LOOP  UNTIL  DONE; 
+
+
+constructor  body: 
+
+add  the  element  to  output=> 
+
+find  the  position  for  thr  ncii  element^*- 
+initialirf*  posit  iori  finder  loop=* 
+
+BEFORE  "FRONT"; 
+
+AFTER  - OUTPUT; 
+
+LOOP  lINTlI.  CORRECT  POSITION  FOUND; 
+
+IF  position  is  correct^ 
+
+no  elements  occur  after  pop.  ition:> 
+AFTER  - NIL 
+
+OR  next  element  is  greateri> 
+
+C AR( AFTER)  > ELEMENT 
+HirN  CORRECT  POSITION  FOUND: 
+i ncromr'nt  state  and  specify  position:*- 
+BEFORE  - AFTER; 
+
+AFTER  •-  CDIUAFTER); 
+
+REPEAT; 
+
+CORRECT  POSITION  FOUND: 
+insert  the  new  element  into  the  position; 
+
+REPEAT; 
+
+DONE:  HAIJ, 
+
+
+60.  Machine;  Having  completed  the  position  finder,  we  must  now  write  the  list 
+
+
+t By  "ordered  nn  we  mean  that  the  second  argument  is  evaluated  only  if  the  first 
+argument  is  false. 
+
+
+PART  3:  Synthesizing  the  Constructor 
+
+
+page  28 
+
+
+inserter  which  takes  a new  element,  a position  represented  by  the  two-pointer 
+schema,  and  the  output  set,  and  produces  a new  output  set  with  the  new 
+element  in  the  indicated  position.  The  method  of  inserting  an  element  into  a list 
+depends  on  whether  or  not  the  indicated  position  is  at  the  front  of  the  list.  I will 
+need  to  write  a test  to  separate  the  "front  of  the  list"  case  from  the  "anywhere 
+else"  case,  and  use  a different  method  for  each  case. 
+
+
+We  are  about  to  work  on  the  indicated  parts  of  the  list  inserter 
+
+
+transfer  Initialiser: 
+
+... 
+
+transfer  body: 
+
+LOOP  UNTIL  DONE; 
+
+• e e 
+
+constructor  body: 
+
+add  the  elenunt  to  outputs 
+
+find  the  position  for  the  r.eu  element: 
+insert  the  non  element  into  the  posit ion» 
+
+IF  l>Pi;tit'n  it  dl pent 
+
+T| 
+
+TJILU  fUm  nt  cnlp  jront 
+
+•'I 
+
+ri.Si;  insot  into  inUrior 
+
+WrPEAT: 
+
+DONE:  IJAI-L 
+
+61.  Machine:  A test  for  being  at  the  front  of  the  list  is  a test  whether  the  value 
+
+of  the  first  pointer  is  "FRONT".  The  code  for  this  is: 
+
+BEFORE  • "FRONT" ? 
+
+62.  Machine:  The  addition  of  the  new  element  in  the  "front  of  the  list"  case 
+
+entails  rK>  replacement  into  the  list,  but  instead  an  addition  to  the  front  of  the 
+list.  The  code  to  do  this  is: 
+
+
+OUTPUT  CONUfELEMtNT  OUTPUT) 
+
+
+PART  3:  Synthesizine  the  Constructor 
+
+
+page  29 
+
+
+i 
+
+
+! 1 
+
+1 ^ 
+
+63.  Machine:  The  addition  of  the  new  element  anywhere  else  in  the  list  requires  a 
+replacement  into  a cell  in  the  list.  The  code  to  do  this  is: 
+
+COnCBEFORE)  - CONStELEMENT  AFTER)! 
+
+The  marked  parts  complete  the  element  adder 
+
+transfer  initialiser; 
+
+• . • 
+
+transfer 
+
+tgnPJINm  DONE: 
+
+t • • 
+
+constructor  body: 
+
+add  the  element  to  output* 
+
+find  the  position  for  the  new  element; 
+insert  the  ncii  element  into  the  position* 
+
+IT  position  is  at  front* 
+
+BEFORE  - 'FRONT"  *I| 
+
+TTII’N  add  element  onto  front* 
+
+OUTPUT  - CONS(ELEMENT  OUTPUT)  «ll 
+
+ELGH  insert  into  interior* 
+
+CDR(BEFORE)  - CONS(EL£MENT  AFTER);  *T| 
+
+ncrrATi 
+
+DOI«:  HAI.T, 
+
+
+64.  Machine:  Having  completed  the  list  inserter  (and  thus  the  constructor  body), 
+we  must  now  write  the  constructor  initializer.  Since  we  are  writing  an  inductive 
+constructor  that  must  begin  with  an  empty  output  list,  we  simply  set  the  output 
+list  to  the  empty  list: 
+
+OUTPUT  •-  NIL 
+
+
+t LISP  programmers  will  recognize  this  as  rplacd. 
+
+
+PART  3:  Synthesizing  the  Constructor 
+
+
+page  30 
+
+
+The  initializer  completes  the  constructor 
+
+
+transfer  initializer: 
+
+• • • 
+
+constructor  initializer* 
+
+OUTPUT  - NIL;  TJ 
+
+transfer  body: 
+
+LOOP  UNTII.  DONE: 
+
+• • • 
+
+constructor  body: 
+
+add  the  element  to  output* 
+
+find  the  pocition  for  the  neu  element* 
+initial  I zc  pos  i t i on  f i ncier  I oop* 
+
+BEFORE  - "FRONT"; 
+
+AFTER  - OUTPUT; 
+
+LOOP  IIHTII.  CORRECT  POSITION  FOUND; 
+
+IT  position  is  correct* 
+
+no  elements  occur  after  position* 
+
+AFTER  : NIL 
+
+on  next  element  is  yreater* 
+
+CAH(AFTER)  > ELEMENT 
+THilN  CORRECT  POSITION  FOUND; 
+increment  state  and  specify  position* 
+
+BEFORE  - AFTER; 
+
+AFTER  •-  CDrt(AFTER); 
+
+BEPKAT: 
+
+CORRECT  POSITION  FOUND: 
+insert  the  n'■ll  element  into  the  position* 
+
+IF  pci'-ition  is  at  front* 
+
+BEFORE  » "FRONT" 
+
+TJIKN  add  element  onto  front* 
+
+OUTPUT  ► CONStELEMENT  OUTPUT) 
+ni.Sn  insert  into  interior* 
+
+CDIKBEFORE)  - CONS(ELEMENT  AFTER); 
+
+DCPrAXi 
+OOik:  liALT 
+
+
+66.  Machine:  We  have  now  finished  the  constructor. 
+
+
+PART  4:  Completing  the  Program 
+
+
+page  31 
+
+
+(e>  PART  4:  Completing  the  Program 
+
+
+The  final  program 
+
+
+transfer  initiali:er: 
+
+selector  ini t iai i zer:» 
+
+generator  initializer:* 
+
+REST  •>  INPUT; 
+
+constructor  initializer* 
+
+OUTPUT  *•  NIL; 
+transfer  body: 
+
+LOOP  UNTII.  DONE: 
+
+transfer  termination  test: 
+
+IT  al  I elements  have  been  transferred* 
+all  elements  have  been  selected* 
+
+all  elements  have  been  generated* 
+no  elements  remain* 
+
+REST  ■ NIL 
+
+THFN  DONE: 
+selector  body: 
+
+select  the  next  element  from  input* 
+
+generate  the  next  element  from  input* 
+produce  element* 
+
+ELEMENT  •-  CAR(REST); 
+increment  state  of  generator* 
+
+REST  *•  CDR(REST); 
+constructor  body: 
+
+add  the  element  to  output* 
+
+find  the  position  for  the  neu  element* 
+initialize  position  finder  loop* 
+
+BEPORE  •-  "FRONT"; 
+
+AFTER  OUTPUT; 
+
+LOOP  UNTIL  CORRECT  POSITION  FOUND; 
+
+IT  position  is  correct* 
+
+no  elements  occur  after  position* 
+AFTER  > NIL 
+
+OR  next  element  is  greater* 
+CAR(AFTER)  > ELEMENT 
+TIIFN  CORRECT  POSITION  FOUND; 
+incrrwrnt  state  and  specify  position* 
+BEFORE  •-  AFTER; 
+
+AFTER  •-  CDR(AFTER); 
+
+REPliAT; 
+
+CORRECT  POSITION  FOUND: 
+insert  the  neu  element  into  the  position* 
+
+[T  position  is  at  front* 
+
+BEFORE  • "FRONT" 
+
+TllliN  add  element  onto  front* 
+
+OUTPUT  ••  CONSIELEMENT  OUTPUT) 
+ri5f!  insert  into  interior* 
+
+COR(BEFORE)  •-  CONSIELEMENT  AFTER); 
+
+
+REPEAT: 
+DONE:  HALT. 
+
+
+PART  4:  Completing  the  Program 
+
+
+page  32 
+
+
+66.  Machine".  Having  completed  the  pieces  of  the  Selector  and  the  pieces  of  the 
+
+Constructor,  I can  assemble  the  pieces  into  the  final  program  using  a Generate 
+and  Process  paradigm  with  the  termination  test  before  the  generator. 
+
+67.  Machine:  The  final  program,  without  any  meta-code  or  comments,  and  its 
+
+translation  into  LISP  are  given  below: 
+
+[LAMBDA  NIL 
+
+
+1 (PROG 
+
+NIL 
+
+rest  •-  INPUT; 
+
+1 
+
+(SETQ  OUTPUT  NIL) 
+
+OUTPUT  »-  NIL; 
+
+1 
+
+(SETQ  REST  INPUT) 
+
+LOOP  UNTIL  DONE; 
+
+1 LI 
+
+IF 
+
+i 
+
+(COND 
+
+REST  = NIL 
+
+1 
+
+((NULL  REST) 
+
+THCN  DONE; 
+
+ELEMENT  CAn(REST); 
+
+REST  ♦-  CDn(REST); 
+
+BEFORE  "FRONT"; 
+
+AFTER  OUTPUT; 
+
+LOOP  UNTII.  CORRECT  POSITION  FOUND; 
+
+l£ 
+
+AFTER  = NIL 
+
+OR  CAR(AFTER)  ) ELEMENT 
+THI'.N  correct  position  FOUND; 
+BEFORE  - AFTER; 
+
+AFTER  - CDR(AFTER); 
+
+REPEAT; 
+
+CORRECT  POSITION  FOUND; 
+
+IZ 
+
+BEFORE  = "FRONT" 
+
+THEN  OUTPUT  ^ 
+
+CONSfELEMENT  OUTPUT) 
+
+ELSE 
+
+CDR(BEFORE)  »- 
+CONS(ELEMENT  AFTER); 
+
+REPEAT; 
+
+DONE:  HALT. 
+
+
+L3 
+
+
+(GO  L2))) 
+
+(SETQ  ELEMENT  (CAR  REST)) 
+(SETQ  REST  (CDR  REST)) 
+(SETQ  BEFORE  "FRONT") 
+(SETQ  AFTER  OUTPUT) 
+
+
+(COND 
+
+((OR  (NULL  AFTER) 
+
+(GREATERP  (CAR  AFTER)  ELEMENT)) 
+(GO  L4))) 
+
+(SETQ  BEFORE  AFTER) 
+
+(SETQ  AFTER  (CDR  AFTER)) 
+
+(GO  L3) 
+
+
+L4 
+
+
+(COND 
+
+((EQUAL  BEFORE  "FRONT") 
+
+(SETQ  OUTPUT 
+
+(CONS  ELEMENT  OUTPUT))) 
+
+(T 
+
+(RPLACD  BEFORE 
+
+(CONS  ELEMENT  AFTER)))) 
+
+(GO  LI) 
+
+L2  (RETURN  NIL] 
+
+
+page  33 
+
+
+III.  TYPES  OP  PROGRAMMING  KNOWLEDGE 
+
+
+On  reviewing  the  dialogue,  we  can  see  that  there  are  several  types  of 
+knowledge  involved.  We  first  note  that  there  is  significant  use  of  a kind  of  strategy  or 
+planning  knowledge.  On  one  level,  we  see  this  in  steps  S and  14,  where  the  system 
+discusses  what  must  be  done  to  write  a transfer  program.  In  step  9 for  c triple,  the 
+sub-steps  3 and  4,  where  the  transfer  order  and  the  transfer  termination  method  are 
+chosen,  are  really  a kind  of  strategy  for  determining  the  form  that  the  basic  algorithm 
+will  take.  On  a different  level,  we  see  a kind  of  global  optimization  in  steps  21  and  39, 
+where  the  system  decides  that  information  structures  designed  for  one  purpose  are 
+sufficient  for  another.  In  step  21,  for  example,  the  pointer  originally  chosen  to  save  the 
+state  of  the  selector  (by  marking  the  dividing  point  between  those  elements  generated 
+and  those  not  yet  generated)  Is  found  to  be  adequate  for  the  purpose  of  Indicating  the 
+next  element  to  be  generated.  One  could  imagine,  as  an  alternative  to  this  type  of 
+planning,  the  use  of  more  conventional  local  optimization  such  as  post-synthesis  removal 
+or  combination  of  redundant  portions. 
+
+We  also  see  that  the  system  maker  considerable  use  of  inference  and 
+simplification  knowledge.  Inference  plays  a role  in  the  global  optimization  planning 
+mentioned  above,  and  also  appears  in  steps  16  and  28,  where  the  selection  and 
+construction  re-orderings  are  determined.  Simplification  and  inference  are  both 
+apparent  in  steps  50  through  56,  where  the  test  for  the  correctness  of  the  position 
+was  reduced  to  a simple  test  on  the  variable  AFTER.  Simplification  and  inference  are 
+also  needed  in  step  36  where  the  system  decides  that  an  error  exit  (for  the  case  of  no 
+position  being  found)  is  unnecessary. 
+
+
+TYPES  OF  PROGRAMMING  KNOWLEDGE  pace  34 
+
+Additionally,  there  arc  types  of  knowledge  which  are  spread  throughout  the 
+dialogue.  Relatively  domain-specific  knowledge  (in  this  case,  about  sotting)  is 
+particula^'ly  necessary  in  the  earlier  stages.  Language-specific  knowledge  (in  this  case, 
+about  LISP)  is  necessary  when  the  final  code  is  being  generated.  General  procrarnming 
+knowledge,  such  as  knowledge  about  set  enumeration  and  linked  lists,  is  necessary 
+throughout  the  synthesis  process.  Further,  one  could  imagine  significant  use  of 
+efficiency  information,  although  it  is  not  present  in  our  particular  dialogue. 
+
+The  variety  of  types  and  amounts  o*  knowledge  used  in  the  dialogue  would  tend 
+to  indicate  that  much  more  infoimation  is  required  for  automatic  synthesis  of  sorting 
+programs  than  appeared  in  earlier,  computer-implemented,  systems  for  v;riting  sort 
+programs  [3,  7,  11].  Ruth  has  developed  a formulation  of  the  knowledge  involved  in 
+interchange  and  bubble  sort  programs  [9].  His  formulation  is  aimed  primarily  at  the 
+analysis  of  simple  student  programs  in  an  instructional  environment  and  the  analysis  task 
+as  defined  does  not  seem  to  require  the  same  depth  and  generality  of  knowledge 
+suggested  by  our  dialogue.  Our  intuition  is  that  a significantly  greater  depth  of 
+programming  knowledge  would  be  required  to  extend  his  formulation  to  a larger  class  of 
+programs.  It  is  also  interesting  to  compare  the  information  involved  in  our  dialogue  to 
+that  found  in  non-implemcntcd  (and  not  intended  for  machine  implementation)  human- 
+oriented  guides  for  sort-algorithm  selection  and  in  textbooks  on  sorting  Martin  [8] 
+gives  methods  for  selecting  a good  algorithm  for  a particular  sorting  problurn  Those 
+algorithms  are  much  more  pov/erful  than  those  we  deal  with  and  their  derivation  would 
+require  considerably  more  information.  We  note  that  at  the  level  of  algorithm 
+
+
+I 
+
+
+. .■^»OiWKii«iWiW»w>wyx*'aiw<t»>t«ft«lfVar«  •»s*te/>^M*i»u6ii»n*>»«JUMijiw»i»'Ji«fc’lK’iWtli  W*fM'in«1l*ttl»»»r3Wt';VVM*!WJJftW<Wl'1>>'.’'’!AWr..  r ' 
+
+
+CM  t mmtmjH  Mr. •* 
+
+
+TYPES  OF  PROGRAMMING  KNOWLEDGE 
+
+
+page  35 
+
+
+description  presented,  little  explicit  information  is  available  to  allow  pieces  of 
+algorithms  to  be  fitted  together  or  to  allow  slight  modification  of  existing  algorithms.  A 
+sorting  textbook  such  as  [5],  gives  several  orders  of  magnitude  more  information  on 
+sorting  than  is  required  for  our  dialogue. 
+
+Can  we  measure  or  estimate  in  some  way  how  much  knowledge  is  necessary  for 
+program-understanding  systems?  The  fact  that  the  dialogue  describing  the  synthesis 
+look  some  seventy  steps  (with  some  of  the  steps  rather  complex)  is  an  indication  that 
+considerable  information  is  involved.  From  our  experiments,  we  estimate  that  about 
+one  or  two  hundred  explicitly  stated  "facts"  or  rules  would  get  r.  synthesis  system 
+through  the  underlying  steps  of  this  dialogue.  Furthermore,  it  is  our  guess  that  at  least 
+this  much  knowledge  density  will  be  required  for  other  similar  tasks,  in  order  to  have 
+the  flexibility  necessary  for  the  many  aspects  of  program  understanding.  Although  we 
+are  suggesting  that  such  information  must  be  effectively  available  in  some  form  to  a 
+system,  we  are  not  in  a position  to  estimate  how  much  of  this  information  should  be 
+stated  explicitly  (as,  say,  rules),  how  much  should  be  derivable  (from,  say,  meta-rules), 
+how  much  should  be  learned  from  experience,  or  available  in  any  other  fashion. 
+
+
+IV.  SUMMARY  AND  CONCLUSIONS 
+
+
+In  this  pap.r  we  have  tried  to  exemplify  and  specify  the  knowledge  appropriate 
+for  a program-understanding  system  which  can  synthesize  small  programs,  by  presenting 
+a dialogue  between  a hypothetical  version  of  such  a system  and  a user.  Our  conjecture 
+
+
+SUMMARY  AND  CONCLUSIONS 
+
+
+pace  36 
+
+
+is  that  unless  a system  is  capable  of  exceeding  the  reasoning  power,  and  even  some  of 
+the  communication  abilities,  exemplified  by  the  dialogue,  the  system  will  not  effectively 
+"understand"  what  it  is  doing  well  enough  to  synthesize,  analyze,  modify,  and  debug 
+programs,  It  appears  that  a system  which  attempts  to  meet  this  standard  must  have 
+targe  amounts  of  many  different  kinds  of  knowledge,  Most  such  programming  knowledge 
+remains  to  be  codified  into  some  form  of  machine  implementable  theory.  In  ^set,  the 
+codification  of  such  knowledge  is  one  of  the  main  research  problems  in  program- 
+understanding  systems. 
+
+As  for  our  own  work,  in  the  near  future  we  expect  to  refine  our  experimental 
+system  until  it  approaches  fas  closely  as  seems  useful  and  possible)  the  standard 
+suggested  by  our  dialogue  (but  without  the  actual  language  interface).  We  hope  then 
+to  extend  the  system  to  deal  with  several  different  types  of  sorting  programs.  Perhaps 
+then  we  will  be  in  a better  position  to  estimate  the  requirements  of  largu-r  program- 
+understanding  systems. 
+
+V.  ACKNOWLEDGEMENTS 
+
+The  authors  gratefully  acknowledge  the  helpful  suggestions  given  by  Avra  J. 
+Cohn,  Brian  P.  McCune,  Richard  J.  Waldinger,  and  Elaine  Kant  after  numerous  readings  of 
+earlier  drafts  of  this  paper  Computer  time  for  our  preliminary  tests  was  made 
+available  by  the  Artificial  Intelligence  Center  of  the  Stanford  Research  Institute. 
+
+
+VI.  REFERENCES 
+
+
+[11  Dahl,  O.J.,  Dijkstra.  E.W.,  and  Hoare,  C.A.R.,Structured  Procrammine  (New 
+York:  Academic  Press,  Inc.,  1 972). 
+
+[21  Floyd  Robert  W.,  Toward  Interactive  Design  of  Correct  Programs, 
+Computer  Science  report  STAN-CS-7I-235,  (Stanford  University,  September,  1971). 
+
+[31  Green,  C.  Cordell,  The  Application  of  Theorem  Proving  to  Quest ior»- 
+Answering  Systems,  Cornpufer  Science  report  STAN-CS-60- 138,  AIM-96, 
+
+AD696394,(Stanford  University,  Au-ust,  1959). 
+
+[41  Green,  C.C  , Walding.  i,  R.J , Barotow,  O R.,  Elschlager,  R , Lenat,  D B,  McCune, 
+BP  Shaw  De!  and  Stcmbei:.,  U,  Progress  Report  on  Program-Understanding 
+Systems,  Compu’ef  Scienc  report  STAN-CS- 74-444,  (Stanford  University,  August, 
+
+1974). 
+
+
+[51  <nuth,  Donald  E.,  Sorting  and  Searching,  Tht  Art  of  Com/>i(fir  / toiioimminf,.  vol. 
+3 (Reading,  Mass.;  Addison-V7cslry,  1973). 
+
+[61  Knuth,  Donald  E.,  Structured  Programming  with  60  TO  Statements,  Comf>tnig 
+Surveys,  vol.  6 (December,  1974),  261-301. 
+
+[71  Kowalski,  R A,  Predicate  logic  as  programming  language.  Memo  no.  70, 
+Dept,  of  Computational  Logic,  fUmversity  of  Edinburgh,  November,  1974). 
+
+[81  Martin,  William  A,  Sorting,  r c<rfij<uttr.g  Surveys,  vol  ? (December,  1971),  147- 
+
+174. 
+
+[91  Ruth,  Gregory  R,  Analysis  of  Algorithm  Implementations,  Project  MAC 
+report  MAC  TR-130,  (Massaclur.-  tts  institute  of  Technology,  May,  1974). 
+
+[101  Teitelman,  Warren,  INTERLISP  Reference  Manual,  (Xerox  Palo  Alto 
+Research  Center  and  Bolt  Ceran''k  X Nc'.vman,  1974). 
+
+(Ill  van  Emden,  MH,  Tirst-ordcr  predicate  logic  as  a high-level  orogran 
+language.  Report  MIP-R-IOG,  Dept  of  Machine  Intelligence,  (University  of  Edinburgh, 
+
+May,  1 974) 
+
+(121  Zahn,  Charles  T.,  A Control  Statement  for  Natural  Top-down  Structured 
+Programming,  presented  at  Symposium  on  Programming  Languages,  Pans,  v 1 974). 
+
+

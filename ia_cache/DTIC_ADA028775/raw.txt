@@ -1,0 +1,2589 @@
+ADA  02  8 7 75 
+
+
+TN 
+
+3198 
+
+
+NA\  A I [1ILT  HONIi 
+
+c 
+
+
+l AtlORA  1 OI^\  CtNU  R SAN  DILGO  CALIFORNIA  92152 
+
+
+A DIGEST  OF  RESEARCH  APPLICATIONS 
+FOR  THE  ADVANCED  COMMAND  CONTROL  ARCHITECTURAL 
+TESTBED  (ACCAT) 
+
+
+27  July  1976 
+
+
+D.  C.  McCall 
+Tactical  Command 
+Control  & Navigation 
+
+Division  (Code  3300)  NELC  J732 
+
+
+THIS  IS  A WORKING  PAPER  GIVING  TENTATIVE  INFORMATION 
+ABOUT  SOME  WORK  IN  PROGRESS  AT  NELC.  IF  CITED  IN  THE 
+LITERATURE  THE  INFORMATION  IS  TO  BE  IDENTIFIED  AS 
+TENTATIVE  AND  UNPUBLISHED. 
+
+
+APPROVED  FOP  PUBLIC  RELEASE;  DISTRIBUTION  IS  UNLIMITED. 
+
+
+D C 
+
+r^nnjiE 
+
+
+AUG  23  1976 
+
+
+IblijU  U E 
+
+B 
+
+
+ucctsiw  M — — 
+
+Dill  Wtl'K 
+
+0?t  lull  s<mt«  □ 
+
+wu#no«icEo  ' J 
+
+
+JitSUMCMIM— 
+
+II 
+
+^ i 
+
+I OISlHISUttOll/AVAllMUJn  CW» 
+
+out. 
+
+AlflL  aiwer  - 
+
+[A 
+
+I 
+
+• 
+
+ARPA  Order  Number:  3175 
+
+Program  Code  Number:  6D30 
+
+
+(Jp 
+
+
+fn] 
+
+/ 
+
+
+/ 
+
+
+/ 
+
+
+A 
+
+
+7 
+
+A DIGEST  OF  RESEARCH  APPLICATIONS 
+
+
+FOR  THE  ADVANCED  COMMAND  .CONTROL  ARCHITECTURAL 
+
+
+TESTBED  (ACCAT)'  j 
+
+ffpjTMt  976  i 
+
+/X 
+
+a w 
+
+
+Qj)  HztC'’TH-3i'/rj  @ 
+
+
+l. 
+
+
+X 
+
+
+^ / a 717  / ~ 
+
+->  - i n,  / / v / r 
+
+
+This  research  was  supported  by  the 
+Advanced  Research  Projects  Agency 
+of  the  Department  of  Defense  and  was 
+monitored  by  Naval  Electronic  Systems 
+Command  under  Task  No.  XF21 .211 .005.E052 
+
+
+/ 
+
+
+■1  •/ 
+
+
+Contractor:  Naval  Electronics  Laboratory  Center 
+
+Principal  Investigator:  J.  R.  Volpe,  714-225-6844 
+
+Project  Scientist:  D.  C.  McCall,  714-225-7777 
+
+
+The  views  and  conclusions  contained  in  the  document  are  those  of  the  author 
+and  should  not  be  interpreted  as  necessarily  representing  the  official  policies 
+either  express  or  implied,  of  the  Defense  Advanced  Research  Projects  Agency 
+or  the  U.  S.  Government. 
+
+
+REPORT  SUMMARY 
+
+
+This  note  presents  44  possible  research  applications  which  result  from 
+, match-uD  of  Navy  command  control  problems  with  recent  research  results. 
+Several  of  tt. Sensing  applications  will  be  selected  or  emons  ra  on 
+on  the  Advanced  Command  Control  Architectural  Test bed  (JCCAT)  loc ate J ^ NELC. 
+In  selecting  the  applications,  we  were  interested  in  those  areas  of  resear  h 
+which  could9be  demonstrated  quickly  to  permit  an  early  assessment  of  the  tech- 
+nology. 
+
+
+In  the  hierarchy  of  Naval  Command  Control,  we  are  concerned  with  command 
+control  problems  at  the  Fleet  Commander-in-Chief  and  Tactical  Flag  Commanders 
+level.  The  functions  and  basic  command  control  processes  of  these  two  nodes 
+are  sketched  herein. 
+
+
+The  technological  research  areas  which  were  used  " ^ ™*;hing  Process 
+were  limited  to  the  following  four  areas:  Artificial  Intelligence,  Data  Ba 
+
+Management,  Query  Systems  and  Decision  Aids.  In  this  ^n;a\effo^ con- 
+centrated  on  work  funded  by  the  Information  Processing  Technology  0 nee  of 
+ARPA,  and  by  the  Information  Systems  Program  and  the  Operational  Decision  Aids 
+
+Project  of  ONR. 
+
+
+ii 
+
+
+PURPOSE 
+
+
+A series  of  brief  descriptions  of  possible  demonstrations  for  the  ACCAT 
+program  was  produced.  Only  those  technologies  which  seemed  to  have  ready 
+application  to  Navy  Command  Control  problems  were  included.  This  is  an  initial 
+digest  and  as  such  will  undergo  several  levels  of  reviewing  before  final 
+demonstration  selection  is  made. 
+
+ADMINISTRATIVE  INFORMATION 
+
+This  task  was  sponsored  by  the  Information  Processing  Technology  Office  of 
+the  Advanced  Research  Agency  under  NELC  Project  J7 32 . 
+
+ACKNOWLEDGEMENT 
+
+
+The  following  personnel  also  contributed  applications  or  comments: 
+
+
+A.  C.  MacMurray  (Code  1200)  et.  al. 
+H.  G.  Miller  (Code  233) 
+
+R.  Brandenburg  (SEI) 
+
+J.  P.  Sch ill  (Code  3200) 
+
+B.  B.  Burris  (Code  5300) 
+
+D.  Small  (Code  3200) 
+
+A.  Freedy  (Perceptronics ) 
+
+J.  A.  Grant  (Code  203) 
+
+C.  Nuese  (Code  3300) 
+
+
+N.  R.  Greenfeld  (MIT) 
+
+V.  J.  Monteleon  (Code  233) 
+R.  L.  Goodbody  (Code  233) 
+
+L.  F.  Balas  (Code  3300) 
+
+T.  H.  Crocker  (Code  3300) 
+P.  S.  McIntosh  (Code  3300) 
+J.  R.  Volpe  (Code  3020) 
+
+M.  B.  Bernstein  (SDC) 
+
+
+1.0  INTRODUCTION 
+
+
+This  note  reports  on  some  of  the  work  performed  by  Code  3300  under  NELC 
+Task  J732630.  The  task  had  the  tripartite  goal  of  identifying  an  ARPA  and 
+ONR  funded  technology  baseline,  reviewing  Navy  C^  system,  and  identifying  2 
+possible  demonstrations  of  the  applications  of  these  technologies  to  Navy  (T 
+systems.  The  demonstrations  are  to  be  performed  on  the  Advanced  Command  Control 
+Architectural  Testbed  (ACC-VT)  being  installed  in  the  EDATL  building  at  NELC. 
+
+The  ACCAT  is  discussed  at  length  in  reference  1.  This  initial  presentation 
+of  the  technology  baseline  was  limited  to  a few  areas  funded  by  the  Information 
+Processing  Technology  Office  of  ARPA,  and  by  the  Information  Systems  Program 
+and  Operational  Decision  Aids  Project  of  ONR. 
+
+In  selecting  applications  for  possible  demonstrations  we  were  interested  in 
+those  areas  of  research  which  could  be  demonstrated  quickly  to  permit  an  early 
+assessment  of  the  technology.  A process  of  increasing  the  depth  and  breadth  of 
+the  experimentation  can  thereby  be  followed  in  the  technology  evaluation  process. 
+This  process  can  expect  to  be  truncated  when  either  the  expanded  scope  of  the 
+experiment  no  longer  yields  an  increase  in  demonstrated  performance  or  the  techno- 
+logy issue  is  clearly  ready  for  transition  to  more  advanced  stages  of  development. 
+
+2.0  TECHNOLOGY  BASELINE 
+
+The  technologies  addressed  for  possible  application  to  Navy  command  control 
+problems  were  Artificial  Intelligence  ( AI ) , Data  Base  Management,  Query  Systems 
+and  Decision  Aids.  Although  part  of  our  task  was  to  review  these  technology 
+areas  it  is  Impossible  in  this  note  to  present  anything  but  a brief  description 
+of  each  area. 
+
+2.1  Artificial  Intelligence 
+
+(2) 
+
+Feigenbaum  defines  artificial  intelligence  research  as  follows. 
+
+"Artificial  Intelligence  research  is  that  part  of  Computer  Science  that  is 
+concerned  with  the  symbol -manipulation  processes  that  produce  intelligent  action. 
+By  'intelligent  action'  is  meant  an  act  or  decision  that  is  goal -oriented, 
+arrived  at  by  an  understandable  chain  of  symbolic  analysis  and  reasoning  steps, 
+and  is  one  in  which  knowledge  of  the  world  informs  and  guides  the  reasoning". 
+
+Subsets  of  AI  which  appear  to  have  immediate  applications  are  knowledge-based 
+data  systems  and  production  systems.  In  knowledge-based  data  system  develop- 
+ment the  emphasis  is  " ...  upon  the  encoding  of  knowledge  about  the  world  in 
+symbolic  expression  so  that  this  knowledge  can  be  manipulated  by  programs;  and 
+the  retrieval  of  these  symbolic  expressions,  as  appropriate,  in  response  to 
+demands  of  various  tasks". (2)  A production  system  is  a collection  of  production 
+rules,  a rule  interpreter  and  a data  base.  A production  rule(3)  1S  a statement 
+of  the  form 
+
+
+If:  predicate,  and  predicate,  and  ...  and  predicate 
+
+12  m 
+
+then:  action,  and  action,  and  ...  and  action 
+
+l 2 n 
+
+Depending  on  the  particular  strategies  incorporated  in  the  rule  interpreter, 
+or  monitor,  the  actions  are  (at  least  potentially)  performed  when  all  the 
+
+
+1 
+
+
+predicates  are  true.  The  predicates  test  various  objects  and  their  attribute 
+values  within  the  data  base.  The  intelligent  terminal  agent  project  at  Rand 
+operates  using  a sophisticated  production  system. 
+
+(2)  (2) 
+
+Examples  of  knowledge  based  data  systems  are  Meta-Dendral  and  Mycin 
+The  former  is  a molecule  structure  generator  and  the  latter  is  a medical  diagno- 
+sis and  therapy  advice  system.  Both  of  these  systems  were  developed  by  close 
+collaboration  between  experts  in  the  field  and  AI  researchers.  Each  system 
+has  been  "custom  crafted." 
+
+2.2  Data  Base  Management  System 
+
+Data  Base  Management  systems  are  developed  and  marketed  today  under  various 
+generic  names.  Such  appellations  as  data  management  system,  generalized 
+information  retrieval  system,  information  management  system,  and  file  manage- 
+ment system  are  the  main  terms  in  use.  The  more  elementary  systems  search  a 
+sequential  file  having  simple  record  structures  and  provide  only  rudimentary 
+report  formatting  facilities.  More  elaborate  systems  handle  several  files 
+via  indexes  or  links  and  function  in  an  on-line  mode.  With  each  system  there 
+may  be  a special  command  language  and  an  individual  data  structure. 
+
+The  special  command  language  enables  a user  to  update  and  access  the  data 
+base.  In  general  one  must  have  detailed  knowledge  of  what  is  in  the  data  base 
+together  with  the  structure.  Even  armed  with  this  knowledge  selective  updates 
+and  retrievals  can  be  both  cumbersome  and  time-consuming. 
+
+The  research  in  this  area  has  two  major  thrusts,  one  of  efficient  manipulation 
+of  very  large  data  bases  {i.e.,  computer-held  files  of  greater  than  10  11 
+bits)  and  the  other  of  utilizing  existing  data  bases  in  an  effective  manner. 
+
+Both  of  these  areas  could  have  impact  on  C2  systems.  Different  methods  must 
+be  used  to  manipulate  and  access  very  large  data  bases  since  access  time  be- 
+comes the  critical  feature.  Naive  extensions  of  textbook  data  manipulation  tools 
+may  lead  to  unsatisfactory  response  times. 
+
+An  important  effort  in  making  data  bases  easier  to  use  is  work  being  done 
+in  Relational  Data  Bases.  In  a Relational  Data  Base  data  are  (conceptually) 
+stored  in  two  dimensional  matrices  called  relations.  Each  row  and  column  has 
+a name  and  associations  between  records  (rows)  are  represented  solely  by  data 
+values  in  columns  drawn  from  a common  domain.  For  example  we  could  have  the 
+following  relation  in  a data  base. 
+
+
+HULL  # 
+
+SNAME 
+
+LENGTH 
+
+LOCATION 
+
+7 
+
+CRAIG 
+
+250 
+
+Newport 
+
+25 
+
+JONES 
+
+300 
+
+San  Diego 
+
+964 
+
+FOSTER 
+
+350 
+
+Newport 
+
+Using  relational  algebra  we  could 
+
+"Find  SNAME  for  ships  in  Newport." 
+
+
+2 
+
+
+This  would  create  a relation 
+
+
+SNAME 
+
+CRAIG 
+
+FOSTER 
+
+
+Two  other  methods  of  effective  utilization  of  data  bases  are  concerned 
+with  setting  "alerts"  which  notify  the  user  that  preset  thresholds  have 
+been  exceeded,  and  searching  the  data  bases  to  detect  preset  patterns 
+in  the  data.  Efforts  along  this  line  are  the  Targe  File  Management  Information 
+Systems^4!  project  at  Stanford  Research  Institute  (SRI)  and  the  Decision-Aiding 
+Information  System  (DAISY)  at  the  University  of  Pennsylvania.  The  DAISY 
+system  has  other  capabilities  other  than  setting  alerts,  as  its  name  implies 
+it  is  a decision  aiding  system. 
+
+2.3  Dec i sion  Aids 
+
+
+A decision  aid  is  a resource  used  by  a decision  maker  which  either 
+facilitates  the  making  of  decisions,  improves  the  quality  of  decisions,  or 
+improves  the  consistency  of  decisions.  The  decision  aid  may  be  a person, 
+or  group  of  persons.  The  technological  thrust  is  toward  the  use  of  mechanical 
+decision  aids.  These  can  range  from  query  systems  which  make  information 
+available  to  the  decision  maker,  to  automata  which  can  be  trained  to  make 
+decisions  fo”  the  decision  maker  (comparing  observed  events  with  prestored 
+criteria).  A sophisticated  decision  aid  can  provide  measures  of  optimization  - 
+normally  through  maximization  of  the  decision  maker's  expected  utility. 
+
+Decision  making  under  uncertainty  is  enhanced  by  use  of  a decision  aid  which 
+will  systematically  apply  the  axioms  of  probability.  Automated  decision 
+aids  can  be  constructed  with  a ready  access  to  stored  data,  and  the  ability 
+to  make  mathematical  calculations  and  logical  manipulations.  Such  aids  can 
+be  very  quick  and  very  consistent.  The  decision  maker  must  provide  sub- 
+jective estimates  of  probability,  and  must  provide  measures  of  personal 
+preference  on  which  utility  assignments  can  be  based.  The  human  decision 
+maker  normally  monitors  the  actions  of  the  mechanical  decision  aids,  and 
+usually  exercises  his  experience,  intuition  and  judgement  in  accenting  or 
+modifying  courses  of  action  offered  or  suggested  by  the  decision  aids.  Work 
+in  the  theory  and  application  of  mechanical  decision  aids  is  being  actively 
+pursued  by  Perceptronics , Inc.,  Decisions  and  Designs,  Inc.,  Stanford  Research 
+Institute  and  other  organizations. 
+
+2 . 4 Query  Systems 
+
+Query  Systems  or  natural  language  processors  as  they  are  sometimes  known, 
+permit  the  noncomputer  scientist  user  to  easily  access  data  bases.  Design 
+goals  for  these  systems  are  to  provide  a robust  man/machine  interface  which 
+will  enable  a user  to  obtain  information  with  a minimum  of  jargon  learning. 
+
+Some  systems  have  a fixed  list  cf  English-like  commands  which  are  recognized. 
+Others  can  be  quite  sophisticated  in  terms  of  the  complexity  of  syntax  recognized. 
+For  example  a simple  system  could  answer  the  following  questions: 
+
+
+3 
+
+
+a.  Where  is  the  FOSTER? 
+
+
+b.  Where  is  the  KENNEDY? 
+
+where  the  FOSTER  and  KENNEDY  are  ships,  and  positionial  information  about  them 
+is  stored  in  a data  base.  A sophisticated  system  could  answer  the  following 
+incomplete  set  of  sentences: 
+
+a.  Where  is  the  FOSTER? 
+
+b.  The  KENNEDY? 
+
+c.  How  soon  to  rendezvous? 
+
+Of  course  as  the  sophistication  of  the  systems  increase  so  does  program  com- 
+plexity and  storage.  Work  in  this  area  is  being  done  in  the  PLANES  system  at 
+the  University  of  Illinois,  LUNAR  systems  at  Bolt  Beranek  and  Newman  (BBN)  and  the 
+SHRDLV  program  at  MIT. 
+
+3.0  COMMAND  CONTROL  FRAMEWORK 
+
+This  section  presents  tentative  information  on  the  NCCS  architectural 
+framework  and  the  macro  relationships  of  a C?  node  in  the  total  network. 
+
+3.1  Nodal  Description 
+
+The  architectural  elements  of  the  Navy  Command  and  Control  System  (NCCS) 
+can  be  categorized  into  ten  subject  areas  which  pertain  to  the  node  (where 
+the  C2  function  is  exercised)  and  the  network  (within  which  the  nodes  are 
+provided  connectivity).  These  elements  are  as  follows: 
+
+. Command  Facilities 
+. Communication  Systems 
+. Waming/SensGr  Systems 
+. Reporting  Structure 
+. Personnel  and  Procedures 
+. Data  Processors 
+. Data  Bases 
+. Application  Programs 
+. System  Programs 
+. Man/Machine  Information  Couplers 
+
+The  last  five  aggregate  to  Automatic  Data  Processing  (ADP)  facilities  which 
+are  exercised  within  the  nodes  and  are  of  further  interest  co  this  note.  Figure 
+1 illustrates  the  relationships  cf  the  elements  of  the  C 2 network  and  the  nodes. 
+
+The  nodes  of  the  NCCS  may  be  characterized  in  terms  of  four  basic  command 
+and  control  processes.  They  are: 
+
+Information  Input  Process 
+Situation  Assessment  Process 
+Decision  and  Direction  Process 
+Report  Generation  Process 
+
+
+4 
+
+
+The  impl  station  of  these  processes  at  the  various  NCCS  nodes  will  be 
+dependent  or 
+
+a.  Tie  nodal  mission  and  location  within  the  command  hierarchy. 
+
+b.  The  time  frame  in  which  the  node  is  viewed. 
+
+However,  the  processes  themselves  are  invariant  with  respect  to  node  and  time 
+frame,  and  can  be  characterized  by  subprocesses  which  are  generic  in  nature 
+and  nodal ly  independent. 
+
+3.1.1  Information  Input 
+
+The  Information  Input  Process  is  the  front  end  processing  function  which, 
+in  effect,  prepares  the  information  for  use  by  a man  in  either  the  Situation 
+Assessment  or  Decision  and  Direction  Process. 
+
+3.1.2  Situation  Assessment 
+
+The  Situation  Assessment  Process  is  the  process  in  which  own  force  missions 
+and  tasks  are  analyzed  with  respect  to  own  and  enemy  capabilities,  and  poten- 
+tial enemy  courses  of  action  (COA).  The  resulting  estimates  of  the  situation 
+become  the  major  input  to  the  Decision  and  Direction  Function.  Situation 
+Assessment  is  a continuous  monitoring  and  evaluation  process,  and  its  results 
+may  modify  existing  data  base  information  or  create  new  information. 
+
+3.1.3  Decision  and  Direction 
+
+The  Decision  and  Direction  Process  formulates  and  analyzes  alternative 
+courses  of  action  to  accomplish  assigned  tasks  and  missions  in  the  face  of 
+potential  or  actual  opposition.  The  output  of  the  Decision  and  Direction 
+Process  may  change  the  operational  assignments/status  of  assigned  assets. 
+
+3.1.4  Report  and  Directive 
+
+The  Report  and  Directive  Generation  Process  provides  the  means  by  which 
+a command  node  passes  information,  orders,  alerts,  queries  and  requests  to 
+external  nodes.  The  process  is  not  confined  to  handling  information  developed 
+after  a particular  decision  has  been  made;  it  provides  a means  of  immediately 
+outputting  to  cognizant  commands,  critical  information  received  and  identified 
+by  the  Information  Input  or  Situation  Assessment  process. 
+
+3.2  Principal  Function  Description 
+
+The  above  nodal  discussion  can  be  presented  in  terms  of  principal  functions 
+ordered  with  respect  to  an  event-action-reaction  time  line  which  would  be  a 
+typically  stressed  environment  for  an  NCCS  Command  Center. 
+
+3.2.1  Alerts  and  Notifications 
+
+An  alert  is  a received  warning  of  an  impending  mission  and  the  notification 
+is  the  command  center  response.  This  function  involves  procedures  and  methods 
+
+
+5 
+
+
+fnr  receiving  processing,  and  distributing  alerts.  Through  a combination  of 
+ha?dHare.  sS?tware  and  aSdio/visual  alarm,  the  Watch  Officer  5 assisted  m 
+performing  alert/notification  functions. 
+
+3.2.2  Operational  Evaluation  and  Threat/Situati^n^ 
+
+Thic  function  provides  event  summaries  of  own  forces  and  threat  iorces. 
+
+It  i ncorporates°s i tuatiorfcorrel  ati  on  of  environment,  Red  Track  position,  and 
+Blue  Track  position. 
+
+3.2.3  Operation/Resource  Availability  Planning 
+
+This  function  details  readiness  status  and  performance  characteristics  of 
+Rlup  and  Red  resources,  including  presonnel , facilitites,  weapons,  and  plat- 
+fir^s  It  pr^viSes  opera??onal  status  regarding  location,  situation,  employment 
+
+category,  etc. 
+
+3.2.4  Current  Operational  Planning 
+
+This  function  encompasses  aids  in  developing  mission  plans,  the  development 
+of  auernatwes  courses  of  action  (COA's),  the  determination  of  resource  require 
+ments,  the  allocation  of  resources,  logistic  determinations,  and  planning  o 
+decision  execution. 
+
+3.2.5  Execution 
+
+The  execution  function  provides  tasking  orders  and  directives  for  resource 
+assignment  and  force  employment.  It  involves  force  coordination/feedback  an 
+operation  monitoring  to  determine  directive  compliance  and  situation  changes. 
+
+
+3.2.6 
+
+
+port  Functions 
+
+
+These  functions  are  employed  in  support  of  most  of  the  ^incipal  Functions 
+and  to  some  degree,  are  event/scenario  independent.  They  consist  °f  Compu 
+rational  Support,  Display/Presentation  Support,  Communications  Support,  Data 
+Base  Sanagement.  Training,  and  Security.  Application  program  element  details 
+are  listed  in  the  ACCAT  systems  description  document. 
+
+4.0  APPLICATIONS 
+
+4.1  Each  application  is  briefly  described  in  the  following  format. 
+
+Application  No. 
+
+1.  Title 
+
+2.  Operational  Function 
+
+3.  Technology 
+
+4.  Application  Definition 
+
+5.  Approach 
+
+6.  Capability  Goals/Value  to  the  Fleet  , 
+
+7.  Related  Applications,  other  efforts 
+
+Some  entries  might  not  appear  since  the  listed  applications  differ  greatly  in 
+levefof  detail9  In  some  the  "Approach"  may  be  quite  obvious  while  in  others 
+
+
+a well  thought  out  approach  would  be  a separate  task  even  though  the  definition 
+is  clear. 
+
+Since  a number  of  people  contributed  applications  and  used  terms  familiar 
+to  themselves  in  their  descriptions,  technologies  appear  in  the  applications 
+which  were  not  listed  in  section  2.  Table  2 is  a grouping  of  the  technology 
+areas  that  appear  in  the  applications  section  relative  to  section  2,  plus 
+miscellaneous,  but  highly  related  technologies. 
+
+4.2  Application  Summaries 
+
+
+Art i ficial  Intelligence 
+
+Intelligent  terminals 
+Production  rule^ 
+Heuristic  programming 
+Heuristic  search 
+Adaptive  programs 
+
+Decision  Aids 
+
+
+Real  time  interactive  decision  networks 
+
+Deductive  data  management 
+
+Adaptive  decision  aids 
+
+Advanced  command  and  control  decision  aids 
+
+Query  Systems 
+
+High  level  language 
+Query  language 
+Natural  language 
+
+Natural  language  interface  to  data  management  systems 
+Man/machine  interface 
+
+Data  Base  Management 
+
+Sensor  data  management 
+Underway  procedures  management 
+Distributed  data  bases 
+Information  input  processing 
+Distributed  information  processing 
+Large  data  base  management 
+
+Miscellaneous  Technologies 
+
+Networks 
+
+Sensor  correlation 
+Digital  data  transmission 
+Displays 
+
+Computational  support 
+Simulation  modelling 
+Secure  voice 
+Encryption 
+
+Character  recognition 
+Navigation 
+Prediction 
+Interactive  terminal 
+Optimal  searching 
+Human  factors 
+Computer  Science 
+
+
+Table  II.  Technology  Breakdown 
+
+
+APPLICATION  1 
+
+1 TITLE:  STATUS/READINESS  REPORTING  MESSAGE  PREPARATION  AID 
+
+2.  TECHNOLOGY:  Intelligent  Terminals,  Production  Rules,  Decision  Aids 
+
+3.  APPLICATION  DEFINITION:  Local  intelligent  terminals  with  additional  storage 
+
+(tape  cartridge  or  small  disk)  can  serve  as  aids  to  the  preparation  of  reporting 
+messages  (MOVEREPS,  CASREPS,  FORSTAT,  ccc.)  thereby  reducing  the  errors  in  their 
+content.  Past  efforts  have  been  concerned  with  the  communications  portion  of 
+the  message  preparation  problem,  while  the  message  content  causes  the  bulk  of 
+the  problems  with  the  Navy  command  control  data  bases.  This  type  of  aid  could 
+assist  the  report  originator  to  understand  each  element  in  the  reporting  message, 
+and  to  also  store  information  that  could  be  helpful  in  filling  in  the  message 
+reports.  Additional  readiness/status  information  could  be  collected  on-line 
+from  the  Operational  Readiness  Monitor  System  (ORMS). 
+
+4.  APPROACH: 
+
+~a.  Initial  experiment  (a  portion  of  one  reporting  message)  using  large 
+host  and  high  level  language 
+
+b.  Complete  experiment  (with  all  message  types)  on  large  host  with  high 
+level  language 
+
+c.  Translate  the  Aid  system  to  a RITA  type  terminal/system  and  demonstrate 
+it  as  a stand  alone  system 
+
+d.  Incorporate  a tie-in  to  the  ORMS  test  bed  (NAVSEA  6.2  program)  and  the 
+AFCCT  terminal 
+
+5.  VALUE  TO  FLEET:  Many  of  the  data  bases  which  we  now  have  are  filled  with 
+
+partially  incomplete,  erroneous,  and  untimely  data  due  to  the  problems  asso- 
+ciated with  preparing  the  reporting  messages  at  sea.  A reduction  in  the 
+'source'  error  rate  would  increase  the  Fleet  Commander's  knowledge  of  the 
+Fleet's  readiness  and  status  greatly  (It  will  also  upgrade  the  value  of  the 
+shore  data  bases  and  associated  ADP  hardware/software). 
+
+
+APPLICATION  2 
+
+1.  TITLE:  OPTIMUM  FORCE  POSTURE 
+
+
+2.  TECHNOLOGY:  Advanced  Command  and  Control  Decision  Aids 
+
+3 APPLICATION  DEFINITION:  Calculate  the  optimum  posture  of  own  force  to 
+
+oppose  the  known  or  most  likely  threat.  Calculations  to  include:  best  placement 
+of  carriers  in  a single  or  multi-carrier  task  force;  best  placement  of  AEGIS 
+platforms,  singly  or  in  combination  with  3-T  missile  platforms;  against  a 
+multi -dimensional  missile  threat;  best  placement  and  employment  of  surface 
+combatants  with  tactical  towed  arrays,  LAMPS,  and  various  sonars,  against  the 
+submarine  threat;  best  placement  and  employment  of  patrol  aircraft,  fixed 
+wing  carrier  ASW  aircraft,  and  ASW  helicopters  in  concert  with  friendly  SSN  s 
+and  surface  ASW  forces;  and  best  employment  of  CAP  and  EW  aircraft  in  com- 
+bination with  AEGIS  and  3-T  platforms.  Additional  considerations  include: 
+
+EMCON  plan;  overall  surveillance  plans  and  schedules;  replenishment  schedule; 
+
+PIM  projections;  and  own  capability  as  modified  by  CASREPS,  logistic  shortages,  etc. 
+
+4.  VALUE  TO  FLEET:  Would  give  the  operational  commander  the  capability  to 
+optimize  strategy  and  tactics  on  the  basis  of  available  information;  and  to 
+make  timely  adjustments  in  the  light  of  new  information.  Would  partially 
+satisfy  O.R.  P-14  of  the  Navy  C3  Architecture  Workbook,  dated  August  1975. 
+
+
+APPLICATION  3 
+
+|.  TITLE:  ASSESS  ENEMY  CAPABILITIES/INTENTIONS 
+
+
+■'.«  
+
+
+2.  TECHNOLOGY:  Advanced  Command  and  Control  Decis'on  Aids 
+
+3.  APPLICATION  DEFINITION:  Given  the  estimated  composition  of  an  enemy  force, 
+
+assess  the  capabilities  of  that  force  with  respect  to  the  mission(s)  of  own 
+force.  Using  knowledge  of  the  enemy's  strategy  and  tactics,  observed  use  of 
+sensors,  disposition  and  for  nation(s),  available  logistic  support,  material 
+readiness,  supporting  surveillance  forces,  and  possible  cooperating  combat 
+forces,  assess  the  enemy's  intended  course  of  action. 
+
+4.  VALUE  TO  FLEET:  Would  permit  the  operational  commander  to  make  timely 
+
+assessments  of  the-  situation,  preparatory  to  determining  the  optimum  posture 
+of  his  force.  Would  indirectly  provide  partial  satisfaction  of  O.R.  P-14 
+
+of  the  Navy  C^  Architecture  Workbook,  acted  August  1975,  by  facilitating 
+analysis  of  the  threat  against  which  own  force  posture  is  to  be  optimized. 
+
+
+__ . r *V 
+
+
+14 
+
+
+APPLICATION  4 
+
+1.  TITLE:  COVER  AND  DECEPTION 
+
+2 TECHNOLOGY:  Decision  Aids,  Heuristic  Programming,  Data  Base  Management 
+
+3 APPLICATION  DEFINITION:  Given  own  force  mission,  and_ postulated  operating 
+
+constraints,  the  estimated  surveillance  and  combat  capabilities  of  the  opposing 
+force,  and  environmental  conditions,  determine  the  optimum  cover  and  deception 
+plan  to  be  employed  by  own  force. 
+
+4.  VALUE  TO  FLEET:  Would  give  the  operational  commander  the  ability  to  make 
+
+rapid  comparative  evaluations  of  alternatives  with  respect  to  cover  an 
+deception  tactics,  and  to  make  timely  adjustments  when  required  by  changes 
+in  the  perceived  situation. 
+
+
+APPLICATION  5 
+
+
+1.  TITLE:  LOGISTIC  SUPPORT  REQUIREMENTS 
+
+2.  TECHNOLOGY : Advanced  Command  and  Control  Decision  Aids 
+
+3.  APPLICATION  DEFINITION:  Given  a requirement  to  execute  an  OPLAN,  or  to 
+
+satisfy  an  ad  hoc  operational  demand,  determine  the  logistic  support  required. 
+This  would  include  not  only  estimation  of  requirements  for  consumables  such 
+
+as  fuel,  ammunition,  repair  parts,  and  food,  but  also  identification  of  the 
+sources  of  such  support.  If  necessary  supplies  are  not  on  hand  within  the 
+action  force,  identify  which  mobile  logistics  forces  have  the  supplies.  Cal- 
+culate earliest  times  and  best  positions  for  underway  replenishment,  and  their 
+possible  impacts  on  the  intended  operation.  Determine  logistic  train  require- 
+ments which  would  ensue  from  a prolonged  action,  and  identify  ships  and  supply 
+bases  which  would  provide  the  necessary  support. 
+
+4.  VALUE  TO  FLEET:  Would  give  the  operational  commander  the  ability  to  make 
+
+timely  decisions  regarding  logistic  factors  which  might  otherwise  constrain 
+his  tactical  options. 
+
+
+APPLICATION  6 
+
+1 . TITLE:  EXPECTED  RESOURCE  COST  OF  A COMBAT  ACTION 
+
+2.  TECHNOLOGY:  Advanced  Command  and  Control  Decision  Aids 
+
+3.  APPLICATION  DEFINITION:  Given  a known  friendly  force  and  an  estimated 
+
+enemy  force,  with:  disposi tions ; stochastic  and  deterministic  capabilities 
+
+of  weapons,  sensors,  communications,  platforms,  and  logistics;  environmental 
+conditions;  and  availability  of  re-inforcements ; and  rules  of  engagement. 
+Compute  the  expected  costs  which  would  be  incurred  by  each  side  in  terms  of: 
+ship  and  aircraft  losses  and  damage;  personnel  casualties;  fuel  and  ammunition 
+expenditures;  and  loss  of  ability  to  perform  subsequent  missions. 
+
+4.  VALUE  TO  FLEET : This  capability  would  provide  an  operational  commander 
+
+with  a rapid  and  accurate  assessment  of  the  probable  outcome  of  a planned  or 
+potential  engagement,  and  thus  would  afford  a better  means  of  preserving  fleet 
+effectiveness  by  avoiding  unintentional  participation  in  combat  actions  which 
+would  impose  unacceptable  resource  costs. 
+
+
+•> 
+
+
+17 
+
+
+APPLICATION  7 
+
+1.  TITLE : ASSESS  THE  ENEMY'S  LOGISTIC  OPTIONS 
+
+2.  TECHNOLOGY : Advanced  Command  and  Control  Decision  Aids 
+
+3 APPLICATION  DEFINITION:  Given  the  logistic  support  available  to  the  enemy 
+
+force  from  both  afloat  and"  base  sources,  the  estimated  levels  of  fuel  and 
+ammunition  on  board  the  enemy  force,  and  estimated  rates  of  consumption,  assess 
+the  enemy's  logistic  options  with  respect  to  his  action  radius  and  ability  to 
+carry  out  postulated  plans.  Assess  the  impact  of  denying  the  enemy  any  specified 
+subset  of  his  available  logistics  options. 
+
+4.  VALUE  TO  FLEET:  This  capability  would  permit  an  operational  commander  to 
+
+readily  assess  the  enemy's  capability  in  terms  of  logistic  limits,  and  to  assess 
+the  cost  of  interdicting  the  enemy's  supply  lines  in  terms  of  the  probable 
+effect  of  partial  or  complete  success. 
+
+
+APPLICATION  8 
+
+1.  TITLE:  BATTLE  MANAGEMENT 
+
+
+2.  TECHNOLOGY:  Advanced  Command  and  Control  Decision  Aids 
+
+3.  APPLICATION  DEFINITION:  Given  that  own  force  is  committed  to  combat,  monitor 
+
+and  lisess  all  battle  events  with  respect  to  the  current  and  projected  ability  of 
+own  force  to  carry  out  assigned  mission(s).  Effects  of  attacks  delivered  and 
+defensive  measures  employed  by  both  sides  would  be  measured  in  terms  of  fuel  and 
+ammunition  expenditures,  and  losses  and  damage  sustained  by  both  sides,  to- 
+gether with  resultant  changes  in  the  offensive  and  defensive  envelope  parameters 
+of  own  and  opposing  forces.  Impact  assessment  would  include  recommendations  as 
+to  reassignment  of  own  force  unit  missions,  diversion  of  resources  to  compensate 
+for  losses,  modification  of  engagement  range,  etc.  Defensive/counteracti ve 
+resource  real  1 oca  cions  considered  would  recognize,  inter  alia,  the  estimated 
+view  that  the  enc-"  holds  with  respect  to  his  missions  and  target  priorities. 
+
+Collateral  assessment  would  be  in  terms  of  the  likelihood  of  successful 
+outcome  of  the  engagement,  together  with  an  estimate  of  the  latest  time  at  which 
+a decision  to  comnit  additional  forces  or  to  disengage  could  be  successfu.ly 
+implemented. 
+
+4.  VALUE  TO  FLEET:  Would  give  the  operational  commander  the  ability  to  make 
+
+operational  time  judgments  over  the  full  multi-dimensional  spectrum  of  the 
+battle  management  problem,  thus  enhancing  the  probability  that  he  will  remain 
+in  control  of  the  situation. 
+
+
+APPLICATION  9 
+
+1.  TITLE:  SHORTFALL  AND  ALTERNATIVE  CORRELATION 
+
+
+2.  TECHNOLOGY:  Advanced  Command  and  Control  Decision  Aids 
+
+3.  APPLICATION  DEFINITION:  Provide  correlation  capability  to  make  the  following 
+
+types  of  comparison  to  identify  shortfalls  and  alternatives: 
+
+a.  Quantities  of  forces  required  by  an  OPLAN  - vs  - forces  currently 
+available  or  projected  for  a future  date. 
+
+b.  Force  requirements  as  derived  from  threat  analysis  - vs  - forces 
+actually  available  or  forces  required  by  an  OPLAN. 
+
+4.  VALUE  TO  FLEET  : Would  provide  the  operational  commander  with  the  means  of 
+
+readily  assessing  force  requirements  with  respect  to  planned  or  potential 
+operations.  Would  partially  satisfy  O.R.  P-14  of  the  Navy  C3  Architecture 
+Workbook,  dated  August  1975. 
+
+
+n 
+
+
+APPLICATION  10 
+
+
+1 TITLE:  QUICK  REACTION  ADAPTATION  OF  OPLANS  TO  CONFORM  TO  ACTUAL  FORCES 
+
+AND  DISPOSITIONS 
+
+
+2.  TECHNOLOGY:  Advanced  Command  and  Control  Decision  Aids 
+
+
+T APPLICATION  DEFINITION:  Given  that  available  forces  are  different  Jroin  those 
+
+required  by  a given  OPLAN-,  compute  the  necessary  modifications  to  the  OPLAN  in 
+order  to  make  most  effective  use  of  available  forces  in  pursuance  of  the  OPLAN 
+
+objectives. 
+
+
+4.  VALUE  TO  FLEET:  Would  enable  operational  commanders  to  rapidly  assess  the 
+
+feasibility  of  adapting  existing  OPLANS  to  available  forces,  thus  enhancing 
+
+
+TcdS  1 U 1 I I CY  ui  auapuuy  cAiouny  , . ' . . „ . ' 
+
+quick  reaction  capability  in  situations  where  force  levels  are  changing 
+mi  cal ly . Would  be  particularly  valuable  during  the  redirection  and  reconstitution 
+phase.  This  development  would  partially  satisfy  O.R.  P-14  of  the  Navy  C 
+Architecture  Workbook,  dated  August  1975. 
+
+
+APPLICATION  11 
+
+1 .  TIT  c:  QUIET  TASK  FORCE 
+
+
+2.  TECHNOLOGY:  Advanced  Command  and  Control  Decision  Aids 
+
+3.  APPLICATION  DEFINITION:  Using  surveillance  and  intelligence  information 
+
+obtained  from  systems  outside  the  task  force,  and  from  passive  systems  within 
+the  task  force,  evaluate  the  threat  situation  with  respect  to  both  detection 
+and  attacks,  and  determine  the  optimum  time  to  resume  active  sensor  search 
+and  to  resume  external  communications. 
+
+4.  VALUE  TO  FLEET:  Would  provide  the  operational  commander  with  a means  of 
+
+assessing  the  effectiveness  of  his  EMCON  plan,  and  of  determining  the  time  at 
+which  resumption  of  electronic  activity  would  yield  inf  oration  about  the 
+enemy  which  is  of  significantly  greater  value  than  the  information  which  the 
+enemy  could  gain  from  electronic  intercepts. 
+
+
+22 
+
+
+I 
+
+
+APPLICATION  12 
+
+
+1.  TITLE:  REVISION  OF  UNDERWAY  PROCEDURES  FOR  SHIPS  OPERATING  IN  CONSORT  WITH 
+
+AIRCRAFT  'CARRIERS 
+
+2.  TECHNOLOGY:  Sensor  Data  Management  and  Underway  Procedures  Management 
+
+3.  APPLICATION  DEFINITION:  During  the  past  few  years  a number  of  calamitous 
+collisions  and  near  collisions  have  occurred  between  small  to  medium  naval 
+vessels  and  aircraft  carriers.  The  ordinary  rules  of  the  road  between  vessels 
+presumably  have  applied  (and  used  by  the  subordinate  vessels),  but  the  tragedies 
+still  occurred.  It  is  fact  that  carriers  even  when  operated  by  the  prescribed 
+regulations  are  of  such  size  that  proper  evasive  tactics  may  not  be  feasible. 
+Further  this  is  particularly  true  when  deploying  aircraft.  It  may  be  that 
+special  tactics  should  be  employed  to  prevent  these  tragedies.  This  task  would 
+entail  collecting  all  available  data  on  crashes  and  near  crashes,  applicable 
+tactics  and  rules  of  the  road,  and  using  this  data  and  the  ARPA  facilities  to 
+determine  what  tactics,  maneuvers,  use  of  sensors,  computer  algorithms  or  others 
+should  be  employed  by  ships  in  the  presence  of  carriers. 
+
+4.  APPROACH: 
+
+a.  Initial  data 
+
+b.  Data  analysis 
+
+c.  Development  of  improved  tactics 
+
+d.  Validation  of  new  tactics  with  Fleet  Personnel 
+
+5.  VALUE  TO  FLEET : Accident  prevention,  collision  avoidance. 
+
+
+h , 
+
+
+APPLICATION  13 
+
+1.  TITLE:  OVER  THE  HORIZON  TARGET  COORDINATION 
+
+2.  TECHNOLOGY:  (NELC,  ARPA,  and  Contractors)  _ _ _ , 
+
+Distributed  Data  Bases,  Networks,  Data  Transmission,  Sensor  Correlation 
+
+3.  APPLICATION  DEFINITION:  The  development  of  the  cruise  missile  (and  any 
+
+other  "Over  the  Hori z'o n"Ts trike  capability  for  ship  platforms  requires  an  equal 
+capability  in  detection  and  target  assignment.  Efforts  are  being  made  to  pro- 
+vide some  sort  of  sensor  for  the  ship  without  great  success.  One  possibility 
+
+is  for  data  bases  such  as  OSIS  and  the  main  floor  WWMCCS  systems  which  collect 
+"enemy"  and  "friendly"  position  information  from  a variety  of  sensors  to  supply 
+the  data  to  the  ship.  The  study  effort  proposed  here  is  to  determine  the  tech- 
+niques required  to  give  the  ships  rapid  shore  data  base  query  capability  from 
+any  or  all  of  the  data  bases  with  the  required  information. 
+
+4.  APPROACH: 
+
+a.  Collect  data  from  ongoing  programs  on  requirements 
+
+b.  Collect  data  on  information  content  of  presently  planned  data  bases 
+
+c.  Analyze  and  propose  alternative  methods  to  provide  the  ship/shore  data 
+transmission  capability 
+
+5.  VALUE  TO  FLEET:  The  development  of  the  cruise  missile  is  underway.  The _ 
+
+threat  is  clearly  defined.  The  sensor  detection  capability  must  be  developed 
+to  make  use  of  the  missile  to  counteract  the  threat. 
+
+
+APPLICATION  14 
+
+1.  TITLE:  CRISIS  MANAGEMENT,  STATUS  ACCOUNTING 
+
+2.  TECHNOLOGY:  Decision  Aids,  Intelligent  Terminals  (NELC,  SRI,  RAND  (RITA), 
+
+Perceptronics) 
+
+3.  APPLICATION  DEFINITION:  During  a time  of  crisis  many  actions  are  initiated 
+
+and  many  more  results/inputs  are  generated.  These  actions  must  in  turn  be  moni- 
+tored along  with  external  inputs  to  keep  up  with  the  status  of  the  situation 
+
+(crisis).  One  of  the  key  issues  in  a crisis  situation  is  the  generation  of  new 
+events  which  can  impact  the  initial  plan  and  result  in  modified  actions. 
+
+
+A solution  to  the  crisis  management-status  accounting  problems  is  to  pro- 
+vide a decision  aiding/pl arming  tool  in  an  intelligent  terminal  environment. 
+Plans  for  different  crisis  situations  can  be  stored  on  a magnetic  tape  cassette 
+or  equivalent  and  initialized  for  each  situation.  Parameterized  inputs  can  be 
+made  for  each  situation  to  establish  variables  together  with  exception  data. 
+
+As  the  crisis  situation  progresses  the  output  of  the  aid  device  will  be  noti- 
+fication of  action  items  which  are  scheduled  and  the  dynamic  'picture'  of  the 
+crisis  as  modified  by  new  events.  M.-mua1  or  automatic  inputs  could  be  used  to 
+maintain  the  status  situation.  The  SAP  (Search  and  Rescue)  demonstrations  are 
+representative  examples  of  this  problem  domain.  Both  network  and  stand  alone 
+solutions  are  applicable. 
+
+4.  APPROACH: 
+
+a.  First  experiment  (subset) 
+
+b.  Second  phase  (complete  subset  showing  all  major  functions) 
+
+c.  Full  scale  capability  (unci as) 
+
+d.  Operational  data  experiments 
+
+5.  VALUE  TO  FLEET:  Crisis  management  is  a universal  problem  which  can_be_ 
+
+focused  at  a single  ship  level  or  on  major  portion  of  the  world.  A goal  of 
+this  research  would  be  to  identify  a single  tool  or  family  of  tools  which  could 
+fit  most  situations. 
+
+
+25 
+
+
+APPLICATION  15 
+
+
+1 TITLE:  SOFTWARE  LANGUAGE  AND  DATA  TRANSFER  PROTOCAL  FOR  SHIP/SHORE  COVER  & 
+
+DECEPTION  (C&D)  INFORMATION  EXCHANGE. 
+
+2.  TECHNOLOGY: 
+
+Hi  Level  Language,  Distributed  Data  Bases,  and  Digital  Data  Transmission 
+
+3.  APPLICATION  DEFINITION:  Problem  - One  of  the  major  command  control  defi- 
+
+ciencies  in  the  Fleet  today  is  the  inability  to  provide  specific  C&D  data 
+(which  resides  in  one  or  more  shore  based  computer  data  banks)  to  Fleet  elements 
+which  could  use  the  data  in  a timely  manner. 
+
+The  data  transfer  between  shore  sites  is  being  investigated  and  resolved 
+by  such  programs  as  ARPA,  OSIS,  WWMCCS,  AUTODIN  II,  and  others.  To  resolve 
+the  shore  to  ship  data  base  query  problem,  a different  set  of  criteria  must  be 
+developed  due  to  the  nature  of  the  ship  based  operators,  and  the  NTDS  and  other 
+ship  data  systems.  It  is  likely  that  the  ship  operators  will  not  have  the 
+technical  computer  operator  oriented  background  of  the  counterparts  in  the 
+shore  establishments;  therefore  a simple  hi -level  language  should  be  developed 
+to  allow  him  to  make  specific  queries  from  the  shore  data  bases.  In  addition, 
+the  terminal  for  shipboard  use  and  the  message  transfer  protocal  from  the  ship 
+must  be  developed. 
+
+This  task  is  intended  to  provide  the  initial  analysis  and  tradeoffs  necessary 
+to  undertake  the  required  development. 
+
+4.  VALUE  TO  FLEET:  Resolution  of  a critical  C&D  problem. 
+
+
+26 
+
+
+APPLICATION  16 
+
+1.  TITLE:  FREQUENCY  MANAGEMENT 
+
+
+2.  TECHNOLOGY:  Distributed  Data  Bases,  Networks 
+
+3.  APPLICATION  DEFINITION:  Multiple  data  bases  (ships  equipment,  sensor  1 invi ta- 
+tions,  weather,  weapons  systems,  etc.)  will  be  accessed  to  provide  a set  of 
+task  force  operating  frequencies  which  will  minimize  mutual  inference.  Since 
+frequency  couplers  will  overload  if  required  to  carry  a particular  frequency 
+mix  there  must  be  an  automated  test  to  insure  against  this.  Often  frequency 
+assignments  are  made  without  knowledge  of  what  couplers  are  on  board  ship. 
+
+The  ownsbips  equipment  data  base  should  contain  this  information  for  use  by 
+the  frequency  management  program. 
+
+A.  VALUE  TO  THE  FLEET:  This  capability  will  provide  the  task  force  with  an 
+organized  method  of  assigning  communications  frequencies,  sensor  frequencies 
+and  weapon  system  frequencies  to  minimize  i nterference . The  present  method  is 
+computer  assisted  which  can  handle  a small  number  of  missile  frequencies.  There 
+is  no  automatic  checking  for  possible  coupler  damage.  Having  this  protection 
+will  reduce  down  time  due  to  equipment  failure. 
+
+
+1 
+
+: 
+
+
+1 
+
+APPLICATION  17 
+
+
+1 . TITLE:  FLEET  SENSOR  COVERAGE 
+
+2.  TECHNOLOGY:  Distributed  Data  Bases,  Displays,  Decision  Aids 
+
+3.  APPLICATION  DEFINITION:  Since  the  detection  coverage  of  shipboard  sensors 
+
+is  affectecT  by  the  environment,  a task  force  commander  must  continually  be 
+monitoring  both  weather  conditions  and  positions  of  ships  in  company  force  to 
+assure  adequate  sensor  coverage  of  the  task  force.  If  a sensor  asset  goes  down 
+or  the  weather  changes,  then  the  formation  may  be  changed  to  compensate.  At 
+present,  colored  plastic  overlays  are  used  as  an  aid  in  determining  sensor 
+coverage.  What  is  needed  is  advanced  display  presentation  of  radar  coverage 
+profiles  (path  loss  vs  range)  and  sonar  profiles  (e.g.,  convergence  zones)  to 
+enable  a force  commander  to  properly  dispose  his  task  force  for  optimum 
+coverage. 
+
+4.  VALUE  TO  FLEET:  Manual  plotting  of  radar  profiles  would  be  eliminated  with 
+
+this  system.  Since  the  plotting  system  is  mathematically  based,  a message 
+could  be  sent  when  coverage  degradation  occurs,  due  to  environmental  changes 
+
+or  equipment  failure. 
+
+
+28 
+
+
+APPLICATION  18 
+
+1.  TITLE:  HULL-TO-EMITTER  CORRELATION 
+
+
+2.  OPERATIONAL  FUNCTION:  Evaluation  and  Threat  Situation 
+
+3.  TECHNOLOGY : Query  Lanugage,  Computation  Support,  Decision  Aids 
+
+4.  APPLICATION  DEFINITION:  The  identification  of  own-force  platforms  can  be 
+enhanced  by  examining  EM  emanations,  traffic  activity,  and  spectrum  utilization 
+characteristics.  The  denial  of  this  identification  capability  to  hostile  forces 
+first  requires  assessment  of  possible  platform  configuration  and  then  employ- 
+ment of  appropriate  counter-measures.  This  research  application  is  concerned 
+with  providing  assistance  in  estimating  probability  of  identification  for  given 
+input  parameters  and  alternative  employment  of  EM  (electromagnetic)  assets  and 
+their  impact  on  given  mission  conditions. 
+
+5.  APPROACH: 
+
+a.  Construct  data  base  from  given  platform  characteristic  elements. 
+
+b.  Develop  computational  routines  for  assessing  uniqueness  of  platforms 
+based  on  the  identification  parameters. 
+
+c.  Develop  query  language  and  decision  aids  to  support  best  selection  of 
+platforms  emissions  as  a function  of  time,  position  and  environment.  Alternative 
+platform  (or  platforms)  configurations  will  be  presented  in  terms  of  impact 
+
+on  mission  objectives. 
+
+
+29 
+
+
+APPLICATION  19 
+
+
+1.  TITLE • THREAT  RECOGNITION 
+
+2.  TECHNOLOGY : Natural  Language,  Distril  ited  Data  Bases,  Decision  Aid 
+
+3.  APPLICATION  DEFINITION:  The  following  is  a classification  of  three  types  of 
+
+navaT* threat  recognition  problems  (at  the  task  force  thru  fleet  level  of  command) 
+They  have  been  differentiated  on  the  basis  of  technology  needed  to  support 
+
+the  effort. 
+
+Level  1.  Proximity  Threats 
+
+These  can  be  considered  fairly  simple  queries  to  a status  of  forces  data 
+base.  They  are  generally  queries  of  the  form:  "if  there  are  any  ---  within 
+
+— nautical  miles,  sound  an  alert."  Examples:  (assume  the  appropriate  con- 
+
+text has  been  given) 
+
+Immediate  Threats 
+
+a.  Charlie  class  submarine  with  initial  detection  < 30  miles 
+
+b.  Echo  class  sub  with  initial  detection  < 250  miles 
+
+* c.  Bear  aircraft  with  i.d.  < 250  miles 
+
+d.  Any  submarine  within  torpedo  range  (about  5 miles) 
+
+e.  Any  SSBN  with  i.d.  < missile  range  (about  1500  miles  for  Yankee) 
+
+* f.  Any  surface  missile  boat  < 30  miles 
+Secondary  Threats 
+
+g.  If  Charlie  class  sub  has  i.d.  < 30  and  course,  speed  vector  will  place 
+it  < 30  miles,  then  it  is  a "potential  threat".  System  should  keep 
+track  of  it  and  up/down  grade  it  as  appropriate. 
+
+h.  Same  for  echo  class  and  250  miles 
+Most  Important  Threats 
+
+* i.  Low  flyer  closing  and  < 50  miles 
+
+* j.  Cruise  missile  inbound 
+Surface  Threats 
+
+k.  DDG  < 30  miles, 
+
+l . CLG  < 250  miles, 
+
+m.  CA  < 10  miles,  etc. 
+
+*Means  this  information  does  not  exist  in  unclassified  data  base. 
+
+
+Level  2.  Situational  Threats 
+
+These  are  threats  represented  by  particular  situations  which  should  be 
+recognizable  to  a system,  where  the  discovery  of  the  situations  is  left  to  the 
+experienced  naval  personnel.  The  notion  here  is  that  a situation  can  be  des- 
+cribed, and  if  the  state  of  the  world  is  such  that  the  situation  exists,  that  is 
+an  irmediate  threat.  But  systems  should  also  have  the  capability  for  recognizing 
+partial  situations,  and  note  the  potential  tin  eats  and  their  level. 
+
+An  example  of  a "situation"  as  used  here  is  the  following:  A Swerdlov  class 
+
+ship  normally  "'sused  as  a forward  spotter  for  an  Echo  class  submarine.  The 
+tracking  rangi  of  a Swerdlov  is  100  miles,  while  the  communication  range  from 
+o Swerdlov  to  a sub  is  3C0  miles.  Thus,  if  a Swerdlov  is  within  100  miles  of 
+friendly  forces,  and  is  tracking  them,  and  an  E class  sub  is  within  300  miles 
+of  the  Swerdlov,  then  a danger  situation  exists.  (The  attack  scenario  is  that 
+the  sub  would  move  into  missile  range  (250  miles)  of  the  friendlies,  then  fire. 
+
+This  means  that  if  the  sub  is  already  within  that  range,  the  danger  is  that 
+much  greater.) 
+
+Note  that  the  notion  of  "tracking"  is  not  an  observable  piece  of  information 
+which  is  in  the  data  base.  It  can  be  inferred,  perhaps,  that  if  the  Swerdlov 
+stays  on  the  same  course  and  bearing  from  the  friendlies,  it  is  tracking  them. 
+
+And  perhaps  if  it  is  ever  within  tracking  range  of  them  it  may  be  tracking  for 
+that  period  of  time.  And  there  may  be  other  inference  rules  to  guide  the  deter- 
+mination of  probabili  y of  existence  of  tracking. 
+
+Note  also  that  there  may  be  more  than  one  submarine  which  is  communicating 
+with  the  Swerdlov,  each  of  which  is  a potential  threat.  Or  there  may  be  some 
+forward  spotter  substituting  for  the  Swerdlov  this  particular  time. 
+
+Level  3.  "Creative"  Threat  Recognition 
+
+This  is  a category  built  simply  to  contain  all  those  activities  not  covered 
+in  the  other  two.  The  discovery  of  "threat  situations"  as  used  in  Level  2 is 
+one  area.  Noticing  abnormal  patterns  of  behaviour  may  be  another  example. 
+
+4.  VALUE  TO  FLEET:  Would  fill  a Situation  Assessment  need  in  the  NCCS  Architecture. 
+
+
+APPLICATION  20 
+
+
+1.  TITLE:  ADAPTIVE  DECISIONS  IN  TASK  FORCE  MULTITHREAT  MISSILE  DEFENSE 
+
+2.  TECHNOLOGY : Problem  Solving  Methodology  including  Heuristic  Search.  Adaptive 
+
+Programs,  Real  Time  Interactive  Decision  Networks 
+
+3.  APPLICATION  DEFINITION:  The  decision  making  functions  used  to  counter 
+
+task  force  missile  threats  are  characterized  by  a complex,  time  conctrained 
+process  of  data  assimilation,  data  evaluation,  and  deployment  of  assets  such 
+as  sensors,  EW,  ECM,  ships,  aircraft  and  weapons.  Operational  effectiveness 
+depends  heavily  on  decision  making  performance.  Problem  solving  and  heuristic 
+search  techniques  allow  the  structuring  and  evaluation  in  real  time,  of  possible 
+alternatives  while  considering  probable  consequences  arising  from  future  counter- 
+measures by  looking  ahead  a few  steps  in  time.  The  values  placed  on  information 
+and  decision  consequences  are  taken  from  human  experience  and  judgment.  Decision 
+recommendations  (along  with  supporting  evidence)  are  available  to  the  Commander 
+based  upon  a comparison  of  a great  number  of  possible  courses  of  action. 
+
+4.  APPROACH: 
+
+a.  Demonstration  of  counter  missile  threat  decision  functions  using  one 
+type  of  ASCM  attack  under  constrained  resources  (PDP-10  high  level 
+language ) . 
+
+b.  Complete  system  function  demonstration  including  a realistic  decision 
+environment,  real-time  interaction,  and  events  uodate  capability. 
+
+c.  Full  scale  system  implementation  on  a PDP-11  (UNIX  operating  system) 
+with  a capability  for  real  time  environment  update  as  well  as  expanded 
+interactive  capabilities  for  evaluation  function  adjustment.  Demon- 
+stration with  simulated  data. 
+
+d.  Demonstration  and  experimental  evaluation  with  operational  data. 
+
+5.  VALUE  TO  THE  FLEET: 
+
+a.  Increased  operational  effectiveness  of  ASCM  defense  through  generation, 
+selection,  and  recommendation  of  high-probability  threat  countermeasures. 
+
+b.  Improved  ability  to  maintain  optimal  defense  strategies  in  varying 
+environments  by  adapting  to  changes. 
+
+c.  Reduced  potential  threat  effectiveness  througn  reduction  of  decision 
+time  allowing  earlier  threat  engagements  before  reaching  WRL. 
+
+
+32 
+
+
+APPLICATION  21 
+
+
+1.  TITLE:  CONCEPTUAL  PROCESSING 
+
+2.  TECHNOLOGY : Natural -Language  Interface  to  Data  Management  Systems 
+
+3.  APPLICATION  DEFINITION:  Information  retrieval  is  a basic  need  in  most  of 
+
+the  basic  command  and  control  processes:  situation  assessment,  decision  and 
+
+direction,  and  report  generation.  In  addition  to  having  an  adequate  data 
+management  facility,  a most  important  need  is  the  user  interface.  Natural 
+language  seems  to  be  amost  attractive  choice  for  user  communication,  but  most 
+developments  of  natural  language  processors  were  large,  inefficient,  and  imprac- 
+tical. Conceptual  Processing  is  a newly  developed  technology  at  SDC  which  is 
+based  on  a nonconventional  approach  to  Natural  Language  Processing.  The 
+approach  suggests  that  a Natural  Language  Interface  (NLI)  to  a given  application 
+system  should  emphasize  the  modeling  (conceptualization)  of  structures  and 
+functions  of  the  application,  rather  than  the  linguistic  properties  cf  Natural 
+Language.  Thus,  the  NLI  will  be  required  to  deal  only  wi+h  the  subset  of  English 
+that  the  application  program  can  handle.  In  the  area  of  data  base  retrieval, 
+the  NLI  has  to  be  powerful  enough  to  process  English  queries  against  a data  base 
+only, avoiding  the  complexity  of  "understanding"  irrelevant  forms  of  English. 
+Furthermore,  because  the  NLI  relies  on  explicit  modeling  of  structures  and  functions 
+of  the  underlying  data  management  system.  It  can  perform  the  "understanding" 
+process  in  a more  concise  and  efficient  manner,  since  it  does  not  need  to 
+
+search  for  possible  English  constructs  that  are  not  used  in  the  application. 
+
+A prototype  version  of  the  conceptual  processor  is  currently  implemented 
+in  LISP.  Several  data  bases  were  experimented  with  including  Jane's  ship  data 
+base.  The  program  is  small  (about  15K  bytes),  efficient  (less  than  a second 
+for  an  average  query),  tolerant  of  non-perfect  (ungrammatical)  input  queries, 
+and  adaptable  to  any  data  management  system  that  supports  a query  language. 
+
+4.  APPROACH:  We  propose  to  incorporate  the  NLI  in  the  core  of  the  testbed  on 
+the  PDP-1Q  (or  PDP-11  if  so  desired),  using  an  INTERLISP  or  LISP  versions 
+existing  on  these  machines.  This  process  will  take  place  in  three  phases  with 
+the  ultimate  goal  of  being  able  to  process  English  queries  directed  to  the 
+testbed  data  base  described  in  NELC  Technical  Note  J732. 
+
+Phase  1:  In  this  phase,  an  appropriate  subset  of  the  NELC  data  base  (in 
+
+Technical  Note  J732)  will  be  "conceptualized  and  semantically  described  on  the 
+existing  NLI  prototype.  This  phase  will  culminate  with  a demonstration,  on  our 
+prototype  in  which  English  queries  to  the  data  base  will  be  accepted  and  an 
+equivalent  query  in  the  data  management  query  language  will  be  produced  (the 
+current  version  produces  TDMS-like  queries).  This  phase  will  require  3-4  man- 
+months  of  effort. 
+
+Phase  2:  The  Installation  of  the  prototype  on  a PDP-10  (nr  PDP-11)  at  NELC. 
+
+Since  there  are  several  differences  between  versions  of  LISP  or  INTERLISP, 
+some  changes  will  be  required  to  the  prototype  version  before  installation. 
+
+The  effort  for  this  installation  is  estimated  at  1-2  man-months.  If  by  this 
+time  a specific  data  management  system  has  been  identified  for  the  testbed, 
+then  a "translator"  to  generate  queries  in  this  DMS  query  language  will  be 
+implemented.  Since  the  translator  is  a separate  module  from  the  language 
+analizer,  its  cost  is  only  incremental.  This  task  is  estimated  at  about  4-5 
+man-months . 
+
+
+33 
+
+
+Phase  3;  In  this  phase,  the  NLI  will  be  interfaced  with  the  DMS  for  the  pur- 
+pose of  retrieving  actual  data.  The  complete  description  of  the  data  base 
+for "the  language  analyzer  will  be  produced,  and  mechanisms  required  to  tune  _ 
+the  system  for  the  specific  needs  of  users  of  the  data  base  will  be  added.  A 
+rough  estimate  jf  this  phase  effort  is  4-7  man-months. 
+
+5 VALUE  TO  FLEET : Permitting  command  and  control  personnel  in  different 
+
+levels  "and  capacities  to  extract  data  base  information  through  tne  use  of  _ 
+natural  language.  The  potential  value  is  in  cost  reduction  in  personnel  train 
+ing,  in  the  elimination  of  the  need  to  use  rigid  formats  in  many  applications, 
+and  in  the  availability  of  the  system  to  the  casual  computer-naive  user. 
+
+
+I 
+
+
+1 
+
+
+c 
+
+
+APPLICATION  22 
+
+1 . TITLE:  ADADTATION  OF  OPLANS  TO  ACTUAL  FORCE  DISPOSITION 
+
+2.  TECHNOLOGY:  Deductive  Data  Management,  Decision  Aids 
+
+3.  APPLICATION  DEFINITION:  Derive  a modification  that  will  give  an  OPLAN  that  will 
+
+make  most  effective  use  of  available  forces  in  obtaining  OPLAN  objectives. 
+
+Utilize  deductive  inference  to  discover  the  consequences  of  change  in  available 
+forces  on  achievement  of  OPLAN  objectives.  Aid  situation  assessment  and  decision 
+making  processes  by  selective  presentation  of  evidence  for  (and  against;  various 
+alternatives. 
+
+Move  NELC  unclassified  data  base  into  SDC's  Deductive  Data  Management  pro- 
+totype and  construct  general  statements  (premises)  characterizing  a simulated 
+OPLAN.  Utilize  ."What  if"  queries  to  explore  consequences  of  variations  in 
+available  forces  on  attainment  of  various  OPLAN  objectives.  Iterative  refine- 
+ment and  expansion  of  the  file  of  general  statements  to  represent  increasingly 
+more  realistic  OPLAN  sitautions. 
+
+4.  APPROACH : 
+
+a.  First  Phase  (small  scale  experiments  with  NELC  data  base  subset)  - 3 
+man-months . 
+
+b.  Second  Phase  (demonstrate  all  major  functions)  - 12  to  18  man-months. 
+
+c.  Full  scale  capability  (with  connection  to  DATACOMPUTER  data  base  and 
+Natural  Language  Processor)  - 18  man-months. 
+
+d.  Operational  experiments  - ? 
+
+5.  VALUE  TO  FLEET:  (Similar  to  application  10  in  ACCAT  Note  #1).  Would  pro- 
+
+vide"  commanders  with  the  ability  to  rapidly  assess  the  feasibility  and  likely 
+consequences  of  adapting  existing  OPLANs  to  forces  at  hand.  Would  enhance 
+quick  reaction  capability  in  dynamically  changing  environments  and  would  provide 
+information  of  use  in  refining  and  elaborating  OPLANs. 
+
+
+APPLICATION  23 
+
+
+1 • TITLE:  RADIO  CHANNEL  ALLOCATION 
+
+2.  TECHNOLOGY:  Heuristic  Programming,  Advanced  Command  and  Control  Decision 
+
+Aids 
+
+3 APPLICATION  DEFINITION:  The  Navy  is  currently  experiencing  radio  channel 
+
+interference.  The  cause  of  this  interference  is  not  a lack  of  available  channels, 
+but** a lack  of  efficient  allocation  of  the  available  channels.  It  is  desirable 
+
+thv  t the  Navy  have  an  automated  charnel  allocation  program  that  could  use  the 
+Navy  data  base  to  assign  channels  to  minimize  channel  interference.  The  Navy 
+allocation  problem  can  be  modeled  as  a graph  coloring  problem  by  imagining  radio 
+broadcast  locations  as  the  verticles  of  a graph,  with  a common  edge  in  the  graph 
+if  the  two  locations  would  interfere  with  each  other  if  they  were  to  use  the  same 
+channel.  Then  a channel  allocation  is  a graph  coloring  if  no  two  broadcast 
+locations  are  assigned  channels  so  that  they  interfere.  Recent  findings  in  graph 
+theory  pertaining  to  graph  colorings  would  be  incorporated  into  a cot  puter  program 
+that  would  assess  the  Navy  data  base  to  obtain  ship  locations,  and  allocate  radio 
+channels  that  minimize  channel  interference. 
+
+4.  APPROACH:  4 man-months  to  have  an  initial  version  operational,  an  additional 
+
+4 man -month's  to  test  and  compare  various  other  heuristic  algorithms  for  optimal 
+performance. 
+
+4.  VALUE  TO  THE  FLEET:  The  proposed  program  would  provide  the  Navy  with  a 
+
+capability  of  rapidly  changing  the  allocation  of  radio  channels  during  wartime 
+operations  thus  reducing  the  interference  produced  by  enemy  electronic  counter- 
+measures while  allowing  the  fleet  to  maintain  effective  communications  between 
+ships. 
+
+
+APPLICATION  24 
+
+1.  TITLE:  WORK  AND  INFORMATION  FLOW  SIMULATION  MODEL 
+
+
+2.  TECHNOLOGY : Adaptive  Decision  Aids,  Simulation  Modelling 
+
+3.  APPLICATION  DEFINITION:  Simulate  the  effect  of  fleet  readiness  changes  in 
+
+the  staffing,  use  of  automated  equipment,  and  priority  assignment  during  the 
+routine  and  wartime  operation  of  Command  and  Control  processes.  The  simulation 
+model  written  in  SIMULA  would  be  interactive  and  easy  for  an  uninitiated  user  to 
+understand  and  use.  It  would  be  general  enough  to  al1  "*w  the  modelling  of  many 
+diverse  Command  and  Control  processes.  The  model  would  include  the  capability 
+to  allow  the  user  to  interactively  make  structural  changes  in  his  model  during 
+simulation  run  time  and  to  interactively  save  the  state  of  the  model  for  use  as 
+
+a starting  point  for  future  simulations.  The  model  could  be  used  to  simulate 
+many  Command  and  Control  environments,  including  the  following: 
+
+a.  The  flow  of  message  traffic  through  a global  communications  network. 
+
+b.  The  flow  of  messages  th'  ough  a single  station  of  a communications  network. 
+
+c.  The  flow  of  supplies  in  a logistics  network. 
+
+d.  The  flow  of  ships  through  a shipyard. 
+
+e.  The  flow  of  paper  in  a command  center. 
+
+SDC  has  constructed  and  installed  such  a system  for  the  state  of  California's 
+Fingerprint  identification  activity. 
+
+4.  APPROACH : 4 man-monthsto  complete  an  initial  version  of  the  model  and  8 
+
+man-months  to  provide  the  final  version  including  all  proposed  features. 
+
+5.  VALUE  TO  THE  FLEET : The  model  would  provide  a Commander  with  a powerful 
+
+tool  to  assist  him  in  the  decision  process.  A Commander  could  evaluate  the  effect 
+on  operations  of  replacing  manual  processes  with  automatic  or  semi-automatic 
+processes  or  of  altering  the  priority  assignments.  During  wartime  operations, 
+the  effect  of  damage  could  be  measured  and  damage  control  strategies  studied 
+quickly.  Within  the  ACCAT  application  program  itself,  the  model  will  be  a valuabl 
+aid  in  evaluating  the  effect  on  work  and  information  flow  of  various  proposed 
+operational  uses  of  ACCAT  application  programs. 
+
+
+37 
+
+
+APPLICATION  25 
+
+1.  TITLE:  AUTOMATIC  DATA  RE-DISTRIBUTOR  FOR  DISTRIBUTED  PROCESSING  SYSTEMS 
+
+2.  TECHNOLOGY:  Distributed  Data  Bases,  Information  Input  Processing 
+
+3.  APPLICATION  DEFINITION:  Where  users  require  rapid  interactive  response  from^ 
+
+a data  base  management  system  on  a network  of  distributed  processors,  the  optimal 
+data  organization  is  the  construction  of  local,  single  processor  data  base  sub- 
+sets of  active  data  and  the  maintenance  of  an  index  of  entry  keys  of  other  data 
+base  subsets  to  be  used  for  global  queries.  By  the  relatively  simple  expedient 
+of  logging  and  flagging  all  data  base  communications  between  processors  we  can 
+determine  the  selection  of  data  needed  at  each  processor.  There  are  two  variations 
+for  creating  data  base  subsets,  different  data  base  structural  definitions  and 
+same  definitions  with  different  entries.  The  largest  unit  of  data  per  index 
+retrieval  is  a single  entry  (record)  and  at  the  same  time  the  smallest  unit  of 
+data  on  which  a complete  qualification  can  be  made  is  an  entry;  thus  we  must 
+
+move  an  entire  entry  when  migrating  data.  When  a request  for  data  is  sent  to 
+another  processor,  the  reply  is  intercepted  and  returned  as  both  a reply  to  the 
+user  and  a temporary  update  of  the  entry  to  the  local  data  base  subset  with  source, 
+time,  and  status  flags.  The  original  entry  is  flagged  also.  Then  the  next 
+request  by  the  user  will  be  processed  locally.  There  are  a variety  of  requests 
+which  will  not  trigger  data  movement.  A request  for  all  ships  names  will  not 
+move  all  ships  data.  Periodically  an  entry  status  list  will  be  sent  among  all 
+processors  and  the  original  entries  will  be  deleted  and  temporary  entries  will 
+become  permanent.  While  there  are  a number  of  other  activities  to  handle,  this 
+method  can  be  implemented  by  adding  a small,  simple  monitoring  program  to  the 
+data  base  management  system  together  with  the  flag  items  needed  for  control. 
+
+Data  flow  will  be  kept  at  a minimum. 
+
+4.  VALUE  TO  THE  FLEET:  While  test  bed  data  bases  will  be  few  and  readily 
+
+maintained  by  hand  iTTthe  beginning,  their  number,  size,  complexity  and  distri- 
+bution will  increase  rapidly  as  they  become  more  usable.  The  automatic  re- 
+distribution will  be  a requirement,  particularly  for  following  ships  and  crews 
+from  port  to  port. 
+
+
+38 
+
+
+APPLICATION  26 
+
+
+- • 4 
+
+
+it  3tt 
+
+* 
+
+
+1 • TITLE:  AUTOMATED  DISTRIBUTION  OF  TASKS  IN  A DISTRIBUTED  PROCESSOR  ENVIRONMENT 
+
+2.  TECHNOLOGY : Distributed  Information  Processing 
+
+3.  APPLICATION  DEFINITION:  SDC  has  developed  a program  verifier  to  ana^ze  the 
+source  code  and  deduce  premises  for  proving  the  correctness  of  program  auto- 
+matically. As  a side  effect  of  this  analysis,  those  items  shared  by  several 
+routines  or  by  external  programs  are  noted.  The  format  of  all  items  input  and 
+output  are  also  noted.  -DC  has  developed  a distributed  processor  language  with 
+special  features  for  both  keeping  the  status  of  dependent  jobs  running  on  separate 
+processors  and  for  synchronising  the  sharing  of  data  between  jobs.  The  sharing 
+
+of  data  and  control  information  in  a central  processor  isaccompl ished  by  para- 
+meter passing  in  subroutine  calls,  by  I/O  to  work  files,  or  by  accessing  a 
+common  area  in  memory.  To  perform  the  same  data  sharing  in  a multiple  processor 
+environment  the  data  is  sent  by  communications  channel  in  response  to  requests 
+for  data  over  the  same  channel.  I/O  sharing  presents  no  more  problems  in  dis- 
+tributed processing  than  in  central  processing  with  access  deadlocks,  the 
+principal  issue,  being  solved  by  using  a priority  scheme.  Data  Base  access  is 
+a well  solved  problem  and  can  most  easily  be  provided  by  assigning  one  processor 
+to  manage  data  bases  and  service  data  base  requests  from  the  other  processor  jobs. 
+
+The  method  we  will  establish  by  combining  known  solutions  with  new  develop- 
+ments will  follow  these  steps: 
+
+a.  Scar,  the  source  code  of  all  programs  of  a system  we  wish  to  move  from  a 
+central  processor  to  a distributed  processor. 
+
+b.  Note  all  program  references  to  shared  data  and  shared  I/O. 
+
+c.  Substitute  communication  request/reply  subroutines  for  shared  data  access 
+code. 
+
+d.  Allocate  separate  routines  to  processors  and  establish  synchronization 
+control  procedures  to  run  the  distributed  processor  system. 
+
+This  method  can  be  re-applied  as  often  as  necessary  to  reflect  changes  in 
+the  distributed  ^ocessing  environment  of  the  programming  system. 
+
+4.  VALUE  TO  THE  FLEET : The  test  bed  center  plans  to  use  distributed  processing 
+techniques  on  many  programs  which  were  designed  for  centralized  processing.  We 
+believe  that  this  change  from  centralized  to  distributed  processing  will  be 
+expensive  and  time  consuming  without  the  method  described  here. 
+
+
+APPLICATION  27 
+
+1.  TITLE:  MULTILEVEL  SECURE  SPEECH 
+
+
+2.  TECHNOLOGY:  Secure  Voice,  Encryption,  Secure  Kernel 
+
+3.  APPLICATION  DEFINITION:  ARPA  has  had  an  on  going  series  of  projects  to 
+
+develop  a mechanism  for  economically  transmitting  speech  over  packet  switched 
+networks.  Such  transmission  has  been  demonstrated  both  at  Lincoln  Labs  and 
+
+at  LSI  with  different,  but  compatible,  systems.  Both  systems  employ  combinations 
+of  general  purpose  and  special  purpose  computers  to  compress  the  bandwidth  re- 
+quired and  to  manage  the  interface  to  the  ARPA  net.  At  least  the  ISI  system 
+is  capable  of  processing  simultaneous  conversations.  In  a secure  system  it  is 
+necessary  to  assure  that  there  is  no  mechanism  within  the  speech  processor  that 
+allows  a user  to  eavesdrop  on  other  conversations. 
+
+Two  measures  are  required  to  assure  that  conversations  can  not  be  monitored 
+or  mixed  in  the  communications  network  or  the  general  purpose  computers  in  the 
+speech  processors.  These  measures  provide  unique  encryption  of  individual 
+speech  streams  and  assure  separation  of  speech  streams  wherever  speech  must  be 
+represented  in  clear  text  form.  Ultimately  the  program  provides  for  handling 
+separate  voice  streams  at  different  security  levels. 
+
+ENCRYPTION:  This  effort  is  an  experiment  in  end-to-end  voice  privacy  based  upon 
+
+new  advances  in  communication  security  protocols  a, id  the  NBS  data  encryption 
+algorithm.  The  approach  would  use  an  SDC  product  called  a network  cryptographic 
+device  (NCD) , adapted  to  interface  between  the  ARPANET  IMP  and  PDP  11  speech 
+processors,  in  order  to  provide  privacy  between  speech  streams.  The  NCDs  pro- 
+vide separation  between  individual  speech  streams  from  the  output  interface  of 
+the  source  host  to  the  input  of  the  destination  host  (i.e.  End-to-3id  encryption). 
+Individual  conversations  are  encrypted  by  unique,  dynamically  changed  keys  so 
+that  misrouted  packets  can  not  be  decrypted. 
+
+Note  that  the  NCD  provides  a different  level  of  privacy  than  the  PLIs  pro- 
+vide. PLIs  are  dedicated  to  providing  communications  between  a specific  pair  of 
+hosts.  NCDs  cancommuni cate  with  several  hosts.  PLIs  encrypt  all  packets  with 
+the  same  key,  providing  no  stream  separations.  NCDs  use  dynamically  changed 
+keys. 
+
+KERNALIZATION : This  effort  is  an  experiment  to  demonstrate  the  guaranteed 
+
+separation  of  conversations  within  the  speech  processor.  Security  sensitive 
+portions  of  a general  purpose  operating  system  can  be  collected  into  a module 
+called  a security  kernel.  A mathematical  proof  can  be  constructed  to  show  that 
+the  security  kernal  performs  its  specified  functions  correctly  and  observes 
+security  criteria.  The  purpose  of  the  security  kernel  in  the  speech  processor 
+is  to  guarantee  that  no  process  whose  functions  have  not  been  mathematically 
+verified  can  handle  more  than  one  clear  text  speech  stream,  or  make  unauthorized 
+copies  of  the  stream.  Thus,  separation  of  independent  streams  can  be  assured. 
+
+At  least  one  proven  security  kernel  exists  for  the  PDP  11/45.  The  kernalization 
+task  involves  interfacing  the  operating  system  used  by  the  speech  processor  to 
+the  kernel . 
+
+4.  APPROACH  AND  ESTIMATED  COST:  ENCRYPTION:  18  man-months.  A demonstration^ 
+
+utilizing  two  network  sites  can  occur  after  four  elapsed  months.  The  demo  will 
+show  tije  transmission  of  separately  encrypted  streams  of  text.  Encryption  of 
+speech  streams  will  be  demonstrated  later.  The  man  month  estimate  includes 
+
+
+40 
+
+
+the  equivalent  cost  of  the  use  of  two  NCDs  for  1 year. 
+
+KERNALIZATI ON : Feasibility  Study  — 5 man-months.  At  the  end  of  the  feasibility 
+
+study  a report  will  be  delivered  covering  the  feasibility  of  kernalizing  one  of 
+the  speech  processor  operating  systems,  and  detail  time  and  cost  estimates  for 
+completing  the  kernal ization  task. 
+
+Specification,  implementation  and  test  --  2 1/2  man-years  (scoping  estimate 
+only).  Some  of  the  labor  in  this  period  will  be  subcontracted  to  the  contractor 
+developing  the  speech  compressor.  This  aspect  will  be  clarified  in  the  feasi- 
+bility study. 
+
+Other  Direct  Costs  — PDP  11/45  computer  time  1/2  prime  shift  during  imple- 
+mentation and  test. 
+
+5.  VALUE  TO  FLEET:  Provides  a demonstration  that  individuals  with  access  to  a 
+
+speech  processor  can  carry  on  private  conversations.  This  protects  against  both 
+overt  penetration  attempts  and  browsing.  Secure  and  private  speech  can  be  used 
+in  conjunction  with  mixed  media  conferencing  or  by  itself.  The  possibilities  in 
+a tactical  situation  are  obvious. 
+
+
+i 
+
+
+J 
+
+a 
+
+A. 
+
+«*. 
+
+v’l 
+
+Jfc 
+
+* 
+
+
+I 
+
+
+APPLICATION  28 
+
+
+1 . TULL:  DATA  TABLET  INPUT  FOR  EDITING  AND  MESSAGE  PROCESSING 
+
+2.  TECHNOLOGY : Intelligent  Terminals,  Character  Recognition,  Information 
+
+Input  Processing 
+
+3.  APPLICATION  DEFINITION:  Rapid  and  accurate  message  and  text  creation,  editing, 
+
+formatting,  and  other  manipulations  require  methods  and  techniques  that  are  eerily 
+learned,  used,  and  properly  human  engineered.  In  a Command  and  Control  environ- 
+ment, where  stress  can  become  exceedingly  high,  errors  and  the  resultant  delays 
+(or  worse)  can  be  costly.  Most  keyboard  oriented  text  processing  systems  (editors 
+and  formatters)  require  a considerable  amount  of  skill  and  knowledge  by  the  user 
+
+to  take  advantage  of  their  full  power.  To  change,  delete,  or  add  a word  to  an 
+existing  text  requires  a considerable  number  of  keystrokes,  many  of  which  are 
+concerned  with  locating  the  line  and  position  of  the  word  and  supplying  sufficient 
+context  so  that  the  command  is  unambiguous.  The  addition  of  a data  tablet,  display, 
+and  software  to  an  intelligent  terminal  would  permit  a user  to  perform  such 
+functions  rapidly,  accurately,  and  "naturally"  ty  permitting  direct  action  to  be 
+taken  on  the  item  to  be  modified. 
+
+SDC  has  had  extensive  experience  with  data  tablets,  their  integration  into 
+an  interactive  environment,  and  has  developed  character  recognition  techniques 
+that  are  directly  applicable  to  the  development  of  a graphic/data  tablet  operated 
+text  processing  system. 
+
+To  provide  a fully  comprehensive  user  interface  for  an  intelligent  terminal 
+implies  the  additional  function  of  recognizing  connected  writing  (cursive  script) 
+in  addition  to  recognizing  individual  symbols  and  letters.  To  date,  the  capa- 
+bility to  do  so  has  not  been  brought  to  an  operational  level  and  requires  additional 
+research  to  do  so.  We  believe  that  the  existing  SDC  developed  character  recog- 
+nition technique  can  be  extended  to  provide  this  function. 
+
+4.  APPROACH : Phase  1,  integrate  data  tablet  and  display  to  a PDP  11  and  convert 
+
+character  recognizer  for  demonstration  and  evaluation  - 12  man-months  (3  people 
+for  4 months).  Phase  2,  interface  character  recognizer  to  text  editing,  for- 
+matting and  message  system  - 12  man-months  (conditional  on  the  difficulty  of 
+adapting  existing  editor,  etc.  to  operate  via  graphic  input).  Phase  3,  development 
+and  demonstration  of  cursive  script  recognition  - 24  man-months  (can  be  done  in 
+paral lei  with  Phase  2) . 
+
+5.  VALUE  TO  FLEET:  Increased  efficiency  and  accuracy  of  those  responsible  for 
+
+creating,  manipulating  and  transmitting  messages  and  other  text  material  in  a 
+Command  and  Control  environment  can  improve  overall  function  as  well  as  avoid 
+the  potential  penalty  associated  with  errors  and  delays.  Ease  of  use  of  such  a 
+system  minimizes  training  requirements  and  the  probability  of  error  under  stressful 
+conditions . 
+
+
+APPLICATION  29 
+
+1.  TITLE:  OVER-THE-HORIZON  WEAPONS  PRE  FIRE  DECISIONS 
+
+2.  TECHNOLOGY : Large  data  bases.  Decision  Aids,  Correlation 
+
+3.  APPLICATION  DEFINITION:  Tactical  commanders  possess  weapons  which  have  a 
+range  greater  than  present  day  shipboard  sensors.  To  effectively  use  these 
+weapons  the  OTC  must  have  OTH  targeting  information.  This  OTH  information 
+
+is  generally  not  continuously  available  to  the  OTC  nor  under  his  total  control 
+(he  may  have  dedicated  control  of  this  OTH  information  source  for  a certain 
+fraction  of  an  hour).  The  OTC  needs  a planning  and  decision  aid  which  takes  into 
+account  the  ship  positions  in  the  target  area  (both  hostiles  and  neutrals), 
+when  his  OTH  sensors  are  available  to  him,  possible  and/or  probable  enemy/neutral 
+ship  movements,  best  estimate  of  the  enemy's  capability  to  fire  his  OTH  weapons,  etc 
+Based  on  this  information  the  OTC  could,  for  example,  set  a course  which  would 
+minimize  the  capability  of  the  enemy  to  target  him  while  putting  his  own  force 
+in  an  optimal  targeting  position  when  the  OTH  targeting  asset  is  next  available. 
+
+4.  VALUE  TO  FLEET:  The  fleet  commander  now  has  limited  means  to  do  near  term 
+
+planning  involving  correlation  of  OTH  targets,  probable  COA  and  the  ability  to 
+compute  surveillance  satellite  revisit  times  (both  ours  and  theirs).  This  pre- 
+fire planning  is  necessary  to  gain  the  best  possible  targeting  information  while 
+denying  the  same  to  the  enemy. 
+
+
+T 
+
+
+" — — — ^ — ' 
+
+
+APPLICATION  30 
+
+1.  TITLE:  SAILING  DIRECTIONS  COMPUTATION 
+
+2.  TECHNOLOGY:  Large  Data  Base  Management,  Navigation,  Displays 
+
+3.  APPLICATION  DEFINITION:  Given  any  two,  ocean  or  littoral  positions  on  the 
+
+globe  this  program  would  compute  sailing  courses  based  on  sailing  directions  for 
+mariners  published  by  either  the  U.  S.  Defense  Mapping  Agency  Hydrographic  Center 
+or  the  U.  S.  Naval  Oceanographic  Office,  and  standard  Navigation  policy. 
+
+4.  VALI E TO  THE  FLEET:  Results  of  this  program  would  enable  task  force  commanders 
+to  have  pre-plotted  sailing  courses  presented  to  them  for  their  evaluation. 
+
+Results  of  this  program  could  be  used  in  surveillance  work  in  which  one  must 
+estimate  the  intended  sailing  courses  of  ships  of  interest.  This  program  could 
+
+be  called  on  by  the  "Single  Ship  Refueling"  program  to  give  more  accurate  sailing 
+times  and  probable  courses. 
+
+
+APPLICATION  31 
+
+1.  TITLE:  SINGLE  SHIP  REFUELING  PROBLEM 
+
+2.  TECHNOLOGY:  L ^ge  Data  Base  Management,  Navigation,  AI 
+
+3.  APPLICATION  DEFINITION:  Surveillance  reports  for  a soviet  or  soviet  block 
+
+ship  have  stopped  coming  in.  Based  on  best  estimates  of  on-board  fuel  supplies 
+and  last  reported  position  course  and  speed,  where  would  the  ship  be  most  likely 
+to  refuel?  Data  bases  would  have  to  be  access  to  determine  refueling  ports  and 
+locations  of  soviet  block  orders.  Once  these  locations  nave  been  determined 
+probable  sailing  course  and  ETA  could  be  computed. 
+
+4.  VALUE  TO  FLEET:  Would  give  the  operational  commander  the  capability  to 
+
+optimize  strategy  and  actions  on  the  basis  of  likely  enemy  ship  movements. 
+
+
+APPLICATION  32 
+
+
+1.  TITLE: 
+
+
+TARGET  CORRELATION  AND  IDENTIFICATION 
+
+
+2.  TECHNOLOGY : Intelligent  Terminals,  Production  Rules,  Decision  Aids,  Distri- 
+
+buted Data  Bases,  Digital  Data  Transmission 
+
+
+3.  APPLICATION  DEFINITION : The  at-sea  forces  have  the  sensors  and  will  have  the 
+
+computer  capability  to  perform  track  corr  Nation  of  targets  within  the  sensor 
+range  of  their  forces.  This  correlation  is  based  primarily  on  state  vector 
+information  (position  and  velocity).  The  information  received,  though,  often 
+contains  identification  information  which  will  be  beyond  the  capability  of  the 
+at-sea  forces  to  process  locally.  This  data  could  be  processed  against  the 
+shore  data  bases  to  aid  in  the  identification  of  contacts. 
+
+
+4.  VALUE  TO  FLEET : By  using  the  shore  establishments'  extensive  data  bases 
+
+of  enemy  platform  parameters  and  knowledge  of  the  general  location  of  ocean 
+contacts,  the  identification  of  targets  of  interest  to  the  at-sea  commander 
+may  be  augmented,  giving  the  at-sea  commander  a better  picture  of  his  environment 
+which  can  help  him  perform  his  many  missions  more  effectively. 
+
+
+APPLICATION  33 
+
+
+1.  TITLE:  MISSION  PLANNING 
+
+2.  TECHNOLOGY : Production  Rules,  Decision  Aids,  Distributed  Data  Bases 
+
+3 APPLICATION  DEFINITION:  One  of  the  major  responsibilities  of  the  at-sea 
+
+commander  is  mission  planning.  Planning  can  require  extensive  amounts  of 
+information,  e.g.,  descriptions  of  port  facilities,  airports,  local  governments, 
+weather,  energy  and  own  resources,  etc.  There  is  too  much  information  for  it 
+all  to  be  stored  and  used  efficiently  at  sea.  Data  bases  distributed  ashore 
+could  be  queried  to  obtain  information  required  for  making  decisions.  Production 
+rules  and  other  decision  aids  could  be  used  to  suggest  weapons  mixes  and  tactics. 
+
+4.  VALUE  TO  FLEET:  More  information  useful  in  mission  planning  would  be 
+
+efficiently  available  to  the  at-sea  commander  and  decision  aids  would  help  in 
+making  more  effective  and  timely  plans  and  decisions.  Also  inherent  in  this 
+approach  is  an  augmented  capability  in  distributing  the  plans  and  decisions. 
+
+
+APPLICATION  34 
+
+
+1.  TITLE:  WHAT- IF  DISPLAY 
+
+2.  TECHNOLOGY : Prediction,  Man-Machine  Interface,  Decision  Aids 
+
+3.  APPLICATION  DEFINITION:  A display  presents  a graphic  picture  (which  can  be 
+
+formed  using  alphanumeric  characters)  of  own-force  and  detected  hostile  platforms 
+The  operator  can  enter  conditions  and  assumptions,  and  ask  questions  such  as: 
+
+"if  all  platforms  maintain  present  speed  and  course,  where  will  they  be  in 
+
+15  minutes?"  The  answer  will  be  displayed.  Time  speedup  can  be  used  to  present 
+a graphic  presentation  of  the  activity  which  would  result  if  the  entered  con- 
+ditions held.  The  process  can  be  reversed  to  determine  what  the  history  has 
+been  if  the  assumptions  are  correct.  The  operator  may  enter  turns,  criteria 
+under  which  own  or  hostile  platforms  will  change  course  or  speed,  or  requirements 
+that  platforms  avoid  certain  areas  or  approaching  each  other  too  close!''. 
+
+4.  VALUE  TO  FLEET : This  would  provide  a training  aid,  to  be  used  before 
+
+entering  a combat  area  with  canned  scenarios  and  guidance  of  trainees.  It 
+would  be  a planning  aid,  to  be  used  both  before  combat  and  also  during  combat 
+where  changes  in  previous  plans  were  needed.  It  is  a decision  aid,  showing 
+
+a commander  the  likely  effect  of  his  decisions.  It  is  a measurement  tool, 
+showing  how  far  and  how  fast  a platform  can  move  before  reaching  an  area  of 
+effectiveness  or  hazard.  It  can  be  used  for  exercises  and  for  gaming  (players 
+for  each  side  entering  their  conditions  for  movement  and  their  decisions  as 
+the  game  progresses).  The  program  and  display  can  be  extended  to  cover  other 
+characteristics  beside  position. 
+
+
+APPLICATION  35 
+
+
+1 
+
+
+TITLE:  SENSOR  AND  WEAPON  COVERAGE 
+
+
+2.  TECHNOLOGY : Decision  Aids,  Interactive  Terminal 
+
+3 APPLICATION  DEFINITION:  Own-force  data  base  is  accessed  to  determine  status, 
+
+characteristics  and  parameters  of  sensors  and  weapons  on  each  own  force  platform. 
+Hostile-force  data  base  is  accessed  to  obtain  similar  information  on  hostile 
+assets  Operator  enters  request  for  display,  indicating  whether  surveillance, 
+weaponry  or  other  capability  is  of  interest,  and  the  constraints  involved. 
+
+The  position  of  each  platform  is  displayed,  together  with  boundaries  showing 
+coveraqe  of  weapons,  sensors  or  other  capability  as  desired  - such  as  surveillance 
+capabilities  against  medium  altitude  air  targets,  or  50%  destruction  capabilities 
+of  antisubmarine  weapons  against  deep  subsurface  targets.  This  type  or  aid 
+enables  corrmander  to  see  whether  he  can  expect  to  monitor  passage  of  unfriendly 
+platforms,  whether  he  will  be  able  to  effect  their  passage,  whether  they  can 
+observe  or  attack  his  force  or  all  er  some  of  its  elements,,  and  what  changes  in 
+force  configuration  are  desirable.  The  operator  is  allowed  to  place  conditions 
+into  the  presentation  (what  if  sensor  number  five  on  platform  six  loses  10% 
+power,  or  what  if  enemy  has  twice  the  range  in  weapon  type  four  as  that  reported 
+
+by  intelligence  sources). 
+
+4.  ESTIMATED  COST: 
+
+
+a.  Definition  of  algorithms  and  preparation  of  program 
+
+b.  Initial  demonstration  using  standard  scenario 
+
+
+c. 
+
+
+Eventual  attempt  to  use  actual  exercise  data 
+
+
+A fleet  or  force  level  commander  wants  to  know  what  he 
+knows  and_w?iirTs "uncertain.  A display  which  shows  not  only  the  targetswhich 
+
+
+5.  VALUE  TO  FLEET: 
+
+
+KMUWb  CIIIU  wnau  n unvu  turn.  1,-1, 
+
+have  been  detected  and  tracked  but  also  the  area  beyond  which  his  sensors  lack 
+coverage  provides  him  with  a feel  for  the  kind  of  surprises  an  enemy  may  present. 
+Display  of  hostile  coverage  capability  allows  deceptive  ta<  s -0  be  more 
+effectively  orchestrated. 
+
+
+49 
+
+
+APPLICATION  36 
+
+1.  TITLE:  IN-PORT  TRAINING  AND  SHIP  OPERATIONAL  PROGRAM  (SOP)  EXERCISER 
+
+2.  TECHNOLOGY:  Digital  generation  and  realistic,  real-time  simulation  of 
+
+maneuvering  targets,  Ownship  (O/S)  motion,  and  digital  outputs  of  shipboard 
+sensors,  such  as  Radars,  Sonars,  IFF  (Interrogation  Friend  or  Foe),  ESM 
+(Electronic  Support-Measures),  ECM  (Electronic  Counter-Measures),  and 
+Navigation. 
+
+3.  APPLICATION  DEFINITION:  To  provide  realistic  and  real-time  multi-threat 
+
+and  multi -sensor  stimuli  and  digital  input  data  tor  the  land-based  or  in-port 
+exercise  of  NTDS  Ship  Operational  Programs  (SOP)  and  for  the  pierside  training 
+of  the  ships'  CIC  operators.  A simulated,  coordinated,  dynamic  scenario  would 
+require  real-time  generation  of  the  following  digital  parameters: 
+
+a.  Maneuvering  Targets: 
+
+(1)  Airborne 
+
+(2)  Surface 
+
+(3)  Subsurface 
+
+b.  Ownship  (0/S)  Motion: 
+
+(1)  0/S  Position  and  Velocity 
+
+(2)  0/S  Gyro  output  (Heading,  Pitch,  Roll) 
+
+c.  Simulated  Digital  Outputs  of  0/S  Sensors,  Such  As: 
+
+(1)  Radars  (3-Dimensional,  2-Dimensional,  Gun-Control,  Missile-Control) 
+
+(2)  Sonars 
+
+(3)  IFF  Equipment 
+
+(4)  ESM  and  ECM  Equipment 
+
+(5)  Navigation  Receivers  (Manual  inputs  by  the  Navigator,  OMEGA, 
+
+Satellite  Navigation  (Doppler),  NAVSTAR/GPS  (Global  Positioning  System)). 
+
+This  SOP  and  Training  Exerciser  will  check  out  the  following  CIC  operator 
+functions : 
+
+- Detection 
+
+- Tracking 
+
+- Correlation 
+
+- Identification 
+
+- Classification 
+
+- Threat  Evaluation 
+
+- Weapon  Assignment 
+
+- Aircraft  and  Ship  Control 
+
+- Situation  and  Status  Reporting 
+
+- Data  Extraction  (on-line,  during  the  exercise) 
+
+- Data  Reduction  (off-line,  after  the  exercise) 
+
+5.  VALUE  TO  FLEET: 
+
+a.  Approximates  Fleet  Exercises:  Fleet  Exercises  are  expensive  and  non- 
+
+repeatable . Moreover,  ships  at  sea  have  a specific  role  and  often  can- 
+not deviate  from  that  role  to  perform  a variety  of  training  exercises. 
+
+
+50 
+
+
+Provides  a realistic  test  of  the  SOP:  Only  the  sensors  and  inputs  are 
+
+simulated,  the  actual  configurations  of  CIC  operations  of  men,  computers 
+and  displays  are  real . 
+
+Provides  realistic  training  for  CIC  Operators:  Rapid  turnover  of  Navy 
+
+personnel  requires  a continued  training  effort,  whenever  possible.  This 
+pier-side  training  would  be  realistic  and  cost-effective. 
+
+May  au  jnvnt  or  replace  existing  simulation  systems,  such  as  the  JITF 
+(Joint"  Interface  Test  Force)  Simulation  System,  which  performs  similar 
+pierside  simulation  and  exercise  functions.  The  JITF  Simulation  System 
+connects  one  or  more  ships  with  the  central  simulation  generation 
+facility,  via  voice-grade  telephone  lines,  to  provide  multiunit  on- 
+board tactics  training. 
+
+
+APPLICATION  37 
+
+1.  TITLE!:  SEARCH  PATHS 
+
+2.  TECHNOLOGY:  Theory  of  Optimal  Search,  Production  Rules,  Intelligent 
+
+Terminals,  Distributed  Data  Bases 
+
+3 APPLICATION  DEFINITION:  Different  searches  require  different  search  strate 
+
+qies  and  paths  depending  on  the  goals  and  constraints  of  the  search.  For  ex- 
+ample, a SAR  operation  could  have  time  as  a very  critical  constraint  but  have 
+limited  resources  with  which  to  perform  the  search.  However,  in  a search  f>r  a 
+lost  nuclear  device  time  may  not  be  as  critical  as  maximizing  the  probabi 1 i ty 
+of  finding  it,  with  a minimum  expenditure  of  resources.  This  would  be  the 
+case  if  the  lost  device  landed  in  a third  world  country  that  didn  t relish  the 
+idea  of  having  the  Marines  land  to  help  find  the  device.  Moving  targets  require 
+quite  different  strategies  than  stationary  ones.  Strategies  may  also  be  adap- 
+tive depending  on  the  results  of  areas  searched  and  dynamically  changing 
+resources . 
+
+4.  VALUE  TO  FLEET:  Fleet/area  commanders  would  have  the  capability  to  perform 
+
+a variety  of  searches,  under  varying  conditions  and  constraints  with  an  educated 
+estimate  of  probability  of  success  for  a given  time.  He  can  also  ascertain 
+the  effect  of  committing  additional  resources  to  the  task. 
+
+
+APPLICATION  38 
+
+1.  TITLE:  ENVIRONMENTALLY  INFLUENCED  SAILING  DIRECTION 
+
+
+2.  TECHNOLOGY:  Distributed  Data  Bases,  Navigation,  Production  Rules 
+
+3.  APPLICATION  DEFINITION:  Route  ships  to  avoid  storms,  high  sea  states, 
+
+landlrasses,  avoid  detection,  conserve  fuel,  certain  ship  classes  containing 
+deck  cargo  cannot  sail  in  sea  states  greater  than  k or  cannot  fit  through  the 
+Panama  Canal.  This  program  would  be  required  to  access  a variety  of  data _ 
+bases  (weather,  geographical,  etc.)  and  computer  programs  (sailing  directions 
+computation,  detection  profiles,  satellite  ephemerides,  etc.,)  and  to  display 
+optimal  and  sub-optimal  sailing  courses  for  the  commanders  approval.  Sailing 
+times  would  also  be  computed. 
+
+4.  VALUE  TO  FLEET:  Based  on  weather,  intelligence  and  other  timely  information 
+
+a force  comander  or  fleet  cine  can  use  this  program  for  both  mission  planning 
+and  execution. 
+
+
+53 
+
+
+.TV 
+
+
+_ 'zSjL  ....  ^ ^ ..  „ . 
+
+
+APPLICATION  39 
+
+
+1.  TITLE:  CENSOR  MANAGEMENT/TASKING 
+
+2.  OPERATIONAL  FUNCTION:  Operational  Planning,  Resource  Availability  Planning 
+
+3.  TECHNOLOGY : Query  Language,  Distributed  Data  Base 
+
+4.  APPLICATION  DEFINITION:  The  tasking  of  sensors  by  the  operational  commander 
+
+which  are  not  in  his  direct  purview  of  authority  can  be  supported  by  knowledge 
+of  sensor  capability,  position,  and  performance  status.  The  management  function 
+further  requires  correct  procedures  and  routing  for  tasking  requests.  The 
+decision  to  request  employment  of  an  overhead  photographic  reconnaissance  plat- 
+form to  support  mission  objectives  can  be  reinforced  by  knowledge  of  sensor 
+parameters  in  terms  of  availability,  time  of  arrival,  time  of  information 
+availability,  expect  accuracy/resolution , etc. 
+
+5.  APPROACH: 
+
+a.  Develop  data  base  of  sensor  capabilities  and  status. 
+
+b.  Apply  query  language  and  computational  routines  to  assist  in  utilization 
+decision. 
+
+c.  Develop  guidance  assist  for  requesting  sensor  employment. 
+
+
+54 
+
+
+W i iij'pipj. . jsis  m 
+
+
+APPLICATION  40 
+
+1-  TITLE:  SENSOR  OPTIMIZATION 
+
+2.  OPERATIONAL  FUNCTION:  Operational  Planning,  Computational  Support 
+
+3.  TECHNOLOGY:  Query  Language 
+
+4.  APPLICATION  DEFINITION  : The  performance  of  own-force  sensors  is  dependent 
+
+on  tFiF  envi  ronmental  conditions  in  which  they  operate  as  well  as  the  status  of 
+the  individual  sensors.  Coverage  areas  of  in-place  sonobuoys  as  a function  of 
+the  sea  environment  is  one  example.  Sensors  are  also  subject  to  mutual  inter- 
+ference. The  optimization  process  consists  of  sensor  assessment,  selection  and 
+
+employment. 
+
+5 . APPROACH : 
+
+a.  From  a data  base  consisting  of  sensor  capability,  status,  location,  and 
+schedule,  a guery  technigue  will  allow  guick  assessment  of  resource 
+availability  and  best  application. 
+
+b.  Computational  routines  will  be  applied  to  sensor  configurations  for 
+best  placement.  The  routines  are  determined  according  to  the  nature  of 
+the  sensor,  its  position  in  the  sensor  field,  and  its  sensitivity  to 
+envi ronment. 
+
+
+APPLICATION  41 
+
+
+1.  TITLE:  TACTICAL  EM  UTILIZATION 
+
+2.  OPERATIONAL  FUNCTION:  Operational  Planning 
+
+3.  TECHNOLOGY : Query  Language,  Decision  Aids 
+
+4.  APPLICATION  DEFINITION:  The  optimum  utilization  of  the  electromagnetic 
+
+spectrum  is  dependent  on  the  awareness  of  the  needs  of  the  platform  functional 
+tasks  (e.g.  detection,  location,  identification,  information  transfer,  counter- 
+measures, etc.),  the  nature  of  the  threat  to  the  EM  operation,  the  character- 
+istics of  the  EM  self-interference  (EMI),  and  the  availability  of  monitor  and 
+control  techniques. 
+
+5.  APPROACH: 
+
+
+a.  Develop  data  base  of  typical  EM  radiation  and  reception  equipment  and 
+capabil ities . 
+
+
+b. 
+
+
+c. 
+
+
+d. 
+
+
+Develop  data  base  of  interference  characteristics. 
+
+
+Develop  decision  aids  which  assist  first  level  judgment  of  appropriate 
+platform  EM  profile  for  given  scenario  conditions. 
+
+
+Provide  computation  routines  which  support  queries 
+profiles  to  meet  changing  tactical  conditions. 
+
+
+for  alternative  EM 
+
+
+< 
+
+
+it  i-:  y^'1*  t 
+
+
+56 
+
+
+Jg.  itrWi’W  -iitf -rTir 
+
+
+APPLICATION  42 
+
+
+1.  TITLE:  MAN/SYSTEM  INFORMATION  COUPLERS 
+
+2.  OPERATIONAL  FUNCTION:  Display  Support 
+
+3.  TECHNOLOGY : Human  Factors,  Computer  Science 
+
+
+4.  APPLICATION  DEFINITION:  The  general  term  of  cognitive  aspects  deals  with 
+
+the  sensory  capabilities  of  audio,  visual,  and  tactile  perception.  The  opti- 
+mum C^  decision  making  is  a system  problem  wherein  best  ways  of  routirg,  dis- 
+playing and  using  information  are  a function  of  the  environment  in  which  the 
+commander  operates.  Aspects  of  modularity  and  flexibility  in  organization  of 
+information  display  are  more  important  than  any  other  factor  in  maintaining 
+continuity  of  capability  from  commander  to  commander  and  situation  to  situation. 
+
+5.  CAPABILITY  GOALS: 
+
+a.  Determine  the  optimum  modes  of  coding  information  for  d';  -play  to  enhance 
+
+human  comprehension:  shape,  color,  size,  orientation,  intensity  varia- 
+
+tion, and  others. 
+
+b.  Determine  the  optimum  means  of  coupling  information  elements  to  the 
+human  decision  maker  as  a function  of  the  operational  environment. 
+Factors  such  as  graphic,  alpha-numeric,  tabularized  geographic  plot, 
+narrative  voice,  audible  alarm,  large  group  display,  and  microform  are 
+considered. 
+
+
+APPLICATION  43 
+
+
+1.  TITLE:  FORCE  DIRECTION 
+
+2.  OPERATIONAL  FUNCTION:  Execution 
+
+
+3.  TECHNOLOGY:  Decision  Aids,  Query  Language 
+
+4 APPLICATION  DEFINITION:  The  assignment  of  resources  to  carry  out  ^oper- 
+
+ational plan  is  done  via  operational  orders  and  directives  which  are  usually 
+manifested  through  electronic  message  distribution.  The  acknowledgement  of 
+such  orders  and  the  subsequent  response  of  the  tasked  forces  is  vnal  to  the 
+q2  process.  This  application  concerns  improving  the  timeliness  of  distribution, 
+improving  the  accuracy  of  the  bookkeeping  related  to  reporting  feedback,  and 
+providing  an  input  for  display  of  force  situation  status. 
+
+
+5 .  CAPABILITY  GOALS: 
+
+a Provide  message  preparation  aids  which  relate  the  operational  plan  to 
+the  specific  characteristics  (location,  means  of  transmission,  acknow- 
+ledgement procedure,  etc.)  of  the  assigned  platforn. 
+
+b.  Provide  techniques  for  setting  threshold  limits  for  acknowledgement 
+times,  setting  of  critical  junctures  in  time  arid  position  o,  forces, 
+and  accommodating  changes  in  force  status  with  respect  to  platform  or 
+element  capability. 
+
+
+6.  APPROACH: 
+
+a.  Develop  data  base  of  critical  parameters  of  assigned  resources. 
+
+b.  Develop  query  language  techniques  to  access  the  resource  allocation 
+data  base  and  prepare  message  composition. 
+
+c.  Develop  decision  aids  which  allow  automatic  setting  of  threshold  limits 
+dependent  on  situation  unique  characteristics. 
+
+d.  Develop  dynamic  status  indicators  in  alpha-numeric  or  geo  display 
+elements . 
+
+7.  RELATED  APPLICATIONS,  OTHER  EFFORTS:  This  application  uses  RA  "Message 
+
+Preparation  Aid"  as  input. 
+
+
+58 
+
+
+1.  TITLE:  SIMULATION  EXERCISE 
+
+
+2.  OPERATIONAL  FUNCTION:  Training  Support 
+
+
+3.  TECHNOLOGY:  Query  Language,  Heuristic  Programming,  Decision  Aids 
+
+
+4.  APPLICATION  DEFINITION:  The  training  function  can  be  organized  towards 
+
+improving  skill  levels  of  the  team  (scenario  simulation  and  gaming)  or  towards 
+that  of  the  individual  (job  performance  aids).  Thi;  application  addresses  the 
+improvement  of  indoctrination  and  training  of  the  individual  in  one  or  more 
+predefined  watch  positions  of  a command  control  node.  Application  of  computer 
+aided  instruction  techniques  to  predetermined  scenario  conditions  and  utilizing 
+the  set  of  applications  tools  will  minimize  user  effectiveness. 
+
+
+5.  APPROACH: 
+
+
+a.  Define  the  training  goals  and  the  curriculum  required  to  support  them. 
+
+
+b.  Develop  self-contained  "scenarios"  which  pertain  to  the  trainee  station. 
+
+
+c.  Examine  and  evaluate  alternative  application  tools,  e.g.  heuristic 
+programming  and  query  langauge,  in  terms  of  improved  comprehension  of 
+function  and  improved  timeliness  of  response  on  the  part  of  the  operator. 
+
+
+APPLICATION  44 
+
+
+"1 
+
+
+5.0  REFERENCES 
+
+1.  Volpe,  J.,  et.ai.,  "Advanced  Command  Control  Architectural  Testbed 
+(ACCAT)  System  Description,"  (preliminary  title)  to  be  published. 
+
+2.  Earnest,  L.,  et.ai.,  "Recent  Research  in  Artificial  Intelligence  Heuristic 
+Programming,  and  Network  Protocols." 
+
+3.  Anderson,  R.H . and  J.J.  Gillogly,  "Rand  Intelligent  Terminal  Agent  (RITA); 
+Design  Philosophy,"  R-1809-flRPA,  Feb  1976,  RAND. 
+
+4.  Goldberg,  J.,  et.  al . , "Large  File  Management  Information  Systems," 
+Stanford  Research  Institute,  AD-752-507. 
+
+5.  Morgan,  H.L.,  DAISY:  An  Application  Perspective,  University  of  Pennsy- 
+
+lvania, Working  Paper,  75-11-03. 
+
+

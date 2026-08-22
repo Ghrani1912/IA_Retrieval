@@ -1,0 +1,3761 @@
+DOCUMENT RI5UME 
+
+
+
+ED 263 147 
+
+
+
+TM 850 624 
+
+
+
+AUTHOR 
+TITLE 
+
+INSTITUTION 
+
+SPONS AGENC7 
+
+REPORT NO 
+PUB DATE 
+CONTRACT 
+NOTE 
+PUB TYPE 
+
+ED AS PRICE 
+DESCRIPTORS 
+
+
+
+IDENTIFIERS 
+
+
+
+Tatsuoka, Kikumi K.; Tatsuoka, Maurice M. 
+Bug Distribution and Pattern Claiiif ication • 
+Illinoii Univ., Urbana. Computer-Based Education 
+Research Lab. 
+
+Office of Naval Research, Arlington, Va, Personnel 
+and Training Research Programs Office, 
+CERL-RR-85-3-ONR 
+Jul 85 
+
+N00014-82-K-0604 
+35p. 
+
+Reports - Research/Technical (143) 
+MP01/PC02 Plus Postage. 
+
+Artificial Intelligence; ^Cognitive Processes; 
+Computer Assisted Testing; Computer Software; 
+Diagnostic Tests; Error of Measurement; *Error 
+Patterns; Goodness of Fit; Hypothesis Testing; 
+♦Mathematical Models; Monte Carlo Methods; ^Problem 
+Solving; *Psychometr ics; Research Methodology; 
+Schemata (Cognition); Statistical Studies 
+*Bayes Decision Rule; PLATO; Response Patterns; Rule 
+Space Model 
+
+
+
+ABSTRACT 
+
+The study examines the rule space model, a 
+probabilistic model capable of measuring cognitive skill acquisition 
+and of diagnosing erroneous rules of operation in a procedural 
+domain. The model involves two important components: (1) 
+determination of a set of bug distributions (bug density functions 
+representing clusters around the rules); and (2) establishment of 
+decision rules .for classifying an observed response pattern into one 
+of the clusters around the rules and computing error probabilities. 
+This study further discusses the theoretical foundation of the model 
+by introducing "bug distribution* and hypothesis testing (Bayes* 
+decision rules for minimum errors). The model does not require a 
+large-scale computation. It is helpful in areas of research and 
+teaching. It can be used with microcomputers for testing hypotheses 
+and validating data with probabilistically-sound information, and it 
+can improve and modify information for the cluster ellipses as more 
+students are added to research projects. (LMO) 
+
+
+
+********************************************************************* 
+
+* Reproductions supplied by EDRS are the best that can be made * 
+
+* from the original document. * 
+*********************************************************************** 
+
+
+
+ERIC 
+
+hruifliiHrnrrriaaii 
+
+
+
+fN. 
+
+T-H 
+
+
+
+Computer- bated Education Research Laboratory 
+
+
+
+BUG DISTRIBUTION 
+AND 
+
+PATTERN CLASSIFICATION 
+
+
+
+
+KIKUMI K. TATSUOKA 
+MAURICE M. TATSUOKA 
+
+
+
+Ml 
+
+
+
+Approved for public release; distribution unlimited. 
+Reproduction in whole or in part permitted for any purpose 
+of the United States Government, 
+
+This research was sponsored by the Personnel and Trainir 
+Research Program, Psychological Science Division, Offic 
+of Naval Research, under Contract No< NOO0I4-82-K-0604* 
+Contract Authority Identification Number NR 150-495, 
+
+
+
+VS. DEPARTMENT Of EDUCATION 
+
+NATrONAl INSTITUTE OF EDUCATION 
+EDUCATIONAL RESOURCES INFORMATION 
+
+CENTER (ERIC) 
+Whu document he* been reproduced » 
+reserved f'om the person or oroenuetio* 
+ongnjbng it. 
+I Mirny change* have ben mid, to improvi 
+reproduction quality. 
+
+
+
+RESEARCH REPORT 85-3-ONR 
+
+
+
+
+• Points of view or option, stated in thkdocu 
+mt nt do not nececuriry represent officii NIC 
+portion or policy. 
+
+JULY 1985 
+
+
+
+"PERMISSION TO REPRODUCE THIS 
+MATERIAL HAS GSEN GRANTED BY 
+
+
+
+University of Illinois at Urbana-Champaigi 
+
+
+
+TO THE EDUCATIONAL RESOURCES 
+INFORMATION CENTER (ERIC).' 
+
+
+
+unclassified 
+
+
+
+SECUP.ITv CLASSIFICATION OF THIS PAGE 
+
+
+
+REPORT DOCUMENTATION PAGE 
+
+
+
+la, REPORT SECURITY CLASSIFICATION 
+
+Unclassified 
+
+
+
+lb. RESTRICTIVE MARKINGS 
+
+
+
+2a. SECURITY CLASSIFICATION AUTHORITY 
+
+
+
+2b DECLASSIFICATION / DOWNGRADING SCHEDULE 
+
+
+
+3. DISTRIBUTION /AVAILABILITY OF REPORT 
+
+Approved for public release 
+Distribution unlimited 
+
+
+
+PERFORMING ORGANIZATION REPORT NUMBER(S) 
+
+85-3-ONR 
+
+
+
+5. MONITORING ORGANIZATION REPORT NUMBER(S) 
+
+
+
+6a VAME OF PERFORMING X)RGANlZAliQN 
+
+Computer-based Ed Res Lab 
+University of Illinois 
+
+
+
+6b OFFICE SYMBOL 
+(// applicable) 
+
+
+
+7a, NAME OF MONITORING ORGANIZATION 
+
+University of Illinois 
+
+
+
+6c. ADDRESS (City, Swte, and ZIP Code) 
+103 S f Mathews St, 
+Urbana, IL 61801 
+
+
+
+3a \AVE OF PLNDtNG , SPONSORiNG 
+ORGANIZATION 
+
+Office of Naval Research 
+
+
+
+7b. ADDRESS {City, Stare, and ZIP Code) 
+Grants and Contracts 
+
+105 Davenport House - 809 S, Wright St, 
+Champaign, IL 61820 
+
+
+
+8b OFFICE SYMBOL 
+(If applicable) 
+
+
+
+9. PROCUREMENT INSTRUMENT IDENTIFICATION NUMBER 
+
+
+
+8c ADDRESS (City, State, and ZIP Code) 
+
+Personnel & Training Research Programs 
+800 N. Quincy St., Arlington, VA 22217 
+
+
+
+10 SOURCE OF FUNDING NUMBERS 
+
+
+
+11 TITLE (Include Security Classification) 
+
+Unclassified: Bug distribution and Pattern Classification 
+
+
+
+PROGRAM 
+
+
+PROJECT 
+
+
+TASK 
+
+
+WORK UNIT 
+
+
+ELEMENT NO 
+
+
+NO 
+
+
+NO. 
+
+
+ACCESSION NO. 
+
+
+6U5N 
+
+
+
+
+
+
+1R150-495 
+
+
+
+12 PERSONAL AUTHOR(S) 
+
+
+
+13a TYPE OF REPORT 
+
+Research 
+
+
+— 
+
+13b. TIME COVERED 
+FROM TO 
+
+
+14, DATE OF REPORT (year, Month, Day) 
+
+1985, July, 15 
+
+
+15, PAGE COUNT 
+24 
+
+
+
+16 SUPPLEMENTARY NOTATION 
+
+
+
+17 
+
+
+COSATI CODES 
+
+
+18 SUBJECT TERMS (Continue on reverse if necessary and Identify by block number) 
+Rule space model, cognitive skill aquisition, 
+
+
+FIELD 
+
+
+GROUP 
+
+
+SUB-GROUP 
+
+
+
+
+
+
+
+
+error diagnosis, bug distribution, hypothesis testing, 
+
+
+
+
+
+
+
+
+Bayes* decision rules, classification, latent knowledge 
+
+
+
+19 ABSTRACT (Continue on reverse if necessary and identify by block number) 
+
+
+
+A model (called rule space) which permits measuring cognitive skill acquisition, 
+diagnosing cognitive errors, detecting the weaknesses and strengths of knowledge 
+possessed by individuals was introduced earlier. This study further discusses the 
+theoretical foundation of the model by introducing "Bug Distribution'' and hypothesis 
+testing (Bayes 1 decision rules for minimum errors) for classifying an individual into 
+his/her most plausible latent state of knowledge • The model is illustrated with the 
+domain of fraction arithmetic and compared with the results obtained from a conventional 
+Artificial Intelligence approach. 
+
+
+
+20 DISTRIBUTION /AVAILABILITY OF ABSTRACT 
+
+□ UNCLASSIFIED/UNLIMITED ED SAME AS RPT □ DTlC USERS 
+
+
+
+22a NA^E OF RESPONSIBLE INDIVIDUAL 
+
+
+
+21 ABSTRACT SECURITY CLASSIFICATION 
+
+unclassified 
+
+
+
+22b. TELEPHONE (Include Area Code) 22c. OFFICE SYMBOL 
+
+
+
+nn ^ n RM1473,84MAR 
+
+ERLC 
+
+hnifliiiffnrrriaaii 
+
+
+
+83 APR edition may be used until exhausted. 
+All other editions are obsolete. 
+
+
+
+SECURITY CLASSIFICATION OF THIS PAGE 
+
+
+
+F ootnotes 
+
+The authori would like to acknowledge Mr. Robert Baillie for developing 
+several computer program* and for useful discussions concerning thii 
+research. 
+
+Th i m research was sponsored by the Personnel and Training Research 
+Program, Psychological Sciences Division, Office of Naval Research. 
+
+Some of the analyses presented in this report were performed on the 
+PLATO* system. The PLATO 8 system is a development of the University 
+of Illinois, and PLATO® is a service mark of Control Data Corporation. 
+
+Copies of this report may be requested from Kikumi K. Tatsuoka, 
+Computer-based Education Research Laboratory, University of Illinois, 
+103 S. Mathews St,, Rm. 252, Urbana, IL 61801. 
+
+
+
+4 
+
+*wm mmi r_ 
+
+
+
+Introduc tion 
+
+Several determiniitic methods commonly uitd in Artifical 
+Intelligence have been appliid to develop problem-sol ving programs, or 
+■ rror-diagnoitic systems. Than methodi havt successfully diagnosed 
+«any trrontoui ruin of opiration in arithmetic, algebra, and loat 
+science domaini. The rtiulti of luch error analyiti have contributed to 
+our currant undentanding of human thinking and rtaioning. 
+
+Than approaches, however, lack taking the variability of raiponit 
+trrori into account, and thty alio depend on a ipecific aodtl of problem 
+solving. Therefore, they often cannot diagnoie rtiponiti affected by 
+random trrori (sometimes called "slips") or produced by innovative thinking 
+that ii not taken into account by the current models. It ia very difficult 
+to develop a coiputer program whoie underlying algorithm for CDlving a 
+problea represents a Hide range of individual differences. Yet, when theie 
+diagnoitic systems are uied in educational practice, they must be capable 
+of evaluating any reiponiei on test-itema, inconsistent performance! ai 
+Hell ai thoie yielded by creative thinking. Therefore, He netd a model 
+that ii capable of diagnosing non-iyiteaatic cognitive erron and ii alio 
+capable of evaluating non-conventional problem-solving activities. 
+
+Tatiuoka and her associates (Tatiuoka, 1985, 1984a) Tatiuoka k Linn, 
+1983) Tatiuoka fc Tatiuoka, 1983, 1982) have developed luch a model called 
+rule ipace and have lucceisfully applied it to diagnoie miiconceptioni 
+poneiied by itudenti in f igned-number and fraction arithmetic. 
+The model maps all rtaponit patterni into a set of ordered pain, 
+the latent ability variable 8 and one of the IRT based caution indices (?) 
+introduced by Tatsuoka (1984a). However, the approach used *n their 
+model lacks, somehow, a sound statistical foundation in expressing 
+
+
+
+5 BEST COPY AVAILABLE 
+
+
+
+random irrori when a specific rule it applied for solving a problem. 
+
+The simulation study by Tatsuoka and Baillii (1982) shontd that 
+
+the response patterns yielded by not-perfect-applications of a specific 
+
+erroneous rule of operation in a procedural domain fore a cluster around the 
+
+rule. Moreover, they found empirically that tht two random variables, 
+
+6 and K obtained fro* those response patterns in the cluster follow a 
+
+multivariate normal distribution. This cluster around a rule is called 
+
+a "bug distribution" hereafter. The theoretical foundation of this 
+
+empirical evidence will be discussed in this study. First, a brief 
+
+description of the probabilistic model introduced in Tatsuoka (1985) 
+
+will be given. Then the connection of each "bug distribution" to the model 
+
+Hill be discussed in the conjunction with the theory of statistical pattern 
+
+classification and recognition. 
+
+Distribution of Responses around an Erroneous Rule 
+
+The responses around a particular rule of operation in a procedural 
+domain which are produced by not-perfi-tl y-consi stent applications of the 
+rule to the test items form a cluster. They include responses which 
+deviate, in various degrees of remoteness, from the response generated 
+by the rule. When these discrepancies are observed, they are considered as 
+response errors. These response errors are called "slips" by cognitive 
+scientists (Brown & VanLehn, 1980). The properties of such responses 
+around a given erroneous rule will be investigated in this section. 
+
+First, the probability of having a "slip" on item j (j«i ,2,. . . ,n) 
+is assumed to be the same value, p for all items and it will be called 
+"slip probability" in this paper. Let us denote an arbitrary rule for which the 
+total score is r by Rule R and let the corresponding response pattern bet 
+
+6 
+
+BEST COPY AVAILABLE 
+
+
+
+(1) 
+
+
+
+*1 
+
+x 2 
+
+
+
+x r+l 
+
+
+
+:j ■ x 2 ... ■ x r ■ 1, and x r+ j ■ ... ■ x n ■ 0. 
+
+
+
+Tht niponii patterna exiating oni slip away froa Rult R an of two 
+kindaj a ml i p of "one to zero" occurring at 1 5 j i r and "zero to one" at 
+r < j S n» Tha nuabar of raaponaa pattarna having ona alip ia tharafora 
+
+{ l )(f, o r) + ( 0 )<n i r) ' ,nd tht P rob,bilit Y °* having ona alip on ittas 
+
+j«l,...,n ia givan by (J) p 1 {i-p) r_1 ( n ~ r ) p° ( l-p) n_r + 
+
+(J) p° <l-p) r ("->■) p l (l-p)n-r-l H thf probability p ia tha aaaa 
+
+for all iteaa, j«l,...,n. Tharafora tha following aquation (2) it obtainadj 
+
+(2) Prob (xj - 1 for aoaa j«l,...,r or xj + 1 for aoaa j«r+l,...,n) ■ 
+Prob (having a alip on an item) ■ U r )( n ~ r ) + ( r )( n ~ r )) pMl-p) 0- * 
+
+
+
+Similarly, tha probability of having two alipa on the ittas ia givan 
+by Equation (3) ai followai 
+
+
+
+(3) Prob (having two alipa on tha iteina) ■ <( r M n ~ r ) + ( r )( n ~ r ) + 
+
+2 0 11 
+
+<J> ( n " r >> P 2 d-p) n " 2 . 
+
+
+
+In ganaral, the probability of having k alipa on the itena is given byi 
+
+
+
+ERIC 
+
+hniifliiiffflrrriaaa 
+
+
+
+BEST COPY AVAILABLE 
+
+
+
+4 
+
+
+
+(4) Prob (having k flips on thi ittus) 
+
+The generating function of the diitribution of frequencies up to k ilipi 
+will be given by Equation (5) at follows. 
+
+
+
+(5) Z Prob (having » slips) - Z < r > ( n ~ r > >p' ( 1-p) 
+
+•3k sik 1 2 «1 f 2 
+
+
+
+n-s 
+
+
+
+Since the coefficient term inside the braces equals ("), Equation (5) 
+will be simply a binomial distribution, given by Equation (6). 
+
+
+
+(6) Z Prob (having s slips) « Z ( n ) p 5 (l-p) n " 5 . 
+*<k s<k 1 
+
+
+
+Therefore, a cluster around Rule R which consists of response patterns 
+including various numbers of slips (not-perfectly-consistent application of 
+Rule R) has a frequency distribution of a binomial form with the equal slip 
+probability p for the items. One weakness in Equation (6) is that the 
+value of p is not known and it is very unlikely that the value of p is 
+constant over the test items* If we assume each item has an unique slip 
+probability, then the binomial distribution expressed by Equation (6) will 
+be a compound binomial distribution. Equation (7) is the generating 
+function of ths compound binomial distribution. 
+
+
+
+k 
+
+(7) Z prob (having s slips) « Z T (pj + qj) 
+
+s<k s<k j 
+
+
+
+• BEST COPY AVAILABLE 
+
+ERLC 8 
+
+
+
+■iminninrnrmnMa 
+
+
+
+Btfori in approximation of the flip probabilities pj it diicuisid, tht 
+rule-spact concept Hill be briefly introduced in the next lection. 
+A Brief Summary of the Probabi 1 i itic Model Rule Space 
+
+One of the purpose! of the model; the rule ipace, it to interpret 
+semantically the rel atiomhipi among varioui erroneoui rules and the right 
+rule, and compare tht characteristic of each rule to the right rule or 
+other rules. An analogy for the underlying motivation of seeking a norm- 
+referenced characteristic of "bug behavior 14 flay be found in the theory and 
+practice of norm-referenced tests. This starts by selecting the right rule 
+as a norm and tntn comparing the other erroneous rules to the 
+characteristic of the norm. By doing so, tht psychometric behavior of 
+"bugs" as compared with tht right rule, understanding Hhy and how various 
+misconceptions are related and transformed from one to another Hill be 
+explained more cUarly than by just describing the list of bugs. 
+
+The rule space modtl begins by mapping all possible binary response 
+patterns into a vector space of { (B, <)>, where 8 is the latent ability 
+variable in Item Response Theory (IRT) and K (or ?(x|6)) is one of tht IRT 
+
+As/ 
+
+based caution indices (Tatsuoka, 1984a) Tatsuoka fc Linn, 1983). Tht mapping 
+function f (x ) is expressed as an inner product of two residual vectors, 
+P(9) - x and P(8) - T(8) whert Pj(6), j«l,...,n are tht one- or two-parameter 
+logistic-model probabilities, x is a binary response vector and T(8) is the 
+mean vector of tht logistic probabi 1 i ti ts. f(x) is a linear mapping 
+function between x and < at a given level of 6, and tht response patterns 
+
+A 
+
+having tht same sufficient statistics for tht maximum likelihood estimate 8 
+of 6 art disptrstd into difftrtnt locations on tht lint of 8 * 8. For 
+example, on a 100-item test, there are 4950 different response patterns 
+
+LH£ q BEST COPY AVAILABLE 
+
+
+
+6 
+
+having ifr* total icort of 2. Tht for tht 4950 binary patttrm Hill bt 
+
+distributtd bttwttn ? win and n MX , whtrt < ftin it obtaintd fro* tht patttrn 
+
+having I for tht two tatitst ittmt and zeros tlttwhtrt, and ? max is fro* 
+
+tht patttrn having i for tht two most difficult it tint, f (x) hat tht 
+
+n 
+
+txptctation zero and variance i | 1 P j ( $ ) Q j < e ) (P j (9) - T(e)) z 
+
+(Tattuoka, 1935). Sinct tht txptctation of tht random variablt x j ( , , , .n) 
+
+is P f ( 0 ) i tht txptctation of a vtctor x is P(0) whost Jth compontnt 
+
+is Pj(9). Tht vtctor P(0) will bt iapptd to ztro as shown in (8), thus tht 
+
+patttrn corrttpondt to (8,0) in tht rult spact. 
+
+(8) f(P(0)) « 0 
+
+As for an trrontous rult R, tht rttpontt vtctor R givtn by (1) will bt 
+
+*>* 
+
+n 
+
+mapped onto (9 R , f(R,9 R )), fchere the K value is j ^ t ( P j * © > - Rj> CPjf •! - T(8)), 
+and is given by (9). That is, 
+
+
+
+(9) f (R) 
+
+
+
+jS t Qj<e R )<Pj(e R ) - T(e R ) ♦ ^ Pj(e R HPj(e R ) - T<e R n. 
+
+
+
+Similarly, all tht rtsponst vtctors rtsulting from stvtral slips 
+around rult R will bt mapptd into tht vicinity of (do, f(R)) in tht 
+rult spact and form a cluster (called tht cluster around R hereafter), 
+Figure 1 shows computer-simulated examples of such clusters dont on the 
+PLATO system. 
+
+
+
+Insert Figure 1 about here 
+
+
+
+10 
+
+ERJC BEST C0PY AVAILABLE 
+
+
+
+7 
+
+
+
+-3 
+
+
+
+-2 
+
+
+
+-1 
+
+
+
+Group 1 
+
+
+
+
+full 
+
+
+
+*4 r_ 
+
+
+
+-3 
+
+
+
+Group 8 
+
+
+
+^ e 
+
+
+
+Figure 1: Two Clusters of Groups 1 and 8 with Two Slips, n=631 
+
+
+
+9 
+
+ERIC 
+
+
+
+11 
+
+
+
+BEST COPY AVAILABLE 
+
+
+
+8 
+
+Tht two variable*} 9 and f(x> an autually uncorrelated to thiir 
+covarianca matrix hat a diagonal fora at follows) 
+
+
+
+(10) 
+
+
+
+var<9) 0 
+0 var(f(x)) 
+
+
+
+1/1(6) 0 
+0 ZPj(6)Qj(e) (Pj(0) - T(9)) 2 
+
+
+
+where 1(9) it tht information function of tht test and is givin by 
+Ea j 2 P j (9) Q j (6) where tht aj (j»l,.,.,n) art itta discriainating powira. 
+Let ua flap all riaponai patterns of the teat, including clutters 
+
+A 
+
+around various rules into the Cartesian product space of 9 and f(x), where 
+
+
+
+(11) f(x) « (P(B), P(8) - T(8)) - (X, P(9) - T(9)) 
+
+** +* A* /V At /V 
+
+n 
+
+or ■ K(8) - .1, X;(Pi(B) - T(8)) , 
+
+j - 1 J J 
+
+
+
+In particular, Rule R itstlf Hill te mapped at 
+
+R - x 4 <e Rf f<R>) , 
+
+where f (R) ii givtn by Equation (9), Tht variance of tht dusttr around R 
+Hill be exprtssed by using tht flip probability of item j, pj as follows} 
+
+(12) Vartthe cluster around R) » I p jq j (P j (6 R )-T (6 R ) ) 2 , 
+
+The quantities pj and qj are associated with Rule R as well as with item j, 
+and their values are unknown. However, if the ordered pair (6 Rf $ R ) 
+in the rule space falls dost to the 6 axis, then pj and qj «k, be approxUated 
+by the logistic probability Pj(6 R ) and its conpleatnt Qj(6 R ) ■ 1 - P j <6 R > , 
+
+
+
+ESfc BEST COPY AVAILABLE 12 
+
+
+
+? 
+
+respectively, without too much lofti of accuracy. If pj and qj art thui 
+approximated, then tht variance of Equation (12) Hill be thi tail at thi 
+varianct of thi lapping function f(x)| that it 
+
+(13) Var(? in tht cluster around R) - I Pj (8)Qj (8) (Pj (8) - T(8)) 2 
+
+Tht varianct of 8 in any duster, on tht othtr hand, it given by tht 
+rtciprocal 1/1(8) of tht information function, which can bt computed at 
+
+(14) Var(8 in tht clutttr around R) * t/I(8 R ) 
+- 1/Z a 2 j Pj(9R)Qj(8 R ) 
+
+whtri aj * 1 for tht one-parameter logistic model. 
+
+Tht abovt two variances, along with tht fact that ? and 8 art 
+uncorrtlattd, plut tht rtatonablt assumption that thty havt a bivariatt 
+normal distribution, allow ut to conttruct any dtsirtd ptrctnt tllipst 
+around tach rult point R. Tht upshot is that, if all erroneous rultt 
+(and tht corrtct one) wtrt to bt mapped into tht rult space along with 
+their neighboring response patterns representing random slips from them, 
+the resulting topography would be something like what is teen in 
+Figure 2. That it, the population of points would exhibit modal densities 
+at many rule points that each forms the center of an enveloping ellipse 
+with the density of points getting rarer as we depart farther from tht 
+ctntsr in any direction. Furthermore, tht major and minor axes of these 
+
+
+
+er|c 
+
+
+
+13 
+
+
+
+10 
+
+
+
+Insert Figure 2 about here 
+
+
+
+ellipses would by virtu* of thi uncorrel atedntst of K And 6 ~ bt 
+parallel to the vertical (?) and horizontal (6) reference axu of tht rult 
+space, rtiptcti vt 1 y . 
+
+Recalling that for any givtn percentage ellipse, the lengthi of 
+the Major and minor diameters are fixed multiples of the reipective 
+ttandard deviation! 
+
+CJj Pj (e>Qj (8) (Pj (e> - T(6)) 2 3 l/2 and 1(6)" 1/2 
+
+we may assert that the set of ellipses gives a complete characterization of 
+the rule space. By this is meant that, once these ellipses are given; any 
+response-pattern point can be classified as most likely being a random slip 
+from one or another of the erroneous rules (or the correct one). Me have 
+only to determine, for a suitable percent value, which one of the several 
+ellipses uniquely includes the given point. 
+Operational Classification Scheme 
+
+The geometries scheme outlined above for classifying any given 
+response-pattern point as being a "perturbation" from one or another of the 
+rule points has a certain intuitive appeal (especially to those with 
+high spatial ability!). However, it is obviously difficult if not 
+infeasible to put it into practice. We, therefore, now describe the algebraic 
+equivalent of the foregoing geometric dasif ication-decision rule, which is 
+none other than the well-known minimum-D 2 rule, where D 2 is Hahalanobis* 
+generalized squared-distance (Fukunaga, i972j Tatsuoka, 1971). Then the 
+
+
+
+9 BEST COPY AVAILABLE 
+
+ERIC 
+
+
+
+14 
+
+
+
+A 
+
+
+
+A 
+
+
+
+V 
+
+
+
+i 
+
+
+
+TV 
+
+A 
+
+
+
+J 
+
+
+
+* A 
+
+
+
+A 
+
+
+
+11 
+
+
+
+Figure 2; Fifteen Ellipses Representing Fifteen Error Types Randomly 
+Chosen From Forty Sets of Ellipses 
+
+
+
+15 
+
+
+
+12 
+
+Bayes 1 decision rule for iini«ium error will be introduced. 
+
+Without 1 on of generality, we aay tuppoie that a given response- 
+pattern point x hat to be clanified at representing a randoa slip froe 
+one of two rule point* R t and R 2 . Let Y be a point in the rule space 
+
+
+
+corresponding to x, X ■ 
+
+
+
+x 
+
+f <x> 
+
+
+
+The Hahalanobis distance of X 
+
+
+
+frost each of the two rule points is 
+
+
+
+(15) D* . [ X - R: 3' I" 1 t X - R: ] (j-1,2) 
+
+
+
+
+
+A 
+
+
+
+
+A 
+
+
+
+
+\ 
+
+
+
+
+\ 
+
+
+where R« ■ 
+
+/V * 
+
+
+f <R t > 
+
+/v * 
+
+
+and Ro * 
+
+
+f (R 2 ) 
+
+
+
+Hill be, 
+
+
+
+E ■ 
+
+
+
+1/1(9) 0 
+0 var(f(x)) 
+
+
+
+i and the variance-covariance matrix 
+
+
+
+The decision rule is, of course, to classify x as a perturbation from 
+
+£l D xl < D x2 and otherwise as a perturbation fro« R ? . However. 
+
+2 2 
+
+the decision based on the Hahalanobis distances, 0 V and 0 V does 
+
+* 1 x 2 
+
+not provide error probabilities of misclassif icaton. The next section will 
+discuss them, 
+
+
+
+BEST COPY AVAILABLE 
+
+
+
+16 
+
+
+
+9 
+
+ERIC 
+
+
+
+Tht Bayti Dtclilon Rult for Hinliui Error 
+
+Suppoit Rj and R 2 art two dutttri of points corrtiponding to Rulti 
+1 and 2, rtiptcti vtly, Lit V bi i vtctor <e, <) corrtiponding to an obitrvtd 
+rttponst patttrn x, and K bt tht itandardiztd valut of f(x), IRT-baitd 
+caution index, Thtn the varianct-covarianct matrix I Hill bt 
+
+
+
+A dtciiion rult baitd on probabi 1 iti ti nay bt luanariztd at followit 
+(16) If Prob(R« I Y) > Prob (R 2 I Y) thtn Y £ R t and 
+
+if Prob(R. I Y) < Prob (R 2 I Y) thtn Y £ R, . 
+Thts* posterior probabi 1 iti ti can bt obtaintd froi prior probabi 1 i ti ti, 
+Prob(Rj) and Prob(R 2 ), and tht conditional dtmity function p(Y I Rj), 
+i*l,2 at followtj 
+
+
+
+A 
+
+
+
+1/1(9) 
+
+
+
+0 
+
+
+
+Z « 
+
+
+
+0 
+
+
+
+(17) 
+
+
+
+Prob(Ri I Y) 
+
+
+
+p(Y I Rj) Prob(Ri) 
+
+
+
+
+BEST COPY AVAILABLE 
+
+
+
+ERIC 
+
+
+
+17 
+
+
+
+14 
+
+Therefore, the decieion rule can bi expretaed at follow.! 
+
+
+
+(18) If p(Y I R^ProbtR!) > p(Y I R 2 )Prob(R 2 ) than Y £ Rj 
+Otherwise, Y £ R 9 , 
+
+
+
+Thia rule will ba rewritten by using the likalihood ratio MY) 
+
+
+
+(19) If 
+
+
+
+UY) - 
+
+
+
+p(Y I R.) 
+
+*v * 
+
+
+
+> 
+
+
+
+Prob(R 2 ) 
+
+
+
+» than Y £ Ri 
+
+
+
+
+Prob(R!> 
+
+
+
+Otharwiaa, Y £ R 7 
+
+
+
+Sometimes, it it convenient to tikt tht negative log of tht liktlihood 
+ratio in Expression (19), and rewrite it as Expression (20), 
+
+
+
+However, tht decision rule (20) doei not lead to a perfect clanif ication. 
+At Overall (1972) ttatet (p. 330) 
+
+"Statistical clattif ication deciiioni, like clinical diagnoitic 
+decisions, are only probabilistically correct. The clinician 
+realizes this Hhen he lists a secondary diagnosis. The 
+statistician recognizes it more explicitly when he is able 
+to assign a probability estimate to each classf ication 
+alternative. 11 
+
+
+
+The probability of error is the probability of Y to be assigned 
+to the wrong group, Rj, 
+
+
+
+(20) If 
+
+
+
+h(Y) = -In t(Y) - -ln(p(Y IR t )) + ln(p(Y I K 2 )) 
+
+< In C ProbtRp / Prob(R 2 > 3 then Y belong, to R t . 
+
+
+
+BEST COPY AVAILABLE 
+
+
+
+18 
+
+
+
+ERIC 
+
+
+
+15 
+
+Ltt ui denotr i!",* rosterior density function by P<Ri I Y), prior density 
+function of Rj by P (Rj > and ltt V[ and r 2 b« the regions auch that if 
+Y £ n then P(R t I Y) > P(R 2 I Y) and 
+if Y £ r 2 then P(R t I Y) < P(R 2 I VI • 
+
+The probability of error is given by the following equationi 
+(21) £ * Prob(Y l r 2 I Rp PtRp + Prob(Y i n I R 2 ) P<R 2 > ■ 
+
+Let us denote the probability of Y belonging to r 2 Hhen Y is from Rj by 
+£j, then 
+
+6 t - Prob(Y £ r 2 I Ri» " J r P<Y I Ri>dY, 
+
+Similarly, the probability of Y belonging to V[ when Y is from R 2 , 
+£ 2 will be 
+
+
+
+£ 2 » Prob(Y l V[ I R 2 ) ■ J P (Y I R 2 )dY 
+
+
+
+Then expression (21) can be rewritten by £ » fi^tR^ + £ 2 P(R 2 ), 
+or more precisely 
+
+(22) £ * P (Ri ) J p(Y I RpdY + P(R 2 ) J ^p(Y I R 2 ) dY . 
+
+
+
+9 
+
+ERIC 
+
+
+
+BEST COPY AVAILABLE 
+
+19 
+
+
+
+16 
+
+
+
+That it, the total probability of errore if a weighted aua of tha 
+aisclaeeif ication of aaaplea froa R l and R 2 into R 2 and Rj , reapectively. 
+
+Tha integration of tha conditional denaity function ia nacaaaary to gat 
+tha arror probability £, Tha diaanaional ity of tha conditional denaity 
+function is often aore than one, while the denaity function p(|t I R t ) of the 
+likelihood ratio ia one dinensional , ao it ia aoaatiaea convenient to integrate 
+the latter (Fukunaga, 1972). Hence, Equationa (23) and (24) are uaed to 
+obtain the error probabi 1 itiaa, £j and £ 2 j 
+
+
+
+(23) 
+
+
+
+(24) 
+
+
+
+II 
+
+
+
+« P(R 2 )/P(R.) 
+J 0 p(tlRi)dfc 
+
+
+
+h " J m p(tlR 2 )d|t 
+P(R 2 )/P(R l ) 
+
+
+
+If the denaity function p(Y I Rj ) ia noraal with expectations h\ and 
+covariance matricea Z 4 , the dtciaion rule is auaaarized by the following 
+stateoentsi 
+
+(25) If h(Y) « -in £<Y) 
+
+"2 tV-5i)' \C X <V-H,> - 5(Y-H 2 )« I 2 -i(Y -M 2 > 
+
+
+
+♦ \ In Hi! < In P{R 1> 4 Y £ R l 
+i* 2 l > P(R 2 ) £ R 2 
+
+
+
+BEST COPY AVAILABLE 
+
+ERIC 20 
+
+
+
+17 
+
+If It » I 2 ■ E, thtn h(Y) becomes a linear function of Y 
+
+and tht decision rule hat the following form if Y follows a normal distributions 
+(26) h(Y) - 5 (Y - Mj ) ' Z" 1 (Y-Mj) - | (Y - M 2 ) 1 E" 1 (Y - M 2 ) 
+
+- § <(M 2 - - Y'rMnj - n 2 ) + mJe -1 n { - m^z^m 
+
+■ <M 2 - njlZ^Y + |<Miz _1 M 1 - M 2 E- 1 M 2 > \ lntPtRj) /P(R 2 ) 3 - t. 
+
+
+
+then, 
+
+
+
+Y £ 
+
+
+
+fRi 
+
+
+
+The trror probability £j is given by, 
+
+(27) £j = J°p(h(Y) I Rj)dh(Y) * | 1/ \ln exp (-^) dZ 
+- 1 - !( £±») ) . 
+
+where t » In C p (R j ) ' p(R 2 )] and ! (.) is the unit normal distribution. 
+The conditional expectation of the likelihood function h(Y) is given 
+by (2B) and (29), 
+
+(2B) E(h(Y) I Rj) = 4 (M 2 - M.)' E _1 <H 9 - H< ) = -h, 
+(29) E(h(Y) I R 2 E + 2 (H 2 - M< ) 1 E" 1 (M? - H< ) ■ +l\ 
+
+
+
+and, tht varianct of h(Y) it given by Equation (30) I 
+
+
+
+o BEST COPY AVAILABLE 
+
+ERIC 
+
+
+
+18 
+
+(30) *j ■ Et(h(Y) - Hp 2 I Rj] 
+
+" ^2 " JJl» , ^ 1 <«2 " M l> " 2 ^ • 
+
+Similarly, £ 2 nan be obtained by calculating 1 - ?( ^ ) t i.e., 
+
+(31) £ 2 " f* P (hm I R2>dh(Y) « 1 - |( !ti ) , 
+
+Illuitratlon of tht mode] with an example 
+
+A 40-itti fraction tubtraction ttit was givtn to 535 students at a 
+local junior high school. A computer program adopting a deterministic 
+ttrattgy for diagnosing trrontoui rulti of operation in subtracting two 
+fraction! was developed on the PLATO system. The students 1 performances on 
+the test were analyzed by the error-diagnostic program and summarized by 
+Tatiuoka (1964a). In order to illuitrate the rule ipace model and the 
+decision rule doscribed in the previoui section, two very common erroneoui 
+rulei (Tatsuoka, 1964a) are choien to explain the model* 
+
+Rule S. This rule ii applicable to any fraction or mixed number. A 
+student subtracts the smaller from the larger number in unequal 
+corresponding parts and keeps corresponding equal parts as is in the 
+answer. Examples are, 
+
+1. 4 4/12 - 2 7/12 ■ 2 3/12 "2 1/4 
+
+2. 7 3/5 - 4/5 « 7 1/5 
+
+3. 3/4 - 3/B ■ 3/4 
+
+
+
+
+BEST COPY AVAILABLE 
+
+22 
+
+
+
+19 
+
+Rul • 30. Thii rule it applicable to the subtraction of mixed numbers 
+where thi tint numerator it smaller than the second numerator. A student 
+reduces the whole-number part of the minuend by ont and addi one to thi tint 
+digit of thi numerator, 
+
+1. 4 4/12 - 2 7/12 ■ 3 14/12 - 2 7/12 ■ 1 7/12 
+
+2. 3 3/8-2 5/6 ■ 2 13/8 -2 5/6- 19/24 
+
+3. 7 3/5 - 4/5 ■ 6 13/5 - 4/5 ■ 2 9/5 
+
+These two ruin an applied to 40 item and two sets of responses 
+an icond by "right or wrong* icoring procedure. The binary icon pattern 
+made by Rule 8 it denoted by R 8 and the other lade by Rule 30 it denoted by R 3( 
+
+Besides the two rule mentioned above, 38 different error typei are 
+identified by a taik analysis, However, these error types do not 
+necessarily represent microltvels of cognitive processes such as erroneous 
+rules of operaton. They are somehow, defined more coarsely, like borrowing 
+errors are grouped as a single error type, or the combination of borrowing 
+and getting the least common multiple of two denominators is counted as 
+one error type. In other words, 38 binary reponse patterns representing 38 
+error types are obtained. 
+
+The 535 students 1 responses on the 40 items are scored and used for 
+estimating item parameters aj and bj by the maximum likelihood procedure. 
+By using these a- and b-values, 6-values associated with the two rules and 38 
+error types are computed. Then corresponding ^-values are calculated, 
+Thus, 40 points, <6 k , < k ), k-i , • • • ,40 are plotted in the rule space (Rule 8 
+is renumbered to 39 and Rule 30 to 40. It is only coincidence that the 
+number of rules equals the number. 
+
+
+
+Insert Table 1 about here 
+
+
+
+* BEST COPY AVAILABLE " 
+
+
+
+20 
+Tablt 1 
+
+Tht 40 Ctntrolda Rtprtatntlng 40 dlfftrtnt trror typta in Friction 
+S ubtraction TtiU (N ■ 535, n ■ 40) 
+
+
+
+Group 0 < No, of Group 8 < No. of 
+
+Item Hiki 
+
+
+
+1 
+
+
+-2. 69 
+
+
+-.80 
+
+
+1 
+
+
+21 
+
+
+.24 
+
+
+-.89 
+
+
+22 
+
+
+2 
+
+
+-1.22 
+
+
+-.69 
+
+
+4 
+
+
+22 
+
+
+-.22 
+
+
+-1.23 
+
+
+14 
+
+
+3 
+
+
+-.75 
+
+
+-.68 
+
+
+8 
+
+
+23 
+
+
+.62 
+
+
+-1.55 
+
+
+32 
+
+
+4 
+
+
+-.46 
+
+
+.75 
+
+
+10 
+
+
+24 
+
+
+1.04 
+
+
+-.61 
+
+
+3B 
+
+
+5 
+
+
+..11 
+
+
+.91 
+
+
+18 
+
+
+25 
+
+
+.75 
+
+
+-.05 
+
+
+34 
+
+
+6 
+
+
+.64 
+
+
+1.74 
+
+
+30 
+
+
+26 
+
+
+-.51 
+
+
+-1.62 
+
+
+10 
+
+
+7 
+
+
+-. ',7 
+
+
+1.48 
+
+
+13 
+
+
+27 
+
+
+-.87 
+
+
+-.56 
+
+
+6 
+
+
+8 
+
+
+.40 
+
+
+-.16 
+
+
+25 
+
+
+28 
+
+
+-1.99 
+
+
+1.01 
+
+
+2 
+
+
+9 
+
+
+.60 
+
+
+-.43 
+
+
+31 
+
+
+29 
+
+
+-.19 
+
+
+1.53 
+
+
+12 
+
+
+10 
+
+
+.57 
+
+
+-.24 
+
+
+29 
+
+
+30 
+
+
+-.24 
+
+
+2.74 
+
+
+10 
+
+
+11 
+
+
+.99 
+
+
+.72 
+
+
+37 
+
+
+31 
+
+
+-1.18 
+
+
+1.46 
+
+
+4 
+
+
+12 
+
+
+1.19 
+
+
+.86 
+
+
+39 
+
+
+32 
+
+
+-1.45 
+
+
+.58 
+
+
+4 
+
+
+13 
+
+
+-.60 
+
+
+-1.58 
+
+
+10 
+
+
+33 
+
+
+.64 
+
+
+1.74 
+
+
+30 
+
+
+14 
+
+
+-.44 
+
+
+-2.31 
+
+
+12 
+
+
+34 
+
+
+.57 
+
+
+-.66 
+
+
+31 
+
+
+15 
+
+
+-.18 
+
+
+.67 
+
+
+14 
+
+
+35 
+
+
+.59 
+
+
+-1.39 
+
+
+30 
+
+
+16 
+
+
+-.08 
+
+
+-1.81 
+
+
+16 
+
+
+36 
+
+
+-1.66 
+
+
+-1.96 
+
+
+4 
+
+
+17 
+
+
+.16 
+
+
+-.86 
+
+
+20 
+
+
+37 
+
+
+-.52 
+
+
+-.94 
+
+
+10 
+
+
+18 
+
+
+-.01 
+
+
+-2. 12 
+
+
+18 
+
+
+38 
+
+
+-.32 
+
+
+-1.26 
+
+
+14 
+
+
+19 
+
+
+.09 
+
+
+-2.26 
+
+
+20 
+
+
+39 
+
+
+-.41 
+
+
+-2.57 
+
+
+13 
+
+
+20 
+
+
+.29 
+
+
+-1.51 
+
+
+24 
+
+
+40 
+
+
+.17 
+
+
+-2.34 
+
+
+22 
+
+
+
+♦Thtst ittas will havt tht tcort of i, othtrniat tht tcort will bt 0. 
+
+
+
+BEST COPY AVAILABLE 
+
+
+
+24 
+
+
+
+21 
+
+Now, two itudenti A and B who uitd Rulti 8 and 30 for a tubitt of 40 
+items art stltcttd. This was potsiblt btcautt thtir ptrfomanctt art 
+diagnottd indfcptndtntly by tht trror~di agnott i c tyitti BPFBUG nentiontd 
+in Tatiuoka (1984b). Tht cirdtt ihown in Figurt 3 rtprtitnt A and B. Thtir 
+Hahalanobit distanctt, D 2 , to tht 40 ctntroidi art calculattd rttptctivtly 
+and tht imalltit valuti of two distanctt, D 2 , art ttltcttd to coaputt 
+probabilitits of trron. Tablt 2 suntariztt tht rtiultn. 
+
+
+
+Initrt Tablt 2 tc Figurt 3 about htrt 
+
+Tht D 2 valuti of Studtnt A to Stti 40 and 19 art 0.008 and 0.119, 
+rttptctivtly, and both tht valuti art small tnough to judgt that A nay bt 
+clanifitd to tithsr of tht itti. Sinct D 2 followi tht 0C 2 -di itribution 
+
+with two dtgrtti of frttdom (Tatiuoka, 1971), tht null hypothtiti that 
+
+2 2 
+D (A,Stt 40) 1 0 4fld D (A,Stt 19} * 0 cannot bt rejtcttd at, lay a ■ .25. 
+
+Tht trror probabili titi £j and £ 2 art .581, .266, rttptctivtly. Thtrtfort, 
+
+2 
+
+wt concludt A btlongi to Stt 19 although D( A?Set ^qj it tualltr than 
+
+2 
+
+D (A,Stt 19) B Thil happtntd btcauit tht prior probability of Prob(Stt 40) it 
+smaller than that of Prob(Stt 19), whtrt tht thrtihold valut, t, it dtttrftintd 
+at follows! 
+
+t « -tn t Prob(Stt 40) / ProbtStt 19) 3 
+and ProbtStt k) cc (1/2K) txpt -<0 kl < k ) 1 Z k ~ l (e k , < R )/2 3 . 
+
+
+
+BEST COPY AVAILABLE 
+
+
+
+EKJC 25 
+
+
+
+22 
+
+
+
+Table 2 
+
+
+
+SuMiry of 
+
+
+Classification 
+
+
+Results of 
+
+
+Students 
+
+
+ft and B 
+
+
+
+
+Studtnt 
+
+
+A 
+
+
+
+
+8tudent 
+
+
+B 
+
+
+D2 
+
+
+_2 
+
+D A, Set 
+
+
+40 ' 
+
+
+008 
+
+
+.2 
+
+D B,, Set 
+
+
+39 - 021 
+
+
+
+
+n 2 
+
+D A, Set 
+
+
+19 ' 
+
+
+119 
+
+
+.2 
+
+D B, Set 
+
+
+14 .135 
+
+
+
+
+.581 
+
+
+
+
+
+
+.979 
+
+
+
+
+h 
+
+
+.266 
+
+
+
+
+
+
+.010 
+
+
+
+
+n 
+
+
+.088 
+
+
+
+
+
+
+.040 
+
+
+
+
+t 
+
+
+-.174 
+
+
+
+
+
+
+-.613 
+
+
+
+
+
+A 
+
+
+
+23 
+
+
+
+-3 
+
+
+
+-2 
+
+
+
+— i — 
+-1 
+
+
+
+-1 
++ + 
+
+
+
+-2 -- 
+
+
+
+39 + 
+
+
+
+-3 
+
+
+
++ 
++ 
+
+
+
++ 
++ 
+
+
+
+19 
+
++ °B 
++ 
+
+>40 
+
+
+
+Figure 3; Forty Centroids C+) Representing Different Error Types Determined 
+by a Detailed Task Analysis and Students A and B Co). 
+
+
+
+9 
+
+ERIC 
+
+
+
+27 
+
+
+
+24 
+
+DlBCUBBlon 
+
+A new probabilistic model that ii capable of Maturing cognitive-skill 
+acquisition, and of diagnosing erroneous ruin of operation in a procedural 
+doiain was introduced by Tatiuoka and hir associates (Tatsuoka, 19B5| 
+Tatiuoka fc Baillit, 1982) Tatiuoka fc Tatiuoka, 1?82| Tatiuoka, 1983| 
+Tatiuoka? 1934 «)• Th- sodil, caliid ruli ipaci, involves two important 
+componentsi 1) determination of a let of bug distributions, or in other 
+wordi, bug deniity functioni repreienting cluiteri around the rulei, and 2) 
+establishment of deciiion rules for clanifying an obierved rtipome 
+pattern into one of the cluiteri around the rulei and computing error 
+probabilities. If each clmttr around a rule can be deicribed by a 
+bivariate normal diitribution of 0 and S, then application of the 
+techniquei available in the theory of itatiitical cl assif ication and 
+pattern recognition ii fairly itraightf orward and eaiy. 
+
+This study introduces the fact that the cluiter around the rule 
+
+coniiiting of the reiponse patterni reiulting from one, two,..., nveral 
+
+■lips away from perfect applicaton of the rule indeed fellows a compound 
+
+n 
+
+binoiiial distribution with centroid (6 Rt < R ) and variance p jq j 9 where pj 
+(j"l,...,n is the probability of having a slip from Rule R for it en j. The 
+values of pj and qj are approximated by the logistic probabilities Pj (Or) 
+and Bj(e R ), j»i , . . • f n , in this study instead of estimating the* from the 
+dataset. Plausibility of the approximation of the slip probabilities 
+associated with each erroneous rule by the logistic function is left as a 
+future topic of investigation, although the fit with data seems to be good, 
+
+
+
+BEST COPY AVAILABLE 
+
+ERIC 28 
+
+
+
+25 
+
+
+
+The determination of a set of illipm representing duitiri around 
+the rulti can be automatic after all the trroneous rules an diicoviridi 
+Hany reiearcheri in cognitive science and artificial intelligence have 
+itartid constructing error diagnostic systems in varioui domains in thii 
+decade. Expert teacheri uiually know their itudenti 1 errori, at Hell ai 
+the weaknesses and strengths of each child 1 b knowledge itructure. Since 
+the model doei not require a large-scala computation luch ai itrategiei 
+commonly umvti in ths *rss cf artificftl intelligence do, the rule-space 
+model ii helpful in more general areai of reiearch and teaching, and for 
+thoie who have microcomputer! for testing their hypotheses, validating 
+their data with probabi 1 i it ical ly-sound information, and evaluating their 
+teaching methodi and material!. Moreover, the model can be "intelligent" 
+in the ltnit that the researcher can improve and modify the information for 
+the cluiter ellipiei ai they get more new itudenti whose performancei they 
+can itudy. 
+
+The let of tllipiti can represent many thingi beiidei erroneoui rules. 
+They can rtprtient ipecific contenti of lome domain, uiage errori in the 
+language arti, or processes required in algebra. However, further reiearch 
+it necenary to t'tvelop methodi for determining the jet of ellipses other 
+than relying on an expert teacher. The method must be efficient and 
+compatible with the recent theories of human cognition and learning. 
+
+
+
+• BEST COPY AVAILABLE 29 
+
+
+
+26 
+
+
+
+References 
+
+
+
+Brown, J. 8., I< VanLehn, K. (i960). Repair Theory! A generative theory 
+
+of buga in procedural skills. Cognitive 8cience» 
+Fukunana t K. (1972). Introduction to ■tatletical pattern recognition. 
+
+NYi Academic Prett. 
+Overall, J. E. , fc Kiett, C. J. Applied Multivariate analytit. 
+
+NYi McBraw-Hill f 1972. 
+Tattuoka, K. K. (19S3) Rule Space! An approach lor dealing Kith 
+
+aiaconceptiont bated on U«« rispcr.ss theory* journal of Educational 
+
+Heaeureient , 20_, 4, 345-354. 
+Tateuoka, K. K. (1984a). Caution indices bated on itea retponte theory. 
+
+Psychoaetrika , 9 f l f 95-110. 
+Tattuoka, K. K. (Ed.) (1984b). Analysis of errort in fraction addition 
+
+and tubtractlon probleaa (Final Report for Brant No. KIE-B-81-0002) . 
+
+Urbanai ILi Univertity of Illinois CERL. 
+Tattuoka, K. K. (1985). A probabilistic Model for diagnoting Mi tconceptiont 
+
+by the pattern clattif cation approach. Journal of Educational 
+
+Statistics , !£, 1, pp. 55-73. 
+Tattuoka, K. K. , fc Baillie R. (1982). Rule «pace t the product tpace of 
+
+two score coMponentt in aiqnsd-nuiber tubtractlon! An approach to 
+
+dealing with incontittent use of erroneout rulet (Technical Report 82-3). 
+
+Urbanai ILt Univertity of Illinois, Coaputer-baeed Education Research 
+
+Laboratory. 
+
+Tattuoka, K. K., Linn, R. L. (1933). Indicet for detecting unutual 
+
+retponte patterns! Links between two general approaches and potential 
+applications. Applied Psychological Heaaureaent , 1983, 7(1), 81-96. 
+
+Titsuoka, K. K. , fc Tatsuoka, H. H. (1982). Detection of aberrant response 
+
+
+
+
+ERIC 
+
+
+
+30 
+
+
+
+27 
+
+
+
+patterns . Journal of Educational Stat i at 1 cm , 7(3), 215-231. 
+Tatauoka, K. K. , l Tattuoka, M. H. (1983). Spotting trrontout ruin of 
+
+operation by tht individual conaittuncy indtx. Journal of Educational 
+
+Hatturtttnt , 20(3), 221-230. 
+Tattuoka, H. H. (1971). Multivariate Analyaiai Ttchniquti for 
+
+Educational and Psychological Rattarch . NYi John Uilty * 8ona. 
+
+
+
+
+ERIC 
+
+
+
+31 
+
+
+
+28 
+
+
+
+University of Illlnola/T/.tauoka. Tatsuoka. 4 Eddlns 
+
+
+
+19-Aprll 1985 
+
+
+
+ERIC 
+
+
+
+Personnel Analysis Division 
+AF/HPXA 
+
+SC360. The Pentagon 
+Washington, DC 20330 
+
+Air Force Human Resources Lab 
+AFHRL/HPD 
+
+Brooks AFB, TX 78235 
+
+Air For<* Office 
+
+of Scientific Research 
+Life Sciences Directorate 
+Soiling Air Force Base 
+Washington. DC 20332 
+
+Dr. Robert Ahlers 
+Code N711 
+
+Human Factors Laboratory 
+KAVTRAEQUIPCEN 
+Orlando, tl 72813 
+
+Dr. Ed Aiken 
+
+Jfovy Personnel RID Center 
+San Diego. CA 92152 
+
+Dr. E'rllng B. Andersen 
+Dcpartnent of Statistics 
+otudiestraede 0 
+1*»55 Copenhagen 
+DENMARK 
+
+Dr. John R. Anderson 
+Department of Psychology 
+Carnegie-Mellon University 
+Pittsburgh, PA 15213 
+
+Technical Director 
+
+Army Research Institute for the 
+
+Behavioral and Social Sciences 
+5001 Elsenhower Avenue 
+Alexandria, YA 22333 
+
+Dr. Isaac Bejar 
+Educational Testing Service 
+Princeton. NJ 08450 
+
+Dr. Henucha Birenbaum 
+
+School of Education 
+
+Tel Aviv University 
+
+Tel Aviv. Raaiat Aviv 69978 
+
+Israel 
+
+Dr. Werner Birke 
+Personal stemmamt 
+
+der Bundeswehr 
+0-5000 Koeln 90 
+WEST GERMANY 
+
+Code N711 
+
+Attn: Arthur S. Blaiwes 
+
+Naval Training Equipment Center 
+
+Orlando. FL 3281 3 
+
+Dr. R. Darrell Bock 
+University of Chicago 
+Department of Education 
+Chicago. IL 60637 
+
+Hr. Arnold Bohrer 
+Psychological Research Section 
+Caserne Pet Its Chateau 
+CXS 
+
+'000 Brussels 
+BELGIUM 
+
+Dr. Nick Bond 
+Office of Naval Research 
+Liaison Office. Far East 
+APO San Francisco, CA 96503 
+
+Dr. Robert Breaux 
+Code N-095R 
+NAVTRAEQUIPCEN 
+Orlando, fL 328 13 
+
+Dr. Robert Brennan 
+Anerlcan College Testing 
+
+Programs 
+P. 0. Box 168 
+Iowa City, IA 522H3 
+
+
+
+Dr. John S. Brown 
+
+XEROX Palo Alto Research 
+
+Center 
+3333 Coyote Road 
+Palo Alto, CA 94304 
+
+Or. Glenn Bryan 
+6208 Poe Road 
+•fthesda. HD 20817 
+
+CT8/HcGraw-MU Library 
+2500 Garden Road 
+Konterey, CA 939*0 
+
+CDR Hike Curran 
+Office of Naval Research 
+800 N. Quincy St. 
+Code 270 
+
+Arlington, YA 22217-5000 
+
+Hr. Timothy Davey 
+University of Illinois 
+Educational Psychology 
+Urbana. IL 61801 
+
+Dr. Dattprasad Divgi 
+Syracuse University 
+Department of psychology 
+Syracuse. NY 13210 
+
+Dr. Hei-Ki Dong 
+Ball Foundation 
+800 Roosevelt Road 
+Building C, Suite 206 
+Glen Ellyn. IL 60137 
+
+Dr. Fritz Drasgow 
+University of Illinois 
+Dcpartnent of Psychology 
+603 E. Daniel St. 
+Champaign. IL 61820 
+
+Defense Technical 
+
+Information Center 
+Caaeron Station, Bldg 5 
+Alexandria. YA 2231* 
+Attn: TC 
+(12 Copies) 
+
+Dr. Stephen Dunbar 
+Llndqulst Center 
+
+for Measurement 
+University of Iowa 
+Iowa City. IA 522*2 
+
+Dr. John H. Eddlns 
+University of Illinois 
+252 Engineering Research 
+
+Laboratory 
+103 .South Hathews Street 
+Urbana. IL 61801 
+
+
+
+Dr. Patricia A, Butler 
+NIE Mall Stop 1806 
+1200 19th St.. NW 
+Washington. DC 20208 
+
+Dr. James Carlson 
+American College Testing 
+
+Program 
+P.O. Box 168 
+Iowa City. IA 522*3 
+
+Dr. John B. Carroll 
+409 Elliott Rd. 
+Chapel Hill. NC 27514 
+
+Dr. Robert Carroll 
+KAY0P 01B7 
+
+Washington. DC 20370 
+Director 
+
+Manpower Support and 
+Readiness Program 
+Center for Naval Analysis 
+2000 North Beauregard Street 
+Alexandria. VA 22311 
+
+
+
+Chief of Naval Education 
+
+and Training 
+Liason Office 
+AFHRL 
+
+Operations Training Division 
+Williams AFB. AZ 8522* 
+
+Chief of Naval Education 
+
+and Training 
+Liason Office 
+
+Air Force Human Resource Laboratory 
+Operations Training Division 
+Williams AFB, AZ 8522* 
+
+Assistant Chief of Staff 
+Research. Development. 
+
+Teat, and Evaluation 
+Naval Education and 
+
+Training Command (N-5) 
+NAS Pensacola, Fl, 32508 
+
+Dr. Hans Crombag 
+University of Leyden 
+Education Research Center 
+Boerhaavelaan 2 
+233* EN Leyden 
+The NETHERLANDS 
+
+
+
+Dr. John Ellis 
+
+Navy Personnel R&D Center 
+
+San Diego, CA 92252 
+
+Dr. Richard El star 
+
+Deputy Assistant Secretary 
+
+of the Navy (Manpower) 
+Washington, DC 20350 
+
+Dr. Susan Egbert son-. 
+University of Kansas 
+Psychology Department 
+Lawrence. KS 66045 
+
+ERIC Facility-Acquisitions 
+4833 Rugby Avenue 
+Bethesda. HD 2001* 
+
+Dr. Benjamin A. Falrbank 
+Performance Metrics, Inc. 
+5825 Callaghan 
+Suite 225 
+
+San Antonio, TX 78228 
+
+Dr. Marshall J. Farr 
+2520 North Vernon Street 
+Arlington, VA 22207 
+
+Dr. Ricnard L. Ferguson 
+American College Testing 
+
+Program 
+P.O. Box 168 
+Iowa City. IA 522*0 
+
+Dr. Gerhard Fischer 
+Ueblggasse 5/3 
+A 1010 Ylenna 
+AUSTRIA 
+
+Dr. Hyron Flschl 
+Army Research Institute 
+5001 Elsenhower Avenue 
+Alexandria. VA 22333 
+
+Prof. Donald Fitzgerald 
+University of New England 
+Department of Psychology 
+Armidale. New South Wales 2351 
+AUSTRALIA 
+
+Dr. Dexter Fletcher 
+University of Oregon 
+Computer Science Department 
+Eugene, OR 97*03 
+
+
+
+32 BEST COPY /wTl/LABLE 
+
+
+
+University of Illinols/Tatsuoka, Tatauoka. & Eddlns 
+
+
+
+19 April 1985 
+
+
+
+29 
+
+
+
+ERIC 
+
+
+
+Dr. John R. Frederiksen 
+Bolt Beranek & Newman 
+
+50 Houlton Street 
+Cambridge. HA 02138 
+
+Dr. Bob Frey 
+Commandant (G-P-1/2) 
+USCG HO 
+
+Washington, DC 20593 
+
+Dr. Janice Gifford 
+University of Massachusetts 
+School of Education 
+Amherst. MA 01002 
+
+Dr. Robert Glaser 
+Learning Research 
+
+& Development Center 
+University of Pittsburgh 
+3939 O'Hara Street 
+Pittsburgh, PA 15260 
+
+Dr. Bert Green 
+Johns Hopkins University 
+Department of Psychology 
+Charles & 34th Street 
+Baltimore. KD 21218 
+
+H. William Greenun 
+Education Advisor (E031) 
+Education Center. KCDEC 
+Quant ico, VA 22134 
+
+Dipl. Pad. Michael W. Habon 
+University DusseldorT 
+Erziehutigswi ssenshaf tl iches 
+Unlversitatsstr. 1 
+D-WOOO Dusseldorf 1 
+WEST GERMANY 
+
+Dr. Ron Hambleton 
+School of Education 
+University of Massachusetts 
+Amherst. MA 01002 
+
+Dr. Delwyn Harnisch 
+University of Illinois 
+
+51 Gerty Drive 
+Champaign. IL 6 1820 
+
+Ms. Rebecca hotter 
+
+Navy Personnel R&D Center 
+
+Code 62 
+
+San Diego. CA 92152 
+
+Prof. tutz F. Hornke 
+Universitat Dusseldorf 
+Erziehungswissenschaftl iches 
+Unlversitatsstr. 1 
+Dusseldorf 1 
+WEST GERMANY 
+
+Dr. Paul Horst 
+677 G Street. #184 
+Chula Vista, CA 90010 
+
+Dr. Lloyd Humphreys 
+University of Illinois 
+Department of Psychology 
+603 East Daniel Street 
+Champaign, IL 61820 
+
+Dr. Steven Hunka 
+Department of Education 
+University of Alberta 
+Edmonton. Alberta 
+CANADA 
+
+Dr. Earl Hunt 
+Department of Psychology 
+University of Washington 
+Seattle. WA 93105 
+
+Dr. Huynh Huynh 
+College of Education 
+Univ. of South Carolina 
+Columbia, SC 29208 
+
+Dr. Zachary Jacob son 
+Bureau of Management Consulting 
+Laurlcr Avenue West 
+^ „;awa. Ontario K1A 0S5 
+(ADA 
+
+
+
+Dr. Douglas H. Jones 
+Advanced Statistical 
+
+Technologies Corporation 
+10 Trafalgar Court 
+Lawrenceville. NJ 08148 
+
+Prof. John A. Keats 
+Department of Psychology 
+University of Newcastle 
+N.S.W. 2308 
+AUSTRALIA 
+
+Dr. Norman J. Kerr 
+Chief of Naval Education 
+
+and Training 
+Code 00 A 2 
+Naval Air Station 
+Pensacola. ?L 32508 
+
+Dr. William Koch 
+University of Texas-Austin 
+Measurement and Evaluation 
+
+Center 
+Austin, TX 78703 
+
+Dr. Leonard Kroeker 
+
+Navy Personnel RAD Center 
+
+San Olcgo. CA 92152 
+
+Dr. Anita Lancaster 
+Accession Policy 
+OASD/MUL/MPAFM/AP 
+Pentagon 
+
+Washington, DC 20301 
+
+Dr. Daryll Lang 
+
+Navy Personnel RAD Center 
+
+San Diego. CA 92152 
+
+Dr. Jerry Lehnus 
+OASD (M&RA) 
+Washington. DC 20301 
+
+Dr. Thomas Leonard 
+University of Wisconsin 
+Department of Statistics 
+1210 West Dayton Street 
+Madison. WI 53705 
+
+Dr. Alan M. Lesgold 
+Learning RID Center 
+University of Pittsburgh 
+Pittsburgh, PA 15260 
+
+Dr. Michael Levine 
+Educational Psychology 
+210 Education Bldg. 
+University of Illinois 
+Champaign. IL 61801 
+
+Dr. Charles Lewis 
+
+Facultelt Sociale Wetenschappen 
+
+Rljksunlversitelt Groningen 
+
+Oude Boteringestrnat 23 
+
+9712GC Groningen 
+
+The NETHERLANDS 
+
+Dr. Robert Linn 
+College of Education 
+University of Illinois 
+Urbana. IL 61801 
+
+Dr. Robert Lockman 
+Center for Naval Analysis 
+200 North Beauregard St. 
+Alexandria, VA 22311 
+
+Dr. Frederic H. Lord 
+Educational Testing Service 
+Princeton. NJ 085*1 
+
+Dr. James Lumsden 
+Department of Psychology 
+University of Western Australia 
+Ned lands W.A. 6009 
+AUSTRALIA 
+
+Dr. William L. Kaloy (02) 
+Chief of Naval Education 
+
+and Training 
+Naval Air Station 
+Pensacola, FL 32508 
+
+
+
+Dr. Gary Marco 
+Stop 31-E 
+
+Educational Testing Service 
+Princeton, NJ 0845 1 
+
+Dr. Kneale Marshall 
+Operations Research Department 
+Naval Post Graduate School 
+Monterey. CA 93940 
+
+Dr. Clessen Martin 
+Army Research Institute 
+5001 Elsenhower Blvd. 
+Alexandria, VA 22333 
+
+Dr. James McBrlde 
+Psychological Corporation 
+c/o Harcourt. Brace, 
+
+Javanovlch Inc. 
+1250 West 6th Street 
+San Diego, CA 92101 
+
+Dr. Clarence McConaick 
+
+HO. MEPCOM 
+
+MEPCT'P 
+
+2500 <reen Bay Road 
+North Chicago, IL 60064 
+
+Mr. Robert McKlnley 
+University of Toledo 
+Dcpartmentof Educational Psychology 
+Toledo. OH 43606 
+
+Dr. Barbara Means 
+Human Resources 
+
+Research Organization 
+1100 South Washington 
+Alexandria. VA 22314 
+
+Dr. Arthur Helmed 
+724 Brown 
+
+U. S. Department of Education 
+Washington. DC 20208 
+
+Dr. Robert Mlslevy 
+Educational Testing Service 
+Princeton. NJ 08541 
+
+Dr William Montague 
+
+NPRDC Code 13 
+
+San Diego. CA 92152 
+
+Ms. Kathleen Moreno 
+
+Navy Personnel RAD Center 
+
+Code 62 
+
+San Diego, CA 92152 
+
+Headquarters, Marine Corps 
+Code MPI-20 
+Washington, DC 20380 
+
+Spec. Asst. for Research. Experi- 
+mental Programs. 4 Academic Programs 
+Naval Technical Training Command 
+
+(Cede 016) 
+NAS Memphis (75) 
+Millington. TN 38054 
+
+Program Manager for Manpower, 
+
+Personnel, and Training 
+NAVMAT 0722 
+
+Arlington. VA 22217-5000 
+
+Dr. W. Alan Nicewander 
+University of Oklahoma 
+Department of Psychology 
+Oklahoma City. OK 73069 
+
+Dr, William E, Nordbrock 
+FHC-ADCO Box 25 
+APO. NY 09710 
+
+
+
+BEST COPY AVAILABLE 
+
+
+
+33 
+
+
+
+30 
+
+
+
+University of -limois/Tatsuoka. Tatsuoka. h fcldins 
+
+
+
+Director, Training Laboratory 
+NPRDC (Code 05) 
+San Diego. CA 92152 
+
+Director. Manpower and Personnel 
+
+Laboratory 
+NPRDC (Code 06) 
+San Diego, CA 92152 
+
+Director 
+Human Factors 
+
+& Organizational Systems Lab. 
+NPRDC (Code 07) 
+San Diego. CK 92152 
+
+Library 
+Code P201L 
+
+Navy Personnel BID Center 
+San Die to. CA 92152 
+
+Technical Director 
+
+Navy Personnel R4D Center 
+
+San Diego. CA 92152 
+
+Conmanding Officer 
+
+Naval Research Laboratory 
+
+Code 2627 
+
+Washington. DC 20390 
+
+Cr. Harry F, 0'Neil. Jr. 
+Training Research Lab 
+Army Research Institute 
+5001 Elsenhower Avenue 
+Alexandria, VA 22333 
+
+Dr. Stellan Ohlsson 
+Learning R&D Center 
+University of Pittsburgh 
+3939 0'Hara Street 
+Pittsburgh. PA 1521 
+
+Dr. Janes Olson 
+WICAT. Inc. 
+
+1875 South State Street 
+Or en. UT 81057 
+
+Office of Kaval Research 
+Code W2PT 
+800 N. Ouincy Street 
+Arlington. VA 22217-5000 
+(5 Copies) 
+
+Special Assistant for Marine 
+
+Corps Matters 
+Code 10OM 
+
+Office of Naval Research 
+600 N. Quincy St. 
+Arlington. VA 22217-5000 
+
+Psychologist 
+CNR Branch Office 
+1030 East Creen ^treet 
+Pasadena. CA 91101 
+
+Commanding Officer 
+Amy Research Institute 
+ATTN: PERI-BR (Dr. J. Orasanu) 
+5001 Elsenhower Avenue 
+Alexandria. VA 22333 
+
+Dr. Jesse Orlansky 
+Institute for Defense Analyses 
+1801 N. Beauregard St. 
+Alexanorla. VA 22311 
+
+Dr. Randolph Park 
+AFHRL/M0AN 
+
+Brooks AFB. TX 78235 
+
+Wayne M. Patience 
+American Council on Education 
+CED Testing Service. Suite 20 
+One Dupont Clrle. KW 
+Washington. DC 20036 
+
+Dr. Janes Paulson 
+Department of Psychology 
+Portland State University 
+P.O. Box 751 
+Portland, OR 97207 
+
+
+
+Dr. Janes V. Pellegrino 
+University of California, 
+
+Santa Barbara 
+Departnent of Psychology 
+Santa Carabara, CA 93106 
+
+Dr. Roger Pennell 
+
+Air Force Hunan Resources 
+
+Laboratory 
+Lowry AFP. CO 80230 
+
+Military Assistant for Training and 
+
+Personnel Technology 
+OUSD (R A E) 
+
+Boon 3D129, The Pentagon 
+Washington. DC 20301 
+
+Administrative Sciences Departnent 
+N'aval Postgraduate School 
+Monterey. CA 939*10 
+
+Departnent of Operations Research 
+Kaval Postgraduate School 
+Monterey. CA 939*10 
+
+Tr. Joseph Psotka 
+ATTN: PERI-1C 
+Amy Research Institute 
+e 301 Elsenhower Ave. 
+Alexandria. VA 22333 
+
+Dr. Mark D. Reckase 
+ACT 
+
+P. 0. Box 168 
+
+Iowa City. IA 52243 
+
+Dr. Malcolm Ree 
+AFHRLAMP 
+
+Brooks AFB. TX 78235 
+
+Dr. Fred Reif 
+Physics Department 
+University of California 
+Berkeley. CA 91720 
+
+Dr. Lauren Resnlck 
+Learning R&D Center 
+University of Pittsburgh 
+3939 O'Hara Street 
+Pittsburgh. PA 1521 
+
+Dr. Mary s. Riley 
+
+Program in Cognitive Science 
+
+Center for Human Information 
+
+Processing 
+University of California 
+La Jolla. CA 92093 
+
+Dr. Bernard Rinland 
+
+Navy Personnel R&D Center 
+
+San Diego. CA 92152 
+
+Dr. Carl Ross 
+CNET-PDCD 
+Building 90 
+
+Great Lakes NTC. IL 60088 
+
+Mr. Robert Ross 
+Army Research Institute 
+5001 Eisenhower Avenue 
+Alexandria. VA 22333 
+
+Dr. Lawrence Rudner 
+103 Elm Avenue 
+Takona Park. HD 20012 
+
+Dr. J. Ryan 
+
+Departnent of Education 
+University of South Carolina 
+Columbia. SC 29208 
+
+Dr. Funiko Sanejlma 
+Department of Psychology 
+University of Tennessee 
+KnoxviUe. TN 37916 
+
+Hr. Drew Sands 
+
+NPRDC Code 63 
+
+San Diego. CA 92152 
+
+
+
+9 
+
+ERLC 
+
+
+
+BEST COPY AVAILABLE 
+
+
+
+Dr. Robert Sasaor 
+Army Research Institute 
+5001 Eisenhower Avenue 
+Alexandria. VA 22333 
+
+
+
+19 April 1955 
+
+
+
+Dr. Walter fchntider 
+University of Illinois 
+Psychology Departnent 
+£03 C. Dsniel 
+Champaign. IL 61820 
+
+Lowell Schoer 
+
+Psychological i, Quantitative 
+
+Foundations 
+College of Education 
+University of Iowa 
+Iowa City, ia 52212 
+
+Dr. Hary Schrat2 
+
+Navy Personnel R&D Center 
+
+San Diego, CA 92152 
+
+Dr. Judah L. Schwartz 
+MIT 
+
+20C-120 
+
+Cambridge. HA 02139 
+
+Dr. W. Steve Sellman 
+
+OASD(MRAiL) 
+
+2B269 The Pentagon 
+
+Washington. DC 20301 
+
+Dr. Sylvia A. ft. Shafto 
+National Institute of Education 
+1200 19th Street 
+Hail Stop 1805 
+Washington. DC 20208 
+
+Dr. Joyce Shields 
+Amy Research Institute 
+5001 Eisenhower Avenue 
+Alexandria. VA 22333 
+
+Dr. Ka2uo Shigemasu 
+7 9-21 Kugenuna-Kaigan 
+Fujusawa 251 
+JAPAN 
+
+Dr. William Sims 
+Center for Naval Analysis 
+200 North Beauregard Street 
+Alexandria. VA 22311 
+
+Dr. H. Wallace Slnaiko 
+Manpower Research 
+
+and Advisory Services 
+Smithsonian Institution 
+801 North Pitt Street 
+Alexandria. VA 22311 
+
+Dr. Alfred F. Smode 
+Senior Scientist 
+Code 7B 
+
+Naval Training Equipment Center 
+Orlando. FL 32813 
+
+Dr. Richard Snow 
+Liaison Scientist 
+Office of Naval Research 
+Branch Office London 
+Box 39 
+
+FPO New York. NY 09510 
+
+&r. Richard Sorensen 
+Navy Personnel R&D Center 
+San Diego. CA 92152 
+
+Dr. Paul 5peckm*n 
+University of Missouri 
+Department of Statistics 
+Columbia. HO 65201 
+
+
+
+Dr. Robert Sternberg 
+Department of Psychology 
+Yale University 
+Box 11A. Yale Station 
+New Haven. CT 06520 
+
+Hartha Stocking 
+Educational Testing Service 
+Princeton, NJ 085H 
+
+Dr. Peter Stoloff 
+Center for Naval Analysis 
+200 North Beauregard Street 
+Alexandria, VA 22311 
+
+
+
+34 
+
+
+
+University of Illlnols/Tatsuoka. Tatsuoka. 4 Eddlns ^ April '985 31 
+
+
+
+Dr. UUliM .Stout 
+University of Illinois 
+Departaenr. of Mathematics 
+Urbana, XL 611)01 
+
+H*J. BUI .Strickland 
+AF/HPXOA 
+SElfiS Pentagon 
+Washington, DC 20330 
+
+Dr. Harlharan Swamlnathan 
+Laboratory of Psychometric and 
+
+Evaluation Research 
+School of Education 
+University of Massachusetts 
+Anherst, HA O1003 
+
+Hr. Brad Syvpson 
+
+Navy personnel MD Center 
+
+San Diego, CA 92152 
+
+Dr. John Tangney 
+AFOSR/NL 
+
+Boiling AFB. DC 20332 
+
+Dr. Haurlce Tatsuoka 
+220 Education Bldg 
+13^0 S. Sixth St. 
+Champaign, XL 61820 
+
+Dr. David TMssen 
+Department of Psychology 
+University of Kansas 
+Lawrence. KS 660Q4 
+
+Hr. Gary Thomasson 
+University of Illinois 
+Educational Psychology 
+Champaign, IL 61820 
+
+Dr. Robert Tsutakawa 
+Department of SUtlstics 
+Unlversir.y of .Missouri 
+Coluabla. HO 65201 
+
+Dr. Led yard Tucker 
+University of Illinois 
+Departnent of Psychology 
+603 E. Daniel Street 
+Champaign, IL 61820 
+
+Dr. Vern V. Urry 
+
+Personnel R*D Center 
+
+Cfflce of Personnel Management 
+
+190n E. Street. KW 
+
+Washington, DC 10415 
+
+Headquarters. U. S. Marine Corps 
+Code HPI-20 
+Washington, DC 20380 
+
+Dr. David Vale 
+Assessment Systems Corp. 
+2233 University Avenue 
+Suite 310 
+
+St. Paul. MM 55114 
+
+Dr. Frank Vlclno 
+
+Havy Personnel R&D Center 
+
+San Diego. CA 92152 
+
+Dr. Howard Vainer 
+Division of Psychological Studies 
+Educational Testing Service 
+PMnceton. NJ 085*10 
+
+Dr. Hlng-Het Wang 
+Llndqulst Center 
+
+for Measurement 
+University of Iowa 
+Iowa City. IA 52242 
+
+Hr. Thomas A. Wars 
+Coast Guard Institute 
+P. O. Substation «8 
+Oklahoma City, OK 73169 
+
+Dr. Brian Waters 
+HumMO 
+
+
+
+ERIC 
+
+
+
+™ n vorth Washington 
+indrla. VA 223U 
+
+
+
+Sr. David J. Weiss 
+N660 Elliott Hall 
+University of Minnesota 
+75 2. River Road 
+Minneapolis, MM 55*55 
+
+Dr. Donald Weltzaan 
+MITRE 
+
+1620 Dolley Madison Blvd. 
+HacLean, VA 22102 
+
+Major John Welsh 
+AFHRL/H0AN 
+
+Brooks AFB. TX 78223 
+
+Dr. Douglas Wetzel 
+Code 12 
+
+Navy Personnel R&D Center 
+San Diego, CA 92152 
+
+Dr. Rand R. Wilcox 
+University of Southern 
+
+California 
+Department, of Psychology 
+Los Angeles, CA 90007 
+
+German Military Representative 
+ATTN: Wolfgang Wlldegrube 
+
+Streltkraefteamt 
+
+D-5300 Bonn 2 
+4000 Brandywlne Street. KW 
+Washington, DC 20016 
+
+Dr. Bruce Williams 
+Department of Educational 
+
+Psychology 
+University of Illinois 
+Urbana, IL 61801 
+
+Dr. Hilda Wing 
+Army Research Institute 
+5001 Elsenhower Ave. 
+Alexandria. VA 22333 
+
+Ms. Harllyn Wlngersky 
+Educational Testing Service 
+Princeton, MJ 08541 
+
+Dr. Hartln F. Wlskoff 
+
+Navy personnel R * D Center 
+
+San Diego, CA 92152 
+
+Dr. Frank Wl throw 
+U. S. Office of Education 
+400 Maryland Ave. SW 
+Washington. DC 20202 
+
+Mr. John H. Wolfe 
+
+Navy Personnel R&D Center 
+
+San Diego, CA 92152 
+
+Dr. George Wong 
+Blostatlstlcs Laboratory 
+Memorial Sloan*Kettering 
+
+Cancer Center 
+1275 York Avenue 
+New York. NY J0C21 
+
+Dr. Wallace Wulfeck. Ill 
+Navy Pet ionnel R&D Center 
+San Diego. CA 92152 
+
+Dr. Joe Y3satuke 
+AFHRL/LRT 
+
+Lowry AFB, CO 80230 
+
+Dr. Wendy Yen 
+CTB/KcGraw Hill 
+Del Monte Research Park 
+Monterey. CA 93940 
+
+Dr. Joseph L. Young 
+Memory a Cognitive 
+
+Processes 
+National Science Foundation 
+Washington, DC 20550 
+
+Dr, Leigh Sursteln 
+Department of Education 
+University of California 
+Los Angeles, CA 90024 
+
+
+
+t . \ intan Cliff 
+Pepartnent of Psychology 
+University of California 
+University Park 
+Los Angeles, CA 90007 
+
+Dr, Lee Cronbach 
+Department of Education 
+Stanford University 
+Stanford, CA 94305 
+
+Dr. James Creeno 
+
+LRDC 
+
+University of Pittsburgh 
+3939 O'Hara Street 
+Pittsburgh, PA 15213 
+
+Dr, Anthony J. Hltko 
+School of Education 
+Educational Research 
+
+Methodology 
+University of Pittsburgh 
+SC03 Forbes Quadrangle 
+Pittsburgh, PA 15260 
+
+Dr, Ross Traub 
+Ontario Institute for 
+
+Studies in Education 
+252 Bloor St. W. 
+Toronto, Ontario 
+CANADA M5S 1V6 
+
+
+
+BEST COPY AVAILABLE 
+
+
+
+35 
+
+
+

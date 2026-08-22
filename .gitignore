@@ -1,0 +1,42 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.hypothesis/
+dist/
+*.egg-info/
+.venv/
+venv/
+htmlcov/
+.coverage
+
+# Logs
+logs/
+*.log
+
+# Node modules (frontend)
+historical-intelligence/node_modules/
+historical-intelligence/dist/
+
+# Large model weights
+models/
+*.bin
+*.safetensors
+*.onnx
+
+# Docker volumes
+docker-data/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Freebuff
+.freebuff/
