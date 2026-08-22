@@ -356,7 +356,7 @@ export class HistoricalApiService {
                 } else if (eventType === 'done') {
                   try {
                     const parsed: AnswerResponse = JSON.parse(dataStr);
-                    if (parsed.retrieved_chunks.length === 0) {
+                    if (parsed.retrieved_chunks.length === 0 && (!parsed.answer_segments || parsed.answer_segments.length === 0)) {
                       callbacks.onNoChunksFound?.();
                     } else {
                       callbacks.onDone(parsed);

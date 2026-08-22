@@ -111,6 +111,45 @@ async def _persist_chunks(chunks: list, source_id: int) -> list:
         await conn.close()
 
 
+def _filter_web_chunks(chunks: list) -> list:
+    """Remove junk chunks from web content.
+
+    Filters out JS/HTML noise, duplicate text, and chunks that are
+    only page markers. Deduplicates by first 100 chars of stripped text.
+    """
+    import re
+    JUNK_RE = re.compile(
+        r"(window\.|function\s|var\s|const\s|let\s|__wm\."
+        r"|<script|<style|<html|<head|<body|<div|<span|<link|<meta"
+        r"|RufflePlayer|archive\.org/web/|_wm\.)",
+        re.IGNORECASE,
+    )
+    seen = set()
+    filtered = []
+    for chunk in chunks:
+        # Strip page markers and whitespace for checking
+        text = chunk.text.strip()
+        clean = re.sub(r"\[\[PAGE:\d+\]\]", "", text).strip()
+        # Skip empty or very short chunks
+        if len(clean) < 40:
+            continue
+        # Skip JS/HTML junk
+        if JUNK_RE.search(clean):
+            # Check if it's MORE than 50% junk (allow some chunks with a JS prefix)
+            junk_ratio = len(re.findall(r"[{};=()]", clean)) / max(len(clean), 1)
+            if junk_ratio > 0.05:  # >5% special chars = likely code
+                continue
+        # Deduplicate by first 100 chars
+        dedup_key = clean[:100].lower()
+        if dedup_key in seen:
+            continue
+        seen.add(dedup_key)
+        filtered.append(chunk)
+    logger.info("Filtered web chunks: %d -> %d (removed %d junk/duplicates)",
+                len(chunks), len(filtered), len(chunks) - len(filtered))
+    return filtered
+
+
 async def _get_existing_chunks(domain: str) -> list:
     """Return existing chunks for a domain from the DB (already fetched/indexed)."""
     from app.models.pydantic_models import Chunk
@@ -130,9 +169,7 @@ async def _get_existing_chunks(domain: str) -> list:
         )
         chunks = [
             Chunk(
-                id=r["id"],
-                source_id=r["source_id"],
-                text=r["text"],
+                id=r["id"], source_id=r["source_id"], text=r["text"],
                 page_or_section=r["page_or_section"],
                 char_range_start=r["char_range_start"],
                 char_range_end=r["char_range_end"],
@@ -142,7 +179,7 @@ async def _get_existing_chunks(domain: str) -> list:
             for r in rows
         ]
         logger.info("Found %d existing chunks for domain %s", len(chunks), domain)
-        return chunks
+        return _filter_web_chunks(chunks)
     finally:
         await conn.close()
 

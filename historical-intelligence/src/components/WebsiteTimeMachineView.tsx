@@ -28,6 +28,8 @@ export const WebsiteTimeMachineView: React.FC<WebsiteTimeMachineViewProps> = ({
   const [activeDomain, setActiveDomain] = useState<string | null>('ai.mit.edu');
   const [snapshotData, setSnapshotData] = useState<SnapshotData | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [ingestedDomains, setIngestedDomains] = useState<{domain: string; snapshot_count: number}[]>([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
   const [is404, setIs404] = useState(false);
 
   // Ingestion job state
@@ -72,18 +74,29 @@ export const WebsiteTimeMachineView: React.FC<WebsiteTimeMachineViewProps> = ({
     }
   };
 
-  // Initial load
+  // Fetch ingested domains on mount
   useEffect(() => {
-    if (activeDomain) {
-      fetchDomain(activeDomain);
-    }
-  }, []);
-
-  const handleDomainSubmit = (e: React.FormEvent) => {
+    const fetchIngested = async () => {
+      try {
+        const res = await fetch(`${HistoricalApiService.getBackendUrl()}/snapshots/ingested-domains`);
+        if (res.ok) setIngestedDomains(await res.json());
+      } catch { /* ignore */ }
+    };
+    fetchIngested();
+    if (activeDomain) fetchDomain(activeDomain);
+  }, []);  const handleDomainSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!domainInput.trim()) return;
+    setShowSuggestions(false);
     fetchDomain(domainInput);
   };
+
+  // Filter ingested domains for autocomplete
+  const filteredSuggestions = domainInput.trim().length > 0
+    ? ingestedDomains.filter(d =>
+        d.domain.toLowerCase().includes(domainInput.toLowerCase().trim())
+      )
+    : [];
 
   // Request Indexing via POST /ingest + Poll GET /ingest/{job_id}/status
   const handleRequestIngest = async () => {
@@ -147,9 +160,29 @@ export const WebsiteTimeMachineView: React.FC<WebsiteTimeMachineViewProps> = ({
                 type="text"
                 placeholder="Enter a domain (e.g. ai.mit.edu, cs.stanford.edu, symbolics.com)..."
                 value={domainInput}
-                onChange={e => setDomainInput(e.target.value)}
+                onChange={e => { setDomainInput(e.target.value); setShowSuggestions(true); }}
+                onFocus={() => domainInput.trim().length > 0 && setShowSuggestions(true)}
+                onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
                 className="w-full pl-9 pr-4 py-2 text-sm bg-[#f5f0e6] border border-[#d8cfb8] rounded-lg text-[#2b2620] placeholder-[#6b6252]/70 focus:outline-none focus:border-[#8b3a1f] font-mono"
               />
+              {showSuggestions && filteredSuggestions.length > 0 && (
+                <ul className="absolute z-50 top-full left-0 right-0 mt-1 bg-[#fffdf7] border border-[#d8cfb8] rounded-lg shadow-lg max-h-48 overflow-y-auto">
+                  {filteredSuggestions.map(d => (
+                    <li
+                      key={d.domain}
+                      onMouseDown={() => {
+                        setDomainInput(d.domain);
+                        setShowSuggestions(false);
+                        fetchDomain(d.domain);
+                      }}
+                      className="px-3 py-2 text-xs font-mono text-[#2b2620] hover:bg-[#8b3a1f]/10 cursor-pointer flex justify-between items-center"
+                    >
+                      <span>{d.domain}</span>
+                      <span className="text-[#6b6252] text-[10px]">{d.snapshot_count} snapshots</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
             <button
               type="submit"

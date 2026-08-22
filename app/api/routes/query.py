@@ -50,28 +50,52 @@ async def post_query(body: QueryRequest) -> AnswerResponse:
         if body.filters.domain:
             sq.domain = body.filters.domain
 
+        # Step 1a: intercept Wayback metadata questions
+        # If the user is asking about snapshot counts, dates, etc.,
+        # answer directly from the snapshots table instead of retrieval.
+        if sq.domain:
+            try:
+                from app.wayback.metadata_answer import try_answer_metadata_query
+                metadata_answer = await try_answer_metadata_query(body.query, sq.domain)
+                if metadata_answer:
+                    from app.models.pydantic_models import AnswerSegment, AnswerResponse
+                    import uuid as _uuid
+                    return AnswerResponse(
+                        answer_id=str(_uuid.uuid4()),
+                        query=body.query,
+                        answer_segments=[
+                            AnswerSegment(
+                                text=metadata_answer,
+                                citation_type="DIRECTLY_VERIFIED",
+                                source_ids=[sq.domain],
+                            )
+                        ],
+                        retrieved_chunks=[],
+                    )
+            except Exception as meta_exc:
+                logger.warning("Metadata answer failed for %s: %s -- continuing", sq.domain, meta_exc, exc_info=True)
+
         # Step 1b: on-demand web content fetch if domain filter present
         web_chunks = []
         if sq.domain:
             try:
                 from app.wayback.ondemand import fetch_web_content_for_domain
                 from app.models.pydantic_models import RankedChunk, SourceMetadata
-                logger.info("[STEP 1b] Starting on-demand fetch for %s", sq.domain)
                 web_raw = await fetch_web_content_for_domain(sq.domain)
-                logger.info("[STEP 1b] Got %d raw chunks", len(web_raw))
-                for chunk in web_raw:
-                    web_chunks.append(RankedChunk(
+                for i, chunk in enumerate(web_raw):
+                    rc = RankedChunk(
                         chunk=chunk,
-                        rrf_score=0.0,
+                        rank=0,
+                        score=0.0,
                         source_metadata=SourceMetadata(
                             ia_identifier=sq.domain,
                             title=f"Website: {sq.domain}",
                             collection=sq.domain,
                         ),
-                    ))
-                logger.info("[STEP 1b] On-demand fetch returned %d web chunks for %s", len(web_chunks), sq.domain)
+                    )
+                    web_chunks.append(rc)
             except Exception as web_exc:
-                logger.warning("On-demand web fetch failed for %s: %s — continuing with document corpus only", sq.domain, web_exc, exc_info=True)
+                logger.warning("On-demand web fetch failed for %s: %s -- continuing with document corpus only", sq.domain, web_exc, exc_info=True)
 
         logger.info("[STEP 2] Starting parallel retrieval")
         # Step 2: parallel retrieval
@@ -92,9 +116,22 @@ async def post_query(body: QueryRequest) -> AnswerResponse:
 
         # Step 5: blend web chunks in front (high priority) + rerank
         all_evidence = web_chunks + hydrated
-        logger.info("[STEP 5] All evidence=%d (web=%d + doc=%d)", len(all_evidence), len(web_chunks), len(hydrated))
         ranked = rerank_blended(sq.raw_query, all_evidence, top_k=10, alpha=0.3)
-        logger.info("[STEP 5] Ranked=%d", len(ranked))
+
+        # When domain filter is active, guarantee web chunks appear in final output
+        # even if the reranker scored them lower than document chunks.
+        if web_chunks:
+            web_chunk_ids = {c.chunk.id for c in web_chunks}
+            ranked_ids = {r.chunk.id for r in ranked}
+            missing_web = [c for c in web_chunks if c.chunk.id not in ranked_ids]
+            if missing_web:
+                # Remove lowest-ranked non-web chunks to make room
+                non_web = [r for r in ranked if r.chunk.id not in web_chunk_ids]
+                slots_needed = len(missing_web)
+                keep = non_web[: len(non_web) - slots_needed]
+                ranked = missing_web + keep
+                for i, r in enumerate(ranked, 1):
+                    r.rank = i
 
         # Step 6: synthesize
         answer = await synthesize_answer(sq.raw_query, ranked)
@@ -140,16 +177,43 @@ async def post_query_stream(body: QueryRequest):
         if body.filters.domain:
             sq.domain = body.filters.domain
 
+        # Step 1a: intercept Wayback metadata questions
+        if sq.domain:
+            try:
+                from app.wayback.metadata_answer import try_answer_metadata_query
+                metadata_answer = await try_answer_metadata_query(body.query, sq.domain)
+                if metadata_answer:
+                    from app.models.pydantic_models import AnswerSegment, AnswerResponse
+                    import uuid as _uuid
+                    meta_response = AnswerResponse(
+                        answer_id=str(_uuid.uuid4()),
+                        query=body.query,
+                        answer_segments=[
+                            AnswerSegment(
+                                text=metadata_answer,
+                                citation_type="DIRECTLY_VERIFIED",
+                                source_ids=[sq.domain],
+                            )
+                        ],
+                        retrieved_chunks=[],
+                    )
+                    async def _meta_stream():
+                        yield f"event: done\ndata: {json.dumps(meta_response.model_dump())}\n\n"
+                    return StreamingResponse(_meta_stream(), media_type="text/event-stream")
+            except Exception as meta_exc:
+                logger.warning("Metadata answer failed for %s: %s -- continuing", sq.domain, meta_exc)
+
         # Step 1b: on-demand web content fetch if domain filter present
         web_chunks = []
         if sq.domain:
             from app.wayback.ondemand import fetch_web_content_for_domain
             from app.models.pydantic_models import RankedChunk, SourceMetadata
             web_raw = await fetch_web_content_for_domain(sq.domain)
-            for chunk in web_raw:
+            for i, chunk in enumerate(web_raw):
                 web_chunks.append(RankedChunk(
                     chunk=chunk,
-                    rrf_score=0.0,
+                    rank=0,
+                    score=0.0,
                     source_metadata=SourceMetadata(
                         ia_identifier=sq.domain,
                         title=f"Website: {sq.domain}",
@@ -169,6 +233,18 @@ async def post_query_stream(body: QueryRequest):
         hydrated = await hydrate_chunks(list(fused))
         all_evidence = web_chunks + hydrated
         ranked = rerank_blended(sq.raw_query, all_evidence, top_k=10, alpha=0.3)
+
+        # When domain filter is active, guarantee web chunks appear in final output
+        if web_chunks:
+            web_chunk_ids = {c.chunk.id for c in web_chunks}
+            ranked_ids = {r.chunk.id for r in ranked}
+            missing_web = [c for c in web_chunks if c.chunk.id not in ranked_ids]
+            if missing_web:
+                non_web = [r for r in ranked if r.chunk.id not in web_chunk_ids]
+                keep = non_web[: len(non_web) - len(missing_web)]
+                ranked = missing_web + keep
+                for i, r in enumerate(ranked, 1):
+                    r.rank = i
 
         # Step 6: streaming synthesis
         async def event_generator():
