@@ -13,6 +13,7 @@ from app.models.pydantic_models import Chunk, RankedChunk
 
 K = 60      # Standard RRF parameter
 TOP_N = 30  # Number of candidates to return after fusion
+MAX_PER_COLLECTION = 5  # Diversity cap: no more than N results from any one collection
 
 
 def fuse_rrf(

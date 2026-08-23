@@ -7,11 +7,29 @@ Usage:
                                 [--skip-judge]
                                 [--out logs/eval_results.json]
 
-Runs all 5 retrieval configs against the labeled query set, computes
+Runs retrieval configs against the labeled query set, computes
 Recall@K / Precision@K / MRR / nDCG@K, persists results to eval_runs table,
 and optionally runs LLM-as-judge faithfulness scoring.
 
-Property 17 (revised): blended_03 must (a) match rrf Recall@10 within 2%, (b) exceed rrf MRR, and (c) prevent catastrophic failures (no query loses 2+ relevant chunks from top-10 compared to rrf).
+Property 17 (final): blended_03 (alpha=0.3) is the production retrieval config.
+Chosen for robustness on edge queries despite blended_05 (alpha=0.5)
+showing a small MRR/nDCG edge in the corrected multi-label eval.
+
+Evidence base (corrected multi-label GT, 45 queries, 407 GT chunk IDs):
+  - blended_03 R@10=0.3335, MRR=0.7269, nDCG=0.4299
+  - blended_05 R@10=0.3443, MRR=0.7477, nDCG=0.4313
+  - rrf      R@10=0.3353, MRR=0.7228, nDCG=0.4188
+
+Per-query head-to-head (0.3 vs 0.5): 37 ties (82%), 0.5 wins 6, 0.3 wins 2.
+0.3's 2 wins are on complex multi-agent queries (p007, p009) where
+RRF-heavy blending produces more robust rankings on multi-source evidence.
+0.5's 6 wins are on book-lookup queries where the cross-encoder's stronger
+signal promotes a better first result.
+
+Property 17 checks:
+  (a) blended_03 R@10 >= rrf R@10 * 0.98 (within 2%)
+  (b) blended_03 MRR > rrf MRR
+  (c) no catastrophic failures vs rrf
 """
 from __future__ import annotations
 

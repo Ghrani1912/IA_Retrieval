@@ -7,7 +7,7 @@ import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.routes import health, ingest, query, snapshots, sources
+from app.api.routes import corpus, health, ingest, query, snapshots, sources
 
 logging.basicConfig(
     level=logging.INFO,
@@ -45,6 +45,7 @@ app.include_router(sources.router, tags=["Sources"])
 app.include_router(ingest.router, tags=["Ingestion"])
 app.include_router(snapshots.router, tags=["Wayback"])
 app.include_router(health.router, tags=["Health"])
+app.include_router(corpus.router, tags=["Corpus"])
 
 
 @app.on_event("startup")

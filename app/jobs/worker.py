@@ -163,6 +163,7 @@ async def _run_texts_ingest(
     query: str,
     date_range: tuple[str | None, str | None],
     source_type: str | None,
+    max_results: int = 0,
 ) -> dict:
     """Full IA ingestion pipeline: discover → fetch → clean → chunk → embed → index."""
     from app.ingestion.discover import discover
@@ -181,7 +182,7 @@ async def _run_texts_ingest(
 
     # Step 1: Discover
     logger.info("TEXTS branch: discover(%r)", query)
-    sources = await discover(query=query, date_range=clean_date_range)
+    sources = await discover(query=query, date_range=clean_date_range, max_results=max_results)
     logger.info("TEXTS branch: %d sources discovered", len(sources))
 
     if not sources:
@@ -286,6 +287,7 @@ async def run_ingestion_job(
     query: str,
     date_range: tuple[str | None, str | None],
     source_type: str | None = None,
+    max_results: int = 0,
 ) -> dict:
     """arq job function — routes to the correct pipeline by source_type."""
     logger.info("=== JOB %s STARTED === query=%r source_type=%s", job_id, query, source_type)
@@ -300,7 +302,7 @@ async def run_ingestion_job(
             return await _run_website_ingest(conn, job_id, domain)
         else:
             # Default: IA document pipeline
-            return await _run_texts_ingest(conn, job_id, query, date_range, source_type)
+            return await _run_texts_ingest(conn, job_id, query, date_range, source_type, max_results=max_results)
 
     except Exception as exc:
         try:

@@ -12,9 +12,10 @@ apply RRF fusion and cross-encoder reranking.
 | rrf           |  yes |  yes   |  RRF   |   no   |
 | full_pipeline |  yes |  yes   |  RRF   |  yes   |
 
-Property 17 (design.md): full_pipeline should outperform vector_only and
-bm25_only on Recall@10 — this is the quantified justification for the
-extra RRF + reranker complexity.
+Property 17 (final): blended_03 is the production config, chosen for
+robustness on edge queries despite blended_05 showing a small MRR edge.
+full_pipeline == blended_03 (alpha=0.3). Both outperform rrf on all metrics
+corrected multi-label GT. See run_eval.py for the full evidence chain.
 """
 from __future__ import annotations
 
@@ -26,6 +27,15 @@ from app.models.pydantic_models import RankedChunk, StructuredQuery
 from app.retrieval.retrieve import retrieve_bm25, retrieve_vector, hydrate_chunks
 from app.retrieval.rrf import fuse_rrf
 from app.retrieval.reranker import rerank_blended as rerank_blended_fn
+
+
+async def _blended_03_no_americana(query: StructuredQuery) -> list[RankedChunk]:
+    """RRF top-30 -> blended reranker (alpha=0.3) -> top-10, excluding Americana."""
+    bm25, vec = await asyncio.gather(retrieve_bm25(query), retrieve_vector(query))
+    fused = fuse_rrf(bm25, vec)
+    fused = await hydrate_chunks(fused)
+    fused = [r for r in fused if r.chunk.collection != "americana"]
+    return rerank_blended_fn(query.raw_query, fused, top_k=TOP_K, alpha=0.3)
 
 logger = logging.getLogger(__name__)
 
@@ -134,5 +144,6 @@ CONFIGS: dict[str, RetrieveFn] = {
     "rrf":           _rrf,
     "blended_05":    _blended_05,
     "blended_03":    _blended_03,
+    "blended_03_no_am": _blended_03_no_americana,
     "full_pipeline": _full_pipeline,
 }

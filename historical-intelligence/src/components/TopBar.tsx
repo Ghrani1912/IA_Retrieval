@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   BookOpen,
   SlidersHorizontal,
@@ -6,8 +6,21 @@ import {
   Layers,
   ChevronDown
 } from 'lucide-react';
-import { CORPUS_METRICS } from '../data/corpusData';
 import { AppSettings } from '../types';
+
+interface CorpusStats {
+  total_sources: number;
+  sources_with_chunks: number;
+  total_chunks: number;
+  collections: Array<{ name: string; sources: number; chunks: number }>;
+}
+
+const FALLBACK_STATS: CorpusStats = {
+  total_sources: 0,
+  sources_with_chunks: 0,
+  total_chunks: 0,
+  collections: [],
+};
 
 export type ViewTab = 'chat' | 'timeline' | 'timemachine' | 'explorer';
 
@@ -19,6 +32,19 @@ interface TopBarProps {
   settings: AppSettings;
 }
 
+const COLLECTION_COLORS: Record<string, string> = {
+  dticarchive: '#4a5a6b',
+  ericarchive: '#3f6b3f',
+  americana: '#8b3a1f',
+};
+const DEFAULT_COLOR = '#6b6252';
+
+const COLLECTION_LABELS: Record<string, string> = {
+  dticarchive: 'DTIC (Defense)',
+  ericarchive: 'ERIC (Education)',
+  americana: 'Americana (Libraries)',
+};
+
 export const TopBar: React.FC<TopBarProps> = ({
   activeTab,
   onTabChange,
@@ -26,6 +52,22 @@ export const TopBar: React.FC<TopBarProps> = ({
   onOpenSettings
 }) => {
   const [showCorpusTooltip, setShowCorpusTooltip] = useState(false);
+  const [corpusStats, setCorpusStats] = useState<CorpusStats>(FALLBACK_STATS);
+
+  useEffect(() => {
+    const fetchStats = async () => {
+      try {
+        const resp = await fetch('http://localhost:8000/corpus/stats');
+        if (resp.ok) {
+          const data = await resp.json();
+          setCorpusStats(data);
+        }
+      } catch {
+        // Backend not available — use fallback (zeros)
+      }
+    };
+    fetchStats();
+  }, []);
 
   const tabs: { id: ViewTab; label: string }[] = [
     { id: 'chat', label: 'Chat' },
@@ -92,7 +134,7 @@ export const TopBar: React.FC<TopBarProps> = ({
             >
               <Layers className="w-3.5 h-3.5 text-[#8b3a1f]" />
               <span className="font-mono text-[11px] sm:text-xs">
-                Corpus: <span className="font-semibold">{CORPUS_METRICS.totalSources} sources</span>, {CORPUS_METRICS.totalChunks.toLocaleString()} chunks
+                Corpus: <span className="font-semibold">{corpusStats.sources_with_chunks} sources</span>, {corpusStats.total_chunks.toLocaleString()} chunks
               </span>
               <ChevronDown className="w-3 h-3 text-[#6b6252]" />
             </button>
@@ -109,27 +151,23 @@ export const TopBar: React.FC<TopBarProps> = ({
                   <Info className="w-3.5 h-3.5 text-[#6b6252]" />
                 </div>
                 <div className="space-y-2">
-                  <div className="flex justify-between items-center text-[11px]">
-                    <div className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#4a5a6b]" />
-                      <span className="font-medium">DTIC (Defense)</span>
+                  {corpusStats.collections.map((coll) => (
+                    <div key={coll.name} className="flex justify-between items-center text-[11px]">
+                      <div className="flex items-center gap-1.5">
+                        <span
+                          className="w-2.5 h-2.5 rounded-full"
+                          style={{ backgroundColor: COLLECTION_COLORS[coll.name] || DEFAULT_COLOR }}
+                        />
+                        <span className="font-medium">{COLLECTION_LABELS[coll.name] || coll.name}</span>
+                      </div>
+                      <span className="font-mono text-[#6b6252]">
+                        {coll.sources} source{coll.sources !== 1 ? 's' : ''} ({coll.chunks.toLocaleString()} chunks)
+                      </span>
                     </div>
-                    <span className="font-mono text-[#6b6252]">18 sources (2,840 chunks)</span>
-                  </div>
-                  <div className="flex justify-between items-center text-[11px]">
-                    <div className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#3f6b3f]" />
-                      <span className="font-medium">ERIC (Education)</span>
-                    </div>
-                    <span className="font-mono text-[#6b6252]">14 sources (1,930 chunks)</span>
-                  </div>
-                  <div className="flex justify-between items-center text-[11px]">
-                    <div className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#8b3a1f]" />
-                      <span className="font-medium">Americana (Libraries)</span>
-                    </div>
-                    <span className="font-mono text-[#6b6252]">12 sources (1,818 chunks)</span>
-                  </div>
+                  ))}
+                  {corpusStats.collections.length === 0 && (
+                    <p className="text-[11px] text-[#6b6252] italic">No indexed collections yet.</p>
+                  )}
                 </div>
                 <div className="mt-2.5 pt-2 border-t border-[#d8cfb8] text-[10px] text-[#6b6252]">
                   Chronological coverage: 1970 – 1998 with CDX Wayback snapshots.

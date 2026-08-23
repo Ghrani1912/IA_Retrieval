@@ -90,6 +90,59 @@ def _rejoin_hyphenated(text: str) -> str:
 
 
 # -----------------------------------------------------------------------
+# Junk page detection (TOC, index, front matter)
+# -----------------------------------------------------------------------
+
+
+def is_junk_page(text: str) -> bool:
+    """Detect non-content pages: TOC, index, title pages, copyright, name lists.
+
+    Returns True if the page is structural/metadata rather than real content.
+    Used to filter chunks during ingestion and cleanup.
+    """
+    if not text or len(text.strip()) < 50:
+        return True
+
+    total_words = len(text.split())
+    if total_words < 30:
+        return True
+
+    # Copyright / digitization page
+    if re.search(
+        r"Digitized by|Internet Archive|Library of Congress|archive\.org/",
+        text,
+        re.IGNORECASE,
+    ):
+        return True
+
+    # Table of contents: lines ending with / <page_number>
+    toc_lines = len(re.findall(r"\d+\.\s+.+/\s*\d+\b", text))
+    if toc_lines >= 3:
+        return True
+
+    # Name list: many lines matching "First Last" or "First Last (Institution)"
+    name_lines = len(re.findall(r"^[A-Z][a-z]+\s+[A-Z][a-z]+", text, re.MULTILINE))
+    if name_lines >= 8:
+        return True
+
+    # Preface / acknowledgments
+    if re.search(
+        r"acknowledgment|acknowledgement|preface|foreword|"
+        r"since the.*project began|we wish|we are grateful",
+        text,
+        re.IGNORECASE,
+    ):
+        return True
+
+    # Title page: very few words relative to character count (lots of whitespace/OCR garble)
+    whitespace_ratio = 1 - (total_words / max(len(text), 1))
+    if total_words < 50 and whitespace_ratio > 0.4:
+        return True
+
+    return False
+
+
+# -----------------------------------------------------------------------
 # Public API
 # -----------------------------------------------------------------------
 

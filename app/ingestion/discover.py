@@ -138,6 +138,7 @@ async def discover(
     query: str,
     date_range: tuple[str, str] | None = None,
     media_type: str = "texts",
+    max_results: int = 0,
 ) -> list[SourceMetadata]:
     """Discover IA items matching query and upsert into sources table.
 
@@ -145,6 +146,7 @@ async def discover(
         query: IA Advanced Search query string.
         date_range: Optional (start_date, end_date) as ISO strings e.g. ("1975-01-01", "1990-12-31").
         media_type: IA media type filter (default "texts").
+        max_results: Stop after collecting this many items. 0 = no cap (up to IA's 10k limit).
 
     Returns:
         List of SourceMetadata for all discovered items.
@@ -161,7 +163,7 @@ async def discover(
 
     async with httpx.AsyncClient() as client:
         while True:
-            data = await _fetch_page(client, full_query, media_type="", page=page, rows=PAGE_SIZE)
+            data = await _fetch_page(client, full_query, media_type=media_type, page=page, rows=PAGE_SIZE)
 
             response_block = data.get("response", {})
             docs = response_block.get("docs", [])
@@ -202,6 +204,10 @@ async def discover(
             if len(all_items) >= min(num_found, 10_000):
                 break
             if len(docs) < PAGE_SIZE:
+                break
+            # User-specified cap
+            if max_results > 0 and len(all_items) >= max_results:
+                all_items = all_items[:max_results]
                 break
 
             page += 1

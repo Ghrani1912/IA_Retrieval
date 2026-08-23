@@ -175,13 +175,14 @@ def rerank_blended(
         return _assign_rrf_fallback(candidates, top_k)
 
     rrf_scores = [c.score for c in candidates]
+
     max_rrf = max(rrf_scores) if rrf_scores else 1.0
     norm_rrf = [s / max_rrf for s in rrf_scores]
 
-    blended = [
-        (alpha * rerank_scores[i] + (1 - alpha) * norm_rrf[i], c)
-        for i, c in enumerate(candidates)
-    ]
+    blended = []
+    for i, c in enumerate(candidates):
+        raw_score = alpha * rerank_scores[i] + (1 - alpha) * norm_rrf[i]
+        blended.append((raw_score, c))
     blended.sort(key=lambda x: x[0], reverse=True)
 
     result = []

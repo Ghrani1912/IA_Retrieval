@@ -19,6 +19,19 @@ logger = logging.getLogger(__name__)
 router = APIRouter()
 
 
+async def _background_ingest(query: str) -> None:
+    """Run on-demand ingestion in the background. Fire-and-forget."""
+    try:
+        from app.ingestion.ondemand import on_demand_ingest
+        result = await on_demand_ingest(query=query, max_sources=5)
+        logger.info(
+            "[ON-DEMAND] Background ingestion complete for %r: %s",
+            query[:60], result,
+        )
+    except Exception as exc:
+        logger.error("[ON-DEMAND] Background ingestion failed for %r: %s", query[:60], exc)
+
+
 class QueryFilters(BaseModel):
     date_range: dict[str, int] | None = None   # {"from": 1975, "to": 1995}
     source_type: str | None = None
@@ -133,6 +146,19 @@ async def post_query(body: QueryRequest) -> AnswerResponse:
                 for i, r in enumerate(ranked, 1):
                     r.rank = i
 
+        # Step 5b: thin-result detection — trigger background on-demand ingestion
+        unique_sources = len({r.chunk.source_id for r in ranked if r.chunk.source_id})
+        if unique_sources < 3 and not sq.domain:
+            try:
+                from app.ingestion.ondemand import on_demand_ingest
+                logger.info(
+                    "[ON-DEMAND] Thin results (%d unique sources) for %r — triggering background ingestion",
+                    unique_sources, body.query[:60],
+                )
+                asyncio.create_task(_background_ingest(body.query))
+            except Exception as od_exc:
+                logger.warning("Failed to trigger on-demand ingestion: %s", od_exc)
+
         # Step 6: synthesize
         answer = await synthesize_answer(sq.raw_query, ranked)
         return answer
@@ -246,8 +272,23 @@ async def post_query_stream(body: QueryRequest):
                 for i, r in enumerate(ranked, 1):
                     r.rank = i
 
+        # Step 5b: thin-result detection — trigger background on-demand ingestion
+        unique_sources_stream = len({r.chunk.source_id for r in ranked if r.chunk.source_id})
+        if unique_sources_stream < 3 and not sq.domain:
+            try:
+                logger.info(
+                    "[ON-DEMAND] Thin results (%d unique sources) for %r — triggering background ingestion",
+                    unique_sources_stream, body.query[:60],
+                )
+                asyncio.create_task(_background_ingest(body.query))
+            except Exception as od_exc:
+                logger.warning("Failed to trigger on-demand ingestion: %s", od_exc)
+
         # Step 6: streaming synthesis
         async def event_generator():
+            # Notify user if background ingestion is happening
+            if unique_sources_stream < 3 and not sq.domain:
+                yield f"event: status\ndata: {json.dumps({'text': 'Finding additional sources from the Internet Archive...'})}\n\n"
             async for event in synthesize_answer_stream(sq.raw_query, ranked):
                 etype = event["type"]
                 if etype == "token":

@@ -26,6 +26,7 @@ class IngestRequest(BaseModel):
     query: str
     date_range: DateRange | None = None
     source_type: str | None = None
+    max_results: int = 0  # 0 = no cap (discover all IA matches)
 
 
 class IngestResponse(BaseModel):
@@ -87,7 +88,8 @@ async def enqueue_ingest(body: IngestRequest) -> IngestResponse:
         redis_settings = RedisSettings.from_dsn(settings.redis_url)
         redis = await arq.create_pool(redis_settings)
         await redis.enqueue_job("run_ingestion_job", job_id, body.query,
-                                (str(date_from), str(date_to)), body.source_type)
+                                (str(date_from), str(date_to)), body.source_type,
+                                max_results=body.max_results)
         await redis.close()
     except Exception as exc:
         logger.warning("Could not enqueue to Redis (worker may not be running): %s", exc)

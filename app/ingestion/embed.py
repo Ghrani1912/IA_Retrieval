@@ -82,7 +82,7 @@ def embed_chunks(
     for chunk, vec in zip(chunks, dense_vecs):
         result.append(
             ChunkWithEmbedding(
-                **chunk.model_dump(),
+                **chunk.model_dump(exclude={"embedding"}),
                 embedding=vec.tolist(),
             )
         )

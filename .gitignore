@@ -40,3 +40,6 @@ Thumbs.db
 
 # Freebuff
 .freebuff/
+
+# Internet Archive cache
+ia_cache/

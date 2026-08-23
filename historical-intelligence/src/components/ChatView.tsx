@@ -15,7 +15,8 @@ import {
   AlertTriangle,
   Radio,
   SlidersHorizontal,
-  X
+  X,
+  Info
 } from 'lucide-react';
 import { ChatMessage, AppSettings, SourceDocument, RetrievedChunk } from '../types';
 import { CitationConfidenceBar } from './CitationConfidenceBar';
@@ -338,7 +339,7 @@ export const ChatView: React.FC<ChatViewProps> = ({
                           No sources in the indexed corpus address this question.
                         </p>
                         <p className="text-[11px] mt-1 text-[#6b6252]">
-                          The current index contains 44 primary volumes from DTIC, ERIC, and Americana covering 1970–1998. Try querying topics such as semantic networks, MYCIN, STRIPS planning, LISP machines, or Wayback domains.
+                          Try querying topics such as semantic networks, MYCIN, STRIPS planning, LISP machines, or Wayback domains with a domain filter.
                         </p>
                       </div>
                     </div>
@@ -354,6 +355,29 @@ export const ChatView: React.FC<ChatViewProps> = ({
                           segments={msg.answerResponse.answer_segments}
                           distribution={msg.answerResponse.citation_distribution}
                         />
+                      )}
+
+                      {/* Low-Evidence Warning: fires when chunks come from ≤2 unique sources */}
+                      {!msg.isStreaming && msg.answerResponse && msg.answerResponse.retrieved_chunks && msg.answerResponse.retrieved_chunks.length > 0 && (() => {
+                        const uniqueSources = new Set(msg.answerResponse!.retrieved_chunks!.map((c: any) => c.source_id));
+                        return uniqueSources.size <= 2;
+                      })() && (
+                        <div className="mt-2 p-2 bg-amber-50 border border-amber-200 rounded-md text-[11px] text-amber-800 flex items-start gap-1.5">
+                          <Info className="w-3.5 h-3.5 shrink-0 mt-0.5" />
+                          <span>
+                            <strong>Thin evidence:</strong> Answers drawn from only {(() => { const s = new Set(msg.answerResponse!.retrieved_chunks!.map((c: any) => c.source_id)); return s.size; })()} unique source{(() => { const s = new Set(msg.answerResponse!.retrieved_chunks!.map((c: any) => c.source_id)); return s.size !== 1 ? 's' : '' })()}. Answer may be incomplete or reflect a single document's perspective.
+                          </span>
+                        </div>
+                      )}
+
+                      {/* Citation Confidence Warning */}
+                      {!msg.isStreaming && msg.answerResponse?.citation_distribution && msg.answerResponse.citation_distribution.unknown > 50 && (
+                        <div className="mt-2 p-2 bg-orange-50 border border-orange-200 rounded-md text-[11px] text-orange-800 flex items-start gap-1.5">
+                          <Info className="w-3.5 h-3.5 shrink-0 mt-0.5" />
+                          <span>
+                            <strong>Low citation confidence:</strong> {msg.answerResponse.citation_distribution.unknown}% of claims could not be verified against source text. Treat with caution.
+                          </span>
+                        </div>
                       )}
 
                       {/* Evidence Source Cards */}
