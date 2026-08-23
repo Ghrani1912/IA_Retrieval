@@ -161,6 +161,7 @@ async def synthesize_answer(query: str, evidence: list[RankedChunk]) -> AnswerRe
             answer_segments=segments,
             retrieved_chunks=[item.chunk for item in evidence],
         )
+        fallback_answer.compute_citation_distribution()
         fallback_answer = _flag_launched_warnings(fallback_answer, evidence)
         await persist_citations(fallback_answer)
         return fallback_answer
@@ -220,6 +221,9 @@ async def synthesize_answer(query: str, evidence: list[RankedChunk]) -> AnswerRe
     answer.answer_id = answer_id
     answer.query = query
     answer.retrieved_chunks = [item.chunk for item in evidence]
+
+    # Compute citation distribution from segments
+    answer.compute_citation_distribution()
 
     # Inject real chunk IDs from evidence into segments that cite matching source_ids.
     # LLMs reliably return source_ids (ia_identifier strings) but not numeric chunk IDs.
@@ -391,6 +395,9 @@ async def synthesize_answer_stream(
     answer.answer_id = answer_id
     answer.query = query
     answer.retrieved_chunks = [item.chunk for item in evidence]
+
+    # Compute citation distribution from segments
+    answer.compute_citation_distribution()
 
     # Inject chunk IDs from evidence
     source_to_chunks: dict[str, list[int]] = {}

@@ -33,8 +33,9 @@ export const CitationConfidenceBar: React.FC<CitationConfidenceBarProps> = ({
     let unknownCount = 0;
 
     for (const seg of segments) {
-      if (seg.citation_type === 'directly_verified') verifiedCount++;
-      else if (seg.citation_type === 'inferred') inferredCount++;
+      const ct = (seg.citation_type || '').toLowerCase();
+      if (ct === 'directly_verified' || ct === 'directly verified') verifiedCount++;
+      else if (ct === 'inferred') inferredCount++;
       else unknownCount++;
     }
 

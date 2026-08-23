@@ -20,7 +20,7 @@ historical-intelligence/node_modules/
 historical-intelligence/dist/
 
 # Large model weights
-models/
+/models/
 *.bin
 *.safetensors
 *.onnx

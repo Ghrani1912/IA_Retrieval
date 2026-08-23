@@ -67,6 +67,9 @@ export const TopBar: React.FC<TopBarProps> = ({
       }
     };
     fetchStats();
+    // Poll every 30 seconds for live corpus stats (catches on-demand ingestions)
+    const interval = setInterval(fetchStats, 30000);
+    return () => clearInterval(interval);
   }, []);
 
   const tabs: { id: ViewTab; label: string }[] = [
