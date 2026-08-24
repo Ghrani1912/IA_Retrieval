@@ -83,7 +83,7 @@ This platform ingests public-domain documents from the Internet Archive, indexes
 - Node.js 18+
 - Docker Desktop (for Postgres, OpenSearch, Qdrant, Redis)
 - NVIDIA GPU with CUDA (optional, for faster embedding/reranking)
-- LLM API key (OpenAI or Groq)
+- LLM API key (Groq)
 
 ### 1. Start Infrastructure
 
