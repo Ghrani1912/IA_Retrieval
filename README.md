@@ -2,7 +2,7 @@
 
 > AI-powered historical information retrieval and reasoning on the Internet Archive.
 
-Ask questions about historical AI research, government documents, and education papers — get synthesized answers with verified citations from primary sources spanning 1970–1998.
+Ask questions about historical AI research, government documents, and education papers — get synthesized answers with verified citations from primary sources spanning 1970–2026.
 
 ![Architecture](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
 ![Frontend](https://img.shields.io/badge/React_19-61DAFB?style=flat&logo=react&logoColor=black)
@@ -13,17 +13,18 @@ Ask questions about historical AI research, government documents, and education 
 
 ## What It Does
 
-This platform ingests public-domain documents from the Internet Archive, indexes them for hybrid search (keyword + semantic), and uses an LLM to synthesize answers with citations — all grounded in the indexed corpus.
+This platform ingests public-domain documents from the Internet Archive, indexes them for hybrid search (keyword + semantic), and uses an LLM to synthesize answers with citations — all grounded in the indexed corpus. It also integrates with the Wayback Machine for website snapshot analysis and temporal intelligence.
 
 ### Core Capabilities
 
 - **Hybrid Retrieval** — BM25 keyword search + dense vector search fused with Reciprocal Rank Fusion, then re-scored with a cross-encoder reranker (BGE-reranker-v2-m3)
 - **Blended Reranking** — 70% RRF fusion score + 30% cross-encoder score, balancing lexical precision with semantic understanding
-- **LLM Synthesis** — Answers generated from retrieved evidence chunks only, with per-claim citation verification (DIRECTLY_VERIFIED / SUPPORTED / INFERRED / UNKNOWN)
-- **On-Demand Ingestion** — When retrieval finds thin results, the system automatically searches IA for relevant papers, ingests them in the background, and indexes them for future queries
-- **Wayback Machine Integration** — Query website snapshot history via CDX API cache, browse capture timelines, and fetch on-demand web content for specific domains
-- **Multi-Source Corpus** — 10,671+ chunks across DTIC (defense research), ERIC (education), and Americana (encyclopedias)
+- **LLM Synthesis** — Answers generated from retrieved evidence chunks only, with per-claim citation verification (DIRECTLY_VERIFIED / INFERRED / UNKNOWN)
+- **On-Demand Ingestion** — When retrieval finds thin results OR citations are all UNKNOWN, the system automatically searches IA for relevant papers, ingests them in the background, and indexes them for future queries
+- **Wayback Machine Integration** — Query website snapshot history via CDX API cache, browse capture timelines, fetch on-demand web content, and get LLM-powered evolution analysis
+- **Multi-Source Corpus** — 10,807+ chunks across DTIC (defense research), ERIC (education), Americana (encyclopedias), and dynamically ingested sources
 - **Streaming Responses** — Real-time token-by-token answer generation via Server-Sent Events
+- **Dynamic Corpus Growth** — Corpus expands automatically as new queries trigger on-demand ingestion from Internet Archive
 
 ---
 
@@ -32,7 +33,7 @@ This platform ingests public-domain documents from the Internet Archive, indexes
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                        React Frontend                          │
-│  ChatView · SourceBrowser · WebsiteTimeMachine · TimelineView  │
+│  ChatView · SourceExplorer · WebsiteTimeMachine · TimelineView │
 └───────────────────────────┬─────────────────────────────────────┘
                             │ SSE / REST
 ┌───────────────────────────▼─────────────────────────────────────┐
@@ -41,6 +42,7 @@ This platform ingests public-domain documents from the Internet Archive, indexes
 │  POST /query          POST /query/stream     GET /health       │
 │  POST /ingest         GET /snapshots/{domain} GET /corpus/stats│
 │  GET /sources         GET /sources/{id}/chunks                 │
+│  GET /corpus/evolution/{domain}  GET /corpus/evolution/{domain}/cdx-analysis
 │                                                                 │
 │  ┌─────────────┐  ┌──────────────┐  ┌──────────────────────┐   │
 │  │  Retrieval   │  │   Synthesis  │  │    Ingestion         │   │
@@ -137,12 +139,14 @@ The app is now running at `http://localhost:3000`.
 | `/corpus/stats` | GET | Live corpus statistics (source count, chunk count, collection breakdown) |
 | `/query` | POST | Full retrieval + synthesis pipeline (non-streaming) |
 | `/query/stream` | POST | Streaming retrieval + synthesis via SSE |
-| `/sources` | GET | List all ingested sources |
+| `/sources` | GET | List all ingested sources (supports `q` search parameter) |
 | `/sources/{id}/chunks` | GET | Chunks for a specific source |
 | `/ingest` | POST | Trigger document ingestion (papers or website) |
 | `/ingest/{job_id}/status` | GET | Check ingestion job progress |
 | `/snapshots/{domain}` | GET | Wayback Machine snapshot statistics |
 | `/snapshots/ingested-domains` | GET | List all domains with cached snapshots |
+| `/corpus/evolution/{domain}` | GET | Website evolution analysis (CDX metadata + LLM) |
+| `/corpus/evolution/{domain}/cdx-analysis` | GET | LLM-powered historical analysis from CDX metadata |
 
 ### Example Query
 
@@ -170,6 +174,20 @@ curl http://localhost:8000/snapshots/ai.mit.edu
 curl -X POST http://localhost:8000/query \
   -H "Content-Type: application/json" \
   -d '{"query": "What did ai.mit.edu look like historically?", "filters": {"domain": "ai.mit.edu"}}'
+```
+
+### Example Evolution Analysis
+
+```bash
+# Get LLM-powered evolution analysis for a domain
+curl http://localhost:8000/corpus/evolution/ai.mit.edu/cdx-analysis
+```
+
+### Example Source Search
+
+```bash
+# Search sources by title, author, or identifier
+curl "http://localhost:8000/sources?q=quantum&page=1&page_size=10"
 ```
 
 ---
@@ -207,7 +225,19 @@ Top-10 Evidence Chunks → LLM Synthesis
     │
     ▼
 Answer with per-claim citations + citation verification distribution
+    │
+    ▼
+Relevance Check (if ≥80% UNKNOWN citations → trigger IA fetch)
 ```
+
+### On-Demand Ingestion Triggers
+
+The system triggers background ingestion when:
+
+1. **Thin results** — Fewer than 3 unique sources in retrieval
+2. **Low relevance** — ≥80% of citations marked as UNKNOWN (evidence doesn't support the claim)
+
+This ensures the corpus grows dynamically to cover new topics.
 
 ### Why Blended Reranking?
 
@@ -222,15 +252,15 @@ Pure cross-encoder reranking (alpha=1.0) can promote encyclopedic/keyword-dense 
 | DTIC Archive | Defense Technical Information Center — government-funded AI/CS research papers (1970s–2000s) | ~2,660 | ~5,466 |
 | ERIC Archive | Education Resources Information Center — education technology and CS education research | ~747 | ~3,908 |
 | Americana | Encyclopedia Americana + Handbook of AI — broad AI topic coverage | ~5 | ~1,296 |
-| **Total** | | **~3,412** | **~10,671** |
+| On-Demand | Dynamically ingested from IA based on query relevance | Growing | Growing |
+| **Total** | | **12,334+** | **10,807** |
 
-### On-Demand Ingestion
+### Dynamic Corpus Growth
 
-When a query returns thin results (< 3 unique sources), the system automatically:
-1. Searches IA for DTIC papers matching the query
-2. Fetches full text, cleans OCR noise, chunks, embeds, and indexes
-3. Returns whatever it has immediately (no user wait)
-4. Subsequent queries find the freshly ingested content
+The corpus expands automatically:
+- User asks about "quantum computing" → system finds thin results → triggers IA fetch → ingests 9 new DTIC papers → 96 new chunks added
+- Next user asking about quantum gets richer answers from the expanded corpus
+- Source Explorer shows all sources including newly ingested ones
 
 ---
 
@@ -272,10 +302,10 @@ Built with React 19 + Tailwind CSS + Vite. The frontend provides:
 | View | Description |
 |---|---|
 | **ChatView** | Conversational Q&A with streaming responses, citation verification bars, and evidence cards |
-| **SourceBrowser** | Browse all ingested sources by collection, view individual chunks |
-| **WebsiteTimeMachine** | Enter a domain → see Wayback Machine snapshot timeline, capture frequency chart |
+| **SourceExplorer** | Browse all 12,334+ sources with search, collection filters, and date range filtering |
+| **WebsiteTimeMachine** | Enter a domain → see Wayback Machine snapshot timeline, capture frequency chart, LLM-powered evolution analysis |
 | **TimelineView** | Visualize document distribution across time periods |
-| **TopBar** | Live corpus stats, collection filter, date range filter |
+| **TopBar** | Live corpus stats (auto-refreshing every 30s), collection filter |
 
 ### Frontend Development
 
@@ -297,8 +327,8 @@ IA/
 │   │   ├── query.py         # POST /query, POST /query/stream
 │   │   ├── ingest.py        # POST /ingest, job status
 │   │   ├── snapshots.py     # GET /snapshots/{domain}
-│   │   ├── sources.py       # GET /sources
-│   │   ├── corpus.py        # GET /corpus/stats
+│   │   ├── sources.py       # GET /sources (with search)
+│   │   ├── corpus.py        # GET /corpus/stats, evolution analysis
 │   │   └── health.py        # GET /health
 │   ├── ingestion/           # Document ingestion pipeline
 │   │   ├── discover.py      # IA search (discover sources)
@@ -339,7 +369,7 @@ IA/
 │   └── src/
 │       ├── components/      # UI components
 │       │   ├── ChatView.tsx
-│       │   ├── SourceBrowser.tsx
+│       │   ├── SourceExplorerView.tsx
 │       │   ├── WebsiteTimeMachineView.tsx
 │       │   ├── TimelineView.tsx
 │       │   ├── EvidenceCards.tsx
@@ -369,7 +399,11 @@ The cross-encoder reranker sometimes promotes keyword-dense encyclopedia entries
 
 ### Why On-Demand Ingestion?
 
-A static index of ~10K chunks can't cover every possible query. On-demand ingestion extends coverage dynamically — when results are thin, the system fetches relevant papers from IA in the background. Users get an immediate answer from existing content, then can re-query for richer results.
+A static index can't cover every possible query. On-demand ingestion extends coverage dynamically — when results are thin OR citations show low relevance, the system fetches relevant papers from IA in the background. Users get an immediate answer from existing content, then can re-query for richer results.
+
+### Why Citation-Based Relevance Triggering?
+
+Previously, ingestion only triggered on thin results (<3 sources). But a query like "What is the capital of France?" might find 6 sources that all mention "France" in passing — irrelevant but above the threshold. By checking citation types (UNKNOWN = evidence doesn't support the claim), we catch these cases and trigger ingestion for better future answers.
 
 ### Why Multi-Label Ground Truth?
 
