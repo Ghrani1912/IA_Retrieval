@@ -60,6 +60,7 @@ async def list_sources(
     date_from: int | None = Query(None, description="Year (e.g. 1975)"),
     date_to: int | None = Query(None, description="Year (e.g. 1990)"),
     language: str | None = Query(None),
+    q: str | None = Query(None, description="Search title, author, subject"),
     page: int = Query(1, ge=1),
     page_size: int = Query(50, ge=1, le=100),
 ) -> SourceListResponse:
@@ -98,6 +99,10 @@ async def list_sources(
     if language:
         conditions.append(f"s.language = ${idx}")
         params.append(language)
+        idx += 1
+    if q:
+        conditions.append(f"(s.title ILIKE ${idx} OR s.author ILIKE ${idx} OR s.ia_identifier ILIKE ${idx})")
+        params.append(f"%{q}%")
         idx += 1
 
     where = "WHERE " + " AND ".join(conditions) if conditions else ""

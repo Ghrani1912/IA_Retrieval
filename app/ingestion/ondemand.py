@@ -76,14 +76,26 @@ async def on_demand_ingest(
             identifier = src_meta.ia_identifier
 
             try:
-                # Check if source exists in DB
+                # Check if source exists in DB, create if not
                 row = await conn.fetchrow(
                     "SELECT id FROM sources WHERE ia_identifier = $1", identifier,
                 )
                 if row is None:
-                    logger.info("[ON-DEMAND] %s not in DB — skipping", identifier)
-                    continue
-                source_id = row["id"]
+                    # New source — create source row first
+                    source_id = await conn.fetchval(
+                        """
+                        INSERT INTO sources (ia_identifier, title, collection, source_type, pub_date_raw, language)
+                        VALUES ($1, $2, $3, 'metadata_only', $4, 'en')
+                        RETURNING id
+                        """,
+                        identifier,
+                        src_meta.title or f"IA: {identifier}",
+                        src_meta.collection or "dticarchive",
+                        src_meta.pub_date,
+                    )
+                    logger.info("[ON-DEMAND] Created new source %s (id=%d)", identifier, source_id)
+                else:
+                    source_id = row["id"]
 
                 # Skip if already ingested
                 existing = await conn.fetchval(

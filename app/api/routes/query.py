@@ -165,6 +165,24 @@ async def post_query(body: QueryRequest) -> AnswerResponse:
 
         # Step 6: synthesize
         answer = await synthesize_answer(sq.raw_query, ranked)
+
+        # Step 6b: post-synthesis relevance check — if all citations are UNKNOWN,
+        # the evidence is irrelevant. Trigger IA fetch for future queries.
+        total_segs = len(answer.answer_segments)
+        if total_segs > 0:
+            unknown_count = sum(1 for s in answer.answer_segments if s.citation_type == "UNKNOWN")
+            unknown_pct = (unknown_count / total_segs) * 100
+
+            if unknown_pct >= 80 and not sq.domain:
+                logger.info(
+                    "[RELEVANCE] Low relevance (%d%% UNKNOWN citations) for %r — triggering IA fetch",
+                    unknown_pct, body.query[:60],
+                )
+                try:
+                    asyncio.create_task(_background_ingest(body.query))
+                except Exception as od_exc:
+                    logger.warning("Failed to trigger relevance-based IA fetch: %s", od_exc)
+
         return answer
 
     except AnswerParseError as exc:
@@ -305,7 +323,24 @@ async def post_query_stream(body: QueryRequest):
                     data = json.dumps({"text": event.get("text", "")})
                 elif etype == "done":
                     # Frontend expects the AnswerResponse object directly
-                    data = json.dumps(event.get("answer", {}))
+                    answer_data = event.get("answer", {})
+                    
+                    # Post-synthesis relevance check
+                    segments = answer_data.get("answer_segments", [])
+                    if segments:
+                        unknown_count = sum(1 for s in segments if s.get("citation_type") == "UNKNOWN")
+                        unknown_pct = (unknown_count / len(segments)) * 100
+                        if unknown_pct >= 80 and not sq.domain:
+                            logger.info(
+                                "[RELEVANCE] Low relevance (%d%% UNKNOWN) for %r — triggering IA fetch",
+                                unknown_pct, body.query[:60],
+                            )
+                            try:
+                                asyncio.create_task(_background_ingest(body.query))
+                            except Exception as od_exc:
+                                logger.warning("Failed to trigger relevance-based IA fetch: %s", od_exc)
+                    
+                    data = json.dumps(answer_data)
                 elif etype == "error":
                     data = json.dumps({"detail": event.get("detail", "Unknown error")})
                 else:
