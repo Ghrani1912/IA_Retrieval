@@ -82,10 +82,10 @@ export class HistoricalApiService {
         const data = await res.json();
         if (Array.isArray(data)) {
           return { sources: data, total: data.length, page, pageSize };
-        } else if (data.sources) {
+        } else if (data.sources || data.items) {
           return {
-            sources: data.sources,
-            total: data.total || data.sources.length,
+            sources: data.sources || data.items,
+            total: data.total || (data.sources || data.items).length,
             page: data.page || page,
             pageSize: data.page_size || pageSize
           };

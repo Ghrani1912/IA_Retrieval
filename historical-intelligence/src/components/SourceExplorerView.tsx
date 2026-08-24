@@ -38,6 +38,17 @@ export const SourceExplorerView: React.FC<SourceExplorerViewProps> = ({
   const [page, setPage] = useState(1);
   const pageSize = 12;
   const [selectedSource, setSelectedSource] = useState<SourceDocument | null>(null);
+  const [liveMetrics, setLiveMetrics] = useState<{totalSources: number; totalChunks: number} | null>(null);
+
+  // Fetch live corpus metrics
+  useEffect(() => {
+    fetch(`${HistoricalApiService.getBackendUrl()}/corpus/stats`)
+      .then(r => r.json())
+      .then(data => {
+        setLiveMetrics({ totalSources: data.total_sources, totalChunks: data.total_chunks });
+      })
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     let isMounted = true;
@@ -108,8 +119,8 @@ export const SourceExplorerView: React.FC<SourceExplorerViewProps> = ({
             <div className="flex items-center gap-2 bg-[#f5f0e6] px-3.5 py-2 rounded-lg border border-[#d8cfb8]">
               <Layers className="w-4 h-4 text-[#8b3a1f]" />
               <div className="text-xs font-mono text-[#2b2620]">
-                <span className="font-bold">{CORPUS_METRICS.totalChunks.toLocaleString()} chunks</span> across{' '}
-                <span className="font-bold">{CORPUS_METRICS.totalSources} primary volumes</span>
+                <span className="font-bold">{(liveMetrics?.totalChunks ?? CORPUS_METRICS.totalChunks).toLocaleString()} chunks</span> across{' '}
+                <span className="font-bold">{liveMetrics?.totalSources ?? CORPUS_METRICS.totalSources} primary volumes</span>
               </div>
             </div>
           </div>
@@ -143,7 +154,7 @@ export const SourceExplorerView: React.FC<SourceExplorerViewProps> = ({
                 onChange={e => handleFilterChange('collection', e.target.value)}
                 className="w-full py-2 px-2.5 bg-[#f5f0e6] border border-[#d8cfb8] rounded-lg text-[#2b2620]"
               >
-                <option value="All">All Collections (44)</option>
+                <option value="All">All Collections</option>
                 <option value="DTIC">DTIC Defense (18)</option>
                 <option value="ERIC">ERIC Education (14)</option>
                 <option value="Americana">Americana (12)</option>
@@ -168,9 +179,7 @@ export const SourceExplorerView: React.FC<SourceExplorerViewProps> = ({
             <div className="flex items-center gap-1">
               <input
                 type="number"
-                placeholder="1970"
-                min={1970}
-                max={1998}
+                placeholder="From year"
                 value={filters.dateFrom}
                 onChange={e => handleFilterChange('dateFrom', e.target.value)}
                 className="w-1/2 py-2 px-2 bg-[#f5f0e6] border border-[#d8cfb8] rounded-lg text-[#2b2620] text-center font-mono"
@@ -178,9 +187,7 @@ export const SourceExplorerView: React.FC<SourceExplorerViewProps> = ({
               <span className="text-[#6b6252]">–</span>
               <input
                 type="number"
-                placeholder="1998"
-                min={1970}
-                max={1998}
+                placeholder="To year"
                 value={filters.dateTo}
                 onChange={e => handleFilterChange('dateTo', e.target.value)}
                 className="w-1/2 py-2 px-2 bg-[#f5f0e6] border border-[#d8cfb8] rounded-lg text-[#2b2620] text-center font-mono"
@@ -250,7 +257,7 @@ export const SourceExplorerView: React.FC<SourceExplorerViewProps> = ({
 
                 {/* Subject Tags */}
                 <div className="flex flex-wrap gap-1 mb-2">
-                  {src.subjects.slice(0, 3).map((sub, i) => (
+                  {(src.subjects || []).slice(0, 3).map((sub, i) => (
                     <span
                       key={i}
                       className="bg-[#f5f0e6] text-[#6b6252] border border-[#d8cfb8] px-1.5 py-0.5 rounded text-[9px]"
@@ -258,9 +265,9 @@ export const SourceExplorerView: React.FC<SourceExplorerViewProps> = ({
                       {sub}
                     </span>
                   ))}
-                  {src.subjects.length > 3 && (
+                  {(src.subjects || []).length > 3 && (
                     <span className="text-[9px] text-[#6b6252] font-mono self-center">
-                      +{src.subjects.length - 3}
+                      +{(src.subjects || []).length - 3}
                     </span>
                   )}
                 </div>
@@ -390,7 +397,7 @@ export const SourceExplorerView: React.FC<SourceExplorerViewProps> = ({
                   Thematic Classifications:
                 </span>
                 <div className="flex flex-wrap gap-1.5 mt-1">
-                  {selectedSource.subjects.map((sub, i) => (
+                  {(selectedSource.subjects || []).map((sub, i) => (
                     <span
                       key={i}
                       className="bg-[#f5f0e6] text-[#2b2620] border border-[#d8cfb8] px-2 py-0.5 rounded text-[11px]"
