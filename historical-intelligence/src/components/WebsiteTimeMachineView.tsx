@@ -10,10 +10,32 @@ import {
   ArrowRight,
   ExternalLink,
   RefreshCw,
-  MessageSquare
+  MessageSquare,
+  TrendingUp,
+  TrendingDown,
+  Minus,
+  ArrowLeftRight
 } from 'lucide-react';
 import { SnapshotData, IngestJob } from '../types';
 import { HistoricalApiService } from '../services/api';
+
+interface EvolutionData {
+  domain: string;
+  summary: string;
+  eras: Array<{
+    period: string;
+    focus: string;
+    key_changes: string[];
+  }>;
+  key_topics: string[];
+  trend: 'growing' | 'shrinking' | 'stable' | 'shifted';
+  snapshot_years: number[];
+  chunks_per_year: Record<string, number>;
+  status?: string;
+  snapshot_count?: number;
+  historical_context?: string;
+  archival_notes?: string;
+}
 
 interface WebsiteTimeMachineViewProps {
   onAskAboutDomain: (domain: string, question?: string) => void;
@@ -38,6 +60,11 @@ export const WebsiteTimeMachineView: React.FC<WebsiteTimeMachineViewProps> = ({
 
   // Chat follow-up input
   const [chatQuestion, setChatQuestion] = useState('');
+
+  // Evolution analysis state
+  const [evolutionData, setEvolutionData] = useState<EvolutionData | null>(null);
+  const [isLoadingEvolution, setIsLoadingEvolution] = useState(false);
+  const [showEvolution, setShowEvolution] = useState(false);
 
   const sampleDomains = [
     { label: 'MIT AI Lab', domain: 'ai.mit.edu' },
@@ -135,6 +162,58 @@ export const WebsiteTimeMachineView: React.FC<WebsiteTimeMachineViewProps> = ({
     if (!activeDomain) return;
     const q = chatQuestion.trim() || `What is the historical evolution of ${activeDomain} recorded in Wayback snapshots?`;
     onAskAboutDomain(activeDomain, q);
+  };
+
+  // Fetch evolution analysis
+  const fetchEvolution = async () => {
+    if (!activeDomain) return;
+    setIsLoadingEvolution(true);
+    setShowEvolution(true);
+    try {
+      const res = await fetch(`${HistoricalApiService.getBackendUrl()}/corpus/evolution/${encodeURIComponent(activeDomain)}`);
+      if (res.ok) {
+        const data = await res.json();
+        setEvolutionData(data);
+        
+        // If no content chunks yet but LLM can analyze CDX metadata, fetch LLM analysis
+        if (data.status === 'ingesting' && data.can_llm_analyze) {
+          try {
+            const llmRes = await fetch(`${HistoricalApiService.getBackendUrl()}/corpus/evolution/${encodeURIComponent(activeDomain)}/cdx-analysis`);
+            if (llmRes.ok) {
+              const llmData = await llmRes.json();
+              // Merge LLM analysis with CDX data
+              setEvolutionData(prev => prev ? {
+                ...prev,
+                summary: llmData.summary || prev.summary,
+                eras: llmData.eras && llmData.eras.length > 0 ? llmData.eras : prev.eras,
+                key_topics: llmData.key_topics && llmData.key_topics.length > 0 ? llmData.key_topics : prev.key_topics,
+                historical_context: llmData.historical_context,
+                archival_notes: llmData.archival_notes,
+                status: 'llm_analyzed',
+              } : prev);
+            }
+          } catch {
+            // LLM analysis failed, keep CDX data
+          }
+        }
+      } else {
+        setEvolutionData(null);
+      }
+    } catch {
+      setEvolutionData(null);
+    } finally {
+      setIsLoadingEvolution(false);
+    }
+  };
+
+  // Trend icon helper
+  const getTrendIcon = (trend: string) => {
+    switch (trend) {
+      case 'growing': return <TrendingUp className="w-4 h-4 text-green-600" />;
+      case 'shrinking': return <TrendingDown className="w-4 h-4 text-red-600" />;
+      case 'shifted': return <ArrowLeftRight className="w-4 h-4 text-amber-600" />;
+      default: return <Minus className="w-4 h-4 text-[#6b6252]" />;
+    }
   };
 
   return (
@@ -413,7 +492,177 @@ export const WebsiteTimeMachineView: React.FC<WebsiteTimeMachineViewProps> = ({
                   })}
                 </div>
               </div>
+
+              {/* Analyze Evolution Button */}
+              <div className="mt-4 pt-3 border-t border-[#d8cfb8]">
+                <button
+                  onClick={fetchEvolution}
+                  disabled={isLoadingEvolution}
+                  className="w-full px-4 py-2 bg-[#a67c1e] text-[#fffdf7] rounded-lg text-xs font-medium hover:bg-[#8a6816] disabled:opacity-50 transition-colors shadow-2xs flex items-center justify-center gap-2"
+                >
+                  {isLoadingEvolution ? (
+                    <>
+                      <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                      <span>Analyzing Content Evolution...</span>
+                    </>
+                  ) : (
+                    <>
+                      <TrendingUp className="w-3.5 h-3.5" />
+                      <span>Analyze Website Evolution Across Snapshots</span>
+                    </>
+                  )}
+                </button>
+              </div>
             </div>
+
+            {/* Evolution Analysis Panel */}
+            {showEvolution && (
+              <div className="bg-[#fffdf7] border border-[#d8cfb8] rounded-xl p-5 shadow-2xs animate-in fade-in duration-200">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-2">
+                    <Layers className="w-4 h-4 text-[#a67c1e]" />
+                    <h4 className="font-serif-heading text-sm font-bold text-[#2b2620]">
+                      Content Evolution Analysis
+                    </h4>
+                  </div>
+                  <button
+                    onClick={() => setShowEvolution(false)}
+                    className="text-[10px] text-[#6b6252] hover:text-[#2b2620] font-mono"
+                  >
+                    [close]
+                  </button>
+                </div>
+
+                {isLoadingEvolution ? (
+                  <div className="py-8 text-center">
+                    <Loader2 className="w-6 h-6 text-[#a67c1e] animate-spin mx-auto mb-2" />
+                    <p className="text-xs text-[#6b6252]">Analyzing content across snapshots...</p>
+                  </div>
+                ) : evolutionData ? (
+                  <div className="space-y-4">
+                    {/* Ingesting status banner */}
+                    {(evolutionData.status === 'ingesting' || evolutionData.status === 'llm_analyzed') && (
+                      <div className="p-3 bg-[#a67c1e]/10 border border-[#a67c1e]/30 rounded-lg text-xs text-[#2b2620] flex items-start gap-2">
+                        {evolutionData.status === 'ingesting' ? (
+                          <Loader2 className="w-4 h-4 text-[#a67c1e] shrink-0 mt-0.5 animate-spin" />
+                        ) : (
+                          <TrendingUp className="w-4 h-4 text-[#a67c1e] shrink-0 mt-0.5" />
+                        )}
+                        <div>
+                          <span className="font-bold text-[#a67c1e] block">
+                            {evolutionData.status === 'llm_analyzed' ? 'LLM Historical Analysis' : 'Content Indexing In Progress'}
+                          </span>
+                          <p className="text-[11px] text-[#6b6252] mt-0.5">
+                            {evolutionData.status === 'llm_analyzed' 
+                              ? 'Analysis based on snapshot metadata and historical context. Content ingestion is also running in the background for deeper analysis.'
+                              : 'This domain has ' + (evolutionData.snapshot_count?.toLocaleString() || '') + ' Wayback snapshots but content has not been indexed yet. Background ingestion is running.'
+                            }
+                          </p>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Summary */}
+                    <div className="p-3 bg-[#f5f0e6] rounded-lg border border-[#d8cfb8]">
+                      <p className="text-xs text-[#2b2620] font-serif leading-relaxed">
+                        {evolutionData.summary}
+                      </p>
+                    </div>
+
+                    {/* Trend + Key Topics */}
+                    {(evolutionData.trend !== 'stable' || (evolutionData.key_topics && evolutionData.key_topics.length > 0)) && (
+                      <div className="flex items-center gap-4 text-xs">
+                        {evolutionData.trend !== 'stable' && (
+                          <div className="flex items-center gap-1.5">
+                            {getTrendIcon(evolutionData.trend)}
+                            <span className="text-[#6b6252]">Trend:</span>
+                            <span className="font-semibold text-[#2b2620] capitalize">
+                              {evolutionData.trend}
+                            </span>
+                          </div>
+                        )}
+                        {evolutionData.key_topics && evolutionData.key_topics.length > 0 && (
+                          <div className="flex items-center gap-1.5 flex-wrap">
+                            <span className="text-[#6b6252]">Key topics:</span>
+                            {evolutionData.key_topics.map((topic, i) => (
+                              <span
+                                key={i}
+                                className="px-1.5 py-0.5 bg-[#8b3a1f]/10 text-[#8b3a1f] rounded text-[10px] font-mono"
+                              >
+                                {topic}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Eras Timeline */}
+                    {evolutionData.eras && evolutionData.eras.length > 0 && (
+                      <div className="space-y-3">
+                        <h5 className="font-serif-heading text-xs font-semibold text-[#2b2620]">
+                          Historical Eras
+                        </h5>
+                        <div className="relative pl-4 border-l-2 border-[#d8cfb8]">
+                          {evolutionData.eras.map((era, i) => (
+                            <div key={i} className="mb-4 last:mb-0 relative">
+                              <div className="absolute -left-[1.3rem] w-3 h-3 rounded-full bg-[#a67c1e] border-2 border-[#fffdf7]" />
+                              <div className="bg-[#f5f0e6] p-3 rounded-lg border border-[#d8cfb8]">
+                                <div className="flex items-center gap-2 mb-1">
+                                  <span className="font-mono text-[10px] font-bold text-[#a67c1e] bg-[#a67c1e]/10 px-1.5 py-0.5 rounded">
+                                    {era.period}
+                                  </span>
+                                </div>
+                                <p className="text-[11px] text-[#2b2620] font-serif">
+                                  {era.focus}
+                                </p>
+                                {era.key_changes && era.key_changes.length > 0 && (
+                                  <ul className="mt-2 space-y-0.5">
+                                    {era.key_changes.map((change, j) => (
+                                      <li key={j} className="text-[10px] text-[#6b6252] flex items-start gap-1">
+                                        <span className="text-[#a67c1e] mt-0.5">•</span>
+                                        {change}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                )}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Historical Context */}
+                    {evolutionData.historical_context && (
+                      <div className="p-3 bg-[#8b3a1f]/5 border border-[#8b3a1f]/20 rounded-lg">
+                        <span className="text-[10px] uppercase font-semibold text-[#8b3a1f] block mb-1">Historical Context</span>
+                        <p className="text-[11px] text-[#2b2620] font-serif leading-relaxed">
+                          {evolutionData.historical_context}
+                        </p>
+                      </div>
+                    )}
+
+                    {/* Archival Notes */}
+                    {evolutionData.archival_notes && (
+                      <div className="p-3 bg-[#a67c1e]/5 border border-[#a67c1e]/20 rounded-lg">
+                        <span className="text-[10px] uppercase font-semibold text-[#a67c1e] block mb-1">Archival Significance</span>
+                        <p className="text-[11px] text-[#2b2620] font-serif leading-relaxed">
+                          {evolutionData.archival_notes}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div className="py-6 text-center">
+                    <AlertCircle className="w-5 h-5 text-[#6b6252] mx-auto mb-2" />
+                    <p className="text-xs text-[#6b6252]">
+                      Unable to generate evolution analysis. Ensure snapshots are indexed for this domain.
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
 
             {/* Ask About This Website's History -> Routes to Chat */}
             <div className="bg-[#fffdf7] border border-[#d8cfb8] rounded-xl p-5 shadow-2xs">

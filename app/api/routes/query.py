@@ -94,7 +94,11 @@ async def post_query(body: QueryRequest) -> AnswerResponse:
             try:
                 from app.wayback.ondemand import fetch_web_content_for_domain
                 from app.models.pydantic_models import RankedChunk, SourceMetadata
-                web_raw = await fetch_web_content_for_domain(sq.domain)
+                web_raw = await fetch_web_content_for_domain(
+                    sq.domain,
+                    date_range_start=sq.date_range_start,
+                    date_range_end=sq.date_range_end,
+                )
                 for i, chunk in enumerate(web_raw):
                     rc = RankedChunk(
                         chunk=chunk,
@@ -234,7 +238,11 @@ async def post_query_stream(body: QueryRequest):
         if sq.domain:
             from app.wayback.ondemand import fetch_web_content_for_domain
             from app.models.pydantic_models import RankedChunk, SourceMetadata
-            web_raw = await fetch_web_content_for_domain(sq.domain)
+            web_raw = await fetch_web_content_for_domain(
+                sq.domain,
+                date_range_start=sq.date_range_start,
+                date_range_end=sq.date_range_end,
+            )
             for i, chunk in enumerate(web_raw):
                 web_chunks.append(RankedChunk(
                     chunk=chunk,

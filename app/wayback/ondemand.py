@@ -8,6 +8,10 @@ When a user queries with a domain filter (e.g. cs.stanford.edu):
 
 This is the bridge between CDX metadata (already ingested) and
 retrievable content chunks (not yet created for website sources).
+
+NEW: When a date range is specified, fetch snapshots from that time period
+instead of just the latest. This enables temporal queries like
+"What did Stanford AI Lab focus on in the 1990s?"
 """
 from __future__ import annotations
 
@@ -39,6 +43,83 @@ async def _get_latest_snapshot(domain: str) -> dict | None:
             domain,
         )
         return dict(row) if row else None
+    finally:
+        await conn.close()
+
+
+async def _get_closest_snapshot(domain: str, target_year: int) -> dict | None:
+    """Get the snapshot closest to a target year.
+
+    Finds the snapshot with timestamp closest to the middle of the target year.
+    Returns the snapshot dict or None if no snapshots exist.
+    """
+    conn = await asyncpg.connect(DB_URL, ssl=False)
+    try:
+        # Target the middle of the year (July 1)
+        target_ts = datetime(target_year, 7, 1, tzinfo=timezone.utc)
+
+        row = await conn.fetchrow(
+            """
+            SELECT id, url, snapshot_timestamp, status_code, digest
+            FROM website_snapshots
+            WHERE domain = $1 AND status_code >= 200 AND status_code < 400
+            ORDER BY ABS(EXTRACT(EPOCH FROM (snapshot_timestamp - $2::timestamptz)))
+            LIMIT 1
+            """,
+            domain,
+            target_ts,
+        )
+        return dict(row) if row else None
+    finally:
+        await conn.close()
+
+
+async def _get_snapshots_in_range(
+    domain: str, year_start: int, year_end: int, max_snapshots: int = 3
+) -> list[dict]:
+    """Get up to max_snapshots snapshots spread across a date range.
+
+    Returns snapshots evenly distributed across the time range to capture
+    temporal evolution. For example, if year_start=1990 and year_end=2000,
+    might return snapshots from ~1990, ~1995, and ~2000.
+    """
+    conn = await asyncpg.connect(DB_URL, ssl=False)
+    try:
+        # First, get all snapshots in the range
+        start_ts = datetime(year_start, 1, 1, tzinfo=timezone.utc)
+        end_ts = datetime(year_end, 12, 31, 23, 59, 59, tzinfo=timezone.utc)
+
+        rows = await conn.fetch(
+            """
+            SELECT id, url, snapshot_timestamp, status_code, digest
+            FROM website_snapshots
+            WHERE domain = $1
+              AND status_code >= 200 AND status_code < 400
+              AND snapshot_timestamp >= $2 AND snapshot_timestamp <= $3
+            ORDER BY snapshot_timestamp
+            """,
+            domain,
+            start_ts,
+            end_ts,
+        )
+
+        if not rows:
+            return []
+
+        snapshots = [dict(r) for r in rows]
+
+        # If we have fewer snapshots than requested, return all
+        if len(snapshots) <= max_snapshots:
+            return snapshots
+
+        # Evenly sample across the range
+        step = len(snapshots) / max_snapshots
+        sampled = []
+        for i in range(max_snapshots):
+            idx = int(i * step)
+            sampled.append(snapshots[idx])
+
+        return sampled
     finally:
         await conn.close()
 
@@ -94,14 +175,15 @@ async def _persist_chunks(chunks: list, source_id: int) -> list:
     try:
         result = []
         for chunk in chunks:
+            ts = chunk.capture_timestamp
             chunk_id = await conn.fetchval(
                 """
-                INSERT INTO chunks (source_id, text, page_or_section, char_range_start, char_range_end, token_count)
-                VALUES ($1, $2, $3, $4, $5, $6)
+                INSERT INTO chunks (source_id, text, page_or_section, capture_timestamp, char_range_start, char_range_end, token_count)
+                VALUES ($1, $2, $3, $4, $5, $6, $7)
                 RETURNING id
                 """,
                 source_id, chunk.text, chunk.page_or_section,
-                chunk.char_range_start, chunk.char_range_end, chunk.token_count,
+                ts, chunk.char_range_start, chunk.char_range_end, chunk.token_count,
             )
             chunk.id = chunk_id
             result.append(chunk)
@@ -171,10 +253,8 @@ async def _get_existing_chunks(domain: str) -> list:
             Chunk(
                 id=r["id"], source_id=r["source_id"], text=r["text"],
                 page_or_section=r["page_or_section"],
-                char_range_start=r["char_range_start"],
-                char_range_end=r["char_range_end"],
-                token_count=r["token_count"],
-                capture_timestamp=r["capture_timestamp"],
+                char_range_start=r["char_range_start"], char_range_end=r["char_range_end"],
+                token_count=r["token_count"], capture_timestamp=r["capture_timestamp"],
             )
             for r in rows
         ]
@@ -184,28 +264,29 @@ async def _get_existing_chunks(domain: str) -> list:
         await conn.close()
 
 
-async def fetch_web_content_for_domain(domain: str) -> list:
-    """Fetch, process, and index website content for a domain.
-
-    Returns list of Chunk objects ready for retrieval, or empty list on failure.
-    """
-    logger.info("On-demand fetch for domain: %s", domain)
-
-    # 1. Get latest snapshot
-    snapshot = await _get_latest_snapshot(domain)
-    if not snapshot:
-        logger.warning("No snapshots found for domain %s", domain)
-        return []
+async def _ingest_single_snapshot(
+    domain: str,
+    snapshot: dict,
+    source_id: int,
+) -> list:
+    """Fetch, process, and index a single snapshot. Returns chunks."""
+    from app.models.pydantic_models import Chunk
 
     url = snapshot["url"]
     ts = snapshot["snapshot_timestamp"]
 
-    # 2. Check if already fetched — return existing chunks from DB
+    # Check if already fetched
     if await _snapshot_already_chunked(url, ts):
-        logger.info("Snapshot already chunked for %s @ %s — returning existing chunks", url, ts)
-        return await _get_existing_chunks(domain)
+        # Check if chunks actually exist for this snapshot
+        existing = await _get_existing_chunks(domain)
+        has_chunks_for_ts = any(c.capture_timestamp == ts for c in existing)
+        if has_chunks_for_ts:
+            logger.info("Snapshot already chunked: %s @ %s", url, ts)
+            return []
+        else:
+            logger.info("Snapshot marked fetched but no chunks found, retrying: %s @ %s", url, ts)
 
-    # 3. Fetch content via Memento
+    # Fetch content via Memento
     from app.wayback.memento import fetch_snapshot_content
     content = await fetch_snapshot_content(url, ts, db_url=DB_URL)
     if not content:
@@ -214,16 +295,15 @@ async def fetch_web_content_for_domain(domain: str) -> list:
 
     logger.info("Fetched %d chars from %s @ %s", len(content), url, ts)
 
-    # 4. Clean
+    # Clean
     from app.ingestion.cleaner import clean_text
     cleaned = clean_text(content)
     if not cleaned.text.strip():
         logger.warning("Cleaned text empty for %s", url)
         return []
 
-    # 5. Chunk
+    # Chunk
     from app.ingestion.chunker import chunk_text
-    source_id = await _upsert_source(domain)
     chunks = chunk_text(cleaned, source_id)
 
     # Set capture_timestamp on all chunks (web content)
@@ -234,16 +314,16 @@ async def fetch_web_content_for_domain(domain: str) -> list:
         logger.warning("No chunks produced for %s", url)
         return []
 
-    logger.info("Produced %d chunks from %s", len(chunks), url)
+    logger.info("Produced %d chunks from %s @ %s", len(chunks), url, ts)
 
-    # 6. Persist to DB
+    # Persist to DB
     chunks = await _persist_chunks(chunks, source_id)
 
-    # 7. Embed
+    # Embed
     from app.ingestion.embed import embed_chunks
     embedded = embed_chunks(chunks)
 
-    # 8. Index into OpenSearch (BM25)
+    # Index into OpenSearch (BM25)
     from app.ingestion.index_bm25 import index_bm25, SourceRow
     from app.ingestion.opensearch_client import get_client
 
@@ -258,7 +338,7 @@ async def fetch_web_content_for_domain(domain: str) -> list:
     os_client = get_client()
     index_bm25(embedded, {source_id: web_source}, client=os_client, refresh=True)
 
-    # 9. Index into Qdrant (vectors)
+    # Index into Qdrant (vectors)
     from app.ingestion.index_vectors import index_vectors, write_embedding_ids_to_db
     from qdrant_client import QdrantClient
 
@@ -266,10 +346,106 @@ async def fetch_web_content_for_domain(domain: str) -> list:
     index_vectors(embedded, {source_id: web_source}, client=qd_client)
     await write_embedding_ids_to_db(embedded, DB_URL)
 
+    return chunks
+
+
+async def fetch_web_content_for_domain(
+    domain: str,
+    date_range_start: int | None = None,
+    date_range_end: int | None = None,
+) -> list:
+    """Fetch, process, and index website content for a domain.
+
+    When date_range_start/end are provided, fetch snapshots from that time
+    period instead of just the latest. This enables temporal queries like
+    "What did X focus on in the 1990s?" to retrieve era-appropriate content.
+
+    Args:
+        domain: Website domain (e.g. "cs.stanford.edu")
+        date_range_start: Start year for temporal queries (optional)
+        date_range_end: End year for temporal queries (optional)
+
+    Returns list of Chunk objects ready for retrieval, or empty list on failure.
+    """
     logger.info(
-        "On-demand pipeline complete for %s: %d chunks indexed",
-        domain, len(embedded),
+        "On-demand fetch for domain: %s (date_range: %s-%s)",
+        domain, date_range_start, date_range_end,
     )
 
-    # Return Chunk objects (without embedding, for retrieval)
-    return chunks
+    source_id = await _upsert_source(domain)
+
+    # Determine which snapshots to fetch based on date range
+    if date_range_start or date_range_end:
+        # Temporal query: fetch snapshots from the specified time period
+        year_start = date_range_start or 1990  # fallback if only end specified
+        year_end = date_range_end or 2025      # fallback if only start specified
+
+        snapshots = await _get_snapshots_in_range(domain, year_start, year_end, max_snapshots=3)
+        if not snapshots:
+            # No snapshots in range — try closest to the start year
+            closest = await _get_closest_snapshot(domain, year_start)
+            if closest:
+                snapshots = [closest]
+
+        if not snapshots:
+            logger.warning("No snapshots found for domain %s in range %d-%d", domain, year_start, year_end)
+            return []
+    else:
+        # Default: try multiple snapshots from different eras to maximize content
+        # Start with the latest, then try historical snapshots if the latest fails
+        latest = await _get_latest_snapshot(domain)
+        if not latest:
+            logger.warning("No snapshots found for domain %s", domain)
+            return []
+        
+        # Also get snapshots from different historical periods
+        era_targets = list(range(1996, 2027, 2))  # Try every 2 years for better coverage
+        historical = []
+        for year in era_targets:
+            snap = await _get_closest_snapshot(domain, year)
+            if snap and snap["url"] != latest["url"]:
+                historical.append(snap)
+        
+        # Combine: latest first, then historical (deduplicate by URL)
+        seen_urls = {latest["url"]}
+        snapshots = [latest]
+        for h in historical:
+            if h["url"] not in seen_urls:
+                snapshots.append(h)
+                seen_urls.add(h["url"])
+        
+        # Try up to 15 snapshots for better coverage
+        snapshots = snapshots[:15]
+
+    logger.info("Will fetch %d snapshot(s) for domain %s", len(snapshots), domain)
+
+    # Fetch and process each snapshot, stop early if we get enough content
+    all_chunks = []
+    min_chunks_target = 5   # Old web pages are short, 5 chunks is enough
+    for snapshot in snapshots:
+        if len(all_chunks) >= min_chunks_target:
+            logger.info("Got enough chunks (%d >= %d), skipping remaining snapshots",
+                       len(all_chunks), min_chunks_target)
+            break
+        try:
+            chunks = await _ingest_single_snapshot(domain, snapshot, source_id)
+            all_chunks.extend(chunks)
+            logger.info("Snapshot %s @ %s produced %d chunks (total: %d)",
+                       snapshot["url"], snapshot["snapshot_timestamp"], len(chunks), len(all_chunks))
+        except Exception as exc:
+            logger.warning("Failed to ingest snapshot %s @ %s: %s",
+                          snapshot["url"], snapshot["snapshot_timestamp"], exc)
+
+    # Also return any previously indexed chunks for this domain
+    existing_chunks = await _get_existing_chunks(domain)
+
+    # Combine new + existing, filter junk, deduplicate
+    combined = all_chunks + existing_chunks
+    filtered = _filter_web_chunks(combined)
+
+    logger.info(
+        "On-demand pipeline complete for %s: %d new chunks, %d existing, %d total after filtering",
+        domain, len(all_chunks), len(existing_chunks), len(filtered),
+    )
+
+    return filtered
